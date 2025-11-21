@@ -493,7 +493,7 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 #define TRAIT_RAVOX_CURSE "Al'Aqshir's Curse"
 #define TRAIT_NECRA_CURSE "Valdala's Curse"
 #define TRAIT_XYLIX_CURSE "Iliope's Curse"
-#define TRAIT_PESTRA_CURSE "Ird's Curse"
+#define TRAIT_PESTRA_CURSE "Erdl's Curse"
 #define TRAIT_EORA_CURSE "Pomette's Curse"
 #define TRAIT_ZIZO_CURSE "One Envy's Curse"
 #define TRAIT_GRAGGAR_CURSE "Archdevil's Curse"

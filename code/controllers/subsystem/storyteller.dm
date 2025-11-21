@@ -279,7 +279,7 @@ SUBSYSTEM_DEF(gamemode)
 				"... the old sun lay smothered in tidal wrath, but the sea will one day wither and the first star will reach out again..."
 			),
 
-			"Visires"= list(
+			"Visires" = list(
 				"... a hunger betraying your humanity sinks into you, primordial yet all too familiar in its radiance...",
 				"... the light-stealer weeps wicks and embers, even their very tears chewing at the mortal realm...",
 				"... who might find such light in an villain, but monsters themselves..."
@@ -291,50 +291,50 @@ SUBSYSTEM_DEF(gamemode)
 				"... moonlight coils into a key... you reach for it, but your hands are made of questions..."
 			),
 
-			"Valdala"= list(
+			"Valdala" = list(
 				"... grasping hands push from the ground, but you can't stop sinking as a crowd beholds your frightful demise...",
 				"... your head dips below the firmament, and below you see yourself fighting a war you've never known...",
 				"... cold palms obscure your vision... you hear the whispers of ancestors you've never met..."
 			),
 
-			"Ird"= list(
+			"Erdl" = list(
 				"... an apparatus hums as steel veins pump strange ichor into an earthen heart...",
 				"... the flesh subsists to the cling of animated iron, and you see something not meant to be...",
 				"... you see a flower bloom in ash. It dies and returns, brighter, stranger. The rhythm of endings comforts you...",
 			),
 
-			"Al'Aqshir"= list(
+			"Al'Aqshir" = list(
 				"... a sword rests beside a scale... neither tips...",
 				"... steel sings in your dreams... a verdict is written in blood and flame, but justice waits before it lands...",
 				"... you duel a mirror image of yourself... the victor is neither, yet the fight continues... law and war share the same breath..."
 			),
 
-			"Goler Kanh"= list(
+			"Goler Kanh" = list(
 				"... hammers echo through your sleep... something is being made, perhaps you...",
 				"... your hands ache... you build something vast, but can never see the whole... sparks kiss your skin, and you smile...",
 				"... endless clanging fills your mind... with each strike, something within you hardens, reforged in smoke and effort..."
 			),
 
-			"Gani"= list(
+			"Gani" = list(
 				"... animals scream in tongues you almost understand... trees whisper old pain, searching for their shepherd...",
 				"... vines coil around your limbs. Roots burst from your feet... the forest within you howls, a kingdom lost beneath the firmament...",
 				"... a familiar warmth arises from the verdant green, a true compassion seeking your return..."
 			),
 
-			"Mjallidhorn"= list(
+			"Mjallidhorn" = list(
 				"... the sea invades your lungs... a storm of blood and salt rises...",
 				"... ice stiffens the water around you, deafening in the sounds of approaching entropy...",
 				"... tides drag you under... in the silence, you hear the northern wind howling with the mad warrior's cry..."
 			),
 
 
-			"Iliope"= list(
+			"Iliope" = list(
 				"...you laugh without knowing why... your reflection winks back as a stranger...",
 				"...you wear masks you’ve never owned... each one laughs in a new voice... you are a guest in your own skin...",
 				"...every path splits... every answer lies... yet you smile... trickery is truth when worn well..."
 			),
 
-			"Pomette"= list(
+			"Pomette" = list(
 				"... you dream of feelings, their essence like an insidious liquid seeping inside the way only poison does...",
 				"... a weaving surrounds you... every face you’ve loved or hated is there...",
 				"... your heart is a loom... dreams pass through it, weaving bonds to people you’ve never met, yet feel you’ve always known..."
@@ -342,28 +342,28 @@ SUBSYSTEM_DEF(gamemode)
 
 			//Inhumen Pantheon
 
-			"Deceiver Gods"= list(
+			"Deceiver Gods" = list(
 				"... a shadow slips your pocket open... you feel lighter in your dream...",
 				"... a purse vanishes from your belt... a laugh echoes in your ears... you check your pockets, your name is gone...",
 				"... you follow footprints that vanish behind you... no one walks beside you, yet you’re never alone..."
 			),
 
 			"Hertannea" = list(
-				"...everything glows with joy... then it melts, and you giggle anyway...",
-				"...you float through a city of glass, laughter echoing in colors... you smile with no mouth and sing without sound...",
-				"...your body dances without thought... every breath tastes like honey and smoke... you forget, and it feels divine..."
+				"... everything glows with joy... then it melts, and you giggle anyway...",
+				"... you float through a city of glass, laughter echoing in colors... you smile with no mouth and sing without sound...",
+				"... your body dances without thought... every breath tastes like honey and smoke... you forget, and it feels divine..."
 			),
 
-			"Archdevils"= list(
-				"...your mouth is not your own... it’s laughing, snarling, hungry...",
-				"...you tear through flesh with joy... your dream is soaked in red... hunger knows your name, and calls you friend...",
-				"...an ancient drum beats under your ribs... it demands violence in return for peace..."
+			"Archdevils" = list(
+				"... your mouth is not your own... it’s laughing, snarling, hungry...",
+				"... you tear through flesh with joy... your dream is soaked in red... hunger knows your name, and calls you friend...",
+				"... an ancient drum beats under your ribs... it demands violence in return for peace..."
 			),
 
-			"The One Envy"= list(
-				"...eyes stare from skulls that still weep... you cradle a child made of frost and ash... it whispers secrets backwards...",
-				"...your name is forgotten by everyone in your dream... only bones remember...",
-				"...a girl with white eyes smiles at you... her lullaby stitches flesh to spirit..."
+			"The One Envy" = list(
+				"... burning eyes of amber rest their gaze upon you... a terrible presence besets you...",
+				"... your name is forgotten by everyone in your dream... only bones remember...",
+				"... seven wise men stand around you, terrified of what you'll become..."
 			),
 
 			"Unknown" = list("You feel a presence watching your sleep... old, vast, and unknowable. You do not yet know their name.")
