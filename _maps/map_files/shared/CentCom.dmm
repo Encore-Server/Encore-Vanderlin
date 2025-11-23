@@ -1250,11 +1250,6 @@
 	},
 /turf/open/floor/metal/barograte,
 /area/indoors/vampire_manor)
-"ez" = (
-/obj/structure/door/iron,
-/obj/effect/mapping_helpers/access/locker,
-/turf/closed/indestructible/wooddark/hull,
-/area/ship/middeck)
 "eD" = (
 /turf/open/floor/ruinedwood/spiral,
 /area/indoors)
@@ -5021,11 +5016,6 @@
 	},
 /turf/open/floor/cobble,
 /area/indoors)
-"Cy" = (
-/obj/structure/door/iron,
-/obj/effect/mapping_helpers/access/locker,
-/turf/open/floor/ruinedwood,
-/area/ship/topdeck)
 "Cz" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/churchbrick,
@@ -15782,9 +15772,9 @@ zX
 zX
 zX
 Cc
-Cy
 Cc
-Cy
+Cc
+Cc
 BN
 BN
 BN
@@ -16573,7 +16563,7 @@ YZ
 ZA
 ZA
 ZA
-ez
+BN
 zX
 zX
 qE
@@ -17483,7 +17473,7 @@ ZA
 ZA
 ZA
 XX
-ez
+BN
 zX
 zX
 qE
@@ -18252,9 +18242,9 @@ zX
 zX
 zX
 Cc
-Cy
 Cc
-Cy
+Cc
+Cc
 BN
 BN
 BN
