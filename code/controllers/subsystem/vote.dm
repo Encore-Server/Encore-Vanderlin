@@ -272,11 +272,11 @@ SUBSYSTEM_DEF(vote)
 			if("endround")
 				var/rng = rand(1, 1000)
 				if(rng > 200) // 80%
-					initiator_key = pick("Astrata", "Noc", "Dendor", "Abyssor", "Necra", "Ravox", "Xylix", "Pestra", "Malum", "Eora")
+					initiator_key = pick("Visires", "Akan", "Gani", "Mjallidhorn", "Valdala", "Hertannea", "Alaqkh'shir", "Ird", "Goler Kanh", "Pomette")
 				else if(rng > 50) // 15%
-					initiator_key = pick("Zizo", "Graggar", "Matthios", "Baotha")
+					initiator_key = pick("the Deceiver Gods", "the Archdevils", "the Seven Sages")
 				else
-					initiator_key = "Psydon"
+					initiator_key = "the One Envy"
 				choices.Add("Continue Playing","End Round")
 			if("storyteller")
 				choices.Add(SSgamemode.storyteller_vote_choices())
