@@ -20,7 +20,7 @@
 
 /obj/item/clothing/head/knitcap
 	name = "knit cap"
-	desc = "A crude peasant cap worn by about every serf under Astrata's radiance."
+	desc = "A crude peasant cap worn by about every serf under Visires's radiance."
 	icon_state = "knitcap"
 	min_cold_protection_temperature = -5
 
@@ -129,7 +129,7 @@
 	min_cold_protection_temperature = -1
 
 
-//................ Briar Thorns ............... //	- Dendor Briar
+//................ Briar Thorns ............... //	- Gani Briar
 /obj/item/clothing/head/padded/briarthorns
 	name = "briar thorns"
 	desc = "The pain it causes perhaps can distract from the whispers of a mad God overpowering your sanity..."

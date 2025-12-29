@@ -148,10 +148,10 @@
 	var/list/patron_lines = list(
 		/datum/patron/divine/astrata = list("'HER LIGHT HAS LEFT ME! WHERE AM I?!'", "'SHATTER THIS CONTRAPTION, SO I MAY FEEL HER WARMTH ONE LAST TIME!'", "'I am royal.. Why did they do this to me...?'"),
 		/datum/patron/divine/noc = list("'Colder than moonlight...'", "'No wisdom can reach me here...'", "'Please help me, I miss the stars...'"),
-		/datum/patron/divine/necra = list("'They snatched me from her grasp, for eternal torment...'", "'Necra! Please! I am so tired! Release me!'", "'I am lost, lost in a sea of stolen ends.'"),
+		/datum/patron/divine/necra = list("'They snatched me from her grasp, for eternal torment...'", "'Valdala! Please! I am so tired! Release me!'", "'I am lost, lost in a sea of stolen ends.'"),
 		/datum/patron/divine/abyssor = list("'I cannot feel the coast's breeze...'", "'We churn tighter here than schooling fish...'", "'Free me, please, so I may return to the sea...'"),
 		/datum/patron/divine/ravox = list("'Ravoxian kin! Tear this Grenzelhoftian dog's head off! Free me from this damnable witchery!'", "'There is no justice nor glory to be found here, just endless fatigue...'", "'I begged for a death by the sword...'"),
-		/datum/patron/divine/pestra = list("'I only wanted to perfect my cures...'", "'A thousand plagues upon the holder of this accursed machine! Pestra! Can you not hear me?!'", "'I can feel their suffering as they brush against me...'"),
+		/datum/patron/divine/pestra = list("'I only wanted to perfect my cures...'", "'A thousand plagues upon the holder of this accursed machine! Erdl! Can you not hear me?!'", "'I can feel their suffering as they brush against me...'"),
 		/datum/patron/divine/eora  =list("'Every caress feels like a thousand splintering bones...'", "'She was a heretic, but how could I hurt her?!'", "'I'm sorry! I only wanted peace! Please release me!'"),
 		/datum/patron/divine/dendor =list("'HIS MADNESS CALLS FOR ME! RRGHNN...'", "'SHATTER THIS BOX, SO WE MAY CHOKE THIS GRENZEL ON DIRT AND ROOTS!'", "'I miss His voice in the leaves... Free me, please...'"),
 		/datum/patron/divine/xylix  =list("'ONE, TWO, THREE, FOUR- TWO, TWO, THREE, FOUR. --What do you mean, annoying?'", "'There are thirteen others in here, you know! What a good audience- they literally can't get out of their seats!'", "'Of course I went all-in! I thought he had an ace-high!'", "'No, the XYLIX'S FORTUNE was right- this definitely is quite bad.'"),

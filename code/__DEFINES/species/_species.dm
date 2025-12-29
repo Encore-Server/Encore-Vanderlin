@@ -109,7 +109,7 @@
 	SPEC_ID_HALFLING,\
 )
 
-/// Species who are nonheretical to the church. Excluded species typically have an inhumen god associated, like Zizo. Used for church/faith roles.
+/// Species who are nonheretical to the church. Excluded species typically have an inhumen god associated, like One Envy. Used for church/faith roles.
 #define RACES_PLAYER_NONHERETICAL list(\
 	SPEC_ID_HUMEN,\
 	SPEC_ID_DWARF,\

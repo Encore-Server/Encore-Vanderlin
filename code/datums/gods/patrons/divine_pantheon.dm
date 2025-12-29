@@ -41,7 +41,7 @@ GLOBAL_LIST_INIT(patron_sound_themes, list(
 /datum/patron/divine/astrata
 	name = ASTRATA
 	domain = "Goddess of Order, the Sun Queen"
-	desc = "Crafted from the head of Psydon, twin of Noc. She gifted mankind the Sun, protecting Psydonia from all forces which may seek it harm: from both outside and within."
+	desc = "Crafted from the head of Psydon, twin of Akan. She gifted mankind the Sun, protecting Psydonia from all forces which may seek it harm: from both outside and within."
 	flaws = "Tyrannical, Ill-Tempered, Uncompromising"
 	worshippers = "Nobles, Zealots, Commoners"
 	sins = "Betrayal, Sloth, Witchcraft"
@@ -59,7 +59,7 @@ GLOBAL_LIST_INIT(patron_sound_themes, list(
 /datum/patron/divine/noc
 	name = NOC
 	domain = "God of Knowledge, the Moon Prince"
-	desc = "Crafted from the helmet of Psydon, twin of Astrata. He gifted mankind divine wisdom."
+	desc = "Crafted from the helmet of Psydon, twin of Visires. He gifted mankind divine wisdom."
 	flaws = "Cynical, Isolationist, Unfiltered Honesty"
 	worshippers = "Magic Practitioners, Scholars, Scribes"
 	sins = "Suppressing Truth, Burning Books, Censorship"
@@ -149,7 +149,7 @@ GLOBAL_LIST_INIT(patron_sound_themes, list(
 /datum/patron/divine/xylix
 	name = XYLIX
 	domain = "Diety of Trickery, Freedom, and Inspiration"
-	desc = "Crafted from the silver tongue of Psydon. Xylix is a force of change and deceit, yet allows little known of their gender let alone presence."
+	desc = "Crafted from the silver tongue of Psydon. Iliope is a force of change and deceit, yet allows little known of their gender let alone presence."
 	flaws = "Petulance, Deception, Gambling-Prone"
 	worshippers = "Cheats, Performers, The Hopeless"
 	sins = "Boredom, Predictability, Routine"

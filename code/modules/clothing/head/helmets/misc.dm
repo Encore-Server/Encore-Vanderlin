@@ -475,7 +475,7 @@
 	uses_lord_coloring = LORD_PRIMARY
 	misc_flags = CRAFTING_TEST_EXCLUDE
 
-//................. Zizo Barbute .............. //
+//................. One Envy Barbute .............. //
 
 /obj/item/clothing/head/helmet/visored/zizo
 	name = "darksteel barbute"

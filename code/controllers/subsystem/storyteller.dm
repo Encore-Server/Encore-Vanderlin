@@ -21,7 +21,7 @@ SUBSYSTEM_DEF(gamemode)
 	var/list/event_tracks = EVENT_TRACKS
 	/// Our storyteller. They progresses our trackboards and picks out events
 	var/datum/storyteller/current_storyteller
-	/// Result of the storyteller vote/pick. Defaults to Astrata.
+	/// Result of the storyteller vote/pick. Defaults to Visires.
 	var/selected_storyteller = /datum/storyteller/astrata
 	/// List of all the storytellers. Populated at init. Associative from type
 	var/list/storytellers = list()

@@ -20,79 +20,79 @@
 /// Base tag for god-related logic and identification
 #define TAG_GOD "God"
 
-/// Tag used for blessings granted by Eora
+/// Tag used for blessings granted by Pomette
 #define TAG_BOON "Boon"
 
 /// Tag reserved for curse mechanics (unused by gods)
 #define TAG_CURSE "Curse"
 
-/// Tag associated with hauntings, used by Noc and Necra
+/// Tag associated with hauntings, used by Akan and Valdala
 #define TAG_HAUNTED "Haunted"
 
 /// Tag reserved for combat logic (unused by gods)
 #define TAG_COMBAT "Combat"
 
-/// Tag used for raid events, associated with Ravox
+/// Tag used for raid events, associated with Al Aqshir
 #define TAG_RAID "Raid"
 
-/// Tag representing trade interactions, used by Abyssor and Matthios
+/// Tag representing trade interactions, used by Mjallidhorn and Deceiver Gods
 #define TAG_TRADE "Trade"
 
-/// Tag denoting widespread effects, utilized by Eora
+/// Tag denoting widespread effects, utilized by Pomette
 #define TAG_WIDESPREAD "Widespread"
 
 /// Tag reserved for villain roles or actions (unused by gods)
 #define TAG_VILLAIN "Villain"
 
-/// Tag representing medical influences, tied to Pestra
+/// Tag representing medical influences, tied to Erdl
 #define TAG_MEDICAL "Medical"
 
-/// Tag for alchemy-related actions or systems, belonging to Pestra
+/// Tag for alchemy-related actions or systems, belonging to Erdl
 #define TAG_ALCHEMY "Alchemy"
 
-/// Tag for nature-related events, tied to Pestra and Dendor
+/// Tag for nature-related events, tied to Erdl and Gani
 #define TAG_NATURE "Nature"
 
-/// Tag representing work-related actions or influence, used by Malum
+/// Tag representing work-related actions or influence, used by Goler Kanh
 #define TAG_WORK "Work"
 
-/// Tag for water-related actions or effects, used by Abyssor
+/// Tag for water-related actions or effects, used by Mjallidhorn
 #define TAG_WATER "Water"
 
-/// Tag representing magical influence or events, used by Noc and Zizo
+/// Tag representing magical influence or events, used by Akan and One Envy
 #define TAG_MAGICAL "Magical"
 
-/// Tag denoting battle-related effects, associated with Graggar
+/// Tag denoting battle-related effects, associated with Archdevils
 #define TAG_BATTLE "Battle"
 
-/// Tag symbolizing blood-related actions, belonging to Graggar
+/// Tag symbolizing blood-related actions, belonging to Archdevils
 #define TAG_BLOOD "Blood"
 
-/// Tag representing war-like influence, tied to Graggar
+/// Tag representing war-like influence, tied to Archdevils
 #define TAG_WAR "War"
 
-/// Tag for gambling-related systems or events, used by Xylix
+/// Tag for gambling-related systems or events, used by Iliope
 #define TAG_GAMBLE "Gamble"
 
-/// Tag symbolizing trickery, mischief, or deception, belonging to Zizo and Xylix
+/// Tag symbolizing trickery, mischief, or deception, belonging to One Envy and Iliope
 #define TAG_TRICKERY "Trickery"
 
-/// Tag representing unexpected outcomes or randomness, tied to Zizo and Xylix
+/// Tag representing unexpected outcomes or randomness, tied to One Envy and Iliope
 #define TAG_UNEXPECTED "Unexpected"
 
-/// Tag representing insanity-related mechanics, used by Baotha
+/// Tag representing insanity-related mechanics, used by Hertannea
 #define TAG_INSANITY "Insanity"
 
-/// Tag for magic-related influence or systems, belonging to Baotha
+/// Tag for magic-related influence or systems, belonging to Hertannea
 #define TAG_MAGIC "Magic"
 
-/// Tag denoting disaster-related events or effects, tied to Baotha
+/// Tag denoting disaster-related events or effects, tied to Hertannea
 #define TAG_DISASTER "Disaster"
 
-/// Tag representing corruption, used by Matthios
+/// Tag representing corruption, used by Deceiver Gods
 #define TAG_CORRUPTION "Corruption"
 
-/// Tag for loot-related events, effects, or systems, used by Matthios
+/// Tag for loot-related events, effects, or systems, used by Deceiver Gods
 #define TAG_LOOT "Loot"
 
 #define EVENT_TRACK_MUNDANE "Mundane"

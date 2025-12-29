@@ -114,7 +114,7 @@
 	desc = "A halfplate decorated with an gold ornament on the chestplate and a fine silk corset. More for decoration then actual use."
 	icon_state = "halfplate_decorated_corset"
 
-//................ Zizo Armor ...............//
+//................ One Envy Armor ...............//
 
 /obj/item/clothing/armor/plate/full/zizo
 	name = "darksteel fullplate"
@@ -125,7 +125,7 @@
 	sleeved = 'icons/roguetown/clothing/special/onmob/evilarmor.dmi'
 	sellprice = 0 // Incredibly evil Zizoid armor, this should be burnt, nobody wants this
 
-//................ Matthios Armor ...............//
+//................ Deceiver Gods Armor ...............//
 
 /obj/item/clothing/armor/plate/full/matthios
 	name = "gilded fullplate"
@@ -136,7 +136,7 @@
 	sleeved = 'icons/roguetown/clothing/special/onmob/evilarmor.dmi'
 	sellprice = 0 // See above comment
 
-//.............. Graggar Armor .................//
+//.............. Archdevils Armor .................//
 
 /obj/item/clothing/armor/plate/full/graggar
 	name = "vicious full-plate"

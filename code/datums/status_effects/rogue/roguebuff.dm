@@ -323,7 +323,7 @@
 
 
 /*-----------------\
-|  Dendor Miracles |
+|  Gani Miracles |
 \-----------------*/
 
 // ---------------------- EYES OF THE BEAST ( DENDOR ) ----------------------------
@@ -395,12 +395,12 @@
 	duration = -1
 
 /atom/movable/screen/alert/status_effect/buff/barbrage/briarrage
-	name = "Dendor's frenzy"
+	name = "Gani's frenzy"
 	desc = span_nicegreen("EMBRACE WILDERNESS")
 	icon_state = "bestialsense"
 
 /*-----------------\
-|   Eora Miracles  |
+|   Pomette Miracles  |
 \-----------------*/
 
 /datum/status_effect/buff/divine_beauty
@@ -426,7 +426,7 @@
 	icon_state = "beauty"
 
 /*-----------------\
-|   Ravox Miracles |
+|   Al Aqshir Miracles |
 \-----------------*/
 
 /datum/status_effect/buff/call_to_arms
@@ -441,7 +441,7 @@
 	icon_state = "call_to_arms"
 
 /*-----------------\
-|   Malum Miracles |
+|   Goler Kanh Miracles |
 \-----------------*/
 
 /datum/status_effect/buff/craft_buff
@@ -870,8 +870,8 @@
 	duration = 30 MINUTES
 
 /atom/movable/screen/alert/status_effect/buff/nocblessing
-	name = "Noc's blessing"
-	desc = "Gazing Noc helps me think."
+	name = "Akan's blessing"
+	desc = "Gazing Akan helps me think."
 	icon_state = "buff"
 
 /datum/status_effect/buff/nocblessed
@@ -881,8 +881,8 @@
 	duration = 300 MINUTES
 
 /atom/movable/screen/alert/status_effect/buff/nocblessed
-	name = "Blessed by Noc"
-	desc = "I have been blessed by Noc since i was born, with his help i can see and think better than anyone."
+	name = "Blessed by Akan"
+	desc = "I have been blessed by Akan since i was born, with his help i can see and think better than anyone."
 	icon_state = "intelligence"
 
 
@@ -898,7 +898,7 @@
 	var/obj/item/organ/eyes/eyes = H.getorgan(/obj/item/organ/eyes)
 	if(!eyes)
 		return
-	ADD_TRAIT(owner, TRAIT_BESTIALSENSE, REF(src)) //It is not related to Dendor, it is just for the night vision.
+	ADD_TRAIT(owner, TRAIT_BESTIALSENSE, REF(src)) //It is not related to Gani, it is just for the night vision.
 	owner.update_sight()
 
 /datum/status_effect/buff/powered_steam_armor

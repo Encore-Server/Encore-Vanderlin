@@ -933,38 +933,38 @@
 	data += "<div style='width: 91.5%; margin: 0 auto 40px;'>"
 	data += "<div style='display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px; margin-bottom: 30px;'>"
 
-	// Astrata
+	// Visires
 	data += god_ui_block("ASTRATA", "#e7a962", "#642705", /datum/storyteller/astrata, debug)
 
-	// Dendor
+	// Gani
 	data += god_ui_block("DENDOR", "#412938", "#66745c", /datum/storyteller/dendor, debug)
 
-	// Ravox
+	// Al Aqshir
 	data += god_ui_block("RAVOX", "#2c232d", "#710f0f", /datum/storyteller/ravox, debug)
 
-	// Eora
+	// Pomette
 	data += god_ui_block("EORA", "#a95063", "#e7c3da", /datum/storyteller/eora, debug)
 
-	// Necra
+	// Valdala
 	data += god_ui_block("NECRA", "#2a2459", "#4c82a8", /datum/storyteller/necra, debug)
 
 	data += "</div>"
 
 	data += "<div style='display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px;'>"
 
-	// Noc
+	// Akan
 	data += god_ui_block("NOC", "#4e72a1", "#282137", /datum/storyteller/noc, debug)
 
-	// Abyssor
+	// Mjallidhorn
 	data += god_ui_block("ABYSSOR", "#50090f", "#bbace0", /datum/storyteller/abyssor, debug)
 
-	// Malum
+	// Goler Kanh
 	data += god_ui_block("MALUM", "#3d4139", "#955454", /datum/storyteller/malum, debug)
 
-	// Xylix
+	// Iliope
 	data += god_ui_block("XYLIX", "#7e632c", "#f6feff", /datum/storyteller/xylix, debug)
 
-	// Pestra
+	// Erdl
 	data += god_ui_block("PESTRA", "#517b27", "#1b2a2a", /datum/storyteller/pestra, debug)
 
 	data += "</div></div>"
@@ -977,16 +977,16 @@
 	data += "<div style='width: 91.5%; margin: 0 auto;'>"
 	data += "<div style='display: grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: 1fr; gap: 20px; margin-bottom: 20px;'>"
 
-	// Matthios
+	// Deceiver Gods
 	data += god_ui_block("MATTHIOS", "#20202e", "#99b2b1", /datum/storyteller/matthios, debug)
 
-	// Baotha
+	// Hertannea
 	data += god_ui_block("BAOTHA", "#46254a", "#e2abee", /datum/storyteller/baotha, debug)
 
-	// Graggar
+	// Archdevils
 	data += god_ui_block("GRAGGAR", "#3b5e51", "#99bbc7", /datum/storyteller/graggar, debug)
 
-	// Zizo
+	// One Envy
 	data += god_ui_block("ZIZO", "#661239", "#ed9da3", /datum/storyteller/zizo, debug)
 
 	data += "</div></div>"

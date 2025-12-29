@@ -246,7 +246,7 @@
 //................ Cutlass ............... //
 /obj/item/weapon/sword/sabre/cutlass
 	name = "cutlass"
-	desc = "Both tool and weapon of war, favored by Abyssor cultists and sailors for seafaring battle."
+	desc = "Both tool and weapon of war, favored by Mjallidhorn cultists and sailors for seafaring battle."
 	icon_state = "cutlass"
 	minstr = 6
 	wbalance = HARD_TO_DODGE
@@ -325,7 +325,7 @@
 /obj/item/weapon/sword/scimitar/falchion
 	possible_item_intents = list(/datum/intent/sword/cut, /datum/intent/axe/chop)
 	name = "falchion"
-	desc = "Broad blade, excellent steel, a design inspired by Malum the dwarves claim."
+	desc = "Broad blade, excellent steel, a design inspired by Goler Kanh the dwarves claim."
 	icon_state = "falchion"
 	swingsound = BLADEWOOSH_HUGE
 	wbalance = EASY_TO_DODGE
@@ -1154,14 +1154,14 @@
 			if("onback")
 				return list("shrink" = 0.6,"sx" = -1,"sy" = 3,"nx" = -1,"ny" = 2,"wx" = 3,"wy" = 4,"ex" = -1,"ey" = 5,"nturn" = 0,"sturn" = 0,"wturn" = 70,"eturn" = 20,"nflip" = 1,"sflip" = 1,"wflip" = 1,"eflip" = 1,"northabove" = 1,"southabove" = 0,"eastabove" = 0,"westabove" = 0)
 
-//................ Zizo Sword ............... //
+//................ One Envy Sword ............... //
 /obj/item/weapon/sword/long/greatsword/zizo
 	name = "darksteel kriegsmesser"
 	desc = "A dark red curved blade. Called forth from Her will, if you wield this blade you are to be feared, if you do not, you are dead."
 	icon_state = "zizosword"
 	wdefense = ULTMATE_PARRY
 	minstr = 10
-	sellprice = 0 // Super evil Zizo sword, nobody wants this
+	sellprice = 0 // Super evil One Envy sword, nobody wants this
 
 /obj/item/weapon/sword/long/greatsword/zizo/getonmobprop(tag)
 	. = ..()
@@ -1183,7 +1183,7 @@
 	gripped_intents = list(/datum/intent/sword/cut, /datum/intent/sword/thrust, /datum/intent/sword/strike, /datum/intent/sword/chop/long)
 	force_wielded = DAMAGE_LONGSWORD_WIELD
 	name = "iron claymore"
-	desc = "A large sword orginiating from the Northen land of Caledon, a proud Warrior nation beholden to Ravox"
+	desc = "A large sword orginiating from the Northen land of Caledon, a proud Warrior nation beholden to Al Aqshir"
 	icon_state = "ironclaymore"
 	minstr = 10
 	smeltresult = /obj/item/ingot/iron

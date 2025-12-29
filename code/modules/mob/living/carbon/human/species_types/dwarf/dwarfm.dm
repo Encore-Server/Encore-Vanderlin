@@ -12,7 +12,7 @@
 /datum/species/dwarf/mountain
 	name = "Dwarf"
 	id = SPEC_ID_DWARF
-	desc = "Shaped by Psydon and Necra, chosen by Malum.\
+	desc = "Shaped by Psydon and Valdala, chosen by Goler Kanh.\
 	\n\n\
 	A proud and robust species of vertically challenged folk, \
 	dwarves are known for their martial strength \

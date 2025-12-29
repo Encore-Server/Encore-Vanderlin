@@ -226,7 +226,7 @@
 
 /obj/item/weapon/polearm/spear/abyssor
 	name = "depthseeker"
-	desc = "An instrument of Abyssor's wrath to punish the ignorant."
+	desc = "An instrument of Mjallidhorn's wrath to punish the ignorant."
 	icon = 'icons/roguetown/weapons/64/patron.dmi'
 	icon_state = "gsspear"
 	force_wielded = DAMAGE_SPEAR_WIELD+2

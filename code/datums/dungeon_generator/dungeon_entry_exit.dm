@@ -10,7 +10,7 @@ GLOBAL_LIST_INIT(dungeon_exits, list())
 	entry_requirements = list("Time" = "day")
 
 /obj/structure/dungeon_entry
-	name = "The Tomb of Matthios"
+	name = "The Tomb of Deceiver Gods"
 	desc = ""
 
 	icon = 'icons/roguetown/misc/portal.dmi'

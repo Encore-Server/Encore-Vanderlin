@@ -218,7 +218,7 @@
 /datum/intent/whip/crack/metal
 	penfactor = 20
 
-//................ Xylix Whip ............... //
+//................ Iliope Whip ............... //
 /obj/item/weapon/whip/xylix
 	name = "cackle lash"
 	force = DAMAGE_WHIP+4

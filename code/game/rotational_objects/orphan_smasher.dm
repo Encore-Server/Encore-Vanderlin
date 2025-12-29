@@ -4,7 +4,7 @@
 
 /obj/structure/orphan_smasher
 	name = "auto anvil"
-	desc = "An holy amalgamation of buttons and levers built purposely to fulfill Malum's will."
+	desc = "An holy amalgamation of buttons and levers built purposely to fulfill Goler Kanh's will."
 
 	icon = 'icons/obj/autosmithy.dmi'
 	icon_state = "1"
