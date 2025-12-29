@@ -13,27 +13,35 @@ Format:
 	votable (is this map votable)
 endmap
 
-map vanderlin
+map domotan
 	default
 	votable
 endmap
 
+map roguetest
+	disabled
+endmap
+
+map vanderlin
+	disabled
+endmap
+
 map rosewood
 	minplayers 90
-	votable
+	disabled
 endmap
 
 map daftmarsh
 	maxplayers 75
-	votable
+	disabled
 endmap
 
 map whitepalacepass
 	maxplayers 0
-	votable
+	disabled
 endmap
 
 map voyager
 	maxplayers 0
-	votable
+	disabled
 endmap
