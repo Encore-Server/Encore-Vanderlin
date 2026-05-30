@@ -1,6 +1,6 @@
 /datum/triumph_buy/leprosy
 	name = "Leprosy"
-	desc = "Become a leper. You will be hated, you will be shunned, you will bleed and you will be weak. But Pestra will take all your pain away."
+	desc = "Become a leper. You will be hated, you will be shunned, you will bleed and you will be weak. But Erdl will take all your pain away."
 	triumph_buy_id = TRIUMPH_BUY_LEPROSY
 	triumph_cost = 0
 	category = TRIUMPH_CAT_CHALLENGES
@@ -9,8 +9,8 @@
 
 /datum/triumph_buy/leprosy/on_after_spawn(mob/living/carbon/human/H)
 	. = ..()
-	ADD_TRAIT(H, TRAIT_LEPROSY, TRAIT_GENERIC)
-	ADD_TRAIT(H, TRAIT_NOPAIN, TRAIT_GENERIC)
+	ADD_TRAIT(H, TRAIT_LEPROSY, TRIUMPH_TRAIT)
+	ADD_TRAIT(H, TRAIT_NOPAIN, TRIUMPH_TRAIT)
 
 	var/mask_item = H.get_item_by_slot(ITEM_SLOT_MASK)
 	if(!istype(mask_item, /obj/item/clothing/face/facemask))

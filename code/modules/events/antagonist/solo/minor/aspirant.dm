@@ -1,10 +1,10 @@
 /datum/round_event_control/antagonist/solo/aspirant
 	name = "Aspirant"
 	tags = list(
-		TAG_ZIZO,
-		TAG_BAOTHA,
+		TAG_VISIRES,
+		TAG_HERTANNEA,
 		TAG_VILLAIN,
-		TAG_COMBAT,
+		TAG_CORRUPTION,
 	)
 	antag_datum = /datum/antagonist/aspirant
 	roundstart = TRUE
@@ -13,32 +13,39 @@
 	minor_roleset = TRUE
 
 	needed_job = list(
-		"Consort",
-		"Hand",
-		"Prince",
-		"Captain",
-		"Steward",
-		"Court Magician",
-		"Court Physician",
-		"Archivist",
-		"Noble"
+		/datum/job/consort,
+		/datum/job/hand,
+		/datum/job/prince,
+		/datum/job/captain,
+		/datum/job/steward,
+		/datum/job/magician,
+		/datum/job/courtphys,
+		/datum/job/archivist,
+		/datum/job/minor_noble,
+		/datum/job/tomb_warden,
+	)
+
+	restricted_roles = list(
+		/datum/job/lord,
 	)
 
 	base_antags = 1
 	maximum_antags = 1
+	min_players = (LOWPOP_THRESHOLD*0.8) * READYUP_AVG
+	cost = 0.8
 
 	earliest_start = 0 SECONDS
-	secondary_events = list(
-		/datum/round_event_control/antagonist/solo/lich,
-		/datum/round_event_control/antagonist/solo/rebel,
-		/datum/round_event_control/antagonist/solo/vampires_and_werewolves,
-		/datum/round_event_control/antagonist/solo/vampires,
-		/datum/round_event_control/antagonist/solo/werewolf,
-		/datum/round_event_control/antagonist/solo/zizo_cult
-	)
-	secondary_prob = 75
-	min_players = 25
 	weight = 8
+
+	secondary_events = list(
+		/datum/round_event_control/antagonist/solo/rebel = 2, // paint the town red baby
+		/datum/round_event_control/antagonist/solo/wretch = 1,
+	)
+	secondary_prob = 40
+
+	preferred_events = list(
+		/datum/round_event_control/antagonist/solo/wretch = 1,
+	)
 
 	typepath = /datum/round_event/antagonist/solo/aspirant
 
@@ -52,26 +59,40 @@
 /datum/round_event/antagonist/solo/aspirant/start()
 	. = ..()
 
-	var/list/helping = list("Consort", "Hand", "Prince", "Captain", "Steward", "Court Magician", "Court Physician", "Archivist", "Noble", "Jester", "Dungeoneer", "Men-at-arms", "Gatemaster", "Butler", "Servant")
+	var/static/list/helping = list(
+		/datum/job/consort,
+		/datum/job/hand,
+		/datum/job/prince,
+		/datum/job/captain,
+		/datum/job/steward,
+		/datum/job/magician,
+		/datum/job/courtphys,
+		/datum/job/archivist,
+		/datum/job/minor_noble,
+		/datum/job/jester,
+		/datum/job/dungeoneer,
+		/datum/job/men_at_arms,
+		/datum/job/gatemaster,
+		/datum/job/butler,
+		/datum/job/servant,
+	)
 	var/list/possible_helpers = list()
 
-	for(var/mob/living/living in GLOB.human_list)
-		if(!living.client)
+	for(var/mob/living/carbon/human/helper in GLOB.player_list)
+		if(!helper.client || !helper.mind)
 			continue
-		if(is_banned_from(living.client.ckey, ROLE_ASPIRANT))
+		if(is_antag_banned(helper.client.ckey, ROLE_ASPIRANT))
 			continue
-		if(!(living.mind?.assigned_role.title in helping))
+		if(!is_type_in_list(helper.mind.assigned_role, helping))
 			continue
-		if(living.mind in setup_minds)
+		if(helper.mind in setup_minds)
 			continue
-		possible_helpers |= living
+		possible_helpers |= helper
 
 	var/num_helpers = min(rand(1, 3), length(possible_helpers))
 
 	for(var/i in 1 to num_helpers)
 		var/mob/living/helper = pick_n_take(possible_helpers)
-		if(!helper?.mind)
-			continue
 		helper.mind.add_antag_datum(/datum/antagonist/aspirant/supporter)
 
 	if(SSticker.rulermob?.mind)

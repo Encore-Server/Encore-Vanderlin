@@ -1,8 +1,8 @@
 /datum/job/bandit //pysdon above there's like THREE bandit.dms now I'm so sorry. This one is latejoin bandits, the one in villain is the antag datum, and the one in the 'antag' folder is an old adventurer class we don't use. Good luck!
-	title = "Bandit"
+	title = ROLE_BANDIT
 	tutorial = "Long ago you did a crime \
 	worthy of your bounty being hung on the wall outside of the local inn. \
-	You now live with your fellow free men in the bog, and generally get up to no good."
+	You now live with your fellow free men in the wilderness, and generally get up to no good."
 	department_flag = OUTSIDERS
 	job_flags = (JOB_EQUIP_RANK | JOB_NEW_PLAYER_JOINABLE | JOB_SHOW_IN_CREDITS)
 	display_order = JDO_BANDIT
@@ -26,10 +26,11 @@
 	antag_role = /datum/antagonist/bandit
 
 	exp_type = list(EXP_TYPE_LIVING)
-	exp_types_granted  = list(EXP_TYPE_COMBAT)
+	exp_types_granted = list(EXP_TYPE_COMBAT)
 	exp_requirements = list(
 		EXP_TYPE_LIVING = 900
 	)
 /datum/job/advclass/bandit
-	exp_types_granted  = list(EXP_TYPE_COMBAT)
-
+	exp_types_granted = list(EXP_TYPE_COMBAT)
+	spawn_with_torch = TRUE
+	department_flag = OUTSIDERS

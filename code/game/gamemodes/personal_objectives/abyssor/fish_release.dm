@@ -1,8 +1,8 @@
 /datum/objective/personal/release_fish
 	name = "Release Fish"
-	category = "Abyssor's Chosen"
+	category = "Mjallidhorn's Chosen"
 	triumph_count = 2
-	rewards = list("2 Triumphs", "Abyssor grows stronger", "Fishing knowledge")
+	rewards = list("2 Triumphs", "Mjallidhorn grows stronger", "Fishing knowledge")
 	var/released_count = 0
 	var/required_count = 1
 	var/target_fish_type
@@ -11,10 +11,9 @@
 /datum/objective/personal/release_fish/on_creation()
 	. = ..()
 	var/list/possible_fish = list()
-	for(var/fish_type in subtypesof(/obj/item/reagent_containers/food/snacks/fish))
-		var/obj/item/reagent_containers/food/snacks/fish/F = fish_type
+	for(var/obj/item/reagent_containers/food/snacks/fish/F as anything in subtypesof(/obj/item/reagent_containers/food/snacks/fish))
 		if(F.status != FISH_DEAD)
-			possible_fish += fish_type
+			possible_fish += F
 
 	if(length(possible_fish))
 		target_fish_type = pick(possible_fish)
@@ -42,13 +41,13 @@
 
 /datum/objective/personal/release_fish/complete_objective()
 	. = ..()
-	to_chat(owner.current, span_greentext("The [target_fish_name] has been returned to the depths, pleasing Abyssor!"))
-	adjust_storyteller_influence(ABYSSOR, 20)
+	to_chat(owner.current, span_greentext("The [target_fish_name] has been returned to the depths, pleasing Mjallidhorn!"))
+	adjust_storyteller_influence(MJALLIDHORN, 20)
 	UnregisterSignal(SSdcs, COMSIG_GLOBAL_FISH_RELEASED)
 
 /datum/objective/personal/release_fish/reward_owner()
 	. = ..()
-	owner.current.adjust_skillrank(/datum/skill/labor/fishing, 1)
+	owner.current.adjust_skill_level(/datum/attribute/skill/labor/fishing, 10)
 
 /datum/objective/personal/release_fish/update_explanation_text()
-	explanation_text = "Release an alive [target_fish_name] back to the water to honor Abyssor."
+	explanation_text = "Release an alive [target_fish_name] back to the water to honor Mjallidhorn."

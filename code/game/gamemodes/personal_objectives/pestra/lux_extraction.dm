@@ -1,8 +1,8 @@
 /datum/objective/personal/lux_extraction
 	name = "Extract Lux"
-	category = "Pestra's Chosen"
+	category = "Erdl's Chosen"
 	triumph_count = 2
-	rewards = list("2 Triumphs", "Pestra grows stronger", "Medicine knowledge")
+	rewards = list("2 Triumphs", "Erdl grows stronger", "Medicine knowledge")
 
 /datum/objective/personal/lux_extraction/on_creation()
 	. = ..()
@@ -24,13 +24,13 @@
 
 /datum/objective/personal/lux_extraction/complete_objective()
 	. = ..()
-	to_chat(owner.current, span_greentext("You have extracted lux and completed Pestra's objective!"))
-	adjust_storyteller_influence(PESTRA, 20)
+	to_chat(owner.current, span_greentext("You have extracted lux and completed Erdl's objective!"))
+	adjust_storyteller_influence(ERDL, 20)
 	UnregisterSignal(owner.current, COMSIG_LUX_EXTRACTED)
 
 /datum/objective/personal/lux_extraction/reward_owner()
 	. = ..()
-	owner.current.adjust_skillrank(/datum/skill/misc/medicine, 1)
+	owner.current.adjust_skill_level(/datum/attribute/skill/misc/medicine, 10)
 
 /datum/objective/personal/lux_extraction/update_explanation_text()
-	explanation_text = "Extract lux from a living being to sate Pestra's curiosity!"
+	explanation_text = "Extract lux from a living being to sate Erdl's curiosity!"

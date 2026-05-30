@@ -17,8 +17,8 @@ SUBSYSTEM_DEF(death_arena)
 	var/fight_force_end = null
 
 /datum/controller/subsystem/death_arena/fire(resumed = 0)
-	listclearnulls(waiting_fighters)
-	listclearnulls(tollless_clients)
+	list_clear_nulls(waiting_fighters)
+	list_clear_nulls(tollless_clients)
 
 	for(var/client as anything in tollless_clients)
 		if(world.time > tollless_clients[client])
@@ -80,9 +80,9 @@ SUBSYSTEM_DEF(death_arena)
 
 	first_skeleton.forceMove(get_turf(first_spawn))
 	second_skeleton.forceMove(get_turf(second_spawn))
-	var/necramessage = span_boldannounce("DECAPITATE YOUR OPPONENT AND BRING IT TO THE ALTAR ABOVE.")
-	to_chat(first_skeleton,necramessage)
-	to_chat(second_skeleton,necramessage)
+	var/valdalamessage = span_boldannounce("DECAPITATE YOUR OPPONENT AND BRING IT TO THE ALTAR ABOVE.")
+	to_chat(first_skeleton,valdalamessage)
+	to_chat(second_skeleton,valdalamessage)
 
 	qdel(first)
 	qdel(second)
@@ -156,13 +156,13 @@ SUBSYSTEM_DEF(death_arena)
 
 /datum/controller/subsystem/death_arena/proc/open_death_gate()
 	for(var/obj/structure/gate/G in GLOB.biggates)
-		if(G.gid != "death")
+		if(G.redstone_id != "death")
 			continue
 		G.open()
 
 /datum/controller/subsystem/death_arena/proc/close_death_gate()
 	for(var/obj/structure/gate/G in GLOB.biggates)
-		if(G.gid != "death")
+		if(G.redstone_id != "death")
 			continue
 		G.close()
 
@@ -177,8 +177,8 @@ SUBSYSTEM_DEF(death_arena)
 /datum/outfit/arena_skeleton/pre_equip(mob/living/carbon/human/H, visuals_only)
 	..()
 
-	H.adjust_skillrank(/datum/skill/combat/axesmaces, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/swords, 2, TRUE)
+	H.adjust_skill_level(/datum/attribute/skill/combat/axesmaces, 20, TRUE)
+	H.adjust_skill_level(/datum/attribute/skill/combat/swords, 20, TRUE)
 
 	r_hand = /obj/item/weapon/mace/steel
 	l_hand = /obj/item/weapon/shield/wood
@@ -187,7 +187,7 @@ SUBSYSTEM_DEF(death_arena)
 
 
 /obj/structure/table/wood/fine/altar
-	name = "Ravox's sacrifical altar"
+	name = "Mordsol's sacrifical altar"
 	desc = "It awaits an offering of your triumphs"
 	icon = 'icons/roguetown/misc/structure.dmi'
 	icon_state = "ravox_altar"
@@ -200,9 +200,9 @@ SUBSYSTEM_DEF(death_arena)
 	record_round_statistic(STATS_UNDERWORLD_DUELS)
 	SSdeath_arena.process_fight_end(item, user)
 
-/obj/structure/underworld/ravox
-	name = "Ravox"
-	desc = "Ravox, God of Warfare, Justice, and Bravery. He finds solace in his friendship with Necra and his retreat to the Underworld. Upon your gaze, he gives you a respectful nod. Damn, he's cool.."
+/obj/structure/underworld/mordsol
+	name = "Mordsol"
+	desc = PLACEHOLDER_PATRON_REBRANDING
 	icon = 'icons/roguetown/underworld/ravox.dmi'
 	icon_state = "ravox"
 	layer = ABOVE_MOB_LAYER
@@ -213,9 +213,9 @@ SUBSYSTEM_DEF(death_arena)
 	resistance_flags = INDESTRUCTIBLE
 
 
-/obj/structure/underworld/necra
-	name = "Necra"
-	desc = "The Undermaiden herself, in her true form. The most ancient of living gods. She observes your battles gleefully, gratitude in her eyes to be relieved from the arduousness of eternity. Her close friend and confidant, Ravox, sits by her side. The two must have worked hard to restructure the underworld like this. They seem pleased with their work."
+/obj/structure/underworld/valdala
+	name = "Valdala"
+	desc = PLACEHOLDER_PATRON_REBRANDING
 	icon = 'icons/roguetown/underworld/necra.dmi'
 	icon_state = "necra"
 	layer = ABOVE_MOB_LAYER
@@ -225,6 +225,6 @@ SUBSYSTEM_DEF(death_arena)
 	max_integrity = 1000000000
 	resistance_flags = INDESTRUCTIBLE
 
-/obj/structure/underworld/necra/Initialize()
+/obj/structure/underworld/valdala/Initialize()
 	. = ..()
 	set_light(5, 4, 30, l_color = LIGHT_COLOR_BLUE)

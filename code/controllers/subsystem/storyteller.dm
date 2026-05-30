@@ -21,8 +21,8 @@ SUBSYSTEM_DEF(gamemode)
 	var/list/event_tracks = EVENT_TRACKS
 	/// Our storyteller. They progresses our trackboards and picks out events
 	var/datum/storyteller/current_storyteller
-	/// Result of the storyteller vote/pick. Defaults to Astrata.
-	var/selected_storyteller = /datum/storyteller/astrata
+	/// Result of the storyteller vote/pick. Defaults to Visires.
+	var/selected_storyteller = /datum/storyteller/visires
 	/// List of all the storytellers. Populated at init. Associative from type
 	var/list/storytellers = list()
 	/// Next process for our storyteller. The wait time is STORYTELLER_WAIT_TIME
@@ -273,97 +273,97 @@ SUBSYSTEM_DEF(gamemode)
 
 			//Divine Pantheon
 
-			"Psydon" = list(
-				"...golden threads drift through the void, stitching stars where wounds once were... something sacred stirs beneath the quiet...",
-				"...a vast warmth flickers behind your closed eyes... broken pieces drift, searching for their whole...",
-				"...you walk among ruins humming with warmth... pieces of something divine lie scattered, each pulse a memory, each breath a promise..."
+			"Angros" = list(
+				"...a silhouette looms on the horizon... its head pierces the clouds, and its hands are outstretched to something above... the dream rejects you as the dark engulfs the view...",
+				"...a man toils upon his masterpiece in solitude... you feel compelled not to attract his gaze... the world would never be the same...",
+				"...you awaken, floating freely in the sky... Gaia rests beneath you, and you witness funnels of fire erupt from the world's body... the blaze devours you, and it ends..."
 			),
 
-			"Astrata"= list(
-				"...radiance floods your dream... it’s not warmth, but judgment disguised as light...",
-				"...you dream of unending sunrise, gold pouring over endless skies... judgment walks in daylight’s shoes...",
-				"...a glare pierces your soul... you feel seen, judged, burned, yet safe... the light watches, unwavering and eternal..."
+			"Visires"= list(
+				"...your soul churns, hungering endlessly... it lashes out in tendrils of flame that strike down all you love... everything flashes into nothing in an instant...",
+				"...regret wells up within... it is not your own, but its weight is upon you for a fleeting moment... it crushes you...",
+				"...in the dark, a small idol shines... you are compelled to snatch it... your view sunders, and it all turns to ash..."
 			),
 
-			"Noc" = list(
-				"...silver light spills across ink-black halls... you hear pages fluttering without wind, and a voice speaks in riddles...",
-				"...a tapestry of stars weaves itself in your mind... patterns emerge and vanish, revealing truths never spoken aloud...",
-				"...moonlight coils into a key... you reach for it, but your hands are made of questions..."
+			"Akan" = list(
+				"...the stars blink back at you, and you see faces you almost recognize in their midst...",
+				"...you are lighter than you've ever been... the clouds feel solid, now...",
+				"...the bottom of your feet feel strange... your body detests the very gravity that holds you down..."
 			),
 
-			"Necra"= list(
-				"...the dream begins with a closed door... you knock. Silence answers... when it opens, everything you were is counted, weighed...",
-				"...everything is still... you are the last heartbeat in a world already buried... a cold smile waits just past the veil...",
-				"...a quiet woman sits by a river made of ash... she nods once, counting your breath..."
+			"Valdala"= list(
+				"...the great work is carried on sorrowful wings... lightning cries 'neath her gale...",
+				"...the angels circle overhead, knowing something I ought not...",
+				"...a torrent follows the mist... in its roar, salvation in the war neverending..."
 			),
 
-			"Pestra"= list(
-				"...your dream wilts, then blooms. A garden of endings and beginnings surrounds you...",
-				"...you hold your own bones like seeds. Rain falls, and they whisper with life...",
-				"...you see a flower bloom in ash. It dies and returns, brighter, stranger. The rhythm of endings comforts you...",
+			"Erdl"= list(
+				"...sinew and bone reform and contort... we are but threads woven from the finest silk...",
+				"...measure twice... cut once... a soul's treasure shan't be one to squander...",
+				"...blood curdles as the snake reforms itself... life is a cycle, infinitesimal in its detail... "
 			),
 
-			"Ravox"= list(
-				"...a sword rests beside a scale... neither tips...",
-				"...steel sings in your dreams... a verdict is written in blood and flame, but justice waits before it lands...",
-				"...you duel a mirror image of yourself... the victor is neither, yet the fight continues... law and war share the same breath..."
+			"Mordsol"= list(
+				"...the fire is gone...",
+				"...our cinder endures, stalwart against the first sin...",
+				"...the war is distant still... it will call your name, soon..."
 			),
 
-			"Malum"= list(
+			"Goler Kanh"= list(
 				"...hammers echo through your sleep... something is being made, perhaps you...",
 				"...your hands ache... you build something vast, but can never see the whole... sparks kiss your skin, and you smile...",
 				"...endless clanging fills your mind... with each strike, something within you hardens, reforged in smoke and effort..."
 			),
 
-			"Dendor"= list(
-				"...animals scream in tongues you almost understand... trees whisper old pain, searching for their shepherd...",
-				"...vines coil around your limbs. Roots burst from your feet... the forest within you howls, a kingdom lost to madness...",
-				"...eyes glow among tangled thorns... something ancient, betrayed, hungers again..."
+			"Gani"= list(
+				"...verdant greening blooms about your body... something impossibly old stirs within it...",
+				"...you can feel the firmament's heartbeat beneath you... its rhythm thumps out a soothing metronome...",
+				"...an old woman sits alongside you, her visage is likened to stone... for your kin, she never left..."
 			),
 
-			"Abyssor"= list(
-				"...the sea invades your lungs... a storm of blood and salt rises...",
-				"...fins brush past your legs... the water tastes of fury and old wounds...",
-				"...tides drag you under... in the silence, you hear sobbing, not yours... the sea remembers every wound..."
+			"Mjallidhorn"= list(
+				"...frost bites at your skin, its approach tireless and without remorse... you lose pieces of yourself as you claw it away...",
+				"...the clashing of shield and blade fills your ears... your comrades fight and die alongside you... you feel at home...",
+				"...foghorns roll in from the sea, calling respite you expected would never come..."
 			),
 
 
-			"Xylix"= list(
+			"Iliope"= list(
 				"...you laugh without knowing why... your reflection winks back as a stranger...",
 				"...you wear masks you’ve never owned... each one laughs in a new voice... you are a guest in your own skin...",
 				"...every path splits... every answer lies... yet you smile... trickery is truth when worn well..."
 			),
 
-			"Eora"= list(
-				"...you dream in color,red threads, gold loops, blue knots... all pulling gently...",
-				"...a weaving surrounds you... every face you’ve loved or hated is there...",
-				"...your heart is a loom... dreams pass through it, weaving bonds to people you’ve never met, yet feel you’ve always known..."
+			"Pomette"= list(
+				"...a fated dance neverending... bliss, in the ignorance it provides...",
+				"...a hand wraps upon your own, soothing a cold you never noticed you had...",
+				"...the presence of familiarity grasps you, coaxing you by the arm into the light..."
 			),
 
-			//Inhumen Pantheon
+			//heretics
 
-			"Matthios"= list(
+			"Deceivers"= list(
 				"...a shadow slips your pocket open... you feel lighter in your dream...",
 				"...a purse vanishes from your belt... a laugh echoes in your ears... you check your pockets, your name is gone...",
 				"...you follow footprints that vanish behind you... no one walks beside you, yet you’re never alone..."
 			),
 
-			"Baotha" = list(
+			"Hertannea" = list(
 				"...everything glows with joy... then it melts, and you, giggle anyway...",
 				"...you float through a city of glass, laughter echoing in colors... you smile with no mouth and sing without sound...",
 				"...your body dances without thought... every breath tastes like honey and smoke... you forget, and it feels divine..."
 			),
 
-			"Graggar"= list(
-				"...your mouth is not your own... it’s laughing, snarling, hungry...",
-				"...you tear through flesh with joy... your dream is soaked in red... hunger knows your name, and calls you friend...",
-				"...an ancient drum beats under your ribs... it demands violence in return for peace..."
+			"Archdevil"= list(
+				"...there is nothing below... it claws for you, the firmament can only hold so long...",
+				"...you tear through flesh with joy... your dream is soaked in red... hunger knows your name, and calls you friend..",
+				"...an ancient sadness engulfs you... longing to return, furious at something you can scarcely comprehend..."
 			),
 
-			"Zizo"= list(
-				"...eyes stare from skulls that still weep... you cradle a child made of frost and ash... it whispers secrets backwards...",
-				"...your name is forgotten by everyone in your dream... only bones remember...",
-				"...a girl with white eyes smiles at you... her lullaby stitches flesh to spirit..."
+			"One Envy"= list(
+				"...burning eyes of amber are gazing a hole through you... you almost see something inside...",
+				"...lost people keep coming to you... they can never seem to find their way home...",
+				"...you almost feel as if you wrest control of the dream... but your soul urges you stay..."
 			),
 
 			"Unknown" = list("You feel a presence watching your sleep... old, vast, and unknowable. You do not yet know their name.")
@@ -381,7 +381,7 @@ SUBSYSTEM_DEF(gamemode)
 					"... you kneel, not knowing why... the voice behind you compels it",
 					"... a collar of roses and rust... worn by the willing"
 				),
-			/datum/antagonist/vampire/lesser = list (
+			/datum/antagonist/vampire/lords_spawn = list (
 					"... fangs bloom from cracked lips... hunger shudders through the air",
 					"... you see your reflection... it smiles with borrowed teeth",
 					"... a laugh beneath floorboards... young, broken, blood-wet"
@@ -401,12 +401,12 @@ SUBSYSTEM_DEF(gamemode)
 					"... they follow the alpha's scent... and dream of killing him",
 					"... a low growl rumbles under moonlight... fur and fury rise"
 				),
-			/datum/antagonist/zizocultist = list(
+			/datum/antagonist/archdevilcultist = list(
 					"...a circle chants beneath shifting stars... their eyes are wrong",
 					"...ink flows upward... the words burn in reverse",
 					"...your thoughts are not your own... they hum in unison"
 				),
-			/datum/antagonist/zizocultist/leader = list(
+			/datum/antagonist/archdevilcultist/leader = list(
 					"... a silent servant tends to a spiral... it never ends",
 					"... you hand someone a book... you've never seen it before",
 					"... something stands just behind your shoulder... always just behind"
@@ -475,32 +475,31 @@ SUBSYSTEM_DEF(gamemode)
 		pick_most_influential()
 		last_devotion_check = world.time + 2 MINUTES
 
-	if(SSticker.HasRoundStarted() && (world.time - SSticker.round_start_time) >= ROUNDSTART_VALID_TIMEFRAME)
-		can_run_roundstart = FALSE
-	else if(current_roundstart_event && length(current_roundstart_event.preferred_events)) //note that this implementation is made for preferred_events being other roundstart events
-		var/list/preferred_copy = current_roundstart_event.preferred_events.Copy()
-		var/datum/round_event_control/selected_event = pickweight(preferred_copy)
-		var/player_count = get_active_player_count(alive_check = TRUE, afk_check = TRUE, human_check = TRUE)
-		if(ispath(selected_event)) //get the instances if we dont have them
-			current_roundstart_event.preferred_events = list()
-			for(var/datum/round_event_control/e_control as anything in preferred_copy)
-				current_roundstart_event.preferred_events[new e_control] = preferred_copy[e_control]
-			preferred_copy = current_roundstart_event.preferred_events.Copy()
-			selected_event = null
-		else if(!selected_event.canSpawnEvent(player_count))
-			preferred_copy -= selected_event
-			selected_event = null
-
-		var/sanity = 0
-		while(!selected_event && length(preferred_copy) && sanity < 100)
-			sanity++
-			selected_event = pickweight(preferred_copy)
-			if(!selected_event.canSpawnEvent(player_count))
+	if(can_run_roundstart)
+		can_run_roundstart = SSticker.HasRoundStarted() && (world.time - SSticker.round_start_time) < ROUNDSTART_VALID_TIMEFRAME
+		if(current_roundstart_event && length(current_roundstart_event.preferred_events)) //note that this implementation is made for preferred_events being other roundstart events
+			var/list/preferred_copy = current_roundstart_event.preferred_events.Copy()
+			var/datum/round_event_control/selected_event = pickweight(preferred_copy)
+			var/player_count = get_active_player_count(alive_check = TRUE, afk_check = TRUE, human_check = TRUE)
+			if(ispath(selected_event)) //get the instances if we dont have them
+				current_roundstart_event.preferred_events = list()
+				for(var/datum/round_event_control/e_control as anything in preferred_copy)
+					current_roundstart_event.preferred_events[new e_control] = preferred_copy[e_control]
+				preferred_copy = current_roundstart_event.preferred_events.Copy()
+				selected_event = null
+			else if(!selected_event?.canSpawnEvent(player_count))
 				preferred_copy -= selected_event
 				selected_event = null
 
-		if(selected_event)
-			current_storyteller.try_buy_event(selected_event)
+			var/sanity = 0
+			while(!selected_event && length(preferred_copy) && sanity < 100)
+				sanity++
+				selected_event = pickweight(preferred_copy)
+				if(!selected_event.canSpawnEvent(player_count))
+					preferred_copy -= selected_event
+					selected_event = null
+			if(selected_event)
+				current_storyteller?.try_buy_event(selected_event)
 
 	///Handle scheduled events
 	for(var/datum/scheduled_event/sch_event in scheduled_events)
@@ -523,7 +522,7 @@ SUBSYSTEM_DEF(gamemode)
 
 /// Gets the number of antagonists the antagonist injection events will stop rolling after.
 /datum/controller/subsystem/gamemode/proc/get_antag_cap()
-	var/total_number = get_correct_popcount() + (garrison * 2)
+	var/total_number = get_correct_popcount() + garrison + church
 	var/cap = FLOOR((total_number / ANTAG_CAP_DENOMINATOR), 1) + ANTAG_CAP_FLAT
 	return cap
 
@@ -554,53 +553,59 @@ SUBSYSTEM_DEF(gamemode)
 /// Gets candidates for antagonist roles.
 /datum/controller/subsystem/gamemode/proc/get_candidates(be_special, job_ban, observers, ready_newplayers, living_players, required_time, inherit_required_time = TRUE, midround_antag_pref, no_antags = TRUE, list/restricted_roles, list/required_roles)
 	var/list/candidates = list()
-	var/list/candidate_candidates = list() //lol
 
 	for(var/mob/player as anything in GLOB.player_list)
-		if(QDELETED(player) || player.mind?.picking)
+		if(QDELETED(player) || !player.client || !player.mind || player.mind.picking)
 			continue
+
+		if(job_ban && is_banned_from(player.ckey, list(job_ban)))
+			continue
+
+		var/checked_one_box = FALSE
+
 		if(ready_newplayers && isnewplayer(player))
 			var/mob/dead/new_player/new_player = player
-			if(new_player.ready == PLAYER_READY_TO_PLAY && new_player.mind && new_player.check_preferences())
-				candidate_candidates += player
-		else if(observers && isobserver(player))
-			candidate_candidates += player
-		else if(living_players && isliving(player))
-			if(!ishuman(player))
+			if(new_player.ready != PLAYER_READY_TO_PLAY || !new_player.check_preferences())
 				continue
-			candidate_candidates += player
+			checked_one_box = TRUE
 
-	for(var/mob/candidate as anything in candidate_candidates)
-		if(QDELETED(candidate) || !candidate.key || !candidate.client || (!observers && !candidate.mind))
-			continue
-		if(!observers)
-			if(!ready_players && !isliving(candidate))
+		if(observers && isobserver(player))
+			checked_one_box = TRUE
+
+		if(living_players && isliving(player))
+			if(!ishuman(player) || isautomaton(player))
 				continue
-			if(no_antags && !isnull(candidate.mind.antag_datums))
+
+			var/datum/job/tested_job = player.mind.assigned_role
+			if(tested_job.parent_job)
+				tested_job = tested_job.parent_job
+
+			if(length(restricted_roles) && is_type_in_typecache(tested_job, restricted_roles))
+				continue
+
+			if(length(required_roles) && !is_type_in_typecache(tested_job, required_roles))
+				continue
+
+			if(player.mind.special_role)
+				continue
+
+			if(be_special && !(be_special in player.client.prefs?.be_special))
+				continue
+
+			if(no_antags && length(player.mind.antag_datums))
 				var/real = FALSE
-				for(var/datum/antagonist/antag_datum as anything in candidate.mind.antag_datums)
+				for(var/datum/antagonist/antag_datum as anything in player.mind.antag_datums)
 					if(!(antag_datum.antag_flags & FLAG_FAKE_ANTAG))
 						real = TRUE
 						break
 				if(real)
 					continue
-			if(restricted_roles && (candidate.mind.assigned_role.title in restricted_roles))
-				continue
-			if(length(required_roles) && !(candidate.mind.assigned_role.title in required_roles))
-				continue
-			if(candidate.mind.special_role)
-				continue
 
-		if(be_special)
-			if(!(candidate.client.prefs) || !(be_special in candidate.client.prefs.be_special))
-				continue
+			checked_one_box = TRUE
 
-		//if(midround_antag_pref)
-			//continue
+		if(checked_one_box)
+			candidates += player
 
-		if(job_ban && is_banned_from(candidate.ckey, list(job_ban, ROLE_MANIAC)))
-			continue
-		candidates += candidate
 	return candidates
 
 /// Gets the correct popcount, returning READY people if roundstart, and active people if not.
@@ -729,7 +734,7 @@ SUBSYSTEM_DEF(gamemode)
 	for(var/mob/player_mob as anything in GLOB.player_list)
 		if(!player_mob.client)
 			continue
-		if(player_mob.stat) //If they're alive
+		if(player_mob.stat == DEAD) //If they're alive
 			continue
 		if(player_mob.client.is_afk()) //If afk
 			continue
@@ -737,6 +742,8 @@ SUBSYSTEM_DEF(gamemode)
 			continue
 		active_players++
 		var/datum/job/assigned = player_mob.mind?.assigned_role
+		if(assigned?.parent_job)
+			assigned = assigned.parent_job
 		if(assigned)
 			if(assigned.job_bitflag & BITFLAG_ROYALTY)
 				royalty++
@@ -977,7 +984,7 @@ SUBSYSTEM_DEF(gamemode)
 /datum/controller/subsystem/gamemode/proc/set_storyteller(passed_type)
 	if(!storytellers[passed_type])
 		message_admins("Attempted to set an invalid storyteller type: [passed_type], force setting to guide instead.")
-		current_storyteller = storytellers[/datum/storyteller/astrata] //if we dont have any then we brick, lets not do that
+		current_storyteller = storytellers[/datum/storyteller/visires] //if we dont have any then we brick, lets not do that
 		CRASH("Attempted to set an invalid storyteller type: [passed_type].")
 
 	var/datum/storyteller/chosen_storyteller = storytellers[passed_type]
@@ -1318,21 +1325,21 @@ SUBSYSTEM_DEF(gamemode)
 	chosen_chronicle_stats.Cut()
 
 	var/list/current_valid_humans = list()
-	var/mob/living/carbon/human/valid_psydon_favourite
+	var/mob/living/carbon/human/valid_angros_favourite
 
 	for(var/client/client in GLOB.clients)
 		var/mob/living/carbon/human/human_mob = client.mob
 		if(!ishuman(human_mob) || !human_mob.mind || human_mob.stat == DEAD)
 			continue
 		current_valid_humans += human_mob
-		if(client.has_triumph_buy(TRIUMPH_BUY_PSYDON_FAVOURITE))
-			valid_psydon_favourite = human_mob
+		if(client.has_triumph_buy(TRIUMPH_BUY_ANGROS_FAVOURITE))
+			valid_angros_favourite = human_mob
 
-	if(valid_psydon_favourite && length(current_valid_humans) >= 2)
-		chosen_chronicle_stats += CHRONICLE_STATS_PSYDON_FAVOURITE
+	if(valid_angros_favourite && length(current_valid_humans) >= 2)
+		chosen_chronicle_stats += CHRONICLE_STATS_ANGROS_FAVOURITE
 		chosen_chronicle_stats += CHRONICLE_STATS_RANDOM_PASSERBY
-	else if(valid_psydon_favourite)
-		chosen_chronicle_stats += CHRONICLE_STATS_PSYDON_FAVOURITE
+	else if(valid_angros_favourite)
+		chosen_chronicle_stats += CHRONICLE_STATS_ANGROS_FAVOURITE
 		for(var/set_name in chronicle_sets)
 			var/list/set_data = chronicle_sets[set_name]
 			if(length(set_data) >= 2 && GLOB.chronicle_stats[set_data[1]] && GLOB.chronicle_stats[set_data[2]])
@@ -1506,7 +1513,7 @@ SUBSYSTEM_DEF(gamemode)
 
 	var/list/current_valid_humans = list()
 
-	var/mob/living/carbon/human/valid_psydon_favourite
+	var/mob/living/carbon/human/valid_angros_favourite
 
 	var/highest_total_stats = -1
 	var/highest_strength = -1
@@ -1545,7 +1552,7 @@ SUBSYSTEM_DEF(gamemode)
 		if(!roundstart)
 			if(living.patron)
 				GLOB.patron_follower_counts[living.patron.name]++
-				if(living.job == "Monarch")
+				if(living.job == JOB_MONARCH)
 					force_set_round_statistic(STATS_MONARCH_PATRON, living.patron.name)
 		if(living.mind.has_antag_datum(/datum/antagonist/werewolf))
 			record_round_statistic(STATS_WEREVOLVES)
@@ -1558,7 +1565,7 @@ SUBSYSTEM_DEF(gamemode)
 			current_valid_humans += human_mob
 			record_round_statistic(STATS_TOTAL_POPULATION)
 			for(var/obj/item/clothing/neck/current_item in human_mob.get_equipped_items(TRUE))
-				if(current_item.type in list(/obj/item/clothing/neck/psycross, /obj/item/clothing/neck/psycross/silver, /obj/item/clothing/neck/psycross/g))
+				if(current_item.type in list(/obj/item/clothing/neck/psycross, /obj/item/clothing/neck/psycross/silver, /obj/item/clothing/neck/psycross/gold))
 					record_round_statistic(STATS_PSYCROSS_USERS)
 					break
 			switch(human_mob.gender)
@@ -1579,8 +1586,9 @@ SUBSYSTEM_DEF(gamemode)
 					record_round_statistic(STATS_ELDERLY_POPULATION)
 				if(AGE_IMMORTAL)
 					record_round_statistic(STATS_IMMORTAL_POPULATION)
-			if(human_mob.charflaw)
-				record_featured_object_stat(FEATURED_STATS_FLAWS, human_mob.charflaw.name)
+			if(length(human_mob.quirks))
+				for(var/datum/quirk/vice/charflaw in human_mob.quirks)
+					record_featured_object_stat(FEATURED_STATS_FLAWS, charflaw.name)
 			if(human_mob.is_noble())
 				record_round_statistic(STATS_ALIVE_NOBLES)
 			if(human_mob.mind.assigned_role.title in GLOB.garrison_positions)
@@ -1593,17 +1601,17 @@ SUBSYSTEM_DEF(gamemode)
 				record_round_statistic(STATS_ILLITERATES)
 			if(HAS_TRAIT(human_mob, TRAIT_FOREIGNER))
 				record_round_statistic(STATS_FOREIGNERS)
-			if(human_mob.has_flaw(/datum/charflaw/clingy))
+			if(human_mob.has_quirk(/datum/quirk/vice/clingy))
 				record_round_statistic(STATS_CLINGY_PEOPLE)
-			if(human_mob.has_flaw(/datum/charflaw/addiction/alcoholic))
+			if(human_mob.has_quirk(/datum/quirk/vice/alcoholic))
 				record_round_statistic(STATS_ALCOHOLICS)
-			if(human_mob.has_flaw(/datum/charflaw/addiction/junkie))
+			if(human_mob.has_quirk(/datum/quirk/vice/junkie))
 				record_round_statistic(STATS_JUNKIES)
-			if(human_mob.has_flaw(/datum/charflaw/addiction/kleptomaniac))
+			if(human_mob.has_quirk(/datum/quirk/vice/kleptomaniac))
 				record_round_statistic(STATS_KLEPTOMANIACS)
-			if(human_mob.has_flaw(/datum/charflaw/greedy))
+			if(human_mob.has_quirk(/datum/quirk/vice/greedy))
 				record_round_statistic(STATS_GREEDY_PEOPLE)
-			if(human_mob.has_flaw(/datum/charflaw/hunted))
+			if(human_mob.has_quirk(/datum/quirk/vice/hunted))
 				record_round_statistic(STATS_HUNTED_PEOPLE)
 			if(HAS_TRAIT_NOT_FROM(human_mob, TRAIT_PACIFISM, "hugbox"))
 				record_round_statistic(STATS_PACIFISTS)
@@ -1650,41 +1658,41 @@ SUBSYSTEM_DEF(gamemode)
 
 			// Chronicle statistics
 
-			if(human_mob.client.has_triumph_buy(TRIUMPH_BUY_PSYDON_FAVOURITE))
-				valid_psydon_favourite = human_mob
+			if(human_mob.client.has_triumph_buy(TRIUMPH_BUY_ANGROS_FAVOURITE))
+				valid_angros_favourite = human_mob
 
-			var/total_stats = human_mob.STASTR + human_mob.STAINT + human_mob.STAEND + human_mob.STACON + human_mob.STAPER + human_mob.STASPD + human_mob.STALUC
+			var/total_stats = GET_MOB_ATTRIBUTE_VALUE(human_mob, STAT_STRENGTH) + GET_MOB_ATTRIBUTE_VALUE(human_mob, STAT_INTELLIGENCE) + GET_MOB_ATTRIBUTE_VALUE(human_mob, STAT_ENDURANCE) + GET_MOB_ATTRIBUTE_VALUE(human_mob, STAT_CONSTITUTION) + GET_MOB_ATTRIBUTE_VALUE(human_mob, STAT_PERCEPTION) + GET_MOB_ATTRIBUTE_VALUE(human_mob, STAT_SPEED) + GET_MOB_ATTRIBUTE_VALUE(human_mob, STAT_FORTUNE)
 			if(total_stats > highest_total_stats)
 				highest_total_stats = total_stats
 				set_chronicle_stat(CHRONICLE_STATS_MOST_SKILLS_PERSON, human_mob, "PRODIGY", "#e9de43", "[total_stats] total stats")
 
-			if(human_mob.STASTR > highest_strength)
-				highest_strength = human_mob.STASTR
-				set_chronicle_stat(CHRONICLE_STATS_STRONGEST_PERSON, human_mob, "STRONGMAN", "#bd1717", "[human_mob.STASTR] strength")
+			if(GET_MOB_ATTRIBUTE_VALUE(human_mob, STAT_STRENGTH) > highest_strength)
+				highest_strength = GET_MOB_ATTRIBUTE_VALUE(human_mob, STAT_STRENGTH)
+				set_chronicle_stat(CHRONICLE_STATS_STRONGEST_PERSON, human_mob, "STRONGMAN", "#bd1717", "[GET_MOB_ATTRIBUTE_VALUE(human_mob, STAT_STRENGTH)] strength")
 
-			if(human_mob.STAINT > highest_intelligence)
-				highest_intelligence = human_mob.STAINT
-				set_chronicle_stat(CHRONICLE_STATS_SMARTEST_PERSON, human_mob, "GENIUS", "#5eb6e6", "[human_mob.STAINT] intelligence")
+			if(GET_MOB_ATTRIBUTE_VALUE(human_mob, STAT_INTELLIGENCE) > highest_intelligence)
+				highest_intelligence = GET_MOB_ATTRIBUTE_VALUE(human_mob, STAT_INTELLIGENCE)
+				set_chronicle_stat(CHRONICLE_STATS_SMARTEST_PERSON, human_mob, "GENIUS", "#5eb6e6", "[GET_MOB_ATTRIBUTE_VALUE(human_mob, STAT_INTELLIGENCE)] intelligence")
 
-			if(human_mob.STALUC > highest_luck)
-				highest_luck = human_mob.STALUC
-				set_chronicle_stat(CHRONICLE_STATS_LUCKIEST_PERSON, human_mob, "LUCKY DEVIL", "#54d666", "[human_mob.STALUC] luck")
+			if(GET_MOB_ATTRIBUTE_VALUE(human_mob, STAT_FORTUNE) > highest_luck)
+				highest_luck = GET_MOB_ATTRIBUTE_VALUE(human_mob, STAT_FORTUNE)
+				set_chronicle_stat(CHRONICLE_STATS_LUCKIEST_PERSON, human_mob, "LUCKY DEVIL", "#54d666", "[GET_MOB_ATTRIBUTE_VALUE(human_mob, STAT_FORTUNE)] luck")
 
-			if(human_mob.STASPD > highest_speed)
-				highest_speed = human_mob.STASPD
-				set_chronicle_stat(CHRONICLE_STATS_FASTEST_PERSON, human_mob, "SPEEDSTER", "#54d6c2", "[human_mob.STASPD] speed")
+			if(GET_MOB_ATTRIBUTE_VALUE(human_mob, STAT_SPEED) > highest_speed)
+				highest_speed = GET_MOB_ATTRIBUTE_VALUE(human_mob, STAT_SPEED)
+				set_chronicle_stat(CHRONICLE_STATS_FASTEST_PERSON, human_mob, "SPEEDSTER", "#54d6c2", "[GET_MOB_ATTRIBUTE_VALUE(human_mob, STAT_SPEED)] speed")
 
-			if(human_mob.STAPER > highest_perception)
-				highest_perception = human_mob.STAPER
-				set_chronicle_stat(CHRONICLE_STATS_MOST_PERCEPTIVE_PERSON, human_mob, "EAGLE-EYED", "#a8d654", "[human_mob.STAPER] perception")
+			if(GET_MOB_ATTRIBUTE_VALUE(human_mob, STAT_PERCEPTION) > highest_perception)
+				highest_perception = GET_MOB_ATTRIBUTE_VALUE(human_mob, STAT_PERCEPTION)
+				set_chronicle_stat(CHRONICLE_STATS_MOST_PERCEPTIVE_PERSON, human_mob, "EAGLE-EYED", "#a8d654", "[GET_MOB_ATTRIBUTE_VALUE(human_mob, STAT_PERCEPTION)] perception")
 
-			if(human_mob.STACON > highest_constitution)
-				highest_constitution = human_mob.STACON
-				set_chronicle_stat(CHRONICLE_STATS_MOST_RESILIENT_PERSON, human_mob, "THE ROCK", "#d67c54", "[human_mob.STACON] constitution")
+			if(GET_MOB_ATTRIBUTE_VALUE(human_mob, STAT_CONSTITUTION) > highest_constitution)
+				highest_constitution = GET_MOB_ATTRIBUTE_VALUE(human_mob, STAT_CONSTITUTION)
+				set_chronicle_stat(CHRONICLE_STATS_MOST_RESILIENT_PERSON, human_mob, "THE ROCK", "#d67c54", "[GET_MOB_ATTRIBUTE_VALUE(human_mob, STAT_CONSTITUTION)] constitution")
 
-			if(human_mob.STAEND > highest_endurance)
-				highest_endurance = human_mob.STAEND
-				set_chronicle_stat(CHRONICLE_STATS_MOST_ENDURANT_PERSON, human_mob, "WORKHORSE", "#dbb169", "[human_mob.STAEND] endurance")
+			if(GET_MOB_ATTRIBUTE_VALUE(human_mob, STAT_ENDURANCE) > highest_endurance)
+				highest_endurance = GET_MOB_ATTRIBUTE_VALUE(human_mob, STAT_ENDURANCE)
+				set_chronicle_stat(CHRONICLE_STATS_MOST_ENDURANT_PERSON, human_mob, "WORKHORSE", "#dbb169", "[GET_MOB_ATTRIBUTE_VALUE(human_mob, STAT_ENDURANCE)] endurance")
 
 			var/wealth = get_mammons_in_atom(human_mob)
 			total_wealth += wealth
@@ -1700,32 +1708,32 @@ SUBSYSTEM_DEF(gamemode)
 				set_chronicle_stat(CHRONICLE_STATS_LEAST_SKILLS_PERSON, human_mob, "HOPELESS", "#8a8887", "[total_stats] total stats")
 
 			if(isnull(lowest_strength))
-				lowest_strength = human_mob.STASTR
-				set_chronicle_stat(CHRONICLE_STATS_WEAKEST_PERSON, human_mob, "WIMP", "#a0836a", "[human_mob.STASTR] strength")
-			else if(human_mob.STASTR < lowest_strength)
-				lowest_strength = human_mob.STASTR
-				set_chronicle_stat(CHRONICLE_STATS_WEAKEST_PERSON, human_mob, "WIMP", "#a0836a", "[human_mob.STASTR] strength")
+				lowest_strength = GET_MOB_ATTRIBUTE_VALUE(human_mob, STAT_STRENGTH)
+				set_chronicle_stat(CHRONICLE_STATS_WEAKEST_PERSON, human_mob, "WIMP", "#a0836a", "[GET_MOB_ATTRIBUTE_VALUE(human_mob, STAT_STRENGTH)] strength")
+			else if(GET_MOB_ATTRIBUTE_VALUE(human_mob, STAT_STRENGTH) < lowest_strength)
+				lowest_strength = GET_MOB_ATTRIBUTE_VALUE(human_mob, STAT_STRENGTH)
+				set_chronicle_stat(CHRONICLE_STATS_WEAKEST_PERSON, human_mob, "WIMP", "#a0836a", "[GET_MOB_ATTRIBUTE_VALUE(human_mob, STAT_STRENGTH)] strength")
 
 			if(isnull(lowest_intelligence))
-				lowest_intelligence = human_mob.STAINT
-				set_chronicle_stat(CHRONICLE_STATS_DUMBEST_PERSON, human_mob, "IDIOT", "#e67e22", "[human_mob.STAINT] intelligence")
-			else if(human_mob.STAINT < lowest_intelligence)
-				lowest_intelligence = human_mob.STAINT
-				set_chronicle_stat(CHRONICLE_STATS_DUMBEST_PERSON, human_mob, "IDIOT", "#e67e22", "[human_mob.STAINT] intelligence")
+				lowest_intelligence = GET_MOB_ATTRIBUTE_VALUE(human_mob, STAT_INTELLIGENCE)
+				set_chronicle_stat(CHRONICLE_STATS_DUMBEST_PERSON, human_mob, "IDIOT", "#e67e22", "[GET_MOB_ATTRIBUTE_VALUE(human_mob, STAT_INTELLIGENCE)] intelligence")
+			else if(GET_MOB_ATTRIBUTE_VALUE(human_mob, STAT_INTELLIGENCE) < lowest_intelligence)
+				lowest_intelligence = GET_MOB_ATTRIBUTE_VALUE(human_mob, STAT_INTELLIGENCE)
+				set_chronicle_stat(CHRONICLE_STATS_DUMBEST_PERSON, human_mob, "IDIOT", "#e67e22", "[GET_MOB_ATTRIBUTE_VALUE(human_mob, STAT_INTELLIGENCE)] intelligence")
 
 			if(isnull(lowest_speed))
-				lowest_speed = human_mob.STASPD
-				set_chronicle_stat(CHRONICLE_STATS_SLOWEST_PERSON, human_mob, "TURTLE", "#a569bd", "[human_mob.STASPD] speed")
-			else if(human_mob.STASPD < lowest_speed)
-				lowest_speed = human_mob.STASPD
-				set_chronicle_stat(CHRONICLE_STATS_SLOWEST_PERSON, human_mob, "TURTLE", "#a569bd", "[human_mob.STASPD] speed")
+				lowest_speed = GET_MOB_ATTRIBUTE_VALUE(human_mob, STAT_SPEED)
+				set_chronicle_stat(CHRONICLE_STATS_SLOWEST_PERSON, human_mob, "TURTLE", "#a569bd", "[GET_MOB_ATTRIBUTE_VALUE(human_mob, STAT_SPEED)] speed")
+			else if(GET_MOB_ATTRIBUTE_VALUE(human_mob, STAT_SPEED) < lowest_speed)
+				lowest_speed = GET_MOB_ATTRIBUTE_VALUE(human_mob, STAT_SPEED)
+				set_chronicle_stat(CHRONICLE_STATS_SLOWEST_PERSON, human_mob, "TURTLE", "#a569bd", "[GET_MOB_ATTRIBUTE_VALUE(human_mob, STAT_SPEED)] speed")
 
 			if(isnull(lowest_luck))
-				lowest_luck = human_mob.STALUC
-				set_chronicle_stat(CHRONICLE_STATS_UNLUCKIEST_PERSON, human_mob, "WALKING DISASTER", "#e74c3c", "[human_mob.STALUC] luck")
-			else if(human_mob.STALUC < lowest_luck)
-				lowest_luck = human_mob.STALUC
-				set_chronicle_stat(CHRONICLE_STATS_UNLUCKIEST_PERSON, human_mob, "WALKING DISASTER", "#e74c3c", "[human_mob.STALUC] luck")
+				lowest_luck = GET_MOB_ATTRIBUTE_VALUE(human_mob, STAT_FORTUNE)
+				set_chronicle_stat(CHRONICLE_STATS_UNLUCKIEST_PERSON, human_mob, "WALKING DISASTER", "#e74c3c", "[GET_MOB_ATTRIBUTE_VALUE(human_mob, STAT_FORTUNE)] luck")
+			else if(GET_MOB_ATTRIBUTE_VALUE(human_mob, STAT_FORTUNE) < lowest_luck)
+				lowest_luck = GET_MOB_ATTRIBUTE_VALUE(human_mob, STAT_FORTUNE)
+				set_chronicle_stat(CHRONICLE_STATS_UNLUCKIEST_PERSON, human_mob, "WALKING DISASTER", "#e74c3c", "[GET_MOB_ATTRIBUTE_VALUE(human_mob, STAT_FORTUNE)] luck")
 
 			if(isnull(lowest_wealth))
 				lowest_wealth = wealth
@@ -1735,25 +1743,25 @@ SUBSYSTEM_DEF(gamemode)
 				set_chronicle_stat(CHRONICLE_STATS_POOREST_PERSON, human_mob, "PAUPER", "#909c63", "[wealth] mammons")
 
 			if(isnull(lowest_perception))
-				lowest_perception = human_mob.STAPER
-				set_chronicle_stat(CHRONICLE_STATS_LEAST_PERCEPTIVE_PERSON, human_mob, "CLUELESS", "#9fb9b9", "[human_mob.STAPER] perception")
-			else if(human_mob.STAPER < lowest_perception)
-				lowest_perception = human_mob.STAPER
-				set_chronicle_stat(CHRONICLE_STATS_LEAST_PERCEPTIVE_PERSON, human_mob, "CLUELESS", "#9fb9b9", "[human_mob.STAPER] perception")
+				lowest_perception = GET_MOB_ATTRIBUTE_VALUE(human_mob, STAT_PERCEPTION)
+				set_chronicle_stat(CHRONICLE_STATS_LEAST_PERCEPTIVE_PERSON, human_mob, "CLUELESS", "#9fb9b9", "[GET_MOB_ATTRIBUTE_VALUE(human_mob, STAT_PERCEPTION)] perception")
+			else if(GET_MOB_ATTRIBUTE_VALUE(human_mob, STAT_PERCEPTION) < lowest_perception)
+				lowest_perception = GET_MOB_ATTRIBUTE_VALUE(human_mob, STAT_PERCEPTION)
+				set_chronicle_stat(CHRONICLE_STATS_LEAST_PERCEPTIVE_PERSON, human_mob, "CLUELESS", "#9fb9b9", "[GET_MOB_ATTRIBUTE_VALUE(human_mob, STAT_PERCEPTION)] perception")
 
 			if(isnull(lowest_constitution))
-				lowest_constitution = human_mob.STACON
-				set_chronicle_stat(CHRONICLE_STATS_LEAST_RESILIENT_PERSON, human_mob, "FRAGILE", "#a8917d", "[human_mob.STACON] constitution")
-			else if(human_mob.STACON < lowest_constitution)
-				lowest_constitution = human_mob.STACON
-				set_chronicle_stat(CHRONICLE_STATS_LEAST_RESILIENT_PERSON, human_mob, "FRAGILE", "#a8917d", "[human_mob.STACON] constitution")
+				lowest_constitution = GET_MOB_ATTRIBUTE_VALUE(human_mob, STAT_CONSTITUTION)
+				set_chronicle_stat(CHRONICLE_STATS_LEAST_RESILIENT_PERSON, human_mob, "FRAGILE", "#a8917d", "[GET_MOB_ATTRIBUTE_VALUE(human_mob, STAT_CONSTITUTION)] constitution")
+			else if(GET_MOB_ATTRIBUTE_VALUE(human_mob, STAT_CONSTITUTION) < lowest_constitution)
+				lowest_constitution = GET_MOB_ATTRIBUTE_VALUE(human_mob, STAT_CONSTITUTION)
+				set_chronicle_stat(CHRONICLE_STATS_LEAST_RESILIENT_PERSON, human_mob, "FRAGILE", "#a8917d", "[GET_MOB_ATTRIBUTE_VALUE(human_mob, STAT_CONSTITUTION)] constitution")
 
 			if(isnull(lowest_endurance))
-				lowest_endurance = human_mob.STAEND
-				set_chronicle_stat(CHRONICLE_STATS_LEAST_ENDURANT_PERSON, human_mob, "TIRED", "#a8a0a0", "[human_mob.STAEND] endurance")
-			else if(human_mob.STAEND < lowest_endurance)
-				lowest_endurance = human_mob.STAEND
-				set_chronicle_stat(CHRONICLE_STATS_LEAST_ENDURANT_PERSON, human_mob, "TIRED", "#a8a0a0", "[human_mob.STAEND] endurance")
+				lowest_endurance = GET_MOB_ATTRIBUTE_VALUE(human_mob, STAT_ENDURANCE)
+				set_chronicle_stat(CHRONICLE_STATS_LEAST_ENDURANT_PERSON, human_mob, "TIRED", "#a8a0a0", "[GET_MOB_ATTRIBUTE_VALUE(human_mob, STAT_ENDURANCE)] endurance")
+			else if(GET_MOB_ATTRIBUTE_VALUE(human_mob, STAT_ENDURANCE) < lowest_endurance)
+				lowest_endurance = GET_MOB_ATTRIBUTE_VALUE(human_mob, STAT_ENDURANCE)
+				set_chronicle_stat(CHRONICLE_STATS_LEAST_ENDURANT_PERSON, human_mob, "TIRED", "#a8a0a0", "[GET_MOB_ATTRIBUTE_VALUE(human_mob, STAT_ENDURANCE)] endurance")
 
 	force_set_round_statistic(STATS_MAMMONS_HELD, total_wealth)
 
@@ -1780,9 +1788,9 @@ SUBSYSTEM_DEF(gamemode)
 		var/mob/living/carbon/human/selected_ugly = pick(ugly_candidates)
 		set_chronicle_stat(CHRONICLE_STATS_UGLIEST_PERSON, selected_ugly, "EYESORE", "#9e6033", "their ugliness")
 
-	if(valid_psydon_favourite)
-		set_chronicle_stat(CHRONICLE_STATS_PSYDON_FAVOURITE, valid_psydon_favourite, "PSYDON'S FAVOURITE", "#e6e6e6", "buying their way in")
-		potential_passers -= valid_psydon_favourite
+	if(valid_angros_favourite)
+		set_chronicle_stat(CHRONICLE_STATS_ANGROS_FAVOURITE, valid_angros_favourite, "ANGROS'S FAVOURITE", "#e6e6e6", "buying their way in")
+		potential_passers -= valid_angros_favourite
 
 	if(length(potential_passers) > 0)
 		var/mob/living/carbon/human/selected_passerby = pick(potential_passers)

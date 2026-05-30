@@ -1,9 +1,9 @@
 /datum/objective/personal/marry
 	name = "Find Love"
-	category = "Eora's Lovebird"
+	category = "Pomette's Lovebird"
 	triumph_count = 2
 	immediate_effects = list("You will feel stressed until you marry someone or enough time has passed (+2 Stress)", "Gained an ability to find marital status of others")
-	rewards = list("2 Triumphs", "Eora grows stronger", "True Love", "Eora blesses you (+1 Fortune)")
+	rewards = list("2 Triumphs", "Pomette grows stronger", "True Love", "Pomette blesses you (+1 Fortune)")
 	var/lovebird_name
 	var/lovebird_job
 
@@ -15,7 +15,7 @@
 /datum/objective/personal/marry/on_creation()
 	. = ..()
 	if(owner?.current)
-		owner.current.add_stress(/datum/stress_event/eora_matchmaking)
+		owner.current.add_stress(/datum/stress_event/pomette_matchmaking)
 		owner.current.add_spell(/datum/action/cooldown/spell/detect_singles)
 	RegisterSignal(SSdcs, COMSIG_GLOBAL_MARRIAGE, PROC_REF(on_global_marriage))
 	update_explanation_text()
@@ -36,14 +36,14 @@
 
 /datum/objective/personal/marry/complete_objective(escalatation_type = ESCALATION_INTERVENTION_ONLY)
 	. = ..()
-	owner.current.remove_stress(/datum/stress_event/eora_matchmaking)
-	to_chat(owner.current, span_greentext("You have married and therefore completed Eora's wish!"))
-	adjust_storyteller_influence(EORA, 10)
+	owner.current.remove_stress(/datum/stress_event/pomette_matchmaking)
+	to_chat(owner.current, span_greentext("You have married and therefore completed Pomette's wish!"))
+	adjust_storyteller_influence(POMETTE, 10)
 	UnregisterSignal(SSdcs, COMSIG_GLOBAL_MARRIAGE)
 
 /datum/objective/personal/marry/complete_objectiv/reward_owner()
 	. = ..()
-	owner.current.adjust_stat_modifier(STATMOD_EORA_MARRIAGE, STATKEY_LCK, 1)
+	owner.current.adjust_stat_modifier(STATMOD_POMETTE_MARRIAGE, list(STAT_FORTUNE = 1))
 
 /datum/objective/personal/marry/update_explanation_text()
-	explanation_text = "Eora wants you to find your true love and marry them! Perhaps [lovebird_name], the [lovebird_job] could be a good match?"
+	explanation_text = "Pomette wants you to find your true love and marry them! Perhaps [lovebird_name], the [lovebird_job] could be a good match?"

@@ -1,6 +1,6 @@
 
-/datum/world_faction/zalad_traders
-	faction_name = "Zalad"
+/datum/world_faction/qadirid_traders
+	faction_name = "Qadirid"
 	desc = "Nomadic traders from the harsh desert regions"
 	faction_color = "#D2691E"
 	trader_type_weights = list(
@@ -66,6 +66,8 @@
 		/datum/supply_pack/seeds/spelt,
 		/datum/supply_pack/seeds/cabbage,
 		/datum/supply_pack/seeds/turnip,
+		/datum/supply_pack/seeds/pompkaun,
+		/datum/supply_pack/seeds/sunreed,
 		/datum/supply_pack/luxury/spectacles_onyxa,
 		/datum/supply_pack/jewelry/nosegold,
 		/datum/supply_pack/apparel/engineering_goggles,
@@ -186,12 +188,11 @@
 		/datum/supply_pack/apparel/exoticsilkmask,
 		/datum/supply_pack/apparel/exoticsilkbra,
 		/datum/supply_pack/apparel/anklets,
-		/datum/supply_pack/apparel/henhelm,
 		/datum/supply_pack/jewelry/nyle,
 		/datum/supply_pack/jewelry/scom
 	)
 
-/datum/world_faction/zalad_traders/initialize_faction_stock()
+/datum/world_faction/qadirid_traders/initialize_faction_stock()
 	..()
 	hard_value_multipliers[/obj/item/reagent_containers/food] = 1.3
 	hard_value_multipliers[/obj/item/clothing/armor] = 1.2

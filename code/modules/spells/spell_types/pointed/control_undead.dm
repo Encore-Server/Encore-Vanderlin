@@ -8,7 +8,7 @@
 	cast_range = 5
 	spell_type = SPELL_MANA
 	antimagic_flags = MAGIC_RESISTANCE_UNHOLY
-	associated_skill = /datum/skill/magic/arcane
+	associated_skill = /datum/attribute/skill/magic/arcane
 	attunements = list(
 		/datum/attunement/death = 1,
 	)
@@ -54,6 +54,6 @@
 	cast_on.pet_passive = TRUE
 
 	owner.visible_message(
-		span_greentext("[owner] soothes \the [cast_on] with zizo's blessing."),
+		span_greentext("[owner] soothes \the [cast_on] with Hell's blessing."),
 		span_notice("The creacher now obeys me."),
 	)

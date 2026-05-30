@@ -55,10 +55,10 @@
 	r_sleeve_status = SLEEVE_NORMAL
 	l_sleeve_status = SLEEVE_NORMAL
 
-/obj/item/clothing/shirt/grenzelhoft
+/obj/item/clothing/shirt/sterkenstadten
 	slot_flags = ITEM_SLOT_SHIRT|ITEM_SLOT_ARMOR
-	name = "grenzelhoftian hip-shirt"
-	desc = "A true fashion statement worn by Grenzelhoftian swordsmen."
+	name = "sterkenstadten hip-shirt"
+	desc = "A true fashion statement worn by Sterkenstadten swordsmen."
 	body_parts_covered = CHEST|GROIN|ARMS|VITALS
 	armor = list("blunt" = 20, "slash" = 20, "stab" = 20,  "piercing" = 10, "fire" = 0, "acid" = 0)
 	icon_state = "grenzelshirt"
@@ -71,7 +71,7 @@
 	var/picked = FALSE
 	colorgrenz = TRUE
 
-/obj/item/clothing/shirt/grenzelhoft/Initialize()
+/obj/item/clothing/shirt/sterkenstadten/Initialize()
 	. = ..()
 	if(!picked)
 		var/mob/living/carbon/human/L = loc
@@ -81,7 +81,7 @@
 			return
 		INVOKE_ASYNC(src, PROC_REF(get_player_input))
 
-/obj/item/clothing/shirt/grenzelhoft/proc/get_player_input()
+/obj/item/clothing/shirt/sterkenstadten/proc/get_player_input()
 	if(!ishuman(loc))
 		return
 
@@ -97,7 +97,7 @@
 	"ORANGE"="#b86f0c",
 	"Royal Majenta"="#962e5c")
 	var/mob/living/carbon/human/L = loc
-	var/choice = input(L, "Choose a color.", "GRENZELHOFTIAN COLORPLEX") as anything in colors
+	var/choice = input(L, "Choose a color.", "STERKENSTADTEN COLORPLEX") as anything in colors
 	var/playerchoice = colors[choice]
 	picked = TRUE
 	detail_color = playerchoice
@@ -149,4 +149,13 @@
 	color = pick(CLOTHING_LINEN, CLOTHING_BARK_BROWN, CLOTHING_FOREST_GREEN, CLOTHING_BERRY_BLUE, CLOTHING_BLOOD_RED, CLOTHING_PEAR_YELLOW, CLOTHING_ROYAL_TEAL)
 	return ..()
 
-
+/obj/item/clothing/shirt/vampire
+	slot_flags = ITEM_SLOT_SHIRT|ITEM_SLOT_ARMOR
+	name = "regal silks"
+	desc = ""
+	body_parts_covered = CHEST|GROIN|LEGS|VITALS
+	prevent_crits = list(BCLASS_BITE, BCLASS_TWIST)
+	icon_state = "vrobe"
+	item_state = "vrobe"
+	r_sleeve_status = SLEEVE_NORMAL
+	l_sleeve_status = SLEEVE_NORMAL

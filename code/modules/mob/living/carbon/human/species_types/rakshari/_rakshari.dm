@@ -1,39 +1,31 @@
 /mob/living/carbon/human/species/rakshari
 	race = /datum/species/rakshari
 
+/datum/attribute_holder/sheet/job/species/rakshari
+	raw_attribute_list = list(
+		STAT_STRENGTH = -2,
+		STAT_PERCEPTION = 2,
+		STAT_CONSTITUTION = -2,
+		STAT_SPEED = 2,
+	)
+
 /datum/species/rakshari
 	name = "Rakshari"
 	id = SPEC_ID_RAKSHARI
 	changesource_flags = WABBAJACK
-	native_language = "Zalad"
+	native_language = "Qadirid"
 
-	desc = "Rakshari origins trace back to nomadic desert tribes, \
-	whose survival in the harsh sands cultivated a culture steeped in resilience, cunning, and adaptability. \
-	\n\n\
-	Over centuries, the Rakshari united under the banners of powerful Zalad merchant-kings and warlords,\
-	transforming their scattered clans into a dominant slaver force across the region. \
-	They would often raid weaker settlements and rival caravans, \
-	capturing slaves to fuel their expanding cities and economies. \
-	Practice of this was justified through religious doctrines, \
-	venerating strength and dominance as divine virtues. \
-	\n\n\
-	As they further attached themselves to Zaladin, however, \
-	their people would integrate more sophisticated forms of servitude, \
-	such as indentured contracts and debt bondage. \
-	\n\n\
-	THIS IS A DISCRIMINATED SPECIES. EXPECT A MORE DIFFICULT EXPERIENCE. PLAY AT YOUR OWN RISK."
+	desc = PLACEHOLDER_SPECIES_REBRANDING
 
-	skin_tone_wording = "Tribal Identity"
 	use_skintones = TRUE
 	default_color = "FFFFFF"
 
-	possible_ages = NORMAL_AGES_LIST_CHILD
+	possible_ages = NORMAL_AGES_LIST
 
 	species_traits = list(EYECOLOR, HAIR, FACEHAIR, OLDGREY)
 	inherent_traits = list(TRAIT_NOMOBSWAP, TRAIT_KITTEN_MOM)
 
-	specstats_m = list(STATKEY_STR = -2, STATKEY_PER = 2, STATKEY_INT = 0, STATKEY_CON = -2, STATKEY_END = 0, STATKEY_SPD = 2, STATKEY_LCK = 0)
-	specstats_f = list(STATKEY_STR = -2, STATKEY_PER = 2, STATKEY_INT = 0, STATKEY_CON = -2, STATKEY_END = 0, STATKEY_SPD = 2, STATKEY_LCK = 0)
+	statsheet_male = /datum/attribute_holder/sheet/job/species/rakshari
 
 	limbs_icon_m = 'icons/roguetown/mob/bodies/m/rakshari.dmi'
 	limbs_icon_f = 'icons/roguetown/mob/bodies/f/rakshari.dmi'
@@ -41,6 +33,7 @@
 
 	no_boobs = TRUE
 
+	meat = list(/obj/item/reagent_containers/food/snacks/meat/steak = 1)
 	exotic_bloodtype = /datum/blood_type/human/rakshari
 
 	offset_features_m = list(
@@ -105,10 +98,10 @@
 	..()
 	RegisterSignal(C, COMSIG_MOB_SAY, PROC_REF(handle_speech))
 	C.grant_language(/datum/language/common)
-	C.grant_language(/datum/language/zalad)
-	C.verbs += 	/mob/living/carbon/human/species/rakshari/verb/emote_meow
-	C.verbs += 	/mob/living/carbon/human/species/rakshari/verb/emote_purr
-	to_chat(C, "<span class='info'>I can speak Zalad with ,z before my speech.</span>")
+	C.grant_language(/datum/language/qadirid)
+	add_verb(C, /mob/living/carbon/human/species/rakshari/verb/emote_meow)
+	add_verb(C, /mob/living/carbon/human/species/rakshari/verb/emote_purr)
+	to_chat(C, "<span class='info'>I can speak Qadirid with ,z before my speech.</span>")
 
 /datum/species/rakshari/check_roundstart_eligible()
 	return TRUE
@@ -116,7 +109,7 @@
 /datum/species/rakshari/after_creation(mob/living/carbon/C)
 	..()
 	C.grant_language(/datum/language/common)
-	C.grant_language(/datum/language/zalad)
+	C.grant_language(/datum/language/qadirid)
 
 /datum/species/rakshari/spec_life(mob/living/carbon/human/H)
 	. = ..()
@@ -139,13 +132,13 @@
 
 /datum/species/rakshari/get_skin_list()
 	return sortList(list(
-		"Mountain Rakshari" = SKIN_COLOR_MOUNTAIN_ELF, // - (White 3)
-		"City Rakshari" = SKIN_COLOR_COASTAL_ELF, // - (White 4)
-		"Desert Rakshari" = SKIN_COLOR_WOOD_ELF, // - (Mediterranean 1)
-		"Deep Desert Rakshari" = SKIN_COLOR_JUNGLE_ELF, // - (Latin)
-		"Oasis Rakshari" = SKIN_COLOR_HOMUNCULUS, // - (Grey-blue)
-		"Oasis Shade Rakshari" = SKIN_COLOR_NIGHTSHADE, // - (Black-blue)
-		"Quicksand Rakshari" = SKIN_COLOR_QUICKSAND, // Orange, apparently sphynx cats can be orange, who knew!
+		"Mountains" = SKIN_COLOR_CONTINENTAL, // - (White 3)
+		"City" = SKIN_COLOR_TEMPERATE, // - (White 4)
+		"Desert" = SKIN_COLOR_SUBTROPICAL, // - (Mediterranean 1)
+		"Deep Desert" = SKIN_COLOR_TROPICALWET, // - (Latin)
+		"Oasis" = SKIN_COLOR_HOMUNCULUS, // - (Grey-blue)
+		"Oasis Shade" = SKIN_COLOR_NIGHTSHADE, // - (Black-blue)
+		"Quicksand" = SKIN_COLOR_QUICKSAND, // Orange, apparently sphynx cats can be orange, who knew!
 	))
 
 /datum/species/rakshari/get_hairc_list()

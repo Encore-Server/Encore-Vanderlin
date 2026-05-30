@@ -43,14 +43,14 @@
 
 	owner.visible_message(
 		span_notice("[owner] begins a solemn adoption ritual."),
-		span_notice("You begin the adoption ritual with Eora's blessing...")
+		span_notice("You begin the adoption ritual with Pomette's blessing...")
 	)
 
 	if(!do_after(owner, 5 SECONDS, cast_on))
 		to_chat(owner, span_warning("The ritual was interrupted!"))
 		return FALSE
 
-	var/choice = browser_alert(cast_on, "Do you wish to be adopted by [owner.real_name] and become part of their family?", "Adoption Offer", DEFAULT_INPUT_CHOICES)
+	var/choice = tgui_alert(cast_on, "Do you wish to be adopted by [owner.real_name] and become part of their family?", "Adoption Offer", DEFAULT_INPUT_CHOICES)
 	if(QDELETED(src) || QDELETED(owner) || QDELETED(cast_on) || !can_cast_spell())
 		return
 
@@ -77,7 +77,7 @@
 			spouse_member = family.CreateFamilyMember(adopter.spouse_mob)
 		child_member.AddParent(spouse_member)
 
-	to_chat(owner, span_love("You have adopted [cast_on.real_name] as your child with Eora's blessing!"))
+	to_chat(owner, span_love("You have adopted [cast_on.real_name] as your child with Pomette's blessing!"))
 	to_chat(cast_on, span_love("You have been adopted by [owner.real_name]!"))
 
 	SEND_SIGNAL(owner, COMSIG_ORPHAN_ADOPTED, cast_on)

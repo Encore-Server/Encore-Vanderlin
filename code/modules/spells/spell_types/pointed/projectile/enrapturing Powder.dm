@@ -1,12 +1,12 @@
 /datum/action/cooldown/spell/projectile/blowingdust
 	name = "Enrapturing Powder"
-	desc = "Baotha's presence is always known, finding her blessings gathering on you like dust. With a good swipe, I could make others indulge in her fruits."
+	desc = "Hertannea's presence is always known, finding her blessings gathering on you like dust. With a good swipe, I could make others indulge in her fruits."
 	button_icon_state = "curse2"
 	sound = 'sound/magic/whiteflame.ogg'
 
 	spell_type = SPELL_MIRACLE
 	antimagic_flags = MAGIC_RESISTANCE_HOLY
-	associated_skill = /datum/skill/magic/holy
+	associated_skill = /datum/attribute/skill/magic/holy
 	invocation =  "Have a taste of the maiden's pure-bliss..."
 	invocation_type = INVOCATION_WHISPER
 
@@ -34,5 +34,5 @@
 		var/mob/living/L = target
 		to_chat(L, span_warning("Gah! Something.. got in my - eyes.."))
 		L.reagents.add_reagent(/datum/reagent/berrypoison, 5)
-		L.apply_status_effect(/datum/status_effect/debuff/baothadruqks)
-		L.blur_eyes(2)
+		L.apply_status_effect(/datum/status_effect/debuff/hertanneadruqks)
+		L.set_eye_blur_if_lower(4 SECONDS)

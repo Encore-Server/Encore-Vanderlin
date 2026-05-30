@@ -1,34 +1,34 @@
-/datum/objective/personal/ravox_duel
+/datum/objective/personal/mordsol_duel
 	name = "Honor Duels"
-	category = "Ravox's Chosen"
+	category = "Mordsol's Chosen"
 	triumph_count = 3
 	immediate_effects = list("Gained an ability to challenge others")
-	rewards = list("3 Triumphs", "Ravox grows stronger", "Ravox blesses you (+1 Strength)")
+	rewards = list("3 Triumphs", "Mordsol grows stronger", "Mordsol blesses you (+1 Strength)")
 	var/duels_won = 0
 	var/duels_required = 1
 
-/datum/objective/personal/ravox_duel/on_creation()
+/datum/objective/personal/mordsol_duel/on_creation()
 	. = ..()
 	if(owner?.current)
-		var/datum/action/cooldown/spell/ravox_challenge/challenge_spell = new(src)
+		var/datum/action/cooldown/spell/mordsol_challenge/challenge_spell = new(src)
 		challenge_spell.Grant(owner.current)
 	update_explanation_text()
 
-/datum/objective/personal/ravox_duel/proc/on_duel_won()
+/datum/objective/personal/mordsol_duel/proc/on_duel_won()
 	duels_won++
 	if(duels_won >= duels_required && !completed)
 		complete_objective()
 
-/datum/objective/personal/ravox_duel/complete_objective()
+/datum/objective/personal/mordsol_duel/complete_objective()
 	. = ..()
-	to_chat(owner.current, span_greentext("You have proven your worth in combat! Ravox is pleased!"))
-	adjust_storyteller_influence(RAVOX, 20)
+	to_chat(owner.current, span_greentext("You have proven your worth in combat! Mordsol is pleased!"))
+	adjust_storyteller_influence(MORDSOL, 20)
 
-/datum/objective/personal/ravox_duel/reward_owner()
+/datum/objective/personal/mordsol_duel/reward_owner()
 	. = ..()
-	owner.current.adjust_stat_modifier(STATMOD_RAVOX_BLESSING, STATKEY_STR, 1)
+	owner.current.adjust_stat_modifier(STATMOD_MORDSOL_BLESSING, list(STAT_STRENGTH = 1))
 
-/datum/objective/personal/ravox_duel/update_explanation_text()
+/datum/objective/personal/mordsol_duel/update_explanation_text()
 	explanation_text = "Win [duels_required] duel\s with honor against other warriors to prove your might!"
 
 /datum/duel
@@ -37,7 +37,7 @@
 	var/datum/weakref/challenged
 	var/datum/weakref/objective
 
-/datum/duel/New(mob/living/carbon/human/challenger, mob/living/carbon/human/challenged, datum/objective/personal/ravox_duel/listener)
+/datum/duel/New(mob/living/carbon/human/challenger, mob/living/carbon/human/challenged, datum/objective/personal/mordsol_duel/listener)
 	src.challenger = WEAKREF(challenger)
 	src.challenged = WEAKREF(challenged)
 	objective = WEAKREF(listener)
@@ -45,7 +45,7 @@
 	addtimer(CALLBACK(src, PROC_REF(end_duel)), 8 MINUTES, TIMER_DELETE_ME)
 	addtimer(CALLBACK(src, PROC_REF(check_duel)), 4 SECONDS, TIMER_UNIQUE|TIMER_OVERRIDE)
 
-/datum/duel/Destroy(force, ...)
+/datum/duel/Destroy(force)
 	challenger = null
 	challenged = null
 	return ..()
@@ -91,8 +91,8 @@
 	to_chat(winner, span_green("You have won the duel of honor!"))
 
 	if(objective)
-		var/datum/objective/personal/ravox_duel/ravox = objective.resolve()
-		if(ravox?.owner == winner.mind)
-			ravox.on_duel_won()
+		var/datum/objective/personal/mordsol_duel/mordsol = objective.resolve()
+		if(mordsol?.owner == winner.mind)
+			mordsol.on_duel_won()
 
 	qdel(src)

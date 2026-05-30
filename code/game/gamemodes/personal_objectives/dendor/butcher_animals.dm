@@ -1,8 +1,8 @@
 /datum/objective/personal/butcher_animals
 	name = "Butcher Animals"
-	category = "Dendor's Chosen"
+	category = "Gani's Chosen"
 	triumph_count = 2
-	rewards = list("2 Triumphs", "Dendor grows stronger", "Butchering knowledge")
+	rewards = list("2 Triumphs", "Gani grows stronger", "Butchering knowledge")
 	var/animals_butchered = 0
 	var/animals_required = 2
 
@@ -26,17 +26,17 @@
 	if(animals_butchered >= animals_required)
 		complete_objective()
 	else
-		to_chat(owner.current, span_notice("Animal butchered! Butcher [animals_required - animals_butchered] more to complete Dendor's will."))
+		to_chat(owner.current, span_notice("Animal butchered! Butcher [animals_required - animals_butchered] more to complete Gani's will."))
 
 /datum/objective/personal/butcher_animals/complete_objective()
 	. = ..()
-	to_chat(owner.current, span_greentext("You've butchered enough animals to satisfy Dendor!"))
-	adjust_storyteller_influence(DENDOR, 20)
+	to_chat(owner.current, span_greentext("You've butchered enough animals to satisfy Gani!"))
+	adjust_storyteller_influence(GANI, 20)
 	UnregisterSignal(owner.current, COMSIG_MOB_BUTCHERED)
 
 /datum/objective/personal/butcher_animals/reward_owner()
 	. = ..()
-	owner.current.adjust_skillrank(/datum/skill/labor/butchering, 1)
+	owner.current.adjust_skill_level(/datum/attribute/skill/labor/butchering, 10)
 
 /datum/objective/personal/butcher_animals/update_explanation_text()
-	explanation_text = "Butcher [animals_required] animal\s to satisfy Dendor."
+	explanation_text = "Butcher [animals_required] animal\s to satisfy Gani."

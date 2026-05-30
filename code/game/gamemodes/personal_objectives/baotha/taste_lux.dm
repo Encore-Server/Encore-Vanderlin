@@ -1,8 +1,8 @@
 /datum/objective/personal/taste_lux
 	name = "Taste Divine Essence"
-	category = "Baotha's Chosen"
+	category = "Hertannea's Chosen"
 	triumph_count = 3
-	rewards = list("3 Triumphs", "Baotha grows stronger", "Baotha blesses you (+2 Fortune)")
+	rewards = list("3 Triumphs", "Hertannea grows stronger", "Hertannea blesses you (+2 Fortune)")
 
 /datum/objective/personal/taste_lux/on_creation()
 	. = ..()
@@ -24,13 +24,13 @@
 
 /datum/objective/personal/taste_lux/complete_objective()
 	. = ..()
-	to_chat(owner.current, span_greentext("You have tasted the divine essence, completing Baotha's objective!"))
-	adjust_storyteller_influence(BAOTHA, 20)
+	to_chat(owner.current, span_greentext("You have tasted the divine essence, completing Hertannea's objective!"))
+	adjust_storyteller_influence(HERTANNEA, 20)
 	UnregisterSignal(owner.current, COMSIG_LUX_TASTED)
 
 /datum/objective/personal/taste_lux/reward_owner()
 	. = ..()
-	owner.current.adjust_stat_modifier(STATMOD_BAOTHA_BLESSING, STATKEY_LCK, 2)
+	owner.current.adjust_stat_modifier(STATMOD_HERTANNEA_BLESSING, list(STAT_FORTUNE = 2))
 
 /datum/objective/personal/taste_lux/update_explanation_text()
-	explanation_text = "Experience the divine by tasting the forbidden Lux essence! Baotha is watching..."
+	explanation_text = "Experience the divine by tasting the forbidden Lux essence! Hertannea is watching..."

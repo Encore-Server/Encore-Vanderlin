@@ -7,31 +7,20 @@
 /mob/living/carbon/human/species/tieberian
 	race = /datum/species/tieberian
 
+/datum/attribute_holder/sheet/job/species/tieberian
+	raw_attribute_list = list(
+		STAT_PERCEPTION = 2,
+		STAT_INTELLIGENCE = 1,
+		STAT_CONSTITUTION = -1,
+		STAT_SPEED = 1,
+		STAT_FORTUNE = -1
+	)
+
 /datum/species/tieberian
 	name = "Tiefling"
 	id = SPEC_ID_TIEFLING
 	native_language = "Infernal"
-	desc = "Also known as Infernal-Spawn, Hell-Bloods, Surface-Devils, and perhaps in a more humorous manner, <i>thief</i>-lings. \
-	\n\n\
-	Their treatment ranges from shunning to distrust, depending on the region. \
-	Shopkeeps and merchants always keep a wary eye out for tiefling passersby. \
-	The resentment feed into itself, leading to higher rates of tiefling ire and thievery against other species. \
-	Many tieflings resign to seeking a solitary and nomadic life, huddled in groups outside the watchful eyes of others. \
-	They also tend to be extremely perceptive and paranoid, as luck is rarely on their side. \
-	\n\n\
-	Tieflings began appearing all over Psydonia after Baotha's ascension within the 21st century, and were exiled in droves as the world adapted. \
-	They are often mistaken as being related to her. \
-	\n\n\
-	Tieflings are incapable of reproducing with mortals, \
-	and thus are spawn of either devils, demons, or other tieflings. \
-	A tiefling may develop any number of hellish features, a wide range of horns, potential hooves, odd spines and spikes, or scales. \
-	Oddly positioned scales, hollow bones, and other varying oddities \
-	that appear consistently in Tiefling biology make them considerably fragile. \
-	It is not uncommon for a tiefling to be generally unpleasant to look at in the eye of the commonfolk. \
-	As if to make matters worse, their hellish progenitors have left them a destiny of misfortune, \
-	though perhaps their immunity to fire opens new opportunities for them... \
-	\n\n\
-	THIS IS A DISCRIMINATED SPECIES. EXPECT A MORE DIFFICULT EXPERIENCE. <B>NOBLES EVEN MORE SO.</B> PLAY AT YOUR OWN RISK."
+	desc = PLACEHOLDER_SPECIES_REBRANDING
 
 	skin_tone_wording = "Progenitor"
 
@@ -41,7 +30,7 @@
 	inherent_traits = list(TRAIT_NOMOBSWAP, TRAIT_NOFIRE)
 	use_skintones = TRUE
 
-	possible_ages = NORMAL_AGES_LIST_CHILD
+	possible_ages = NORMAL_AGES_LIST
 
 	changesource_flags = WABBAJACK
 
@@ -86,8 +75,7 @@
 		OFFSET_UNDIES = list(0,0),\
 	)
 
-	specstats_m = list(STATKEY_STR = 0, STATKEY_PER = 2, STATKEY_INT = 1, STATKEY_CON = -1, STATKEY_END = 0, STATKEY_SPD = 1, STATKEY_LCK = -1)
-	specstats_f = list(STATKEY_STR = 0, STATKEY_PER = 2, STATKEY_INT = 1, STATKEY_CON = -1, STATKEY_END = 0, STATKEY_SPD = 1, STATKEY_LCK = -1)
+	statsheet_male = /datum/attribute_holder/sheet/job/species/tieberian
 
 	enflamed_icon = "widefire"
 
@@ -134,6 +122,7 @@
 	RegisterSignal(C, COMSIG_MOB_SAY, PROC_REF(handle_speech))
 	C.grant_language(/datum/language/common)
 	C.grant_language(/datum/language/hellspeak)
+	C.AddComponent(/datum/component/malaguero, 2, 1, 30 SECONDS)
 
 /datum/species/tieberian/after_creation(mob/living/carbon/C)
 	. = ..()
@@ -143,6 +132,9 @@
 	. = ..()
 	UnregisterSignal(C, COMSIG_MOB_SAY)
 	C.remove_language(/datum/language/hellspeak)
+	var/datum/component/bad_luck = C.GetComponent(/datum/component/malaguero)
+	if(bad_luck)
+		bad_luck.RemoveComponent()
 
 /datum/species/tieberian/qualifies_for_rank(rank, list/features)
 	return TRUE
@@ -190,11 +182,11 @@
 	return hair_colors
 
 /datum/species/tieberian/get_possible_names(gender = MALE)
-	var/static/list/male_names = world.file2list('strings/rt/names/other/tiefm.txt')
-	var/static/list/female_names = world.file2list('strings/rt/names/other/tiefm.txt')
+	var/static/list/male_names = file2list('strings/rt/names/other/tiefm.txt')
+	var/static/list/female_names = file2list('strings/rt/names/other/tiefm.txt')
 	return (gender == FEMALE) ? female_names : male_names
 
 /datum/species/tieberian/get_possible_surnames(gender = MALE)
-	var/static/list/last_names = world.file2list('strings/rt/names/other/tieflast.txt')
+	var/static/list/last_names = file2list('strings/rt/names/other/tieflast.txt')
 	return last_names
 

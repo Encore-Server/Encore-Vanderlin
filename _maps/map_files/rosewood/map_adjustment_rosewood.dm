@@ -23,3 +23,21 @@
 	ages_adjust = list(
 		/datum/job/forestguard = list(AGE_MIDDLEAGED, AGE_OLD, AGE_IMMORTAL)
 	)
+
+	blacklist = list(
+		// Inquisition
+		/datum/job/inquisitor,
+		/datum/job/absolver,
+		/datum/job/adept,
+		/datum/job/orthodoxist,
+		// RACES_PLAYER_GERAMOR
+		/datum/job/advclass/combat/swordmaster,
+		/datum/job/advclass/mercenary/sterkenstadten,
+		/datum/job/advclass/pilgrim/rare/aelondan,
+		/datum/job/advclass/pilgrim/rare/preacher,
+	)
+
+	migrant_blacklist = list(
+		/datum/migrant_wave/crusade,
+		/datum/migrant_wave/aelondan_visit,
+	)

@@ -1,19 +1,19 @@
-/datum/round_event_control/eora_matchmaking
-	name = "Eora's Matchmaking"
+/datum/round_event_control/pomette_matchmaking
+	name = "Pomette's Matchmaking"
 	track = EVENT_TRACK_INTERVENTION
-	typepath = /datum/round_event/eora_matchmaking
+	typepath = /datum/round_event/pomette_matchmaking
 	weight = 8
 	earliest_start = 15 MINUTES
 	max_occurrences = 1
 	min_players = 30
-	dedicated_storytellers = list(/datum/storyteller/eora)
+	dedicated_storytellers = list(/datum/storyteller/pomette)
 	allowed_storytellers = DIVINE_STORYTELLERS
 
 	tags = list(
-		TAG_EORA,
+		TAG_POMETTE,
 	)
 
-/datum/round_event/eora_matchmaking/start()
+/datum/round_event/pomette_matchmaking/start()
 	var/list/eligible_males = list()
 	var/list/eligible_females = list()
 
@@ -48,7 +48,7 @@
 	eligible_females = shuffle(eligible_females)
 
 	var/list/selected_pairs = list()
-	var/max_number = is_ascendant(EORA) ? 6 : 3
+	var/max_number = is_ascendant(POMETTE) ? 6 : 3
 	var/max_pairs = min(max_number, eligible_males.len, eligible_females.len)
 
 	for(var/i in 1 to max_pairs)
@@ -74,8 +74,8 @@
 		var/mob/living/carbon/human/female = pair[2]
 
 		bordered_message(male, list(
-			span_userdanger("YOU ARE EORA'S LOVEBIRD!"),
-			span_rose("Eora's voice whispers in your heart - you feel an irresistible urge to finally get married..."),
+			span_userdanger("YOU ARE POMETTE'S LOVEBIRD!"),
+			span_rose("Pomette's voice whispers in your heart - you feel an irresistible urge to finally get married..."),
 			span_rose("You can choose anyone you fancy to fulfill this desire, but the name of [span_notice("[female.real_name]")], the [female.job] seems to get your heart racing for some reason..."),
 		))
 		male.playsound_local(male, 'sound/vo/female/gen/giggle (1).ogg', 100)
@@ -85,8 +85,8 @@
 		male.mind.announce_personal_objectives()
 
 		bordered_message(female, list(
-			span_userdanger("YOU ARE EORA'S LOVEBIRD!"),
-			span_rose("Eora's voice whispers in your heart - you feel an irresistible urge to finally get married..."),
+			span_userdanger("YOU ARE POMETTE'S LOVEBIRD!"),
+			span_rose("Pomette's voice whispers in your heart - you feel an irresistible urge to finally get married..."),
 			span_rose("You can choose anyone you fancy to fulfill this desire, but the name of [span_notice("[male.real_name]")], the [male.job] seems to get your heart racing for some reason..."),
 		))
 		female.playsound_local(female, 'sound/vo/female/gen/giggle (1).ogg', 100)

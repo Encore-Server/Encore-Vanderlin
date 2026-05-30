@@ -1,15 +1,15 @@
 /datum/action/cooldown/spell/projectile/swordfish
-	name = "Abyssor's Rage"
-	desc = "Throw a swordfish from Abyssor's domain."
+	name = "Mjallidhorn's Rage"
+	desc = "Throw a swordfish from Mjallidhorn's domain."
 	button_icon_state = "curse2"
 	sound = 'sound/magic/whiteflame.ogg'
 
 	spell_type = SPELL_MIRACLE
 	antimagic_flags = MAGIC_RESISTANCE_HOLY
-	associated_skill = /datum/skill/magic/holy
-	required_items = list(/obj/item/clothing/neck/psycross/silver/abyssor)
+	associated_skill = /datum/attribute/skill/magic/holy
+	required_items = list(/obj/item/clothing/neck/psycross/silver/divine/mjallidhorn)
 
-	invocation = "Feel Abyssor's rage!"
+	invocation = "Feel Mjallidhorn's rage!"
 	invocation_type = INVOCATION_SHOUT
 
 	charge_time = 2 SECONDS
@@ -21,7 +21,7 @@
 //esssentially a magic throwing knife
 /obj/projectile/magic/swordfish
 	name = "swordfish"
-	desc = "But one enactor of Abyssor's rage."
+	desc = "But one enactor of Mjallidhorn's rage."
 	icon = 'icons/roguetown/misc/fish.dmi'
 	icon_state = "swordfish_proj"
 	damage = DAMAGE_DAGGER * 2
@@ -39,7 +39,7 @@
 
 /obj/item/reagent_containers/food/snacks/fish/swordfish
 	name = "swordfish"
-	desc = "But one enactor of Abyssor's rage."
+	desc = "But one enactor of Mjallidhorn's rage."
 	icon = 'icons/roguetown/misc/fish.dmi'
 	icon_state = "swordfishcom"
 	fish_id = "swordfish"
@@ -52,7 +52,7 @@
 	fish_movement_type = /datum/fish_movement/accelerando
 	force = DAMAGE_DAGGER
 	dropshrink = 0.8
-	possible_item_intents = list(/datum/intent/dagger/thrust, /datum/intent/food)
+	possible_item_intents = list(DAGGER_THRUST, /datum/intent/food)
 	sellprice = 50
 	beauty = 8
 	favorite_bait = list(
@@ -67,4 +67,4 @@
 			FISH_BAIT_VALUE = VEGETABLES,
 		),
 	)
-	fish_traits = list(/datum/fish_trait/predator, /datum/fish_trait/territorial)
+	fish_traits = list(/datum/fish_trait/predator, /datum/fish_trait/carnivore)

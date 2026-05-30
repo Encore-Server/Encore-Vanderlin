@@ -4,11 +4,11 @@
 	typepath = /datum/round_event/adoption_call
 	weight = 7
 	earliest_start = 10 MINUTES
-	max_occurrences = 1
+	max_occurrences = 0//Encore edit- disabled because no playable children here please.
 	min_players = 35
 
 	tags = list(
-		TAG_EORA,
+		TAG_POMETTE,
 		TAG_BOON,
 	)
 
@@ -23,7 +23,7 @@
 	for(var/mob/living/carbon/human/H in GLOB.player_list)
 		if(!istype(H) || H.stat == DEAD || !H.client)
 			continue
-		if(!H.patron || !istype(H.patron, /datum/patron/divine/eora))
+		if(!H.patron || !istype(H.patron, /datum/patron/divine/pomette))
 			continue
 		if(H.age == AGE_CHILD)
 			continue
@@ -33,7 +33,7 @@
 	for(var/mob/living/carbon/human/child in GLOB.player_list)
 		if(child.age != AGE_CHILD || child.stat == DEAD || !child.client)
 			continue
-		if(!child.family_datum && (child.job == "Orphan" && istype(child.mind?.assigned_role, /datum/job/orphan)))
+		if(!child.family_datum && (child.job == JOB_ORPHAN && istype(child.mind?.assigned_role, /datum/job/orphan)))
 			orphans++
 		else if(!child.family_datum || !length(child.family_member_datum?.parents))
 			potential_orphans++
@@ -51,7 +51,7 @@
 	for(var/mob/living/carbon/human/H in GLOB.player_list)
 		if(!istype(H) || H.stat == DEAD || !H.client)
 			continue
-		if(!H.patron || !istype(H.patron, /datum/patron/divine/eora))
+		if(!H.patron || !istype(H.patron, /datum/patron/divine/pomette))
 			continue
 		if(H.age == AGE_CHILD)
 			continue
@@ -60,7 +60,7 @@
 	for(var/mob/living/carbon/human/child in GLOB.player_list)
 		if(child.age != AGE_CHILD || child.stat == DEAD || !child.client)
 			continue
-		if(!child.family_datum && (child.job == "Orphan" && istype(child.mind?.assigned_role, /datum/job/orphan)))
+		if(!child.family_datum && (child.job == JOB_ORPHAN && istype(child.mind?.assigned_role, /datum/job/orphan)))
 			orphans++
 		else if(!child.family_datum || !length(child.family_member_datum?.parents))
 			potential_orphans++
@@ -76,8 +76,8 @@
 	chosen_one.add_spell(/datum/action/cooldown/spell/adopt_child)
 
 	bordered_message(chosen_one, list(
-		span_userdanger("YOU ARE EORA'S CHOSEN!"),
-		span_notice("Eora weeps for the orphaned children! Find an orphan and adopt them as your own child to earn her favor!"),
+		span_userdanger("YOU ARE POMETTE'S CHOSEN!"),
+		span_notice("Pomette weeps for the orphaned children! Find an orphan and adopt them as your own child to earn her favor!"),
 	))
 	chosen_one.playsound_local(chosen_one, 'sound/vo/female/gen/giggle (1).ogg', 100)
 

@@ -7,10 +7,10 @@
 	cast_range = 2
 	spell_type = SPELL_MIRACLE
 	antimagic_flags = MAGIC_RESISTANCE_HOLY
-	associated_skill = /datum/skill/magic/holy
-	required_items = list(/obj/item/clothing/neck/psycross/silver/malum)
+	associated_skill = /datum/attribute/skill/magic/holy
+	required_items = list(/obj/item/clothing/neck/psycross/silver/divine/golerkanh)
 
-	invocation = "Metal bends to the heat of Malum's forge!"
+	invocation = "Metal bends to the heat of Goler Kanh's forge!"
 	invocation_type = INVOCATION_SHOUT
 
 	charge_time = 2 SECONDS
@@ -42,7 +42,7 @@
 		target.visible_message("<font color='yellow'>After [owner]'s incantation, [target] melts into an ingot.</font>")
 		itemtospawn = new target.smeltresult(get_turf(target))
 	else if(target_loc == owner)
-		owner.visible_message("<font color='yellow'>[owner] channels Malum's power to smelt [target] [owner.p_theyre()] holding.</font>")
+		owner.visible_message("<font color='yellow'>[owner] channels Goler Kanh's power to smelt [target] [owner.p_theyre()] holding.</font>")
 		itemtospawn = new target.smeltresult(get_turf(target))
 	else
 		return FALSE
@@ -112,7 +112,7 @@
 	target.dropItemToGround(targeteditem)
 	target.visible_message("<font color='yellow'>[target]'s [targeteditem.name] glows brightly and sears their flesh!</font>", "<font color='yellow'>Your [targeteditem.name] glows brightly, burning your hand!</font>")
 	target.emote("painscream")
-	playsound(target.loc, 'sound/misc/frying.ogg', 80, FALSE, -1)
+	playsound(target, 'sound/misc/frying.ogg', 80, FALSE, -1)
 	var/datum/effect_system/spark_spread/sparks = new()
 	sparks.set_up(1, 1, target.loc)
 	sparks.start()
@@ -149,7 +149,7 @@
 	)
 
 	target.emote("painscream")
-	playsound(target.loc, 'sound/misc/frying.ogg', 80, FALSE, -1)
+	playsound(target, 'sound/misc/frying.ogg', 80, FALSE, -1)
 	var/datum/effect_system/spark_spread/sparks = new()
 	sparks.set_up(1, 1, target.loc)
 	sparks.start()

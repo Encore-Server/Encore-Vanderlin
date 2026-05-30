@@ -87,10 +87,11 @@
 	if(SSticker.current_state != GAME_STATE_FINISHED)
 		return
 	status_flags |= GODMODE
+	ADD_TRAIT(src, TRAIT_NO_TRANSFORM, ROUNDSTART_TRAIT)
 	ai_controller?.set_ai_status(AI_STATUS_OFF)
 	if(client)
-		client.verbs |= /client/proc/lobbyooc
-		client.verbs |= /client/proc/view_stats
+		add_verb(client, /client/proc/lobbyooc)
+		add_verb(client, /client/proc/view_stats)
 		client.show_game_over()
 
 /mob/living/do_game_over()
@@ -100,7 +101,7 @@
 	ADD_TRAIT(src, TRAIT_MUTE, TRAIT_GENERIC)
 	walk(src, 0) //stops them mid pathing even if they're stunimmune
 	if(client)
-		client.verbs |= /client/proc/commendsomeone
+		add_verb(client, /client/proc/commendsomeone)
 
 /client/proc/show_game_over()
 	var/atom/movable/screen/splash/credits/S = new(null, null, src, FALSE, FALSE)
@@ -114,7 +115,7 @@
 
 	INVOKE_ASYNC(world, TYPE_PROC_REF(/world, flush_byond_tracy))
 
-	to_chat(world, "<BR><BR><BR><span class='reallybig'>So ends this tale of Vanderlin.</span>")
+	to_chat(world, "<BR><BR><BR><span class='reallybig'>So ends this tale on Domotan Island.</span>")
 	get_end_reason()
 
 	var/list/key_list = list()
@@ -134,9 +135,10 @@
 
 	update_god_rankings()
 
+	var/outro_song = pick('sound/misc/roundend.ogg', /*'sound/music/credits2.ogg'*/)
 	for(var/mob/M in GLOB.mob_list)
 		M.do_game_over()
-		M.playsound_local(M, 'sound/music/credits.ogg', 100, FALSE)
+		M.playsound_local(M, outro_song, 100, FALSE)
 
 	for(var/datum/callback/cb as anything in round_end_events)
 		cb.InvokeAsync()
@@ -152,7 +154,7 @@
 
 	sleep(8 SECONDS)
 
-	var/datum/triumph_buy/communal/psydon_retirement_fund/fund = locate() in SStriumphs.triumph_buy_datums
+	var/datum/triumph_buy/communal/angros_retirement_fund/fund = locate() in SStriumphs.triumph_buy_datums
 	if(fund && SStriumphs.communal_pools[fund.type] > 0)
 		fund.on_activate()
 
@@ -160,7 +162,7 @@
 
 	players_report()
 
-	SSvote.initiate_vote("map", "Psydon")
+	SSvote.initiate_vote("map", "Angros")
 
 	CHECK_TICK
 
@@ -203,17 +205,17 @@
 	var/end_reason
 
 	if(!check_for_lord(TRUE)) //TRUE forces the check, otherwise it will autofail.
-		end_reason = pick("Without a Monarch, the forces of Zizo grew ever bolder.",
-						"Without a Monarch, the settlement fell into turmoil.",
-						"Without a Monarch, some jealous rival reigned in tyranny.")
+		end_reason = pick("Without a Regent, the forces of Hell grew ever bolder.",
+						"Without a Regent, Etgard fell into turmoil.",
+						"Without a Regent, some jealous rival reigned in tyranny.")
 
 	if(vampire_werewolf() == "vampire")
 		end_reason = "When the Vampires finished sucking the town dry, they moved on to the next one."
 	if(vampire_werewolf() == "werewolf")
-		end_reason = "The Werevolves formed an unholy clan, marauding Rockhill until the end of its daes."
+		end_reason = "The Werevolves formed an unholy clan, marauding the island until the end of its daes."
 
 	if(SSmapping.retainer.cult_ascended)
-		end_reason = "ZIZOZIZOZIZOZIZO"
+		end_reason = "THE FIRMAMENT HAS FALLEN!"
 
 	if(SSmapping.retainer.head_rebel_decree)
 		end_reason = "The peasant rebels took control of the throne, hail the new community!"
@@ -305,13 +307,12 @@
 	//Medals
 	parts += medal_report()
 
-	listclearnulls(parts)
+	list_clear_nulls(parts)
 
 	return parts.Join()
 
 /datum/controller/subsystem/ticker/proc/survivor_report(popcount)
 	var/list/parts = list()
-	var/station_evacuated = round_end
 
 	if(GLOB.round_id)
 		var/statspage = CONFIG_GET(string/roundstatsurl)
@@ -321,8 +322,6 @@
 	var/total_players = GLOB.joined_player_list.len
 	if(total_players)
 		parts+= "[FOURSPACES]Total Population: <B>[total_players]</B>"
-		if(station_evacuated)
-			parts += "<BR>[FOURSPACES]Evacuation Rate: <B>[popcount[POPCOUNT_ESCAPEES]] ([PERCENT(popcount[POPCOUNT_ESCAPEES]/total_players)]%)</B>"
 		parts += "[FOURSPACES]Survival Rate: <B>[popcount[POPCOUNT_SURVIVORS]] ([PERCENT(popcount[POPCOUNT_SURVIVORS]/total_players)]%)</B>"
 		if(SSblackbox.first_death)
 			var/list/ded = SSblackbox.first_death
@@ -345,7 +344,7 @@
 	if(!previous)
 		var/list/report_parts = list(personal_report(C), GLOB.common_report)
 		content = report_parts.Join()
-		C.verbs -= /client/proc/show_previous_roundend_report
+		remove_verb(C, /client/proc/show_previous_roundend_report)
 		fdel(filename)
 		text2file(content, filename)
 	else
@@ -360,12 +359,8 @@
 	var/mob/M = C.mob
 	if(M.mind && !isnewplayer(M))
 		if(M.stat != DEAD && !isbrain(M))
-			if(round_end)
-				parts += "<div class='panel greenborder'>"
-				parts += "<span class='greentext'>I managed to survive the events on [station_name()] as [M.real_name].</span>"
-			else
-				parts += "<div class='panel greenborder'>"
-				parts += "<span class='greentext'>I managed to survive the events on [station_name()] as [M.real_name].</span>"
+			parts += "<div class='panel greenborder'>"
+			parts += "<span class='greentext'>I managed to survive the events on [station_name()] as [M.real_name].</span>"
 
 		else
 			parts += "<div class='panel redborder'>"

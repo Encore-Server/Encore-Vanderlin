@@ -21,7 +21,7 @@
 		QDEL_NULL(heirloom)
 	return ..()
 
-/obj/structure/fireaxecabinet/attackby(obj/item/I, mob/user, params)
+/obj/structure/fireaxecabinet/attackby(obj/item/I, mob/user, list/modifiers)
 	if(istype(I, /obj/item/weapon/sword/long/heirloom) && !heirloom)
 		var/obj/item/weapon/sword/long/heirloom/F = I
 		if(HAS_TRAIT(F, TRAIT_WIELDED))
@@ -60,43 +60,41 @@
 	dir = SOUTH
 	SET_BASE_PIXEL(0, 32)
 
-
 /obj/structure/fireaxecabinet/verb/toggle_open()
 	set name = "Open/Close"
 	set hidden = 1
 	set src in oview(1)
 
 	open = !open
-	update_appearance()
-	return
+	update_appearance(UPDATE_ICON_STATE)
 
 /obj/structure/fireaxecabinet/unforgotten
 	name = "unforgotten blade mantle"
-	desc = "A fitting resting place for a Psydonian sword etched and scratched by endurance long past."
+	desc = "A fitting resting place for a Angrosian sword etched and scratched by endurance long past."
 	icon = 'icons/obj/wallmounts.dmi'
 	icon_state = "fireaxe"
-	heirloom = /obj/item/weapon/sword/long/greatsword/psydon/unforgotten/
+	heirloom = /obj/item/weapon/sword/long/greatsword/angros/unforgotten/
 
 /obj/structure/fireaxecabinet/unforgotten/Initialize()
 	. = ..()
-	heirloom = new /obj/item/weapon/sword/long/greatsword/psydon/unforgotten
+	heirloom = new /obj/item/weapon/sword/long/greatsword/angros/unforgotten
 	desc = heirloom.desc
-	update_icon()
+	update_appearance(UPDATE_ICON_STATE)
 
 /obj/structure/fireaxecabinet/unforgotten/south
 	dir = SOUTH
-	pixel_y = 32
+	SET_BASE_PIXEL(0, 32)
 
-/obj/structure/fireaxecabinet/unforgotten/attackby(obj/item/I, mob/user, params)
+/obj/structure/fireaxecabinet/unforgotten/attackby(obj/item/I, mob/user, list/modifiers)
 	if(open || obj_broken)
-		if(istype(I, /obj/item/weapon/sword/long/greatsword/psydon/unforgotten/) && !heirloom)
-			var/obj/item/weapon/sword/long/greatsword/psydon/unforgotten/F = I
+		if(istype(I, /obj/item/weapon/sword/long/greatsword/angros/unforgotten/) && !heirloom)
+			var/obj/item/weapon/sword/long/greatsword/angros/unforgotten/F = I
 			if(!user.transferItemToLoc(F, src))
 				return
 			heirloom = F
 			to_chat(user, "<span class='notice'>I place \the [F] back in \the [src].</span>")
 			desc = F.desc
-			update_appearance()
+			update_appearance(UPDATE_ICON_STATE)
 			return
 		else if(!obj_broken)
 			desc = initial(desc)
@@ -104,12 +102,9 @@
 	else
 		return ..()
 
-/obj/structure/fireaxecabinet/unforgotten/update_icon()
+/obj/structure/fireaxecabinet/unforgotten/update_icon_state()
 	. = ..()
-	cut_overlays()
 	if(heirloom)
-		add_overlay("axe_forgotten")
-	if(!open)
-		add_overlay("unlocked")
+		icon_state = "axe_forgotten"
 	else
-		add_overlay("glass_raised")
+		icon_state = "fireaxe"

@@ -9,7 +9,7 @@
 	equip_delay_self = 3 SECONDS
 	unequip_delay_self = 3 SECONDS
 	resistance_flags = FIRE_PROOF // These are all metallic DELETE AFTER REPATH
-	anvilrepair = /datum/skill/craft/armorsmithing	//DELETE AFTER REPATH
+	anvilrepair = /datum/attribute/skill/craft/armor_repair	//DELETE AFTER REPATH
 	melt_amount = 75
 	melting_material = /datum/material/steel
 	sellprice = VALUE_STEEL_HELMET+BONUS_VALUE_SMALL
@@ -29,12 +29,15 @@
 	clothing_flags = CANT_SLEEP_IN
 	armor_class = AC_MEDIUM
 	body_parts_covered = HEAD|HAIR|NOSE
+	item_weight = 3.5 KILOGRAMS
+
 
 /obj/item/clothing/head/rare/elfplate/welfplate // Unique Bladesinger kit
 	desc = "A bizarrely lightweight helmet of alloyed elven steel, offering unparalleled protection for elite bladesingers."
 	icon_state = "welfhead"
 
 	body_parts_covered = HEAD|HAIR|NOSE|EYES
+	item_weight = 3.5 KILOGRAMS
 
 
 //............... Langobard Helmet ............... //
@@ -47,11 +50,12 @@
 	flags_inv = HIDEEARS
 	clothing_flags = CANT_SLEEP_IN
 	body_parts_covered = HEAD_EXCEPT_MOUTH
+	item_weight = 3.5 KILOGRAMS
 
 //............... Swordmaster Helmet ............... //
-/obj/item/clothing/head/rare/grenzelplate // Unique Swordmaster kit
+/obj/item/clothing/head/rare/bastardsplate // Unique Swordmaster kit
 	name = "chicklet sallet"
-	desc = "A Grenzelhoftian chicklet sallet, decorated with a plume of valor. \
+	desc = "A high Aelondan chicklet sallet, decorated with a plume of valor. \
 			It has been proven with severe battle-testing that a wearer's head would crack before the helmet chips."
 	icon_state = "human_swordhead"
 	allowed_sex = list(MALE)
@@ -59,12 +63,13 @@
 	flags_inv = HIDEEARS
 	clothing_flags = CANT_SLEEP_IN
 	body_parts_covered = HEAD|EARS|HAIR
+	item_weight = 3.5 KILOGRAMS
 
 
-//............... Kataphract/bastion/spear/zaladin Helmet ............... //
-/obj/item/clothing/head/rare/zaladplate // Unique Freelancer kit
+//............... Kataphract/bastion/spear/qadirid Helmet ............... //
+/obj/item/clothing/head/rare/qadiridplate // Unique Freelancer kit
 	name = "bastion helm"
-	desc = "The Zaladin Kataphractoe are the ancestral guardians of the first Despot, \
+	desc = "The Qadirid Kataphractoe are the ancestral guardians of the first Despot, \
 			their helms designed in the fashion of the capital's majestic sky-piercing tower \
 			where the old God-King resided."
 	icon_state = "human_spearhead"
@@ -74,11 +79,12 @@
 	flags_inv = HIDEEARS|HIDEFACE
 	clothing_flags = CANT_SLEEP_IN
 	body_parts_covered = HEAD|EARS|HAIR|NOSE|MOUTH
+	item_weight = 3.5 KILOGRAMS
 
 //............... Hoplite Helmet ............... //
 /obj/item/clothing/head/rare/hoplite // Unique Hoplite kit
 	name = "ancient helmet"
-	desc = "A weathered bronze helmet topped with a symbol of Astrata's sun."
+	desc = "A weathered bronze helmet topped with a symbol of Visires' sun."
 	icon = 'icons/roguetown/clothing/head.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/64x64/head.dmi'
 	bloody_icon = 'icons/effects/blood64x64.dmi'
@@ -90,3 +96,4 @@
 	clothing_flags = CANT_SLEEP_IN
 	body_parts_covered = HEAD|EARS|HAIR
 	smeltresult = /obj/item/ingot/bronze
+	item_weight = 2.9 KILOGRAMS

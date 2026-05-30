@@ -1,13 +1,13 @@
-/datum/storyteller/astrata
-	name = ASTRATA
-	desc = "Astrata will provide a balanced and varied experience. Consider this the default experience."
+/datum/storyteller/visires
+	name = VISIRES
+	desc = "Visires will provide a balanced and varied experience. Consider this the default experience."
 	weight = 6
 	always_votable = TRUE
 	follower_modifier = LOWER_FOLLOWER_MODIFIER
-	color_theme = "#FFD700"
+	color_theme = "#fefbea"
 
 	tag_multipliers = list(
-		TAG_ASTRATA = 3,
+		TAG_VISIRES = 3,
 	)
 
 	influence_sets = list(
@@ -22,7 +22,7 @@
 			STATS_PEOPLE_SMITTEN = list("name" = "People smitten:", "points" = 6, "capacity" = 40),
 		),
 		"Set 4" = list(
-			STATS_ASTRATA_REVIVALS = list("name" = "Holy revivals:", "points" = 6.25, "capacity" = 75),
+			STATS_VISIRES_REVIVALS = list("name" = "Holy revivals:", "points" = 6.25, "capacity" = 75),
 			STATS_PRAYERS_MADE = list("name" = "Prayers made:", "points" = 1.375, "capacity" = 65),
 		),
 		"Set 5" = list(
@@ -31,17 +31,18 @@
 		)
 	)
 
-/datum/storyteller/noc
-	name = NOC
-	desc = "Noc will try to send more magical events."
+/datum/storyteller/akan
+	name = AKAN
+	desc = "Akan will try to send more magical events."
 	welcome_text = "The veil between realms shimmers in your presence."
 	weight = 4
 	always_votable = TRUE
-	follower_modifier = LOWER_FOLLOWER_MODIFIER
+	roundstart_prob = 70
+	follower_modifier = STANDARD_FOLLOWER_MODIFIER
 	color_theme = "#F0F0F0"
 
 	tag_multipliers = list(
-		TAG_NOC = 3,
+		TAG_AKAN = 3,
 		TAG_MAGICAL = 1.75,
 		TAG_HAUNTED = 1.5,
 	)
@@ -65,16 +66,17 @@
 		)
 	)
 
-/datum/storyteller/ravox
-	name = RAVOX
-	desc = "Ravox will cause raids to happen naturally instead of only when people are dying a lot."
+/datum/storyteller/mordsol
+	name = MORDSOL
+	desc = "Mordsol will cause raids to happen naturally instead of only when people are dying a lot."
 	welcome_text = "The drums of war grow louder."
 	weight = 4
 	always_votable = TRUE
 	color_theme = "#228822"
+	guarantees_roundstart_roleset = TRUE
 
 	tag_multipliers = list(
-		TAG_RAVOX = 3,
+		TAG_MORDSOL = 3,
 		TAG_COMBAT = 1.75,
 		TAG_RAID = 1.5,
 	)
@@ -107,16 +109,16 @@
 		)
 	)
 
-/datum/storyteller/abyssor
-	name = ABYSSOR
-	desc = "Abyssor likes to send water and trade-related events."
+/datum/storyteller/mjallidhorn
+	name = MJALLIDHORN
+	desc = "Mjallidhorn likes to send water and trade-related events."
 	welcome_text = "The tides of fate shift in your favor."
 	weight = 4
 	always_votable = TRUE
 	color_theme = "#3366CC"
 
 	tag_multipliers = list(
-		TAG_ABYSSOR = 3,
+		TAG_MJALLIDHORN = 3,
 		TAG_WATER = 1.75,
 		TAG_TRADE = 1.5,
 	)
@@ -129,7 +131,7 @@
 			STATS_WATER_CONSUMED = list("name" = "Water consumed:", "points" = 0.014, "capacity" = 90),
 		),
 		"Set 3" = list(
-			STATS_ABYSSOR_REMEMBERED = list("name" = "Abyssor remembered:", "points" = 1.1, "capacity" = 50),
+			STATS_MJALLIDHORN_REMEMBERED = list("name" = "Mjallidhorn remembered:", "points" = 1.1, "capacity" = 50),
 			STATS_ALIVE_TRITONS = list("name" = "Number of tritons:", "points" = 8, "capacity" = 70),
 		),
 		"Set 4" = list(
@@ -141,18 +143,19 @@
 		)
 	)
 
-/datum/storyteller/xylix
-	name = XYLIX
-	desc = "Xylix is a wildcard, spinning the wheels of fate."
+/datum/storyteller/iliope
+	name = ILIOPE
+	desc = "Iliope is a wildcard, spinning the wheels of fate."
 	welcome_text = "The dice have been cast, let chaos reign."
 	weight = 4
 	always_votable = TRUE
 	color_theme = "#AA8888"
 	event_repetition_multiplier = 0
 	forced = TRUE
+	roundstart_prob = 75
 
 	tag_multipliers = list(
-		TAG_XYLIX = 3,
+		TAG_ILIOPE = 3,
 		TAG_GAMBLE = 1.75,
 		TAG_TRICKERY = 1.5,
 		TAG_UNEXPECTED = 1.25,
@@ -163,7 +166,7 @@
 		EVENT_TRACK_PERSONAL = 1.5,
 		EVENT_TRACK_MODERATE = 1,
 		EVENT_TRACK_INTERVENTION = 1.75,
-		EVENT_TRACK_CHARACTER_INJECTION = 0,
+		EVENT_TRACK_CHARACTER_INJECTION = 1,
 		EVENT_TRACK_OMENS = 1,
 		EVENT_TRACK_RAIDS = 1,
 	)
@@ -184,19 +187,22 @@
 		"Set 5" = list(
 			STATS_SONGS_PLAYED = list("name" = "Songs played:", "points" = 0.775, "capacity" = 70),
 			STATS_MOAT_FALLERS = list("name" = "Moat fallers:", "points" = 5, "capacity" = 50),
+		),
+		"Set 6" = list(
+			STATS_CRUEL_PRANKS = list("name" = "Cruel Pranks:", "points" = 80, "capacity" = 240)
 		)
 	)
 
-/datum/storyteller/necra
-	name = NECRA
-	desc = "Necra takes things very slow, rarely bringing in newcomers."
+/datum/storyteller/valdala
+	name = VALDALA
+	desc = "Valdala takes things very slow, rarely bringing in newcomers."
 	welcome_text = "The grave whispers, patience is virtue."
 	weight = 4
 	always_votable = TRUE
 	color_theme = "#888888"
 
 	tag_multipliers = list(
-		TAG_NECRA = 3,
+		TAG_VALDALA = 3,
 		TAG_HAUNTED = 1.75,
 	)
 
@@ -230,14 +236,14 @@
 		)
 	)
 
-/datum/storyteller/pestra
-	name = PESTRA
-	desc = "Pestra keeps things simple, with a slight bias towards alchemy."
+/datum/storyteller/erdl
+	name = ERDL
+	desc = "Erdl keeps things simple, with a slight bias towards alchemy."
 	welcome_text = "The balance of life and craft tilts in your favor."
 	color_theme = "#AADDAA"
 
 	tag_multipliers = list(
-		TAG_PESTRA = 3,
+		TAG_ERDL = 3,
 		TAG_ALCHEMY = 1.75,
 		TAG_MEDICAL = 1.75,
 		TAG_NATURE = 1.25,
@@ -263,14 +269,14 @@
 		)
 	)
 
-/datum/storyteller/malum
-	name = MALUM
-	desc = "Malum believes in hard work, intervening more often than others."
+/datum/storyteller/golerkanh
+	name = GOLERKANH
+	desc = "Goler Kanh believes in hard work, intervening more often than others."
 	welcome_text = "Toil and perseverance shall shape your destiny."
 	color_theme = "#D4A56C"
 
 	tag_multipliers = list(
-		TAG_MALUM = 3,
+		TAG_GOLERKANH = 3,
 		TAG_WORK = 1.75,
 	)
 
@@ -303,14 +309,15 @@
 		)
 	)
 
-/datum/storyteller/eora
-	name = EORA
-	desc = "Eora hates death and promotes love. Raids will never naturally progress, only death will bring them."
+/datum/storyteller/pomette
+	name = POMETTE
+	desc = "Pomette hates death and promotes love. Raids will never naturally progress, only death will bring them."
 	welcome_text = "Life shall flourish under my watchful gaze."
 	color_theme = "#9966CC"
+	roundstart_prob = 50
 
 	tag_multipliers = list(
-		TAG_EORA = 3,
+		TAG_POMETTE = 3,
 		TAG_BOON = 1.75,
 		TAG_WIDESPREAD = 1.5,
 	)
@@ -346,17 +353,18 @@
 		)
 	)
 
-/datum/storyteller/dendor
-	name = DENDOR
-	desc = "Dendor likes to send nature-themed events."
+/datum/storyteller/gani
+	name = GANI
+	desc = "Gani likes to send nature-themed events."
 	welcome_text = "The wilds whisper your name."
 	weight = 4
 	always_votable = TRUE
 	color_theme = "#664422"
 
 	tag_multipliers = list(
-		TAG_DENDOR = 3,
+		TAG_GANI = 3,
 		TAG_NATURE = 1.75,
+		TAG_INSANITY = 1.5
 	)
 
 	point_gains_multipliers = list(
@@ -381,7 +389,7 @@
 			STATS_FOREST_DEATHS = list("name" = "Forest deaths:", "points" = 6, "capacity" = 80),
 		),
 		"Set 4" = list(
-			STATS_DENDOR_SACRIFICES = list("name" = "Sacrifices to Dendor:", "points" = 12.5, "capacity" = 75),
+			STATS_GANI_SACRIFICES = list("name" = "Sacrifices to Gani:", "points" = 12.5, "capacity" = 75),
 		),
 		"Set 5" = list(
 			STATS_ANIMALS_TAMED = list("name" = "Animals tamed:", "points" = 4.5, "capacity" = 60),
@@ -390,17 +398,18 @@
 
 // INHUMEN
 
-/datum/storyteller/zizo
-	name = ZIZO
-	desc = "Zizo thrives on risk and reward, favoring the daring and unpredictable."
+/datum/storyteller/envy
+	name = ENVY
+	desc = "The One Envy thrives on risk and reward, favoring the daring and unpredictable."
 	welcome_text = "You will kneel."
 	weight = 4
 	always_votable = TRUE
 	follower_modifier = LOWER_INHUMEN_FOLLOWER_MODIFIER
 	color_theme = "#CC4444"
+	guarantees_roundstart_roleset = TRUE
 
 	tag_multipliers = list(
-		TAG_ZIZO = 3,
+		TAG_ARCHDEVILS = 3,
 		TAG_MAGICAL = 1.5,
 		TAG_UNEXPECTED = 1.5,
 		TAG_TRICKERY = 1.25,
@@ -418,7 +427,7 @@
 
 	influence_sets = list(
 		"Set 1" = list(
-			STATS_ZIZO_PRAISED = list("name" = "Zizo praised:", "points" = 1.25, "capacity" = 45),
+			STATS_ARCHDEVILS_PRAISED = list("name" = "Archdevils praised:", "points" = 1.25, "capacity" = 45),
 			STATS_ALIVE_DARK_ELVES = list("name" = "Number of dark elves:", "points" = 6.75, "capacity" = 60),
 		),
 		"Set 2" = list(
@@ -437,17 +446,18 @@
 
 	cost_variance = 50  // Events will be highly variable in cost
 
-/datum/storyteller/baotha
-	name = BAOTHA
-	desc = "Baotha revels in chaos, making events and reality unpredictable."
+/datum/storyteller/hertannea
+	name = HERTANNEA
+	desc = "Hertannea revels in chaos, making events and reality unpredictable."
 	welcome_text = "The world bends to my whims."
 	weight = 4
 	always_votable = TRUE
 	follower_modifier = STANDARD_INHUMEN_MODIFIER
 	color_theme = "#9933FF"
+	roundstart_prob = 90
 
 	tag_multipliers = list(
-		TAG_BAOTHA = 3,
+		TAG_HERTANNEA = 3,
 		TAG_INSANITY = 1.75,
 		TAG_DISASTER = 1.5,
 	)
@@ -483,17 +493,18 @@
 
 	cost_variance = 30  // Makes events more erratic in timing
 
-/datum/storyteller/graggar
-	name = GRAGGAR
-	desc = "Graggar encourages war and conquest, making combat the solution to all."
+/datum/storyteller/archdevils
+	name = ARCHDEVILS
+	desc = "Archdevil encourages war and conquest, making combat the solution to all."
 	welcome_text = "Victory or death!"
 	weight = 4
 	always_votable = TRUE
 	follower_modifier = STANDARD_INHUMEN_MODIFIER
 	color_theme = "#8B3A3A"
+	guarantees_roundstart_roleset = TRUE
 
 	tag_multipliers = list(
-		TAG_GRAGGAR = 3,
+		TAG_ARCHDEVILS = 3,
 		TAG_BATTLE = 1.75,
 		TAG_BLOOD = 1.5,
 		TAG_WAR = 1.25,
@@ -518,7 +529,7 @@
 			STATS_BLOOD_SPILT = list("name" = "Blood spilt:", "points" = 0.03, "capacity" = 90),
 		),
 		"Set 3" = list(
-			STATS_ORGANS_EATEN = list("name" = "Organs eaten:", "points" = 4.75, "capacity" = 70),
+			STATS_ORGANS_EATEN = list("name" = "Organs eaten:", "points" = 2.75, "capacity" = 70),
 		),
 		"Set 4" = list(
 			STATS_LIMBS_BITTEN = list("name" = "Limbs bitten:", "points" = 1.25, "capacity" = 70),
@@ -531,17 +542,18 @@
 
 	cost_variance = 10  // Less randomness, more direct
 
-/datum/storyteller/matthios
-	name = MATTHIOS
-	desc = "Matthios manipulates wealth and corruption, rewarding those who make deals."
+/datum/storyteller/deceivers
+	name = DECEIVERS
+	desc = "Deceivers manipulates wealth and corruption, rewarding those who make deals."
 	welcome_text = "Fortune favors the cunning."
 	weight = 4
 	always_votable = TRUE
 	follower_modifier = LOWER_INHUMEN_FOLLOWER_MODIFIER
 	color_theme = "#8B4513"
+	guarantees_roundstart_roleset = TRUE
 
 	tag_multipliers = list(
-		TAG_MATTHIOS = 3,
+		TAG_DECEIVERS = 3,
 		TAG_CORRUPTION = 1.75,
 		TAG_LOOT = 1.75,
 		TAG_TRADE = 1.25,
@@ -576,5 +588,3 @@
 			STATS_GRAVES_ROBBED = list("name" = "Graves robbed:", "points" = 6, "capacity" = 60),
 		)
 	)
-
-	cost_variance = 15  // Keeps a balance between predictability and randomness

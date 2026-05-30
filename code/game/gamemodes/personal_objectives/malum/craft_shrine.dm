@@ -1,8 +1,8 @@
 /datum/objective/personal/craft_shrine
 	name = "Build Shrines"
-	category = "Malum's Chosen"
+	category = "Goler Kanh's Chosen"
 	triumph_count = 2
-	rewards = list("2 Triumphs", "Malum grows stronger", "Crafting knowledge")
+	rewards = list("2 Triumphs", "Goler Kanh grows stronger", "Crafting knowledge")
 	var/target_type = /obj/structure/fluff/psycross/crafted
 	var/target_count = 2
 	var/current_count = 0
@@ -39,13 +39,13 @@
 
 /datum/objective/personal/craft_shrine/complete_objective()
 	. = ..()
-	to_chat(owner.current, span_greentext("You have built all the required sacred crosses, completing Malum's objective!"))
-	adjust_storyteller_influence(MALUM, 20)
+	to_chat(owner.current, span_greentext("You have built all the required sacred crosses, completing Goler Kanh's objective!"))
+	adjust_storyteller_influence(GOLERKANH, 20)
 	UnregisterSignal(owner.current, COMSIG_ITEM_CRAFTED)
 
 /datum/objective/personal/craft_shrine/reward_owner()
 	. = ..()
-	owner.current.adjust_skillrank(/datum/skill/craft/crafting, 1)
+	owner.current.adjust_skill_level(/datum/attribute/skill/craft/crafting, 10)
 
 /datum/objective/personal/craft_shrine/update_explanation_text()
-	explanation_text = "Build [target_count] wooden pantheon cross[target_count > 1 ? "es" : ""] to demonstrate your devotion to Malum."
+	explanation_text = "Build [target_count] wooden pantheon cross[target_count > 1 ? "es" : ""] to demonstrate your devotion to Goler Kanh."

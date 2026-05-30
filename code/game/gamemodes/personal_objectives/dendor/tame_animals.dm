@@ -1,8 +1,8 @@
 /datum/objective/personal/tame_animal
 	name = "Tame an Animal"
-	category = "Dendor's Chosen"
+	category = "Gani's Chosen"
 	triumph_count = 2
-	rewards = list("2 Triumphs", "Dendor grows stronger", "Taming knowledge")
+	rewards = list("2 Triumphs", "Gani grows stronger", "Taming knowledge")
 	var/tamed_count = 0
 	var/required_tames = 1
 
@@ -28,13 +28,13 @@
 
 /datum/objective/personal/tame_animal/complete_objective(mob/living/simple_animal/animal)
 	. = ..()
-	to_chat(owner.current, span_greentext("You have tamed [animal], fulfilling Dendor's will!"))
-	adjust_storyteller_influence(DENDOR, 20)
+	to_chat(owner.current, span_greentext("You have tamed [animal], fulfilling Gani's will!"))
+	adjust_storyteller_influence(GANI, 20)
 	UnregisterSignal(owner.current, COMSIG_ANIMAL_TAMED)
 
 /datum/objective/personal/tame_animal/reward_owner()
 	. = ..()
-	owner.current.adjust_skillrank(/datum/skill/labor/taming, 1)
+	owner.current.adjust_skill_level(/datum/attribute/skill/labor/taming, 10)
 
 /datum/objective/personal/tame_animal/update_explanation_text()
-	explanation_text = "Tame an animal, either by feeding it or any other means until it acknowledges you as a friend. Dendor wills it!"
+	explanation_text = "Tame an animal, either by feeding it or any other means until it acknowledges you as a friend. Gani wills it!"

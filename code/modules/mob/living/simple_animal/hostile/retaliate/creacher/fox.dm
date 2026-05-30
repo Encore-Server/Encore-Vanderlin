@@ -4,7 +4,7 @@
 /mob/living/simple_animal/hostile/retaliate/fox
 	icon = 'icons/roguetown/mob/monster/fox.dmi'
 	name = "venard"
-	desc = "A majestic beast of Dendor's realm, hopping through the local fauna."
+	desc = "A majestic beast of Gani's realm, hopping through the local fauna."
 	icon_state = "fox"
 	icon_living = "fox"
 	icon_dead = "fox_dead"
@@ -88,43 +88,4 @@
 			return pick('sound/vo/mobs/vw/bark (1).ogg','sound/vo/mobs/vw/bark (2).ogg','sound/vo/mobs/vw/bark (3).ogg','sound/vo/mobs/vw/bark (4).ogg','sound/vo/mobs/vw/bark (5).ogg','sound/vo/mobs/vw/bark (6).ogg','sound/vo/mobs/vw/bark (7).ogg')
 
 /mob/living/simple_animal/hostile/retaliate/fox/simple_limb_hit(zone)
-	if(!zone)
-		return ""
-	switch(zone)
-		if(BODY_ZONE_PRECISE_R_EYE)
-			return "head"
-		if(BODY_ZONE_PRECISE_L_EYE)
-			return "head"
-		if(BODY_ZONE_PRECISE_NOSE)
-			return "nose"
-		if(BODY_ZONE_PRECISE_MOUTH)
-			return "mouth"
-		if(BODY_ZONE_PRECISE_SKULL)
-			return "head"
-		if(BODY_ZONE_PRECISE_EARS)
-			return "head"
-		if(BODY_ZONE_PRECISE_NECK)
-			return "neck"
-		if(BODY_ZONE_PRECISE_L_HAND)
-			return "foreleg"
-		if(BODY_ZONE_PRECISE_R_HAND)
-			return "foreleg"
-		if(BODY_ZONE_PRECISE_L_FOOT)
-			return "leg"
-		if(BODY_ZONE_PRECISE_R_FOOT)
-			return "leg"
-		if(BODY_ZONE_PRECISE_STOMACH)
-			return "stomach"
-		if(BODY_ZONE_PRECISE_GROIN)
-			return "tail"
-		if(BODY_ZONE_HEAD)
-			return "head"
-		if(BODY_ZONE_R_LEG)
-			return "leg"
-		if(BODY_ZONE_L_LEG)
-			return "leg"
-		if(BODY_ZONE_R_ARM)
-			return "foreleg"
-		if(BODY_ZONE_L_ARM)
-			return "foreleg"
 	return ..()

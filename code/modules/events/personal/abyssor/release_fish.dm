@@ -8,7 +8,7 @@
 	min_players = 15
 
 	tags = list(
-		TAG_ABYSSOR,
+		TAG_MJALLIDHORN,
 		TAG_WATER,
 		TAG_NATURE,
 	)
@@ -21,9 +21,9 @@
 	for(var/mob/living/carbon/human/H in GLOB.player_list)
 		if(!istype(H) || H.stat == DEAD || !H.client)
 			continue
-		if(!H.patron || !istype(H.patron, /datum/patron/divine/abyssor))
+		if(!H.patron || !istype(H.patron, /datum/patron/divine/mjallidhorn))
 			continue
-		if(H.get_skill_level(/datum/skill/labor/fishing) < 2)
+		if(GET_MOB_SKILL_VALUE_OLD(H, /datum/attribute/skill/labor/fishing) < 2)
 			continue
 		return TRUE
 
@@ -35,9 +35,9 @@
 	for(var/mob/living/carbon/human/H in GLOB.player_list)
 		if(!istype(H) || H.stat == DEAD || !H.client)
 			continue
-		if(!H.patron || !istype(H.patron, /datum/patron/divine/abyssor))
+		if(!H.patron || !istype(H.patron, /datum/patron/divine/mjallidhorn))
 			continue
-		if(H.get_skill_level(/datum/skill/labor/fishing) < 2)
+		if(GET_MOB_SKILL_VALUE_OLD(H, /datum/attribute/skill/labor/fishing) < 2)
 			continue
 		valid_targets += H
 
@@ -50,8 +50,8 @@
 	chosen_one.mind.add_personal_objective(new_objective)
 
 	bordered_message(chosen_one, list(
-		span_userdanger("YOU ARE ABYSSOR'S CHOSEN!"),
-		span_notice("Abyssor demands a small respite for the creatures of the deep! Release a demanded fish back to the water to please Abyssor!"),
+		span_userdanger("YOU ARE MJALLIDHORN'S CHOSEN!"),
+		span_notice(PLACEHOLDER_PATRON_REBRANDING),
 	))
 	chosen_one.playsound_local(chosen_one, 'sound/items/bucket_transfer (2).ogg', 100)
 

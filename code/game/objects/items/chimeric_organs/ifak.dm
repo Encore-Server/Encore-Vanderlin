@@ -1,7 +1,7 @@
 
 /obj/item/storage/fancy/ifak
 	name = "personal patch kit"
-	desc = "Personal treatment pouch; has all you need to stop you or someone else from meeting Necra."
+	desc = "Personal treatment pouch; has all you need to stop you or someone else from meeting Valdala."
 	icon = 'icons/obj/medical.dmi'
 	icon_state = "ifak"
 	w_class = WEIGHT_CLASS_SMALL
@@ -16,11 +16,12 @@
 		/obj/item/candle/yellow,
 		/obj/item/needle,
 	)
+	item_weight = 740 GRAMS
 
-/obj/item/storage/fancy/ifak/update_icon()
+/obj/item/storage/fancy/ifak/update_icon_state()
 	. = ..()
 	if(is_open)
-		if(contents.len == 0)
+		if(length(contents) == 0)
 			icon_state = "ifak_empty"
 		else
 			icon_state = "ifak_open"
@@ -35,25 +36,6 @@
 		else
 			. += "There are [contents.len <= 0 ? "no" : "[contents.len]"] items left."
 
-/obj/item/storage/fancy/ifak/attack_self(mob/user)
-	is_open = !is_open
-	update_icon()
+/obj/item/storage/fancy/ifak/attack_self(mob/user, list/modifiers)
 	. = ..()
-
-/obj/item/storage/fancy/ifak/Entered(mob/user)
-	if(!is_open)
-		to_chat(user, span_notice("[src] needs to be opened first."))
-		return
-	is_open = TRUE
-	update_icon()
-	. = ..()
-
-/obj/item/storage/fancy/ifak/Exited(mob/user)
-	is_open = FALSE
-	update_icon()
-	. = ..()
-
-/obj/item/storage/fancy/ifak/MiddleClick(mob/user, params)
-	is_open = !is_open
-	update_icon()
 	to_chat(user, span_notice("[src] is now [is_open ? "open" : "closed"]."))

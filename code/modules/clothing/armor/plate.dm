@@ -2,7 +2,7 @@
 	name = "steel half-plate"
 	desc = "Steel plate armor with shoulder guards. An incomplete, bulky set of excellent armor."
 	icon_state = "halfplate"
-	anvilrepair = /datum/skill/craft/armorsmithing
+	anvilrepair = /datum/attribute/skill/craft/armor_repair
 	melt_amount = 75
 	melting_material = /datum/material/steel
 	equip_delay_self = 4 SECONDS
@@ -18,6 +18,7 @@
 	prevent_crits = ALL_EXCEPT_BLUNT
 	max_integrity = INTEGRITY_STRONGEST
 	stand_speed_reduction = 1.2
+	item_weight = 8.4 KILOGRAMS
 
 /obj/item/clothing/armor/plate/Initialize()
 	. = ..()
@@ -33,14 +34,6 @@
 	armor = ARMOR_PLATE_BAD
 	max_integrity = INTEGRITY_STRONG
 
-/obj/item/clothing/armor/plate/vampire
-	name = "ancient plate"
-	desc = "An ornate, ceremonial plate of considerable age."
-	icon_state = "vplate"
-
-	armor = ARMOR_PLATE_GOOD
-	prevent_crits = ALL_CRITICAL_HITS_VAMP
-
 //................ Full Plate Armor ............... //
 /obj/item/clothing/armor/plate/full
 	name = "plate armor"
@@ -53,7 +46,7 @@
 
 	armor = ARMOR_PLATE
 	body_parts_covered = COVERAGE_FULL
-	item_weight = 12 * STEEL_MULTIPLIER
+	item_weight = 17 KILOGRAMS
 
 /obj/item/clothing/armor/plate/full/iron
 	name = "iron plate armor"
@@ -65,7 +58,7 @@
 
 	armor = ARMOR_PLATE_BAD
 	max_integrity = INTEGRITY_STRONG
-	item_weight = 12 * IRON_MULTIPLIER
+	item_weight = 17 KILOGRAMS
 
 //................ Rusted Half-plate ............... //
 /obj/item/clothing/armor/plate/rust
@@ -80,7 +73,7 @@
 	sellprice = VALUE_IRON_ARMOR/2
 	armor = ARMOR_PLATE_BAD
 	max_integrity = INTEGRITY_STANDARD
-	item_weight = 12 * IRON_MULTIPLIER
+	item_weight = 8.75 KILOGRAMS
 
 
 /obj/item/clothing/armor/plate/blkknight
@@ -92,9 +85,9 @@
 	icon = 'icons/roguetown/clothing/special/blkknight.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/special/onmob/blkknight.dmi'
 	sleeved = 'icons/roguetown/clothing/special/onmob/blkknight.dmi'
-	anvilrepair = /datum/skill/craft/blacksmithing
+	anvilrepair = /datum/attribute/skill/craft/blacksmithing
 	smeltresult = /obj/item/ingot/blacksteel
-	item_weight = 12 * BLACKSTEEL_MULTIPLIER
+	item_weight = 20.45 KILOGRAMS
 	sellprice = VALUE_SILVER_ITEM * 6
 	stand_speed_reduction = 1.05
 
@@ -114,9 +107,9 @@
 	desc = "A halfplate decorated with a gold ornament on the chestplate and a fine silk corset. More for decoration then actual use."
 	icon_state = "halfplate_decorated_corset"
 
-//................ Zizo Armor ...............//
+//................ One Envy Armor ...............//
 
-/obj/item/clothing/armor/plate/full/zizo
+/obj/item/clothing/armor/plate/full/envy
 	name = "darksteel fullplate"
 	desc = "Full plate. Called forth from the edge of what should be known. In Her name."
 	icon_state = "zizoplate"
@@ -125,9 +118,9 @@
 	sleeved = 'icons/roguetown/clothing/special/onmob/evilarmor.dmi'
 	sellprice = 0 // Incredibly evil Zizoid armor, this should be burnt, nobody wants this
 
-//................ Matthios Armor ...............//
+//................ Deceivers Armor ...............//
 
-/obj/item/clothing/armor/plate/full/matthios
+/obj/item/clothing/armor/plate/full/deceivers
 	name = "gilded fullplate"
 	desc = "Full plate. Tales told of men in armor such as this stealing many riches, or lives."
 	icon_state = "matthiosarmor"
@@ -136,9 +129,9 @@
 	sleeved = 'icons/roguetown/clothing/special/onmob/evilarmor.dmi'
 	sellprice = 0 // See above comment
 
-//.............. Graggar Armor .................//
+//.............. Archdevil Armor .................//
 
-/obj/item/clothing/armor/plate/full/graggar
+/obj/item/clothing/armor/plate/full/archdevils
 	name = "vicious full-plate"
 	desc = "A sinister set full plate. Untold violence stirs from within."
 	icon_state = "graggarplate"
@@ -156,7 +149,7 @@
 	allowed_ages = ALL_AGES_LIST //placeholder until younglings have onmob sprites for this item
 	armor = ARMOR_PLATE_SILVER
 	smeltresult = /obj/item/ingot/silver
-	item_weight = 12 * SILVER_MULTIPLIER
+	item_weight = 22 KILOGRAMS
 	sellprice = VALUE_SILVER_ITEM * 3
 
 /obj/item/clothing/armor/plate/full/silver/Initialize(mapload)
@@ -165,7 +158,7 @@
 
 /obj/item/clothing/armor/plate/fluted
 	name = "fluted half-plate"
-	desc = "An ornate steel cuirass, fitted with tassets and pauldrons for additional coverage. This lightweight deviation of 'plate armor' is favored by cuirassiers all across Psydonia, alongside fledging barons who've - up until now - waged their fiercest battles upon a chamberpot."
+	desc = "An ornate steel cuirass, fitted with tassets and pauldrons for additional coverage. This lightweight deviation of 'plate armor' is favored by cuirassiers all across Gaia, alongside fledging barons who've - up until now - waged their fiercest battles upon a chamberpot."
 	icon_state = "ornatehalfplate"
 
 	equip_delay_self = 6 SECONDS
@@ -175,9 +168,9 @@
 	body_parts_covered = COVERAGE_FULL // Less durability than proper plate, more expensive to manufacture, and accurate to the sprite.
 
 /obj/item/clothing/armor/plate/fluted/ornate
-	name = "psydonian half-plate"
+	name = "angrosian half-plate"
 	desc = "A sturdily made fluted half-plate armour-set, complete with pauldrons and shoulder-guards. \
-			Favored by both the Oratorium Throni Vacui and the Order of the Silver Psycross. It smells of the madness of an enduring God."
+			Favored by both the Katholikos and the remaining Angrosians. It smells of the madness of an enduring God."
 	icon_state = "ornatehalfplate"
 
 	max_integrity = 400
@@ -188,25 +181,40 @@
 
 /obj/item/clothing/armor/plate/fluted/ornate/ordinator
 	name = "inquisitorial ordinator's plate"
-	desc = "A relic that is said to have survived the early sieges of Grenzelhoft, refurbished and repurposed to slay the arch-enemy in the name of Psydon. <br> A fluted cuirass that has been reinforced with thick padding and an additional shoulder piece. You will endure."
+	desc = "A relic that is said to have survived the early sieges of the Burning Shore, refurbished and repurposed to slay the arch-enemy in the name of the Elementals. <br> A fluted cuirass that has been reinforced with thick padding and an additional shoulder piece."
 	icon_state = "ordinatorplate"
 
 
-/datum/status_effect/buff/psydonic_endurance
-	id = "psydonic_endurance"
-	alert_type = /atom/movable/screen/alert/status_effect/buff/psydonic_endurance
-	effectedstats = list(STATKEY_CON = 1,STATKEY_END = 1)
+/datum/status_effect/buff/unsundered_endurance
+	id = "unsundered_endurance"
+	alert_type = /atom/movable/screen/alert/status_effect/buff/unsundered_endurance
+	effectedstats = list(STAT_CONSTITUTION = 1,STAT_ENDURANCE = 1)
 
-/datum/status_effect/buff/psydonic_endurance/on_apply()
+/datum/status_effect/buff/unsundered_endurance/on_apply()
 	. = ..()
 	if(HAS_TRAIT(owner, TRAIT_MEDIUMARMOR) && !HAS_TRAIT(owner, TRAIT_HEAVYARMOR))
 		ADD_TRAIT(owner, TRAIT_HEAVYARMOR, src)
 
-/datum/status_effect/buff/psydonic_endurance/on_remove()
+/datum/status_effect/buff/unsundered_endurance/on_remove()
 	. = ..()
 	REMOVE_TRAIT(owner, TRAIT_HEAVYARMOR, src)
 
-/atom/movable/screen/alert/status_effect/buff/psydonic_endurance
-	name = "Psydonic Endurance"
-	desc = "I am protected by blessed Psydonian plate armor."
+/atom/movable/screen/alert/status_effect/buff/unsundered_endurance
+	name = "Unsundered Endurance"
+	desc = "I am protected by blessed Angrosian plate armor."
 	icon_state = "buff"
+
+//.............. Gronn Armor Sets .................//
+/obj/item/clothing/armor/plate/iron/gronn
+	name = "nortic iron plate"
+	desc = "A suit of solid iron plate, adorned with tassets and roundels. \
+			The hunters of Nortmidst rarely used plate, but when they did, \
+			it is said that they were after the most dangerous of prey: their enemies."
+	icon = 'icons/roguetown/clothing/special/gronn.dmi'
+	mob_overlay_icon = 'icons/roguetown/clothing/special/onmob/gronn.dmi'
+	icon_state = "gronnplate"
+	item_state = "gronnplate"
+	boobed = FALSE
+	body_parts_covered = COVERAGE_ALL_BUT_LEGS
+	max_integrity = ARMOR_INT_CHEST_PLATE_STEEL
+	smeltresult = /obj/item/ingot/iron

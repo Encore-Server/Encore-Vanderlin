@@ -1,22 +1,22 @@
-/datum/map_template/matthios_fragment
-	name = "Matthios Fragment"
-	id = "matthios_fragment"
+/datum/map_template/deceivers_fragment
+	name = "Deceivers Fragment"
+	id = "deceivers_fragment"
 	width = 15
 	height = 15
-	mappath = "_maps/templates/voyager_features/matthios_fragment.dmm"
+	mappath = "_maps/templates/voyager_features/deceivers_fragment.dmm"
 
-/datum/cave_generator/matthios_fragment
+/datum/cave_generator/deceivers_fragment
 	wall_turf = /turf/closed/dungeon_void
 	var/datum/map_template/fragment_template_path
 	feature_attempts = 0
 	lava_river_count = 0
 
-/datum/cave_generator/matthios_fragment/New(datum/cave_biome/selected_biome, sx = 100, sy = 100)
+/datum/cave_generator/deceivers_fragment/New(datum/cave_biome/selected_biome, sx = 100, sy = 100)
 	..(selected_biome, sx, sy)
 
-	fragment_template_path = new /datum/map_template/matthios_fragment()
+	fragment_template_path = new /datum/map_template/deceivers_fragment()
 
-/datum/cave_generator/matthios_fragment/generate_deferred(turf/bottom_left_corner, datum/controller/subsystem/terrain_generation/subsystem, datum/terrain_generation_job/job)
+/datum/cave_generator/deceivers_fragment/generate_deferred(turf/bottom_left_corner, datum/controller/subsystem/terrain_generation/subsystem, datum/terrain_generation_job/job)
 	set waitfor = FALSE
 
 	if(!bottom_left_corner)
@@ -86,7 +86,7 @@
 
 	return TRUE
 
-/datum/cave_generator/matthios_fragment/generate(turf/bottom_left_corner)
+/datum/cave_generator/deceivers_fragment/generate(turf/bottom_left_corner)
 	if(!bottom_left_corner)
 		return FALSE
 
@@ -196,7 +196,7 @@ GLOBAL_LIST_INIT(island_ascents, list())
 		return
 	use(user)
 
-/obj/structure/island_descent/attackby(obj/item/W, mob/user, params)
+/obj/structure/island_descent/attackby(obj/item/W, mob/user, list/modifiers)
 	return use(user)
 
 /obj/structure/island_descent/attack_ghost(mob/dead/observer/user)
@@ -307,7 +307,7 @@ GLOBAL_LIST_INIT(island_ascents, list())
 		return
 	use(user)
 
-/obj/structure/island_ascent/attackby(obj/item/W, mob/user, params)
+/obj/structure/island_ascent/attackby(obj/item/W, mob/user, list/modifiers)
 	return use(user)
 
 /obj/structure/island_ascent/attack_ghost(mob/dead/observer/user)

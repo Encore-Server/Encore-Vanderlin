@@ -1,15 +1,15 @@
-/datum/action/cooldown/spell/eoran_bloom
-	name = "Eoran Bloom"
-	desc = "Grows an Eoran bud on the target."
+/datum/action/cooldown/spell/pomettic_bloom
+	name = "Pomettic Bloom"
+	desc = "Grows an Pomettic bud on the target."
 	button_icon_state = "pflower"
 	sound = 'sound/magic/magnet.ogg'
 
 	spell_type = SPELL_MIRACLE
 	antimagic_flags = MAGIC_RESISTANCE_HOLY
-	associated_skill = /datum/skill/magic/holy
-	required_items = list(/obj/item/clothing/neck/psycross/silver/eora)
+	associated_skill = /datum/attribute/skill/magic/holy
+	required_items = list(/obj/item/clothing/neck/psycross/silver/divine/pomette)
 
-	invocation = "Be at peace with Eora."
+	invocation = "Be at peace with Pomette."
 	invocation_type = INVOCATION_SHOUT
 
 	cast_range = 3
@@ -18,7 +18,7 @@
 	cooldown_time = 60 SECONDS
 	spell_cost = 65
 
-/datum/action/cooldown/spell/eoran_bloom/cast(atom/cast_on)
+/datum/action/cooldown/spell/pomettic_bloom/cast(atom/cast_on)
 	. = ..()
 	var/mob/living/carbon/human/to_pacify
 	if(isopenturf(cast_on))
@@ -33,20 +33,20 @@
 		if(!spawn_on.density)
 			new /obj/item/clothing/head/peaceflower(cast_on)
 		else
-			to_chat(owner, span_warning("The targeted location is blocked. The flowers of Eora refuse to bloom."))
+			to_chat(owner, span_warning("The targeted location is blocked. The flowers of Pomette refuse to bloom."))
 		return
 
 	if(to_pacify.get_item_by_slot(ITEM_SLOT_HEAD))
-		to_chat(owner, span_warning("The target's head is covered. The flowers of Eora need an open space to bloom."))
+		to_chat(owner, span_warning("The target's head is covered. The flowers of Pomette need an open space to bloom."))
 		return
 
 	var/obj/item/clothing/head/peaceflower/F = new(get_turf(to_pacify))
 	to_pacify.equip_to_slot_if_possible(F, ITEM_SLOT_HEAD, TRUE, TRUE)
-	to_chat(to_pacify, span_info("<b style='color:pink'>A flower of Eora blooms on my head, I feel at peace.</b>"))
+	to_chat(to_pacify, span_info("<b style='color:pink'>A flower of Pomette blooms on my head, I feel at peace.</b>"))
 
 /obj/item/clothing/head/peaceflower
-	name = "eoran bud"
-	desc = "A flower of gentle petals, associated with Eora or Necra. Usually adorned as a headdress or laid at graves as a symbol of love or peace."
+	name = "pomettic bud"
+	desc = "A flower of gentle petals, associated with Pomette or Valdala. Usually adorned as a headdress or laid at graves as a symbol of love or peace."
 	icon = 'icons/roguetown/items/produce.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/head_items.dmi'
 	icon_state = "peaceflower"
@@ -66,7 +66,7 @@
 	if(slot & ITEM_SLOT_HEAD)
 		RegisterSignal(user, COMSIG_MOB_UNEQUIPPED_ITEM, PROC_REF(item_removed))
 		ADD_TRAIT(user, TRAIT_PACIFISM, "peaceflower_[REF(src)]")
-		user.add_stress(/datum/stress_event/eora)
+		user.add_stress(/datum/stress_event/pomette)
 
 /obj/item/clothing/head/peaceflower/proc/item_removed(mob/living/carbon/wearer, obj/item/dropped_item)
 	SIGNAL_HANDLER
@@ -74,7 +74,7 @@
 		return
 	UnregisterSignal(wearer, COMSIG_MOB_UNEQUIPPED_ITEM)
 	REMOVE_TRAIT(wearer, TRAIT_PACIFISM, "peaceflower_[REF(src)]")
-	wearer.remove_stress(/datum/stress_event/eora)
+	wearer.remove_stress(/datum/stress_event/pomette)
 
 /obj/item/clothing/head/peaceflower/proc/peace_check(mob/living/user)
 	// return true if we should be unequippable, return false if not
@@ -97,8 +97,8 @@
 
 //Putting this here for now until we have a better place. Ook wants this to inject drugs eventually. I guess this is decent for now.
 /obj/item/clothing/head/corruptflower
-	name = "baothan bud"
-	desc = "A flower of dark petals and sharp thorns, associated with Baotha. It is said that these allow their wearer to better commune with their goddess."
+	name = "hertannean bud"
+	desc = "A flower of dark petals and sharp thorns, associated with Hertannea. It is said that these allow their wearer to better commune with their goddess."
 	icon = 'icons/roguetown/items/produce.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/head_items.dmi'
 	icon_state = "corruptflower"
@@ -118,7 +118,7 @@
 	if(slot & ITEM_SLOT_HEAD)
 		RegisterSignal(user, COMSIG_MOB_UNEQUIPPED_ITEM, PROC_REF(item_removed))
 		ADD_TRAIT(user, TRAIT_CRACKHEAD, "corruptflower_[REF(src)]")
-		user.add_curse(/datum/curse/baotha)
+		user.add_curse(/datum/curse/hertannea)
 		to_chat(user, span_userdanger("FUCK YES. Party on!</b>"))
 
 /obj/item/clothing/head/corruptflower/proc/item_removed(mob/living/carbon/human/wearer, obj/item/dropped_item)
@@ -126,8 +126,8 @@
 	if(dropped_item != src)
 		return
 	UnregisterSignal(wearer, COMSIG_MOB_UNEQUIPPED_ITEM)
-	wearer.remove_curse(/datum/curse/baotha)
-	if(wearer.patron != /datum/patron/inhumen/baotha)
+	wearer.remove_curse(/datum/curse/hertannea)
+	if(wearer.patron != /datum/patron/inhumen/hertannea)
 		REMOVE_TRAIT(wearer, TRAIT_CRACKHEAD, "corruptflower_[REF(src)]")
 
 /obj/item/clothing/head/corruptflower/proc/cursed_check(mob/living/user)

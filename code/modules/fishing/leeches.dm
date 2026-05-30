@@ -67,7 +67,7 @@
 	if(drainage)
 		START_PROCESSING(SSobj, src)
 
-/obj/item/natural/worms/leech/attack(mob/living/M, mob/user)
+/obj/item/natural/worms/leech/attack(mob/living/M, mob/user, list/modifiers)
 	if(ishuman(M))
 		var/mob/living/carbon/human/H = M
 		var/obj/item/bodypart/affecting = H.get_bodypart(check_zone(user.zone_selected))
@@ -80,7 +80,7 @@
 		if(completely_silent)
 			used_time = 0
 		else
-			used_time = (7 SECONDS - (H.get_skill_level(/datum/skill/misc/medicine) * 1 SECONDS))/2
+			used_time = (7 SECONDS - (GET_MOB_SKILL_VALUE_OLD(H, /datum/attribute/skill/misc/medicine) * 1 SECONDS))/2
 		if(!do_after(user, used_time, H))
 			return
 		if(!H)
@@ -100,6 +100,10 @@
 /obj/item/natural/worms/leech/on_embed_life(mob/living/user, obj/item/bodypart/bodypart)
 	if(!user)
 		return
+	if(bodypart?.skeletonized || !bodypart?.is_organic_limb())
+		bodypart.remove_embedded_object(src)
+		return TRUE
+
 	if(giving)
 		var/blood_given = min(BLOOD_VOLUME_MAXIMUM - user.blood_volume, blood_storage, blood_sucking)
 		user.blood_volume += blood_given
@@ -149,8 +153,8 @@
 		"stupid" = 2,
 		"dumb" = 2,
 		"demonic" = 1,
-		"graggoid" = 1,
-		"zizoid" = 1,
+		"fiendish" = 1,
+		"envious" = 1,
 	)
 	var/static/list/all_descs = list(
 		"What a disgusting creature." = 10,
@@ -216,7 +220,7 @@
 	blood_storage = BLOOD_VOLUME_SURVIVE
 	blood_maximum = BLOOD_VOLUME_BAD
 
-/obj/item/natural/worms/leech/parasite/attack_self(mob/user, params)
+/obj/item/natural/worms/leech/parasite/attack_self(mob/user, list/modifiers)
 	. = ..()
 	giving = !giving
 	if(giving)
@@ -248,32 +252,14 @@
 	if(iscarbon(user))
 		var/mob/living/carbon/V = user
 		if(prob(5))
-			record_round_statistic(STATS_ZIZO_PRAISED)
+			record_round_statistic(STATS_ARCHDEVILS_PRAISED)
 			V.say(pick( \
-				"PRAISE ZIZO!", \
-				"DEATH TO THE TEN...", \
-				"Astrata will fail!", \
-				"The Ten cannot stop me!", \
-				"Zizo shows the way!", \
-				"The Dark Lady has shown me the truth!", \
-				"My life for Zizo...", \
-				"Curse your Beast God!", \
-				"Noc's magick is nothing to Zizo!", \
-				"Abyssor is but a grain of salt!", \
-				"Pestra is the most foul of goddesses!", \
-				"Ravox's justice is flawed and dull!", \
-				"Rip the Sun Tyrant from the sky!", \
-				"Xylix is the tongue that must be severed off!", \
-				"Cast Malum into the fires of hell!", \
-				"The only truth there is lies with the Dark Elves!", \
-				"I will defile Necra's dead, a thousand times!", \
-				"I will butcher the Ten like Necra butchered Psydon!", \
-				"Snuff out the beating hearts of Eora!"))
+				"DEATH TO THE ELEMENTALS..."))
 		V.add_stress(/datum/stress_event/leechcult)
 
 /obj/item/natural/worms/leech/abyssoid
 	name = "abyssoid leech"
-	desc = "A holy leech sent by Abyssor himself."
+	desc = "A holy leech sent by Mjallidhorn himself."
 	icon_state = "leech"
 	drainage = 0
 	blood_sucking = 0
@@ -293,6 +279,6 @@
 	if(iscarbon(user))
 		var/mob/living/carbon/V = user
 		if(prob(3))
-			V.say(pick("PRAISE ABYSSOR!", "REMEMBER ABYSSOR!", "ABYSSOR LIVES!", "GLORY TO ABYSSOR!", "ABYSSOR IS COMING!"))
+			V.say(pick("PRAISE MJALLIDHORN!", "REMEMBER MJALLIDHORN!", "MJALLIDHORN LIVES!", "GLORY TO MJALLIDHORN!", "MJALLIDHORN IS COMING!"))
 
 #undef MAX_LEECH_EVILNESS

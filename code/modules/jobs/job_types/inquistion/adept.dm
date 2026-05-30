@@ -1,8 +1,8 @@
 /datum/job/adept
-	title = "Adept"
-	tutorial = "You were a convicted criminal, the lowest scum of Vanderlin. \
+	title = JOB_ADEPT
+	tutorial = "You were a convicted criminal, the lowest scum of Domotan. \
 	Your master, the Inquisitor, saved you from the gallows \
-	and has given you true purpose in service to Psydon. \
+	and has given you true purpose in service to Angros. \
 	You will not let him down."
 	department_flag = INQUISITION
 	job_flags = (JOB_ANNOUNCE_ARRIVAL | JOB_SHOW_IN_CREDITS | JOB_EQUIP_RANK | JOB_NEW_PLAYER_JOINABLE)
@@ -13,6 +13,7 @@
 	spawn_positions = 1
 	bypass_lastclass = TRUE
 
+	allowed_patrons = list(/datum/patron/angros, /datum/patron/angros/extremist)
 	allowed_races = RACES_PLAYER_ALL
 
 	outfit = /datum/outfit/adept
@@ -20,11 +21,17 @@
 	can_have_apprentices = FALSE
 	is_foreigner = TRUE
 
+
 	job_bitflag = BITFLAG_CHURCH
-	exp_types_granted  = list(EXP_TYPE_INQUISITION, EXP_TYPE_COMBAT)
+	exp_types_granted = list(EXP_TYPE_INQUISITION, EXP_TYPE_COMBAT)
+	antag_role = /datum/antagonist/purishep
+	mind_traits = list(
+		TRAIT_KNOW_INQUISITION_DOORS
+	)
+	languages = list(/datum/language/oldunsundered)
 
 /datum/outfit/adept // Base outfit for Adepts, before loadouts
-	name = "Adept"
+	name = JOB_ADEPT
 	shoes = /obj/item/clothing/shoes/boots
 	mask = /obj/item/clothing/face/facemask/silver
 	beltr = /obj/item/storage/belt/pouch/coins/poor
@@ -32,22 +39,15 @@
 	shirt = /obj/item/clothing/armor/gambeson/light/colored/black
 	wrists = /obj/item/clothing/neck/psycross/silver
 
-/datum/outfit/adept/pre_equip(mob/living/carbon/human/H)
-	..()
-	if(H.mind)
-		if(H.mind.has_antag_datum(/datum/antagonist))
-			return
-		var/datum/antagonist/new_antag = new /datum/antagonist/purishep()
-		H.mind.add_antag_datum(new_antag)
-		H.set_patron(/datum/patron/psydon, TRUE)
-		H.verbs |= /mob/living/carbon/human/proc/torture_victim
-		H.verbs |= /mob/living/carbon/human/proc/faith_test
-		H.verbs |= /mob/living/carbon/human/proc/view_inquisition
+/datum/job/advclass/adept/after_spawn(mob/living/carbon/human/spawned, client/player_client)
+	. = ..()
+	GLOB.inquisition.add_member_to_school(spawned, "Order of the Venatari", -10, "Reformed Thief")
+	add_verb(spawned, /mob/living/carbon/human/proc/suspect_heretics)
+	add_verb(spawned, /mob/living/carbon/human/proc/torture_victim)
+	add_verb(spawned, /mob/living/carbon/human/proc/faith_test)
+	add_verb(spawned, /mob/living/carbon/human/proc/view_inquisition)
 
-		if(!H.has_language(/datum/language/oldpsydonic))
-			H.grant_language(/datum/language/oldpsydonic)
-			to_chat(H, span_info("I can speak Old Psydonic with ,m before my speech."))
-		H.mind.teach_crafting_recipe(/datum/repeatable_crafting_recipe/reading/confessional)
+	spawned.mind?.teach_crafting_recipe(/datum/repeatable_crafting_recipe/reading/confessional)
 
 /datum/job/advclass/adept
-	exp_types_granted  = list(EXP_TYPE_INQUISITION, EXP_TYPE_COMBAT)
+	exp_types_granted = list(EXP_TYPE_INQUISITION, EXP_TYPE_COMBAT)

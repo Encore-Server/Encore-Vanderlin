@@ -15,10 +15,10 @@
 	pixel_x = rand(-12, 12)
 	pixel_y = rand(-9, 0)
 
-/datum/action/cooldown/spell/psydonendure
+/datum/action/cooldown/spell/angrosendure
 	name = "ENDURE"
-	spell_type = SPELL_PSYDONIC_MIRACLE
-	spell_flags = SPELL_PSYDON
+	spell_type = SPELL_ANGROSIC_MIRACLE
+	spell_flags = SPELL_ANGROS
 
 	spell_cost = 40
 	charge_time = 1
@@ -26,10 +26,10 @@
 	sound = 'sound/magic/ENDVRE.ogg'
 	invocation = "LIVE, ENDURE!" // holy larp yelling for healing is silly
 	invocation_type = "none"
-	associated_skill = /datum/skill/magic/holy
+	associated_skill = /datum/attribute/skill/magic/holy
 	cooldown_time = 30 SECONDS
 
-/datum/action/cooldown/spell/psydonendure/cast(mob/living/target)
+/datum/action/cooldown/spell/angrosendure/cast(mob/living/target)
 	. = ..()
 	var/mob/living/user = owner
 	if(isliving(target))
@@ -68,7 +68,7 @@
 						psicross_bonus = 0.3
 					if(/obj/item/clothing/neck/psycross/silver)
 						psicross_bonus = 0.4
-					if(/obj/item/clothing/neck/psycross/g) // PURITY AFLOAT.
+					if(/obj/item/clothing/neck/psycross/gold) // PURITY AFLOAT.
 						psicross_bonus = 0.4
 		if(damtotal >= 300) // ARE THEY ENDURING MUCH, IN ONE WAY OR ANOTHER?
 			situational_bonus += 0.3
@@ -102,13 +102,12 @@
 	desc = "I am awash with sentimentality."
 	icon_state = "buff"
 
-#define PSYDON_HEALING_FILTER "psydon_heal_glow"
+#define ANGROS_HEALING_FILTER "angros_heal_glow"
 
 /datum/status_effect/buff/psyhealing
 	id = "psyhealing"
 	alert_type = /atom/movable/screen/alert/status_effect/buff/psyhealing
 	duration = 15 SECONDS
-	examine_text = "SUBJECTPRONOUN stirs with a sense of ENDURING!"
 	var/healing_on_tick = 1
 	var/outline_colour = "#d3d3d3"
 
@@ -118,10 +117,13 @@
 
 /datum/status_effect/buff/psyhealing/on_apply()
 	. = ..()
-	var/filter = owner.get_filter(PSYDON_HEALING_FILTER)
+	var/filter = owner.get_filter(ANGROS_HEALING_FILTER)
 	if (!filter)
-		owner.add_filter(PSYDON_HEALING_FILTER, 2, list("type" = "outline", "color" = outline_colour, "alpha" = 60, "size" = 1))
+		owner.add_filter(ANGROS_HEALING_FILTER, 2, list("type" = "outline", "color" = outline_colour, "alpha" = 60, "size" = 1))
 	return TRUE
+
+/datum/status_effect/buff/psyhealing/get_examine_text()
+	return "They stir with a sense of ENDURING!"
 
 /datum/status_effect/buff/psyhealing/tick()
 	var/obj/effect/temp_visual/heal/H = new /obj/effect/temp_visual/psyheal_rogue(get_turf(owner))
@@ -137,7 +139,7 @@
 
 /datum/status_effect/buff/psyhealing/on_remove()
 	. = ..()
-	owner.remove_filter(PSYDON_HEALING_FILTER)
+	owner.remove_filter(ANGROS_HEALING_FILTER)
 	owner.update_damage_hud()
 
 /atom/movable/screen/alert/status_effect/buff/psyvived
@@ -145,13 +147,12 @@
 	desc = "I feel a strange sense of peace."
 	icon_state = "buff"
 
-#define PSYDON_REVIVED_FILTER "psydon_revival_glow"
+#define ANGROS_REVIVED_FILTER "angros_revival_glow"
 
 /datum/status_effect/buff/psyvived
 	id = "psyvived"
 	alert_type = /atom/movable/screen/alert/status_effect/buff/psyvived
 	duration = 30 SECONDS
-	examine_text = "SUBJECTPRONOUN moves with an air of ABSOLUTION!"
 	var/outline_colour = "#aa1717"
 
 /datum/status_effect/buff/psyvived/on_creation(mob/living/new_owner)
@@ -159,10 +160,13 @@
 
 /datum/status_effect/buff/psyvived/on_apply()
 	. = ..()
-	var/filter = owner.get_filter(PSYDON_REVIVED_FILTER)
+	var/filter = owner.get_filter(ANGROS_REVIVED_FILTER)
 	if (!filter)
-		owner.add_filter(PSYDON_REVIVED_FILTER, 2, list("type" = "outline", "color" = outline_colour, "alpha" = 60, "size" = 1))
+		owner.add_filter(ANGROS_REVIVED_FILTER, 2, list("type" = "outline", "color" = outline_colour, "alpha" = 60, "size" = 1))
 	return TRUE
+
+/datum/status_effect/buff/psyvived/get_examine_text()
+	return "They move with an air of ABSOLUTION!"
 
 /datum/status_effect/buff/psyvived/tick()
 	var/obj/effect/temp_visual/heal/H = new /obj/effect/temp_visual/psyheal_rogue(get_turf(owner))
@@ -170,8 +174,8 @@
 
 /datum/status_effect/buff/psyvived/on_remove()
 	. = ..()
-	owner.remove_filter(PSYDON_REVIVED_FILTER)
+	owner.remove_filter(ANGROS_REVIVED_FILTER)
 	owner.update_damage_hud()
 
-#undef PSYDON_HEALING_FILTER
-#undef PSYDON_REVIVED_FILTER
+#undef ANGROS_HEALING_FILTER
+#undef ANGROS_REVIVED_FILTER

@@ -1,8 +1,8 @@
 /datum/objective/personal/kick_groin
 	name = "Kick Groin"
-	category = "Zizo's Chosen"
+	category = "Hell's Chosen"
 	triumph_count = 2
-	rewards = list("2 Triumphs", "Zizo grows stronger", "Your nutcracks will be stronger", "Zizo blesses you (+1 Strength)")
+	rewards = list("2 Triumphs", "Hell grows stronger", "Your nutcracks will be stronger", "Hell blesses you (+1 Strength)")
 
 /datum/objective/personal/kick_groin/on_creation()
 	. = ..()
@@ -21,20 +21,20 @@
 		return
 
 	if(damage_blocked)
-		to_chat(owner.current, span_notice("The kick must inflict actual PAIN to please Zizo!"))
+		to_chat(owner.current, span_notice("The kick must inflict actual PAIN to please Hell!"))
 	else
 		complete_objective()
 
 /datum/objective/personal/kick_groin/complete_objective()
 	. = ..()
-	to_chat(owner.current, span_greentext("You've established your dominance over this man and completed Zizo's objective!"))
-	adjust_storyteller_influence(ZIZO, 20)
+	to_chat(owner.current, span_greentext("You've established your dominance over this man and completed Hell's objective!"))
+	adjust_storyteller_influence(ARCHDEVILS, 20)
 	UnregisterSignal(owner.current, COMSIG_MOB_KICK)
 
 /datum/objective/personal/kick_groin/reward_owner()
 	. = ..()
-	ADD_TRAIT(owner.current, TRAIT_NUTCRACKER, TRAIT_GENERIC)
-	owner.current.adjust_stat_modifier(STATMOD_ZIZO_BLESSING, STATKEY_STR, 1)
+	ADD_TRAIT(owner.current, TRAIT_NUTCRACKER, OBJECTIVE_TRAIT)
+	owner.current.adjust_stat_modifier(STATMOD_ENVY_BLESSING, list(STAT_STRENGTH = 1))
 
 /datum/objective/personal/kick_groin/update_explanation_text()
-	explanation_text = "Kick a man in the balls to show your dominance and earn Zizo's approval!"
+	explanation_text = "Kick a man in the balls to show your dominance and earn Hell's approval!"

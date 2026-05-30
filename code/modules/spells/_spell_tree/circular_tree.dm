@@ -119,11 +119,11 @@
 	cost = 5
 	node_x = -50
 	node_y = 50
-	prerequisites = list(/datum/spell_node/dark_attunement, /datum/spell_node/electric_affinity)
+	prerequisites = list(/datum/spell_node/dark_affinity, /datum/spell_node/electric_affinity)
 	is_passive = TRUE
 
 /datum/spell_node/blood_pact/on_node_buy(mob/user)
-	user.mana_pool?.adjust_attunement(/datum/attunement/death, 0.12)
+	user.mana_pool?.adjust_attunement(/datum/attunement/dark, 0.12)
 	user.mana_pool?.adjust_attunement(/datum/attunement/blood, 0.12)
 	to_chat(user, span_notice("Dark power flows through your lifeblood."))
 
@@ -265,7 +265,7 @@
 
 /datum/spell_node/arcyne_affinity
 	name = "Arcyne Affinity"
-	desc = "Devote yourself to Noc."
+	desc = "Devote yourself to Akan."
 	cost = 3
 	node_x = DOWN_X_LEFT
 	node_y = DOWN_Y_TIER_1
@@ -274,7 +274,7 @@
 
 /datum/spell_node/arcyne_affinity/on_node_buy(mob/user)
 	user.mana_pool?.adjust_attunement(/datum/attunement/arcyne, 0.15)
-	to_chat(user, span_notice("Noc whispers to you."))
+	to_chat(user, span_notice("Akan whispers to you."))
 
 /datum/spell_node/air_affinity
 	name = "Air Affinity"
@@ -516,7 +516,7 @@
 	prerequisites = list(/datum/spell_node/frost_affinity)
 	spell_type = /datum/action/cooldown/spell/aoe/on_turf/snap_freeze
 
-/datum/spell_node/dark_attunement
+/datum/spell_node/dark_affinity
 	name = "Dark Affinity"
 	desc = "Feel the light vanish."
 	cost = 3
@@ -525,7 +525,7 @@
 	prerequisites = list(/datum/spell_node/prestidigitation)
 	is_passive = TRUE
 
-/datum/spell_node/death_affinity/on_node_buy(mob/user)
+/datum/spell_node/dark_affinity/on_node_buy(mob/user)
 	user.mana_pool?.adjust_attunement(/datum/attunement/dark, 0.15)
 	to_chat(user, span_notice("The void whispers secrets to you."))
 
@@ -534,7 +534,7 @@
 	desc = "Let forth a wave of maddening mind-energy."
 	node_x = UP_X_LEFT
 	node_y = UP_Y_TIER_2
-	prerequisites = list(/datum/spell_node/dark_attunement)
+	prerequisites = list(/datum/spell_node/dark_affinity)
 	spell_type = /datum/action/cooldown/spell/cone/staggered/eldritch_blast
 
 /datum/spell_node/encode_thoughts
@@ -542,7 +542,7 @@
 	desc = "Incept an intrusive thought into the mind of your target. They may not agree with it."
 	node_x = UP_X_LEFT - 50
 	node_y = UP_Y_TIER_2
-	prerequisites = list(/datum/spell_node/dark_attunement)
+	prerequisites = list(/datum/spell_node/dark_affinity)
 	spell_type = /datum/action/cooldown/spell/undirected/list_target/encode_thoughts
 
 /datum/spell_node/mind_sliver
@@ -596,7 +596,7 @@
 
 
 /datum/spell_node/gib
-	name = "Xylixs Cruel Prank"
+	name = "Iliope's Cruel Prank"
 	desc = "Fucked up and evil."
 	node_x = -500
 	node_y = -500
@@ -605,3 +605,14 @@
 /datum/spell_node/gib/on_node_buy(mob/user)
 	. = ..()
 	user.gib()
+	for(var/mob/target in GLOB.player_list)
+		if(isnewplayer(target))
+			continue
+		bordered_message(target, list(
+			span_extremelybig(html_tag("center", SPAN_GOD_ILIOPE("An Infectious Laugh from the God of Fools!"))),
+			html_tag("center", span_extremelybig(span_info("[user.real_name] has fallen for a jest most cruel!"))),
+		))
+		target.playsound_local(target, 'sound/magic/mockery.ogg', 100, environment_override = 25)
+		if(target.add_stress(/datum/stress_event/iliope_laughed))
+			addtimer(CALLBACK(target, TYPE_PROC_REF(/mob, emote), pick("laugh", "chuckle")), rand(5, 20))
+	record_round_statistic(STATS_CRUEL_PRANKS)

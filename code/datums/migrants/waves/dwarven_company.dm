@@ -1,53 +1,53 @@
 /datum/migrant_role/dwarven_company/captain
 	name = "Dwarven Captain"
-	greet_text = "You are the captain of a dwarven's expedition, following the tracks of Matthios's influence you shall lead your party in Malum's name."
+	greet_text = "You are the captain of a dwarven's expedition, following the tracks of Deceivers's influence you shall lead your party in Goler Kanh's name."
 	migrant_job = /datum/job/migrant/dwarven_company/captain
 
 /datum/job/migrant/dwarven_company
 	allowed_races = list(SPEC_ID_DWARF)
 
+/datum/attribute_holder/sheet/job/migrant/captain
+	raw_attribute_list = list(
+		STAT_STRENGTH = 3,
+		STAT_PERCEPTION = 2,
+		STAT_INTELLIGENCE = 1,
+		STAT_CONSTITUTION = 2,
+		STAT_ENDURANCE = 2,
+		STAT_SPEED = 1,
+		/datum/attribute/skill/combat/shields = 40,
+		/datum/attribute/skill/combat/axesmaces = 40,
+		/datum/attribute/skill/combat/swords = 20,
+		/datum/attribute/skill/combat/knives = 20,
+		/datum/attribute/skill/combat/wrestling = 20,
+		/datum/attribute/skill/combat/unarmed = 20,
+		/datum/attribute/skill/misc/swimming = 10,
+		/datum/attribute/skill/misc/climbing = 30,
+		/datum/attribute/skill/misc/athletics = 30,
+		/datum/attribute/skill/craft/crafting = 30,
+		/datum/attribute/skill/craft/blacksmithing = 20,
+		/datum/attribute/skill/craft/armorsmithing = 20,
+		/datum/attribute/skill/craft/weaponsmithing = 20,
+		/datum/attribute/skill/craft/smelting = 20,
+		/datum/attribute/skill/craft/engineering = 10,
+		/datum/attribute/skill/craft/traps = 20,
+		/datum/attribute/skill/misc/reading = 20,
+	)
+
 /datum/job/migrant/dwarven_company/captain
 	title = "Dwarven Captain"
-	tutorial = "You are the captain of a dwarven's expedition, following the tracks of Matthios's influence you shall lead your party in Malum's name."
+	tutorial = "You are the captain of a dwarven's expedition, following the tracks of Deceivers's influence you shall lead your party in Goler Kanh's name."
 	outfit = /datum/outfit/dwarven_company/captain
-
-	jobstats = list(
-		STATKEY_STR = 3,
-		STATKEY_PER = 2,
-		STATKEY_INT = 1,
-		STATKEY_CON = 2,
-		STATKEY_END = 2,
-		STATKEY_SPD = 1,
-	)
-
-	skills = list(
-		/datum/skill/combat/shields = 4,
-		/datum/skill/combat/axesmaces = 4,
-		/datum/skill/combat/swords = 2,
-		/datum/skill/combat/knives = 2,
-		/datum/skill/combat/wrestling = 3,
-		/datum/skill/combat/unarmed = 3,
-		/datum/skill/misc/swimming = 1,
-		/datum/skill/misc/climbing = 4,
-		/datum/skill/misc/athletics = 3,
-		/datum/skill/craft/crafting = 3,
-		/datum/skill/craft/blacksmithing = 2,
-		/datum/skill/craft/armorsmithing = 2,
-		/datum/skill/craft/weaponsmithing = 2,
-		/datum/skill/craft/smelting = 2,
-		/datum/skill/craft/engineering = 1,
-		/datum/skill/craft/traps = 2,
-		/datum/skill/misc/reading = 2,
-	)
+	exp_types_granted  = list(EXP_TYPE_COMBAT)
+	attribute_sheet = /datum/attribute_holder/sheet/job/migrant/captain
 
 	traits = list(
-		TRAIT_MALUMFIRE,
+		TRAIT_GOLERKANHFIRE,
 		TRAIT_HEAVYARMOR,
 		TRAIT_MEDIUMARMOR,
 	)
 
 /datum/outfit/dwarven_company/captain
-	name = "Dwarven Captain"
+	name = "Dwarven Captain (Migrant Wave)"
 	armor = /obj/item/clothing/armor/cuirass
 	cloak = /obj/item/clothing/cloak/raincloak/furcloak
 	shirt = /obj/item/clothing/armor/chainmail
@@ -64,48 +64,66 @@
 
 /datum/migrant_role/dwarven_company/weaponsmith
 	name = "Dwarven Weaponsmith"
-	greet_text = " You are the weaponsmith of a dwarven expedition, obey your foreman as they lead you in Malum's name into the tomb of Matthios."
+	greet_text = " You are the weaponsmith of a dwarven expedition, obey your foreman as they lead you in Goler Kanh's name into the tomb of Deceivers."
 	migrant_job = /datum/job/migrant/dwarven_company/weaponsmith
+
+/datum/attribute_holder/sheet/job/migrant/weaponsmith
+	raw_attribute_list = list(
+		STAT_STRENGTH = 1,
+		STAT_ENDURANCE = 2,
+		STAT_SPEED = -1,
+		/datum/attribute/skill/combat/axesmaces = 20,
+		/datum/attribute/skill/misc/athletics = 30,
+		/datum/attribute/skill/combat/wrestling = 20,
+		/datum/attribute/skill/combat/unarmed = 20,
+		/datum/attribute/skill/craft/crafting = 30,
+		/datum/attribute/skill/craft/blacksmithing = 40,
+		/datum/attribute/skill/craft/armorsmithing = 20,
+		/datum/attribute/skill/craft/weaponsmithing = 40,
+		/datum/attribute/skill/craft/smelting = 30,
+		/datum/attribute/skill/craft/engineering = 30,
+		/datum/attribute/skill/craft/traps = 20,
+		/datum/attribute/skill/misc/reading = 20,
+	)
+
+/datum/attribute_holder/sheet/job/migrant/weaponsmith/old
+	attribute_variance = list(
+		/datum/attribute/skill/craft/blacksmithing = list(10, 20),
+		/datum/attribute/skill/craft/weaponsmithing = list(10, 20),
+	)
+	raw_attribute_list = list(
+		STAT_STRENGTH = 1,
+		STAT_ENDURANCE = 2,
+		STAT_SPEED = -1,
+		/datum/attribute/skill/combat/axesmaces = 20,
+		/datum/attribute/skill/misc/athletics = 30,
+		/datum/attribute/skill/combat/wrestling = 20,
+		/datum/attribute/skill/combat/unarmed = 20,
+		/datum/attribute/skill/craft/crafting = 30,
+		/datum/attribute/skill/craft/blacksmithing = 40,
+		/datum/attribute/skill/craft/armorsmithing = 20,
+		/datum/attribute/skill/craft/weaponsmithing = 40,
+		/datum/attribute/skill/craft/smelting = 30,
+		/datum/attribute/skill/craft/engineering = 30,
+		/datum/attribute/skill/craft/traps = 20,
+		/datum/attribute/skill/misc/reading = 20,
+	)
 
 /datum/job/migrant/dwarven_company/weaponsmith
 	title = "Dwarven Weaponsmith"
-	tutorial = " You are the weaponsmith of a dwarven expedition, obey your foreman as they lead you in Malum's name into the tomb of Matthios."
+	tutorial = " You are the weaponsmith of a dwarven expedition, obey your foreman as they lead you in Goler Kanh's name into the tomb of Deceivers."
 	outfit = /datum/outfit/dwarven_company/weaponsmith
 
-	jobstats = list(
-		STATKEY_STR = 1,
-		STATKEY_END = 2,
-		STATKEY_SPD = -1,
-	)
-
-	skills = list(
-		/datum/skill/combat/axesmaces = 2,
-		/datum/skill/misc/athletics = 3,
-		/datum/skill/combat/wrestling = 2,
-		/datum/skill/combat/unarmed = 2,
-		/datum/skill/craft/crafting = 3,
-		/datum/skill/craft/blacksmithing = 4,
-		/datum/skill/craft/armorsmithing = 2,
-		/datum/skill/craft/weaponsmithing = 4,
-		/datum/skill/craft/smelting = 3,
-		/datum/skill/craft/engineering = 3,
-		/datum/skill/craft/traps = 2,
-		/datum/skill/misc/reading = 2,
-	)
+	attribute_sheet = /datum/attribute_holder/sheet/job/migrant/weaponsmith
+	attribute_sheet_old = /datum/attribute_holder/sheet/job/migrant/weaponsmith/old
 
 	traits = list(
-		TRAIT_MALUMFIRE,
+		TRAIT_GOLERKANHFIRE,
 		TRAIT_MEDIUMARMOR,
 	)
 
-/datum/job/migrant/dwarven_company/weaponsmith/after_spawn(mob/living/carbon/human/spawned, client/player_client)
-	. = ..()
-	if(spawned.age == AGE_OLD)
-		spawned.adjust_skillrank(/datum/skill/craft/blacksmithing, pick(1, 2))
-		spawned.adjust_skillrank(/datum/skill/craft/weaponsmithing, pick(1, 2))
-
 /datum/outfit/dwarven_company/weaponsmith
-	name = "Dwarven Weaponsmith"
+	name = "Dwarven Weaponsmith (Migrant Wave)"
 	ring = /obj/item/clothing/ring/silver/makers_guild
 	head = /obj/item/clothing/head/hatfur
 	cloak = /obj/item/clothing/cloak/apron/brown
@@ -134,45 +152,63 @@
 
 /datum/migrant_role/dwarven_company/armorsmith
 	name = "Dwarven Armorsmith"
-	greet_text = " You are the armorsmith of a dwarven expedition, obey your foreman as they lead you in Malum's name into the tomb of Matthios."
+	greet_text = " You are the armorsmith of a dwarven expedition, obey your foreman as they lead you in Goler Kanh's name into the tomb of Deceivers."
 	migrant_job = /datum/job/migrant/dwarven_company/armorsmith
+
+/datum/attribute_holder/sheet/job/migrant/armorsmith
+	raw_attribute_list = list(
+		STAT_STRENGTH = 1,
+		STAT_ENDURANCE = 2,
+		STAT_SPEED = -1,
+		/datum/attribute/skill/combat/axesmaces = 20,
+		/datum/attribute/skill/misc/athletics = 30,
+		/datum/attribute/skill/combat/wrestling = 20,
+		/datum/attribute/skill/combat/unarmed = 20,
+		/datum/attribute/skill/craft/crafting = 30,
+		/datum/attribute/skill/craft/blacksmithing = 40,
+		/datum/attribute/skill/craft/armorsmithing = 40,
+		/datum/attribute/skill/craft/weaponsmithing = 20,
+		/datum/attribute/skill/craft/smelting = 30,
+		/datum/attribute/skill/craft/engineering = 30,
+		/datum/attribute/skill/craft/traps = 20,
+		/datum/attribute/skill/misc/reading = 20,
+	)
+
+/datum/attribute_holder/sheet/job/migrant/armorsmith/old
+	attribute_variance = list(
+		/datum/attribute/skill/craft/blacksmithing = list(10, 20),
+		/datum/attribute/skill/craft/armorsmithing = list(10, 20)
+	)
+	raw_attribute_list = list(
+		STAT_STRENGTH = 1,
+		STAT_ENDURANCE = 2,
+		STAT_SPEED = -1,
+		/datum/attribute/skill/combat/axesmaces = 20,
+		/datum/attribute/skill/misc/athletics = 30,
+		/datum/attribute/skill/combat/wrestling = 20,
+		/datum/attribute/skill/combat/unarmed = 20,
+		/datum/attribute/skill/craft/crafting = 30,
+		/datum/attribute/skill/craft/blacksmithing = 40,
+		/datum/attribute/skill/craft/armorsmithing = 40,
+		/datum/attribute/skill/craft/weaponsmithing = 20,
+		/datum/attribute/skill/craft/smelting = 30,
+		/datum/attribute/skill/craft/engineering = 30,
+		/datum/attribute/skill/craft/traps = 20,
+		/datum/attribute/skill/misc/reading = 20,
+	)
 
 /datum/job/migrant/dwarven_company/armorsmith
 	title = "Dwarven Armorsmith"
-	tutorial = " You are the armorsmith of a dwarven expedition, obey your foreman as they lead you in Malum's name into the tomb of Matthios."
+	tutorial = " You are the armorsmith of a dwarven expedition, obey your foreman as they lead you in Goler Kanh's name into the tomb of Deceivers."
 	outfit = /datum/outfit/dwarven_company/armorsmith
 
-	jobstats = list(
-		STATKEY_STR = 1,
-		STATKEY_END = 2,
-		STATKEY_SPD = -1,
-	)
-
-	skills = list(
-		/datum/skill/combat/axesmaces = 2,
-		/datum/skill/misc/athletics = 3,
-		/datum/skill/combat/wrestling = 2,
-		/datum/skill/combat/unarmed = 2,
-		/datum/skill/craft/crafting = 3,
-		/datum/skill/craft/blacksmithing = 4,
-		/datum/skill/craft/armorsmithing = 4,
-		/datum/skill/craft/weaponsmithing = 2,
-		/datum/skill/craft/smelting = 3,
-		/datum/skill/craft/engineering = 3,
-		/datum/skill/craft/traps = 2,
-		/datum/skill/misc/reading = 2,
-	)
+	attribute_sheet = /datum/attribute_holder/sheet/job/migrant/armorsmith
+	attribute_sheet_old = /datum/attribute_holder/sheet/job/migrant/armorsmith/old
 
 	traits = list(
-		TRAIT_MALUMFIRE,
+		TRAIT_GOLERKANHFIRE,
 		TRAIT_MEDIUMARMOR,
 	)
-
-/datum/job/migrant/dwarven_company/armorsmith/after_spawn(mob/living/carbon/human/spawned, client/player_client)
-	. = ..()
-	if(spawned.age == AGE_OLD)
-		LAZYADDASSOC(skills, /datum/skill/craft/blacksmithing, pick(1, 2))
-		LAZYADDASSOC(skills, /datum/skill/craft/armorsmithing, pick(1, 2))
 
 /datum/outfit/dwarven_company/armorsmith
 	name = "Dwarven Armorsmith"
@@ -211,7 +247,7 @@
 		/datum/migrant_role/dwarven_company/weaponsmith = 2,
 		/datum/migrant_role/dwarven_company/armorsmith = 2
 	)
-	greet_text = "The way to Matthios's tomb is opened. Malum has called for all dwarves bold enough to go in, and we shall answer."
+	greet_text = "The way to Deceivers's tomb is opened. Goler Kanh has called for all dwarves bold enough to go in, and we shall answer."
 
 /datum/migrant_wave/dwarven_company_down
 	name = "Dwarven Expedition"
@@ -224,7 +260,7 @@
 		/datum/migrant_role/dwarven_company/armorsmith = 1,
 		/datum/migrant_role/dwarven_company/weaponsmith = 1
 	)
-	greet_text = "The way to Matthios's tomb is opened. Malum has called for all dwarves bold enough to go in, and we shall answer."
+	greet_text = "The way to Deceivers's tomb is opened. Goler Kanh has called for all dwarves bold enough to go in, and we shall answer."
 
 /datum/migrant_wave/dwarven_company_down_one
 	name = "Dwarven Expedition"
@@ -234,6 +270,6 @@
 	roles = list(
 		/datum/migrant_role/dwarven_company/captain = 1,
 	)
-	greet_text = "The way to Matthios's tomb is opened. Malum has called for all dwarves bold enough to go in, and we shall answer."
+	greet_text = "The way to Deceivers's tomb is opened. Goler Kanh has called for all dwarves bold enough to go in, and we shall answer."
 
 

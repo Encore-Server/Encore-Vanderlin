@@ -20,7 +20,7 @@
 						/obj/structure/flora/grass/herb/random = 5,
 						/obj/item/natural/stone = 10,
 						/obj/item/natural/rock = 5,
-						/obj/structure/essence_node = 0.1,
+						/obj/structure/essence_node = 1,
 						/obj/item/grown/log/tree/stick = 10,
 						/obj/structure/flora/grass/pyroclasticflowers = 10,
 						/obj/structure/wild_plant/nospread/mushroom/merkel = 1,)
@@ -33,18 +33,19 @@
 						/obj/item/natural/rock = 8,
 						/obj/item/natural/rock/random_ore = 2,
 						/obj/structure/flora/shroom_tree = 1,
-						/obj/structure/essence_node = 0.1,
+						/obj/structure/essence_node = 1,
 						/obj/item/restraints/legcuffs/beartrap/armed = 0.5,
+						/obj/structure/wild_plant/nospread/mushroom/drowsbane = 1,
 						/obj/structure/wild_plant/nospread/mushroom/caveweep = 1,)
 	allowed_areas = list(/area/under/mountains/anvil/lower)
 
-/datum/mapGeneratorModule/grove // This area is not utilized in Malum's Anvil at all as of 10-13-2025
+/datum/mapGeneratorModule/grove // This area is not utilized in Goler Kanh's Anvil at all as of 10-13-2025
 	clusterCheckFlags = CLUSTER_CHECK_DIFFERENT_ATOMS
 	allowed_turfs = list(/turf/open/floor/dirt,/turf/open/floor/dirt/road, /turf/open/floor/grass)
 	spawnableAtoms = list(/obj/item/natural/stone = 3,
 						/obj/structure/flora/grass = 25,
 						/obj/structure/flora/grass/herb/random = 2,
 						/obj/structure/flora/grass/bush = 4,
-						/obj/structure/essence_node = 0.2,
+						/obj/structure/essence_node = 3,
 						/obj/item/grown/log/tree/stick = 10)
 	allowed_areas = list(/area/outdoors/mountains/anvil/grove)

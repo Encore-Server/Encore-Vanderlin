@@ -1,49 +1,56 @@
-/datum/round_event_control/antagonist/solo/zizo_cult
-	name = "Zizo Cult"
+/datum/round_event_control/antagonist/solo/archdevil_cult
+	name = "Hellish Cult"
 	tags = list(
-		TAG_ZIZO,
+		TAG_ARCHDEVILS,
 		TAG_COMBAT,
 		TAG_VILLAIN,
+		TAG_MAGICAL
 	)
 	roundstart = TRUE
-	antag_flag = ROLE_ZIZOIDCULTIST
+	antag_flag = ROLE_ARCHDEVILCULTIST
 	shared_occurence_type = SHARED_HIGH_THREAT
 
 	base_antags = 1
 	maximum_antags = 4
+	denominator = (LOWPOP_THRESHOLD*0.5) * READYUP_AVG
+	min_players = LOWPOP_THRESHOLD * READYUP_AVG
+	cost = 0.9
 
-	min_players = 35
-	weight = 6
+	weight = 8
 
 	earliest_start = 0 SECONDS
 
-	typepath = /datum/round_event/antagonist/solo/zizo_cultist
-	antag_datum = /datum/antagonist/zizocultist
+	typepath = /datum/round_event/antagonist/solo/archdevil_cultist
+	antag_datum = /datum/antagonist/archdevilcultist
 
 	restricted_roles = list(
-		"Monarch",
-		"Consort",
-		"Hand",
-		"Captain",
-		"Prince",
-		"Priest",
-		"Merchant",
-		"Forest Warden",
-		"Inquisitor",
-		"Absolver",
-		"Confessor",
-		"Orthodoxist",
-		"Adept",
-		"Royal Knight",
-		"Templar",
+		/datum/job/lord,
+		/datum/job/consort,
+		/datum/job/priest,
+		/datum/job/hand,
+		/datum/job/captain,
+		/datum/job/prince,
+		/datum/job/inquisitor,
+		/datum/job/absolver,
+		/datum/job/orthodoxist,
+		/datum/job/adept,
+		/datum/job/forestwarden,
+		/datum/job/royalknight,
+		/datum/job/gmtemplar,
+		/datum/job/templar,
+		/datum/job/archivist,
+		/datum/job/magician,
+		/datum/job/tomb_warden,
+		/datum/job/bogwitch,
+		/datum/job/bog_apprentice,
 	)
 
-/datum/round_event/antagonist/solo/zizo_cultist
+/datum/round_event/antagonist/solo/archdevil_cultist
 	var/leader = FALSE
 
-/datum/round_event/antagonist/solo/zizo_cultist/add_datum_to_mind(datum/mind/antag_mind)
+/datum/round_event/antagonist/solo/archdevil_cultist/add_datum_to_mind(datum/mind/antag_mind)
 	if(!leader)
-		antag_mind.add_antag_datum(/datum/antagonist/zizocultist/leader)
+		antag_mind.add_antag_datum(/datum/antagonist/archdevilcultist/leader)
 		leader = TRUE
 	else
 		antag_mind.add_antag_datum(antag_datum)

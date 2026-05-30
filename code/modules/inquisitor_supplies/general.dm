@@ -1,17 +1,17 @@
 /datum/inqports/reliquary
-	category = 1 // Category for the HERMES. They are - "✤ SUPPLIES ✤", "✤ ARTICLES ✤", ✤ RELIQUARY ✤, "✤ WARDROBE ✤", "✤ EQUIPMENT ✤".
+	category = 1 // Category for the HERMES. They are - " SUPPLIES ", " ARTICLES ",  RELIQUARY , " WARDROBE ", " EQUIPMENT ".
 
 /datum/inqports/supplies
-	category = 2  // Category for the HERMES. They are - "✤ SUPPLIES ✤", "✤ ARTICLES ✤", ✤ RELIQUARY ✤, "✤ WARDROBE ✤", "✤ EQUIPMENT ✤".
+	category = 2  // Category for the HERMES. They are - " SUPPLIES ", " ARTICLES ",  RELIQUARY , " WARDROBE ", " EQUIPMENT ".
 
 /datum/inqports/articles
-	category = 3  // Category for the HERMES. They are - "✤ SUPPLIES ✤", "✤ ARTICLES ✤", ✤ RELIQUARY ✤, "✤ WARDROBE ✤", "✤ EQUIPMENT ✤".
+	category = 3  // Category for the HERMES. They are - " SUPPLIES ", " ARTICLES ",  RELIQUARY , " WARDROBE ", " EQUIPMENT ".
 
 /datum/inqports/equipment
-	category = 4 // Category for the HERMES. They are - "✤ SUPPLIES ✤", "✤ ARTICLES ✤", ✤ RELIQUARY ✤, "✤ WARDROBE ✤", "✤ EQUIPMENT ✤".
+	category = 4 // Category for the HERMES. They are - " SUPPLIES ", " ARTICLES ",  RELIQUARY , " WARDROBE ", " EQUIPMENT ".
 
 /datum/inqports/wardrobe
-	category = 5 // Category for the HERMES. They are - "✤ SUPPLIES ✤", "✤ ARTICLES ✤", ✤ RELIQUARY ✤, "✤ WARDROBE ✤", "✤ EQUIPMENT ✤".
+	category = 5 // Category for the HERMES. They are - " SUPPLIES ", " ARTICLES ",  RELIQUARY , " WARDROBE ", " EQUIPMENT ".
 
 
 /obj/structure/closet/crate/chest/inqcrate/supplies/
@@ -26,9 +26,9 @@
 	name = "inquisitorial equipment crate"
 
 /obj/structure/closet/crate/chest/inqcrate/wardrobe/
-	name = "grenzelhoft's finest wardrobe crate"
+	name = "tor sterkenstadt's finest wardrobe crate"
 
-/// ✤ SUPPLIES ✤ START HERE! WOW!
+///  SUPPLIES  START HERE! WOW!
 
 /datum/inqports/supplies/extrafunding
 	name = "(80 Silvers) Extra Funding"
@@ -73,18 +73,19 @@
 	for(var/i in 1 to 2)
 		new /obj/item/rope/chain(src)
 
-/datum/inqports/supplies/collar
-	name = "3 Collars of Servitude Alongside Key"
-	item_type = /obj/structure/closet/crate/chest/inqcrate/supplies/collar
+/datum/inqports/supplies/adeptset
+	name = "3 Sets of Adept Equipment Alongside Key"
+	item_type = /obj/structure/closet/crate/chest/inqcrate/supplies/adeptset
 	marquescost = 8
 
-/obj/structure/closet/crate/chest/inqcrate/supplies/collar/populate_contents()
+/obj/structure/closet/crate/chest/inqcrate/supplies/adeptset/populate_contents()
 	for(var/i in 1 to 3)
 		new /obj/item/clothing/neck/gorget/explosive(src)
+		new /obj/item/clothing/face/facemask/silver(src) ///Silver masks added for lore reasons.
 	new /obj/item/collar_detonator(src)
 
 /datum/inqports/supplies/redpotions
-	name = "3 Bottles of Red"
+	name = "3 Bottles of lifeblood"
 	item_type = /obj/structure/closet/crate/chest/inqcrate/supplies/redpots
 	marquescost = 6
 
@@ -93,7 +94,7 @@
 		new /obj/item/reagent_containers/glass/bottle/healthpot(src)
 
 /datum/inqports/supplies/lifebloodvials
-	name = "3 Vials of Strong Red"
+	name = "3 Vials of Strong lifeblood"
 	item_type = /obj/structure/closet/crate/chest/inqcrate/supplies/sredvials
 	maximum = 4
 	marquescost = 10
@@ -103,7 +104,7 @@
 		new /obj/item/reagent_containers/glass/bottle/alchemical/healthpotnew(src)
 
 /datum/inqports/supplies/bluepotions
-	name = "3 Bottles of Blue"
+	name = "3 Bottles of mana"
 	item_type = /obj/structure/closet/crate/chest/inqcrate/supplies/bluepots
 	marquescost = 8
 
@@ -112,7 +113,7 @@
 		new /obj/item/reagent_containers/glass/bottle/manapot(src)
 
 /datum/inqports/supplies/strongbluevials
-	name = "3 Vials of Strong Blue"
+	name = "3 Vials of Strong mana"
 	item_type = /obj/structure/closet/crate/chest/inqcrate/supplies/sbluevials
 	maximum = 4
 	marquescost = 16
@@ -147,7 +148,7 @@
 	list_reagents = list(/datum/reagent/medicine/stronghealth = 30)
 
 /datum/inqports/supplies/psybuns
-	name = "The Grenzelhoftian Bakery Special"
+	name = "The Aelondan Bakery Special"
 	item_type = /obj/structure/closet/crate/chest/inqcrate/supplies/psybuns
 	marquescost = 6
 
@@ -174,7 +175,7 @@
 	for(var/i in 1 to 6)
 		new /obj/item/ingot/silverblessed/bullion(src)
 
-// ✤ ARTICLES ✤ RIGHT HERE! THAT'S RIGHT!
+//  ARTICLES  RIGHT HERE! THAT'S RIGHT!
 
 /datum/inqports/articles/psycrosssilver
 	name = "1 Silver Psycross"
@@ -244,7 +245,7 @@
 	marquescost = 8
 
 
-// ✤ EQUIPMENT ✤ BELONGS HERE! JUST BELOW!
+//  EQUIPMENT  BELONGS HERE! JUST BELOW!
 /datum/inqports/equipment/puffer
 	name = "1 Puffer, 4 lead bullets and powder flask"
 	item_type = /obj/structure/closet/crate/chest/inqcrate/equipment/puffer
@@ -252,7 +253,7 @@
 	maximum = 1
 
 /obj/structure/closet/crate/chest/inqcrate/equipment/puffer/populate_contents()
-	new /obj/item/gun/ballistic/revolver/grenadelauncher/pistol(src)
+	new /obj/item/gun/ballistic/powder/wheellock/puffer(src)
 	new /obj/item/storage/belt/pouch/bullets(src)
 	new /obj/item/reagent_containers/glass/bottle/aflask(src)
 
@@ -266,7 +267,7 @@
 	maximum = 1
 
 /obj/structure/closet/crate/chest/inqcrate/equipment/musket/PopulateContents()
-	new /obj/item/gun/ballistic/revolver/grenadelauncher/pistol/musket(src)
+	new /obj/item/gun/ballistic/powder/musket(src)
 	new /obj/item/weapon/knife/dagger/bayonet(src)
 	new /obj/item/storage/belt/pouch/bullets(src)
 	new /obj/item/reagent_containers/glass/bottle/aflask(src)
@@ -281,8 +282,8 @@
 	for(var/i in 1 to 3)
 		new /obj/item/flashlight/flare/torch/lantern(src)
 
-/datum/inqports/equipment/psydonthorns
-	name = "1 Psydonian Thorns"
+/datum/inqports/equipment/angrosthorns
+	name = "1 Angrosian Thorns"
 	item_type = /obj/item/clothing/wrists/bracers/psythorns
 	marquescost = 16
 
@@ -297,7 +298,7 @@
 	marquescost = 10
 
 /datum/inqports/equipment/otavansatchel
-	name = "1 Grenzelhoftian Leather Satchel"
+	name = "1 Aelondan Leather Satchel"
 	item_type = /obj/item/storage/backpack/satchel/otavan
 	marquescost = 8
 
@@ -329,33 +330,33 @@
 	for(var/i in 1 to 3)
 		new /obj/item/clothing/head/inqarticles/blackbag(src)
 
-/datum/inqports/equipment/psydonhelms
-	name = "Helms of Psydon"
-	item_type = /obj/structure/closet/crate/chest/inqcrate/equipment/psydonhelms
+/datum/inqports/equipment/angroshelms
+	name = "Helms of Angros"
+	item_type = /obj/structure/closet/crate/chest/inqcrate/equipment/angroshelms
 	marquescost = 12
 	maximum = 1
 
-/obj/structure/closet/crate/chest/inqcrate/equipment/psydonhelms/populate_contents()
-	new /obj/item/clothing/head/helmet/heavy/psydonbarbute(src)
+/obj/structure/closet/crate/chest/inqcrate/equipment/angroshelms/populate_contents()
+	new /obj/item/clothing/head/helmet/heavy/angrosbarbute(src)
 	new /obj/item/clothing/head/helmet/heavy/psysallet(src)
 	new /obj/item/clothing/head/helmet/heavy/psybucket(src)
-	new /obj/item/clothing/head/helmet/heavy/psydonhelm(src)
+	new /obj/item/clothing/head/helmet/heavy/angroshelm(src)
 
 /datum/inqports/equipment/crankbox
 	name = "The Crankbox"
-	item_type = /obj/structure/closet/crate/chest/inqreliquary/relic/crankbox/
+	item_type = /obj/structure/closet/crate/chest/inqreliquary/relic/crankbox
 	marquescost = 16
 	maximum = 1
 
 /obj/structure/closet/crate/chest/inqreliquary/relic/crankbox/populate_contents()
-	new /obj/item/psydonmusicbox(src)
+	new /obj/item/angrosmusicbox(src)
 
 /datum/inqports/equipment/nocshades
 	name = "1 Nocshade Lens-Pair"
 	item_type = /obj/item/clothing/face/spectacles/inq
 	marquescost = 16
 
-// ✤ WARDROBE ✤ STARTS HERE! YEP!
+//  WARDROBE  STARTS HERE! YEP!
 
 /obj/item/clothing/neck/fencerguard/inq
 	icon_state = "fencercollar"
@@ -377,9 +378,9 @@
 	detail_color = "#99b2b1"
 
 /datum/inqports/wardrobe/fencerset
-	name = "The Grenzelhoftian Fencer's Finest Set Crate"
+	name = "The Aelondan Fencer's Finest Set Crate"
 	item_type = /obj/structure/closet/crate/chest/inqcrate/wardrobe/fencerset
-	marquescost = 14
+	marquescost = 8
 
 /obj/structure/closet/crate/chest/inqcrate/wardrobe/fencerset/populate_contents()
 	new /obj/item/clothing/armor/gambeson/heavy/otavan/inq(src)
@@ -391,16 +392,16 @@
 /datum/inqports/wardrobe/confessionalcombo
 	name = "The Confessional Combination"
 	item_type = /obj/structure/closet/crate/chest/inqcrate/wardrobe/confessionalcombo
-	marquescost = 14
+	marquescost = 6
 
 /obj/structure/closet/crate/chest/inqcrate/wardrobe/confessionalcombo/populate_contents()
-	new /obj/item/clothing/head/roguehood/psydon/confessor(src)
+	new /obj/item/clothing/head/roguehood/angros/confessor(src)
 	new /obj/item/clothing/armor/leather/jacket/leathercoat/confessor(src)
 
 /datum/inqports/wardrobe/inspectorcoat
 	name = "The Inquisition's Finest Coats and Hats"
 	item_type = /obj/structure/closet/crate/chest/inqcrate/wardrobe/inspectorcoats
-	marquescost = 18
+	marquescost = 12
 
 /obj/structure/closet/crate/chest/inqcrate/wardrobe/inspectorcoats/populate_contents()
 	for(var/i in 1 to 3)
@@ -410,7 +411,7 @@
 /datum/inqports/wardrobe/inspector
 	name = "The Inquisitorial Inspector's Best Crate"
 	item_type = /obj/structure/closet/crate/chest/inqcrate/wardrobe/inspector
-	marquescost = 18
+	marquescost = 10
 
 /obj/structure/closet/crate/chest/inqcrate/wardrobe/inspector/populate_contents()
 	new /obj/item/clothing/head/leather/inqhat(src)
@@ -421,27 +422,27 @@
 /datum/inqports/wardrobe/fencersthree
 	name = "The Fencer's Gambeson Three-Pack"
 	item_type = /obj/structure/closet/crate/chest/inqcrate/wardrobe/fencersthree
-	marquescost = 16
+	marquescost = 5
 
 /obj/structure/closet/crate/chest/inqcrate/wardrobe/fencersthree/populate_contents()
 	for(var/i in 1 to 3)
 		new /obj/item/clothing/armor/gambeson/heavy/otavan/inq(src)
 
-/datum/inqports/wardrobe/psydonianstandard
+/datum/inqports/wardrobe/angrosianstandard
 	name = "The Inquisitorial Standard"
-	item_type = /obj/structure/closet/crate/chest/inqcrate/wardrobe/psydonian
-	marquescost = 12
+	item_type = /obj/structure/closet/crate/chest/inqcrate/wardrobe/angrosian
+	marquescost = 6
 
-/obj/structure/closet/crate/chest/inqcrate/wardrobe/psydonian/populate_contents()
+/obj/structure/closet/crate/chest/inqcrate/wardrobe/angrosian/populate_contents()
 	new /obj/item/clothing/pants/tights/colored/black(src)
 	new /obj/item/clothing/armor/gambeson/heavy/inq(src)
 	new /obj/item/clothing/gloves/leather/otavan(src)
-	new /obj/item/clothing/shoes/psydonboots(src)
+	new /obj/item/clothing/shoes/angrosboots(src)
 
 /datum/inqports/wardrobe/nobledressup
 	name = "The Cost of Nobility Crate"
 	item_type = /obj/structure/closet/crate/chest/inqcrate/wardrobe/nobledressup
-	marquescost = 24
+	marquescost = 16
 
 /obj/structure/closet/crate/chest/inqcrate/wardrobe/nobledressup/populate_contents()
 	new /obj/item/clothing/cloak/lordcloak/ladycloak(src)

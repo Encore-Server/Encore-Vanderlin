@@ -55,9 +55,9 @@
 
 /obj/effect/spawner/map_spawner/pit/do_spawn()
 	var/turf/T = get_turf(src)
-	var/turf/below = get_step_multiz(src, DOWN)
+	var/turf/below = GET_TURF_BELOW(T)
 	if(below)
-		T.ChangeTurf(/turf/open/transparent/openspace)
+		T.ChangeTurf(/turf/open/openspace)
 		below.ChangeTurf(/turf/open/floor/dirt/road)
 
 /obj/effect/spawner/map_spawner/tree
@@ -220,9 +220,7 @@
 	spawned = list(
 		/obj/item/reagent_containers/food/snacks/smallrat = 30,
 		/obj/item/reagent_containers/food/snacks/smallrat/dead = 10,
-		/obj/item/organ/guts = 5,
 		/obj/item/coin/copper = 5,
-		/obj/effect/gibspawner/generic = 5,
 		/obj/effect/decal/remains/bigrat = 5,
 		/mob/living/simple_animal/hostile/retaliate/bigrat = 1,
 		)

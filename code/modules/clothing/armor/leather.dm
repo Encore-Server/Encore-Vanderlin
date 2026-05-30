@@ -9,7 +9,8 @@
 	pickup_sound = 'sound/foley/equip/cloak_take_off.ogg'
 	break_sound = 'sound/foley/cloth_rip.ogg'
 	drop_sound = 'sound/foley/dropsound/cloth_drop.ogg'
-	sewrepair = TRUE
+	sewrepair = /datum/attribute/skill/craft/tanning/patching
+	dyeable = TRUE
 	smeltresult = /obj/item/fertilizer/ash
 	sellprice = VALUE_LEATHER_ARMOR
 
@@ -19,7 +20,9 @@
 	prevent_crits = ALL_EXCEPT_CHOP_AND_STAB
 	max_integrity = INTEGRITY_STANDARD
 	salvage_result = /obj/item/natural/hide/cured
-	item_weight = 3.2
+	item_weight = 3.2 KILOGRAMS
+
+	material_category = ARMOR_MAT_FABRIC
 
 //THE ARMOUR VALUES OF ADVANCED AND MASTERWORK ARMOUR ARE INTENDED
 //KEEP THIS IN MIND
@@ -62,7 +65,7 @@
 	armor = ARMOR_LEATHER_GOOD
 	body_parts_covered = COVERAGE_FULL
 	max_integrity = INTEGRITY_STRONG
-	item_weight = 6.7
+	item_weight = 4.5 KILOGRAMS
 
 //................ Splint Mail ............... //
 /obj/item/clothing/armor/leather/splint
@@ -74,7 +77,7 @@
 	armor = ARMOR_LEATHER_GOOD
 	prevent_crits = ALL_EXCEPT_STAB
 	max_integrity = INTEGRITY_STRONG
-	item_weight = 6.7
+	item_weight = 6.7 KILOGRAMS
 
 //................ Leather Vest ............... //	- has no sleeves.  - can be worn in armor OR shirt slot
 /obj/item/clothing/armor/leather/vest
@@ -85,7 +88,8 @@
 	color = CLOTHING_BARK_BROWN
 	blade_dulling = DULLING_BASHCHOP
 	blocksound = SOFTHIT
-	sewrepair = TRUE
+	sewrepair = /datum/attribute/skill/craft/tanning/patching
+	dyeable = TRUE
 	sleevetype = null
 	sleeved = null
 
@@ -93,7 +97,7 @@
 	body_parts_covered = COVERAGE_VEST
 	prevent_crits = CUT_AND_MINOR_CRITS
 	salvage_result = /obj/item/natural/hide/cured
-	item_weight = 2.2
+	item_weight = 1.4 KILOGRAMS
 
 /obj/item/clothing/armor/leather/vest/colored
 	misc_flags = CRAFTING_TEST_EXCLUDE
@@ -107,7 +111,7 @@
 	name = "butchers vest"
 	icon_state = "leathervest"
 	color = "#d69c87" // custom coloring
-	item_weight = 1.8
+	item_weight = 1.4 KILOGRAMS
 
 //................ Other Vests ............... //
 /obj/item/clothing/armor/leather/vest/colored/butler
@@ -115,7 +119,7 @@
 	uses_lord_coloring = LORD_PRIMARY
 
 /obj/item/clothing/armor/leather/vest/colored/black
-	color = CLOTHING_DARK_INK
+	color = CLOTHING_SOOT_BLACK
 
 /obj/item/clothing/armor/leather/vest/colored/innkeep // repath to correct padded vest some day
 	name = "padded vest"
@@ -129,7 +133,7 @@
 	icon_state = "winterjacket"
 	detail_tag = "_detail"
 	color = CLOTHING_WHITE
-	detail_color = CLOTHING_SOOT_BLACK
+	detail_color = CLOTHING_DARK_INK
 	uses_lord_coloring = LORD_PRIMARY
 
 //................ Jacket ............... //	- Has a small storage space
@@ -139,11 +143,8 @@
 	desc = "A heavy leather jacket with wooden buttons, favored by workers who can afford it."
 
 	body_parts_covered = COVERAGE_SHIRT
-	item_weight = 2.2
-
-/obj/item/clothing/armor/leather/jacket/Initialize(mapload, ...)
-	. = ..()
-	AddComponent(/datum/component/storage/concrete/grid/cloak)
+	item_weight = 1.5 KILOGRAMS
+	pocket_storage_component_path = /datum/component/storage/concrete/grid/cloak
 
 /obj/item/clothing/armor/leather/jacket/dropped(mob/living/carbon/human/user)
 	..()
@@ -156,7 +157,7 @@
 /obj/item/clothing/armor/leather/jacket/artijacket
 	name = "artificer jacket"
 	icon_state = "artijacket"
-	desc = "A thick leather jacket adorned with fur and cog decals. The height of Heartfelt fashion."
+	desc = "A thick leather jacket adorned with fur and cog decals. The height of Dunnish fashion."
 
 /obj/item/clothing/armor/leather/jacket/artijacket/porter
 	name = "leather jacket"
@@ -186,7 +187,7 @@
 /obj/item/clothing/armor/leather/jacket/sea
 	slot_flags = ITEM_SLOT_ARMOR
 	name = "sea jacket"
-	desc = "A sturdy jacket worn by daring seafarers. The leather it's made from has been tanned by the salt of Abyssor's seas."
+	desc = "A sturdy jacket worn by daring seafarers. The leather it's made from has been tanned by the salt of Mjallidhorn's seas."
 	icon_state = "sailorvest"
 	sleevetype = "shirt"
 
@@ -217,6 +218,24 @@
 
 	body_parts_covered = COVERAGE_SHIRT
 
+//................ Silk Jacket ............... //
+
+/obj/item/clothing/armor/leather/jacket/tailcoat
+	name = "tailcoat"
+	desc = "A finely-sewn tailcoat often worn by those on the brink of the upper echelons of Astratan caste."
+	icon_state = "butlercoat"
+	item_state = "butlercoat"
+	detail_tag = "_detail"
+	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_maids.dmi'
+	detail_color = CLOTHING_DARK_INK
+	slot_flags = ITEM_SLOT_ARMOR
+	armor = ARMOR_PADDED
+	allowed_ages = ALL_AGES_LIST
+
+/obj/item/clothing/armor/leather/jacket/tailcoat/lord
+	misc_flags = CRAFTING_TEST_EXCLUDE
+	uses_lord_coloring = LORD_SECONDARY
+
 //................ Hand´s Coat ............... //
 /obj/item/clothing/armor/leather/jacket/hand
 	name = "noble coat"
@@ -236,6 +255,37 @@
 	detail_color = CLOTHING_BERRY_BLUE
 	body_parts_covered = COVERAGE_SHIRT
 	uses_lord_coloring = LORD_PRIMARY
+
+/obj/item/clothing/armor/leather/jacket/courtphysician
+	name = "sanguine coat"
+	desc = "A padded coat made of a leather, perhaps this may keep the bloodstains away."
+	icon_state = "doccoat"
+	item_state = "doccoat"
+	icon = 'icons/roguetown/clothing/courtphys.dmi'
+	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_courtphys.dmi'
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/courtphys.dmi'
+	detail_tag = "_detail"
+	boobed = FALSE
+	uses_lord_coloring = LORD_PRIMARY
+	alternate_worn_layer = 19
+
+/obj/item/clothing/armor/leather/jacket/courtphysician/female
+	name = "sanguine jacket"
+	desc = "An elegant jacket made of silk and padded with leather on the inside. It would be a shame to dirty this, but it is inevitable."
+	icon_state = "docjacket"
+	item_state = "docjacket"
+	icon = 'icons/roguetown/clothing/courtphys.dmi'
+	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_courtphys.dmi'
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/courtphys.dmi'
+	detail_tag = "_detail"
+	boobed = FALSE
+	uses_lord_coloring = LORD_PRIMARY
+	alternate_worn_layer = 19
+
+/obj/item/clothing/armor/leather/jacket/courtphysician/drifter
+	uses_lord_coloring = FALSE
+	detail_color = CLOTHING_SCARLET
+	misc_flags = CRAFTING_TEST_EXCLUDE
 
 /obj/item/clothing/armor/leather/jacket/leathercoat
 	name = "leather coat"
@@ -274,7 +324,7 @@
 
 /obj/item/clothing/armor/leather/jacket/leathercoat/duelcoat
 	name = "black leather coat"
-	desc = "A stylish coat worn by Duelists of Valoria. Light and flexible, it doesn't impede the complex movements they are known for, seems to be quite padded.A stylish coat worn by the Duelists of Valoria. Light and flexible, it doesn't impede the complex movements they are known for, Seems to be well-padded."
+	desc = "A stylish coat worn by the Duelists of Aelonda. Light and flexible, it doesn't impede the complex movements they are known for, Seems to be well-padded."
 	icon_state = "bwleathercoat"
 	boobed = TRUE
 	armor = ARMOR_LEATHER_GOOD
@@ -296,17 +346,45 @@
 
 /obj/item/clothing/armor/leather/studded/psyaltrist
 	name = "cuir-bouilli armor"
-	desc = "Treated, water-boiled and composite-layered leather armor of fine Grenzelhoftian make."
+	desc = "Treated, water-boiled and composite-layered leather armor of fine Aelondan make."
 	icon_state = "cuirbouilli"
 	item_state = "cuirbouilli"
 
-/obj/item/clothing/armor/leather/heavy
-	name = "hardened leather armor"
+/obj/item/clothing/armor/leather/jerkin
+	name = "leather jerkin"
 	desc = "A heavy steerhide jerkin with enough body to stand on its own. It forms a stiff, protective mantle \
 	for its wearer, shielding from blows and weather alike."
+	icon_state = "roguearmor"
+	item_state = "roguearmor"
+	armor = ARMOR_LEATHER
+	prevent_crits = ALL_EXCEPT_STAB
+	max_integrity = ARMOR_INT_CHEST_LIGHT_MASTER
+	sellprice = VALUE_LEATHER_ARMOR_PLUS
+
+/obj/item/clothing/armor/leather/jerkin/belted
+	desc = "A heavy steerhide jerkin with enough body to stand on its own. It forms a stiff, protective mantle \
+	for its wearer, shielding from blows and weather alike. Utility pouches have been sewn into the front of it."
 	icon_state = "roguearmor_belt"
 	item_state = "roguearmor_belt"
 	armor = ARMOR_LEATHER_GOOD
 	prevent_crits = list(BCLASS_CUT, BCLASS_STAB, BCLASS_BLUNT, BCLASS_CHOP, BCLASS_SMASH)
 	max_integrity = ARMOR_INT_CHEST_LIGHT_MASTER
 	sellprice = 20
+
+// gronnic subtype
+/obj/item/clothing/armor/leather/gronn
+	name = "nortic ravager mantle"
+	desc = "A carefully created mantle of bone and hardened leather. It offers superior protection against the threats of the wild while remaining light, \
+			A popular design in Nortmidst is to adorn a shoulder with a wolf pelt, a symbol of the Great Hunt."
+	icon = 'icons/roguetown/clothing/special/gronn.dmi'
+	mob_overlay_icon = 'icons/roguetown/clothing/special/onmob/gronn.dmi'
+	icon_state = "gronnleatherarmor"
+	item_state = "gronnleatherarmor"
+	armor = ARMOR_GRONN_LIGHT
+	pocket_storage_component_path = /datum/component/storage/concrete/grid/cloak
+
+/obj/item/clothing/armor/leather/jerkin/belted/long
+	icon_state = "roguearmor_coat"
+	item_state = "roguearmor_coat"
+	body_parts_covered = COVERAGE_ALL_BUT_ARMS
+	sellprice = VALUE_LEATHER_ARMOR_LORD

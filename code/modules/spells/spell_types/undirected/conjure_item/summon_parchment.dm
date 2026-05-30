@@ -1,13 +1,13 @@
 /datum/action/cooldown/spell/undirected/conjure_item/summon_parchment
 	name = "Summon Parchment"
-	desc = "Summon a blank sheet of parchment from the library of Noc."
+	desc = "Summon a blank sheet of parchment from the library of Akan."
 	button_icon_state = "summon_paper"
 	sound = 'sound/items/book_page.ogg'
 
 	spell_type = SPELL_MANA
 	antimagic_flags = MAGIC_RESISTANCE
-	associated_skill = /datum/skill/magic/arcane
-	experience_modifer = 0.1
+	associated_skill = /datum/attribute/skill/magic/arcane
+	experience_modifier = 0.1
 
 	invocation_type = INVOCATION_NONE
 

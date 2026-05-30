@@ -1,8 +1,8 @@
 /datum/objective/personal/grave_robbery
 	name = "Rob Graves"
-	category = "Matthios' Chosen"
+	category = "Deceivers' Chosen"
 	triumph_count = 2
-	rewards = list("2 Triumphs", "Matthios grows stronger", "Ability to rob graves without being cursed", "Matthios blesses you (+1 Endurance)")
+	rewards = list("2 Triumphs", "Deceivers grows stronger", "Ability to rob graves without being cursed", "Deceivers blesses you (+1 Endurance)")
 	var/graves_robbed = 0
 	var/graves_required = 2
 
@@ -26,18 +26,18 @@
 	if(graves_robbed >= graves_required)
 		complete_objective()
 	else
-		to_chat(owner.current, span_notice("Grave robbed! Rob [graves_required - graves_robbed] more to complete Matthios' task."))
+		to_chat(owner.current, span_notice("Grave robbed! Rob [graves_required - graves_robbed] more to complete Deceivers' task."))
 
 /datum/objective/personal/grave_robbery/complete_objective()
 	. = ..()
-	to_chat(owner.current, span_greentext("You've robbed enough graves to earn Matthios' respect!"))
-	adjust_storyteller_influence(MATTHIOS, 20)
+	to_chat(owner.current, span_greentext("You've robbed enough graves to earn Deceivers' respect!"))
+	adjust_storyteller_influence(DECEIVERS, 20)
 	UnregisterSignal(owner.current, COMSIG_GRAVE_ROBBED)
 
 /datum/objective/personal/grave_robbery/reward_owner()
 	. = ..()
-	ADD_TRAIT(owner.current, TRAIT_GRAVEROBBER, TRAIT_GENERIC)
-	owner.current.adjust_stat_modifier(STATMOD_MATTHIOS_BLESSING, STATKEY_END, 1)
+	ADD_TRAIT(owner.current, TRAIT_GRAVEROBBER, OBJECTIVE_TRAIT)
+	owner.current.adjust_stat_modifier(STATMOD_DECEIVERS_BLESSING, STAT_ENDURANCE, 1)
 
 /datum/objective/personal/grave_robbery/update_explanation_text()
-	explanation_text = "Rob at least [graves_required] graves to earn Matthios' respect."
+	explanation_text = "Rob at least [graves_required] graves to earn Deceivers' respect."

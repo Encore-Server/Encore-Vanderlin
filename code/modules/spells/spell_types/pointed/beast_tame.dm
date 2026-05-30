@@ -1,6 +1,6 @@
 /datum/action/cooldown/spell/beast_tame
 	name = "Tame Beast"
-	desc = "Attempt to turn a beast of Dendor to your favor."
+	desc = "Attempt to turn a beast of Gani to your favor."
 	button_icon_state = "tamebeast"
 	sound = 'sound/vo/smokedrag.ogg'
 	charge_sound = 'sound/magic/holycharging.ogg'
@@ -9,8 +9,8 @@
 	cast_range = 5
 	spell_type = SPELL_MIRACLE
 	antimagic_flags = MAGIC_RESISTANCE_HOLY
-	associated_skill = /datum/skill/magic/holy
-	required_items = list(/obj/item/clothing/neck/psycross/silver/dendor)
+	associated_skill = /datum/attribute/skill/magic/holy
+	required_items = list(/obj/item/clothing/neck/psycross/silver/divine/gani)
 	attunements = list(
 		/datum/attunement/earth = 1,
 	)
@@ -46,19 +46,19 @@
 	if(. & SPELL_CANCEL_CAST)
 		return
 	var/mob/living/simple_animal/hostile/retaliate/SP = cast_on
-	if(!SP.dendor_taming_chance || !SP.ai_controller || (SP.mob_biotypes & MOB_UNDEAD))
+	if(!SP.gani_taming_chance || !SP.ai_controller || (SP.mob_biotypes & MOB_UNDEAD))
 		reset_spell_cooldown()
 		return . | SPELL_CANCEL_CAST
 
 /datum/action/cooldown/spell/beast_tame/cast(mob/living/simple_animal/hostile/retaliate/cast_on)
 	. = ..()
-	if(!prob(cast_on.dendor_taming_chance))
+	if(!prob(cast_on.gani_taming_chance))
 		to_chat(owner, span_warning("\The [cast_on] resists your soothing!"))
 		return
 
 	owner.visible_message(
-		span_greentext("[owner] soothes \the [cast_on] with Dendor's whisper."),
-		span_notice("I tame the beast with Dendor's whisper."),
+		span_greentext("[owner] soothes \the [cast_on] with Gani's whisper."),
+		span_notice("I tame the beast with Gani's whisper."),
 	)
 
 	cast_on.LoadComponent(/datum/component/obeys_commands, pet_commands)
@@ -70,11 +70,11 @@
 	cast_on.pet_passive = TRUE
 	cast_on.tamed(owner)
 
-	if(HAS_TRAIT(owner, TRAIT_DENDOR_GROWING))
-		ADD_TRAIT(cast_on, TRAIT_ENTANGLER_IMMUNE, MAGIC_TRAIT)
-	if(HAS_TRAIT(owner, TRAIT_DENDOR_STINGING))
+	if(HAS_TRAIT(owner, TRAIT_GANI_GROWING))
+		ADD_TRAIT(cast_on, TRAIT_ENTANGLER_IMMUNITY, MAGIC_TRAIT)
+	if(HAS_TRAIT(owner, TRAIT_GANI_STINGING))
 		ADD_TRAIT(cast_on, TRAIT_KNEESTINGER_IMMUNITY, MAGIC_TRAIT)
-	if(HAS_TRAIT(owner, TRAIT_DENDOR_DEVOURING))
+	if(HAS_TRAIT(owner, TRAIT_GANI_DEVOURING))
 		ADD_TRAIT(cast_on, TRAIT_CRITICAL_RESISTANCE, MAGIC_TRAIT)
-	if(HAS_TRAIT(owner, TRAIT_DENDOR_LORDING))
+	if(HAS_TRAIT(owner, TRAIT_GANI_LORDING))
 		ADD_TRAIT(cast_on, TRAIT_CRITICAL_RESISTANCE, MAGIC_TRAIT)

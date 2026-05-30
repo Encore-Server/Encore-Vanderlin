@@ -1,6 +1,6 @@
 /obj/item/undies
 	name = "smallclothes"
-	desc = "An Eoran designed undergarment to cover the loins."
+	desc = "An Pomettic designed undergarment to cover the loins."
 	icon = 'icons/roguetown/items/misc.dmi'
 	icon_state = "undies"
 	resistance_flags = FLAMMABLE
@@ -10,17 +10,18 @@
 	max_integrity = 200
 	integrity_failure = 0.1
 	drop_sound = 'sound/foley/dropsound/cloth_drop.ogg'
+	item_weight = 21 GRAMS
 	var/gendered = MALE
 	var/race
 	var/cached_undies
 
 /obj/item/undies/f
 	name = "women's smallclothes"
-	desc = "An Eoran designed undergarment to cover the privates and chest."
+	desc = "An Pomettic designed undergarment to cover the privates and chest."
 	icon_state = "girlundies"
 	gendered = FEMALE
 
-/obj/item/undies/attack(mob/M, mob/user, def_zone)
+/obj/item/undies/attack(mob/M, mob/user, list/modifiers)
 	if(ishuman(M))
 		var/mob/living/carbon/human/H = M
 		if(H.gender != gendered)

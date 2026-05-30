@@ -10,23 +10,19 @@
 /mob/living/carbon/human/species/aasimar
 	race = /datum/species/aasimar
 
+/datum/attribute_holder/sheet/job/species/aasimar
+	raw_attribute_list = list(
+		STAT_INTELLIGENCE = 2,
+		STAT_CONSTITUTION = 1,
+		STAT_ENDURANCE = 1,
+		STAT_SPEED = -1,
+	)
+
 /datum/species/aasimar
 	name = "Aasimar"
 	id = SPEC_ID_AASIMAR
 	native_language = "Celestial"
-	desc = "Immortal offspring sculpted by the gods for use in servitude. \
-	\n\n\
-	Aasimar roaming alone on Psydonia often are those abandoned after serving their purpose. \
-	This species is often revered due to their celestial origin, \
-	but face great solitude as not many of their kind exist. \
-	Many an aasimar will detest the reverence in which they are greeted with, \
-	for their greatest failure or unuse that lead to their discarding is not subject for celebration. \
-	\n\n\
-	An aasimar may be crafted with any number of materials. \
-	Many resemble sculptures of stone or are ceramic in skin, \
-	but their insides are just as mortal as any other. \
-	Most Aasimar were created to serve The Ten, and few if any Psydonic Aasimar remain to this day- \
-	decrepit husks of what were once great warriors. "
+	desc = PLACEHOLDER_SPECIES_REBRANDING
 
 	skin_tone_wording = "Craft"
 
@@ -80,12 +76,11 @@
 		OFFSET_UNDIES = list(0,0),\
 	)
 
-	specstats_m = list(STATKEY_STR = 0, STATKEY_PER = 0, STATKEY_INT = 2, STATKEY_CON = 1, STATKEY_END = 1, STATKEY_SPD = -1, STATKEY_LCK = 0)
-	specstats_f = list(STATKEY_STR = 0, STATKEY_PER = 0, STATKEY_INT = 2, STATKEY_CON = 1, STATKEY_END = 1, STATKEY_SPD = -1, STATKEY_LCK = 0)
+	statsheet_male = /datum/attribute_holder/sheet/job/species/aasimar
 
 	enflamed_icon = "widefire"
 
-	meat = /obj/item/natural/stone
+	meat = list(/obj/item/natural/stone = 1)
 
 	bodypart_features = list(
 		/datum/bodypart_feature/hair/head,
@@ -148,28 +143,28 @@
 
 /datum/species/aasimar/get_hairc_list()
 	return sortList(list(
-	"black - oil" = "181a1d",
-	"black - cave" = "201616",
-	"black - rogue" = "2b201b",
-	"black - midnight" = "1d1b2b",
+		"black - oil" = "181a1d",
+		"black - cave" = "201616",
+		"black - rogue" = "2b201b",
+		"black - midnight" = "1d1b2b",
 
-	"white - silver" = "d3d9e3",
-	"white - alabaster" = "fffffc",
-	"white - skies" = "a1b4d4",
+		"white - silver" = "d3d9e3",
+		"white - alabaster" = "fffffc",
+		"white - skies" = "a1b4d4",
 
-	"yellow - sunlight" = "f3f797",
-	"blond - strawberry" = "c69b71",
-	"blond - pale" = "9d8d6e",
+		"yellow - sunlight" = "f3f797",
+		"blond - strawberry" = "c69b71",
+		"blond - pale" = "9d8d6e",
 
-	"red - flame" = "ab4637",
-	"red - sunset" = "bf6821",
-	"red - blood" = "822b2b",
-	"red - maroon" = "612929"
+		"red - flame" = "ab4637",
+		"red - sunset" = "bf6821",
+		"red - blood" = "822b2b",
+		"red - maroon" = "612929"
 	))
 
 /datum/species/aasimar/get_possible_names(gender = FALSE)
-	var/static/list/male_names = world.file2list('strings/rt/names/other/aasm.txt')
-	var/static/list/female_names = world.file2list('strings/rt/names/other/aasf.txt')
+	var/static/list/male_names = file2list('strings/rt/names/other/aasm.txt')
+	var/static/list/female_names = file2list('strings/rt/names/other/aasf.txt')
 	return (gender == FEMALE) ? female_names : male_names
 
 /datum/species/aasimar/get_possible_surnames(gender)

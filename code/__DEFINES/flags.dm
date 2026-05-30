@@ -100,6 +100,8 @@ GLOBAL_LIST_INIT(bitflags, list(1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 204
 #define LETPASSCLICKS (1<<10)
 /// Allows you to pass over windows and window-adjacent stuff, like windows and windoors. Does not include doors with glass in them.
 #define PASSWINDOW (1<<11)
+/// Specific catch case for thrown mobs (jumping). Useless unless used with LETPASSTHROW.
+#define NOTLETPASSTHROWNMOB (1<<12)
 
 //Movement Types
 /// Regular ground based movment
@@ -112,6 +114,10 @@ GLOBAL_LIST_INIT(bitflags, list(1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 204
 #define FLOATING (1<<3)
 /// When moving, will Cross()/Uncross() everything, but won't stop or Bump() anything.
 #define PHASING (1<<4)
+/// Like flying but when submerged in water
+#define SWIMMING (1<<5)
+
+#define MOVETYPE_NOT_TOUCHING_GROUND (FLOATING | FLYING | SWIMMING)
 
 //Fire and Acid stuff, for resistance_flags
 #define LAVA_PROOF		(1<<0)

@@ -6,8 +6,8 @@
 
 	spell_type = SPELL_MIRACLE
 	antimagic_flags = MAGIC_RESISTANCE_HOLY
-	associated_skill = /datum/skill/magic/holy
-	required_items = list(/obj/item/clothing/neck/psycross/silver/dendor)
+	associated_skill = /datum/attribute/skill/magic/holy
+	required_items = list(/obj/item/clothing/neck/psycross/silver/divine/gani)
 	attunements = list(
 		/datum/attunement/earth = 0.5,
 		/datum/attunement/life = 0.5,
@@ -23,14 +23,15 @@
 /datum/action/cooldown/spell/undirected/bless_crops/cast(atom/cast_on)
 	. = ..()
 	owner.visible_message(
-		span_greentext("[owner] blesses the crops with Dendor's Favour!"),
-		span_greentext("I bless the crops with Dendor's Favour!"),
+		span_greentext("[owner] blesses the crops with Gani's Favour!"),
+		span_greentext("I bless the crops with Gani's Favour!"),
 	)
 	var/amount_blessed = 0
 	for(var/obj/structure/soil/soil in view(4, owner))
-		playsound(get_turf(soil), 'sound/vo/smokedrag.ogg', 100, TRUE)
+		playsound(soil, 'sound/vo/smokedrag.ogg', 100, TRUE)
 		soil.bless_soil()
 		amount_blessed++
 		new /obj/effect/temp_visual/bless_swirl(get_turf(soil))
 		if(amount_blessed >= 5)
 			break
+		SEND_SIGNAL(owner, COMSIG_SOIL_BLESSED)

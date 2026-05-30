@@ -94,14 +94,14 @@ SUBSYSTEM_DEF(treasury)
 		*/
 		amt_to_generate = amt_to_generate - (amt_to_generate * queens_tax)
 		amt_to_generate = round(amt_to_generate)
-		give_money_treasury(amt_to_generate, "Wealth Horde")
+		give_money_treasury(amt_to_generate, "Wealth Hoard")
 		force_set_round_statistic(STATS_REGULAR_VAULT_INCOME, amt_to_generate)
 		record_round_statistic(STATS_VAULT_TOTAL_REVENUE, amt_to_generate)
 		for(var/mob/living/carbon/human/X in GLOB.human_list)
 			if(!X.mind)
 				continue
 			if(is_lord_job(X.mind.assigned_role) || is_consort_job(X.mind.assigned_role) || is_steward_job(X.mind.assigned_role))
-				send_ooc_note("Income from wealth horde: +[amt_to_generate]", name = X.real_name)
+				send_ooc_note("Income from wealth hoard: +[amt_to_generate]", name = X.real_name)
 				return
 
 /*
@@ -199,18 +199,18 @@ SUBSYSTEM_DEF(treasury)
 	if (amt > 0)
 		// Player received money
 		if(source)
-			send_ooc_note("<b>MEISTER:</b> Your account has received [amt] mammon. ([source])", name = target_name)
+			send_ooc_note("<b>BANKHEAD:</b> Your account has received [amt] mammon. ([source])", name = target_name)
 			log_to_steward("+[amt] from treasury to [target_name] ([source])")
 		else
-			send_ooc_note("<b>MEISTER:</b> Your account has received [amt] mammon.", name = target_name)
+			send_ooc_note("<b>BANKHEAD:</b> Your account has received [amt] mammon.", name = target_name)
 			log_to_steward("+[amt] from treasury to [target_name]")
 	else if (amt < 0)
 		// Player was fined
 		if(source)
-			send_ooc_note("<b>MEISTER:</b> Your account was fined [abs(amt)] mammon. ([source])", name = target_name)
+			send_ooc_note("<b>BANKHEAD:</b> Your account was fined [abs(amt)] mammon. ([source])", name = target_name)
 			log_to_steward("[abs(amt)] was fined from [target_name] ([source])")
 		else
-			send_ooc_note("<b>MEISTER:</b> Your account was fined [abs(amt)] mammon.", name = target_name)
+			send_ooc_note("<b>BANKHEAD:</b> Your account was fined [abs(amt)] mammon.", name = target_name)
 			log_to_steward("[abs(amt)] was fined from [target_name]")
 
 	return TRUE
@@ -230,7 +230,7 @@ SUBSYSTEM_DEF(treasury)
 	treasury_value += amt
 
 	if(character in bank_accounts)
-		if(HAS_TRAIT(character, TRAIT_NOBLE))
+		if(HAS_TRAIT(character, TRAIT_NOBLE_BLOOD))
 			bank_accounts[character] += amt
 		else
 			if(!untaxed_deposits[character])
@@ -268,10 +268,10 @@ SUBSYSTEM_DEF(treasury)
 	for(var/X in bank_accounts)
 		if(X == target)
 			if(bank_accounts[X] < amt)  // Check if the withdrawal amount exceeds the player's account balance
-				send_ooc_note("<b>MEISTER:</b> Error: Insufficient funds in the account to complete the withdrawal.", name = target_name)
+				send_ooc_note("<b>BANKHEAD:</b> Error: Insufficient funds in the account to complete the withdrawal.", name = target_name)
 				return  // Return without processing the transaction
 			if(treasury_value < amt)  // Check if the amount exceeds the treasury balance
-				send_ooc_note("<b>MEISTER:</b> Error: Insufficient funds in the treasury to complete the transaction.", name = target_name)
+				send_ooc_note("<b>BANKHEAD:</b> Error: Insufficient funds in the treasury to complete the transaction.", name = target_name)
 				return  // Return early if the treasury balance is insufficient
 			bank_accounts[X] -= amt
 			treasury_value -= amt
@@ -291,4 +291,4 @@ SUBSYSTEM_DEF(treasury)
 		var/how_much = noble_incomes[welfare_dependant]
 		record_round_statistic(STATS_NOBLE_INCOME_TOTAL, how_much)
 		give_money_treasury(how_much, silent = TRUE)
-		give_money_account(how_much, welfare_dependant, "Vanderlin Noble Estate")
+		give_money_account(how_much, welfare_dependant, "Domotan Noble Estate")

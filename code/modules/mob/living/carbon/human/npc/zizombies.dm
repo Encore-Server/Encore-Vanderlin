@@ -1,16 +1,15 @@
 /mob/living/carbon/human/species/zizombie
-	name = "rotten zizombie"
+	name = "rotten zombie"
 
 	icon = 'icons/roguetown/mob/monster/zizombie.dmi'
 	icon_state = "zizombie"
 	race = /datum/species/zizombie
 	gender = PLURAL
 	bodyparts = list(/obj/item/bodypart/chest/zizombie, /obj/item/bodypart/head/zizombie, /obj/item/bodypart/l_arm/zizombie,
-					/obj/item/bodypart/r_arm/zizombie, /obj/item/bodypart/r_leg/zizombie, /obj/item/bodypart/l_leg/zizombie)
+					/obj/item/bodypart/r_arm/zizombie, /obj/item/bodypart/r_leg/zizombie, /obj/item/bodypart/l_leg/zizombie, /obj/item/bodypart/mouth)
 	rot_type = /datum/component/rot/corpse/zizombie
 	ambushable = FALSE
 	base_intents = list(INTENT_HELP, INTENT_DISARM, INTENT_GRAB, /datum/intent/unarmed/claw, /datum/intent/simple/bite, /datum/intent/kick)
-	possible_rmb_intents = list()
 
 /mob/living/carbon/human/species/zizombie/npc
 	ai_controller = /datum/ai_controller/human_npc
@@ -30,7 +29,7 @@
 /mob/living/carbon/human/species/zizombie/ambush/after_creation()
 	..()
 	AddComponent(/datum/component/ai_aggro_system)
-	job = "Ambush zizombie"
+	job = "Ambush zombie"
 	AddComponent(/datum/component/combat_noise, list("rage" = 1, "scream" = 1))
 	ADD_TRAIT(src, TRAIT_NOMOOD, TRAIT_GENERIC)
 	ADD_TRAIT(src, TRAIT_NOHUNGER, TRAIT_GENERIC)
@@ -51,6 +50,8 @@
 	dismemberable = 1
 /obj/item/bodypart/l_leg/zizombie
 	dismemberable = 1
+/obj/item/bodypart/head/zizombie
+	sellprice = 5
 
 /obj/item/bodypart/head/zizombie/update_icon_dropped()
 	return
@@ -61,8 +62,6 @@
 /obj/item/bodypart/head/zizombie/skeletonize()
 	. = ..()
 	icon_state = "zizombie_head_s"
-	headprice = 2
-	sellprice = 2
 
 /mob/living/carbon/human/species/zizombie/update_body()
 	remove_overlay(BODY_LAYER)
@@ -99,16 +98,21 @@
 	. = ..()
 	addtimer(CALLBACK(src, PROC_REF(after_creation)), 1 SECONDS)
 
+/datum/attribute_holder/sheet/job/zizombie
+	raw_attribute_list = list(
+		/datum/attribute/skill/combat/polearms = 20,
+		/datum/attribute/skill/combat/swords = 20,
+		/datum/attribute/skill/combat/wrestling = 20,
+		/datum/attribute/skill/combat/unarmed = 20,
+		/datum/attribute/skill/combat/knives = 20,
+		/datum/attribute/skill/combat/axesmaces = 20,
+	)
+
 /mob/living/carbon/human/species/zizombie/proc/configure_mind()
 	if(!mind)
 		mind = new /datum/mind(src)
+	attributes?.add_sheet(/datum/attribute_holder/sheet/job/zizombie)
 
-	adjust_skillrank(/datum/skill/combat/polearms, 3, TRUE)
-	adjust_skillrank(/datum/skill/combat/swords, 3, TRUE)
-	adjust_skillrank(/datum/skill/combat/wrestling, 3, TRUE)
-	adjust_skillrank(/datum/skill/combat/unarmed, 3, TRUE)
-	adjust_skillrank(/datum/skill/combat/knives, 3, TRUE)
-	adjust_skillrank(/datum/skill/combat/axesmaces, 3, TRUE)
 
 /mob/living/carbon/human/species/zizombie/after_creation()
 	..()
@@ -119,8 +123,6 @@
 		if(headdy)
 			headdy.icon = 'icons/roguetown/mob/monster/zizombie.dmi'
 			headdy.icon_state = "[src.dna.species.id]_head"
-			headdy.headprice = rand(15,40)
-			headdy.sellprice = rand(15,40)
 	src.grant_language(/datum/language/common)
 	var/obj/item/organ/eyes/eyes = src.getorganslot(ORGAN_SLOT_EYES)
 	if(eyes)
@@ -129,15 +131,15 @@
 	eyes = new /obj/item/organ/eyes/night_vision/nightmare
 	eyes.Insert(src)
 	src.underwear = "Nude"
-	if(src.charflaw)
-		QDEL_NULL(src.charflaw)
+	if(length(quirks))
+		clear_quirks()
 	update_body()
 	faction = list(FACTION_UNDEAD)
 	var/turf/turf = get_turf(src)
 	if(SSterrain_generation.get_island_at_location(turf))
 		faction |= "islander"
-	name = "zizombie"
-	real_name = "zizombie"
+	name = "zombie"
+	real_name = "zombie"
 	mob_biotypes |= MOB_UNDEAD
 	ADD_TRAIT(src, TRAIT_NOSTAMINA, TRAIT_GENERIC)
 	ADD_TRAIT(src, TRAIT_HEAVYARMOR, TRAIT_GENERIC)
@@ -152,7 +154,7 @@
 //			equipOutfit(O)
 
 /datum/species/zizombie
-	name = "zizombie"
+	name = "zombie"
 	id = SPEC_ID_ZIZOMBIE
 	species_traits = list()
 	inherent_traits = list(TRAIT_RESISTCOLD,TRAIT_RESISTHIGHPRESSURE,TRAIT_RESISTLOWPRESSURE,TRAIT_RADIMMUNE)
@@ -160,7 +162,7 @@
 	sexes = 1
 	damage_overlay_type = "human"
 	changesource_flags = WABBAJACK
-	var/raceicon = "zizombie"
+	var/raceicon = "zombie"
 	exotic_bloodtype = /datum/blood_type/human/corrupted/zizombie
 
 /datum/species/zizombie/update_damage_overlays(mob/living/carbon/human/H)
@@ -187,8 +189,8 @@
 		amt2add = ((world.time - last_process)/10) * amt2add
 	last_process = world.time
 	amount += amt2add
-	if(has_world_trait(/datum/world_trait/pestra_mercy))
-		amount -= (is_ascendant(PESTRA) ? 2.5 : 5) * time_elapsed
+	if(has_world_trait(/datum/world_trait/erdl_mercy))
+		amount -= (is_ascendant(ERDL) ? 2.5 : 5) * time_elapsed
 
 	var/mob/living/carbon/C = parent
 	if(!C)
@@ -208,7 +210,7 @@
 			if(!B.rotted)
 				B.rotted = TRUE
 				should_update = TRUE
-			if(B.rotted && amount < 16 MINUTES && !(FACTION_MATTHIOS in C.faction))
+			if(B.rotted && amount < 16 MINUTES && !(FACTION_DECEIVERS in C.faction))
 				var/turf/open/T = C.loc
 				if(istype(T))
 					T.pollute_turf(/datum/pollutant/rot, 4)
@@ -233,12 +235,16 @@
 	flee_in_pain = FALSE
 	wander = TRUE
 
+/datum/attribute_holder/sheet/job/zizombie/peasant
+	raw_attribute_list = list(
+		STAT_STRENGTH = -1,
+		STAT_SPEED = -3,
+		STAT_ENDURANCE = 6
+	)
+
 /datum/outfit/species/zizombie/npc/peasant/pre_equip(mob/living/carbon/human/H)
 	..()
-	H.base_strength = 9
-	H.base_speed = 7
-	H.base_constitution = 10
-	H.base_endurance = 16//the zombies shouldn't get tired after all
+	H.attributes?.add_sheet(/datum/attribute_holder/sheet/job/zizombie/peasant)
 	H.recalculate_stats(FALSE)
 
 	shirt = /obj/item/clothing/shirt/undershirt/colored/vagrant
@@ -314,13 +320,15 @@
 	flee_in_pain = FALSE
 	wander = TRUE
 
+/datum/attribute_holder/sheet/job/zizombie/warrior
+	raw_attribute_list = list(
+		STAT_SPEED = -3,
+		STAT_ENDURANCE = 6
+	)
+
 /datum/outfit/species/zizombie/npc/warrior/pre_equip(mob/living/carbon/human/H)
 	..()
-	H.base_strength = 10
-	H.base_speed = 7
-	H.base_constitution = 10
-	H.base_endurance = 16//the zizombies shouldn't get tired after all
-	H.recalculate_stats(FALSE)
+	H.attributes?.add_sheet(/datum/attribute_holder/sheet/job/zizombie/warrior)
 
 	var/loadout = rand(1,6)
 	switch(loadout)
@@ -402,11 +410,7 @@
 
 /datum/outfit/species/zizombie/npc/militiamen/pre_equip(mob/living/carbon/human/H)
 	..()
-	H.base_strength = 10
-	H.base_speed = 7
-	H.base_constitution = 10
-	H.base_endurance = 16//the zizombies shouldn't get tired after all
-	H.recalculate_stats(FALSE)
+	H.attributes?.add_sheet(/datum/attribute_holder/sheet/job/zizombie/warrior)
 	var/loadout = rand(1,5)
 	switch(loadout)
 		if(1) //zizombie Warrior
@@ -480,75 +484,77 @@
 
 
 
+/datum/attribute_holder/sheet/job/zizombie/grenzel
+	raw_attribute_list = list(
+		STAT_STRENGTH = 2,
+		STAT_SPEED = -3,
+		STAT_ENDURANCE = 10
+	)
 
 /datum/outfit/species/zizombie/npc/GRENZEL/pre_equip(mob/living/carbon/human/H)
 	..()
-	H.base_strength = 12
-	H.base_speed = 7
-	H.base_constitution = 10
-	H.base_endurance = 20//the zizombies shouldn't get tired after all
-	H.recalculate_stats(FALSE)
+	H.attributes?.add_sheet(/datum/attribute_holder/sheet/job/zizombie/grenzel)
 	var/loadout = rand(1,5)
 	switch(loadout)
 		if(1) //zizombie Warrior
 			r_hand = /obj/item/weapon/sword/long/greatsword/zwei
-			pants = /obj/item/clothing/pants/grenzelpants
+			pants = /obj/item/clothing/pants/sterkenstadten
 			shoes = /obj/item/clothing/shoes/boots/armor/light
-			gloves = /obj/item/clothing/gloves/angle/grenzel
+			gloves = /obj/item/clothing/gloves/angle/sterkenstadten
 			belt = /obj/item/storage/belt/leather
-			shirt = /obj/item/clothing/shirt/grenzelhoft
+			shirt = /obj/item/clothing/shirt/sterkenstadten
 			head = /obj/item/clothing/head/helmet/kettle
 			neck = /obj/item/clothing/neck/chaincoif
-			armor = /obj/item/clothing/armor/cuirass/grenzelhoft
+			armor = /obj/item/clothing/armor/cuirass/sterkenstadten
 			backl = /obj/item/storage/backpack/satchel
 			wrists = /obj/item/clothing/wrists/bracers/leather
 		if(2) //zizombie Warrior
 			r_hand = /obj/item/weapon/polearm/halberd
-			pants = /obj/item/clothing/pants/grenzelpants
+			pants = /obj/item/clothing/pants/sterkenstadten
 			shoes = /obj/item/clothing/shoes/boots/armor/light
-			gloves = /obj/item/clothing/gloves/angle/grenzel
+			gloves = /obj/item/clothing/gloves/angle/sterkenstadten
 			belt = /obj/item/storage/belt/leather
-			shirt = /obj/item/clothing/shirt/grenzelhoft
+			shirt = /obj/item/clothing/shirt/sterkenstadten
 			head = /obj/item/clothing/head/helmet/sallet
 			neck = /obj/item/clothing/neck/chaincoif
-			armor = /obj/item/clothing/armor/cuirass/grenzelhoft
+			armor = /obj/item/clothing/armor/cuirass/sterkenstadten
 			backl = /obj/item/storage/backpack/satchel
 			wrists = /obj/item/clothing/wrists/bracers/leather
 		if(3) //zizombie Warrior
 			r_hand = /obj/item/weapon/polearm/eaglebeak
-			pants = /obj/item/clothing/pants/grenzelpants
+			pants = /obj/item/clothing/pants/sterkenstadten
 			shoes = /obj/item/clothing/shoes/boots/armor/light
-			gloves = /obj/item/clothing/gloves/angle/grenzel
+			gloves = /obj/item/clothing/gloves/angle/sterkenstadten
 			belt = /obj/item/storage/belt/leather
-			shirt = /obj/item/clothing/shirt/grenzelhoft
+			shirt = /obj/item/clothing/shirt/sterkenstadten
 			head = /obj/item/clothing/head/helmet/sallet
 			neck = /obj/item/clothing/neck/chaincoif
-			armor = /obj/item/clothing/armor/cuirass/grenzelhoft
+			armor = /obj/item/clothing/armor/cuirass/sterkenstadten
 			backl = /obj/item/storage/backpack/satchel
 			wrists = /obj/item/clothing/wrists/bracers/leather
 		if(4) //zizombie Warrior
 			r_hand = /obj/item/weapon/sword/short/iron
 			l_hand = /obj/item/weapon/knife/dagger
-			pants = /obj/item/clothing/pants/grenzelpants
+			pants = /obj/item/clothing/pants/sterkenstadten
 			shoes = /obj/item/clothing/shoes/boots/armor/light
-			gloves = /obj/item/clothing/gloves/angle/grenzel
+			gloves = /obj/item/clothing/gloves/angle/sterkenstadten
 			belt = /obj/item/storage/belt/leather
-			shirt = /obj/item/clothing/shirt/grenzelhoft
+			shirt = /obj/item/clothing/shirt/sterkenstadten
 			head = /obj/item/clothing/head/helmet/sallet
 			neck = /obj/item/clothing/neck/chaincoif
-			armor = /obj/item/clothing/armor/cuirass/grenzelhoft
+			armor = /obj/item/clothing/armor/cuirass/sterkenstadten
 			backl = /obj/item/storage/backpack/satchel
 			wrists = /obj/item/clothing/wrists/bracers/leather
 		if(5) //zizombie Warrior
 			r_hand = /obj/item/weapon/axe/battle
-			pants = /obj/item/clothing/pants/grenzelpants
+			pants = /obj/item/clothing/pants/sterkenstadten
 			shoes = /obj/item/clothing/shoes/boots/armor/light
-			gloves = /obj/item/clothing/gloves/angle/grenzel
+			gloves = /obj/item/clothing/gloves/angle/sterkenstadten
 			belt = /obj/item/storage/belt/leather
-			shirt = /obj/item/clothing/shirt/grenzelhoft
+			shirt = /obj/item/clothing/shirt/sterkenstadten
 			head = /obj/item/clothing/head/helmet/sallet
 			neck = /obj/item/clothing/neck/chaincoif
-			armor = /obj/item/clothing/armor/cuirass/grenzelhoft
+			armor = /obj/item/clothing/armor/cuirass/sterkenstadten
 			backl = /obj/item/storage/backpack/satchel
 			wrists = /obj/item/clothing/wrists/bracers/leather
 

@@ -24,7 +24,7 @@
 
 /obj/item/explosive/canister_bomb
 	name = "Canister Bomb"
-	desc = "A professional Grenzelhoftian explosive, filled with lead shrapnel and sticky blastpowder. This specific grenade design was recently declassified, being left over from the first Grenzelhoft-Rosewood war."
+	desc = "A professional Geramorean explosive, filled with lead shrapnel and sticky blastpowder. This specific grenade design was recently declassified, being left over from one of the countless wars in the Scars."
 	icon_state = "canbomb"
 	icon = 'icons/obj/bombs.dmi'
 	w_class = WEIGHT_CLASS_NORMAL
@@ -33,6 +33,7 @@
 	grid_height = 64
 	grid_width = 32
 	impact_explode = FALSE
+	item_weight = 1.7 KILOGRAMS
 
 	prob2fail = 5
 

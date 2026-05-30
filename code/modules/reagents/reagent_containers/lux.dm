@@ -24,8 +24,9 @@
 	. = 1
 
 /datum/reagent/lux/on_mob_life(mob/living/carbon/M)
-	if(M.has_flaw(/datum/charflaw/addiction/junkie))
-		M.sate_addiction()
+	SEND_SIGNAL(src, COMSIG_DRUG_INDULGE)
+	if(M.has_quirk(/datum/quirk/vice/junkie))
+		M.sate_addiction(/datum/quirk/vice/junkie)
 	if(M.has_status_effect(/datum/status_effect/debuff/lux_drained))
 		M.remove_status_effect(/datum/status_effect/debuff/lux_drained)
 		addtimer(CALLBACK(M, TYPE_PROC_REF(/mob/living, apply_status_effect), /datum/status_effect/debuff/lux_drained), 5 MINUTES)
@@ -39,14 +40,14 @@
 
 /obj/item/reagent_containers/lux/pragmas
 	name = "luxus pragmas"
-	desc = "The Divine Essence that Eora gifted to Graggar and told him to make a female companion with.\
-			He was supposed to make a beautiful and courageous wife from it, is what Eora had hoped he would do.\
-			Instead, Graggar created the Broodmother who would in turn spawn his armies. Eora was heartbroken and furious.\
+	desc = "The Divine Essence that Pomette gifted to Archdevil and told him to make a female companion with.\
+			He was supposed to make a beautiful and courageous wife from it, is what Pomette had hoped he would do.\
+			Instead, Archdevil created the Broodmother who would in turn spawn his armies. Pomette was heartbroken and furious.\
 			Use this in hand to acquire charming power."
 	icon = 'icons/obj/broodmother_32x.dmi'
 	icon_state = "broodmother_lux"
 
-/obj/item/reagent_containers/lux/pragmas/attack_self(mob/user, params)
+/obj/item/reagent_containers/lux/pragmas/attack_self(mob/user, list/modifiers)
 	. = ..()
 	var/datum/action/cooldown/spell/pragmas_charm/charm = new()
 	charm.Grant(user)
@@ -154,8 +155,9 @@
 	. = 1
 
 /datum/reagent/lux_tainted/on_mob_life(mob/living/carbon/M)
-	if(M.has_flaw(/datum/charflaw/addiction/junkie))
-		M.sate_addiction()
+
+	if(M.has_quirk(/datum/quirk/vice/junkie))
+		M.sate_addiction(/datum/quirk/vice/junkie)
 	if(M.has_status_effect(/datum/status_effect/debuff/lux_drained))
 		to_chat(M, span_green("This tastes awful, it won't help me feel my soul again.."))
 	if(M.has_status_effect(/datum/status_effect/debuff/flaw_lux_taken))

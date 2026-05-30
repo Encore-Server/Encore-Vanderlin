@@ -44,6 +44,7 @@
 	sellprice = 10
 	salvage_result = /obj/item/natural/hide/cured
 	salvage_amount = 1
+	wetable = FALSE
 
 /obj/item/clothing/shoes/apothboots
 	name = "apothecary boots"
@@ -53,6 +54,7 @@
 	item_state = "apothboots"
 	armor = list("blunt" = 15, "slash" = 15, "stab" = 15,  "piercing" = 5, "fire" = 0, "acid" = 0)
 	sellprice = 10
+	wetable = FALSE
 
 /obj/item/clothing/shoes/simpleshoes
 	name = "shoes"
@@ -60,7 +62,6 @@
 	gender = PLURAL
 	icon_state = "simpleshoe"
 	item_state = "simpleshoe"
-	resistance_flags = null
 	color = CLOTHING_OLD_LEATHER
 	salvage_result = null
 
@@ -78,7 +79,6 @@
 	gender = PLURAL
 	icon_state = "simpleshoe"
 	item_state = "simpleshoe"
-	resistance_flags = null
 	color = CLOTHING_ASH_GREY
 	sellprice = 20
 
@@ -112,11 +112,12 @@
 
 /obj/item/clothing/shoes/shalal
 	name = "babouche"
-	desc = "Leather slippers of Zaladin origin."
+	desc = "Leather slippers of Qadirid origin."
 	gender = PLURAL
 	icon_state = "shalal"
 	item_state = "shalal"
 	sellprice = 15
+	wetable = FALSE
 
 /obj/item/clothing/shoes/tribal
 	name = "primative shoes"
@@ -129,23 +130,23 @@
 	name = "funny shoes"
 	desc = "Shoes typically worn by a Jester."
 	icon_state = "jestershoes"
-	resistance_flags = null
 	sellprice = 10
 
 /obj/item/clothing/shoes/jester/Initialize()
 	. = ..()
 	AddComponent(/datum/component/squeak, custom_sounds = list(SFX_JINGLE_BELLS), step_delay_override = 2, falloff_exponent = 20)
 
-/obj/item/clothing/shoes/rare/grenzelhoft
-	name = "grenzelhoft boots"
+/obj/item/clothing/shoes/rare/sterkenstadten
+	name = "sterkenstadten boots"
 	icon_state = "grenzelboots"
 	item_state = "grenzelboots"
 	sleeved = 'icons/roguetown/clothing/onmob/helpers/stonekeep_merc.dmi'
 	armor = list("blunt" = 25, "slash" = 25, "stab" = 25,  "piercing" = 15, "fire" = 0, "acid" = 0)
 	sellprice = 20
+	wetable = FALSE
 
 /obj/item/clothing/shoes/otavan
-	name = "grenzelhoftian leather boots"
+	name = "aelondan leather boots"
 	desc = "Boots of outstanding craft, your fragile feet have never felt so protected and comfortable before."
 	body_parts_covered = FEET
 	icon_state = "fencerboots"
@@ -154,6 +155,7 @@
 	blocksound = SOFTHIT
 	max_integrity = 200
 	armor = ARMOR_LEATHER_GOOD
+	wetable = FALSE
 
 /obj/item/clothing/shoes/otavan/inqboots
 	name = "inquisitorial boots"
@@ -161,14 +163,34 @@
 	icon_state = "inqboots"
 	item_state = "inqboots"
 
-//Valorian Duelist Merc - On par with grenzelhoftian's stats.
+//Aelondan Duelist Merc - On par with grenzelhoftian's stats.
 /obj/item/clothing/shoes/nobleboot/duelboots
-	desc = "Boots custom fit for a Valorian Duelist. Footwork is paramount in a duel, so good boots are a must."
+	desc = "Boots custom fit for a Aelondan Duelist. Footwork is paramount in a duel, so good boots are a must."
 	armor = list("blunt" = 25, "slash" = 25, "stab" = 25,  "piercing" = 15, "fire" = 0, "acid" = 0)
 
-/obj/item/clothing/shoes/psydonboots
+/obj/item/clothing/shoes/angrosboots
 	name = "enduring boots"
 	desc = "A reliable pair of dark leather boots. Seems like they could endure the world!"
 	color = "#d5c2aa"
 	icon_state = "psydonboots"
 	item_state = "psydonboots"
+
+/obj/item/clothing/shoes/courtphysician
+	name = "sanguine shoes"
+	desc = "Leather shoes, the solemn tap of these bears grim news, or salvation."
+	icon_state = "docshoes"
+	item_state = "docshoes"
+	icon = 'icons/roguetown/clothing/courtphys.dmi'
+	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_courtphys.dmi'
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/courtphys.dmi'
+
+/obj/item/clothing/shoes/courtphysician/female
+	name = "sanguine heels"
+	desc = "Leather heels, the solemn tap of these bears grim news, or salvation."
+	icon_state = "docheels"
+	item_state = "docheels"
+	icon = 'icons/roguetown/clothing/courtphys.dmi'
+	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_courtphys.dmi'
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/courtphys.dmi'
+	detail_tag = "_detail"
+	uses_lord_coloring = LORD_PRIMARY

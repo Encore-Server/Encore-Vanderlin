@@ -10,7 +10,7 @@
 	. = ..()
 
 /obj/structure/flora/ocean_plants
-	name = "abyssor plants"
+	name = "abyssal plants"
 	desc = ""
 	icon = 'icons/delver/abyss_objects.dmi'
 	icon_state = "clutter1"
@@ -47,6 +47,7 @@
 	desc = ""
 	icon = 'icons/obj/flora/ausflora.dmi'
 	icon_state = "firstbush_1"
+	max_integrity = 25
 
 /obj/structure/flora/ausbushes/Initialize()
 	if(icon_state == "firstbush_1")
@@ -146,6 +147,7 @@
 
 /obj/structure/flora/ausbushes/sparsegrass
 	icon_state = "sparsegrass_1"
+	max_integrity = 5
 
 /obj/structure/flora/ausbushes/sparsegrass/Initialize()
 	icon_state = "sparsegrass_[rand(1, 3)]"
@@ -153,6 +155,7 @@
 
 /obj/structure/flora/ausbushes/fullgrass
 	icon_state = "fullgrass_1"
+	max_integrity = 5
 
 /obj/structure/flora/ausbushes/fullgrass/Initialize()
 	icon_state = "fullgrass_[rand(1, 3)]"
@@ -262,14 +265,14 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/desert_window, 32)
 
 MAPPING_DIRECTIONAL_HELPERS(/obj/structure/desert_window/open, 32)
 
-/obj/structure/flora/astrata
-	name = "astrata"
+/obj/structure/flora/visires
+	name = "visires"
 	icon_state = "astrata1"
 	icon = 'icons/delver/desert_objects.dmi'
 	resistance_flags = FIRE_PROOF
 	density = TRUE
 
-/obj/structure/flora/astrata/Initialize()
+/obj/structure/flora/visires/Initialize()
 	. = ..()
 	icon_state = "astrata[rand(1,3)]"
 

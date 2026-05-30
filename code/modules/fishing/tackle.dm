@@ -23,6 +23,7 @@
 
 /obj/item/fishing/reel
 	attachtype = "reel"
+	item_weight = 234 GRAMS
 
 /obj/item/fishing/reel/twine
 	name = "twine fishing line"
@@ -46,7 +47,7 @@
 
 /obj/item/fishing/reel/deluxe
 	name = "deluxe fishing line"
-	desc = "Extremely sought after by seasoned fisherman, this fishing line was blessed by Abyssorians in their underwater temples. A perfect fishing line, if not for the cost."
+	desc = "Extremely sought after by seasoned fisherman, this fishing line was blessed by Nortics in their underwater temples. A perfect fishing line, if not for the cost."
 	icon_state = "deluxereel"
 	linehealth = 14
 	hookmod = 3

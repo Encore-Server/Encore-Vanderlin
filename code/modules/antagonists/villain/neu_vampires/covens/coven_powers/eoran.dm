@@ -1,16 +1,16 @@
-/datum/coven/eora
-	name = "Eoran Embrace"
+/datum/coven/pomette
+	name = "Pomettic Embrace"
 	desc = "Blessed by the Goddess of Love, Family, and Art, these vampires have developed powers that strengthen bonds, inspire beauty, and heal emotional wounds."
 	icon_state = "eora"
-	power_type = /datum/coven_power/eora
+	power_type = /datum/coven_power/pomette
 	max_level = 4
 
-/datum/coven_power/eora
-	name = "Eora power name"
-	desc = "Eora power desc"
+/datum/coven_power/pomette
+	name = "Pomette power name"
+	desc = "Pomette power desc"
 
 //EMPATHIC BOND
-/datum/coven_power/eora/empathic_bond
+/datum/coven_power/pomette/empathic_bond
 	name = "Empathic Bond"
 	desc = "Touch someone to sense their emotional state and immediate needs, making you obsessed with them for a short time."
 
@@ -21,7 +21,7 @@
 
 	cooldown_length = 10 SECONDS
 
-/datum/coven_power/eora/empathic_bond/activate(mob/living/target)
+/datum/coven_power/pomette/empathic_bond/activate(mob/living/target)
 	. = ..()
 	if(!ishuman(target))
 		to_chat(owner, span_warning("You can only sense the emotions of other people."))
@@ -64,7 +64,7 @@
 	owner.AddComponent(/datum/component/empathic_obsession, victim, 2 MINUTES)
 
 //ARTISTIC INSPIRATION
-/datum/coven_power/eora/artistic_inspiration
+/datum/coven_power/pomette/artistic_inspiration
 	name = "Artistic Inspiration"
 	desc = "Inspire others with divine creativity, enhancing their artistic abilities and mood."
 
@@ -76,7 +76,7 @@
 	cooldown_length = 30 SECONDS
 	duration_length = 5 MINUTES
 
-/datum/coven_power/eora/artistic_inspiration/activate(mob/living/target)
+/datum/coven_power/pomette/artistic_inspiration/activate(mob/living/target)
 	. = ..()
 	if(!ishuman(target))
 		to_chat(owner, span_warning("Only humans can receive artistic inspiration."))
@@ -98,13 +98,13 @@
 
 	addtimer(CALLBACK(src, PROC_REF(deactivate), inspired), duration_length)
 
-/datum/coven_power/eora/artistic_inspiration/deactivate(mob/living/carbon/human/target)
+/datum/coven_power/pomette/artistic_inspiration/deactivate(mob/living/carbon/human/target)
 	. = ..()
 	target.remove_overlay(MUTATIONS_LAYER)
 	to_chat(target, span_info("The divine inspiration fades, but the memory of it remains."))
 
 //FAMILIAL BOND
-/datum/coven_power/eora/familial_bond
+/datum/coven_power/pomette/familial_bond
 	name = "Familial Bond"
 	desc = "Create a temporary spiritual connection between two people, allowing them to sense each other's location and well-being."
 
@@ -112,11 +112,12 @@
 	check_flags = COVEN_CHECK_CONSCIOUS | COVEN_CHECK_CAPABLE | COVEN_CHECK_SPEAK
 	target_type = TARGET_LIVING | TARGET_HUMAN
 	range = 5
+	violates_masquerade = TRUE
 
 	cooldown_length = 60 SECONDS
 	duration_length = 10 MINUTES
 
-/datum/coven_power/eora/familial_bond/activate(mob/living/target)
+/datum/coven_power/pomette/familial_bond/activate(mob/living/target)
 	. = ..()
 	if(!ishuman(target))
 		to_chat(owner, span_warning("You can only bond with other people."))
@@ -139,18 +140,19 @@
 	second_target.AddComponent(/datum/component/familial_bond, bonded, duration_length)
 
 //BEAUTY'S RESTORATION
-/datum/coven_power/eora/beautys_restoration
+/datum/coven_power/pomette/beautys_restoration
 	name = "Beauty's Restoration"
-	desc = "Channel Eora's power to restore physical beauty and heal disfigurements."
+	desc = "Channel Pomette's power to restore physical beauty and heal disfigurements."
 
 	level = 4
 	check_flags = COVEN_CHECK_CONSCIOUS | COVEN_CHECK_CAPABLE | COVEN_CHECK_FREE_HAND
 	target_type = TARGET_LIVING | TARGET_HUMAN | TARGET_SELF
 	range = 1
+	violates_masquerade = TRUE
 
 	cooldown_length = 90 SECONDS
 
-/datum/coven_power/eora/beautys_restoration/activate(mob/living/target)
+/datum/coven_power/pomette/beautys_restoration/activate(mob/living/target)
 	. = ..()
 	if(!ishuman(target))
 		to_chat(owner, span_warning("You can only restore the beauty of people."))
@@ -158,7 +160,7 @@
 
 	var/mob/living/carbon/human/patient = target
 
-	to_chat(owner, span_notice("You channel Eora's restorative power into [patient]."))
+	to_chat(owner, span_notice("You channel Pomette's restorative power into [patient]."))
 	to_chat(patient, span_purple("You feel divine energy coursing through you, restoring your natural beauty!"))
 
 	// Visual effect
@@ -175,25 +177,25 @@
 	addtimer(CALLBACK(src, PROC_REF(deactivate), patient), 3 SECONDS)
 	owner.AddComponent(/datum/component/empathic_obsession, patient, 5 MINUTES)
 
-/datum/coven_power/eora/beautys_restoration/deactivate(mob/living/carbon/human/target)
+/datum/coven_power/pomette/beautys_restoration/deactivate(mob/living/carbon/human/target)
 	. = ..()
 	target.remove_overlay(MUTATIONS_LAYER)
 
 // Helper mood events (these would need to be defined in your mood system)
 /datum/stress_event/artistic_inspiration
 	desc = "I feel divinely inspired to create something beautiful!"
-	stress_change = 3
+	stress_change = -3
 	timer = 5 MINUTES
 	quality_modifier = 4
 
 /datum/stress_event/beautiful
 	desc = "I feel beautiful and radiant!"
-	stress_change = 2
+	stress_change = -2
 	timer = 10 MINUTES
 
 /datum/stress_event/divine_love
 	desc = "I felt touched by divine love and compassion."
-	stress_change = 4
+	stress_change = -4
 	timer = 15 MINUTES
 
 /datum/component/familial_bond
@@ -391,12 +393,12 @@
 
 /datum/stress_event/bond_death
 	desc = "Someone I was bonded with has died. I feel empty inside."
-	stress_change = -6
+	stress_change = 6
 	timer = 30 MINUTES
 
 /datum/stress_event/bond_ended
 	desc = "A familial bond has ended, but I feel grateful for the connection we shared."
-	stress_change = 1
+	stress_change = -1
 	timer = 10 MINUTES
 
 /datum/component/empathic_obsession
@@ -627,50 +629,50 @@
 
 /datum/stress_event/empathic_bond_formed
 	desc = "I feel a deep emotional connection with someone special."
-	stress_change = 3
+	stress_change = -3
 	timer = 30 MINUTES
 
 /datum/stress_event/obsession_target_hurt
 	desc = "Someone I care deeply about is hurt! I feel their pain."
-	stress_change = -4
+	stress_change = 4
 	timer = 10 MINUTES
 
 /datum/stress_event/obsession_target_healed
 	desc = "I feel relief knowing someone important to me is recovering."
-	stress_change = 2
+	stress_change = -2
 	timer = 5 MINUTES
 
 /datum/stress_event/separation_anxiety
 	desc = "I feel anxious being away from someone I'm emotionally connected to."
-	stress_change = -3
+	stress_change = 3
 	timer = 0 // Persistent while active
 
 /datum/stress_event/proximity_comfort
 	desc = "I feel calm and comfortable being near someone I care about."
-	stress_change = 2
+	stress_change = -2
 	timer = 5 MINUTES
 
 /datum/stress_event/obsession_panic
 	desc = "I'm overwhelmed with panic about someone's safety!"
-	stress_change = -6
+	stress_change = 6
 	timer = 0 // Persistent while active
 
 /datum/stress_event/crisis_relief
 	desc = "I feel intense relief that a crisis has passed."
-	stress_change = 4
+	stress_change = -4
 	timer = 15 MINUTES
 
 /datum/stress_event/obsession_death
 	desc = "Someone I was deeply connected to has died. I feel devastated."
-	stress_change = -8
+	stress_change = 8
 	timer = 60 MINUTES
 
 /datum/stress_event/obsession_revival
 	desc = "Someone precious to me has returned to life! I feel overwhelming joy!"
-	stress_change = 6
+	stress_change = -6
 	timer = 30 MINUTES
 
 /datum/stress_event/obsession_ended
 	desc = "An intense emotional connection has faded, but I remember it fondly."
-	stress_change = 1
+	stress_change = -1
 	timer = 10 MINUTES

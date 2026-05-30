@@ -6,15 +6,15 @@
 
 	spell_type = SPELL_MIRACLE
 	antimagic_flags = MAGIC_RESISTANCE_HOLY
-	associated_skill = /datum/skill/magic/holy
-	required_items = list(/obj/item/clothing/neck/psycross/silver/necra)
+	associated_skill = /datum/attribute/skill/magic/holy
+	required_items = list(/obj/item/clothing/neck/psycross/silver/divine/valdala)
 
-	invocation = "Undermaiden, guide my hand to those who have lost their way."
+	invocation = "Blessed angel, guide my hand to those who have lost their way."
 	invocation_type = INVOCATION_WHISPER
 
 	charge_required = FALSE
-	cooldown_time = 60 SECONDS
-	spell_cost = 50
+	cooldown_time = 30 SECONDS
+	spell_cost = 15
 
 /datum/action/cooldown/spell/undirected/locate_dead/cast(atom/cast_on)
 	. = ..()
@@ -42,13 +42,13 @@
 		corpses[corpse_name] = C
 
 	if(!length(corpses))
-		to_chat(owner, span_warning("The Undermaiden's grasp lets slip."))
+		to_chat(owner, span_warning("The war's grasp lets slip."))
 		return .
 
 	var/mob/selected = browser_input_list(owner, "Which body shall I seek?", "Available Bodies", corpses)
 
 	if(QDELETED(src) || QDELETED(owner) || QDELETED(corpses[selected]) || !can_cast_spell())
-		to_chat(owner, span_warning("The Undermaiden's grasp lets slip."))
+		to_chat(owner, span_warning("The war's grasp lets slip."))
 		return .
 
 	var/corpse = corpses[selected]
@@ -73,4 +73,4 @@
 		if(SOUTHWEST)
 			direction_name = "southwest"
 
-	to_chat(owner, span_notice("The Undermaiden pulls on your hand, guiding you [direction_name]."))
+	to_chat(owner, span_notice("The angel of death pulls on your hand, guiding you [direction_name]."))

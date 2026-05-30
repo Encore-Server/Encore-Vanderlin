@@ -5,7 +5,7 @@ GLOBAL_LIST_EMPTY(last_words)
 	if(stat != DEAD)
 		death(TRUE)
 
-	playsound(src.loc, pick('sound/combat/gib (1).ogg','sound/combat/gib (2).ogg'), 200, FALSE, 3)
+	playsound(src, pick('sound/combat/gib (1).ogg','sound/combat/gib (2).ogg'), 200, FALSE, 3)
 
 	if(!prev_lying)
 		gib_animation()
@@ -37,8 +37,6 @@ GLOBAL_LIST_EMPTY(last_words)
 	return
 
 /mob/living/dust(just_ash, drop_items, force)
-	death(TRUE)
-
 	spill_embedded_objects()
 
 	if(drop_items)
@@ -47,9 +45,12 @@ GLOBAL_LIST_EMPTY(last_words)
 	if(buckled)
 		buckled.unbuckle_mob(src, force = TRUE)
 
-	dust_animation()
+	death(TRUE)
 	spawn_dust(just_ash)
-	QDEL_IN(src,5) // since this is sometimes called in the middle of movement, allow half a second for movement to finish, ghosting to happen and animation to play. Looks much nicer and doesn't cause multiple runtimes.
+
+	if(!QDELETED(src))
+		invisibility = INVISIBILITY_MAXIMUM
+		QDEL_IN(src, 0.5 SECONDS) // since this is sometimes called in the middle of movement, allow half a second for movement to finish, ghosting to happen and animation to play. Looks much nicer and doesn't cause multiple runtimes.
 
 /mob/living/proc/dust_animation()
 	return
@@ -80,7 +81,6 @@ GLOBAL_LIST_EMPTY(last_words)
 	else
 		src.playsound_local(src, 'sound/misc/deth.ogg', 100)
 
-	set_drugginess(0)
 	set_disgust(0)
 	SetSleeping(0)
 	reset_perspective(null)
@@ -103,10 +103,14 @@ GLOBAL_LIST_EMPTY(last_words)
 		H.Fade()
 		MOBTIMER_SET(src, MT_LASTDIED)
 		addtimer(CALLBACK(H, TYPE_PROC_REF(/atom/movable/screen/gameover, Fade), TRUE), 100)
+		remove_client_colour(/datum/client_colour/monochrome/death)
 		add_client_colour(/datum/client_colour/monochrome/death)
-		client?.verbs |= /client/proc/descend
 		if(last_words)
 			GLOB.last_words |= last_words
+
+	if(lastattacker_weakref)
+		var/mob/attacker = lastattacker_weakref.resolve()
+		SEND_SIGNAL(attacker, COMSIG_LIVING_COMBAT_KILL, src)
 
 	for(var/datum/soullink/S as anything in ownedSoullinks)
 		S.ownerDies(gibbed)
@@ -127,10 +131,10 @@ GLOBAL_LIST_EMPTY(last_words)
 				if (player.stat == DEAD || isbrain(player))
 					continue
 				if (HAS_TRAIT(player, TRAIT_DEATHSIGHT))
-					if (HAS_TRAIT(player, TRAIT_CABAL) || istype(player.patron, /datum/patron/inhumen/zizo))
+					if (HAS_TRAIT(player, TRAIT_CABAL) || istype(player.patron, /datum/patron/inhumen/envy))
 						to_chat(player, span_warning("I feel the faint passage of disjointed life essence as it flees [locale]."))
 					else
-						to_chat(player, span_warning("Veiled whispers herald the Undermaiden's gaze in my mind's eye as it turns towards [locale] for but a brief, singular moment."))
+						to_chat(player, span_warning("Veiled whispers herald the Valkyrie's gaze in my mind's eye as it turns towards [locale] for but a brief, singular moment."))
 
 	return TRUE
 
@@ -139,19 +143,19 @@ GLOBAL_LIST_EMPTY(last_words)
 	var/area_of_death = lowertext(get_area_name(src))
 	var/locale = "a locale wreathed in enigmatic fog"
 	switch (area_of_death) // we're deliberately obtuse with this.
-		if ("mountains", "mt decapitation", "malum's anvil forest", "malum's anvil under lower caves", "malum's anvil cave building", "malum's anvil lower dungeon", "malum's anvil surface building", "malum's anvil hidden grove", "malum's anvil peak")
+		if ("mountains", "mt decapitation", "goler kanh's pedestal forest", "goler kanh's pedestal under lower caves", "goler kanh's pedestal cave building", "goler kanh's pedestal lower dungeon", "goler kanh's pedestal surface building", "goler kanh's pedestal hidden grove", "goler kanh's pedestal peak")
 			locale = "a twisted tangle of dense rocks and rivers of lava"
 		if ("wilderness", "azure basin")
 			locale = "somewhere in the wilds"
 		if ("the bog", "bog", "dense bog", "latejoin cave")
 			locale = "a wretched, fetid bog"
 		if ("coast", "coastforest", "river")
-			locale = "somewhere betwixt Abyssor's realm and Dendor's bounty"
+			locale = "somewhere betwixt Mjallidhorn's realm and Gani's bounty"
 		if ("indoors", "shop", "physician", "outdoors", "roofs", "manor", "wizard's tower", "garrison","village garrison", "dungeon cell", "baths", "tavern", "basement")
-			locale = "the city of [SSmapping.config.map_name] and all its bustling souls"
+			locale = "the town of [SSmapping.config.map_name] and all its bustling souls"
 		if ("sewers")
-			locale = "somwhere under the city of [SSmapping.config.map_name] and all its bustling souls"
+			locale = "somwhere under the town of [SSmapping.config.map_name] and all its bustling souls"
 		if ("church")
-			locale = "a hallowed place, sworn to the Ten" // special bit for the church since it's sacred ground
+			locale = "a hallowed place, sworn to the Aspects" // special bit for the church since it's sacred ground
 
 	return locale

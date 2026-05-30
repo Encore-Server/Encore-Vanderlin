@@ -8,7 +8,7 @@
 	min_players = 35
 
 	tags = list(
-		TAG_NOC,
+		TAG_AKAN,
 		TAG_WORK,
 	)
 
@@ -22,7 +22,7 @@
 	for(var/mob/living/carbon/human/H in GLOB.player_list)
 		if(!istype(H) || H.stat == DEAD || !H.client)
 			continue
-		if(!H.patron || !istype(H.patron, /datum/patron/divine/noc))
+		if(!H.patron || !istype(H.patron, /datum/patron/divine/akan))
 			continue
 		if(length(H.return_apprentices()) >= H.return_max_apprentices())
 			continue
@@ -31,7 +31,7 @@
 	for(var/mob/living/carbon/human/H in GLOB.player_list)
 		if(!istype(H) || H.stat == DEAD || !H.client)
 			continue
-		if((H.age == AGE_CHILD || (H.job == "Beggar" && istype(H.mind?.assigned_role, /datum/job/vagrant))) && !H.is_apprentice())
+		if((H.age == AGE_CHILD || (H.job == JOB_BEGGAR && istype(H.mind?.assigned_role, /datum/job/vagrant))) && !H.is_apprentice())
 			potential_apprentices++
 
 	if(recipient_found && potential_apprentices >= 3)
@@ -46,7 +46,7 @@
 	for(var/mob/living/carbon/human/H in GLOB.player_list)
 		if(!istype(H) || H.stat == DEAD || !H.client)
 			continue
-		if(!H.patron || !istype(H.patron, /datum/patron/divine/noc))
+		if(!H.patron || !istype(H.patron, /datum/patron/divine/akan))
 			continue
 		if(length(H.return_apprentices()) >= H.return_max_apprentices())
 			continue
@@ -54,7 +54,7 @@
 	for(var/mob/living/carbon/human/H in GLOB.player_list)
 		if(!istype(H) || H.stat == DEAD || !H.client)
 			continue
-		if((H.age == AGE_CHILD || (H.job == "Beggar" && istype(H.mind?.assigned_role, /datum/job/vagrant))) && !H.is_apprentice())
+		if((H.age == AGE_CHILD || (H.job == JOB_BEGGAR && istype(H.mind?.assigned_role, /datum/job/vagrant))) && !H.is_apprentice())
 			potential_apprentices++
 
 	if(!length(valid_targets) || potential_apprentices < 3)
@@ -65,8 +65,8 @@
 	var/datum/objective/personal/get_apprentice/new_objective = new(owner = chosen_one.mind)
 	chosen_one.mind.add_personal_objective(new_objective)
 
-	to_chat(chosen_one, span_userdanger("YOU ARE NOC'S CHOSEN!"))
-	to_chat(chosen_one, span_notice("Noc wishes for you to pass your knowledge! Seek a suitable child or downtrodden and make them your new apprentice! (RMB on a target with an empty hand)"))
+	to_chat(chosen_one, span_userdanger("YOU ARE AKAN'S CHOSEN!"))
+	to_chat(chosen_one, span_notice("Akan wishes for you to pass your knowledge! Seek a suitable child or downtrodden and make them your new apprentice! (RMB on a target with an empty hand)"))
 	chosen_one.playsound_local(chosen_one, 'sound/ambience/noises/mystical (4).ogg', 100)
 
 	chosen_one.mind.announce_personal_objectives()

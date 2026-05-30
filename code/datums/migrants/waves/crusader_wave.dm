@@ -1,71 +1,77 @@
 /datum/migrant_role/inquisitor
 	name = "Episcopal Inquisitor"
-	greet_text = "These lands have forfeited Psydon and the Ten. You have come to restore the True faith to these people and tear out the rot festering within."
+	greet_text = "These lands have forfeited the Elementals. You have come to restore the True faith to these people and tear out the rot festering within."
 	migrant_job = /datum/job/migrant/specialinquisitor
+
+/datum/attribute_holder/sheet/job/migrant/specialinquisitor
+	raw_attribute_list = list(
+		STAT_INTELLIGENCE = 2,
+		STAT_STRENGTH = 1,
+		STAT_PERCEPTION = 2,
+		STAT_SPEED = 2,
+		STAT_ENDURANCE = 1,
+		/datum/attribute/skill/misc/sewing = 20,
+		/datum/attribute/skill/misc/medicine = 20,
+		/datum/attribute/skill/combat/unarmed = 20,
+		/datum/attribute/skill/combat/wrestling = 20,
+		/datum/attribute/skill/misc/reading = 30,
+		/datum/attribute/skill/combat/swords = 40,
+		/datum/attribute/skill/combat/crossbows = 30,
+		/datum/attribute/skill/misc/climbing = 40,
+		/datum/attribute/skill/misc/riding = 10,
+		/datum/attribute/skill/misc/athletics = 30,
+		/datum/attribute/skill/misc/swimming = 20,
+		/datum/attribute/skill/misc/lockpicking = 20,
+		/datum/attribute/skill/combat/firearms = 30,
+		/datum/attribute/skill/combat/knives = 30,
+		/datum/attribute/skill/labor/mathematics = 30,
+	)
 
 /datum/job/migrant/specialinquisitor
 	title = "Episcopal Inquisitor"
-	tutorial = "These lands have forfeited Psydon and the Ten. You have come to restore the True faith to these people and tear out the rot festering within."
+	tutorial = "These lands have forfeited the Elementals. You have come to restore the True faith to these people and tear out the rot festering within."
 	outfit = /datum/outfit/specialinquisitor
 	antag_role = /datum/antagonist/purishep
+	allowed_patrons = list(/datum/patron/angros)
 	allowed_races = list(SPEC_ID_HUMEN)
 	is_recognized = TRUE
+	exp_types_granted  = list(EXP_TYPE_COMBAT)
 
-	jobstats = list(
-		STATKEY_INT = 2,
-		STATKEY_STR = 1,
-		STATKEY_PER = 2,
-		STATKEY_SPD = 2,
-		STATKEY_END = 1,
-	)
-
-	skills = list(
-		/datum/skill/misc/sewing = 2,
-		/datum/skill/misc/medicine = 2,
-		/datum/skill/combat/unarmed = 2,
-		/datum/skill/combat/wrestling = 4,
-		/datum/skill/misc/reading = 3,
-		/datum/skill/combat/swords = 4,
-		/datum/skill/combat/crossbows = 3,
-		/datum/skill/misc/climbing = 4,
-		/datum/skill/misc/riding = 1,
-		/datum/skill/misc/athletics = 4,
-		/datum/skill/misc/swimming = 2,
-		/datum/skill/misc/lockpicking = 2,
-		/datum/skill/combat/firearms = 3,
-		/datum/skill/combat/knives = 3,
-		/datum/skill/labor/mathematics = 3,
-	)
+	attribute_sheet = /datum/attribute_holder/sheet/job/migrant/specialinquisitor
 
 	traits = list(
 		TRAIT_DODGEEXPERT,
 		TRAIT_STEELHEARTED,
-		TRAIT_NOBLE,
+		TRAIT_NOBLE_BLOOD,
+		TRAIT_NOBLE_POWER,
 		TRAIT_MEDIUMARMOR,
+		TRAIT_SILVER_BLESSED,
+		TRAIT_ANGROSIAN_GRIT,
+		TRAIT_ANGROSIAN,
+		TRAIT_INQUISITION,
 	)
 
-	languages = list(/datum/language/oldpsydonic)
+	languages = list(/datum/language/oldunsundered)
 
 /datum/job/migrant/specialinquisitor/after_spawn(mob/living/carbon/human/spawned, client/player_client)
 	. = ..()
-	spawned.set_patron(/datum/patron/psydon)
-	spawned.verbs |= /mob/living/carbon/human/proc/torture_victim
-	spawned.verbs |= /mob/living/carbon/human/proc/faith_test
+	add_verb(spawned, /mob/living/carbon/human/proc/torture_victim)
+	add_verb(spawned, /mob/living/carbon/human/proc/faith_test)
 	spawned.mind?.teach_crafting_recipe(/datum/repeatable_crafting_recipe/reading/confessional)
 	spawned.add_spell(/datum/action/cooldown/spell/undirected/call_bird/inquisitor)
 
 	var/datum/species/species = spawned.dna?.species
 	if(!species)
 		return
-	species.native_language = "Old Psydonic"
+	species.native_language = "Old Unsundered"
 	species.accent_language = species.get_accent(species.native_language)
 
 /datum/outfit/specialinquisitor
-	name = "Episcopal Inquisitor"
+	name = "Episcopal Inquisitor (Migrant Wave)"
 	wrists = /obj/item/clothing/neck/psycross/silver
 	neck = /obj/item/clothing/neck/bevor
 	shirt = /obj/item/clothing/shirt/undershirt/fancy
-	belt = /obj/item/storage/belt/leather/knifebelt/black/psydon
+	belt = /obj/item/storage/belt/leather/knifebelt/black/angros
 	shoes = /obj/item/clothing/shoes/otavan/inqboots
 	pants = /obj/item/clothing/pants/trou/leather
 	backr = /obj/item/storage/backpack/satchel
@@ -83,66 +89,73 @@
 
 /datum/migrant_role/crusader
 	name = "Episcopal Crusader"
-	greet_text = "Crusader of the true faith, you came from Grenzelhoft under the command of the Inquisitor. Obey them as they lead you to smite the heathens."
+	greet_text = "Crusader of the true faith, you came from the Katholikos under the command of the Inquisitor. Obey them as they lead you to smite the heathens."
 	migrant_job = /datum/job/migrant/inquisition_crusader
+
+/datum/attribute_holder/sheet/job/migrant/inquisition_crusader
+	raw_attribute_list = list(
+		STAT_ENDURANCE = 2,
+		STAT_CONSTITUTION = 2,
+		STAT_STRENGTH = 1,
+		/datum/attribute/skill/combat/crossbows = 20,
+		/datum/attribute/skill/combat/wrestling = 20,
+		/datum/attribute/skill/combat/unarmed = 30,
+		/datum/attribute/skill/combat/swords = 20,
+		/datum/attribute/skill/combat/knives = 20,
+		/datum/attribute/skill/combat/shields = 20,
+		/datum/attribute/skill/misc/swimming = 10,
+		/datum/attribute/skill/misc/climbing = 20,
+		/datum/attribute/skill/misc/riding = 40,
+		/datum/attribute/skill/misc/athletics = 30,
+		/datum/attribute/skill/misc/reading = 20,
+		/datum/attribute/skill/misc/sewing = 10,
+		/datum/attribute/skill/craft/cooking = 10,
+	)
 
 /datum/job/migrant/inquisition_crusader
 	title = "Episcopal Crusader"
-	tutorial = "Crusader of the true faith, you came from Grenzelhoft under the command of the Inquisitor. Obey them as they lead you to smite the heathens."
-	allowed_races = RACES_PLAYER_GRENZ
+	tutorial = "Crusader of the true faith, you came from the Katholikos under the command of the Inquisitor. Obey them as they lead you to smite the heathens."
+	allowed_races = RACES_PLAYER_GERAMOR
 	is_recognized = TRUE
+	allowed_patrons = list(/datum/patron/angros)
 	outfit = /datum/outfit/inquisition_crusader
+	exp_types_granted  = list(EXP_TYPE_COMBAT)
 
-	jobstats = list(
-		STATKEY_END = 2,
-		STATKEY_CON = 2,
-		STATKEY_STR = 1,
-	)
-
-	skills = list(
-		/datum/skill/combat/crossbows = 2,
-		/datum/skill/combat/wrestling = 3,
-		/datum/skill/combat/unarmed = 3,
-		/datum/skill/combat/swords = 2,
-		/datum/skill/combat/knives = 2,
-		/datum/skill/combat/shields = 2,
-		/datum/skill/misc/swimming = 1,
-		/datum/skill/misc/climbing = 2,
-		/datum/skill/misc/riding = 4,
-		/datum/skill/misc/athletics = 3,
-		/datum/skill/misc/reading = 2,
-		/datum/skill/misc/sewing = 1,
-		/datum/skill/craft/cooking = 1,
-	)
+	attribute_sheet = /datum/attribute_holder/sheet/job/migrant/inquisition_crusader
 
 	traits = list(
 		TRAIT_STEELHEARTED,
 		TRAIT_HEAVYARMOR,
+		TRAIT_SILVER_BLESSED,
+		TRAIT_ANGROSIAN_GRIT,
+		TRAIT_ANGROSIAN,
+		TRAIT_INQUISITION,
 	)
 
-	languages = list(/datum/language/oldpsydonic)
+	languages = list(/datum/language/oldunsundered)
 	cmode_music = 'sound/music/cmode/church/CombatInquisitor.ogg'
 	voicepack_m = /datum/voicepack/male/knight
 
 /datum/job/migrant/inquisition_crusader/after_spawn(mob/living/carbon/human/spawned, client/player_client)
 	. = ..()
 	if(spawned.gender == FEMALE)
-		spawned.adjust_skillrank(/datum/skill/combat/crossbows, 2)
-		spawned.adjust_skillrank(/datum/skill/combat/knives, 2)
+		spawned.adjust_skill_level(/datum/attribute/skill/combat/crossbows, 10)
+		spawned.adjust_skill_level(/datum/attribute/skill/combat/knives, 10)
 	else
-		spawned.adjust_skillrank(/datum/skill/combat/swords, 2)
-		spawned.adjust_skillrank(/datum/skill/combat/shields, 1)
+		spawned.adjust_skill_level(/datum/attribute/skill/combat/swords, 10)
+		spawned.adjust_skill_level(/datum/attribute/skill/combat/shields, 10)
 
-	spawned.set_patron(/datum/patron/psydon)
+	if(!istype(spawned.patron, /datum/patron/angros)) // don't overwrite extremist angros
+		spawned.set_patron(/datum/patron/angros)
 
 	var/datum/species/species = spawned.dna?.species
 	if(!species)
 		return
-	species.native_language = "Old Psydonic"
+	species.native_language = "Old Unsundered"
 	species.accent_language = species.get_accent(species.native_language)
 
 /datum/outfit/inquisition_crusader
-	name = "Episcopal Crusader"
+	name = "Episcopal Crusader (Migrant Wave)"
 	head = /obj/item/clothing/head/helmet/heavy/crusader
 	neck = /obj/item/clothing/neck/coif/cloth
 	armor = /obj/item/clothing/armor/chainmail/hauberk
@@ -165,7 +178,7 @@
 		head = /obj/item/clothing/head/helmet/heavy/crusader/t
 		cloak = /obj/item/clothing/cloak/stabard/crusader/t
 		backl = /obj/item/storage/backpack/satchel/black
-		backr = /obj/item/gun/ballistic/revolver/grenadelauncher/crossbow
+		backr = /obj/item/gun/ballistic/bow/cross
 		beltl = /obj/item/weapon/knife/dagger/silver
 		beltr = /obj/item/ammo_holder/quiver/bolts
 

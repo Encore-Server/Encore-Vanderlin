@@ -1,13 +1,13 @@
 /datum/action/cooldown/spell/undirected/beast_sense
 	name = "Beastial Senses"
-	desc = "Grants the Dendorite a keen sense of smell and excellent vision, to better hunt with."
+	desc = "Grants the Earthlings a keen sense of smell and excellent vision, to better hunt with."
 	button_icon_state = "bestialsense"
 	sound = 'sound/vo/smokedrag.ogg'
 
 	spell_type = SPELL_MIRACLE
 	antimagic_flags = MAGIC_RESISTANCE_HOLY
-	associated_skill = /datum/skill/magic/holy
-	required_items = list(/obj/item/clothing/neck/psycross/silver/dendor)
+	associated_skill = /datum/attribute/skill/magic/holy
+	required_items = list(/obj/item/clothing/neck/psycross/silver/divine/gani)
 	attunements = list(
 		/datum/attunement/earth = 0.5,
 	)
@@ -39,5 +39,5 @@
 /datum/action/cooldown/spell/undirected/beast_sense/proc/grant_status()
 	var/mob/living/carbon/C = owner
 	to_chat(C, span_greentext("A raven passes overhead... your prayer was heard!"))
-	playsound(get_turf(C), 'sound/vo/mobs/bird/CROW_01.ogg', 60, TRUE, -1)
+	playsound(C, 'sound/vo/mobs/bird/CROW_01.ogg', 60, TRUE, -1)
 	C.apply_status_effect(/datum/status_effect/buff/beastsense)

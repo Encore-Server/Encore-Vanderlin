@@ -3,7 +3,7 @@
 	var/size_y = 100
 	var/datum/island_biome/biome
 	var/turf/water_turf = /turf/open/water/ocean
-	var/turf/deep_water_turf = /turf/open/water/ocean/deep
+	var/turf/deep_water_turf = /turf/open/water/ocean/abyss
 	var/turf/wall_turf = /turf/closed/mineral/random
 	var/island_threshold = 0.25
 	var/beach_width = 2
@@ -29,7 +29,7 @@
 	var/ocean_noise_amplification = 3.0  // How much to amplify the island noise for depth variation
 	var/shallow_water_noise_threshold = 0.25  // Higher = less shallow water extends out
 
-	var/matthios_fragment = FALSE
+	var/deceivers_fragment = FALSE
 
 	// Persistent noise generators
 	var/datum/noise_generator/noise
@@ -38,14 +38,14 @@
 	var/datum/noise_generator/temperature_noise
 	var/datum/noise_generator/moisture_noise
 
-/datum/island_generator/New(datum/island_biome/selected_biome, sx = 100, sy = 100, _noise_influence = 0.5,  _temperature_frequency = 0.2, _moisture_frequency = 0.2, _height_frequency = 0.22, _height_threshold = 0.5, _matthios)
+/datum/island_generator/New(datum/island_biome/selected_biome, sx = 100, sy = 100, _noise_influence = 0.5,  _temperature_frequency = 0.2, _moisture_frequency = 0.2, _height_frequency = 0.22, _height_threshold = 0.5, _deceivers)
 	..()
 	temperature_frequency = _temperature_frequency
 	moisture_frequency = _moisture_frequency
 	noise_influence = _noise_influence
 	height_threshold = _height_threshold
 	height_frequency = _height_frequency
-	matthios_fragment = _matthios
+	deceivers_fragment = _deceivers
 
 	size_x = sx
 	size_y = sy
@@ -175,9 +175,9 @@
 				var/turf/T = locate(start_x + x, start_y + y, start_z)
 				if(T)
 					if(depth_value > shallow_water_noise_threshold)
-						T.ChangeTurf(water_turf, list(/turf/open/transparent/openspace, /turf/open/floor/naturalstone))
+						T.ChangeTurf(water_turf, list(/turf/open/openspace, /turf/open/floor/naturalstone))
 					else
-						T.ChangeTurf(deep_water_turf, list(/turf/open/transparent/openspace, /turf/open/floor/naturalstone))
+						T.ChangeTurf(deep_water_turf, list(/turf/open/openspace, /turf/open/floor/naturalstone))
 
 		if(x % 10 == 0)
 			if(job)
@@ -217,11 +217,11 @@
 						is_beach = TRUE
 
 			if(is_beach)
-				T.ChangeTurf(biome.beach_turf, list(/turf/open/transparent/openspace, /turf/open/floor/naturalstone, /turf/open/floor/dirt))
+				T.ChangeTurf(biome.beach_turf, list(/turf/open/openspace, /turf/open/floor/naturalstone, /turf/open/floor/dirt))
 				beach_tiles += list(list("turf" = T, "x" = x, "y" = y, "temperature" = temperature, "moisture" = moisture, "height" = height))
 			else
 				var/turf_type = biome.select_terrain(temperature, moisture, height)
-				T.ChangeTurf(turf_type, list(/turf/open/transparent/openspace, /turf/open/floor/naturalstone))
+				T.ChangeTurf(turf_type, list(/turf/open/openspace, /turf/open/floor/naturalstone))
 				mainland_tiles += list(list("turf" = T, "x" = x, "y" = y, "temperature" = temperature, "moisture" = moisture, "height" = height))
 
 			if(height > 0)
@@ -250,7 +250,7 @@
 	if(!generate_settlements_on_island(bottom_left_corner, mainland_tiles))
 		generate_cave_entry(bottom_left_corner, mainland_tiles)
 
-	if(matthios_fragment)
+	if(deceivers_fragment)
 		try_place_portal(bottom_left_corner, mainland_tiles)
 
 	CHECK_TICK
@@ -320,9 +320,9 @@
 				var/turf/T = locate(start_x + x, start_y + y, start_z)
 				if(T)
 					if(depth_value > shallow_water_noise_threshold)
-						T.ChangeTurf(water_turf, list(/turf/open/transparent/openspace, /turf/open/floor/naturalstone))
+						T.ChangeTurf(water_turf, list(/turf/open/openspace, /turf/open/floor/naturalstone))
 					else
-						T.ChangeTurf(deep_water_turf, list(/turf/open/transparent/openspace, /turf/open/floor/naturalstone))
+						T.ChangeTurf(deep_water_turf, list(/turf/open/openspace, /turf/open/floor/naturalstone))
 
 	var/list/mainland_tiles = list()
 	var/list/beach_tiles = list()
@@ -355,11 +355,11 @@
 						is_beach = TRUE
 
 			if(is_beach)
-				T.ChangeTurf(biome.beach_turf, list(/turf/open/transparent/openspace, /turf/open/floor/naturalstone, /turf/open/floor/dirt))
+				T.ChangeTurf(biome.beach_turf, list(/turf/open/openspace, /turf/open/floor/naturalstone, /turf/open/floor/dirt))
 				beach_tiles += list(list("turf" = T, "x" = x, "y" = y, "temperature" = temperature, "moisture" = moisture, "height" = height))
 			else
 				var/turf_type = biome.select_terrain(temperature, moisture, height)
-				T.ChangeTurf(turf_type, list(/turf/open/transparent/openspace, /turf/open/floor/naturalstone))
+				T.ChangeTurf(turf_type, list(/turf/open/openspace, /turf/open/floor/naturalstone))
 				mainland_tiles += list(list("turf" = T, "x" = x, "y" = y, "temperature" = temperature, "moisture" = moisture, "height" = height))
 
 			if(height > 0)
@@ -376,7 +376,7 @@
 	if(!generate_settlements_on_island(bottom_left_corner, mainland_tiles))
 		generate_cave_entry(bottom_left_corner, mainland_tiles)
 
-	if(matthios_fragment)
+	if(deceivers_fragment)
 		try_place_portal(bottom_left_corner, mainland_tiles)
 
 	return TRUE
@@ -420,7 +420,7 @@
 		break
 
 /datum/island_generator/proc/generate_cave_entry(turf/bottom_left_corner, list/mainland_tiles)
-	if(matthios_fragment)
+	if(deceivers_fragment)
 		return FALSE
 
 	if(!biome.cave_entry_templates || !biome.cave_entry_templates.len)
@@ -472,7 +472,7 @@
 				if(isclosedturf(turf) || isopenspace(turf))
 					for(var/obj/structure/flora/structure in turf.contents)
 						qdel(structure)
-					for(var/mob/living/mob in turf.contents)
+					for(var/mob/living/mob in turf)
 						var/turf/step_turf = turf
 						while(isclosedturf(step_turf) || isopenspace(step_turf))
 							step_turf = get_step(step_turf, NORTH)
@@ -662,11 +662,11 @@
 		for(var/obj/structure/structure in below)
 			qdel(structure)
 
-		below.ChangeTurf(wall_turf, list(/turf/open/transparent/openspace, /turf/open/floor/naturalstone))
+		below.ChangeTurf(wall_turf, list(/turf/open/openspace, /turf/open/floor/naturalstone))
 
 		if(level == height)
 			var/turf_type = biome.select_terrain(temperature, moisture, level)
-			current.ChangeTurf(turf_type, list(/turf/open/transparent/openspace, /turf/open/floor/naturalstone))
+			current.ChangeTurf(turf_type, list(/turf/open/openspace, /turf/open/floor/naturalstone))
 
 /datum/island_generator/proc/generate_settlements_on_island(turf/bottom_left_corner, list/mainland_tiles)
 	if(!biome.settlement_generator)

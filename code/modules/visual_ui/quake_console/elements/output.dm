@@ -21,7 +21,7 @@
 	scroll_handle = /obj/abstract/visual_ui_element/hoverable/scroll_handle/dummy
 	scroll_track = /obj/abstract/visual_ui_element/scroll_track/dummy
 
-	mouse_opacity = 1
+	mouse_opacity = MOUSE_OPACITY_ICON
 	var/list/lines = list()
 	var/max_lines = 1000
 	var/line_height = 18
@@ -44,7 +44,7 @@
 	parent.elements += text_element
 	register_element(text_element)
 
-	add_line("Psydon's Awesome Epic Powers")
+	add_line("Angros' Awesome Epic Powers")
 	add_line("Type 'help' for available commands")
 
 /obj/abstract/visual_ui_element/scrollable/console_output/Click(location, control, params)
@@ -95,7 +95,7 @@
 	name = "Console Text"
 	icon = 'icons/visual_ui/32x32.dmi'
 	icon_state = "blank"
-	mouse_opacity = 0
+	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
 	layer = VISUAL_UI_FRONT
 	var/list/lines = list()
 	var/content_height = 0

@@ -12,7 +12,7 @@
 	slot_flags = ITEM_SLOT_ARMOR|ITEM_SLOT_CLOAK
 	var/picked
 
-/obj/item/clothing/cloak/stabard/attack_hand_secondary(mob/user, params)
+/obj/item/clothing/cloak/stabard/attack_hand_secondary(mob/user, list/modifiers)
 	. = ..()
 	if(. == SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN)
 		return
@@ -49,7 +49,7 @@
 	if(ismob(loc))
 		var/mob/L = loc
 		L.update_inv_cloak()
-	if(alert("Are you pleased with your heraldry?", "Heraldry", "Yes", "No") != "Yes")
+	if(tgui_alert(usr, "Are you pleased with your heraldry?", "Heraldry", list("Yes", "No")) != "Yes")
 		detail_color = initial(detail_color)
 		color = initial(color)
 		detail_tag = initial(detail_tag)
@@ -67,7 +67,7 @@
 	detail_color = CLOTHING_PLUM_PURPLE
 	uses_lord_coloring = LORD_PRIMARY | LORD_DETAIL_AND_COLOR
 
-/obj/item/clothing/cloak/stabard/guard/attack_hand_secondary(mob/user, params)
+/obj/item/clothing/cloak/stabard/guard/attack_hand_secondary(mob/user, list/modifiers)
 	. = ..()
 	if(. == SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN)
 		return
@@ -93,7 +93,7 @@
 	if(ismob(loc))
 		var/mob/L = loc
 		L.update_inv_cloak()
-	if(alert("Are you pleased with your heraldry?", "Heraldry", "Yes", "No") != "Yes")
+	if(tgui_alert(usr, "Are you pleased with your heraldry?", "Heraldry", list("Yes", "No")) != "Yes")
 		detail_tag = initial(detail_tag)
 		update_appearance(UPDATE_OVERLAYS)
 		if(ismob(loc))
@@ -108,7 +108,7 @@
 /obj/item/clothing/cloak/stabard/colored/dungeon
 	color = CLOTHING_SOOT_BLACK
 
-/obj/item/clothing/cloak/stabard/colored/dungeon/attack_hand_secondary(mob/user, params)
+/obj/item/clothing/cloak/stabard/colored/dungeon/attack_hand_secondary(mob/user, list/modifiers)
 	return
 
 /obj/item/clothing/cloak/stabard/mercenary
@@ -141,71 +141,71 @@
 	mob_overlay_icon = 'icons/roguetown/clothing/special/onmob/templar.dmi'
 	sleeved = 'icons/roguetown/clothing/special/onmob/templar.dmi'
 
-/obj/item/clothing/cloak/stabard/templar/astrata
+/obj/item/clothing/cloak/stabard/templar/visires
 	name = "surcoat of the solar order"
 	icon_state = "tabard_astrata"
 	item_state = "tabard_astrata"
 
-/obj/item/clothing/cloak/stabard/templar/astrata/alt
+/obj/item/clothing/cloak/stabard/templar/visires/alt
 	icon_state = "tabard_astrata_alt"
 	item_state = "tabard_astrata_alt"
 
-/obj/item/clothing/cloak/stabard/templar/necra
-	name = "surcoat of the necran order"
+/obj/item/clothing/cloak/stabard/templar/valdala
+	name = "surcoat of the valdalan order"
 	icon_state = "tabard_necra"
 	item_state = "tabard_necra"
 
-/obj/item/clothing/cloak/stabard/templar/necra/alt
+/obj/item/clothing/cloak/stabard/templar/valdala/alt
 	icon_state = "tabard_necra_alt"
 	item_state = "tabard_necra_alt"
 
-/obj/item/clothing/cloak/stabard/templar/dendor
+/obj/item/clothing/cloak/stabard/templar/gani
 	name = "surcoat of the dendorian order"
 	icon_state = "tabard_dendor"
 	item_state = "tabard_dendor"
 
-/obj/item/clothing/cloak/stabard/templar/noc
+/obj/item/clothing/cloak/stabard/templar/akan
 	name = "surcoat of the lunar order"
 	icon_state = "tabard_noc"
 	item_state = "tabard_noc"
 
-/obj/item/clothing/cloak/stabard/templar/noc/alt
+/obj/item/clothing/cloak/stabard/templar/akan/alt
 	icon_state = "tabard_noc_alt"
 	item_state = "tabard_noc_alt"
 
-/obj/item/clothing/cloak/stabard/templar/abyssor
+/obj/item/clothing/cloak/stabard/templar/mjallidhorn
 	name = "surcoat of the abyssal order"
 	icon_state = "tabard_abyssor"
 	item_state = "tabard_abyssor"
 
-/obj/item/clothing/cloak/stabard/templar/abyssor/alt
+/obj/item/clothing/cloak/stabard/templar/mjallidhorn/alt
 	name = "surcoat of the abyssal order"
 	icon_state = "tabard_abyssor_alt"
 	item_state = "tabard_abyssor_alt"
 
 
-/obj/item/clothing/cloak/stabard/templar/malum
-	name = "surcoat of the malumite order"
+/obj/item/clothing/cloak/stabard/templar/golerkanh
+	name = "surcoat of the kanhite order"
 	icon_state = "tabard_malum"
 	item_state = "tabard_malum"
 
-/obj/item/clothing/cloak/stabard/templar/eora
-	name = "surcoat of the eoran order"
+/obj/item/clothing/cloak/stabard/templar/pomette
+	name = "surcoat of the pomettic order"
 	icon_state = "tabard_eora"
 	item_state = "tabard_eora"
 
-/obj/item/clothing/cloak/stabard/templar/pestra
-	name = "surcoat of the pestran order"
+/obj/item/clothing/cloak/stabard/templar/erdl
+	name = "surcoat of the erdite order"
 	icon_state = "tabard_pestra"
 	item_state = "tabard_pestra"
 
-/obj/item/clothing/cloak/stabard/templar/ravox
-	name = "surcoat of the ravoxian order"
+/obj/item/clothing/cloak/stabard/templar/mordsol
+	name = "surcoat of the mordsolian order"
 	icon_state = "tabard_ravox"
 	item_state = "tabard_ravox"
 
-/obj/item/clothing/cloak/stabard/templar/xylix
-	name = "surcoat of the xylixian order"
+/obj/item/clothing/cloak/stabard/templar/iliope
+	name = "surcoat of the fools order"
 	icon_state = "tabard_xylix"
 	item_state = "tabard_xylix"
 
@@ -217,7 +217,7 @@
 	name = "jupon"
 	icon_state = "surcoat"
 
-/obj/item/clothing/cloak/stabard/jupon/attack_hand_secondary(mob/user, params)
+/obj/item/clothing/cloak/stabard/jupon/attack_hand_secondary(mob/user, list/modifiers)
 	. = ..()
 	if(. == SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN)
 		return
@@ -254,7 +254,7 @@
 	if(ismob(loc))
 		var/mob/L = loc
 		L.update_inv_cloak()
-	if(alert("Are you pleased with your heraldry?", "Heraldry", "Yes", "No") != "Yes")
+	if(tgui_alert(usr, "Are you pleased with your heraldry?", "Heraldry", list("Yes", "No")) != "Yes")
 		detail_color = initial(detail_color)
 		color = initial(color)
 		detail_tag = initial(detail_tag)
@@ -272,7 +272,7 @@
 	detail_color = CLOTHING_PLUM_PURPLE
 	uses_lord_coloring = LORD_PRIMARY | LORD_DETAIL_AND_COLOR
 
-/obj/item/clothing/cloak/stabard/jupon/guard/attack_hand_secondary(mob/user, params)
+/obj/item/clothing/cloak/stabard/jupon/guard/attack_hand_secondary(mob/user, list/modifiers)
 	. = ..()
 	if(. == SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN)
 		return
@@ -298,7 +298,7 @@
 	if(ismob(loc))
 		var/mob/L = loc
 		L.update_inv_cloak()
-	if(alert("Are you pleased with your heraldry?", "Heraldry", "Yes", "No") != "Yes")
+	if(tgui_alert(usr, "Are you pleased with your heraldry?", "Heraldry", list("Yes", "No")) != "Yes")
 		detail_tag = initial(detail_tag)
 		update_appearance(UPDATE_ICON)
 		if(ismob(loc))

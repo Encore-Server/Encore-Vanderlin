@@ -7,7 +7,17 @@
 	integrity_failure = 0.5
 	resistance_flags = FIRE_PROOF
 	body_parts_covered = EYES
+	gender = PLURAL
+	clothing_traits = list(TRAIT_NEARSIGHTED_CORRECTED)
 //	block2add = FOV_BEHIND
+
+/obj/item/clothing/face/spectacles/atom_break(damage_flag)
+	. = ..()
+	detach_clothing_traits(TRAIT_NEARSIGHTED_CORRECTED)
+
+/obj/item/clothing/face/spectacles/atom_fix()
+	. = ..()
+	attach_clothing_traits(TRAIT_NEARSIGHTED_CORRECTED)
 
 /obj/item/clothing/face/spectacles/golden
 	name = "golden spectacles"
@@ -19,6 +29,13 @@
 	resistance_flags = FIRE_PROOF
 	body_parts_covered = EYES
 
+/obj/item/clothing/face/spectacles/monocle
+	name = "silver monocle"
+	icon_state = "monocle"
+	max_integrity = 35
+	gender = NEUTER
+
+
 /obj/item/clothing/face/spectacles/Crossed(mob/crosser)
 	if(isliving(crosser) && !obj_broken)
 		take_damage(11, BRUTE, "blunt", 1)
@@ -26,7 +43,7 @@
 
 /obj/item/clothing/face/spectacles/inqglasses
 	name = "crimson spectacles"
-	desc = "Spectacles evoking the stained glass of Grenzelhoftian cathedrals. See all evil."
+	desc = "Spectacles evoking the stained glass of Aelondan cathedrals. See all evil."
 	icon_state = "bglasses"
 
 /obj/item/clothing/face/spectacles/sglasses
@@ -37,14 +54,14 @@
 /obj/item/clothing/face/spectacles/inq
 	name = "inquisitorial spectacles"
 	icon_state = "bglasses"
-	desc = "Spectacles evoking the stained glass of Grenzelhoftian cathedrals. See all evil."
+	desc = "Spectacles evoking the stained glass of Aelondan cathedrals. See all evil."
 	attacked_sound = 'sound/combat/hits/onglass/glasshit.ogg'
 	max_integrity = 300
 	integrity_failure = 0.5
 	resistance_flags = FIRE_PROOF
 	body_parts_covered = EYES
 	slot_flags = ITEM_SLOT_MASK|ITEM_SLOT_HEAD
-	anvilrepair = /datum/skill/craft/armorsmithing
+	anvilrepair = /datum/attribute/skill/craft/armor_repair
 	var/lensmoved = TRUE // starts with the lenses out of the way, night vision being off.
 
 /obj/item/clothing/face/spectacles/inq/examine(mob/user) // informs inquisition members of the night vision functionality.
@@ -64,7 +81,7 @@
 			ADD_TRAIT(user, TRAIT_NOCSHADES, "redlens")
 			return
 
-/obj/item/clothing/face/spectacles/inq/MiddleClick(mob/user, params)
+/obj/item/clothing/face/spectacles/inq/MiddleClick(mob/user, list/modifiers)
 	. = ..()
 	if(!lensmoved)
 		to_chat(user, span_info("You discreetly slide the inner lenses out of the way."))
@@ -103,11 +120,12 @@
 	block2add = FOV_BEHIND
 	slot_flags = ITEM_SLOT_MASK|ITEM_SLOT_HIP
 	armor = ARMOR_PADDED
-	sewrepair = TRUE
+	sewrepair = /datum/attribute/skill/misc/sewing/mending
+	dyeable = TRUE
 
 /obj/item/clothing/face/sack/psy
-	name = "psydonian sack mask"
-	desc = "An ordinary brown sack. This one has eyeholes cut into it, bearing a crude chalk drawing of Psydon's cross upon its visage. Unsettling for most."
+	name = "angrosian sack mask"
+	desc = "An ordinary brown sack. This one has eyeholes cut into it, bearing a crude chalk drawing of Angros' cross upon its visage. Unsettling for most."
 	icon_state = "sackmask_psy"
 
 /obj/item/clothing/face/antiq
@@ -125,11 +143,12 @@
 	body_parts_covered = FACE|HEAD
 	slot_flags = ITEM_SLOT_MASK|ITEM_SLOT_HIP
 	armor = ARMOR_PADDED
-	sewrepair = TRUE
+	sewrepair = /datum/attribute/skill/misc/sewing/mending
+	dyeable = TRUE
 
 /obj/item/clothing/face/facemask/steel/confessor
 	name = "strange mask"
-	desc = "It is said that the original version of this mask was used for obscure rituals in Grenzelhoft, and now it has been repurposed as a veil for the cunning hand of the Ordo Venatari. Others say it is a piece of heresy, a necessary evil, capable of keeping its user safe from vile magicks. You can taste copper whenever you draw breath."
+	desc = "It is said that the original version of this mask was used for obscure rituals in the deeps of Gernhollow, and now it has been repurposed as a veil for the cunning hand of the Katholikos. Others say it is a piece of heresy, a necessary evil, capable of keeping its user safe from vile magicks. You can taste copper whenever you draw breath."
 	icon_state = "confessormask"
 	max_integrity = 200
 	equip_sound = 'sound/items/confessormaskon.ogg'
@@ -156,7 +175,7 @@
 		worn = FALSE
 
 
-/obj/item/clothing/face/facemask/steel/confessor/attackby(obj/item/I, mob/user, params)
+/obj/item/clothing/face/facemask/steel/confessor/attackby(obj/item/I, mob/user, list/modifiers)
 	. = ..()
 	if(istype(I, /obj/item/clothing/face/spectacles/inq))
 		user.visible_message(span_warning("[user] starts to insert [I]'s lenses into [src]."))
@@ -174,14 +193,14 @@
 
 /obj/item/clothing/face/facemask/steel/confessor/lensed
 	name = "stranger mask"
-	desc = " It is said that the original version of this mask was used for obscure rituals in Grenzelhoft, and now it has been repurposed as a veil for the cunning hand of the Ordo Venatari. Others say it is a piece of heresy, a necessary evil, capable of keeping its user safe from vile magicks. You can taste copper whenever you draw breath."
+	desc = " It is said that the original version of this mask was used for obscure rituals in Gernhollow, and now it has been repurposed as a veil for the cunning hand of the Katholikos. Others say it is a piece of heresy, a necessary evil, capable of keeping its user safe from vile magicks. You can taste copper whenever you draw breath."
 	icon_state = "confessormask_lens"
 	var/lensmoved = TRUE
 
 /obj/item/clothing/face/facemask/steel/confessor/lensed/examine(mob/user)
 	. = ..()
 	if(HAS_TRAIT(user, TRAIT_INQUISITION))
-		. += span_info("This mask contains noc-shades, which provide the user with short-range dark-vision when activated.")
+		. += span_info("This mask contains night-shades, which provide the user with short-range dark-vision when activated.")
 		. += span_warning("Use the Middle Mouse Button on the glasses, with your jump, bite, etc.. intents OFF to (de)activate nightvision.")
 
 /obj/item/clothing/face/facemask/steel/confessor/lensed/equipped(mob/user, slot)
@@ -192,7 +211,7 @@
 			user.update_sight()
 			return
 
-/obj/item/clothing/face/facemask/steel/confessor/lensed/MiddleClick(mob/user, params)
+/obj/item/clothing/face/facemask/steel/confessor/lensed/MiddleClick(mob/user, list/modifiers)
 	. = ..()
 	if(!lensmoved)
 		to_chat(user, span_info("You discreetly slide the inner lenses out of the way."))

@@ -1,95 +1,98 @@
-/datum/job/advclass/sacrestant/psydoniantemplar // A templar, but for the Inquisition
-	title = "Psydonian Templar"
+/datum/attribute_holder/sheet/job/angrosiantemplar
+	raw_attribute_list = list(
+		STAT_STRENGTH = 2,
+		STAT_CONSTITUTION = 2,
+		STAT_ENDURANCE = 2,
+		STAT_SPEED = -2,
+		/datum/attribute/skill/combat/swords = 30,
+		/datum/attribute/skill/combat/axesmaces = 30,
+		/datum/attribute/skill/combat/whipsflails = 30,
+		/datum/attribute/skill/combat/crossbows = 20,
+		/datum/attribute/skill/combat/bows = 20,
+		/datum/attribute/skill/combat/wrestling = 20,
+		/datum/attribute/skill/combat/unarmed = 30,
+		/datum/attribute/skill/misc/climbing = 10,
+		/datum/attribute/skill/misc/athletics = 30,
+		/datum/attribute/skill/misc/reading = 30,
+		/datum/attribute/skill/combat/shields = 30,
+		/datum/attribute/skill/misc/medicine = 10
+	)
+
+/datum/job/advclass/sacrestant/angrosiantemplar // A templar, but for the Inquisition
+	title = "Angrosian Templar"
 	tutorial = "You are among the strongest students of the Ordo Benetarus. Top of your classes in both physical skill and intellectual matters, you’re here to prove you’re worthy of becoming an inquisitor. One simple step, before your skill is recognized."
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = RACES_PLAYER_ALL
-	outfit = /datum/outfit/psydoniantemplar
+	outfit = /datum/outfit/angrosiantemplar
 	category_tags = list(CTAG_INQUISITION)
 
-	jobstats = list(
-		STATKEY_STR = 2,
-		STATKEY_CON = 2,
-		STATKEY_END = 2,
-		STATKEY_SPD = -2,
-	) //4 Statline
-
-	skills = list(
-		/datum/skill/combat/swords = SKILL_LEVEL_JOURNEYMAN,
-		/datum/skill/combat/axesmaces = SKILL_LEVEL_JOURNEYMAN,
-		/datum/skill/combat/whipsflails = SKILL_LEVEL_JOURNEYMAN,
-		/datum/skill/combat/crossbows = SKILL_LEVEL_APPRENTICE,
-		/datum/skill/combat/bows = SKILL_LEVEL_APPRENTICE,
-		/datum/skill/combat/wrestling = SKILL_LEVEL_APPRENTICE,
-		/datum/skill/combat/unarmed = SKILL_LEVEL_JOURNEYMAN,
-		/datum/skill/misc/climbing = SKILL_LEVEL_NOVICE,
-		/datum/skill/misc/athletics = SKILL_LEVEL_JOURNEYMAN,
-		/datum/skill/misc/reading = SKILL_LEVEL_JOURNEYMAN,
-		/datum/skill/combat/shields = SKILL_LEVEL_JOURNEYMAN,
-		/datum/skill/misc/medicine = SKILL_LEVEL_NOVICE
-	)
+	attribute_sheet = /datum/attribute_holder/sheet/job/angrosiantemplar
 
 	traits = list(
 		TRAIT_HEAVYARMOR,
 		TRAIT_STEELHEARTED,
 		TRAIT_INQUISITION,
 		TRAIT_SILVER_BLESSED,
-		TRAIT_PSYDONIAN_GRIT,
-		TRAIT_PSYDONITE,
+		TRAIT_ANGROSIAN_GRIT,
+		TRAIT_ANGROSIAN,
+		TRAIT_FOREIGNER,
 	)
 
 	voicepack_m = /datum/voicepack/male/knight
 
-/datum/job/advclass/sacrestant/psydoniantemplar/after_spawn(mob/living/carbon/human/spawned, client/player_client)
+/datum/job/advclass/sacrestant/angrosiantemplar/after_spawn(mob/living/carbon/human/spawned, client/player_client)
 	. = ..()
+
 	GLOB.inquisition.add_member_to_school(spawned, "Benetarus", 0, "Templar")
 
+/datum/job/advclass/sacrestant/angrosiantemplar/on_roundstart(mob/living/carbon/human/spawned, client/player_client)
+	. = ..()
+
 	var/static/list/helmets = list(
-		"Barbute" = /obj/item/clothing/head/helmet/heavy/psydonbarbute,
+		"Barbute" = /obj/item/clothing/head/helmet/heavy/angrosbarbute,
 		"Sallet" = /obj/item/clothing/head/helmet/heavy/psysallet,
-		"Armet" = /obj/item/clothing/head/helmet/heavy/psydonhelm,
+		"Armet" = /obj/item/clothing/head/helmet/heavy/angroshelm,
 		"Bucket Helm" = /obj/item/clothing/head/helmet/heavy/psybucket,
 	)
-	spawned.select_equippable(player_client, helmets, message = "Choose your HELMET.", title = "TAKE UP PSYDON'S HELMS.")
+	spawned.select_equippable(player_client, helmets, message = "Choose your HELMET.", title = "TAKE UP ANGROS'S HELMS.")
 
 	var/static/list/armors = list(
 		"Hauberk" = /obj/item/clothing/armor/chainmail/hauberk/fluted,
 		"Cuirass" = /obj/item/clothing/armor/cuirass/fluted,
 	)
-	var/armor_choice = spawned.select_equippable(player_client, armors, message = "Choose your ARMOR.", title = "TAKE UP PSYDON'S MANTLE.")
-	if(armor_choice == "Cuirass")
-		spawned.change_stat(STATKEY_SPD, 1) //Less durability and coverage, but still upgradable. Balances out the innate -1 SPD debuff.
+	spawned.select_equippable(player_client, armors, message = "Choose your ARMOR.", title = "TAKE UP ANGROS'S MANTLE.")
 
 	var/static/list/weapons = list(
-		"Psydonic Longsword" = list(/obj/item/weapon/scabbard/sword, /obj/item/weapon/sword/long/psydon),
-		"Psydonic War Axe" = /obj/item/weapon/axe/psydon,
-		"Psydonic Whip" = /obj/item/weapon/whip/psydon,
-		"Psydonic Flail" = /obj/item/weapon/flail/psydon,
-		"Psydonic Mace" = /obj/item/weapon/mace/goden/psydon,
-		"Psydonic Spear + Handmace" = list(/obj/item/weapon/polearm/spear/psydon, /obj/item/weapon/mace/cudgel/psy),
-		"Psydonic Poleaxe + Shortsword" = list(/obj/item/weapon/greataxe/psy, /obj/item/weapon/sword/short/psy),
+		"Unsundered Longsword" = list(/obj/item/weapon/scabbard/sword, /obj/item/weapon/sword/long/angros),
+		"Unsundered War Axe" = /obj/item/weapon/axe/angros,
+		"Unsundered Whip" = /obj/item/weapon/whip/angros,
+		"Unsundered Flail" = /obj/item/weapon/flail/angros,
+		"Unsundered Mace" = /obj/item/weapon/mace/goden/angros,
+		"Unsundered Spear + Handmace" = list(/obj/item/weapon/polearm/spear/angros, /obj/item/weapon/mace/cudgel/psy),
+		"Unsundered Poleaxe + Shortsword" = list(/obj/item/weapon/greataxe/psy, /obj/item/weapon/sword/short/psy),
 	)
-	var/weapon_choice = spawned.select_equippable(player_client, weapons, message = "Choose your WEAPON.", title = "TAKE UP PSYDON'S ARMS.")
+	var/weapon_choice = spawned.select_equippable(player_client, weapons, message = "Choose your WEAPON.", title = "TAKE UP ANGROS'S ARMS.")
 	switch(weapon_choice)
-		if("Psydonic Longsword")
-			spawned.clamped_adjust_skillrank(/datum/skill/combat/swords, 4, 4, TRUE)
-		if("Psydonic War Axe", "Psydonic Mace", "Psydonic Poleaxe + Shortsword")
-			spawned.clamped_adjust_skillrank(/datum/skill/combat/axesmaces, 4, 4, TRUE)
-		if("Psydonic Whip", "Psydonic Flail")
-			spawned.clamped_adjust_skillrank(/datum/skill/combat/whipsflails, 4, 4, TRUE)
-		if("Psydonic Spear + Handmace")
-			spawned.clamped_adjust_skillrank(/datum/skill/combat/polearms, 4, 4, TRUE)
+		if("Unsundered Longsword")
+			spawned.clamped_adjust_skill_level(/datum/attribute/skill/combat/swords, 30, 30, TRUE)
+		if("Unsundered War Axe", "Unsundered Mace", "Unsundered Poleaxe + Shortsword")
+			spawned.clamped_adjust_skill_level(/datum/attribute/skill/combat/axesmaces, 30, 30, TRUE)
+		if("Unsundered Whip", "Unsundered Flail")
+			spawned.clamped_adjust_skill_level(/datum/attribute/skill/combat/whipsflails, 30, 30, TRUE)
+		if("Unsundered Spear + Handmace")
+			spawned.clamped_adjust_skill_level(/datum/attribute/skill/combat/polearms, 30, 30, TRUE)
 
-/datum/outfit/psydoniantemplar
-	name = "Psydonian Templar"
+/datum/outfit/angrosiantemplar
+	name = "Angrosian Templar (Sacrestants)"
 	wrists = /obj/item/clothing/neck/psycross/silver
-	cloak = /obj/item/clothing/cloak/psydontabard
+	cloak = /obj/item/clothing/cloak/angrostabard
 	backr = /obj/item/weapon/shield/tower/metal
-	gloves = /obj/item/clothing/gloves/chain/psydon
+	gloves = /obj/item/clothing/gloves/chain/angros
 	neck = /obj/item/clothing/neck/chaincoif
 	pants = /obj/item/clothing/pants/chainlegs
 	backl = /obj/item/storage/backpack/satchel/otavan
 	shirt = /obj/item/clothing/armor/gambeson/heavy/inq
-	shoes = /obj/item/clothing/shoes/psydonboots
+	shoes = /obj/item/clothing/shoes/angrosboots
 	belt = /obj/item/storage/belt/leather/black
 	beltl = /obj/item/storage/belt/pouch/coins/mid
 	ring = /obj/item/clothing/ring/signet/silver

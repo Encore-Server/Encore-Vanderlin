@@ -1,6 +1,6 @@
 /mob/living/simple_animal/hostile/retaliate/troll
 	name = "troll"
-	desc = "Elven legends say these monsters were servants of Dendor tasked to guard his realm; nowadays, they are sometimes found in the company of orcs."
+	desc = "Elven legends say these monsters were servants of Gani tasked to guard his realm; nowadays, they are sometimes found in the company of orcs."
 	icon = 'icons/mob/creacher/trolls/troll.dmi'
 	icon_state = "troll"
 	icon_living = "troll"
@@ -61,7 +61,7 @@
 
 	dodgetime = 50
 	aggressive = TRUE
-	dendor_taming_chance = DENDOR_TAME_PROB_HIGH
+	gani_taming_chance = GANI_TAME_PROB_HIGH
 
 	remains_type = /obj/effect/decal/remains/troll
 
@@ -111,45 +111,6 @@
 		adjustHealth(-rand(20,35))
 
 /mob/living/simple_animal/hostile/retaliate/troll/simple_limb_hit(zone)
-	if(!zone)
-		return ""
-	switch(zone)
-		if(BODY_ZONE_PRECISE_R_EYE)
-			return "head"
-		if(BODY_ZONE_PRECISE_L_EYE)
-			return "head"
-		if(BODY_ZONE_PRECISE_NOSE)
-			return "nose"
-		if(BODY_ZONE_PRECISE_MOUTH)
-			return "mouth"
-		if(BODY_ZONE_PRECISE_SKULL)
-			return "head"
-		if(BODY_ZONE_PRECISE_EARS)
-			return "head"
-		if(BODY_ZONE_PRECISE_NECK)
-			return "neck"
-		if(BODY_ZONE_PRECISE_L_HAND)
-			return "foreleg"
-		if(BODY_ZONE_PRECISE_R_HAND)
-			return "foreleg"
-		if(BODY_ZONE_PRECISE_L_FOOT)
-			return "leg"
-		if(BODY_ZONE_PRECISE_R_FOOT)
-			return "leg"
-		if(BODY_ZONE_PRECISE_STOMACH)
-			return "stomach"
-		if(BODY_ZONE_PRECISE_GROIN)
-			return "tail"
-		if(BODY_ZONE_HEAD)
-			return "head"
-		if(BODY_ZONE_R_LEG)
-			return "leg"
-		if(BODY_ZONE_L_LEG)
-			return "leg"
-		if(BODY_ZONE_R_ARM)
-			return "foreleg"
-		if(BODY_ZONE_L_ARM)
-			return "foreleg"
 	return ..()
 
 /mob/living/simple_animal/hostile/retaliate/troll/proc/hide()
@@ -204,6 +165,23 @@
 	defdrain = 13
 	range = 3
 
+/mob/living/simple_animal/hostile/retaliate/troll/bog/slaved
+	ai_controller = /datum/ai_controller/summon
+
+/mob/living/simple_animal/hostile/retaliate/troll/slaved/Initialize()
+	. = ..()
+	var/static/list/pet_commands = list(
+				/datum/pet_command/idle,
+				/datum/pet_command/free,
+				/datum/pet_command/follow,
+				/datum/pet_command/attack,
+				/datum/pet_command/protect_owner,
+				/datum/pet_command/aggressive,
+				/datum/pet_command/calm,
+			)
+	AddComponent(/datum/component/obeys_commands, pet_commands)
+
+
 /mob/living/simple_animal/hostile/retaliate/troll/cave
 	name = "cave troll"
 	desc = "Dwarven tales of giants and trolls often contain these creatures, for the fear of mining into one runs deep."
@@ -225,7 +203,7 @@
 						/obj/item/natural/rock/mana_crystal = 3)
 	head_butcher = /obj/item/natural/head/troll/cave
 
-	dendor_taming_chance = DENDOR_TAME_PROB_LOW
+	gani_taming_chance = GANI_TAME_PROB_LOW
 	defprob = 15
 
 	//stone chucking ability
@@ -249,11 +227,24 @@
 					/obj/item/natural/hide = 3, \
 					/obj/item/alch/horn = 2)
 	head_butcher = /obj/item/natural/head/troll/axe
-	dendor_taming_chance = DENDOR_TAME_PROB_LOW
+	gani_taming_chance = GANI_TAME_PROB_LOW
 	base_intents = list(/datum/intent/simple/troll_axe)
 	attack_sound = list('sound/combat/wooshes/blunt/wooshhuge (1).ogg','sound/combat/wooshes/blunt/wooshhuge (2).ogg','sound/combat/wooshes/blunt/wooshhuge (3).ogg')
 	loot = list(/obj/item/weapon/axe/iron/troll)
 	deathmessage = "As the creacher tumbles, it falls upon its axe, snapping the handle."
+
+/mob/living/simple_animal/hostile/retaliate/troll/axe/slaved/Initialize()
+	. = ..()
+	var/static/list/pet_commands = list(
+				/datum/pet_command/idle,
+				/datum/pet_command/free,
+				/datum/pet_command/follow,
+				/datum/pet_command/attack,
+				/datum/pet_command/protect_owner,
+				/datum/pet_command/aggressive,
+				/datum/pet_command/calm,
+			)
+	AddComponent(/datum/component/obeys_commands, pet_commands)
 
 /datum/intent/simple/troll_axe
 	name = "troll axe"

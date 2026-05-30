@@ -9,14 +9,14 @@
 	slot_flags = ITEM_SLOT_NECK|ITEM_SLOT_HIP|ITEM_SLOT_WRISTS
 	sellprice = 15
 
-/obj/item/clothing/neck/mercmedal/zaladin
+/obj/item/clothing/neck/mercmedal/qadirid
 	name = "desert rider chain"
 	desc = "A small, gilded neck-chain. The desert riders rose from humble beginnings as fight pit slaves. A tale now celebrated in their decorations."
 	icon_state = "goldchain"
 
-/obj/item/clothing/neck/mercmedal/grenzelhoft
-	name = "grenzelhoft gryphon of valor"
-	desc = "The fearsome beast of the Black Empire's heraldry, cast in brass. These service awards have lost much of their value since mercenaries started receiving them."
+/obj/item/clothing/neck/mercmedal/sterkenstadten
+	name = "sterkenstadten gryphon of valor"
+	desc = "The fearsome beast of the Amberbearded's heraldry, cast in brass. These service awards have lost much of their value since mercenaries started receiving them."
 	icon_state = "gryphon"
 
 /obj/item/clothing/neck/mercmedal/underdweller
@@ -31,7 +31,7 @@
 
 /obj/item/clothing/neck/mercmedal/steppesman
 	name = "steppe effigy"
-	desc = "This straw doll is claimed to be a representation of Astrata. In truth, a homage to the steppe's wild spirits of yore."
+	desc = "This straw doll is claimed to be a representation of Visires. In truth, a homage to the steppe's wild spirits of yore."
 	icon_state = "effigy"
 
 /obj/item/clothing/neck/mercmedal/boltslinger
@@ -45,8 +45,8 @@
 	icon_state = "spider"
 
 /obj/item/clothing/neck/mercmedal/duelist
-	name = "valorian blade pendant"
-	desc = "A silver pendant shaped as a rapier lined with gems, Worn by Valorian Duelists to honor their mastery of the blade and unyielding pursuit of glory in combat."
+	name = "aelondan blade pendant"
+	desc = "A silver pendant shaped as a rapier lined with gems, Worn by Aelondan Duelists to honor their mastery of the blade and unyielding pursuit of glory in combat."
 	icon_state = "duelistcharm"
 
 /obj/item/clothing/neck/mercmedal/abyssal
@@ -56,5 +56,5 @@
 
 /obj/item/clothing/neck/mercmedal/goldfeather
 	name = "golden feather charm"
-	desc = "a palm-sized charm consisting of four golden feathers. It was once bestowed upon the Pegasus Knights who helped drive back Grenzelhoftian settlers from Lakkari."
+	desc = "a palm-sized charm consisting of four golden feathers."
 	icon_state = "goldfeather"

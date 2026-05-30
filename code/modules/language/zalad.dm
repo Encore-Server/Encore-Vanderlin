@@ -1,6 +1,8 @@
-/datum/language/zalad
-	name = "Zalad"
+/datum/language/qadirid
+	name = "Qadirid"
 	desc = ""
+	icon_state = "qadirid"
+	spans = list(SPAN_QADIRID)
 	speech_verb = "states"
 	ask_verb = "questions"
 	exclaim_verb = "shouts"
@@ -12,38 +14,38 @@
 	additional_syllable_low = -2
 	additional_syllable_high = -1
 	default_priority = 80
-	icon_state = "zalad"
-	spans = list(SPAN_ZALAD)
+
 	syllables = list(
-"bā",
-"alif",
-"tāʼ",
-"thāʼ",
-"jīm",
-"ḥāʼ",
-"khāʼ",
-"dāl",
-"dhāl",
-"rāʼ",
-"zayn",
-"zāy",
-"sīn",
-"shīn",
-"ṣād",
-"ʻayn",
-"ghayn",
-"fāʼ",
-"qāf",
-"kāf",
-"lām",
-"mīm",
-"nūn",
-"hāʼ",
-"wāw",
-"yāʼ",
-"alif",
-"maddah",
-"kas",
-"fatḥah",
-"lahū",
-"qaṣr")
+		"bā",
+		"alif",
+		"tāʼ",
+		"thāʼ",
+		"jīm",
+		"ḥāʼ",
+		"khāʼ",
+		"dāl",
+		"dhāl",
+		"rāʼ",
+		"zayn",
+		"zāy",
+		"sīn",
+		"shīn",
+		"ṣād",
+		"ʻayn",
+		"ghayn",
+		"fāʼ",
+		"qāf",
+		"kāf",
+		"lām",
+		"mīm",
+		"nūn",
+		"hāʼ",
+		"wāw",
+		"yāʼ",
+		"alif",
+		"maddah",
+		"kas",
+		"fatḥah",
+		"lahū",
+		"qaṣr",
+	)

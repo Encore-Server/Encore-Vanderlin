@@ -2,7 +2,7 @@
 	name = "Medium armor template"
 	equip_delay_self = 4 SECONDS
 	unequip_delay_self = 3 SECONDS
-	anvilrepair = /datum/skill/craft/armorsmithing
+	anvilrepair = /datum/attribute/skill/craft/armor_repair
 	melt_amount = 75
 	melting_material = /datum/material/steel
 	armor_class = AC_MEDIUM
@@ -21,7 +21,7 @@
 	body_parts_covered = COVERAGE_ALL_BUT_ARMS
 	prevent_crits = ALL_CRITICAL_HITS
 	max_integrity = INTEGRITY_STRONG
-	item_weight = 7
+	item_weight = 11 KILOGRAMS
 
 /obj/item/clothing/armor/medium/scale/steppe
 	name = "steel heavy lamellar"
@@ -37,7 +37,7 @@
 	item_state = "surcoat"
 	detail_tag = "_metal"		// metal bits are the details so keep them uncolorer = white
 	detail_color = COLOR_WHITE
-	item_weight = 7.4
+	item_weight = 5.3 KILOGRAMS
 
 /obj/item/clothing/armor/medium/surcoat/Initialize()
 	. = ..()
@@ -53,10 +53,10 @@
 		pic.color = get_detail_color()
 	. += pic
 
-//................ Armored surcoat (Heartfelt) ............... //
-/obj/item/clothing/armor/medium/surcoat/heartfelt
-	desc = "A lordly protection in Heartfelt colors. Masterfully crafted coat of plates, for important nobility."
-	color = CLOTHING_BLOOD_RED
+//................ Armored surcoat (Dunmoon) ............... //
+/obj/item/clothing/armor/medium/surcoat/dunmoon
+	desc = "A lordly protection in sterling colors. Masterfully crafted coat of plates, for important folk."
+	color = COLOR_ALMOST_BLACK
 	sellprice = VALUE_SNOWFLAKE_STEEL+BONUS_VALUE_SMALL
 
 	body_parts_covered = COVERAGE_FULL
@@ -74,11 +74,12 @@
 	item_state = "inqcoat"
 	sleevetype = "shirt"
 	max_integrity = INTEGRITY_STRONG
-	anvilrepair = /datum/skill/craft/armorsmithing
+	anvilrepair = /datum/attribute/skill/craft/armor_repair
 	melt_amount = 75
 	melting_material = /datum/material/steel
 	equip_delay_self = 4 SECONDS
 	blocksound = SOFTHIT
+	item_weight = 6.3 KILOGRAMS
 
 /obj/item/clothing/armor/medium/scale/inqcoat/Initialize()
 	. = ..()
@@ -103,7 +104,7 @@
 /obj/item/clothing/armor/medium/scale/inqcoat/armored
 	slot_flags = ITEM_SLOT_ARMOR
 	name = "armored inquisitorial duster"
-	desc = "Metal plates reinforce this heavy coat, worn over the top of the finest Psydonian plate."
+	desc = "Metal plates reinforce this heavy coat, worn over the top of the finest Angrosian plate."
 	smeltresult = /obj/item/ingot/steel
 	icon_state = "inqcoata"
 	item_state = "inqcoata"
@@ -114,4 +115,4 @@
 	melt_amount = 150
 	melting_material =  /datum/material/steel
 	blocksound = PLATEHIT
-
+	item_weight = 7.2 KILOGRAMS

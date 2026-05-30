@@ -13,7 +13,7 @@
 	for(var/mob/mob in view(5, owner))
 		if(connected_mobs <= 0)
 			return
-		if((mob in SSmatthios_mobs.matthios_mobs) || faction_check(target.faction, mob.faction))
+		if((mob in SSdeceivers_mobs.deceivers_mobs) || faction_check(target.faction, mob.faction))
 			connect(target, mob)
 			connected_mobs--
 	connect_timer = addtimer(CALLBACK(src, PROC_REF(try_connect), target), 3 SECONDS, TIMER_STOPPABLE)
@@ -22,7 +22,7 @@
 	for(var/mob/mob in view(5, owner))
 		if(connected_mobs <= 0)
 			return
-		if((mob in SSmatthios_mobs.matthios_mobs) || faction_check(target.faction, mob.faction))
+		if((mob in SSdeceivers_mobs.deceivers_mobs) || faction_check(target.faction, mob.faction))
 			connect(target, mob)
 			connected_mobs--
 	connect_timer = addtimer(CALLBACK(src, PROC_REF(try_connect), target), 3 SECONDS, TIMER_STOPPABLE)
@@ -47,7 +47,7 @@
 /datum/mob_affix/interconnected/proc/beam_entered(datum/beam/source, obj/effect/ebeam/hit, mob/living/entered)
 	if(!isliving(entered))
 		return
-	if((entered in SSmatthios_mobs.matthios_mobs) || faction_check(owner.faction, entered.faction))
+	if((entered in SSdeceivers_mobs.deceivers_mobs) || faction_check(owner.faction, entered.faction))
 		return
 	if(entered == owner)
 		return
@@ -65,7 +65,7 @@
 			span_warning("The frost ray fizzles on contact with [victim]!"),
 			span_warning("The frost ray fizzles on contact with me!"),
 		)
-		playsound(get_turf(victim), 'sound/magic/magic_nulled.ogg', 100)
+		playsound(victim, 'sound/magic/magic_nulled.ogg', 100)
 		return
 
 	victim.adjustFireLoss(round(20))
@@ -73,7 +73,7 @@
 
 	new /obj/effect/temp_visual/snap_freeze(get_turf(victim))
 
-	playsound(get_turf(victim), 'sound/items/stonestone.ogg', 100)
+	playsound(victim, 'sound/items/stonestone.ogg', 100)
 	victim.visible_message(
 		span_danger("[victim] is struck by the ray of frost!"),
 		span_userdanger("I'm struck by the ray of frost!"),)

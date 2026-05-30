@@ -3,11 +3,13 @@
 	wave_type = /datum/migrant_wave/lich
 
 	weight = 6
-
+	min_players = HIGHPOP_THRESHOLD
 	earliest_start = 25 MINUTES
+	max_occurrences = 1
+	shared_occurence_type = SHARED_HIGH_THREAT
 
 	tags = list(
-		TAG_ZIZO,
+		TAG_ARCHDEVILS,
 		TAG_HAUNTED,
 		TAG_COMBAT,
 		TAG_VILLAIN,

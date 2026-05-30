@@ -2,17 +2,17 @@
 
 /datum/action/cooldown/spell/aoe/abrogation
 	name = "Abrogation"
-	desc = "Bring forth motes of the Undermaiden to weaken the unliving."
+	desc = "Bring forth motes of the Frost Aspect to weaken the unliving."
 	button_icon_state = "necra"
 	sound = 'sound/magic/churn.ogg'
 	charge_sound = 'sound/magic/holycharging.ogg'
 
 	spell_type = SPELL_MIRACLE
 	antimagic_flags = MAGIC_RESISTANCE_HOLY
-	associated_skill = /datum/skill/magic/holy
+	associated_skill = /datum/attribute/skill/magic/holy
 	required_items = list(/obj/item/clothing/neck/psycross)
 
-	invocation = "The Undermaiden rejects your presence!"
+	invocation = "Valdala rejects your presence!"
 	invocation_type = INVOCATION_SHOUT
 
 	click_to_activate = FALSE
@@ -50,7 +50,7 @@
 			owner.throw_at(get_ranged_target_turf(owner, get_dir(owner, victim), 7), 7, 1, victim, spin = FALSE)
 			return TRUE
 	if((victim.mob_biotypes & MOB_UNDEAD))
-		victim.apply_status_effect(/datum/status_effect/debuff/abrogation, null, owner, clamp(round(owner.get_skill_level(associated_skill)), 1 , 3))
+		victim.apply_status_effect(/datum/status_effect/debuff/abrogation, null, owner, clamp(round(GET_MOB_SKILL_VALUE_OLD(owner, associated_skill)), 1 , 3))
 
 /atom/movable/screen/alert/status_effect/debuff/abrogation
 	name = "Churning Essence"
@@ -63,7 +63,7 @@
 	alert_type = /atom/movable/screen/alert/status_effect/debuff/abrogation
 	duration = 30 SECONDS
 	examine_text = "<b>SUBJECTPRONOUN is wreathed in a wild frenzy of ghostly motes!</b>"
-	effectedstats = list(STATKEY_STR = -2, STATKEY_CON = -2, STATKEY_END = -2, STATKEY_SPD = -2)
+	effectedstats = list(STAT_STRENGTH = -2, STAT_CONSTITUTION = -2, STAT_ENDURANCE = -2, STAT_SPEED = -2)
 	status_type = STATUS_EFFECT_REFRESH
 	tick_interval = 2 DECISECONDS
 	var/datum/weakref/debuffer

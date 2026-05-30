@@ -1,8 +1,8 @@
 /datum/objective/personal/mock
 	name = "Mock"
-	category = "Xylix's Chosen"
+	category = "Iliope's Chosen"
 	triumph_count = 2
-	rewards = list("2 Triumphs", "Xylix grows stronger")
+	rewards = list("2 Triumphs", "Iliope grows stronger")
 
 /datum/objective/personal/mock/on_creation()
 	. = ..()
@@ -26,23 +26,23 @@
 
 /datum/objective/personal/mock/monarch/on_mock_used(datum/source, mob/living/victim)
 	. = ..()
-	if((istype(victim.mind?.assigned_role, /datum/job/lord) || victim.job == "Monarch") && (source == owner.current))
+	if((istype(victim.mind?.assigned_role, /datum/job/lord) || victim.job == JOB_MONARCH) && (source == owner.current))
 		complete_objective()
 
 /datum/objective/personal/mock/monarch/complete_objective()
 	. = ..()
 	to_chat(owner.current, span_greentext("You have mocked the monarch and completed the objective!"))
-	adjust_storyteller_influence(XYLIX, 20)
+	adjust_storyteller_influence(ILIOPE, 20)
 	UnregisterSignal(owner.current, COMSIG_VICIOUSLY_MOCKED)
 
 /datum/objective/personal/mock/monarch/update_explanation_text()
 	. = ..()
-	explanation_text = "Viciously mock the monarch for Xylix!"
+	explanation_text = "Viciously mock the monarch for Iliope!"
 
 /// Noble variant
 /datum/objective/personal/mock/noble
 	name = "Mock Nobles"
-	rewards = list("2 Triumphs", "Xylix grows stronger", "Xylix blesses you (+1 Fortune)")
+	rewards = list("2 Triumphs", "Iliope grows stronger", "Iliope blesses you (+1 Fortune)")
 	var/mocked_targets = 0
 	var/required_count = 2
 
@@ -62,13 +62,13 @@
 /datum/objective/personal/mock/noble/complete_objective()
 	. = ..()
 	to_chat(owner.current, span_greentext("You have mocked enough nobles and completed the objective!"))
-	adjust_storyteller_influence(XYLIX, 20)
+	adjust_storyteller_influence(ILIOPE, 20)
 	UnregisterSignal(owner.current, COMSIG_VICIOUSLY_MOCKED)
 
 /datum/objective/personal/mock/noble/reward_owner()
 	. = ..()
-	owner.current.adjust_stat_modifier(STATMOD_XYLIX_BLESSING, STATKEY_LCK, 1)
+	owner.current.adjust_stat_modifier(STATMOD_ILIOPE_BLESSING, list(STAT_FORTUNE = 1))
 
 /datum/objective/personal/mock/noble/update_explanation_text()
 	. = ..()
-	explanation_text = "Viciously mock [required_count] nobles for Xylix!"
+	explanation_text = "Viciously mock [required_count] nobles for Iliope!"

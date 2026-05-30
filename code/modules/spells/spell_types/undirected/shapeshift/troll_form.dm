@@ -6,14 +6,14 @@
 	spell_type = SPELL_MIRACLE
 	charge_required = FALSE
 	antimagic_flags = MAGIC_RESISTANCE_HOLY
-	associated_skill = /datum/skill/magic/holy
-	required_items = list(/obj/item/clothing/neck/psycross/silver/dendor)
+	associated_skill = /datum/attribute/skill/magic/holy
+	required_items = list(/obj/item/clothing/neck/psycross/silver/divine/gani)
 
 	possible_shapes = list(/mob/living/simple_animal/hostile/retaliate/troll)
 
 	die_with_shapeshifted_form = TRUE
 
-	invocation = "DENDOR GRANT ME THE FORM OF A MIGHTY TROLL!"
+	invocation = "GANI GRANT ME THE FORM OF A MIGHTY TROLL!"
 	invocation_type = INVOCATION_SHOUT
 
 	charge_required = TRUE
@@ -41,6 +41,6 @@
 	. = ..()
 	if(!.)
 		return
-	required_items = list(/obj/item/clothing/neck/psycross/silver/dendor)
+	required_items = list(/obj/item/clothing/neck/psycross/silver/divine/gani)
 	spell_cost = 100
 	spell_type = SPELL_MIRACLE

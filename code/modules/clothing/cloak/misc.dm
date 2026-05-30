@@ -1,7 +1,7 @@
 
 /obj/item/clothing/cloak/chasuble
 	name = "chasuble"
-	desc = "Pristine white liturgical vestments with a golden psycross adornment."
+	desc = "Pristine white liturgical vestments with a golden Astratan cross adornment."
 	icon_state = "chasuble"
 	body_parts_covered = CHEST|GROIN|ARMS
 	sleeved = 'icons/roguetown/clothing/onmob/cloaks.dmi'
@@ -11,6 +11,17 @@
 	allowed_race = SPECIES_BASE_BODY
 	nodismemsleeves = TRUE
 
+/obj/item/clothing/cloak/chasuble/angros
+	name = "chasuble"
+	desc = "Pristine white liturgical vestments with a golden psycross adornment."
+	icon_state = "chasuble_psydon"
+	body_parts_covered = CHEST|GROIN|ARMS
+	sleeved = 'icons/roguetown/clothing/onmob/cloaks.dmi'
+	sleevetype = "shirt"
+	slot_flags = ITEM_SLOT_CLOAK
+	allowed_sex = list(MALE)
+	allowed_race = SPECIES_BASE_BODY
+	nodismemsleeves = TRUE
 
 /obj/item/clothing/cloak/stole
 	name = "stole"
@@ -55,7 +66,7 @@
 	boobed = FALSE
 	sellprice = 10
 
-/obj/item/clothing/cloak/heartfelt
+/obj/item/clothing/cloak/dunmoon
 	name = "red cloak"
 	desc = "A typical cloak, this one is in red colours."
 	icon_state = "heartfelt_cloak"
@@ -63,7 +74,6 @@
 	sleeved = 'icons/roguetown/clothing/onmob/cloaks.dmi'
 	sleevetype = "shirt"
 	slot_flags = ITEM_SLOT_CLOAK
-	allowed_sex = list(MALE)
 	allowed_race = SPECIES_BASE_BODY
 	sellprice = 50
 	nodismemsleeves = TRUE
@@ -186,7 +196,7 @@
 
 /obj/item/clothing/cloak/cape/inquisitor
 	name = "Inquisitors Cloak"
-	desc = "A time honored cloak Valorian design, used by founding clans of the Valorian Lodge"
+	desc = "A time honored cloak Aelondan design, used by founding clans of the Aelondan Lodge"
 	icon_state = "inquisitor_cloak"
 	icon = 'icons/roguetown/clothing/cloaks.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/cloaks.dmi'
@@ -250,7 +260,7 @@
 
 /obj/item/clothing/cloak/half/duelcape
 	name = "duelist cape"
-	desc = "A cape designed for mercenary bands hailing from Valoria."
+	desc = "A cape designed for mercenary bands hailing from Aelonda."
 	icon_state = "duelistcape"
 	item_state = "duelistcape"
 	color = null
@@ -260,15 +270,39 @@
 	allowed_race = SPECIES_BASE_BODY
 	inhand_mod = FALSE
 
-/obj/item/clothing/cloak/graggar
+/obj/item/clothing/cloak/archdevils
 	name = "vicious cloak"
 	desc = "A cloak with a sinister aura set to bring about violence on the world."
-	icon_state = "graggarcloak"
-	icon_state = "graggarcloak"
 	icon = 'icons/roguetown/clothing/special/evilarmor.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/special/onmob/evilarmor.dmi'
+	icon_state = "graggarcloak"
+	alternate_worn_layer = CLOAK_BEHIND_LAYER
+	slot_flags = ITEM_SLOT_BACK_R|ITEM_SLOT_CLOAK
 	sleeved = 'icons/roguetown/clothing/special/onmob/evilarmor.dmi'
+	sleevetype = "shirt"
+	nodismemsleeves = TRUE
+	sewrepair = /datum/attribute/skill/craft/tanning/patching
+	salvage_amount = 1
+	salvage_result = /obj/item/natural/hide/cured
+	dyeable = TRUE
 	sellprice = 0 // See above comment
+
+/obj/item/clothing/cloak/savage
+	name = "savage cloak"
+	desc = "A cloak covered in an predatory aura, it seeks to bring about the natural chaos of the wild to you, dripping in gore and bloodied fur."
+	icon = 'icons/roguetown/clothing/cloaks.dmi'
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/cloaks.dmi'
+	icon_state = "savagecloak"
+	alternate_worn_layer = CLOAK_BEHIND_LAYER
+	slot_flags = ITEM_SLOT_BACK_R|ITEM_SLOT_CLOAK
+	sleeved = 'icons/roguetown/clothing/onmob/cloaks.dmi'
+	sleevetype = "shirt"
+	nodismemsleeves = TRUE
+	sewrepair = /datum/attribute/skill/craft/tanning/patching
+	salvage_amount = 1
+	salvage_result = /obj/item/natural/hide/cured
+	dyeable = TRUE
+	sellprice = 0
 
 /obj/item/clothing/cloak/silktabard
 	name = "fine silk tabard"
@@ -292,8 +326,8 @@
 	allowed_race = SPECIES_BASE_BODY
 
 /obj/item/clothing/cloak/pegasusknight
-	name = "pegasus knight tabard"
-	desc = "A quilted tabard worn by Lakkarian pegasus knights."
+	name = "checkered tabard"
+	desc = "A quilted checkered tabard."
 	icon_state = "lakkaritabard"
 	item_state = "lakkaritabard"
 	sleeved = 'icons/roguetown/clothing/onmob/cloaks.dmi'
@@ -305,5 +339,16 @@
 	desc = "A loose garment that is usually draped across ones upper body. No one's quite sure of its cultural origin."
 	icon_state = "poncho"
 	item_state = "poncho"
+	boobed = FALSE
+	sleeved = 'icons/roguetown/clothing/onmob/cloaks.dmi'
+
+/obj/item/clothing/cloak/poncho/yellow
+	color = CLOTHING_MUSTARD_YELLOW
+
+/obj/item/clothing/cloak/pantheon
+	name = "pantheon cloak"
+	desc = "A divine blue cloak with shimmering gold sewn in, it represents the ten in their whole. Typically worn by High Templars of the Ten"
+	icon_state = "seecloak"
+	item_state = "seecloak"
 	boobed = FALSE
 	sleeved = 'icons/roguetown/clothing/onmob/cloaks.dmi'

@@ -1,48 +1,47 @@
 /mob/living/carbon/human/species/triton
 	race = /datum/species/triton
 
+/datum/attribute_holder/sheet/job/species/triton
+	raw_attribute_list = list(
+		/datum/attribute/skill/labor/fishing = 30,
+		/datum/attribute/skill/misc/swimming = 40,
+	)
+
+/datum/attribute_holder/sheet/job/species/triton/male
+	raw_attribute_list = list(
+		STAT_STRENGTH = -1,
+		STAT_PERCEPTION = -2,
+		STAT_CONSTITUTION = -2,
+		STAT_SPEED = 1,
+		STAT_INTELLIGENCE = 2
+	)
+
+/datum/attribute_holder/sheet/job/species/triton/female
+	raw_attribute_list = list(
+		STAT_STRENGTH = 2,
+		STAT_PERCEPTION = -4,
+		STAT_CONSTITUTION = 3,
+		STAT_SPEED = -3
+	)
+
 /datum/species/triton
 	name = "Triton"
 	id = SPEC_ID_TRITON
 	native_language = "Deepspeak"
 	changesource_flags = WABBAJACK
 
-	desc = "The Children of Abyssor, also known as Tritons or their colloquial name, \"Deep Folk,\" \
-	are a strange species of people that live under the waves of Psydonia. \
-	Born from creatures of the deep with Abyssor's guidance, \
-	these aquatic wayfarers all share a few common traits. \
-	Similar to other creatures that dwell below the surface, their eyes are dull with disuse. \
-	Tritons feel pain when gazing upon that which direct light of Astrata herself illuminates. \
-	\n\n\
-	Unlike most of the people of Psydonia, their culture is often considered cold and dour; \
-	an apathetic attitude to most negative or positive news. For them, the depths of Psydonias oceans are cold and unforgiving. \
-	Large beasts travel the waters that swallow their kin whole... \
-	but the crushing depths have provided them a hearty disposition and resistance to most threats. \
-	Born of Abyssor, their normally placid emotions can swing into a wild rage when they view injustice done upon their kin at the hands of a sapient being. \
-	\n\n\
-	Tritons seen on the surface are very important trade partners, mercenaries, and surprising academics. \
-	Merchants often spend vast amounts of coin to have them aboard their trade vessels, fending off pirates or guiding their boats through turbulent weather. \
-	Be it on or within the sea, they excel- on land, however, they struggle. \
-	With their awkward and gangly fins, long, sharp talons, ghastly, lipless teeth, \
-	and milky, foreign eyes, they seem unfit to walk amongst the people. Humen children are often afraid of them due to such appearances. \
-	\n\n\
-	Their species is not without its tribalism, however. Large sections of their kin have broken away form their father, \
-	to consider themselves Noc's chosen. Due to their extreme sexual dimorphism similar to that of the common angler, \
-	males of this species are more likely to pursue magick with their weaker frames compared to their stronger female counterparts."
+	desc = PLACEHOLDER_SPECIES_REBRANDING
 
 	possible_ages = NORMAL_AGES_LIST
 
-	skin_tone_wording = "Tribal Identity"
+	skin_tone_wording = "Spawn"
 	default_color = "9cc2e2"
 	use_skintones = TRUE
 
 	species_traits = list(NO_UNDERWEAR, HAIR, FACEHAIR, OLDGREY)
 	inherent_traits = list(TRAIT_NOMOBSWAP, TRAIT_WATER_BREATHING, TRAIT_GOOD_SWIM, TRAIT_FISHFACE)
 	inherent_traits_f = list(TRAIT_STRONGBITE)
-	inherent_skills = list(
-		/datum/skill/labor/fishing = 3,
-		/datum/skill/misc/swimming = 4,
-	)
+	inherent_sheet = /datum/attribute_holder/sheet/job/species/triton
 
 	allowed_voicetypes_f = list(
 		VOICE_TYPE_MASC,
@@ -52,8 +51,8 @@
 		VOICE_TYPE_ANDRO
 	)
 
-	specstats_m = list(STATKEY_STR = -1, STATKEY_PER = -2, STATKEY_CON = -2, STATKEY_SPD = 1, STATKEY_INT = 2)
-	specstats_f = list(STATKEY_STR = 2, STATKEY_PER = -4, STATKEY_CON = 3, STATKEY_SPD = -3)
+	statsheet_male = /datum/attribute_holder/sheet/job/species/triton/male
+	statsheet_female = /datum/attribute_holder/sheet/job/species/triton/female
 
 	limbs_icon_m = 'icons/roguetown/mob/bodies/m/triton.dmi'
 	limbs_icon_f = 'icons/roguetown/mob/bodies/f/triton.dmi'
@@ -64,6 +63,7 @@
 	swap_female_clothes = TRUE
 	swap_male_clothes = TRUE
 
+	meat = list(/obj/item/reagent_containers/food/snacks/meat/triton = 1)
 	exotic_bloodtype = /datum/blood_type/human/triton
 	enflamed_icon = "widefire"
 
@@ -139,6 +139,9 @@
 	RegisterSignal(C, COMSIG_MOB_SAY, PROC_REF(handle_speech))
 	C.grant_language(/datum/language/common)
 	C.grant_language(/datum/language/deepspeak)
+
+	var/obj/item/bodypart/mouth/jaw = C.get_bodypart(BODY_ZONE_PRECISE_MOUTH)
+	jaw.replace_teeth(/obj/item/natural/bundle/teeth/fang)
 
 /datum/species/triton/after_creation(mob/living/carbon/C)
 	. = ..()

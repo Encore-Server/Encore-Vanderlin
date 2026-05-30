@@ -73,7 +73,7 @@
 			l_hand = /obj/item/weapon/knife/copper
 			r_hand = /obj/item/weapon/knife/copper
 		if(5)
-			// A valorian dueslist perished and got their stuff stolen
+			// A aelondan dueslist perished and got their stuff stolen
 			head = /obj/item/clothing/head/leather/duelhat
 			armor = /obj/item/clothing/armor/leather/jacket/leathercoat/duelcoat
 			l_hand = /obj/item/weapon/sword/rapier
@@ -85,7 +85,7 @@
 			if(prob(10))
 				r_hand = /obj/item/weapon/sword/long/shotel/iron
 		if(7)
-			armor = /obj/item/clothing/armor/leather/heavy
+			armor = /obj/item/clothing/armor/leather/jerkin
 			l_hand = /obj/item/weapon/sword
 		if(8)
 			l_hand = /obj/item/weapon/knife/dagger/steel/special
@@ -246,7 +246,7 @@
 			else
 				head = /obj/item/clothing/head/helmet/heavy/frog
 		if(2)
-			head = /obj/item/clothing/head/helmet/graggar
+			head = /obj/item/clothing/head/helmet/heavy/archdevils
 		if(3)
 			head = /obj/item/clothing/head/helmet/heavy/frog
 		if(4)
@@ -270,7 +270,7 @@
 
 	// Pants
 	if(prob(5))
-		pants = /obj/item/clothing/pants/platelegs/graggar
+		pants = /obj/item/clothing/pants/platelegs/archdevils
 	else if(prob(50))
 		pants = /obj/item/clothing/pants/platelegs/iron
 	else
@@ -278,7 +278,7 @@
 
 	// Gloves
 	if(prob(5))
-		gloves = /obj/item/clothing/gloves/plate/graggar
+		gloves = /obj/item/clothing/gloves/plate/archdevils
 	else if(prob(50))
 		gloves = /obj/item/clothing/gloves/plate
 	else
@@ -296,7 +296,7 @@
 
 	// Shoes
 	if(prob(5))
-		shoes = /obj/item/clothing/shoes/boots/armor/graggar
+		shoes = /obj/item/clothing/shoes/boots/armor/archdevils
 	else
 		shoes = /obj/item/clothing/shoes/boots/armor
 
@@ -307,7 +307,7 @@
 			armor = /obj/item/clothing/armor/plate/full/iron
 			if(prob(30))
 				armor = /obj/item/clothing/armor/plate/full
-			l_hand = /obj/item/weapon/sword/long/greatsword/steelclaymore
+			l_hand = /obj/item/weapon/sword/long/greatsword/claymore
 		if(2)
 			armor = /obj/item/clothing/armor/plate/full/iron
 			if(prob(30))
@@ -317,19 +317,19 @@
 			armor =  /obj/item/clothing/armor/plate/full/iron
 			if(prob(30))
 				armor = /obj/item/clothing/armor/plate/full
-			l_hand = /obj/item/weapon/greataxe/steel/doublehead/graggar
+			l_hand = /obj/item/weapon/greataxe/steel/doublehead/archdevils
 		if(4)
 			armor = /obj/item/clothing/armor/plate/full/iron
 			if(prob(30))
 				armor = /obj/item/clothing/armor/plate/full
 			l_hand = /obj/item/weapon/shield/tower/metal
-			r_hand = /obj/item/weapon/sword/long/rider // Rest in peace for the Zaladian who died.
+			r_hand = /obj/item/weapon/sword/long/rider // Rest in peace for the Qadiridian who died.
 
 		if(5)
 			armor = /obj/item/clothing/armor/plate/full/iron
 			if(prob(30))
 				armor = /obj/item/clothing/armor/plate/full
-			l_hand = /obj/item/weapon/sword/long/greatsword/gsclaymore
+			l_hand = /obj/item/weapon/sword/long/greatsword/claymore/gold
 
 		if(6)// The pegasus knight didn't stand a chance...
 			head = /obj/item/clothing/head/helmet/pegasusknight
@@ -363,6 +363,6 @@
 				armor = /obj/item/clothing/armor/plate/full
 			l_hand = /obj/item/weapon/axe/battle
 			r_hand = /obj/item/weapon/axe/battle
-	// For the very small chance, a npc can roll a fullset of graggar armor
+	// For the very small chance, a npc can roll a fullset of archdevils armor
 	if(prob(5))
-		armor = /obj/item/clothing/armor/plate/full/graggar
+		armor = /obj/item/clothing/armor/plate/full/archdevils

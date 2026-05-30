@@ -1,7 +1,7 @@
-/datum/action/cooldown/spell/psydonlux_tamper
+/datum/action/cooldown/spell/angroslux_tamper
 	name = "WEEP"
-	spell_type = SPELL_PSYDONIC_MIRACLE
-	spell_flags = SPELL_PSYDON
+	spell_type = SPELL_ANGROSIC_MIRACLE
+	spell_flags = SPELL_ANGROS
 
 	spell_cost = 40
 	charge_time = 1
@@ -9,10 +9,11 @@
 	sound = 'sound/magic/psydonbleeds.ogg'
 	invocation = "I BLEED, SO THAT YOU MIGHT ENDURE!"
 	invocation_type = "shout"
-	associated_skill = /datum/skill/magic/holy
+	associated_skill = /datum/attribute/skill/magic/holy
 	cooldown_time = 1 MINUTES // 60 seconds cooldown
+	button_icon_state = "WEEP"
 
-/datum/action/cooldown/spell/psydonlux_tamper/cast(mob/living/carbon/human/H)
+/datum/action/cooldown/spell/angroslux_tamper/cast(mob/living/carbon/human/H)
 	. = ..()
 	var/mob/living/user = owner
 	if(!ishuman(H))
@@ -57,7 +58,7 @@
 
 	// Visual effects
 	user.visible_message(span_danger("[user] shoulders [H]'s wounds!"))
-	playsound(get_turf(user), 'sound/magic/psydonbleeds.ogg', 50, TRUE)
+	playsound(user, 'sound/magic/psydonbleeds.ogg', 50, TRUE)
 
 	new /obj/effect/temp_visual/psyheal_rogue(get_turf(H), "#487e97")
 	new /obj/effect/temp_visual/psyheal_rogue(get_turf(H), "#487e97")

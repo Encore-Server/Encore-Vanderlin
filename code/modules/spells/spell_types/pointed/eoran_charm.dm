@@ -23,24 +23,24 @@
 	do_charm(cast_on)
 
 /datum/action/cooldown/spell/charm/proc/do_charm(mob/living/cast_on)
-	cast_on.apply_status_effect(/datum/status_effect/eorapacify)
+	cast_on.apply_status_effect(/datum/status_effect/pomettepacify)
 	cast_on.Immobilize(85)
 
-/datum/action/cooldown/spell/charm/eoran
-	name = "Eoran Charm"
+/datum/action/cooldown/spell/charm/pomettic
+	name = "Pomettic Charm"
 	spell_type = SPELL_MIRACLE
 	antimagic_flags = MAGIC_RESISTANCE_HOLY
-	associated_skill = /datum/skill/magic/holy
-	required_items = list(/obj/item/clothing/neck/psycross/silver/eora)
+	associated_skill = /datum/attribute/skill/magic/holy
+	required_items = list(/obj/item/clothing/neck/psycross/silver/divine/pomette)
 
 	invocation = "Experiamur vim amoris!"
 	invocation_type = INVOCATION_SHOUT
 
-/datum/action/cooldown/spell/charm/eoran/do_charm(mob/living/cast_on)
-	var/list/charms_public = list("<b style='color:pink'>[owner] is influenced by the beauty of Eora's follower.</b>", "<b style='color:pink'>[cast_on] stares mesmerized at [owner] and does not move.</b>")
-	var/list/charms_target = list("<b style='color:pink'>Your eyes cannot move away from [owner].</b>", "<b style='color:pink'>You are enchanted by the beauty of the follower of Eora.</b>")
+/datum/action/cooldown/spell/charm/pomettic/do_charm(mob/living/cast_on)
+	var/list/charms_public = list("<b style='color:pink'>[owner] is influenced by the beauty of Pomette's follower.</b>", "<b style='color:pink'>[cast_on] stares mesmerized at [owner] and does not move.</b>")
+	var/list/charms_target = list("<b style='color:pink'>Your eyes cannot move away from [owner].</b>", "<b style='color:pink'>You are enchanted by the beauty of the follower of Pomette.</b>")
 	cast_on.visible_message(span_warning("[pick(charms_public)]"), span_warning("[pick(charms_target)]"))
-	cast_on.apply_status_effect(/datum/status_effect/eorapacify)
+	cast_on.apply_status_effect(/datum/status_effect/pomettepacify)
 	cast_on.apply_status_effect(/datum/status_effect/debuff/mesmerised, 8 SECONDS)
 	cast_on.Immobilize(4 SECONDS)
 
@@ -61,15 +61,15 @@
 
 	spell_type = SPELL_BLOOD
 	antimagic_flags = MAGIC_RESISTANCE_UNHOLY
-	associated_skill = /datum/skill/magic/blood
+	associated_skill = /datum/attribute/skill/magic/blood
 
 /datum/action/cooldown/spell/charm/vampire/do_charm(mob/living/cast_on)
 	var/list/charms_public = list("<b style='color:pink'>[owner]'s eyes glow as they look towards the person.</b>", "<b style='color:pink'>[cast_on] stares mesmerized at [owner] and does not move.</b>")
 	var/list/charms_target = list("<b style='color:pink'>Your eyes cannot move away from [owner].</b>", "<b style='color:pink'>You are enchanted by the beauty of the person standing infront of you.</b>")
 	cast_on.visible_message(span_warning("[pick(charms_public)]"), span_warning("[pick(charms_target)]"))
-	cast_on.apply_status_effect(/datum/status_effect/eorapacify)
+	cast_on.apply_status_effect(/datum/status_effect/pomettepacify)
 	cast_on.apply_status_effect(/datum/status_effect/debuff/mesmerised)
 	cast_on.Immobilize(40)
 	cast_on.Slowdown(15)
-	cast_on.blur_eyes(20)
+	cast_on.set_eye_blur_if_lower(40 SECONDS)
 	cast_on.emote("drool")

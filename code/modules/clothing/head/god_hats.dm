@@ -1,14 +1,15 @@
-/obj/item/clothing/head/padded/pestra
+/obj/item/clothing/head/padded/erdl
 	name = "naga hood"
-	desc = "Worn by the faithful of Pestra. Resembling the face of the Naga clothed in rot."
+	desc = "Worn by the faithful of Erdl. Resembling the face of the Naga clothed in rot."
 	icon_state = "pestrahood"
 	icon = 'icons/roguetown/clothing/patron_hoods.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/patron_hoods.dmi'
 	flags_inv = HIDEEARS|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
+	item_weight = 450 GRAMS
 
 /obj/item/clothing/head/roguehood/nochood
 	name = "moon hood"
-	desc = "The face of the Moon Prince. Worn by the faithful of Noc."
+	desc = "The face of the Moon Prince. Worn by the faithful of Akan."
 	icon_state = "nochood"
 	flags_inv = HIDEEARS|HIDEHAIR
 	default_hidden = HIDEEARS|HIDEHAIR
@@ -21,36 +22,40 @@
 
 /obj/item/clothing/head/padded/deathface
 	name = "death shroud"
-	desc = "A Veil for those in service to the Veiled Lady. When inducted into the cult of Necra, the supplicant must make a talisman to hold the memory of a loved one since passed."
+	desc = "A Veil for those in service to the Veiled Lady. When inducted into the cult of Valdala, the supplicant must make a talisman to hold the memory of a loved one since passed."
 	icon_state = "deathface"
 	flags_inv = HIDEEARS | HIDEHAIR | HIDEFACIALHAIR
 
 	armor = ARMOR_WEAK
 	prevent_crits = MINOR_CRITICALS
+	item_weight = 250 GRAMS
 
 /obj/item/clothing/head/padded/deathshroud
 	name = "death shroud"
-	desc = "Worn by the faithful of Necra, or less savory individuals."
+	desc = "Worn by the faithful of Valdala, or less savory individuals."
 	icon_state = "necrahood"
 	flags_inv = HIDEEARS|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
+	item_weight = 250 GRAMS
 
-/obj/item/clothing/head/padded/pestra
+/obj/item/clothing/head/padded/erdl
 	name = "naga hood"
-	desc = "Worn by the faithful of Pestra. Resembling the face of the Naga clothed in rot."
+	desc = "Worn by the faithful of Erdl. Resembling the face of the Naga clothed in rot."
 	icon_state = "pestrahood"
 	flags_inv = HIDEEARS|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
+	item_weight = 250 GRAMS
 
-/obj/item/clothing/head/padded/abyssor
+/obj/item/clothing/head/padded/mjallidhorn
 	name = "sea hood"
-	desc = "A green hood worn by the faithful of Abyssor."
+	desc = "A green hood worn by the faithful of Mjallidhorn."
 	icon_state = "abysshood"
 	icon = 'icons/roguetown/clothing/patron_hoods.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/patron_robes.dmi'
 	flags_inv = HIDEEARS|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
+	item_weight = 250 GRAMS
 
-/obj/item/clothing/head/roguehood/eora
+/obj/item/clothing/head/roguehood/pomette
 	name = "opera hood"
-	desc = "A silver opera mask worn by the faithful of Eora, usually during their rituals. Comes with a hood that can be pulled up for warmth."
+	desc = "A silver opera mask worn by the faithful of Pomette, usually during their rituals. Comes with a hood that can be pulled up for warmth."
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/64x64/head.dmi'
 	icon_state = "eorahood"
 	bloody_icon = 'icons/effects/blood64x64.dmi'
@@ -61,9 +66,9 @@
 	armor = ARMOR_WEAK
 	salvage_result = NUTRITION_LEVEL_HUNGRY
 
-/obj/item/clothing/head/roguehood/astrata
+/obj/item/clothing/head/roguehood/visires
 	name = "sun hood"
-	desc = "Worn by the faithful of Astrata."
+	desc = "Worn by the faithful of Visires."
 	icon_state = "astratahood"
 	resistance_flags = FIRE_PROOF // Not the sun hat!
 
@@ -124,8 +129,8 @@
 	REMOVE_TRAIT(user, TRAIT_ANTIMAGIC,"Anti-Magic")
 
 /obj/item/clothing/head/roguehood/priest/pickup(mob/living/user)
-	if((user.job != "Priest") && (user.job != "Priestess"))
-		playsound(user, 'sound/misc/gods/astrata_scream.ogg', 80, extrarange = SHORT_RANGE_SOUND_EXTRARANGE)
+	if((user.job != JOB_PRIEST) && (user.job != JOB_PRIEST_FEM))
+		playsound(user, 'sound/misc/gods/astrata_omen.ogg', 80, extrarange = SHORT_RANGE_SOUND_EXTRARANGE)
 		user.visible_message(span_reallybig("UNWORTHY HANDS TOUCH MY VISAGE, CEASE OR BE PUNISHED"))
 		spawn(30)
 			if(loc == user)
@@ -142,9 +147,10 @@
 	dynamic_hair_suffix = ""
 	flags_inv = HIDEEARS|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
 	resistance_flags = FIRE_PROOF
+	item_weight = 135 GRAMS
 
 /obj/item/clothing/head/priestmask/pickup(mob/living/user)
-	if((user.job != "Priest") && (user.job != "Priestess"))
+	if((user.job != JOB_PRIEST) && (user.job != JOB_PRIEST_FEM))
 		to_chat(user, "<font color='yellow'>UNWORTHY HANDS TOUCH THE VISAGE, CEASE OR BE PUNISHED</font>")
 		spawn(30)
 			if(loc == user)

@@ -1,11 +1,11 @@
 /datum/repeatable_crafting_recipe/alchemy
 	abstract_type = /datum/repeatable_crafting_recipe/alchemy
-	skillcraft = /datum/skill/craft/alchemy
+	skillcraft = /datum/attribute/skill/craft/alchemy
 	craftdiff = 0
 	category = "Alchemy"
 
 /datum/repeatable_crafting_recipe/alchemy/essence_connector
-	name = "Pestran Connector"
+	name = "Erdite Connector"
 	output = /obj/item/essence_connector
 	requirements = list(
 		/obj/item/ingot/thaumic = 1,
