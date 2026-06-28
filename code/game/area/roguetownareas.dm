@@ -101,7 +101,7 @@
 	background_track_night = null
 	first_time_text = "MOUNT MIRACLE FOOTHILLS"
 	custom_area_sound = 'sound/misc/stings/MalumSting.ogg'
-	ambush_times = list(NIGHT,DAWN,DUSK,DAY)
+	ambush_times = list(NIGHT)
 
 	converted_type = /area/indoors/shelter/mountains/decap
 	threat_region = THREAT_REGION_MOUNT_DECAP
@@ -117,7 +117,7 @@
 	name = "town basin"
 	icon_state = "basin"
 	soundenv = 19
-	ambush_times = list(DAWN,NIGHT,DUSK)
+	ambush_times = list(DAWN,NIGHT)
 	ambush_types = list(
 				/turf/open/floor/grass)
 	ambush_mobs = list(
@@ -297,7 +297,7 @@
 /area/under/cavelava
 	name = "cavelava"
 	icon_state = "cavelava"
-	first_time_text = "GOLERKANH'S ARTERY"
+	first_time_text = "MOUNT MIRACLE TUNNELS"
 	droning_index = DRONING_CAVE_LAVA
 	ambient_index = AMBIENCE_CAVE
 	ambush_times = list(NIGHT,DAWN,DUSK,DAY)
