@@ -153,3 +153,26 @@
 /obj/structure/fluff/road_sign/corner
 	desc = "A tall fixture upon a pole with writing that depicts where and what the road leads to. This one goes two directions and indicates a corner."
 	icon_state = "sign_corner"
+
+/obj/structure/fluff/walldeco/smugglerflag
+	name = "missing canaries ward"
+	desc = "A cautionary warding reminding quite urgently that you are in bad company. It has a crude, crimson sigil of a stout bird."
+	icon = 'icons/roguetown/misc/domotan/structure.dmi'
+	icon_state = "canary"
+
+/obj/structure/fluff/walldeco/smugglersigil
+	name = ""
+	desc = ""
+	icon = 'icons/roguetown/misc/domotan/structure.dmi'
+	icon_state = "canary_sigil"
+	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
+
+/obj/structure/fluff/pipe_organ
+	name = "massive pipe organ"
+	desc = "A gigantic musical instrument that metaphorically screams wealth and luxury. It commands a certain spiritual authority about the room. In its center face is a Shirleighan emblem."
+	icon = 'icons/roguetown/misc/domotan/96x96.dmi'
+	icon_state = "organ"
+	max_integrity = 600
+	density = TRUE
+	deconstructible = FALSE
+	SET_BASE_PIXEL(-16, 0)
