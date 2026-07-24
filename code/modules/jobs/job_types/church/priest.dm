@@ -43,24 +43,24 @@
 #define PRIEST_CURSE "Curse"
 
 /datum/job/priest
-	title = "Priest"
-	f_title = "Priestess"
-	tutorial = "You are a devoted leader of the Katholikos. \
-	The divine is all that matters in an immoral world. \
+	title = "Bishop"
+	f_title = "Bishop"
+	tutorial = "You are a devoted representative of the Katholikos, heading the diocese of Domotan Island. \
+	Upon the island, the faithful look to you for guidance and leadership; and you in turn answer to the Pontifex of Aelonda. \
 	The Elementals and their pantheon rule over all, and you will preach their wisdom to this land. \
 	It is up to you to shepherd the flock into a righteous future."
 	department_flag = CHURCHMEN
 	job_flags = (JOB_ANNOUNCE_ARRIVAL | JOB_SHOW_IN_CREDITS | JOB_EQUIP_RANK | JOB_NEW_PLAYER_JOINABLE)
 	display_order = JDO_PRIEST
 	faction = FACTION_TOWN
-	total_positions = 1
-	spawn_positions = 1
+	total_positions = 2
+	spawn_positions = 2
 	bypass_lastclass = TRUE
 	selection_color = "#c2a45d"
 	cmode_music = 'sound/music/cmode/church/CombatAstrata.ogg'
 	allowed_races = RACES_PLAYER_NONDISCRIMINATED
 	blacklisted_species = list(SPEC_ID_HALFLING)
-	allowed_patrons = list(/datum/patron/divine/visires)
+	allowed_patrons = UNDIVIDED_TEMPLE_PATRONS
 
 	outfit = /datum/outfit/priest
 	spells = list(
@@ -69,7 +69,7 @@
 		/datum/action/cooldown/spell/undirected/list_target/convert_role/church/churchling,
 		/datum/action/cooldown/spell/undirected/call_bird/priest,
 	)
-	honorary = "Vicar"
+	honorary = "Bishop"
 
 	exp_type = list(EXP_TYPE_CHURCH)
 	exp_types_granted = list(EXP_TYPE_CHURCH, EXP_TYPE_CLERIC, EXP_TYPE_LEADERSHIP)
@@ -97,7 +97,6 @@
 
 /datum/outfit/priest
 	name = "Priest"
-	neck = /obj/item/clothing/neck/psycross/silver/divine/visires
 	head = /obj/item/clothing/head/priestmask
 	shirt = /obj/item/clothing/shirt/undershirt/priest
 	pants = /obj/item/clothing/pants/tights/colored/black
@@ -111,6 +110,32 @@
 		/obj/item/storage/belt/pouch/coins/rich = 1
 	)
 	l_hand = /obj/item/weapon/polearm/woodstaff/aries
+
+/datum/outfit/priest/pre_equip(mob/living/carbon/human/equipped_human, visuals_only)
+	. = ..()
+	switch(equipped_human.patron?.type)
+		if(/datum/patron/divine/visires)
+			neck = /obj/item/clothing/neck/psycross/silver/divine/visires
+		if(/datum/patron/divine/akan)
+			neck = /obj/item/clothing/neck/psycross/silver/divine/akan
+		if(/datum/patron/divine/gani)
+			neck = /obj/item/clothing/neck/psycross/silver/divine/gani
+		if(/datum/patron/divine/mjallidhorn)
+			neck = /obj/item/clothing/neck/psycross/silver/divine/mjallidhorn
+		if(/datum/patron/divine/valdala)
+			neck = /obj/item/clothing/neck/psycross/silver/divine/valdala
+		if(/datum/patron/divine/mordsol)
+			neck = /obj/item/clothing/neck/psycross/silver/divine/mordsol
+		if(/datum/patron/divine/iliope)
+			neck = /obj/item/clothing/neck/psycross/silver/divine/iliope
+		if(/datum/patron/divine/erdl)
+			neck = /obj/item/clothing/neck/psycross/silver/divine/erdl
+		if(/datum/patron/divine/golerkanh)
+			neck = /obj/item/clothing/neck/psycross/silver/divine/golerkanh
+		if(/datum/patron/divine/pomette)
+			neck = /obj/item/clothing/neck/psycross/silver/divine/pomette
+		if(/datum/patron/divine/centrist)
+			neck = /obj/item/clothing/neck/psycross/silver/divine
 
 /datum/job/priest/demoted
 	title = "Ex-Priest"
@@ -127,8 +152,8 @@
 	job_flags = (JOB_ANNOUNCE_ARRIVAL | JOB_EQUIP_RANK)
 	department_flag = CHURCHMEN
 	faction = FACTION_TOWN
-	total_positions = 0
-	spawn_positions = 0
+	total_positions = 2
+	spawn_positions = 2
 
 /mob/living/carbon/human/proc/coronate_lord()
 	set name = "Coronate"
@@ -179,8 +204,8 @@
 	lord_job?.add_spells(coronated)
 	SSticker.rulermob = coronated
 	GLOB.badomens -= OMEN_NOLORD
-	say("By the authority of the Gods, I pronounce you Ruler of all [SSmapping.config.map_name]!")
-	priority_announce("[real_name] the [mind.assigned_role.get_informed_title(src)] has named [coronated.real_name] the inheritor of [SSmapping.config.map_name]!", \
+	say("By the authority of the Aspects, I pronounce you the ruling regent of [SSmapping.config.map_name]!")
+	priority_announce("[real_name] the [mind.assigned_role.get_informed_title(src)] has named [coronated.real_name] the regent of [SSmapping.config.map_name]!", \
 	title = "Long Live [lord_job.get_informed_title(coronated)] [coronated.real_name]!", sound = 'sound/misc/bell.ogg')
 
 /mob/living/carbon/human/proc/churchexcommunicate()
@@ -191,11 +216,11 @@
 	if(!istype(get_area(src), /area/indoors/town/church/chapel))
 		to_chat(src, span_warning("I need to do this from the prayer hall."))
 		return FALSE
-	var/inputty = input("Excommunicate someone, cutting off their connection to the Ten. (excommunicate them again to remove it)", "Sinner Name") as text|null
+	var/inputty = input("Excommunicate someone, cutting off their connection to the Aspects. (excommunicate them again to remove it)", "Sinner Name") as text|null
 	if(inputty)
 		if(inputty in GLOB.excommunicated_players)
 			GLOB.excommunicated_players -= inputty
-			priority_announce("[real_name] has forgiven [inputty]. The Ten hear their prayers once more!", title = "Hail the Ten!", sound = 'sound/misc/bell.ogg')
+			priority_announce("[real_name] has forgiven [inputty]. The Aspects hear their prayers once more!", title = "Hail the Ten!", sound = 'sound/misc/bell.ogg')
 			for(var/mob/living/carbon/human/H in GLOB.human_list)
 				if(H.real_name == inputty)
 					H.cleric?.recommunicate()
@@ -211,7 +236,7 @@
 					return FALSE
 				H.cleric?.excommunicate()
 				GLOB.excommunicated_players += inputty
-				priority_announce("[real_name] has excommunicated [inputty]! The Ten have turned away from them!", title = "SHAME", sound = 'sound/misc/excomm.ogg')
+				priority_announce("[real_name] has excommunicated [inputty]! The Aspects have turned away from them!", title = "SHAME", sound = 'sound/misc/excomm.ogg')
 				break
 
 /mob/living/carbon/human/proc/churchcurse()
@@ -226,7 +251,7 @@
 	if(inputty)
 		if(inputty in GLOB.heretical_players)
 			GLOB.heretical_players -= inputty
-			priority_announce("[real_name] has forgiven [inputty]. Once more walk in the light!", title = "Hail the Ten!", sound = 'sound/misc/bell.ogg')
+			priority_announce("[real_name] has forgiven [inputty]. Once more walk in the light!", title = "Hail the Aspects!", sound = 'sound/misc/bell.ogg')
 			for(var/mob/living/carbon/H in GLOB.player_list)
 				if(H.real_name == inputty)
 					H.remove_stress(/datum/stress_event/psycurse)
@@ -252,7 +277,7 @@
 	if(!istype(get_area(src), /area/indoors/town/church/chapel))
 		to_chat(src, "<span class='warning'>I need to do this from the prayer hall.</span>")
 		return FALSE
-	var/inputty = input("Make an announcement", "VANDERLIN") as text|null
+	var/inputty = input("Make an announcement", "ENCORE") as text|null
 	if(inputty)
 		priority_announce("[inputty]", title = "The [get_role_title()] Speaks", sound = 'sound/misc/bell.ogg')
 		src.log_talk("[TIMETOTEXT4LOGS] [inputty]", LOG_SAY, tag="Priest announcement")
