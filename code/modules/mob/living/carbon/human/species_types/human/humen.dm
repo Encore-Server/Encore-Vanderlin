@@ -19,11 +19,6 @@
 /datum/species/human/northern
 	name = "Humen"
 	id = SPEC_ID_HUMEN
-	multiple_accents = list(
-		"No Accent" = ACCENT_NONE,
-		"Sterkenstadt Accent" = ACCENT_STERKENSTADT,
-		"Nortic Accent" = ACCENT_NORTIC,
-	)
 	desc = PLACEHOLDER_SPECIES_REBRANDING
 
 	default_color = "FFFFFF"

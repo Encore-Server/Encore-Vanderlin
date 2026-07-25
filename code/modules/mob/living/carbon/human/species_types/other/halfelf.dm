@@ -17,12 +17,6 @@
 /datum/species/human/halfelf
 	name = "Half-Elf"
 	id = SPEC_ID_HALF_ELF
-	multiple_accents = list(
-		"Humen Accent" = "Common",
-		"Elf Accent" = "Elfish",
-		"Noman Accent" = ACCENT_NOMAN,
-		"Nortic Accent" = ACCENT_NORTIC,
-	)
 	desc = PLACEHOLDER_SPECIES_REBRANDING
 
 	default_color = "FFFFFF"

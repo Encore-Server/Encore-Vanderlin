@@ -15,9 +15,6 @@
 /datum/species/sissean
 	name = "Sissean"
 	id = SPEC_ID_SISSEAN
-	multiple_accents = list(
-		"No Accent" = ACCENT_NONE,
-	)
 	desc = "Sisseans are semi-aquatic reptilian humanoids. Their skin is covered in scales and varied in color from dark green through to shades of brown and gray. Sisseans have non-prehensile muscular tails that grow to three or four feet in length, and these are used for balance. They also have sharp claws and teeth. Most of these originate from the humid tropics of the Delve north of the Qadirid or scattered disparate island nations."
 
 	default_color = "FFFFFF"

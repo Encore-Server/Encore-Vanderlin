@@ -374,21 +374,6 @@ GLOBAL_LIST_EMPTY(roundstart_species)
 
 			var/list/accents_list = list(
 				ACCENT_NONE,
-				ACCENT_DWARF,
-				ACCENT_DELF,
-				ACCENT_ELF,
-				ACCENT_TIEFLING,
-				ACCENT_HORC,
-				ACCENT_TRITON,
-				ACCENT_STERKENSTADT,
-				ACCENT_PIRATE,
-				ACCENT_MIDDLE_SPEAK,
-				ACCENT_SULTANATE,
-				ACCENT_HALFLING,
-				ACCENT_KOBOLD,
-				ACCENT_ROUSMAN,
-				ACCENT_NOMAN,
-				ACCENT_NORTIC,
 			)
 
 			///This will only trigger for donators

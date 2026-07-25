@@ -15,9 +15,6 @@
 /datum/species/lupian
 	name = "Lupian"
 	id = SPEC_ID_LUPIAN
-	multiple_accents = list(
-		"No Accent" = ACCENT_NONE,
-	)
 	desc = PLACEHOLDER_SPECIES_REBRANDING
 
 	default_color = "FFFFFF"

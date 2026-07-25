@@ -16,9 +16,6 @@
 /datum/species/dracon
 	name = "Drakian"
 	id = SPEC_ID_DRACON
-	multiple_accents = list(
-		"No Accent" = ACCENT_NONE,
-	)
 	desc = "Mighty scaled individuals who claim to be descendant from the dragons of yore."
 
 	default_color = "FFFFFF"

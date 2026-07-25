@@ -17,10 +17,6 @@
 /datum/species/human/halfdrow
 	name = "Half-Drow"
 	id = SPEC_ID_HALF_DROW
-	multiple_accents = list(
-		"Humen Accent" = "Common",
-		"Dark Elf Accent" = "Elfish"
-	)
 	desc = PLACEHOLDER_SPECIES_REBRANDING
 
 	default_color = "FFFFFF"
