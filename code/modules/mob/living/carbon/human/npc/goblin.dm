@@ -239,6 +239,7 @@
 		if(headdy)
 			headdy.icon = 'icons/roguetown/mob/monster/goblins.dmi'
 			headdy.icon_state = "[src.dna.species.id]_head"
+	src.grant_language(/datum/language/common)
 	var/obj/item/organ/eyes/eyes = src.getorganslot(ORGAN_SLOT_EYES)
 	if(eyes)
 		eyes.Remove(src,1)
