@@ -156,12 +156,12 @@
 			user.add_stress(/datum/stress_event/saw_old_party)
 		// Intolerant
 		else if(!HAS_TRAIT(user, TRAIT_TOLERANT)) // friendship is kinda like tolerance after all
-			if(!isdarkelf(user) && isdarkelf(src))
-				user.add_stress(/datum/stress_event/delf)
+			//if(!isdarkelf(user) && isdarkelf(src))
+				//user.add_stress(/datum/stress_event/delf) //You're not having a stress event just because you saw a black elf, my brother in Gani.
 			if(!istiefling(user) && istiefling(src))
 				user.add_stress(/datum/stress_event/tieb)
-			if(!ishalforc(user) && ishalforc(src))
-				user.add_stress(/datum/stress_event/horc)
+			//if(!ishalforc(user) && ishalforc(src))
+				//user.add_stress(/datum/stress_event/horc) //Half-Orcs are still discriminated against but a little more tolererated in our setting, so you shouldn't get stressed every time you look at your friend Grognak the Orphan-Crusher.
 
 		// Excommunications
 		if(real_name in GLOB.excommunicated_players)
@@ -385,6 +385,12 @@
 		var/atom/item = get_most_expensive()
 		if(item)
 			. += span_tinynoticeital("You get the feeling [P[THEIR]] most valuable possession is [item.get_examine_name(user)].")
+	//Foreign Noble
+	if(HAS_TRAIT(src, TRAIT_NOBLE_FOREIGN))
+		. += span_blue("[P[THEYRE]] likely a member of the nobility, based on such noble bearing... but from where?")
+	//Local Noble
+	if(HAS_TRAIT(src, TRAIT_NOBLE_LOCAL))
+		. += span_blue("[P[THEYRE]] a noble, local to Domotan Island!")
 
 
 	if(isautomaton(user))

@@ -34,8 +34,8 @@
 	display_order = JDO_PHYSICIAN
 	job_flags = (JOB_ANNOUNCE_ARRIVAL | JOB_SHOW_IN_CREDITS | JOB_EQUIP_RANK | JOB_NEW_PLAYER_JOINABLE)
 	faction = FACTION_TOWN
-	total_positions = -1
-	spawn_positions = -1
+	total_positions = 99
+	spawn_positions = 99
 	bypass_lastclass = TRUE
 	allowed_races = RACES_PLAYER_NONHERETICAL
 	blacklisted_species = list(SPEC_ID_TRITON, SPEC_ID_HARPY)
@@ -69,6 +69,7 @@
 	if(spawned.dna?.species?.id != SPEC_ID_MEDICATOR)
 		ADD_TRAIT(spawned, TRAIT_NOBLE_BLOOD, JOB_TRAIT)
 		ADD_TRAIT(spawned, TRAIT_NOBLE_POWER, JOB_TRAIT)
+		ADD_TRAIT(spawned, TRAIT_NOBLE_LOCAL, JOB_TRAIT)
 	else
 		spawned.honorary = null
 
