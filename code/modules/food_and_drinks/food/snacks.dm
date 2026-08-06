@@ -266,7 +266,7 @@ All foods are distributed among various categories. Use common sense.
 					return PROCESS_KILL
 */
 	if(rotprocess)
-		if(!istype(loc, /obj/structure/closet/crate/chest) && !istype(loc, /obj/structure/fake_machine/vendor))
+		if(!istype(loc, /obj/structure/closet/crate/chest) && !istype(loc, /obj/structure/fake_machine/vendor) && !istype(loc, /obj/item/storage/backpack/backpack/artibackpack))
 			if(!locate(/obj/structure/table) in loc)
 				warming -= 20 //ssobj processing has a wait of 20
 			else
