@@ -228,6 +228,8 @@ All foods are distributed among various categories. Use common sense.
 	..()
 	if(QDELETED(src))
 		return PROCESS_KILL
+// Commenting this out for now. A lot of this is extremely neat code, really like the part with burying in graves, but we don't want food to rot inside chests at all. If someone smarter than me can impliment this stuff again but make rot COMPLETELY stop inside chests, PLEASE do.
+/*
 	if(rotprocess)
 		var/turf/open/T = get_turf(src)
 		var/temp_modifier = 1.0
@@ -262,6 +264,16 @@ All foods are distributed among various categories. Use common sense.
 				if(become_rotten())
 					STOP_PROCESSING(SSobj, src)
 					return PROCESS_KILL
+*/
+	if(rotprocess)
+		if(!istype(loc, /obj/structure/closet/crate/chest) && !istype(loc, /obj/structure/fake_machine/vendor))
+			if(!locate(/obj/structure/table) in loc)
+				warming -= 20 //ssobj processing has a wait of 20
+			else
+				warming -= 10
+			if(warming < (-1*rotprocess))
+				if(become_rotten())
+					STOP_PROCESSING(SSobj, src)
 
 /obj/item/reagent_containers/food/snacks/proc/become_rotten()
 	if(QDELETED(src))
