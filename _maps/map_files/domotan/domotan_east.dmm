@@ -57,6 +57,16 @@
 	},
 /turf/open/floor/church/purple,
 /area/indoors/hellwatch)
+"ar" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/metal/red/alt,
+/area/under/cave)
+"as" = (
+/obj/structure/fluff/railing/tall/retaining/rock{
+	dir = 5
+	},
+/turf/open/water/ocean/abyss,
+/area/outdoors/mountains/decap)
 "au" = (
 /obj/structure/fluff/railing/wood{
 	dir = 8
@@ -261,6 +271,12 @@
 /obj/item/reagent_containers/glass/cup/wooden,
 /turf/open/floor/ruinedwood/turned,
 /area/indoors/hellwatch)
+"cV" = (
+/obj/structure/fluff/railing/tall/retaining/rock{
+	dir = 4
+	},
+/turf/open/water/ocean/abyss,
+/area/outdoors/mountains/decap)
 "cY" = (
 /obj/structure/flora/newtree/snow,
 /turf/open/floor/grass/cold,
@@ -401,6 +417,15 @@
 /obj/structure/fluff/railing/wood,
 /turf/open/openspace,
 /area/outdoors/mountains)
+"fb" = (
+/obj/structure/fluff/railing/tall/retaining/rock{
+	dir = 1
+	},
+/obj/structure/fluff/railing/tall/retaining/rock{
+	dir = 4
+	},
+/turf/open/water/ocean/abyss,
+/area/outdoors/mountains/decap)
 "fc" = (
 /obj/structure/fluff/walldeco/church/line{
 	dir = 1
@@ -703,6 +728,12 @@
 /obj/machinery/light/fueled/torchholder/r,
 /turf/open/floor/churchmarble,
 /area/indoors/hellwatch)
+"id" = (
+/obj/structure/fluff/railing/tall/retaining/rock{
+	dir = 5
+	},
+/turf/open/water/ocean/abyss,
+/area/outdoors/beach)
 "if" = (
 /obj/structure/stairs/stone/church{
 	dir = 4
@@ -764,6 +795,12 @@
 "iL" = (
 /turf/closed/mineral/bedrock,
 /area)
+"iM" = (
+/obj/machinery/light/fueledstreet/orange/wall{
+	dir = 4
+	},
+/turf/open/floor/metal/red,
+/area/under/cave)
 "iV" = (
 /obj/machinery/light/fueled/torchholder/c,
 /turf/open/floor/grass/yel,
@@ -900,11 +937,11 @@
 /turf/open/floor/grass/yel,
 /area/outdoors/mountains/decap)
 "kP" = (
-/obj/structure/fluff/railing/border{
-	dir = 5
+/obj/machinery/light/fueledstreet/orange/wall{
+	dir = 8
 	},
-/turf/open/floor/cobble,
-/area/outdoors/hellwatch)
+/turf/open/floor/metal/red,
+/area/under/cave)
 "kR" = (
 /obj/structure/flora/grass/bush,
 /turf/open/floor/grass/yel,
@@ -954,8 +991,8 @@
 /turf/open/floor/churchrough,
 /area/outdoors/seculton)
 "lv" = (
-/turf/open/water/clean,
-/area/outdoors/hellwatch)
+/turf/closed/wall/mineral/stone/moss,
+/area/under/cave)
 "lx" = (
 /turf/open/floor/cobble/alt,
 /area/indoors/hellwatch)
@@ -1322,6 +1359,18 @@
 /obj/item/natural/rock,
 /turf/open/floor/naturalstone,
 /area/indoors/hellwatch)
+"qA" = (
+/obj/structure/fluff/railing/tall/retaining/rock{
+	dir = 1
+	},
+/obj/structure/fluff/railing/tall/retaining/rock{
+	dir = 8
+	},
+/obj/structure/fluff/railing/tall/retaining/rock{
+	dir = 4
+	},
+/turf/open/water/ocean/abyss,
+/area/outdoors/mountains/decap)
 "qG" = (
 /obj/structure/door{
 	name = "Gate Rafters"
@@ -1448,6 +1497,12 @@
 /obj/structure/fake_machine/scomm/r,
 /turf/open/floor/grass/yel,
 /area/outdoors/seculton)
+"rV" = (
+/obj/structure/fluff/railing/tall/retaining/rock{
+	dir = 8
+	},
+/turf/open/water/ocean/abyss,
+/area/outdoors/mountains/decap)
 "rY" = (
 /obj/structure/fluff/traveltile{
 	aportalgoesto = "z2-northeast1-in";
@@ -1941,6 +1996,12 @@
 "zw" = (
 /turf/open/water/marsh,
 /area/outdoors/mountains)
+"zE" = (
+/obj/structure/fluff/railing/tall/retaining/rock{
+	dir = 1
+	},
+/turf/open/water/ocean/abyss,
+/area/outdoors/mountains/decap)
 "zM" = (
 /obj/structure/roguerock,
 /turf/open/floor/naturalstone,
@@ -2114,6 +2175,12 @@
 /obj/item/clothing/armor/leather/vest/colored/random,
 /turf/open/floor/ruinedwood/turned,
 /area/indoors/hellwatch)
+"CW" = (
+/obj/structure/fluff/railing/tall/retaining/rock{
+	dir = 9
+	},
+/turf/open/water/ocean/abyss,
+/area/outdoors/mountains/decap)
 "Da" = (
 /obj/structure/curtain/bounty,
 /turf/open/floor/ruinedwood/turned/darker,
@@ -2217,8 +2284,7 @@
 /turf/open/floor/dirt/road,
 /area/outdoors/mountains/decap)
 "EB" = (
-/obj/structure/flora/grass,
-/turf/open/floor/cobble/alt,
+/turf/open/floor/church/purple,
 /area/outdoors/hellwatch)
 "EE" = (
 /obj/structure/fluff/walldeco/church/line{
@@ -2821,7 +2887,7 @@
 	pixel_x = 3;
 	pixel_y = 12
 	},
-/turf/open/floor/grass/yel,
+/turf/open/floor/cobble/alt,
 /area/outdoors/hellwatch)
 "Mn" = (
 /obj/structure/chair/bench/ancientlog,
@@ -2980,15 +3046,24 @@
 /turf/open/floor/cobblerock,
 /area/outdoors/seculton)
 "NR" = (
-/obj/structure/door/stone{
-	name = "Chapel"
+/obj/structure/fluff/traveltile{
+	aallmig = "bypass_out";
+	aportalgoesto = "bypass2";
+	aportalid = "bypass_out";
+	name = "To Bypassage";
+	dir = 1;
+	icon_state = "event";
+	desc = "A passageway to a shortcut which is only present at very particularly dire times..."
 	},
-/obj/effect/mapping_helpers/access/keyset/church/general,
-/turf/open/floor/ruinedwood/darker,
-/area/indoors/hellwatch)
+/turf/open/floor/metal/alt,
+/area/under/cave)
 "NV" = (
 /turf/open/openspace,
 /area/outdoors/mountains/decap/miracle_caldera)
+"Ob" = (
+/obj/structure/fluff/statue/knight/r,
+/turf/open/floor/metal/red,
+/area/under/cave)
 "Od" = (
 /turf/closed/mineral,
 /area/indoors/hellwatch)
@@ -3057,6 +3132,15 @@
 "OK" = (
 /turf/open/water/clean,
 /area/indoors/hellwatch)
+"OM" = (
+/obj/structure/fluff/railing/tall/retaining/rock{
+	dir = 5
+	},
+/obj/structure/fluff/railing/tall/retaining/rock{
+	dir = 8
+	},
+/turf/open/water/ocean/abyss,
+/area/outdoors/mountains/decap)
 "ON" = (
 /obj/structure/carpet/green,
 /turf/open/floor/ruinedwood/turned,
@@ -3086,6 +3170,12 @@
 /obj/machinery/light/fueled/torchholder/l,
 /turf/open/floor/ruinedwood/chevron,
 /area/indoors/hellwatch)
+"Pg" = (
+/obj/structure/fluff/railing/tall/retaining/rock{
+	dir = 1
+	},
+/turf/open/water/ocean/abyss,
+/area/outdoors/beach)
 "Pm" = (
 /obj/structure/fluff/walldeco/sign/weaponsmithsign,
 /obj/structure/fluid_drain,
@@ -3129,14 +3219,9 @@
 /turf/closed/wall/mineral/stonebrick/reddish,
 /area/under/cave)
 "PX" = (
-/obj/structure/stairs{
-	dir = 1
-	},
-/obj/structure/fluff/railing/border{
-	dir = 4
-	},
-/turf/open/floor/church/purple,
-/area/outdoors/hellwatch)
+/obj/structure/stairs/stone,
+/turf/open/floor/metal/red/alt,
+/area/under/cave)
 "PZ" = (
 /obj/structure/bed/wool,
 /obj/structure/bed/wool{
@@ -3290,7 +3375,7 @@
 /turf/open/floor/cobblerock,
 /area/under/cave)
 "RA" = (
-/obj/machinery/light/fueled/firebowl,
+/obj/structure/stairs/stone,
 /turf/open/floor/church/purple,
 /area/outdoors/hellwatch)
 "RI" = (
@@ -3418,6 +3503,15 @@
 	},
 /turf/open/floor/ruinedwood/darker,
 /area/indoors/hellwatch)
+"Ta" = (
+/obj/structure/fluff/railing/tall/retaining/rock{
+	dir = 1
+	},
+/obj/structure/fluff/railing/tall/retaining/rock{
+	dir = 8
+	},
+/turf/open/water/ocean/abyss,
+/area/outdoors/mountains/decap)
 "Tg" = (
 /obj/structure/stairs/stone{
 	dir = 1
@@ -3610,6 +3704,10 @@
 	},
 /turf/open/floor/church,
 /area/indoors/hellwatch)
+"Vi" = (
+/obj/structure/fluff/statue/knight,
+/turf/open/floor/metal/red,
+/area/under/cave)
 "Vn" = (
 /obj/effect/mapping_helpers/access/keyset/garrison/general,
 /obj/effect/mapping_helpers/access/locker,
@@ -3927,6 +4025,12 @@
 /obj/structure/roguetent/preopen,
 /turf/open/floor/dirt/road,
 /area/indoors/shelter/mountains)
+"Zw" = (
+/obj/structure/fluff/railing/tall/retaining/rock{
+	dir = 9
+	},
+/turf/open/water/ocean/abyss,
+/area/outdoors/beach)
 "Zx" = (
 /obj/structure/door/stone{
 	name = "Perimeter Walls"
@@ -3959,6 +4063,9 @@
 "ZO" = (
 /turf/open/water/marsh,
 /area/outdoors/seculton)
+"ZR" = (
+/turf/open/floor/metal/red/alt,
+/area/under/cave)
 "ZU" = (
 /obj/structure/flora/ausbushes/brflowers,
 /turf/open/floor/grass/red,
@@ -4368,8 +4475,8 @@ vE
 vE
 MY
 MP
-PG
-PG
+fb
+as
 PG
 cp
 cp
@@ -4576,7 +4683,7 @@ vE
 MY
 MP
 MP
-PG
+zE
 PG
 PG
 cp
@@ -4783,9 +4890,9 @@ vE
 MY
 MP
 MP
-PG
-PG
-PG
+fb
+cV
+as
 cp
 cp
 cp
@@ -4992,8 +5099,8 @@ MY
 MP
 MP
 MP
-PG
-cp
+fb
+id
 cp
 cp
 cp
@@ -5200,7 +5307,7 @@ MP
 MP
 MP
 MP
-cp
+Pg
 cp
 cp
 cp
@@ -5407,8 +5514,8 @@ MY
 MP
 MP
 MP
-PG
-PG
+fb
+as
 cp
 cp
 cp
@@ -5615,7 +5722,7 @@ MY
 MP
 MP
 MP
-PG
+zE
 cp
 cp
 cp
@@ -5822,7 +5929,7 @@ MY
 MY
 MP
 MP
-PG
+zE
 cp
 cp
 cp
@@ -6029,7 +6136,7 @@ MY
 MY
 MP
 MP
-PG
+zE
 cp
 cp
 cp
@@ -6235,8 +6342,8 @@ MY
 MP
 MP
 MP
-PG
-PG
+Ta
+CW
 cp
 cp
 cp
@@ -6442,7 +6549,7 @@ MY
 MP
 MP
 MP
-PG
+zE
 PG
 cp
 cp
@@ -6647,9 +6754,9 @@ vE
 MY
 MY
 MP
-PG
-PG
-cp
+Ta
+rV
+Zw
 cp
 cp
 cp
@@ -6854,7 +6961,7 @@ vE
 MY
 MY
 MP
-PG
+zE
 PG
 cp
 cp
@@ -7005,14 +7112,14 @@ xI
 xI
 xI
 xI
-xI
-xI
-xI
-xI
-xI
-xI
-xI
-xI
+lv
+lv
+lv
+lv
+lv
+fA
+fA
+fA
 xI
 xI
 xI
@@ -7061,7 +7168,7 @@ vE
 MY
 MY
 MP
-PG
+zE
 PG
 cp
 cp
@@ -7212,14 +7319,14 @@ xI
 xI
 xI
 xI
-xI
-xI
-xI
-xI
-xI
-xI
-xI
-xI
+lv
+NR
+iM
+Vi
+lv
+lv
+lv
+fA
 xI
 xI
 xI
@@ -7268,7 +7375,7 @@ vE
 MY
 MY
 MP
-PG
+zE
 PG
 cp
 cp
@@ -7419,14 +7526,14 @@ xI
 xI
 xI
 xI
-xI
-xI
-xI
-xI
-xI
-xI
-xI
-xI
+lv
+NR
+ar
+ZR
+ZR
+PX
+lv
+fA
 xI
 xI
 xI
@@ -7475,8 +7582,8 @@ vE
 MY
 MY
 MP
-PG
-PG
+fb
+as
 cp
 cp
 cp
@@ -7626,14 +7733,14 @@ xI
 xI
 xI
 xI
-xI
-xI
-xI
-xI
-xI
-xI
-xI
-xI
+lv
+NR
+ZR
+ZR
+ar
+PX
+lv
+fA
 xI
 xI
 xI
@@ -7683,7 +7790,7 @@ vE
 MY
 MP
 MP
-PG
+zE
 cp
 cp
 cp
@@ -7833,14 +7940,14 @@ xI
 xI
 xI
 xI
-xI
-xI
-xI
-xI
-xI
-xI
-xI
-xI
+lv
+NR
+kP
+Ob
+lv
+lv
+lv
+fA
 xI
 xI
 xI
@@ -7890,7 +7997,7 @@ vE
 MY
 MY
 MP
-PG
+zE
 cp
 cp
 cp
@@ -8040,14 +8147,14 @@ xI
 xI
 xI
 xI
-xI
-xI
-xI
-xI
-xI
-xI
-xI
-xI
+lv
+lv
+lv
+lv
+lv
+fA
+fA
+fA
 xI
 xI
 xI
@@ -8097,7 +8204,7 @@ vE
 MY
 MY
 MP
-PG
+zE
 cp
 cp
 cp
@@ -8304,7 +8411,7 @@ vE
 MY
 MY
 MP
-PG
+zE
 cp
 cp
 cp
@@ -8511,7 +8618,7 @@ MY
 MY
 MP
 MP
-PG
+zE
 cp
 cp
 cp
@@ -8717,8 +8824,8 @@ vE
 MY
 MY
 MP
-PG
-PG
+Ta
+CW
 cp
 cp
 cp
@@ -8924,7 +9031,7 @@ vE
 MY
 MP
 MP
-PG
+zE
 PG
 cp
 cp
@@ -9131,7 +9238,7 @@ vE
 MY
 MP
 MP
-PG
+zE
 PG
 cp
 cp
@@ -9338,7 +9445,7 @@ vE
 MY
 MP
 MP
-PG
+zE
 PG
 cp
 cp
@@ -9545,7 +9652,7 @@ MY
 MY
 MP
 MP
-PG
+zE
 PG
 cp
 cp
@@ -9751,8 +9858,8 @@ nR
 ES
 MY
 MP
-PG
-PG
+Ta
+CW
 PG
 cp
 cp
@@ -9958,8 +10065,8 @@ nR
 ES
 MY
 MP
-PG
-PG
+fb
+as
 PG
 cp
 cp
@@ -10166,8 +10273,8 @@ ES
 MP
 MP
 MP
-PG
-PG
+fb
+as
 cp
 cp
 cp
@@ -10374,7 +10481,7 @@ MP
 MP
 MP
 MP
-PG
+zE
 cp
 cp
 cp
@@ -10581,7 +10688,7 @@ MP
 MP
 MP
 MP
-PG
+zE
 cp
 cp
 cp
@@ -10788,7 +10895,7 @@ MY
 MP
 MP
 MP
-PG
+zE
 cp
 cp
 cp
@@ -10995,7 +11102,7 @@ MY
 MY
 MP
 MP
-PG
+zE
 cp
 cp
 cp
@@ -11202,7 +11309,7 @@ MY
 MY
 MP
 MP
-PG
+zE
 cp
 cp
 cp
@@ -11409,7 +11516,7 @@ MY
 MP
 MP
 MP
-PG
+zE
 cp
 cp
 cp
@@ -11616,7 +11723,7 @@ MY
 MP
 MP
 MP
-PG
+zE
 cp
 cp
 cp
@@ -11821,9 +11928,9 @@ vE
 MY
 MP
 MP
-PG
-PG
-PG
+Ta
+rV
+CW
 cp
 cp
 cp
@@ -12028,7 +12135,7 @@ vE
 MY
 MP
 MP
-PG
+zE
 PG
 PG
 cp
@@ -12235,7 +12342,7 @@ vE
 MY
 MY
 MP
-PG
+zE
 PG
 PG
 cp
@@ -12442,8 +12549,8 @@ vE
 MY
 MY
 MP
-PG
-PG
+fb
+as
 PG
 cp
 cp
@@ -12650,7 +12757,7 @@ MY
 MY
 MP
 MP
-PG
+zE
 PG
 cp
 cp
@@ -12857,7 +12964,7 @@ MY
 MY
 MP
 MP
-PG
+zE
 PG
 cp
 cp
@@ -13064,7 +13171,7 @@ vE
 MY
 MY
 MP
-PG
+zE
 PG
 cp
 cp
@@ -13271,7 +13378,7 @@ vE
 MY
 MY
 MP
-PG
+zE
 PG
 cp
 cp
@@ -13478,7 +13585,7 @@ vE
 MY
 MP
 MP
-PG
+zE
 PG
 cp
 cp
@@ -13685,7 +13792,7 @@ MY
 MY
 MP
 MP
-PG
+zE
 PG
 cp
 cp
@@ -13891,8 +13998,8 @@ vE
 MY
 MY
 MP
-PG
-PG
+Ta
+CW
 PG
 cp
 cp
@@ -14098,7 +14205,7 @@ MY
 MY
 MP
 MP
-PG
+zE
 PG
 PG
 cp
@@ -14305,7 +14412,7 @@ MY
 MY
 MY
 MP
-PG
+zE
 PG
 PG
 cp
@@ -14512,8 +14619,8 @@ vE
 MY
 MY
 MP
-PG
-PG
+fb
+as
 PG
 cp
 cp
@@ -14720,7 +14827,7 @@ MY
 MY
 MP
 MP
-PG
+zE
 PG
 cp
 cp
@@ -14927,7 +15034,7 @@ MY
 MY
 MP
 MP
-PG
+zE
 PG
 cp
 cp
@@ -15134,7 +15241,7 @@ MP
 WA
 MP
 MP
-PG
+zE
 PG
 cp
 cp
@@ -15341,7 +15448,7 @@ MY
 MP
 MP
 MP
-PG
+zE
 PG
 cp
 cp
@@ -15546,9 +15653,9 @@ vE
 vE
 MY
 MP
-PG
-PG
-PG
+qA
+OM
+CW
 PG
 cp
 cp
@@ -15754,7 +15861,7 @@ vE
 MY
 MP
 MP
-PG
+zE
 PG
 PG
 cp
@@ -15961,7 +16068,7 @@ vE
 MY
 MP
 MP
-PG
+zE
 cp
 cp
 cp
@@ -16168,7 +16275,7 @@ vE
 MY
 MY
 MP
-PG
+zE
 cp
 cp
 cp
@@ -16375,7 +16482,7 @@ vE
 MY
 MP
 MP
-PG
+zE
 cp
 cp
 cp
@@ -16582,7 +16689,7 @@ vE
 MY
 MP
 MP
-PG
+zE
 cp
 cp
 cp
@@ -16788,8 +16895,8 @@ vE
 vE
 MP
 MP
-PG
-PG
+Ta
+CW
 cp
 cp
 cp
@@ -16994,8 +17101,8 @@ vE
 vE
 MY
 MP
-PG
-PG
+Ta
+CW
 PG
 cp
 cp
@@ -17201,7 +17308,7 @@ vE
 vE
 MY
 MP
-PG
+zE
 PG
 PG
 cp
@@ -50066,7 +50173,7 @@ cr
 gY
 VY
 bf
-bf
+VY
 VY
 VY
 NH
@@ -50273,10 +50380,10 @@ fE
 fE
 Ad
 fh
-fh
 VY
-PX
-kP
+UN
+RA
+EB
 kR
 ij
 Cl
@@ -50480,8 +50587,8 @@ fE
 fE
 oT
 fh
-fh
 fm
+UN
 RA
 EB
 vm
@@ -50687,11 +50794,11 @@ YS
 PZ
 VY
 fh
-fh
+VY
 VY
 gM
 jH
-lv
+Cl
 FT
 vm
 Cl
@@ -50898,8 +51005,8 @@ bf
 VY
 VY
 nU
-lv
-lv
+To
+Cl
 kR
 Cl
 Cl
@@ -93123,8 +93230,8 @@ VY
 fE
 AL
 UC
-NR
-Gp
+lM
+Tj
 UN
 zT
 UN

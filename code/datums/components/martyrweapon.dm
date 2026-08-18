@@ -6,7 +6,7 @@
 	/// Areas in which activation is allowed
 	var/list/allowed_areas = list(/area/indoors/town/church/chapel)
 	/// Patrons which are allowed to hold
-	var/list/allowed_patrons = list(/datum/patron/divine/mordsol)
+	var/list/allowed_patrons = list(/datum/patron/angros)
 	/// Jobs which are allowed to hold
 	var/list/allowed_jobs = list(/datum/job/gmtemplar)
 
@@ -87,12 +87,12 @@
 /datum/component/martyr_weapon/RegisterWithParent()
 	RegisterSignal(parent, COMSIG_ITEM_EQUIPPED, PROC_REF(on_equip))
 	RegisterSignal(parent, COMSIG_ITEM_DROPPED, PROC_REF(on_drop))
-	RegisterSignal(parent, COMSIG_PARENT_EXAMINE, PROC_REF(on_examine))
+	RegisterSignal(parent, COMSIG_ATOM_EXAMINE, PROC_REF(on_examine))
 	RegisterSignal(parent, COMSIG_ITEM_AFTERATTACK, PROC_REF(item_afterattack))
 	RegisterSignal(parent, COMSIG_ITEM_ATTACK_SELF_SECONDARY, PROC_REF(try_activate))
 
 /datum/component/martyr_weapon/UnregisterFromParent()
-	UnregisterSignal(parent, list(COMSIG_ITEM_EQUIPPED, COMSIG_ITEM_DROPPED, COMSIG_ITEM_AFTERATTACK, COMSIG_ITEM_ATTACK_SELF_SECONDARY, COMSIG_PARENT_EXAMINE))
+	UnregisterSignal(parent, list(COMSIG_ITEM_EQUIPPED, COMSIG_ITEM_DROPPED, COMSIG_ITEM_AFTERATTACK, COMSIG_ITEM_ATTACK_SELF_SECONDARY, COMSIG_ATOM_EXAMINE))
 
 /datum/component/martyr_weapon/process()
 	if(!is_active || !bound_user)
@@ -161,15 +161,15 @@
 		return
 
 	if(bound_user)
-		UnregisterSignal(bound_user, COMSIG_PARENT_QDELETING)
+		UnregisterSignal(bound_user, COMSIG_QDELETING)
 		deactivate(bound_user)
 
 	bound_user = bound
 
-	RegisterSignal(bound_user, COMSIG_PARENT_QDELETING, PROC_REF(bound_deleted))
+	RegisterSignal(bound_user, COMSIG_QDELETING, PROC_REF(bound_deleted))
 
 	if(bound_user)
-		to_chat(bound_user, SPAN_GOD_VISIRES("The weapon binds to you."))
+		to_chat(bound_user, SPAN_GOD_ANGROS("The weapon binds to you."))
 
 /datum/component/martyr_weapon/proc/bound_deleted()
 	SIGNAL_HANDLER

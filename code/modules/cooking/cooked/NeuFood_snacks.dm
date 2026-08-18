@@ -168,7 +168,7 @@
 
 /obj/item/reagent_containers/food/snacks/bread/ribrack/honey
 	name = "glazed rib rack"
-	desc = "Sometimes even Archdevilsites want some luxury."
+	desc = "Sometimes even barbarians want some luxury."
 	icon_state = "honey_ribs"
 	base_icon_state = "honey_ribs"
 	slice_path = /obj/item/reagent_containers/food/snacks/cooked/rib/honey
@@ -194,7 +194,7 @@
 /obj/item/reagent_containers/food/snacks/cooked/egg
 	tastes = list("fried egg" = 1)
 	name = "fried egg"
-	desc = "A staple of Astratan midsummer festival eating."
+	desc = "A staple of Gernish midsummer festival eating."
 	icon_state = "friedegg"
 	base_icon_state = "friedegg"
 	biting = TRUE
@@ -205,7 +205,7 @@
 /obj/item/reagent_containers/food/snacks/cooked/twin_egg
 	tastes = list("fried egg" = 1)
 	name = "fried egg twins"
-	desc = "A staple of Astratan midsummer festival eating. There are two of them."
+	desc = "A staple of Gernish midsummer festival eating. There are two of them."
 	icon_state = "seggs"
 	base_icon_state = "seggs"
 	biting = TRUE
@@ -657,7 +657,8 @@
 	user.mind.add_sleep_experience(/datum/attribute/skill/craft/cooking, (GET_MOB_ATTRIBUTE_VALUE(user, STAT_INTELLIGENCE)*0.2))
 	user.nobles_seen_servant_work()
 	S.reagents?.trans_to(src, S.reagents.total_volume)
-	LAZYADDASSOC(bonus_reagents, /datum/reagent/consumable/nutriment, S.nutrition)
+	LAZYADDASSOC(bonus_reagents, /datum/reagent/consumable/nutriment, S.nutrition * 0.75)
+	LAZYADDASSOC(bonus_reagents, /datum/reagent/consumable/nutriment/vitamin, S.nutrition * 0.25)
 	tastes |= S.tastes
 	desc = "[desc] Butter melts over the top."
 	name = "buttered [name]"
@@ -775,7 +776,8 @@
 	user.mind.add_sleep_experience(/datum/attribute/skill/craft/cooking, (GET_MOB_ATTRIBUTE_VALUE(user, STAT_INTELLIGENCE)*0.5))
 	user.nobles_seen_servant_work()
 	S.reagents?.trans_to(src, S.reagents.total_volume)
-	LAZYADDASSOC(bonus_reagents, /datum/reagent/consumable/nutriment, S.nutrition)
+	LAZYADDASSOC(bonus_reagents, /datum/reagent/consumable/nutriment, S.nutrition * 0.75)
+	LAZYADDASSOC(bonus_reagents, /datum/reagent/consumable/nutriment/vitamin, S.nutrition * 0.25)
 	tastes |= S.tastes
 	foodtype |= S.foodtype
 	faretype++

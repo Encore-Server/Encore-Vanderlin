@@ -1,17 +1,6 @@
 /obj/item/clothing/cloak/templar
 	var/overarmor = TRUE
-
-/obj/item/clothing/cloak/templar/Initialize(mapload, ...)
-	. = ..()
-	AddComponent(/datum/component/storage/concrete/grid/cloak)
-
-/obj/item/clothing/cloak/templar/dropped(mob/living/carbon/human/user)
-	..()
-	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
-	if(STR)
-		var/list/things = STR.contents()
-		for(var/obj/item/I in things)
-			STR.remove_from_storage(I, get_turf(src))
+	has_storage = TRUE
 
 
 /obj/item/clothing/cloak/templar/visires
@@ -71,7 +60,7 @@
 	alternate_worn_layer = TABARD_LAYER
 	boobed = TRUE
 	name = "undivided tabard"
-	desc = "The refuge of the TEN upon my back. An Undivided House, standing eternal against the encroaching darkness."
+	desc = "The refuge of the Aspects upon my back. An Undivided House, standing eternal against the encroaching darkness."
 	icon_state = "seetabard"
 
 
@@ -85,10 +74,7 @@
 	sleevetype = "shirt"
 	nodismemsleeves = TRUE
 	inhand_mod = TRUE
-
-/obj/item/clothing/cloak/wardencloak/Initialize(mapload, ...)
-	. = ..()
-	AddComponent(/datum/component/storage/concrete/grid/cloak)
+	has_storage = TRUE
 
 /obj/item/clothing/cloak/archdevils
 	name = "vicious cloak"
@@ -110,10 +96,7 @@
 	sleevetype = "shirt"
 	nodismemsleeves = TRUE
 	inhand_mod = TRUE
-
-/obj/item/clothing/cloak/forrestercloak/Initialize(mapload, ...)
-	. = ..()
-	AddComponent(/datum/component/storage/concrete/grid/cloak)
+	has_storage = TRUE
 
 /obj/item/clothing/cloak/forrestercloak/snow
 	name = "snow cloak"
@@ -208,15 +191,6 @@
 	salvage_result = /obj/item/natural/cloth
 	dyeable = TRUE
 	adjustable = CAN_CADJUST
-
-/obj/item/clothing/head/veiled/update_overlays()
-	. = ..()
-	if(get_detail_tag())
-		var/mutable_appearance/pic = mutable_appearance(icon(icon, "[icon_state][detail_tag]"))
-		pic.appearance_flags = RESET_COLOR
-		if(get_detail_color())
-			pic.color = get_detail_color()
-		. += pic
 
 /obj/item/clothing/head/veiled/loudmouth
 	name = "loudmouth's headcover"

@@ -60,11 +60,20 @@
 		T.ChangeTurf(/turf/open/openspace)
 		below.ChangeTurf(/turf/open/floor/dirt/road)
 
+/obj/effect/spawner/map_spawner/pit/randomchance
+	probby = 20
+
 /obj/effect/spawner/map_spawner/tree
 	icon_state = "tree"
 	name = "Tree spawner"
 	probby = 80
 	spawned = list(/obj/structure/flora/tree)
+
+/obj/effect/spawner/map_spawner/tree/fulltree
+	icon_state = "tree"
+	name = "Multi Z tree spawner"
+	probby = 90
+	spawned = list(/obj/structure/flora/newtree)
 
 /obj/effect/spawner/map_spawner/treeorbush
 	icon_state = "Treeorbush"
@@ -100,7 +109,7 @@
 	icon_state = "grass"
 	name = "grass tile loot spawner"
 	probby = 75
-	spawned = list(/obj/structure/flora/grass/bush_meagre = 10, /obj/structure/flora/grass = 60, /obj/item/natural/stone = 8, /obj/item/natural/rock = 7, /obj/item/grown/log/tree/stick = 3, /obj/structure/closet/dirthole/closed/loot=0.1)
+	spawned = list(/obj/structure/flora/grass/bush_meagre = 10, /obj/structure/flora/grass = 60, /obj/item/natural/stone = 8, /obj/item/natural/rock = 7, /obj/item/grown/log/tree/stick = 3, /obj/structure/closet/dirthole/closed=0.1)
 
 /obj/effect/spawner/map_spawner/grass_low
 	icon_state = "grass"
@@ -211,6 +220,10 @@
 /obj/effect/spawner/map_spawner/loot/potion_stats
 	icon_state = "lootstatpot"
 	loot_table_type = /datum/loot_table/potion_stats
+
+/obj/effect/spawner/map_spawner/loot/potion_skills
+	icon_state = "lootstatpot"
+	loot_table_type = /datum/loot_table/potion_skills
 
 /obj/effect/spawner/map_spawner/sewerencounter
 	icon_state = "srat"

@@ -142,19 +142,19 @@
 	allowed_sex = list(FEMALE)
 
 /obj/item/clothing/shirt/robe/feld
-	name = "feldsher's robe"
+	name = "crimson robe"
 	desc = "Red to hide the blood."
 	icon_state = "feldrobe"
 	item_state = "feldrobe"
 
 /obj/item/clothing/shirt/robe/phys
-	name = "physicker's robe"
+	name = "ashen robe"
 	desc = "Part robe, part butcher's apron."
 	icon_state = "surgrobe"
 	item_state = "surgrobe"
 
 /obj/item/clothing/shirt/robe/courtphysician
-	name = "court physician's robe"
+	name = "courtly robe"
 	desc = "The dark red helps hide blood stains, and is elegant."
 	icon_state = "courtrobe"
 	item_state = "courtrobe"
@@ -163,7 +163,7 @@
 	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_courtphys.dmi'
 
 /obj/item/clothing/shirt/robe/archivist
-	name = "archivist's robe"
+	name = "scholarly robe"
 	desc = "Robes belonging to seekers of knowledge."
 	icon_state = "archivist"
 	icon = 'icons/roguetown/clothing/shirts.dmi'
@@ -382,3 +382,36 @@
 	sleeved = null
 	sleevetype = null
 	misc_flags = CRAFTING_TEST_EXCLUDE
+
+/obj/item/clothing/shirt/robe/bared
+	name = "bared robe"
+	desc = "A robe of basic cloth, it's chest bared open to expose what lay underneath."
+	icon_state = "openrobe"
+	item_state = "openrobe"
+	icon = 'icons/roguetown/clothing/armor.dmi'
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/armor.dmi'
+	color = CLOTHING_WHITE
+
+/obj/item/clothing/shirt/robe/shepherdvest
+	name = "shepherd vest"
+	desc = "A vest of basic cloth, it's chest bared open to expose what lay underneath."
+	icon_state = "shepherdvest"
+	item_state = "shepherdvest"
+	icon = 'icons/roguetown/clothing/armor.dmi'
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/armor.dmi'
+	color = CLOTHING_WHITE
+
+/obj/item/clothing/shirt/robe/hag //Not a boon item, but nonetheless something they have
+	slot_flags = ITEM_SLOT_ARMOR|ITEM_SLOT_SHIRT|ITEM_SLOT_CLOAK
+	name = "wyrd robe"
+	desc = "A robe with an ancient design, unknown to tailors and sewers here."
+	body_parts_covered = CHEST|GROIN|ARMS|LEGS|VITALS
+	icon_state = "hag"
+	icon = 'icons/roguetown/clothing/armor.dmi'
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/armor.dmi'
+	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_armor.dmi'
+	boobed = TRUE
+	color = null
+	r_sleeve_status = SLEEVE_NORMAL
+	l_sleeve_status = SLEEVE_NORMAL
+

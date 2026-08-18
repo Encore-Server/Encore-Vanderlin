@@ -177,7 +177,7 @@
 /datum/stress_event/leechcult
 	timer = 1 MINUTES
 	stress_change = 3
-	desc = list("<span class='red'>There's a little goblin in my head telling me to do things and I don't like it!</span>","<span class='red'>\"Kill your friends.\"</span>","<span class='red'>\"Make them bleed.\"</span>","<span class='red'>\"Give them no time to squeal.\"</span>","<span class='red'>\"Praise One Envy.\"</span>","<span class='red'>\"Death to the Ten.\"</span>","<span class='red'>\"We will recycle them.\"</span>")
+	desc = list("<span class='red'>There's a little goblin in my head telling me to do things and I don't like it!</span>","<span class='red'>\"Kill your friends.\"</span>","<span class='red'>\"Make them bleed.\"</span>","<span class='red'>\"Give them no time to squeal.\"</span>","<span class='red'>\"Praise Hell.\"</span>","<span class='red'>\"Death to the Aspects.\"</span>","<span class='red'>\"We will recycle them.\"</span>")
 
 /datum/stress_event/ugly
 	timer = 30 SECONDS
@@ -611,8 +611,9 @@
 	timer = 10 MINUTES
 	desc = span_red("My wonderful musk has been washed away...")
 	stress_change = 1
+
 /datum/stress_event/startled
-	desc = span_warning("Hearing that word made me think about something scary.")
+	desc = span_warning("For some reason, hearing that word startled me!")
 	stress_change = 1
 	max_stacks = 2
 	stress_change_per_extra_stack = 1
@@ -656,7 +657,7 @@
 	timer = 3 MINUTES
 
 /datum/stress_event/slipped
-	desc = "<span class='warning'>I slipped. I should be more careful next timer...</span>\n"
+	desc = "<span class='warning'>I slipped. I should be more careful next time...</span>\n"
 	stress_change = 2
 	timer = 3 MINUTES
 
@@ -834,6 +835,11 @@
 	timer = 3 MINUTES
 	stress_change = 2
 	desc = span_red("I've been covered in shite! Disgusting!")
+
+/datum/stress_event/bad_grave
+	stress_change = 1
+	desc = span_red("Can the dead find true rest within such a poorly made grave..?")
+	timer = 5 MINUTES
 
 /datum/stress_event/malaguero
 	timer = 1 MINUTES

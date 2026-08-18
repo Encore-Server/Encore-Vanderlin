@@ -191,3 +191,9 @@
 /datum/brain_trauma/mild/phobia/jesters
 	phobia_type = "jesters"
 	random_gain = FALSE
+
+/datum/brain_trauma/mild/phobia/sages
+	phobia_type = "sages"
+	random_gain = FALSE
+	gain_text = null
+	lose_text = null

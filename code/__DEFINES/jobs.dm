@@ -25,6 +25,8 @@
 #define JOB_NEW_PLAYER_JOINABLE (1<<3)
 /// Whether the job can be displayed on the actors list
 #define JOB_SHOW_IN_ACTOR_LIST (1<<4)
+/// if we require a whitelist
+#define JOB_REQUIRE_WHITELIST (1<<5)
 
 #define ALL_FACTIONS list( \
 	FACTION_NONE, \
@@ -208,9 +210,9 @@
 #define JOB_TOWN_ELDER "Town Elder"
 
 
-#define JOB_PRIEST "Priest"
-#define JOB_PRIEST_FEM "Priestess"
-#define JOB_GRANDMASTER_TEMPLAR "Grandmaster Templar"
+#define JOB_PRIEST "Bishop"
+#define JOB_PRIEST_FEM "Bishop"
+#define JOB_GRANDMASTER_TEMPLAR "Martyr"
 #define JOB_ACOLYTE "Acolyte"
 #define JOB_GRAVETENDER "Gravetender"
 #define JOB_TEMPLAR "Templar"

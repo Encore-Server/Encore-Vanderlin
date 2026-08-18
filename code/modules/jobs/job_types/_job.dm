@@ -14,7 +14,7 @@
 	/// Whether this job is intended to give quests
 	var/is_quest_giver = FALSE
 	/// How many quests this job can take at once
-	var/max_active_quests = 3
+	var/max_active_quests = 1
 	/// Id for the Job.
 	var/id
 	//Bitflags for the job
@@ -228,6 +228,9 @@
 	var/attribute_sheet_child
 	var/attribute_sheet_adult
 
+	///this is our book path given on middle clicking ui
+	var/obj/item/recipe_book/book_type = /obj/item/recipe_book/survival
+
 /datum/job/New()
 	. = ..()
 	if(give_bank_account)
@@ -283,6 +286,8 @@
 
 	SEND_GLOBAL_SIGNAL(COMSIG_GLOB_JOB_AFTER_SPAWN, src, spawned, player_client)
 
+	spawned.gain_trauma(/datum/brain_trauma/mild/phobia/sages)
+
 	if(spawned.attributes)
 		assign_attributes(spawned, player_client)
 	if(!ishuman(spawned))
@@ -293,6 +298,7 @@
 
 	for(var/trait in mind_traits)
 		ADD_TRAIT(spawned.mind, trait, JOB_TRAIT)
+		ADD_TRAIT(spawned.mind, trait, TRAIT_SAGE_PHOBIA)
 
 	for(var/trait in traits)
 		ADD_TRAIT(spawned, trait, JOB_TRAIT)

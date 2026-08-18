@@ -21,7 +21,7 @@
 
 /datum/job/advclass/mercenary/enforcer
 	title = "Enforcer"
-	tutorial = "You're an exiled enforcer that took refuges in the aelondan regions long ago. Robed in black, and known for wild antics, loose camaraderie and a huge hatred for inconveniences and the descendants of One Envy, You once used your blade to shake down anyone who hasn't paid their 'protection fees', nowadays, you will fight for anyone for the right price."
+	tutorial = "You're an exiled enforcer that took refuges in the Aelondan regions long ago. Robed in black, and known for wild antics, loose camaraderie and a huge hatred for inconveniences and the descendants of Hell. You once used your blade to shake down anyone who hasn't paid their 'protection fees', nowadays, you will fight for anyone for the right price."
 	allowed_races = RACES_PLAYER_ALL
 	outfit = /datum/outfit/mercenary/enforcer
 	category_tags = list(CTAG_MERCENARY)
@@ -47,7 +47,7 @@
 	var/is_leader = FALSE //does nothing except give you a cooler blade.
 
 /datum/outfit/mercenary/enforcer/pre_equip(mob/living/carbon/human/H)
-	shirt = /obj/item/clothing/shirt/undershirt/easttats
+	shirt = /obj/item/clothing/armor/regenerating/skin/easttats
 	belt = /obj/item/storage/belt/leather/mercenary
 	backr = /obj/item/storage/backpack/satchel
 	if(H.gender == MALE)

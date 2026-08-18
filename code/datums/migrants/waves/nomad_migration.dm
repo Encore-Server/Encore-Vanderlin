@@ -13,6 +13,8 @@
 		/datum/attribute/skill/craft/tanning = 30,
 		/datum/attribute/skill/combat/bows = 30,
 		/datum/attribute/skill/combat/knives = 20,
+		/datum/attribute/skill/combat/wrestling = 20,
+		/datum/attribute/skill/combat/unarmed = 20,
 		/datum/attribute/skill/craft/cooking = 10,
 		/datum/attribute/skill/labor/butchering = 20,
 		/datum/attribute/skill/labor/taming = 40,
@@ -47,7 +49,7 @@
 		TRAIT_NOBLE_POWER,
 	)
 
-	cmode_music = 'sound/music/cmode/adventurer/CombatOutlander2.ogg'
+	cmode_music = 'sound/music/cmode/adventurer/CombatSteppe.ogg'
 
 /datum/job/migrant/khan/after_spawn(mob/living/carbon/human/spawned, client/player_client)
 	. = ..()

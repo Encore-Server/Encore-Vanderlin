@@ -101,7 +101,8 @@
 /datum/mapGeneratorModule/domotanforestgrassgreen
 	clusterCheckFlags = CLUSTER_CHECK_NONE
 	allowed_turfs = list(/turf/open/floor/grass,
-						/turf/open/floor/grass/yel)
+						/turf/open/floor/grass/yel,
+						/turf/open/floor/grass/mixyel)
 	excluded_turfs = list(/turf/open/floor/grass/cold)
 	spawnableAtoms = list(/obj/structure/flora/grass/bush = 3,
 							/obj/structure/flora/grass/bush_meagre = 14,
@@ -135,7 +136,7 @@
 							/obj/item/natural/stone = 8,
 							/obj/item/natural/rock = 4,
 							/obj/item/grown/log/tree/stick = 8,
-							/obj/structure/closet/dirthole/closed/loot= 1)
+							/obj/structure/closet/dirthole/closed= 1)
 	allowed_areas = list(/area/outdoors/woods,
 							/area/outdoors/woods_safe,
 							/area/outdoors/basin/safe,

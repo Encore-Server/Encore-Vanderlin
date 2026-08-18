@@ -50,7 +50,7 @@
 	screen_max_columns = 1
 
 /datum/component/storage/concrete/grid/keyring
-	screen_max_rows = 4
+	screen_max_rows = 2
 	screen_max_columns = 5
 	max_w_class = WEIGHT_CLASS_SMALL
 	allow_dump_out = TRUE
@@ -88,10 +88,20 @@
 /datum/component/storage/concrete/grid/cloak/lord
 	max_w_class = WEIGHT_CLASS_BULKY
 
+/datum/component/storage/concrete/grid/crusader_helm
+	max_w_class = WEIGHT_CLASS_BULKY
+	screen_max_rows = 2
+	screen_max_columns = 2
+
 /datum/component/storage/concrete/grid/mailmaster
 	max_w_class = WEIGHT_CLASS_HUGE
 	screen_max_rows = 10
 	screen_max_columns = 10
+
+/datum/component/storage/concrete/grid/bandolier
+	max_w_class = WEIGHT_CLASS_NORMAL
+	screen_max_rows = 4
+	screen_max_columns = 2
 
 /datum/component/storage/concrete/grid/mailmaster/show_to(mob/M)
 	. = ..()
@@ -169,6 +179,7 @@
 	max_w_class = WEIGHT_CLASS_NORMAL
 	screen_max_rows = 8
 	screen_max_columns = 5
+	allow_quick_empty = TRUE
 
 /datum/component/storage/concrete/grid/magebag/New(datum/P, ...)
 	. = ..()
@@ -190,6 +201,8 @@
 		/obj/item/reagent_containers/food/snacks/produce/manabloom,
 		/obj/item/mana_battery/mana_crystal,
 		/obj/item/fertilizer/ash,
+		/obj/item/reagent_containers/food/snacks/produce/fruit/jacksberry,
+		/obj/item/natural/stone,
 		))
 
 /datum/component/storage/concrete/grid/headhook
@@ -222,11 +235,30 @@
 	allow_dump_out = TRUE
 	insert_preposition = "in"
 
+/datum/component/storage/concrete/grid/orebag
+	max_w_class = WEIGHT_CLASS_NORMAL
+	screen_max_rows = 4
+	screen_max_columns = 5
+	click_gather = TRUE
+	collection_mode = COLLECT_EVERYTHING
+	dump_time = 0
+	allow_quick_gather = TRUE
+	allow_quick_empty = TRUE
+	allow_dump_out = TRUE
+	insert_preposition = "in"
+
+/datum/component/storage/concrete/grid/orebag/New(datum/P, ...)
+	. = ..()
+	set_holdable(
+		typecacheof(list(/obj/item/ore, /obj/item/gem, /obj/item/reagent_containers/powder/salt, /obj/item/mana_battery/mana_crystal/standard))
+		)
+
 /datum/component/storage/concrete/grid/crucible
 	screen_max_rows = 5
-	screen_max_columns = 3
+	screen_max_columns = 5
 	max_w_class = WEIGHT_CLASS_HUGE
 	not_while_equipped = TRUE
+	allow_big_nesting = TRUE
 
 /datum/component/storage/concrete/grid/crucible/can_be_inserted(obj/item/storing, stop_messages, mob/user, worn_check, list/modifiers, storage_click)
 	if(!storing.melting_material)

@@ -14,7 +14,7 @@
 
 /obj/item/clothing/armor/plate/full/holysee
 	name = "holy silver plate"
-	desc = "Silver-clad plate for the guardians and the warriors, for the spears and shields of the Ten."
+	desc = "Silver-clad plate for the guardians and the warriors, for the spears and shields of the Aspects."
 	icon = 'icons/roguetown/clothing/special/martyr.dmi'
 	icon_state = "silverarmor"
 	item_state = "silverarmor"
@@ -42,7 +42,7 @@
 
 /obj/item/clothing/head/helmet/heavy/holysee
 	name = "holy silver bascinet"
-	desc = "Branded by the faithful of the Ten, these helms are worn by its chosen warriors. A bastion of hope in the dark nite."
+	desc = "Branded by the faithful of the Aspects, these helms are worn by its chosen warriors. A bastion of hope in the dark nite."
 	icon = 'icons/roguetown/clothing/special/martyr.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/special/onmob/martyrbascinet.dmi'
 	bloody_icon = 'icons/effects/blood64x64.dmi'
@@ -75,19 +75,7 @@
 	flags_inv = HIDEBOOB
 	var/overarmor = TRUE
 	sellprice = 300
-
-
-/obj/item/clothing/cloak/holysee/Initialize(mapload, ...)
-	. = ..()
-	AddComponent(/datum/component/storage/concrete/grid/cloak)
-
-/obj/item/clothing/cloak/holysee/dropped(mob/living/carbon/human/user)
-	..()
-	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
-	if(STR)
-		var/list/things = STR.contents()
-		for(var/obj/item/I in things)
-			STR.remove_from_storage(I, get_turf(src))
+	has_storage = TRUE
 
 /obj/item/clothing/cloak/holysee/MiddleClick(mob/user)
 	overarmor = !overarmor

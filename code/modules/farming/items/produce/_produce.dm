@@ -236,6 +236,7 @@
 	tastes = list("berry" = 1)
 	faretype = FARE_POOR
 	bitesize = 5
+	list_reagents = list(/datum/reagent/water = 4)
 	dropshrink = 0.75
 	var/color_index = "good"
 	rotprocess = SHELFLIFE_SHORT
@@ -290,7 +291,7 @@
 	. = ..()
 	var/can_tell = HAS_TRAIT(user, TRAIT_FORAGER) || isobserver(user)
 	if(!can_tell)
-		can_tell = user.attributes ? GET_MOB_SKILL_VALUE_OLD(user, /datum/attribute/skill/labor/farming) : FALSE
+		can_tell = user.attributes ? (GET_MOB_SKILL_VALUE(user, /datum/attribute/skill/labor/farming) >= 20) : FALSE
 	if(can_tell)
 		if(poisonous)
 			. += span_warning("This berry looks suspicious. I sense it might be poisoned.")
@@ -313,6 +314,7 @@
 	rotprocess = SHELFLIFE_LONG
 	sellprice = 0 // only dried has value
 	item_weight = 15 GRAMS
+	should_dry = TRUE
 
 /obj/item/reagent_containers/food/snacks/produce/swampweed_dried
 	seed = null
@@ -347,6 +349,7 @@
 	rotprocess = SHELFLIFE_LONG
 	sellprice = 0 // only dried has value
 	item_weight  = 10 GRAMS
+	should_dry = TRUE
 
 /obj/item/reagent_containers/food/snacks/produce/dry_westleach
 	seed = null
@@ -427,12 +430,11 @@
 	attacked_sound = 'sound/foley/hit_rock.ogg'
 	item_weight = 1 KILOGRAMS
 
-
-/obj/item/natural/cocaudo/deconstruct(disassembled = FALSE)
+/obj/item/natural/cocaudo/atom_deconstruct(disassembled)
+	var/atom/drop_loc = drop_location()
 	if(!disassembled)
-		new /obj/item/reagent_containers/food/snacks/veg/cocaudo_half(src.loc)
-		new /obj/item/reagent_containers/food/snacks/veg/cocaudo_half(src.loc)
-	qdel(src)
+		new /obj/item/reagent_containers/food/snacks/veg/cocaudo_half(drop_loc)
+		new /obj/item/reagent_containers/food/snacks/veg/cocaudo_half(drop_loc)
 
 /*	..................   Potato   ................... */
 /obj/item/reagent_containers/food/snacks/produce/vegetable/potato
@@ -592,6 +594,17 @@
 	..()
 	qdel(src)
 
+/obj/item/reagent_containers/food/snacks/produce/fruit/ollie
+	name = "ollie"
+	seed = /obj/item/neuFarm/seed/ollie
+	desc = "A small green fruit best made into oil."
+	icon_state = "ollie"
+	bitesize = 2
+	dropshrink = 0.6
+	tastes = list("bitterness" = 1)
+	rotprocess = SHELFLIFE_DECENT
+	item_weight = 15 GRAMS
+
 /obj/item/reagent_containers/food/snacks/produce/fruit/pompkaun
 	name = "pompkaun"
 	seed = /obj/item/neuFarm/seed/pompkaun
@@ -627,7 +640,7 @@
 /obj/item/reagent_containers/food/snacks/produce/sunflower
 	seed = /obj/item/neuFarm/seed/sunflower
 	name = "sunflower"
-	desc = "Astratas favoured flower, said to carry some of her warmth and radiance. Astratan acolytes hold them in high regard."
+	desc = "Visires' favoured flower, said to carry some of her warmth and radiance. Flame acolytes hold them in high regard."
 	icon_state = "sunflower"
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/head_items.dmi'
 	slot_flags = ITEM_SLOT_HEAD
@@ -796,6 +809,7 @@
 	dropshrink = 0.8
 	rotprocess = SHELFLIFE_DECENT
 	item_weight = 12 GRAMS
+	grind_results = list(/datum/reagent/caveweep = 5)
 
 /obj/item/reagent_containers/food/snacks/produce/mushroom/borowiki
 	name = "borowiki"

@@ -77,7 +77,7 @@
 	update_appearance(UPDATE_ICON_STATE | UPDATE_DESC)
 	refresh_keys()
 
-/obj/item/storage/keyring/Exited(atom/movable/gone, atom/new_loc)
+/obj/item/storage/keyring/Exited(atom/movable/gone, direction)
 	. = ..()
 	update_appearance(UPDATE_ICON_STATE | UPDATE_DESC)
 	refresh_keys()
@@ -112,7 +112,7 @@
 				return list("shrink" = 0.3,"sx" = -2,"sy" = -5,"nx" = 4,"ny" = -5,"wx" = 0,"wy" = -5,"ex" = 2,"ey" = -5,"nturn" = 0,"sturn" = 0,"wturn" = 0,"eturn" = 0,"nflip" = 0,"sflip" = 0,"wflip" = 0,"eflip" = 0,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0)
 
 /obj/item/lockpickring
-	name = "lockpickring"
+	name = "lockpick ring"
 	desc = "A piece of bent wire to store lockpicking tools. Too bulky for fine work."
 	icon_state = "pickring0"
 	icon = 'icons/roguetown/items/keys.dmi'
@@ -222,6 +222,9 @@
 /obj/item/storage/keyring/consort
 	keys = list(/obj/item/key/dungeon, /obj/item/key/atarms, /obj/item/key/walls, /obj/item/key/manor, /obj/item/key/consort, /obj/item/key/guest)
 
+/obj/item/storage/keyring/heir
+	keys = list(/obj/item/key/dungeon, /obj/item/key/garrison, /obj/item/key/forrestgarrison, /obj/item/key/atarms, /obj/item/key/walls, /obj/item/key/manor, /obj/item/key/guest, /obj/item/key/vault)
+
 /obj/item/storage/keyring/guard
 	keys = list(/obj/item/key/garrison)
 
@@ -229,10 +232,10 @@
 	keys = list(/obj/item/key/garrison, /obj/item/key/lieutenant)
 
 /obj/item/storage/keyring/manorguard
-	keys = list(/obj/item/key/manor, /obj/item/key/dungeon, /obj/item/key/atarms, /obj/item/key/walls)
+	keys = list(/obj/item/key/manor, /obj/item/key/dungeon, /obj/item/key/atarms, /obj/item/key/walls, /obj/item/key/garrison)
 
 /obj/item/storage/keyring/archivist
-	keys = list(/obj/item/key/archive, /obj/item/key/manor)
+	keys = list(/obj/item/key/archive, /obj/item/key/manor, /obj/item/key/tower)
 
 /obj/item/storage/keyring/merchant
 	keys = list(/obj/item/key/merchant, /obj/item/key/mercenary, /obj/item/key/warehouse)
@@ -274,7 +277,7 @@
 	keys = list(/obj/item/key/manor, /obj/item/key/atarms, /obj/item/key/walls)
 
 /obj/item/storage/keyring/physician
-	keys = list(/obj/item/key/manor, /obj/item/key/atarms, /obj/item/key/dungeon, /obj/item/key/courtphys)
+	keys = list(/obj/item/key/manor, /obj/item/key/atarms, /obj/item/key/dungeon, /obj/item/key/courtphys, /obj/item/key/clinic, /obj/item/key/apothecary, /obj/item/key/feldsher)
 
 /obj/item/storage/keyring/elder
 	keys = list(/obj/item/key/walls, /obj/item/key/elder, /obj/item/key/butcher, /obj/item/key/soilson, /obj/item/key/manor)
