@@ -1300,8 +1300,7 @@
 /area/latejoin_area)
 "eK" = (
 /obj/structure/stairs/stone{
-	dir = 1;
-	icon_state = "stonestairs"
+	dir = 1
 	},
 /turf/open/floor/churchrough,
 /area/latejoin_area)
@@ -1486,10 +1485,6 @@
 "fC" = (
 /turf/closed/basic,
 /area/outdoors)
-"fD" = (
-/obj/structure/vampire/portalmaker,
-/turf/open/floor/herringbone,
-/area/indoors/vampire_manor)
 "fF" = (
 /turf/closed/wall/mineral/stone,
 /area/outdoors/woods/tutorial)
@@ -2015,8 +2010,7 @@
 /area/outdoors)
 "iF" = (
 /obj/structure/stairs/stone{
-	dir = 1;
-	icon_state = "stonestairs"
+	dir = 1
 	},
 /turf/open/floor/churchmarble/violet,
 /area/latejoin_area)
@@ -2820,7 +2814,6 @@
 /area/outdoors)
 "nb" = (
 /obj/structure/fluff/railing/border{
-	icon_state = "border";
 	dir = 10
 	},
 /turf/open/floor/churchmarble/green,
@@ -3262,13 +3255,6 @@
 	},
 /turf/open/floor/cobble,
 /area/indoors)
-"pm" = (
-/obj/structure/fluff/walldeco/church/line{
-	dir = 8;
-	icon_state = "churchslate"
-	},
-/turf/open/floor/underworld/space,
-/area/latejoin_area)
 "pp" = (
 /obj/structure/closet/crate/chest/old_crate,
 /obj/item/reagent_containers/glass/bottle/manapot,
@@ -4348,10 +4334,6 @@
 	},
 /turf/open/floor/naturalstone,
 /area/indoors/lich)
-"uX" = (
-/obj/effect/landmark/start/lich,
-/turf/open/floor/carpet/purple,
-/area/indoors/lich)
 "uY" = (
 /obj/machinery/light/fueled/torchholder/l,
 /obj/structure/mannequin/male/female,
@@ -4565,7 +4547,6 @@
 /area)
 "vU" = (
 /obj/structure/fluff/railing/border{
-	icon_state = "border";
 	dir = 10
 	},
 /turf/open/floor/cobble,
@@ -5200,7 +5181,6 @@
 /area/outdoors/woods/tutorial)
 "zA" = (
 /obj/structure/stairs{
-	icon_state = "stairs";
 	dir = 1
 	},
 /obj/structure/fluff/railing/wood{
@@ -5922,7 +5902,6 @@
 /area/indoors/bandit_lair)
 "DC" = (
 /obj/structure/fluff/railing/border{
-	icon_state = "border";
 	dir = 6
 	},
 /obj/effect/decal/shadow_floor{
@@ -6541,8 +6520,7 @@
 /obj/item/reagent_containers/food/snacks/fat,
 /obj/item/reagent_containers/food/snacks/meat/poultry,
 /obj/structure/fluff/railing/border{
-	dir = 1;
-	icon_state = "border"
+	dir = 1
 	},
 /turf/open/floor/cobble,
 /area/indoors/tutorial)
@@ -7017,8 +6995,7 @@
 /area/indoors/lich)
 "Ji" = (
 /obj/structure/stairs/stone{
-	dir = 1;
-	icon_state = "stonestairs"
+	dir = 1
 	},
 /obj/structure/fluff/signage{
 	name = "to Tutorial Island";
@@ -9002,8 +8979,7 @@
 	dir = 1
 	},
 /obj/structure/fluff/railing/border{
-	dir = 1;
-	icon_state = "border"
+	dir = 1
 	},
 /turf/open/floor/underworld/space,
 /area/latejoin_area)
@@ -20794,7 +20770,7 @@ mX
 mX
 QA
 oo
-uX
+ma
 ma
 Hm
 Hm
@@ -26236,9 +26212,9 @@ Fw
 zG
 oX
 Ud
-pm
-pm
-pm
+pV
+pV
+pV
 Ud
 kD
 zG

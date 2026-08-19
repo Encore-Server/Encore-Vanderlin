@@ -1670,10 +1670,13 @@
 /turf/open/floor/tile/checkeralt,
 /area/indoors/town/vault)
 "bgO" = (
-/obj/structure/lever/hidden/thieves_guild{
-	redstone_id = "slitherway3"
+/obj/structure/fluff/traveltile{
+	dir = 8;
+	aportalid = "seafort_to_smugden";
+	aportalgoesto = "seafort";
+	name = "To Sea Fort"
 	},
-/turf/closed/wall/mineral/stone/moss/red,
+/turf/open/water/ocean,
 /area/under/town/basement/smugglers_tunnels)
 "bgX" = (
 /obj/effect/decal/cleanable/dirt/dust,
@@ -14068,6 +14071,12 @@
 	},
 /turf/open/floor/dirt/road,
 /area/outdoors/town)
+"jwt" = (
+/obj/structure/lever/hidden/thieves_guild{
+	redstone_id = "slitherway3"
+	},
+/turf/closed/mineral,
+/area/under/town/basement/smugglers_tunnels)
 "jwV" = (
 /turf/closed/wall/mineral/decowood,
 /area/indoors/town/clinic_large)
@@ -25370,6 +25379,12 @@
 "qUZ" = (
 /turf/open/floor/ruinedwood,
 /area/under/cavewet)
+"qVv" = (
+/obj/effect/mapping_helpers/secret_door_creator/thieves_guild{
+	redstone_id = "slitherway15"
+	},
+/turf/closed/mineral,
+/area/under/town/basement/smugglers_tunnels)
 "qVX" = (
 /obj/structure/closet/crate/chest/crate,
 /turf/open/floor/blocks/stonered,
@@ -35319,6 +35334,13 @@
 /obj/effect/mapping_helpers/access/keyset/town/merchant,
 /turf/open/floor/concrete,
 /area/indoors/town/shop)
+"xQp" = (
+/obj/structure/lever{
+	redstone_id = "slitherway15";
+	pixel_y = 26
+	},
+/turf/open/floor/twig,
+/area/under/town/basement/smugglers_tunnels)
 "xQQ" = (
 /obj/structure/flora/ausbushes/sparsegrass,
 /turf/open/floor/snow,
@@ -38126,7 +38148,7 @@ qDj
 qDj
 jdz
 acJ
-wYG
+bgO
 eAi
 wyv
 wyv
@@ -38390,7 +38412,7 @@ acJ
 lGU
 qss
 acJ
-qss
+xQp
 wyv
 fIK
 fIK
@@ -38521,7 +38543,7 @@ qDj
 qDj
 tJX
 qss
-qss
+acJ
 qss
 wyv
 wyv
@@ -38653,8 +38675,8 @@ acJ
 qDj
 lGU
 qss
-qss
 acJ
+qVv
 eAi
 eAi
 eAi
@@ -38785,9 +38807,9 @@ fxN
 qDj
 qDj
 qDj
-acJ
-mrh
-bgO
+jwt
+qss
+qss
 sNg
 wvf
 vZH
@@ -38917,9 +38939,9 @@ qss
 qss
 qss
 qss
-qss
-qss
 fyr
+qss
+qDj
 qss
 waW
 fHX
@@ -39049,7 +39071,7 @@ qss
 wYG
 qss
 qss
-mqe
+acJ
 qDj
 acJ
 wYG
@@ -39181,7 +39203,7 @@ wYG
 kci
 hRL
 jdz
-mqe
+acJ
 mqe
 acJ
 wYG
