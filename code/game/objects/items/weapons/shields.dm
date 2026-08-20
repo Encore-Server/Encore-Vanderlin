@@ -59,6 +59,16 @@
 			if(prob(coverage))
 				owner.visible_message("<span class='danger'>[owner] blocks [hitby] with [src]!</span>")
 				return 1
+	else if(attack_type == MELEE_ATTACK)
+		if(istype(hitby, /obj/item))
+			var/obj/item/I = hitby
+			if(I.armor_penetration >= 80)
+				owner.visible_message("<span class='danger'>The [hitby] pierces [owner]'s [src]!</span>")
+				return 0
+			else
+				if(prob(coverage))
+					owner.visible_message("<span class='danger'>[owner] blocks [hitby] with [src]!</span>")
+					return 1
 	return 0
 
 /obj/item/weapon/shield/attack_hand_secondary(mob/user, list/modifiers)

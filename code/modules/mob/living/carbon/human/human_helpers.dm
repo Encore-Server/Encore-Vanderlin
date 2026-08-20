@@ -291,3 +291,16 @@
 
 /mob/living/carbon/human/proc/grant_inspiration(tier)
 	inspiration = new /datum/inspiration(src, tier)
+
+/mob/living/carbon/human/proc/shield_on_back()
+	if(istype(backr, /obj/item/weapon/shield))
+		return backr
+	if(istype(backl, /obj/item/weapon/shield))
+		return backl
+	return null
+
+/mob/living/carbon/human/proc/is_attack_from_behind(atom/attacker)
+	var/att_dir = get_dir(src, attacker)
+	if(att_dir == REVERSE_DIR(src.dir))
+		return TRUE
+	return FALSE

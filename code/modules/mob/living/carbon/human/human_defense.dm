@@ -197,6 +197,25 @@
 		if(wear_neck.hit_reaction(src, AM, attack_text, final_block_chance, damage, attack_type))
 			return TRUE
 
+	if(shield_on_back())
+		if(istype(AM, /obj/projectile))
+			var/obj/projectile/proj = AM
+			if(is_attack_from_behind(proj.firer))
+				var/obj/item/weapon/shield/wear_shield = shield_on_back()
+				var/final_block_chance = wear_shield.block_chance - (CLAMP((armor_penetration-wear_shield.armor_penetration)/2,0,100)) + block_chance_modifier
+				if(wear_shield.hit_reaction(src, AM, attack_text, final_block_chance, damage, attack_type))
+					return TRUE
+		else if(istype(AM, /obj/item))
+			var/obj/item/ownr = ismob(AM.loc) ? AM.loc : null
+			if(!ownr)
+				return FALSE
+			if(is_attack_from_behind(ownr))
+				var/obj/item/weapon/shield/wear_shield = shield_on_back()
+				var/final_block_chance = (wear_shield.block_chance) - (CLAMP((armor_penetration-wear_shield.armor_penetration)/2,0,100)) + block_chance_modifier
+				if(wear_shield.hit_reaction(src, AM, attack_text, final_block_chance, damage, attack_type))
+					return TRUE
+
+
 	return FALSE
 
 /mob/living/carbon/human/proc/check_block()
@@ -778,3 +797,4 @@
 	. = ..()
 	if(dna?.species)
 		return . * dna?.species.pain_mod
+
