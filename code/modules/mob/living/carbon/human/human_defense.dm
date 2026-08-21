@@ -168,41 +168,68 @@
 			return 1
 	return 0
 
+// I will make this better one day, I swear it
 /mob/living/carbon/human/proc/check_shields(atom/AM, damage, attack_text = "the attack", attack_type = MELEE_ATTACK, armor_penetration = 0)
-	var/block_chance_modifier = round(damage / -3)
+	var/block_chance_modifier = rand(0, damage)
 
+	var/obj/projectile/proj
+	var/mob/living/wpn_ownr
+	if((attack_type == (PROJECTILE_ATTACK || THROWN_PROJECTILE_ATTACK) && istype(AM, /obj/projectile)))
+		proj = AM
+		wpn_ownr = proj.firer
+	else
+		if(attack_type == MELEE_ATTACK && istype(AM, /obj/item))
+			wpn_ownr = ismob(AM.loc) ? AM.loc : null
+			if(!wpn_ownr)
+				return FALSE
+
+	//  The following 'final_block_chance' calculation has no basis in math whatsoever, I don't think,
+	// and literally just produces numbers that I think are good based on the scale we chose for the variables.
+
+	// Also I'm leaving my debug variables in just in case I need them later :)
 	for(var/obj/item/I in held_items)
 		if(!istype(I, /obj/item/clothing))
-			var/final_block_chance = I.block_chance - (CLAMP((armor_penetration-I.armor_penetration)/2,0,100)) + block_chance_modifier //So armour piercing blades can still be parried by other blades, for example
+			var/final_block_chance = (50 * (max(0, I.block_chance - armor_penetration)) / ((max(0, I.block_chance - armor_penetration + 60)))) + block_chance_modifier
+			//debug_admins("Held Clothing Hit : [final_block_chance]")
 			if(I.hit_reaction(src, AM, attack_text, final_block_chance, damage, attack_type))
 				return TRUE
 
-	if(head)
-		var/final_block_chance = head.block_chance - (CLAMP((armor_penetration-head.armor_penetration)/2,0,100)) + block_chance_modifier
+	if(head && wpn_ownr.zone_selected == BODY_ZONE_HEAD)
+		var/final_block_chance = (50 * (max(0, head.block_chance - armor_penetration)) / ((max(0, head.block_chance - armor_penetration + 60)))) + block_chance_modifier
+		//debug_admins("Head Hit : [final_block_chance]")
 		if(head.hit_reaction(src, AM, attack_text, final_block_chance, damage, attack_type))
 			return TRUE
 
-	if(wear_armor)
-		var/final_block_chance = wear_armor.block_chance - (CLAMP((armor_penetration-wear_armor.armor_penetration)/2,0,100)) + block_chance_modifier
+	if(wear_armor && wpn_ownr.zone_selected == BODY_ZONE_CHEST)
+		var/final_block_chance = (50 * (max(0, wear_armor.block_chance - armor_penetration)) / ((max(0, wear_armor.block_chance - armor_penetration + 60)))) + block_chance_modifier
+		//debug_admins("Armor Hit : [final_block_chance]")
 		if(wear_armor.hit_reaction(src, AM, attack_text, final_block_chance, damage, attack_type))
 			return TRUE
 
-	if(wear_pants)
-		var/final_block_chance = wear_pants.block_chance - (CLAMP((armor_penetration-wear_pants.armor_penetration)/2,0,100)) + block_chance_modifier
+	if(wear_shirt && wpn_ownr.zone_selected == BODY_ZONE_CHEST)
+		var/final_block_chance = (50 * (max(0, wear_shirt.block_chance - armor_penetration)) / ((max(0, wear_shirt.block_chance - armor_penetration + 60)))) + block_chance_modifier
+		//debug_admins("Shirt Hit : [final_block_chance]")
+		if(wear_shirt.hit_reaction(src, AM, attack_text, final_block_chance, damage, attack_type))
+			return TRUE
+
+	if(wear_pants && wpn_ownr.zone_selected == (BODY_ZONE_L_LEG || BODY_ZONE_R_LEG))
+		var/final_block_chance = (50 * (max(0, wear_pants.block_chance - armor_penetration)) / ((max(0, wear_pants.block_chance - armor_penetration + 60)))) + block_chance_modifier
+		//debug_admins("Pants Hit : [final_block_chance]")
 		if(wear_pants.hit_reaction(src, AM, attack_text, final_block_chance, damage, attack_type))
 			return TRUE
 
-	if(wear_neck)
-		var/final_block_chance = wear_neck.block_chance - (CLAMP((armor_penetration-wear_neck.armor_penetration)/2,0,100)) + block_chance_modifier
+	if(wear_neck && wpn_ownr.zone_selected == BODY_ZONE_PRECISE_NECK)
+		var/final_block_chance = (50 * (max(0, wear_neck.block_chance - armor_penetration)) / ((max(0, wear_neck.block_chance - armor_penetration + 60)))) + block_chance_modifier
+		//debug_admins("Neck Hit : [final_block_chance]")
 		if(wear_neck.hit_reaction(src, AM, attack_text, final_block_chance, damage, attack_type))
 			return TRUE
 
 	if(shield_on_back())
 		if(istype(AM, /obj/projectile))
-			var/obj/projectile/proj = AM
-			if(is_attack_from_behind(proj.firer))
+			if(wpn_ownr && is_attack_from_behind(wpn_ownr))
 				var/obj/item/weapon/shield/wear_shield = shield_on_back()
-				var/final_block_chance = wear_shield.block_chance - (CLAMP((armor_penetration-wear_shield.armor_penetration)/2,0,100)) + block_chance_modifier
+				var/final_block_chance = (50 * (max(0, wear_shield.block_chance - armor_penetration)) / ((max(0, wear_shield.block_chance - armor_penetration + 60)))) + block_chance_modifier
+				//debug_admins("Back Hit (projectile) : [final_block_chance]")
 				if(wear_shield.hit_reaction(src, AM, attack_text, final_block_chance, damage, attack_type))
 					return TRUE
 		else if(istype(AM, /obj/item))
@@ -211,7 +238,8 @@
 				return FALSE
 			if(is_attack_from_behind(ownr))
 				var/obj/item/weapon/shield/wear_shield = shield_on_back()
-				var/final_block_chance = (wear_shield.block_chance) - (CLAMP((armor_penetration-wear_shield.armor_penetration)/2,0,100)) + block_chance_modifier
+				var/final_block_chance = (50 * (max(0, wear_shield.block_chance - armor_penetration)) / ((max(0, wear_shield.block_chance - armor_penetration + 60)))) + block_chance_modifier
+				//debug_admins("Shield Hit (melee) : [final_block_chance]")
 				if(wear_shield.hit_reaction(src, AM, attack_text, final_block_chance, damage, attack_type))
 					return TRUE
 
