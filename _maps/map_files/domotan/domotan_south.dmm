@@ -1309,8 +1309,6 @@
 /obj/item/alch/earthdust,
 /obj/item/alch/earthdust,
 /obj/item/alch/earthdust,
-/obj/item/alch/earthdust,
-/obj/item/alch/earthdust,
 /obj/item/alch/coaldust,
 /obj/item/alch/coaldust,
 /obj/item/alch/coaldust,
@@ -1319,15 +1317,11 @@
 /obj/item/alch/airdust,
 /obj/item/alch/airdust,
 /obj/item/alch/airdust,
-/obj/item/alch/airdust,
-/obj/item/alch/airdust,
 /obj/item/alch/seeddust,
 /obj/item/alch/seeddust,
 /obj/item/alch/seeddust,
 /obj/item/alch/seeddust,
 /obj/item/alch/seeddust,
-/obj/item/alch/waterdust,
-/obj/item/alch/waterdust,
 /obj/item/alch/waterdust,
 /obj/item/alch/waterdust,
 /obj/item/alch/waterdust,
@@ -2213,7 +2207,7 @@
 /area/outdoors/woods/heavenscoast)
 "jF" = (
 /obj/machinery/light/fueled/torchholder/metal_torch/east,
-/turf/open/water/ocean/abyss,
+/turf/open/floor/sand/sandstone,
 /area/outdoors/woods/heavenscoast)
 "jG" = (
 /obj/structure/rack,
@@ -3077,15 +3071,10 @@
 /turf/open/floor/wood,
 /area/under/cave)
 "ny" = (
-/obj/item/natural/worms/leech,
-/obj/item/natural/worms/leech,
-/obj/item/natural/worms/leech,
-/obj/item/natural/worms/leech,
-/obj/item/natural/worms/leech,
-/obj/item/natural/worms/leech,
-/obj/structure/fluff/railing/wood,
 /obj/machinery/light/fueled/wallfire/candle/blue,
-/turf/open/water/blood,
+/obj/structure/table/wood/fancy/black,
+/obj/machinery/essence/reservoir,
+/turf/open/floor/churchmarble,
 /area/indoors/lich)
 "nA" = (
 /obj/structure/door/viewport{
@@ -3253,7 +3242,6 @@
 /area/under/cavewet)
 "ok" = (
 /obj/structure/closet/crate/chest,
-/obj/effect/spawner/map_spawner/loot/potion_ingredient/herb,
 /obj/item/alch/herb/artemisia,
 /obj/item/alch/herb/artemisia,
 /obj/item/alch/herb/atropa,
@@ -3282,11 +3270,6 @@
 /obj/item/alch/herb/salvia,
 /obj/item/reagent_containers/food/snacks/produce/poppy,
 /obj/item/reagent_containers/food/snacks/produce/poppy,
-/obj/item/reagent_containers/food/snacks/produce/poppy,
-/obj/item/reagent_containers/food/snacks/produce/poppy,
-/obj/structure/fluff/railing/wood{
-	dir = 4
-	},
 /obj/machinery/light/fueled/wallfire/candle/blue,
 /turf/open/floor/churchmarble,
 /area/indoors/lich)
@@ -4168,7 +4151,7 @@
 /area/under/cavewet)
 "rM" = (
 /obj/machinery/light/fueled/torchholder/metal_torch/west,
-/turf/open/water/ocean/abyss,
+/turf/open/floor/sand/sandstone,
 /area/outdoors/woods/heavenscoast)
 "rN" = (
 /obj/effect/decal/cleanable/dirt,
@@ -5497,7 +5480,7 @@
 /area/outdoors/woods/crossroads)
 "xD" = (
 /obj/structure/fluff/railing/tall/stone,
-/turf/open/water/ocean/abyss,
+/turf/open/floor/sand/sandstone,
 /area/outdoors/woods/heavenscoast)
 "xE" = (
 /obj/structure/chair/stool,
@@ -5846,7 +5829,7 @@
 "zj" = (
 /obj/structure/flora/grass/water,
 /obj/machinery/light/fueled/torchholder/metal_torch/north,
-/turf/open/water/ocean/abyss,
+/turf/open/floor/sand/sandstone,
 /area/outdoors/woods/heavenscoast)
 "zk" = (
 /obj/structure/closet/crate/chest/neu,
@@ -6241,6 +6224,12 @@
 /obj/structure/bookcase/random,
 /turf/open/floor/ruinedwood/darker,
 /area/indoors/villagegarrison)
+"AR" = (
+/obj/structure/fluff/railing/tall/stone{
+	dir = 4
+	},
+/turf/open/floor/sand/sandstone,
+/area/outdoors/woods/heavenscoast)
 "AS" = (
 /obj/structure/closet/crate/chest/crate,
 /obj/machinery/light/fueled/torchholder{
@@ -6260,7 +6249,7 @@
 	icon_state = "zizobanner";
 	pixel_y = -32
 	},
-/turf/open/water/ocean/abyss,
+/turf/open/floor/sand/sandstone,
 /area/outdoors/woods/heavenscoast)
 "AV" = (
 /obj/structure/fluff/railing/border,
@@ -7683,12 +7672,8 @@
 /obj/projectile/bullet/reusable/arrow/vial,
 /obj/projectile/bullet/reusable/arrow/vial,
 /obj/projectile/bullet/reusable/arrow/vial,
-/obj/projectile/bullet/reusable/arrow/vial,
 /obj/item/explosive/deathshell,
 /obj/item/explosive/deathshell,
-/obj/structure/fluff/railing/wood{
-	dir = 8
-	},
 /obj/machinery/light/fueled/wallfire/candle/blue/r,
 /obj/item/recipe_book/alchemy,
 /obj/item/ore/coal,
@@ -8995,7 +8980,6 @@
 /turf/open/floor/blocks/newstone,
 /area/indoors/lich)
 "Nv" = (
-/obj/structure/closet/crate/chest,
 /obj/item/ore/coal,
 /obj/item/ore/coal,
 /obj/item/ore/coal,
@@ -9035,6 +9019,7 @@
 /obj/item/storage/crucible,
 /obj/item/storage/crucible,
 /obj/item/storage/crucible,
+/obj/structure/rack,
 /turf/open/floor/churchrough,
 /area/indoors/lich)
 "Nw" = (
@@ -9560,10 +9545,8 @@
 /turf/open/floor/blocks/newstone,
 /area/indoors/lich)
 "PN" = (
-/obj/structure/fluff/railing/wood,
-/obj/structure/cannon,
-/turf/open/floor/blocks/newstone,
-/area/indoors/lich)
+/turf/open/floor/sand/sandstone,
+/area/outdoors/beach)
 "PO" = (
 /obj/structure/chair/stool,
 /turf/open/floor/hexstone,
@@ -9850,7 +9833,7 @@
 	icon_state = "zizobanner";
 	pixel_y = -32
 	},
-/turf/open/water/ocean/abyss,
+/turf/open/floor/sand/sandstone,
 /area/outdoors/woods/heavenscoast)
 "QR" = (
 /turf/open/floor/twig/platform,
@@ -10152,8 +10135,13 @@
 /obj/item/natural/worms/leech,
 /obj/item/natural/worms/leech,
 /obj/item/natural/worms/leech,
-/obj/item/natural/worms/leech,
 /obj/structure/fluff/railing/wood,
+/obj/structure/fluff/railing/wood{
+	dir = 4
+	},
+/obj/structure/fluff/railing/wood{
+	dir = 8
+	},
 /turf/open/water/blood,
 /area/indoors/lich)
 "Sf" = (
@@ -10441,7 +10429,7 @@
 "Tp" = (
 /obj/structure/flora/grass/water,
 /obj/structure/fluff/railing/tall/stone,
-/turf/open/water/ocean/abyss,
+/turf/open/water/ocean,
 /area/outdoors/woods/heavenscoast)
 "Tq" = (
 /turf/open/floor/hexstone,
@@ -11511,7 +11499,7 @@
 /obj/structure/fluff/railing/tall/stone{
 	dir = 4
 	},
-/turf/open/water/ocean/abyss,
+/turf/open/water/ocean,
 /area/outdoors/woods/heavenscoast)
 "Yj" = (
 /obj/structure/door/weak/bolt,
@@ -51240,8 +51228,8 @@ eS
 eS
 Tx
 Za
-vL
-vL
+Tx
+Tx
 vL
 vL
 rp
@@ -51497,8 +51485,8 @@ eS
 eS
 vL
 Za
-rp
-vL
+Hc
+eS
 rM
 vL
 vL
@@ -51768,7 +51756,7 @@ VR
 Dy
 oY
 fN
-yC
+vV
 yC
 fN
 fN
@@ -52012,7 +52000,7 @@ eS
 Tx
 Tx
 Tx
-vL
+eS
 rn
 yM
 xK
@@ -52025,8 +52013,8 @@ hi
 hi
 hi
 fN
-yC
-yC
+PN
+vV
 fN
 fD
 RV
@@ -52268,8 +52256,8 @@ Tx
 eS
 Tx
 Tx
-vL
-vL
+Tx
+eS
 rn
 Db
 pV
@@ -52282,8 +52270,8 @@ hi
 hi
 hi
 fN
-yC
-yC
+PN
+PN
 fN
 ok
 RV
@@ -52525,8 +52513,8 @@ Tx
 eS
 Tx
 Tx
-rp
-vL
+Hc
+eS
 rn
 xK
 WS
@@ -52540,7 +52528,7 @@ hi
 xh
 fN
 OJ
-OJ
+fN
 fN
 Se
 RV
@@ -53040,9 +53028,9 @@ eS
 Tx
 Tx
 Tx
-rp
+kr
 jF
-jr
+AR
 jr
 jr
 fN
@@ -53297,7 +53285,7 @@ eS
 Tx
 Tx
 Tx
-rp
+Hc
 xD
 hX
 hX
@@ -53554,7 +53542,7 @@ eS
 Tx
 zM
 Tx
-vL
+Tx
 xD
 hX
 hX
@@ -53811,7 +53799,7 @@ zM
 QJ
 zM
 Tx
-vL
+Tx
 Tp
 hX
 hX
@@ -54068,7 +54056,7 @@ zM
 Fc
 Vg
 Vg
-jr
+Vg
 Yi
 hX
 hX
@@ -55098,8 +55086,8 @@ sS
 sS
 sS
 UL
-UL
-UL
+sS
+sS
 AU
 fN
 OJ
@@ -55355,8 +55343,8 @@ Tx
 vL
 Tx
 rp
-vL
-vL
+Tx
+Tx
 zj
 OJ
 yt
@@ -55613,8 +55601,8 @@ Tx
 Tx
 Tx
 vL
-vL
-rp
+Tx
+kr
 fN
 fN
 sD
@@ -55870,9 +55858,9 @@ Tx
 Tx
 Tx
 rp
-vL
-vL
-vL
+Tx
+eS
+eS
 fN
 fN
 fN
@@ -56127,11 +56115,11 @@ eS
 Tx
 Tx
 rp
-vL
-vL
-vL
-vL
-vL
+Tx
+Tx
+eS
+eS
+eS
 fN
 fN
 fN
@@ -56385,10 +56373,10 @@ Tx
 Tx
 vL
 vL
-vL
-vL
-vL
-vL
+Tx
+Tx
+Tx
+eS
 fN
 Qa
 nO
@@ -56643,9 +56631,9 @@ Tx
 Hc
 rp
 vL
-vL
-vL
-vL
+Tx
+Tx
+eS
 fN
 Nv
 bh
@@ -56889,7 +56877,7 @@ hv
 SB
 SB
 OL
-eS
+Fc
 eS
 eS
 eS
@@ -56901,8 +56889,8 @@ Tx
 vL
 vL
 rp
-vL
-vL
+Tx
+Tx
 fN
 Qa
 bh
@@ -57684,10 +57672,10 @@ fN
 GB
 aX
 fN
-yC
-yC
-yC
-yC
+PN
+PN
+PN
+vV
 yC
 yC
 yC
@@ -57937,14 +57925,14 @@ yC
 yC
 yC
 yC
-OJ
+fN
 ej
 ej
-OJ
-yC
-yC
-yC
-yC
+fN
+PN
+PN
+PN
+vV
 yC
 yC
 yC
@@ -58198,11 +58186,11 @@ fN
 oE
 eJ
 fN
-yC
-yC
-yC
-yC
-yC
+PN
+PN
+PN
+vV
+vV
 yC
 yC
 yC
@@ -58431,7 +58419,7 @@ hv
 xr
 xr
 IJ
-eS
+Fc
 eS
 eS
 eS
@@ -58456,10 +58444,10 @@ GK
 GK
 fN
 fN
-yC
-yC
-yC
-yC
+PN
+PN
+PN
+vV
 yC
 yC
 yC
@@ -58714,9 +58702,9 @@ GK
 mm
 fN
 fN
-yC
-yC
-yC
+PN
+vV
+vV
 yC
 yC
 yC
@@ -58971,8 +58959,8 @@ GK
 GK
 cy
 fN
-yC
-yC
+vV
+vV
 yC
 yC
 yC
@@ -118838,7 +118826,7 @@ Xr
 Xr
 Xr
 Xr
-OJ
+fN
 pV
 pV
 pV
@@ -119372,7 +119360,7 @@ dE
 OJ
 hi
 hi
-fN
+yS
 yT
 "}
 (164,1,2) = {"
@@ -119629,7 +119617,7 @@ dE
 OJ
 hi
 hi
-PN
+fN
 yT
 "}
 (165,1,2) = {"
@@ -119883,7 +119871,7 @@ fN
 OJ
 OJ
 fN
-OJ
+fN
 hi
 hi
 OJ
