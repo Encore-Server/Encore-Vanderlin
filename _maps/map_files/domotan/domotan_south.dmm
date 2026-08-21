@@ -112,6 +112,15 @@
 "au" = (
 /turf/closed/mineral/bedrock,
 /area/outdoors/woods/heavenscoast)
+"av" = (
+/obj/structure/fluff/walldeco/psybanner/red{
+	icon_state = "zizobanner";
+	pixel_y = -32
+	},
+/turf/open/floor/rooftop/green{
+	dir = 4
+	},
+/area/outdoors/woods/heavenscoast)
 "aw" = (
 /obj/structure/door/weak/bolt{
 	dir = 8
@@ -473,6 +482,11 @@
 /obj/structure/bars,
 /turf/open/floor/blocks/green,
 /area/under/cavewet)
+"cd" = (
+/turf/open/floor/rooftop/green{
+	dir = 8
+	},
+/area/outdoors/woods/heavenscoast)
 "cf" = (
 /turf/closed/wall/mineral/stone,
 /area/indoors/shelter/woods)
@@ -1326,6 +1340,7 @@
 /obj/item/alch/waterdust,
 /obj/item/alch/waterdust,
 /obj/machinery/light/fueled/wallfire/candle/blue/l,
+/obj/structure/fake_machine/scomm,
 /turf/open/floor/churchmarble,
 /area/indoors/lich)
 "fE" = (
@@ -1365,7 +1380,7 @@
 /turf/open/floor/churchrough,
 /area/indoors/lich)
 "fS" = (
-/turf/open/floor/blocks/newstone,
+/turf/open/floor/blocks/bluestone,
 /area/outdoors/beach)
 "fT" = (
 /obj/structure/table/wood/large_new{
@@ -4081,6 +4096,9 @@
 /obj/effect/spawner/map_spawner/loot/coin/low,
 /turf/open/floor/naturalstone,
 /area/under/cave)
+"rt" = (
+/turf/open/floor/blocks/bluestone,
+/area/outdoors/woods/heavenscoast)
 "ru" = (
 /turf/open/floor/dirt/road,
 /area/outdoors/woods/whisperen)
@@ -5494,6 +5512,11 @@
 /obj/structure/fluff/walldeco/bath/wallpipes/innie,
 /turf/closed/wall/mineral/stone/moss/red,
 /area/under/cave)
+"xI" = (
+/turf/open/floor/rooftop/green{
+	dir = 1
+	},
+/area/outdoors/woods/heavenscoast)
 "xJ" = (
 /obj/effect/decal/cobbleedge{
 	icon_state = "mossyedge-w"
@@ -5509,6 +5532,11 @@
 "xK" = (
 /turf/open/floor/dirt,
 /area/indoors/lich)
+"xL" = (
+/turf/open/floor/rooftop/green{
+	dir = 4
+	},
+/area/outdoors/woods/heavenscoast)
 "xM" = (
 /obj/structure/fluff/railing/tall/retaining{
 	dir = 5
@@ -6698,6 +6726,11 @@
 "CE" = (
 /turf/closed/wall/mineral/stone/moss,
 /area/outdoors/bog/w_highroad)
+"CF" = (
+/turf/open/floor/rooftop/green{
+	dir = 1
+	},
+/area/outdoors/beach)
 "CG" = (
 /obj/structure/fluff/railing/tall/retaining{
 	dir = 4
@@ -7004,6 +7037,10 @@
 "DO" = (
 /turf/open/floor/grass/healthy,
 /area/indoors/shelter/bog)
+"DQ" = (
+/obj/structure/fake_machine/scomm/r,
+/turf/open/floor/church,
+/area/indoors/lich)
 "DR" = (
 /obj/structure/fluff/railing/tall/palisade{
 	dir = 8
@@ -8752,6 +8789,10 @@
 /obj/machinery/light/fueled/campfire/densefire,
 /turf/open/floor/naturalstone,
 /area/under/cavewet)
+"Mv" = (
+/obj/structure/fake_machine/scomm/l,
+/turf/open/floor/blocks/newstone,
+/area/indoors/lich)
 "Mw" = (
 /obj/structure/table/wood/fancy/black,
 /obj/machinery/essence/extractor,
@@ -9020,6 +9061,7 @@
 /obj/item/storage/crucible,
 /obj/item/storage/crucible,
 /obj/structure/rack,
+/obj/structure/fake_machine/scomm,
 /turf/open/floor/churchrough,
 /area/indoors/lich)
 "Nw" = (
@@ -11044,6 +11086,11 @@
 	},
 /turf/open/floor/wood,
 /area/indoors/shelter)
+"Wc" = (
+/turf/open/floor/rooftop/green{
+	dir = 8
+	},
+/area/outdoors/beach)
 "Wd" = (
 /obj/machinery/light/fueled/wallfire/candle/l,
 /obj/structure/fluff/traveltile{
@@ -11167,6 +11214,9 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/hexstone,
 /area/indoors/shelter/bog/witch)
+"WF" = (
+/turf/open/floor/rooftop/green,
+/area/outdoors/beach)
 "WG" = (
 /obj/structure/fluff/railing/tall/retaining,
 /obj/structure/fluff/railing/wood{
@@ -52523,7 +52573,7 @@ xK
 rn
 vS
 LT
-hi
+DQ
 hi
 xh
 fN
@@ -54326,7 +54376,7 @@ PD
 pV
 pV
 io
-pV
+Mv
 pV
 pV
 pV
@@ -58692,8 +58742,8 @@ vL
 vL
 vL
 LW
-yC
-yC
+vV
+vV
 fN
 fN
 mm
@@ -58948,9 +58998,9 @@ vL
 vL
 vL
 vL
-vL
-yC
-yC
+Tx
+vV
+vV
 fN
 Tc
 GK
@@ -58959,7 +59009,7 @@ GK
 GK
 cy
 fN
-vV
+PN
 vV
 yC
 yC
@@ -59205,9 +59255,9 @@ vL
 vL
 vL
 vL
-rp
-yC
-yC
+Hc
+PN
+PN
 fN
 OQ
 GK
@@ -59216,7 +59266,7 @@ GK
 GK
 IY
 fN
-yC
+vV
 yC
 yC
 yC
@@ -59462,9 +59512,9 @@ eS
 vL
 vL
 vL
-vL
-yC
-yC
+Tx
+vV
+PN
 fN
 BV
 GK
@@ -59719,9 +59769,9 @@ eS
 vL
 vL
 vL
-rp
-yC
-yC
+Hc
+vV
+PN
 fN
 fN
 mm
@@ -59976,10 +60026,10 @@ Tx
 Tx
 vL
 vL
-rp
-yC
-yC
-yC
+Hc
+PN
+PN
+PN
 fN
 fN
 fN
@@ -60233,12 +60283,12 @@ eS
 Tx
 Tx
 vL
-rp
-yC
-yC
-yC
-yC
-yC
+Hc
+PN
+PN
+PN
+vV
+vV
 yC
 yC
 yC
@@ -60490,12 +60540,12 @@ eS
 eS
 Tx
 vL
-rp
-yC
-yC
-yC
-yC
-yC
+Hc
+vV
+vV
+PN
+vV
+vV
 yC
 yC
 yC
@@ -60749,9 +60799,9 @@ Tx
 vL
 rp
 vL
-yC
-yC
-yC
+vV
+vV
+vV
 yC
 yC
 yC
@@ -116780,14 +116830,14 @@ yT
 yT
 yT
 yT
-yT
-yT
-yT
-yT
-yT
-yT
-yT
-yT
+Wc
+Wc
+Wc
+Wc
+Wc
+Wc
+Wc
+Wc
 yT
 yT
 yT
@@ -117022,13 +117072,13 @@ Xr
 Xr
 Xr
 Xr
-Xr
-Xr
-Xr
-Xr
-Xr
-Xr
-yT
+xI
+cd
+cd
+cd
+cd
+cd
+Wc
 fN
 fN
 fN
@@ -117036,16 +117086,16 @@ fN
 fN
 fN
 yT
-yT
-yT
-fS
-fS
-fS
-fS
-fS
-fS
-yT
-yT
+CF
+CF
+Wc
+Wc
+Wc
+Wc
+Wc
+Wc
+Wc
+Wc
 yT
 yT
 yT
@@ -117279,12 +117329,12 @@ Xr
 Xr
 Xr
 Xr
-Xr
-hX
-hX
-hX
-hX
-hX
+xI
+rt
+rt
+rt
+rt
+rt
 fN
 fN
 XZ
@@ -117293,18 +117343,18 @@ He
 ux
 fN
 yT
-yT
+CF
+CF
 fS
 fS
 fS
 fS
 fS
 fS
-fS
-fS
-yT
-yT
-yT
+Wc
+Wc
+Wc
+Wc
 yT
 "}
 (156,1,2) = {"
@@ -117536,12 +117586,12 @@ Xr
 Xr
 Xr
 Xr
-Xr
-hX
-hX
-hX
-hX
-hX
+xI
+rt
+rt
+rt
+rt
+rt
 fN
 je
 bh
@@ -117550,7 +117600,8 @@ bh
 zy
 fN
 yT
-yT
+CF
+CF
 fS
 fS
 fS
@@ -117559,10 +117610,9 @@ fS
 fS
 fS
 fS
-fS
-fS
-yT
-yT
+Wc
+Wc
+WF
 "}
 (157,1,2) = {"
 qd
@@ -117793,12 +117843,12 @@ Xr
 Xr
 Xr
 Xr
-Xr
-hX
-hX
-hX
-hX
-hX
+xI
+rt
+rt
+rt
+rt
+rt
 fN
 nv
 bh
@@ -117807,7 +117857,8 @@ bh
 Jz
 fN
 yT
-yT
+CF
+CF
 fS
 fS
 fS
@@ -117817,9 +117868,8 @@ fS
 fS
 fS
 fS
-fS
-fS
-yT
+Wc
+WF
 "}
 (158,1,2) = {"
 qd
@@ -118050,12 +118100,12 @@ Xr
 Xr
 Xr
 Xr
-Xr
-hX
-hX
-hX
-hX
-hX
+xI
+rt
+rt
+rt
+rt
+rt
 fN
 Og
 bh
@@ -118076,7 +118126,7 @@ fN
 OJ
 fN
 fS
-yT
+WF
 "}
 (159,1,2) = {"
 qd
@@ -118307,12 +118357,12 @@ Xr
 Xr
 Xr
 Xr
-Xr
-hX
-hX
-hX
-hX
-hX
+xI
+rt
+rt
+rt
+rt
+rt
 fN
 fN
 OJ
@@ -118564,11 +118614,11 @@ Xr
 Xr
 Xr
 Xr
-Xr
-Xr
-Xr
-Xr
-ZA
+xI
+xL
+xL
+xL
+av
 fN
 fN
 io
