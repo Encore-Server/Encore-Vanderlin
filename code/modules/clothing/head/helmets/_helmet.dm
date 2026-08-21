@@ -21,3 +21,5 @@
 	abstract_type = /obj/item/clothing/head/helmet
 
 	material_category = ARMOR_MAT_PLATE
+
+	block_chance = 35

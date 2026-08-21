@@ -19,6 +19,8 @@
 	stand_speed_reduction = 1.2
 	item_weight = 9 KILOGRAMS
 
+	block_chance = 40
+
 /obj/item/clothing/armor/plate/Initialize()
 	. = ..()
 	AddComponent(/datum/component/item_equipped_movement_rustle, custom_sounds = SFX_PLATE_STEP)
@@ -81,6 +83,8 @@
 	body_parts_covered = COVERAGE_FULL
 	item_weight = 17 KILOGRAMS
 
+	block_chance = 50
+
 
 /obj/item/clothing/armor/plate/full/samsibsa
 	name = "samsibsa scaleplate"
@@ -92,6 +96,8 @@
 	detail_color = CLOTHING_WHITE
 	max_integrity = ARMOR_INT_CHEST_PLATE_STEEL - 50 //slightly worse
 	detail_tag = "_detail"
+
+	block_chance = 60
 
 /obj/item/clothing/armor/plate/full/samsibsa/attack_hand_secondary(mob/user, list/modifiers)
 	. = ..()
@@ -127,6 +133,8 @@
 	armor = ARMOR_PLATE_BAD
 	max_integrity = INTEGRITY_STANDARD
 	item_weight = 8.75 KILOGRAMS
+
+	block_chance = 15
 
 /obj/item/clothing/armor/plate/silver
 	slot_flags = ITEM_SLOT_ARMOR
@@ -234,6 +242,8 @@
 	sleeved = 'icons/roguetown/clothing/special/onmob/evilarmor.dmi'
 	sellprice = 0 // Incredibly evil Zizoid armor, this should be burnt, nobody wants this
 
+	block_chance = 70
+
 //................ Deceivers Armor ...............//
 
 /obj/item/clothing/armor/plate/full/deceivers
@@ -245,6 +255,8 @@
 	sleeved = 'icons/roguetown/clothing/special/onmob/evilarmor.dmi'
 	sellprice = 0 // See above comment
 
+	block_chance = 70
+
 //.............. Archdevil Armor .................//
 
 /obj/item/clothing/armor/plate/full/archdevils
@@ -255,6 +267,8 @@
 	mob_overlay_icon = 'icons/roguetown/clothing/special/onmob/evilarmor.dmi'
 	sleeved = 'icons/roguetown/clothing/special/onmob/evilarmor.dmi'
 	sellprice = 0 // See above comment
+
+	block_chance = 70
 
 //.............. Silver Armor .................//
 

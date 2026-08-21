@@ -27,6 +27,8 @@
 
 	material_category = ARMOR_MAT_PLATE
 
+	block_chance = 30
+
 /obj/item/clothing/gloves/plate/iron
 	name = "iron plate gauntlets"
 	desc = "Plated gauntlets made out of iron. Offers good protection against melee attacks."

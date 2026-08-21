@@ -18,6 +18,8 @@
 	body_parts_covered = COVERAGE_VEST
 	item_weight = 230 GRAMS
 
+	block_chance = 0
+
 //................ Amazon chainkini ............... //
 /obj/item/clothing/armor/amazon_chainkini
 	name = "amazonian armor"
@@ -41,6 +43,8 @@
 	min_cold_protection_temperature = 5 //this is like fur but also its a fucking bikini like???
 
 	material_category = ARMOR_MAT_CHAINMAIL
+
+	block_chance = 5
 
 //................ Brigandine ............... //
 /obj/item/clothing/armor/brigandine
@@ -96,6 +100,8 @@
 	item_state = "abyssal_robe"
 	smeltresult = /obj/item/ingot/bronze
 
+	block_chance = 30
+
 /obj/item/clothing/armor/brigandine/mjallidhorn/Initialize()
 	. = ..()
 	AddComponent(/datum/component/item_equipped_movement_rustle, custom_sounds = SFX_PLATE_COAT_STEP)
@@ -124,6 +130,8 @@
 	prevent_crits = ALL_EXCEPT_BLUNT
 	uses_lord_coloring = LORD_PRIMARY
 	stand_speed_reduction = 1.15
+
+	block_chance = 30
 
 /obj/item/clothing/armor/brigandine/captain/Initialize()
 	. = ..()

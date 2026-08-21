@@ -20,6 +20,8 @@
 
 	material_category = ARMOR_MAT_CHAINMAIL
 
+	block_chance = 25
+
 /obj/item/clothing/armor/chainmail/iron
 	name = "iron haubergeon"
 	desc = "Made out of interlocked iron rings. Offers good resistance against arrows, stabs and cuts. \nUsually worn as padding for proper armor."
@@ -33,6 +35,8 @@
 	max_integrity = INTEGRITY_STRONG
 	item_weight = 8.2 KILOGRAMS
 
+	block_chance = 30
+
 //................ Hauberk ............... //
 /obj/item/clothing/armor/chainmail/hauberk
 	name = "hauberk"
@@ -45,6 +49,8 @@
 	body_parts_covered = COVERAGE_FULL
 	item_weight = 11 KILOGRAMS
 
+	block_chance = 30
+
 /obj/item/clothing/armor/chainmail/hauberk/Initialize()
 	. = ..()
 	AddComponent(/datum/component/item_equipped_movement_rustle)
@@ -56,6 +62,8 @@
 	max_integrity = ARMOR_INT_CHEST_MEDIUM_DECREPIT
 	material_category = ARMOR_MAT_CHAINMAIL
 	anvilrepair = null
+
+	block_chance = 15
 
 /obj/item/clothing/armor/chainmail/hauberk/fluted
 	name = "fluted hauberk"

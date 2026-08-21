@@ -286,6 +286,8 @@
 
 	material_category = ARMOR_MAT_CHAINMAIL
 
+	block_chance = 20
+
 /obj/item/clothing/neck/chaincoif/AdjustClothes(mob/user)
 	if(loc == user)
 		if(adjustable == CAN_CADJUST)
@@ -325,6 +327,8 @@
 	armor = ARMOR_MAILLE_IRON
 	max_integrity = INTEGRITY_STRONG
 
+	block_chance = 30
+
 /obj/item/clothing/neck/gorget/copper
 	name = "neck protector"
 	icon_state = "copperneck"
@@ -334,6 +338,8 @@
 	armor_class = AC_MEDIUM
 	armor = ARMOR_LEATHER_GOOD
 	max_integrity = INTEGRITY_POOR
+
+	block_chance = 15
 
 
 //..................................................................................................................................
@@ -368,6 +374,8 @@
 	material_category = ARMOR_MAT_PLATE
 	item_weight = 1.13 KILOGRAMS
 
+	block_chance = 30
+
 /obj/item/clothing/neck/bevor/Initialize()
 	. = ..()
 	ADD_TRAIT(src, TRAIT_HARD_TO_STEAL, TRAIT_GENERIC)
@@ -388,6 +396,8 @@
 
 	armor = ARMOR_PLATE_BAD
 	max_integrity = INTEGRITY_STRONG
+
+	block_chance = 40
 
 /obj/item/clothing/neck/gorget
 	name = "gorget"
@@ -412,6 +422,8 @@
 
 	material_category = ARMOR_MAT_PLATE
 	item_weight = 900 GRAMS
+
+	block_chance = 40
 
 /obj/item/clothing/neck/gorget/Initialize()
 	. = ..()

@@ -35,6 +35,8 @@
 	grid_height = 96
 	item_weight = 7 KILOGRAMS
 
+	block_chance = 20
+
 	var/fire_resist = T0C+100
 	var/blood_overlay_type = "suit"
 	var/togglename = null

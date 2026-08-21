@@ -16,6 +16,8 @@
 	max_integrity = INTEGRITY_STRONG
 	item_weight = 7 KILOGRAMS
 
+	block_chance = 35
+
 //................ Sterkenstadten Cuirass ............... //this is literally just grenzelhoft
 /obj/item/clothing/armor/cuirass/sterkenstadten
 	name = "Sterkenstadten cuirass"
@@ -27,6 +29,8 @@
 
 	armor = ARMOR_PLATE_GOOD
 	item_weight = 10 KILOGRAMS
+
+	block_chance = 45
 
 /obj/item/clothing/armor/cuirass/rare
 	abstract_type = /obj/item/clothing/armor/cuirass/rare
@@ -42,6 +46,8 @@
 	unequip_delay_self = 2 SECONDS
 	sellprice = VALUE_SNOWFLAKE_STEEL
 
+	block_chance = 60
+
 //................ Iron Breastplate ............... //	- A breastplate is a cuirass without its back plate.
 /obj/item/clothing/armor/cuirass/iron
 	name = "iron breastplate"
@@ -56,6 +62,8 @@
 	max_integrity = INTEGRITY_STRONG
 	item_weight = 6.5 KILOGRAMS
 
+	block_chance = 50
+
 //................ Rusted Breastplate ............... //
 /obj/item/clothing/armor/cuirass/iron/rust
 	name = "rusted cuirass"
@@ -68,6 +76,8 @@
 	sellprice = VALUE_IRON_ARMOR/2
 
 	max_integrity = INTEGRITY_STANDARD
+
+	block_chance = 15
 
 //................ Scourge Breastplate ............... //
 /obj/item/clothing/armor/cuirass/iron/shadowplate
@@ -112,12 +122,16 @@
 	icon_state = "fencercuirass"
 	item_state = "fencercuirass"
 
+	block_chance = 25
+
 /obj/item/clothing/armor/cuirass/angros
 	name = "katholikon chestplate"
 	desc = "An expertly smithed form-fitting steel cuirass that is much lighter and agile, but breaks with much more ease. It's thinner, but backed with silk and leather."
 	melt_amount = 75
 	icon_state = "ornatechestplate"
 	item_state = "ornatechestplate"
+
+	block_chance = 25
 
 /obj/item/clothing/armor/cuirass/fluted
 	name = "fluted cuirass"
@@ -126,6 +140,8 @@
 
 	body_parts_covered = CHEST | VITALS | LEGS
 	max_integrity = 300
+
+	block_chance = 25
 
 /obj/item/clothing/armor/cuirass/ornate
 	name = "katholikon cuirass"

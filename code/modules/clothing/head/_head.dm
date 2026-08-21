@@ -29,6 +29,8 @@
 	sellprice = VALUE_CHEAP_CLOTHING
 	edelay_type = 1
 
+	block_chance = 5
+
 	var/blockTracking = 0 //For AI tracking
 	var/can_toggle = null
 	abstract_type = /obj/item/clothing/head

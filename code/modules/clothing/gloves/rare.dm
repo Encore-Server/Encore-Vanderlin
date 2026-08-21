@@ -23,6 +23,8 @@
 
 	material_category = ARMOR_MAT_PLATE
 
+	block_chance = 50
+
 /obj/item/clothing/gloves/rare/elfplate
 	name = "dark elf plate gauntlets"
 	desc = "Plate gauntlets of mystic dark elven alloy, lightweight yet incredibly protective. Typically worn by elite bladesingers."

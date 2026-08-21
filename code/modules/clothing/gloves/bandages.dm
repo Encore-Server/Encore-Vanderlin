@@ -21,6 +21,7 @@
 	salvage_result = /obj/item/natural/cloth
 	unarmed_bonus = 1.125 //Sublight armor with minimal durability, but a greater unarmed damage multiplier. More damage than leather, less than maille. Loadout-selectable.
 	item_weight = 85 GRAMS
+	block_chance = 0
 
 /obj/item/clothing/gloves/bandages/weighted
 	name = "weighted bandages"
