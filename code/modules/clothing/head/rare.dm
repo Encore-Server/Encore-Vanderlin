@@ -20,7 +20,7 @@
 	max_integrity = INTEGRITY_STRONG
 	abstract_type =  /obj/item/clothing/head/rare
 
-	block_chance = 50
+	block_chance = 40
 
 //............... Bladesinger Helmet ............... //
 /obj/item/clothing/head/rare/elfplate // Unique Bladesinger kit

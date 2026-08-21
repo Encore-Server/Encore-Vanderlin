@@ -23,7 +23,7 @@
 
 	material_category = ARMOR_MAT_PLATE
 
-	block_chance = 50
+	block_chance = 40
 
 /obj/item/clothing/gloves/rare/elfplate
 	name = "dark elf plate gauntlets"

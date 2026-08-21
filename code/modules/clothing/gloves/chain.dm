@@ -25,6 +25,8 @@
 
 	material_category = ARMOR_MAT_CHAINMAIL
 
+	block_chance = 10
+
 /obj/item/clothing/gloves/chain/angros
 	name = "katholikon chain gauntlets"
 	icon_state = "psydongloveschain"

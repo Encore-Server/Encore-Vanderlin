@@ -22,4 +22,4 @@
 
 	material_category = ARMOR_MAT_PLATE
 
-	block_chance = 35
+	block_chance = 20

@@ -20,7 +20,7 @@
 	max_integrity = INTEGRITY_STRONGEST // no moving parts, steel
 	abstract_type = /obj/item/clothing/head/helmet/heavy
 
-	block_chance = 50
+	block_chance = 30
 
 /obj/item/clothing/head/helmet/heavy/necked		// includes a coif or gorget part to cover neck. Why? So templars can wear their cross on their neck basically, also special thing for Temple
 	name = "bastion helm"

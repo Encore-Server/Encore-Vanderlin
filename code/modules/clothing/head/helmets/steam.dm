@@ -8,7 +8,7 @@
 	item_weight = 9 KILOGRAMS
 	block2add = FOV_RIGHT|FOV_LEFT
 	smeltresult = /obj/item/ingot/bronze
-	block_chance = 60
+	block_chance = 40
 
 /obj/item/clothing/head/helmet/heavy/steam/dropped(mob/living/carbon/user)
 	// Locate the boiler in the back slots

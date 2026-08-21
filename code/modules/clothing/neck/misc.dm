@@ -286,7 +286,7 @@
 
 	material_category = ARMOR_MAT_CHAINMAIL
 
-	block_chance = 20
+	block_chance = 15
 
 /obj/item/clothing/neck/chaincoif/AdjustClothes(mob/user)
 	if(loc == user)
@@ -327,7 +327,6 @@
 	armor = ARMOR_MAILLE_IRON
 	max_integrity = INTEGRITY_STRONG
 
-	block_chance = 30
 
 /obj/item/clothing/neck/gorget/copper
 	name = "neck protector"
@@ -374,7 +373,7 @@
 	material_category = ARMOR_MAT_PLATE
 	item_weight = 1.13 KILOGRAMS
 
-	block_chance = 30
+	block_chance = 20
 
 /obj/item/clothing/neck/bevor/Initialize()
 	. = ..()

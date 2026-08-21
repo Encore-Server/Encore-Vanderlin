@@ -27,7 +27,7 @@
 
 	material_category = ARMOR_MAT_PLATE
 
-	block_chance = 30
+	block_chance = 15
 
 /obj/item/clothing/gloves/plate/iron
 	name = "iron plate gauntlets"
@@ -55,6 +55,8 @@
 	sellprice = VALUE_IRON_ARMOR/2
 	armor = ARMOR_PLATE_BAD
 	max_integrity = INTEGRITY_STANDARD
+
+	block_chance = 5
 
 /obj/item/clothing/gloves/plate/blk
 	name = "blacksteel gauntlets"

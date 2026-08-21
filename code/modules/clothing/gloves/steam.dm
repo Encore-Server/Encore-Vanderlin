@@ -13,7 +13,7 @@
 	smeltresult = /obj/item/ingot/bronze
 	item_weight = 7 KILOGRAMS
 
-	block_chance = 60
+	block_chance = 40
 
 /obj/item/clothing/shoes/boots/armor/steam/dropped(mob/living/carbon/user)
 	// Locate the boiler in the back slots
