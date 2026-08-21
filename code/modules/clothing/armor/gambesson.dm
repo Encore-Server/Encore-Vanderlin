@@ -27,6 +27,8 @@
 	material_category = ARMOR_MAT_FABRIC
 	item_weight = 3.5 KILOGRAMS
 
+	block_chance = 10
+
 /obj/item/clothing/armor/gambeson/light
 	name = "light gambeson"
 	desc = "Thin and the maker skimped on the padding, typically worn by the peasantry to give some protection against cold for the whole body."

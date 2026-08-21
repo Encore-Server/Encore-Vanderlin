@@ -44,7 +44,7 @@
 
 	material_category = ARMOR_MAT_CHAINMAIL
 
-	block_chance = 5
+	block_chance = 0
 
 //................ Brigandine ............... //
 /obj/item/clothing/armor/brigandine
@@ -100,7 +100,6 @@
 	item_state = "abyssal_robe"
 	smeltresult = /obj/item/ingot/bronze
 
-	block_chance = 30
 
 /obj/item/clothing/armor/brigandine/mjallidhorn/Initialize()
 	. = ..()
@@ -131,7 +130,6 @@
 	uses_lord_coloring = LORD_PRIMARY
 	stand_speed_reduction = 1.15
 
-	block_chance = 30
 
 /obj/item/clothing/armor/brigandine/captain/Initialize()
 	. = ..()

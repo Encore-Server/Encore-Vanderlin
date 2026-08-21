@@ -14,7 +14,7 @@
 	throw_range = 3
 	w_class = WEIGHT_CLASS_BULKY
 	possible_item_intents = list(SHIELD_BASH, SHIELD_BLOCK)
-	block_chance = 0
+	block_chance = 5
 	sharpness = IS_BLUNT
 	wlength = WLENGTH_SHORT
 	resistance_flags = FLAMMABLE
@@ -104,7 +104,6 @@
 	icon_state = "woodsh"
 	dropshrink = 0.8
 	coverage = 60
-	block_chance = 10
 	max_integrity = INTEGRITY_STANDARD - 25
 	item_weight = 3 KILOGRAMS
 
@@ -164,7 +163,7 @@
 	wdefense = ULTMATE_PARRY + 1
 	wbalance = EASY_TO_DODGE // Heavy, big shield
 	coverage = 65
-	block_chance = 60
+	block_chance = 25
 	wlength = WLENGTH_NORMAL
 	parrysound = list('sound/combat/parry/shield/towershield (1).ogg','sound/combat/parry/shield/towershield (2).ogg','sound/combat/parry/shield/towershield (3).ogg')
 	max_integrity = INTEGRITY_STRONG
@@ -220,7 +219,7 @@
 	force = DAMAGE_SHIELD * 2
 	wdefense = ULTMATE_PARRY + 2
 	coverage = 70
-	block_chance = 80
+	block_chance = 30
 	possible_item_intents = list(METAL_BASH, METAL_BLOCK)
 	resistance_flags = FIRE_PROOF
 	flags_1 = CONDUCT_1
@@ -273,7 +272,7 @@
 	name = "ancient shield"
 	desc = "An ancient, knightly, kite-shaped steel shield."
 	icon_state = "ancientsh"
-	block_chance = 50
+	block_chance = 15
 
 /obj/item/weapon/shield/tower/metal/psy
 	name = "Covenant"
@@ -298,7 +297,6 @@
 	wdefense = ULTMATE_PARRY
 	wbalance = HARD_TO_DODGE // small, tiny shield
 	coverage = 10
-	block_chance = 20
 	max_integrity = INTEGRITY_STANDARD
 	dropshrink = 0.75
 
@@ -327,7 +325,7 @@
 	melting_material = /datum/material/steel
 	wdefense = 7
 	item_weight = 1 KILOGRAMS
-	block_chance = 30
+	block_chance = 10
 
 /obj/item/weapon/shield/heater
 	name = "heater shield"
@@ -336,7 +334,7 @@
 	force = DAMAGE_SHIELD + 5
 	throwforce = DAMAGE_SHIELD
 	coverage = 60
-	block_chance = 40
+	block_chance = 20
 	dropshrink = 0.8
 	attacked_sound = list('sound/combat/parry/shield/towershield (1).ogg','sound/combat/parry/shield/towershield (2).ogg','sound/combat/parry/shield/towershield (3).ogg')
 	parrysound = list('sound/combat/parry/shield/towershield (1).ogg','sound/combat/parry/shield/towershield (2).ogg','sound/combat/parry/shield/towershield (3).ogg')

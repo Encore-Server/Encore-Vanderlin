@@ -24,7 +24,7 @@
 
 	material_category = ARMOR_MAT_FABRIC
 
-	block_chance = = 10
+	block_chance = 10
 
 //THE ARMOUR VALUES OF ADVANCED AND MASTERWORK ARMOUR ARE INTENDED
 //KEEP THIS IN MIND
@@ -37,6 +37,8 @@
 	prevent_crits = ALL_EXCEPT_CHOP_AND_STAB
 	armor = list("blunt" = 75, "slash" = 60, "stab" = 30, "piercing" = 10, "fire" = 0, "acid" = 0)
 
+	block_chance = 15
+
 
 /obj/item/clothing/armor/leather/masterwork
 	name = "masterwork leather armor"
@@ -44,6 +46,8 @@
 	max_integrity = INTEGRITY_STRONG + 100
 	prevent_crits = ALL_EXCEPT_STAB
 	armor = list("blunt" = 100, "slash" = 70, "stab" = 40, "piercing" = 10, "fire" = 0, "acid" = 0)
+
+	block_chance = 20
 
 /obj/item/clothing/armor/leather/masterwork/Initialize()
 	. = ..()
@@ -66,12 +70,16 @@
 	prevent_crits = ALL_EXCEPT_CHOP_AND_STAB
 	armor = list("blunt" = 75, "slash" = 60, "stab" = 30, "piercing" = 10, "fire" = 0, "acid" = 0)
 
+	block_chance = 15
+
 /obj/item/clothing/armor/leather/hide/masterwork
 	name = "masterwork hide armor"
 	desc = "A leather armor with a large amount of thick internal padding of the best creacher fur. Offers much higher integrity and comfort."
 	max_integrity = INTEGRITY_STRONG + 100
 	prevent_crits = ALL_EXCEPT_STAB
 	armor = list("blunt" = 100, "slash" = 70, "stab" = 40, "piercing" = 10, "fire" = 0, "acid" = 0)
+
+	block_chance = 20
 
 /obj/item/clothing/armor/leather/hide/masterwork/Initialize()
 	. = ..()
@@ -95,12 +103,16 @@
 	prevent_crits = ALL_EXCEPT_CHOP_AND_STAB
 	armor = list("blunt" = 75, "slash" = 60, "stab" = 30, "piercing" = 10, "fire" = 0, "acid" = 0)
 
+	block_chance = 15
+
 /obj/item/clothing/armor/leather/hide/steppe/masterwork
 	name = "masterwork steppe hide armor"
 	desc = "Worn by veteran riders of the steppe, this stiffened leather armor is padded with the best, and most dangerous, thick beast fur for warmth and comfort."
 	max_integrity = INTEGRITY_STRONG + 100
 	prevent_crits = ALL_EXCEPT_STAB
 	armor = list("blunt" = 100, "slash" = 70, "stab" = 40, "piercing" = 10, "fire" = 0, "acid" = 0)
+
+	block_chance = 20
 
 /obj/item/clothing/armor/leather/hide/steppe/masterwork/Initialize()
 	. = ..()

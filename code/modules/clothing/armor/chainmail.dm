@@ -20,7 +20,7 @@
 
 	material_category = ARMOR_MAT_CHAINMAIL
 
-	block_chance = 25
+	block_chance = 15
 
 /obj/item/clothing/armor/chainmail/iron
 	name = "iron haubergeon"
@@ -35,8 +35,6 @@
 	max_integrity = INTEGRITY_STRONG
 	item_weight = 8.2 KILOGRAMS
 
-	block_chance = 30
-
 //................ Hauberk ............... //
 /obj/item/clothing/armor/chainmail/hauberk
 	name = "hauberk"
@@ -48,8 +46,6 @@
 
 	body_parts_covered = COVERAGE_FULL
 	item_weight = 11 KILOGRAMS
-
-	block_chance = 30
 
 /obj/item/clothing/armor/chainmail/hauberk/Initialize()
 	. = ..()
@@ -63,7 +59,7 @@
 	material_category = ARMOR_MAT_CHAINMAIL
 	anvilrepair = null
 
-	block_chance = 15
+	block_chance = 10
 
 /obj/item/clothing/armor/chainmail/hauberk/fluted
 	name = "fluted hauberk"

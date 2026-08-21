@@ -11,6 +11,8 @@
 	prevent_crits = ALL_EXCEPT_STAB
 	abstract_type = /obj/item/clothing/armor/medium
 
+	block_chance = 20
+
 /obj/item/clothing/armor/medium/scale // important is how this item covers legs too compared to halfplate
 	name = "scalemail"
 	desc = "Overlapping steel plates almost makes the wearer look like he has silvery fish scales."
