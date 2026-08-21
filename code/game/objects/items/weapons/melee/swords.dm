@@ -37,6 +37,8 @@
 
 	weapon_special = /datum/special_intent/shin_swipe
 
+	armor_penetration = 15
+
 /obj/item/weapon/sword/getonmobprop(tag)
 	. = ..()
 	if(tag)
@@ -71,6 +73,8 @@
 	item_weight = 700 GRAMS
 	smeltresult = /obj/item/ingot/steel_slag
 	weapon_special = /datum/special_intent/triple_stab
+
+	armor_penetration = 10
 
 /obj/item/weapon/sword/short/iron
 	desc = "An iron sword of shortened design and a reduced grip for single hand use."
@@ -236,6 +240,8 @@
 	max_integrity = INTEGRITY_WORST / 4
 	item_weight = 900 GRAMS
 	smeltresult = null
+
+	armor_penetration = 5
 
 /*-------\
 | Sabres |	Onehanded, slightly weaker thrust, better for parries. Think rapier but cutting focus.
@@ -761,6 +767,8 @@
 	weapon_special = /datum/special_intent/side_sweep
 	item_weight = 1.5 KILOGRAMS
 
+	armor_penetration = 20
+
 /obj/item/weapon/sword/long/shotel
 	name = "steel shotel"
 	icon_state = "shotel_steel"
@@ -1117,6 +1125,8 @@
 
 	weapon_special = /datum/special_intent/greatsword_swing
 	item_weight = 2.5 KILOGRAMS
+
+	armor_penetration = 25
 
 /obj/item/weapon/sword/long/greatsword/getonmobprop(tag)
 	. = ..()

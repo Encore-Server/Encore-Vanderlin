@@ -10,6 +10,8 @@
 	hitsound_wall = "ricochet"
 	impact_effect_type = /obj/effect/temp_visual/impact_effect
 
+	armor_penetration = 60
+
 /obj/projectile/bullet/pellet
 	name = "pellet"
 	damage = 15 // musket damage + a tiny bit more if you manage to hit point-blank

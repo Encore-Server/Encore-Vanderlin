@@ -25,6 +25,8 @@
 	weapon_special = /datum/special_intent/axe_swing
 	item_weight = 1.5 KILOGRAMS
 
+	armor_penetration = 15
+
 //................ Stone Axe ............... //
 /obj/item/weapon/axe/stone
 	name = "stone axe"
@@ -43,6 +45,8 @@
 	smeltresult = /obj/item/fertilizer/ash //is a wooden log and a stone hammered in the top
 	sellprice = 10
 	item_weight = 800 GRAMS
+
+	armor_penetration = 5
 
 /obj/item/weapon/axe/stone/getonmobprop(tag)
 	if(tag)
@@ -73,6 +77,8 @@
 	melt_amount = 150
 	sellprice = 60
 	item_weight = 2.5 KILOGRAMS
+
+	armor_penetration = 15
 
 /obj/item/weapon/axe/battle/getonmobprop(tag)
 	if(tag)
@@ -237,6 +243,8 @@
 	toolspeed = 2
 	item_weight = 2.5 KILOGRAMS
 
+	armor_penetration = 25
+
 
 //................ Steel Axe ............... //
 /obj/item/weapon/axe/steel
@@ -397,6 +405,8 @@
 	pickup_sound = 'sound/foley/equip/rummaging-03.ogg'
 	item_weight = 900 GRAMS
 
+	armor_penetration = 5
+
 /obj/item/weapon/axe/boneaxe/getonmobprop(tag)
 	if(tag)
 		switch(tag)
@@ -423,6 +433,8 @@
 	smeltresult = /obj/item/fertilizer/ash
 	pickup_sound = 'sound/foley/equip/rummaging-03.ogg'
 	item_weight = 900 GRAMS
+
+	armor_penetration = 10
 
 /obj/item/weapon/axe/trollboneaxe/getonmobprop(tag)
 	if(tag)
@@ -472,6 +484,8 @@
 
 	weapon_special = /datum/special_intent/axe_swing
 	item_weight = 4 KILOGRAMS
+
+	armor_penetration = 20
 
 /obj/item/weapon/greataxe/getonmobprop(tag)
 	. = ..()
@@ -539,6 +553,8 @@
 	minstr = 13
 	max_integrity = INTEGRITY_STRONGEST * 1.25
 	item_weight = 12 KILOGRAMS
+
+	armor_penetration = 25
 
 /obj/item/weapon/greataxe/steel/doublehead/archdevils
 	name = "vicious greataxe"

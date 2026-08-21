@@ -12,6 +12,8 @@
 
 	firing_effect_type = null
 
+	armor_penetration = 5
+
 /obj/item/ammo_casing/caseless/dart/Initialize(mapload, ...)
 	. = ..()
 	AddElement(/datum/element/tipped_item, _max_reagents = 3, _dip_amount = 3, _attack_injects = FALSE)

@@ -43,6 +43,8 @@
 	melting_material = null
 	melt_amount = 0
 
+	armor_penetration = 60
+
 /obj/item/weapon/polearm/halberd/bardiche/woodcutter/gorefeast/Initialize(mapload, ...)
 	. = ..()
 	AddElement(/datum/element/divine_intervention, /datum/patron/inhumen/archdevils, PUNISHMENT_STRESS, /datum/stress_event/divine_punishment, TRUE)
@@ -123,6 +125,8 @@
 	melt_amount = 0
 
 	COOLDOWN_DECLARE(fire_projectile)
+
+	armor_penetration = 40
 
 /obj/item/weapon/polearm/neant/Initialize(mapload, ...)
 	. = ..()
@@ -212,7 +216,7 @@
 	hitsound = 'sound/combat/hits/hi_arrow2.ogg'
 	range = 8
 	damage = 20
-	armor_penetration = 30
+	armor_penetration = 60
 	damage_type = BRUTE
 	woundclass = BCLASS_CUT
 	flag =  "piercing"
@@ -358,6 +362,8 @@
 
 	COOLDOWN_DECLARE(pleonexia_blink)
 
+	armor_penetration = 50
+
 /obj/item/weapon/sword/long/pleonexia/Initialize(mapload, ...)
 	. = ..()
 	AddElement(/datum/element/divine_intervention, /datum/patron/inhumen/deceivers, PUNISHMENT_STRESS, /datum/stress_event/divine_punishment, TRUE)
@@ -422,6 +428,8 @@
 	melting_material = null
 	melt_amount = 0
 
+	armor_penetration = 50
+
 /datum/intent/sword/cut/martyr
 	item_damage_type = "fire"
 	blade_class = BCLASS_CUT
@@ -456,6 +464,8 @@
 	smeltresult = null
 	melting_material = null
 	melt_amount = 0
+
+	armor_penetration = 50
 
 /datum/intent/axe/cut/battle/greataxe/martyr
 	item_damage_type = "fire"
@@ -509,6 +519,8 @@
 	smeltresult = null
 	melting_material = null
 	melt_amount = 0
+
+	armor_penetration = 50
 
 /obj/item/weapon/polearm/spear/grandmaster/Initialize()
 	. = ..()

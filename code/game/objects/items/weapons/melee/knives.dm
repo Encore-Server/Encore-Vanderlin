@@ -590,6 +590,8 @@
 	sellprice = 5
 	item_weight = 150 GRAMS
 
+	armor_penetration = 0
+
 /obj/item/weapon/knife/stone/kukri
 	name = "joapstone kukri"
 	desc = "A kukri made out of joapstone. It's more of a ceremonial piece than it is an implement of war, it's somewhat fragile. Be gentle with it."

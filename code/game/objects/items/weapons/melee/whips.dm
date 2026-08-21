@@ -30,6 +30,8 @@
 	weapon_special = /datum/special_intent/whip_coil
 	item_weight = 500 GRAMS
 
+	armor_penetration = 0
+
 /obj/item/weapon/whip/getonmobprop(tag)
 	. = ..()
 	if(tag)

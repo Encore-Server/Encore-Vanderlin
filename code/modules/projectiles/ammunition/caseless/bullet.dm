@@ -10,6 +10,8 @@
 	force = DAMAGE_KNIFE - 7
 	item_weight = 75 GRAMS
 
+	armor_penetration = 60
+
 /obj/item/ammo_casing/caseless/pelletshot
 	name = "pelletshot"
 	desc = "A handful of pellet shots, made to punch many holes into a packed bunch of enemies."

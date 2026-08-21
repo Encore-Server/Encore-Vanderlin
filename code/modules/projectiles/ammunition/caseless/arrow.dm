@@ -14,6 +14,8 @@
 	caliber = "arrow"
 	firing_effect_type = null
 
+	armor_penetration = 50
+
 /obj/item/ammo_casing/caseless/arrow/Initialize(mapload, ...)
 	. = ..()
 	AddElement(/datum/element/tipped_item, _max_reagents = 2, _dip_amount = 2, _attack_injects = FALSE)
@@ -24,6 +26,8 @@
 	icon_state = "stonearrow"
 	projectile_type = /obj/projectile/bullet/reusable/arrow/stone //weaker projectile
 	max_integrity = 5
+
+	armor_penetration = 5
 
 /obj/item/ammo_casing/caseless/arrow/poison
 	name = "poison arrow"
@@ -73,6 +77,8 @@
 	force = DAMAGE_KNIFE - 2
 	var/datum/reagent/reagent
 
+	armor_penetration = 10
+
 /obj/item/ammo_casing/caseless/arrow/vial/Initialize(mapload, ...)
 	. = ..()
 	RemoveElement(/datum/element/tipped_item)
@@ -97,6 +103,8 @@
 	max_integrity = 10
 	force = DAMAGE_KNIFE - 2
 
+	armor_penetration = 25
+
 /obj/item/ammo_casing/caseless/arrow/water/Initialize(mapload, ...)
 	. = ..()
 	RemoveElement(/datum/element/tipped_item)
@@ -107,3 +115,5 @@
 	icon_state = "bonearrow"
 	projectile_type = /obj/projectile/bullet/reusable/arrow/bone //weaker projectile
 	max_integrity = 15
+
+	armor_penetration = 30

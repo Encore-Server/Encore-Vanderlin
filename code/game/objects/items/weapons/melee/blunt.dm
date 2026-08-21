@@ -33,6 +33,8 @@
 	grid_width = 32
 	item_weight = 1.5 KILOGRAMS
 
+	armor_penetration = 20
+
 /obj/item/weapon/mace/getonmobprop(tag)
 	if(tag)
 		switch(tag)
@@ -90,6 +92,8 @@
 	smeltresult = /obj/item/fertilizer/ash
 	melting_material = null
 	melt_amount = 0
+
+	armor_penetration = 0
 
 /obj/item/weapon/mace/cane/noble
 	name = "fancy cane"
@@ -274,6 +278,8 @@
 	max_integrity = INTEGRITY_STRONG
 	item_weight = 1.8 KILOGRAMS
 
+	armor_penetration = 25
+
 
 //................ Iron Bludgeon ............... // Less damage, more accurate, similar to a cudgel
 /obj/item/weapon/mace/bludgeon
@@ -333,6 +339,8 @@
 	melt_amount = 0
 	sellprice = 5
 	item_weight = 700 GRAMS
+
+	armor_penetration = 5
 
 /obj/item/weapon/mace/woodclub/Initialize(mapload)
 	. = ..()
@@ -469,6 +477,8 @@
 
 	weapon_special = /datum/special_intent/ground_smash
 	item_weight = 3 KILOGRAMS
+
+	armor_penetration = 25
 
 /obj/item/weapon/mace/goden/getonmobprop(tag)
 	. = ..()

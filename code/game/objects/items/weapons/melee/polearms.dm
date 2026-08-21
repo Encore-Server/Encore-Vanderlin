@@ -26,6 +26,8 @@
 	sellprice = 20
 	item_weight = 2 KILOGRAMS
 
+	armor_penetration = 20
+
 /obj/item/weapon/polearm/Initialize()
 	. = ..()
 	AddElement(/datum/element/walking_stick)
@@ -58,6 +60,8 @@
 	sharpness = IS_BLUNT
 	sellprice = 5
 	item_weight = 1 KILOGRAMS
+
+	armor_penetration = 0
 
 /obj/item/weapon/polearm/woodstaff/getonmobprop(tag)
 	. = ..()
@@ -475,6 +479,8 @@
 	melting_material = null
 	melt_amount = 0
 
+	armor_penetration = 0
+
 /obj/item/weapon/polearm/spear/trollbone/getonmobprop(tag)
 	. = ..()
 	if(tag)
@@ -733,6 +739,8 @@
 	sellprice = 20
 	item_weight = 3.5 KILOGRAMS
 
+	armor_penetration = 30
+
 /obj/item/weapon/polearm/halberd/bardiche/warcutter/getonmobprop(tag)
 	. = ..()
 	if(tag)
@@ -748,6 +756,8 @@
 	name = "bardiche"
 	desc = "A grand axe of northern design, renowned for easily chopping off limbs clean with brutal strength."
 	icon_state = "ancient_bardiche"
+
+	armor_penetration = 25
 
 /obj/item/weapon/polearm/halberd/bardiche/gani
 	name = "summer scythe"
@@ -769,6 +779,8 @@
 	smeltresult = /obj/item/ingot/steel_slag
 	melting_material = /datum/material/steel
 	item_weight = 3.5 KILOGRAMS
+
+	armor_penetration = 35
 
 /obj/item/weapon/polearm/halberd/bardiche/glaive
 	name = "steel glaive"
@@ -806,6 +818,8 @@
 	item_weight = 4 KILOGRAMS
 
 	weapon_special = /datum/special_intent/ground_smash
+
+	armor_penetration = 25
 
 /obj/item/weapon/polearm/eaglebeak/getonmobprop(tag)
 	. = ..()
@@ -924,6 +938,8 @@
 	melt_amount = 0
 	item_weight = 1.5 KILOGRAMS
 
+	armor_penetration = 5
+
 /obj/item/weapon/polearm/spear/trollbonespear
 	name = "troll-horn bone spear"
 	desc = "A spear made of bones, strengthed with an troll's horn."
@@ -945,6 +961,8 @@
 	smeltresult = null
 	melting_material = null
 	melt_amount = 0
+
+	armor_penetration = 10
 
 /obj/item/weapon/polearm/spear/naginata
 	name = "naginata"

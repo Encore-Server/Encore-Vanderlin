@@ -14,6 +14,8 @@
 
 	firing_effect_type = null
 
+	armor_penetration = 60
+
 /obj/item/ammo_casing/caseless/bolt/Initialize(mapload, ...)
 	. = ..()
 	AddElement(/datum/element/tipped_item, _max_reagents = 2, _dip_amount = 2, _attack_injects = FALSE)

@@ -15,6 +15,8 @@
 	grid_height = 96
 	item_weight = 1.2 KILOGRAMS
 
+	armor_penetration = 20
+
 /datum/intent/sword/cut/militia
 	penfactor = 10
 
@@ -47,6 +49,8 @@
 	grid_height = 96
 	grid_width = 32
 	item_weight = 800 GRAMS
+
+	armor_penetration = 15
 
 /obj/item/weapon/handclaw/steel
 	name = "Steel Mantis Claws"
