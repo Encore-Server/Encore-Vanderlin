@@ -9,6 +9,11 @@
 
 /datum/attribute_holder/sheet/job/species/lupian
 	raw_attribute_list = list(
+		/datum/attribute/skill/labor/butchering = 10
+	)
+
+/datum/attribute_holder/sheet/job/species/lupian/stats
+	raw_attribute_list = list(
 		STAT_PERCEPTION = 1,
 	)
 
@@ -22,11 +27,11 @@
 	Lupians are a humanoid race of canines typically resembling wolves, a proud species of hunters \
 	well-regarded for both their capability in battle and their community spirit. Lupians formed a \
 	friendship with Humanity early in the Goblet’s history and can commonly be found in Human communities.<br>\
-	+1 Perception."
+	+1 Perception, +1 Butchering, Darkvision, Strong Bite."
 
 	default_color = "FFFFFF"
 	species_traits = list(EYECOLOR, HAIR, FACEHAIR, LIPS, STUBBLE, OLDGREY, CUSCOLORS)
-	inherent_traits = list(TRAIT_NOMOBSWAP)
+	inherent_traits = list(TRAIT_NOMOBSWAP, TRAIT_DARKVISION, TRAIT_STRONGBITE)
 	use_skintones = TRUE
 
 	possible_ages = NORMAL_AGES_LIST
