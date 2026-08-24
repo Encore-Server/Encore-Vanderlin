@@ -26,7 +26,6 @@
 	as daemonic imps in nature, and are often killed whenever they are seen by civilized folk.<br> \
 	+2 Perception, +2 Intelligence, +2 Endurance, +2 Speed, -4 Strength, -4 Constitution, Tiny, Darkvision"
 
-	allowed_pronouns = PRONOUNS_LIST_IT_ONLY
 
 	statsheet_male = /datum/attribute_holder/sheet/job/species/formikrag
 
