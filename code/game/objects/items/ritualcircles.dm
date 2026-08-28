@@ -198,7 +198,7 @@
 
 /obj/structure/ritualcircle/death
 	name = "Rune of Death"
-	desc = "A Rue of Death. Looking at it makes you feel uncomfortable."
+	desc = "A Rune of Death. Looking at it makes you feel uncomfortable."
 	icon_state = "necra_chalky"
 	active_icon = "necra_active"
 	rune_key = RUNE_DEATH
@@ -240,10 +240,82 @@
 		"The name, the touch, the setting sun.",
 	)
 
+/obj/structure/ritualcircle/eora/proc/oblivion(mob/living/caster)
+	var/list/known = list()
+	for(var/mob/living/carbon/human/H in GLOB.player_list)
+		if(H == caster || H.stat == DEAD || !H.mind)
+			continue
+		if(!caster.mind.knows(H.mind))
+			continue
+		known[H.real_name] = H
+
+	if(!length(known))
+		to_chat(caster, span_warning("I know of nobody whose memories I can alter."))
+		return
+
+	var/pick = input(caster, "Whom shall I alter the memories of?", "Rite of Oblivion") as null | anything in known
+	var/mob/living/carbon/human/tgt = known[pick]
+
+	if(tgt == caster || tgt.stat == DEAD || !tgt.mind)
+		to_chat(caster, span_warning("No idea how you did it, but you picked the <b>wrong</b> person."))
+		return
+
+	var/list/memories = split_memories(tgt.mind)
+	if(!length(memories))
+		to_chat(caster, span_warning("[tgt.real_name]'s mind is an enigma."))
+		return
+
+	var/old_memory = input(caster, "Which memory do you choose?", "Rite of Oblivion") as null | anything in memories
+	if(!old_memory)
+		return
+
+	var/new_memory = input(caster, "Rewrite the memory.", "Rite of Oblivion", old_memory) as null | text
+	if(!new_memory)
+		return
+
+	if(alert(tgt, "Someone is trying to change your mind...\n\nOld Memory: [old_memory]\n\nNew Memory: [new_memory]", "Memory Intrusion", "Accept", "Reject") != "Accept")
+		to_chat(caster, span_warning("[tgt.real_name] rejects your memory."))
+		to_chat(tgt, span_warning("You keep your old memory."))
+		return
+
+	var/index = memories.Find(old_memory)
+	if(!index)
+		to_chat(caster, span_warning("You were too late... the memory faded."))
+		return
+
+	memories[index] = new_memory
+	tgt.mind.memory = null
+	for(var/entry in memories)
+		tgt.mind.store_memory(entry)
+
+	to_chat(tgt, span_green("You feel your mind twist. Old has become new."))
+	to_chat(caster, span_notice("[tgt.real_name] accepts the new memory."))
+	log_admin("[key_name(caster)] rewrote a memory on [key_name(tgt)] with the Rite of Oblivion.")
+
+/obj/structure/ritualcircle/eora/proc/split_memories(datum/mind/M)
+	var/mem = list()
+	if(!M?.memory)
+		return
+	for(var/entry in splittext(M.memory, "<BR>"))
+		entry = trimtext(entry)
+		if(entry)
+			mem += entry
+	return mem
+
 /obj/structure/ritualcircle/eora/perform_rite(mob/living/user, rite)
 	if(rite != "Rite of Oblivion")
 		return
 	if(!chant(user, chants))
 		return
-	//todo : get target's memories and alter them
+
+	if(!user.mind)
+		to_chat(user, "You.. don't have a mind to cast this spell with.")
+		finish_rite(user)
+		return
+
+	to_chat(user, span_cultsmall("You begin digging into the mind..."))
+	playsound(loc, 'sound/misc/deadbell.ogg', 100, FALSE, -1)
+	loc.visible_message(span_warning("There is an eerie feeling in the air..."))
+	oblivion(user)
 	finish_rite(user)
+	return
