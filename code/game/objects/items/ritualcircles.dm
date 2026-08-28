@@ -54,11 +54,12 @@
 
 /obj/structure/ritualcircle/attack_hand_secondary(mob/living/carbon/human/user)
 	user.visible_message(span_warning("[user] begins wiping away the rune"))
-	if(do_after(user, 1.5 SECONDS))
-		if(QDELETED(src))
-			return
-		playsound(loc, 'sound/foley/cloth_wipe (1).ogg', 100, TRUE)
-		qdel(src)
+	if(!do_after(user, 1.5 SECONDS))
+		return
+	if(QDELETED(src))
+		return
+	playsound(loc, 'sound/foley/cloth_wipe (1).ogg', 100, TRUE)
+	qdel(src)
 
 /obj/structure/ritualcircle/attack_hand(mob/living/user)
 	if(!can_invoke(user))
@@ -67,8 +68,7 @@
 	if(!rite)
 		return
 	to_chat(user, "I begin invoking [rite]")
-	if(do_after(user, 5 SECONDS, src))
-		perform_rite(user, rite)
+	perform_rite(user, rite)
 
 /obj/structure/ritualcircle/astrata
 	name = "Rune of the Sun"

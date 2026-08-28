@@ -1169,20 +1169,20 @@
 
 	var/list/phase_lines = list(
 		list(
-            "You hear a whisper at the back of your mind. What did she say?",
-            "Was that laughter, or the wind?",
-            "You feel eyes crawling over the back of your neck.",
-        ),
-        list(
-            "For a moment you look out from behind eyes that are not yours. You see nothing but shadows.",
-            "For a moment you see a gravestone. You are not sure if it's yours.",
-            "You hear a voice. You miss the words, but it is familiar.",
-        ),
-        list(
-            "You hear the chanting of a dirge.",
-            "You feel unclean. Your soul has started to itch.",
-            "Even if your pact goes unfulfilled, what happens to the one destined to take your place?",
-        ),
+			"You hear a whisper at the back of your mind. What did she say?",
+			"Was that laughter, or the wind?",
+			"You feel eyes crawling over the back of your neck.",
+		),
+		list(
+			"For a moment you look out from behind eyes that are not yours. You see nothing but shadows.",
+			"For a moment you see a gravestone. You are not sure if it's yours.",
+			"You hear a voice. You miss the words, but it is familiar.",
+		),
+		list(
+			"You hear the chanting of a dirge.",
+			"You feel unclean. Your soul has started to itch.",
+			"Even if your pact goes unfulfilled, what happens to the one destined to take your place?",
+		),
 	)
 
 /datum/status_effect/buff/undermaidenbargain/on_apply()
