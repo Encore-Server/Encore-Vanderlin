@@ -46,3 +46,14 @@
 	dreams = list(
 		"...you stare down at the party from the treetops... blinking, you stare at them from the sky... blinking, you stare at them from below... their attention drawn and quartered, you fire an arrow straight through the warrior's eye... he falls over, dead..."
 	)
+
+/datum/attribute/skill/magic/ritual
+	name = "Ritual Magic"
+	desc = "Represents your character's ability to perform ritual magic. The higher your skill in Ritual Magic, the more rituals you will have access to."
+	governing_attribute = STAT_INTELLIGENCE
+	default_attributes = list(
+		STAT_INTELLIGENCE = -8,
+	)
+	dreams = list(
+		"...the chalk lines form a marvelous shape... you hunch over the rune and mutter sweet words... the light is blinding..."
+	)

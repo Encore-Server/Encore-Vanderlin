@@ -446,3 +446,8 @@
 	timer = 10 MINUTES
 	stress_change = -5
 	desc = SPAN_GOD_ILIOPE("Oh frabjous dae, calooh callay! The Silver-Tongue's guffaw keeps my troubles at bay!")
+
+/datum/stress_event/pacified
+	timer = 30 MINUTES
+	stress_change = -5
+	desc = span_green("All my problems have washed away!")

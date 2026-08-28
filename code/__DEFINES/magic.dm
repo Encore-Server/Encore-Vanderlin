@@ -228,6 +228,13 @@ DEFINE_BITFIELD(spell_requirements, list(
 #define FORM_AIR "Aeromancy"
 #define FORM_WATER "Hydromancy"
 
+#define RUNE_SUN	"Rune of Sun"
+#define RUNE_MOON	"Rune of Moon"
+#define RUNE_BEASTS	"Rune of Beasts"
+#define RUNE_DEATH	"Rune of Death"
+#define RUNE_PLAGUE	"Rune of Plague"
+#define RUNE_LOVE	"Rune of Love"
+
 #define MASTERY_RANK_NOVICE 0
 #define MASTERY_RANK_ADEPT 2
 #define MASTERY_RANK_EXPERT 4
@@ -272,6 +279,33 @@ GLOBAL_LIST_INIT(all_forms, list(
 	FORM_DEATH,
 	FORM_AIR,
 	FORM_WATER,
+))
+
+GLOBAL_LIST_INIT(all_rituals, list(
+	RUNE_SUN = list(
+		"path" = /obj/structure/ritualcircle/astrata,
+		"level" = 3
+	),
+	RUNE_MOON = list(
+		"path" = /obj/structure/ritualcircle/noc,
+		"level" = 1
+	),
+	RUNE_BEAST = list(
+		"path" = /obj/structure/ritualcircle/dendor,
+		"level" = 2
+	),
+	RUNE_DEATH = list(
+		"path" = /obj/structure/ritualcircle/death,
+		"level" = 5
+	),
+	RUNE_PLAGUE = list(
+		"path" = /obj/structure/ritualcircle/pestra,
+		"level" = 3
+	),
+	RUNE_LOVE = list(
+		"path" = /obj/structure/ritualcircle/eora,
+		"level" = 5
+	),
 ))
 
 #define CHARGETIME_POKE 0.5 SECONDS // Staple poke spells
