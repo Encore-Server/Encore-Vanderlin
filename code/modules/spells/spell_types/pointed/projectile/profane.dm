@@ -1,6 +1,6 @@
 /datum/action/cooldown/spell/projectile/profane
 	name = "Profane"
-	desc = "Fire forth a splinter of unholy bone, tearing flesh and causing bleeding. If you hold pieces of bone in your other hand, you will coax a much stronger lance of bone into being."
+	desc = "Fire forth a splinter of unholy bone, tearing flesh and causing bleeding. If you hold pieces of bone in your other hand, you will coax a much stronger lance of bone into being. (Heretical)"
 	button_icon_state = "profane"
 	sound = 'sound/misc/stings/generic.ogg'
 	charge_sound = 'sound/magic/vlightning.ogg'
@@ -11,17 +11,21 @@
 	invocation = "Oblino!"
 	invocation_type = INVOCATION_SHOUT
 
-	attunements = list(
-		/datum/attunement/death = 0.3,
-		/datum/attunement/blood = 0.3,
-	)
-
 	charge_drain = 1
 	charge_time = 2 SECONDS
 	charge_slowdown = 0.3
 	cooldown_time = 10 SECONDS
 	spell_cost = 35
 	projectile_type = /obj/projectile/magic/profane
+
+/datum/action/cooldown/spell/projectile/profane/spell
+	name = "Profane Rupture"
+
+	spell_type = SPELL_MANA
+	antimagic_flags = MAGIC_RESISTANCE_MIND
+
+	required_form = FORM_DEATH
+	required_technique = TECHNIQUE_DESTRUCTION
 
 /datum/action/cooldown/spell/projectile/profane/before_cast(mob/living/cast_on)
 	. = ..()

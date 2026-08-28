@@ -1,6 +1,6 @@
 /*ALL DNA, SPECIES, AND GENETICS-RELATED DEFINES GO HERE*/
 
-#define CHECK_DNA_AND_SPECIES(C) if((!(C.dna)) || (!(C.dna.species))) return
+#define CHECK_DNA_AND_SPECIES(C) if(!(C.dna?.species)) return
 
 #define UI_CHANGED "ui changed"
 #define UE_CHANGED "ue changed"
@@ -63,7 +63,7 @@
 #define NOSTOMACH		12
 #define NO_DNA_COPY     13
 // #define DRINKSBLOOD	14 // Deprecated, use TRAIT_BLOODDRINKER
-/// Use this if you want to change the race's color without the player being able to pick their own color. AKA special color shifting
+/// Custom colors for species
 #define CUSCOLORS		15 //replacing DYNCOLORS with CUSCOLORS since the former isn't used anyways
 #define AGENDER			16
 /// Do not draw eyes or eyeless overlay

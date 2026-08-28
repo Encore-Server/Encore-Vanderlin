@@ -1,16 +1,14 @@
 /datum/action/cooldown/spell/projectile/blood_bolt
 	name = "Blood Bolt"
-	desc = "Launch a bolt of blood infused with lightning."
+	desc = "Launch a bolt of blood infused with lightning. (Heretical)"
 	button_icon_state = "bloodlightning"
 	sound = 'sound/magic/vlightning.ogg'
 
 	cast_range = 8
-	point_cost = 6
 	associated_skill = /datum/attribute/skill/magic/blood
-	attunements = list(
-		/datum/attunement/electric = 0.3,
-		/datum/attunement/blood = 0.7,
-	)
+
+	required_form = FORM_WATER
+	required_technique = TECHNIQUE_DESTRUCTION
 
 	invocation = "Blood Bolt!!"
 	invocation_type = INVOCATION_SHOUT

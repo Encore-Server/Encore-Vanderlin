@@ -1,11 +1,13 @@
 /datum/action/cooldown/spell/gravemark
 	name = "Gravemark"
-	desc = "Adds or removes a target from the list of allies exempt from your undead's aggression."
+	desc = "Adds or removes a target from the list of allies exempt from your undead's aggression. (Heretical)"
 	button_icon_state = "raiseskele"
 	cooldown_time = 25 SECONDS
 	spell_cost = 25
 	cast_range = 4
 	charge_required = FALSE
+
+	required_form = FORM_DEATH
 
 /datum/action/cooldown/spell/gravemark/is_valid_target(atom/cast_on)
 	. = ..()

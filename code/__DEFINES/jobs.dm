@@ -61,6 +61,7 @@
 #define FACTION_BUMS		"Bums"
 #define FACTION_DECEIVERS	"Deceivers"
 #define FACTION_VIKINGS     "Vikings"
+#define FACTION_INQUISITION	"Inquisition"
 
 #define NOBLEMEN		(1<<0)
 #define GARRISON		(1<<1)
@@ -95,6 +96,7 @@
 #define JDO_PHYSICIAN 3.7
 
 #define JDO_MAGICIAN 4
+#define JDO_TOWER_MAGE 4.1
 #define JDO_WAPP 5
 
 #define JDO_APOTHECARY 6
@@ -194,7 +196,6 @@
 #define JOB_PRINCE_FEM "Princess"
 #define JOB_GUARD_CAPTAIN "Captain"
 #define JOB_STEWARD "Steward"
-#define JOB_COURT_MAGE "Court Magician"
 #define JOB_ARCHIVIST "Archivist"
 #define JOB_COURT_PHYSICIAN "Court Physician"
 #define JOB_MINOR_NOBLE "Noble"
@@ -219,6 +220,7 @@
 
 
 #define JOB_TOWNER "Towner"
+#define JOB_TOWER_MAGE "Tower Magician"
 #define JOB_SOILSON "Soilson"
 #define JOB_MINER "Miner"
 #define JOB_COOK "Cook"
@@ -240,6 +242,7 @@
 #define JOB_CLINIC_APP "Clinic Apprentice"
 
 
+#define JOB_COURT_MAGE "Tower Archmage"
 #define JOB_INNKEEP "Innkeep"
 #define JOB_BLACKSMITH "Blacksmith"
 #define JOB_TAILOR "Tailor"
@@ -283,3 +286,5 @@
 #define JOB_LUMBERJACK "Lumberjack"
 #define JOB_CHEESEMAKER "Cheesemaker"
 #define JOB_BUTCHER "Butcher"
+
+#define ALT_TITLE_FLAG_PATREON_LOCKED (1<<0)
