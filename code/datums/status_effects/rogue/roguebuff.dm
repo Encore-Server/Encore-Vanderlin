@@ -1075,7 +1075,7 @@
 	remove_light(M)
 
 /datum/status_effect/buff/guidinglight/on_remove()
-	..()
+	. = ..()
 	to_chat(owner, span_notice("The miraculous light surrounding me has fled..."))
 	owner.remove_filter(BLESSINGOFSUN_FILTER)
 	remove_light(owner)
@@ -1115,7 +1115,7 @@
 
 /datum/status_effect/buff/flylordstriage
 	id = "flylordstriage"
-	alert_type = /atom/movable/screen/alert/status_effect/buff/healing
+	alert_type = /atom/movable/screen/alert/status_effect/buff/flylordstriage
 	duration = 20 SECONDS
 	var/healing_on_tick = 40
 
@@ -1302,4 +1302,5 @@
 /datum/status_effect/buff/pacify/on_remove()
 	. = ..()
 	to_chat(owner, span_warning("My mind is my own again, no longer awash with foggy peace!"))
+	owner.remove_stress(/datum/stress_event/pacified)
 	REMOVE_TRAIT(owner, TRAIT_PACIFISM, TRAIT_GENERIC)
