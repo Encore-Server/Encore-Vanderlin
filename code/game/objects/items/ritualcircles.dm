@@ -29,8 +29,11 @@
 		to_chat(user, span_smallred("I have performed enough rituals for the day... I must rest before communing more."))
 		return FALSE
 
+	var/list/rune_data = GLOB.all_rituals[rune_key]
+	if(!rune_data)
+		return FALSE
 	var/user_skill = GET_MOB_SKILL_VALUE(user, /datum/attribute/skill/magic/ritual) || 0
-	var/req_skill = GLOB.all_rituals[rune_key]["level"] || 0
+	var/req_skill = rune_data["level"] || 0
 	if(user_skill < req_skill)
 		to_chat(user, span_smallred("I lack the knowledge to invoke this rite."))
 		return FALSE
@@ -52,16 +55,20 @@
 /obj/structure/ritualcircle/attack_hand_secondary(mob/living/carbon/human/user)
 	user.visible_message(span_warning("[user] begins wiping away the rune"))
 	if(do_after(user, 1.5 SECONDS))
+		if(QDELETED(src))
+			return
 		playsound(loc, 'sound/foley/cloth_wipe (1).ogg', 100, TRUE)
 		qdel(src)
 
 /obj/structure/ritualcircle/attack_hand(mob/living/user)
 	if(!can_invoke(user))
 		return
-	var/rite = input(user, "Rites", name) as null | anything in special_rites
+	var/rite = (length(special_rites) == 1) ? special_rites[1] : input(user, "Rites", name) as null | anything in special_rites
 	if(!rite)
 		return
-	perform_rite(user, rite)
+	to_chat(user, "I begin invoking [rite]")
+	if(do_after(user, 5 SECONDS, src))
+		perform_rite(user, rite)
 
 /obj/structure/ritualcircle/astrata
 	name = "Rune of the Sun"
@@ -98,15 +105,10 @@
 	guidinglight() // Actually starts the proc for applying the buff
 	finish_rite(user)
 
-/obj/structure/ritualcircle/astrata/attack_hand(mob/living/user, rite)
-	. = ..()
-	if(!.)
-		return
-	perform_rite(user, rite)
-
 /obj/structure/ritualcircle/noc
 	name = "Rune of the Moon"
 	icon_state = "noc_chalky"
+	active_icon = "noc_active"
 	desc = "A Holy Rune of Noc"
 	special_rites = list("Moonlight Dance") // list for more to be added later
 	rune_key = RUNE_MOON
@@ -131,16 +133,11 @@
 	moonlightdance()
 	finish_rite(user)
 
-/obj/structure/ritualcircle/noc/attack_hand(mob/living/user, rite)
-	. = ..()
-	if(!.)
-		return
-	perform_rite(user, rite)
-
 /obj/structure/ritualcircle/pestra
 	name = "Rune of Plague"
 	desc = "A Rune of Disease. Looking at it makes you feel sick."
 	icon_state = "pestra_chalky"
+	active_icon = "pestra_active"
 	special_rites = list("Flylord's Triage")
 	rune_key = RUNE_PLAGUE
 	chants = list(
@@ -172,16 +169,11 @@
 	flylords_triage()
 	finish_rite(user)
 
-/obj/structure/ritualcircle/pestra/attack_hand(mob/living/user, rite)
-	. = ..()
-	if(!.)
-		return
-	perform_rite(user, rite)
-
 /obj/structure/ritualcircle/dendor
 	name = "Rune of Beasts"
 	desc = "A Holy Rune of Dendor"
 	icon_state = "dendor_chalky"
+	active_icon = "dendor_active"
 	special_rites = list("Rite of the Lesser Wolf")
 	rune_key = RUNE_BEAST
 	chants = list(
@@ -204,16 +196,11 @@
 	lesser_wolf()
 	finish_rite(user)
 
-/obj/structure/ritualcircle/dendor/attack_hand(mob/living/user, rite)
-	. = ..()
-	if(!.)
-		return
-	perform_rite(user, rite)
-
 /obj/structure/ritualcircle/death
 	name = "Rune of Death"
 	desc = "A Rue of Death. Looking at it makes you feel uncomfortable."
 	icon_state = "necra_chalky"
+	active_icon = "necra_active"
 	rune_key = RUNE_DEATH
 	special_rites = list("Undermaiden's Bargain")
 	chants = list(
@@ -238,16 +225,11 @@
 	undermaiden_bargain()
 	finish_rite(user)
 
-/obj/structure/ritualcircle/death/attack_hand(mob/living/user, rite)
-	. = ..()
-	if(!.)
-		return
-	perform_rite(user, rite)
-
 /obj/structure/ritualcircle/eora
 	name = "Rune of Love"
 	desc = "A Holy Rune of Eora"
 	icon_state = "eora_chalky"
+	active_icon = "eora_active"
 	rune_key = RUNE_LOVE
 	special_rites = list("Rite of Oblivion")
 	chants = list(
@@ -265,9 +247,3 @@
 		return
 	//todo : get target's memories and alter them
 	finish_rite(user)
-
-/obj/structure/ritualcircle/eora/attack_hand(mob/living/user, rite)
-	. = ..()
-	if(!.)
-		return
-	perform_rite(user, rite)
