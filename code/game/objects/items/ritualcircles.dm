@@ -254,6 +254,8 @@
 		return
 
 	var/pick = input(caster, "Whom shall I alter the memories of?", "Rite of Oblivion") as null | anything in known
+	if(!pick)
+		return
 	var/mob/living/carbon/human/tgt = known[pick]
 
 	if(tgt == caster || tgt.stat == DEAD || !tgt.mind)
@@ -309,7 +311,7 @@
 		return
 
 	if(!user.mind)
-		to_chat(user, "You.. don't have a mind to cast this spell with.")
+		to_chat(user, span_warning("You.. don't have a mind to cast this spell with."))
 		finish_rite(user)
 		return
 
