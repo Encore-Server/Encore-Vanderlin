@@ -12,6 +12,8 @@
 		return
 
 	var/choose_rune = input(user, "Which rune shall I inscribe?", src) as null|anything in GLOB.all_rituals
+	if(!choose_rune)
+		return
 	var/rune_level = GLOB.all_rituals[choose_rune]["level"]
 	var/user_level = GET_MOB_SKILL_VALUE(user, /datum/attribute/skill/magic/ritual) || 0
 	if(rune_level > user_level)
@@ -31,7 +33,7 @@
 			if(do_after(user, 30, src))
 				playsound(src, 'sound/foley/scribble.ogg', 40, TRUE)
 				new /obj/structure/ritualcircle/noc(step_turf)
-		if(RUNE_BEASTS)
+		if(RUNE_BEAST)
 			to_chat(user,span_cultsmall("I begin inscribing the rune of feral Madness...a way to transform others into beasts."))
 			if(do_after(user, 30, src))
 				playsound(src, 'sound/foley/scribble.ogg', 40, TRUE)

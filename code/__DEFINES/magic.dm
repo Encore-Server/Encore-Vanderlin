@@ -230,7 +230,7 @@ DEFINE_BITFIELD(spell_requirements, list(
 
 #define RUNE_SUN	"Rune of Sun"
 #define RUNE_MOON	"Rune of Moon"
-#define RUNE_BEASTS	"Rune of Beasts"
+#define RUNE_BEAST	"Rune of Beasts"
 #define RUNE_DEATH	"Rune of Death"
 #define RUNE_PLAGUE	"Rune of Plague"
 #define RUNE_LOVE	"Rune of Love"

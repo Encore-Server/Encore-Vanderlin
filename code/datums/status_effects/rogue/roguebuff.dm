@@ -1075,6 +1075,7 @@
 	remove_light(M)
 
 /datum/status_effect/buff/guidinglight/on_remove()
+	..()
 	to_chat(owner, span_notice("The miraculous light surrounding me has fled..."))
 	owner.remove_filter(BLESSINGOFSUN_FILTER)
 	remove_light(owner)
@@ -1113,7 +1114,7 @@
 	icon_state = "buff"
 
 /datum/status_effect/buff/flylordstriage
-	id = "healing"
+	id = "flylordstriage"
 	alert_type = /atom/movable/screen/alert/status_effect/buff/healing
 	duration = 20 SECONDS
 	var/healing_on_tick = 40
@@ -1137,7 +1138,7 @@
 	owner.adjustCloneLoss(-healing_on_tick, 0)
 
 /obj/effect/temp_visual/flies
-	name = "Flylord's triage"
+	name = "Flylord's Triage"
 	icon_state = "flies"
 	duration = 15
 	plane = GAME_PLANE_UPPER
@@ -1147,6 +1148,7 @@
 
 
 /datum/status_effect/buff/flylordstriage/on_remove()
+	..()
 	to_chat(owner,span_userdanger("It's finally over..."))
 
 
@@ -1279,7 +1281,7 @@
 	. = ..()
 	to_chat(owner, span_warning("I feel nature's blessing leave my body..."))
 	REMOVE_TRAIT(owner, TRAIT_LONGSTRIDER, TRAIT_GENERIC)
-	ADD_TRAIT(owner, TRAIT_STRONGBITE, TRAIT_GENERIC)
+	REMOVE_TRAIT(owner, TRAIT_STRONGBITE, TRAIT_GENERIC)
 
 /atom/movable/screen/alert/status_effect/buff/pacify
 	name = "Blessing of Pacification"
@@ -1301,30 +1303,3 @@
 	. = ..()
 	to_chat(owner, span_warning("My mind is my own again, no longer awash with foggy peace!"))
 	REMOVE_TRAIT(owner, TRAIT_PACIFISM, TRAIT_GENERIC)
-
-/datum/status_effect/buff/mirroredsouls
-	id = "mirroredsouls"
-	duration = 20 MINUTES
-	status_type = STATUS_EFFECT_REFRESH
-	var/mob/living/linked_mob
-
-/datum/status_effect/buff/mirroredsouls/on_creation(mob/living/owner, mob/living/other)
-	linked_mob = other
-
-/datum/status_effect/buff/mirroredsouls/on_remove()
-	. = ..()
-	if (!linked_mob || !owner || !ismob(linked_mob) || !ismob(owner))
-		return
-
-	to_chat(owner, span_warning("Your reflection breaks. You remember yourself."))
-	to_chat(linked_mob, span_warning("The mask fades. The name is yours again."))
-
-	// Swap back names
-	var/temp_name = owner.real_name
-	owner.real_name = linked_mob.real_name
-	linked_mob.real_name = temp_name
-
-	// Swap back appearance
-	var/temp_appearance = owner.appearance
-	owner.appearance = linked_mob.appearance
-	linked_mob.appearance = temp_appearance

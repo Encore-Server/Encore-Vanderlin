@@ -10,6 +10,11 @@
 
 	var/special_rites = list()
 
+/obj/structure/ritualcircle/proc/reset_icon()
+    if(QDELETED(src))
+        return
+    icon_state = initial(icon_state)
+
 /obj/structure/ritualcircle/attack_hand_secondary(mob/living/carbon/human/user)
 	user.visible_message(span_warning("[user] begins wiping away the rune"))
 	if(do_after(user, 15))
@@ -31,7 +36,7 @@
 	desc = "A Sun Rune. Reading it leaves you feeling warm."
 	special_rites = list("Guiding Light")
 
-/obj/structure/ritualcircle/astrata/proc/guidinglight(src)
+/obj/structure/ritualcircle/astrata/proc/guidinglight()
 	var/ritualtargets = view(7, loc)
 	for(var/mob/living/carbon/human/target in ritualtargets)
 		target.apply_status_effect(/datum/status_effect/buff/guidinglight)
@@ -39,9 +44,10 @@
 		playsound(target, 'sound/magic/holyshield.ogg', 80, FALSE, -1)
 
 /obj/structure/ritualcircle/astrata/attack_hand(mob/living/user)
-	. = ..()
+	if(!..())
+		return
 
-	var/user_skill = GET_MOB_SKILL_VALUE(user, /datum/attribute/skill/magic/arcane) || 0
+	var/user_skill = GET_MOB_SKILL_VALUE(user, /datum/attribute/skill/magic/ritual) || 0
 	var/req_skill = GLOB.all_rituals[RUNE_SUN]["level"]
 
 	if(user_skill < req_skill)
@@ -67,8 +73,8 @@
 						user.emote("firescream")
 						guidinglight(src) // Actually starts the proc for applying the buff
 						user.apply_status_effect(/datum/status_effect/debuff/ritesexpended)
-						spawn(120)
-							icon_state = "astrata_chalky"
+						addtimer(CALLBACK(src, PROC_REF(reset_icon)), 12 SECONDS)
+						icon_state = "astrata_chalky"
 
 
 /obj/structure/ritualcircle/noc
@@ -83,9 +89,10 @@
 		target.apply_status_effect(/datum/status_effect/buff/moonlightdance)
 
 /obj/structure/ritualcircle/noc/attack_hand(mob/living/user)
-	. = ..()
+	if(!..())
+		return
 
-	var/user_skill = GET_MOB_SKILL_VALUE(user, /datum/attribute/skill/magic/arcane) || 0
+	var/user_skill = GET_MOB_SKILL_VALUE(user, /datum/attribute/skill/magic/ritual) || 0
 	var/req_skill = GLOB.all_rituals[RUNE_MOON]["level"]
 
 	if(user_skill < req_skill)
@@ -124,9 +131,10 @@
 		target.apply_status_effect(/datum/status_effect/buff/flylordstriage)
 
 /obj/structure/ritualcircle/pestra/attack_hand(mob/living/user)
-	. = ..()
+	if(!..())
+		return
 
-	var/user_skill = GET_MOB_SKILL_VALUE(user, /datum/attribute/skill/magic/arcane) || 0
+	var/user_skill = GET_MOB_SKILL_VALUE(user, /datum/attribute/skill/magic/ritual) || 0
 	var/req_skill = GLOB.all_rituals[RUNE_PLAGUE]["level"]
 
 	if(user_skill < req_skill)
@@ -151,8 +159,8 @@
 							playsound(loc, 'sound/misc/fliesloop.ogg', 100, FALSE, -1)
 							flylords_triage(src)
 							user.apply_status_effect(/datum/status_effect/debuff/ritesexpended)
-							spawn(120)
-								icon_state = "pestra_chalky"
+							addtimer(CALLBACK(src, PROC_REF(reset_icon)), 12 SECONDS)
+							icon_state = "pestra_chalky"
 
 /obj/structure/ritualcircle/dendor
 	name = "Rune of Beasts"
@@ -166,10 +174,11 @@
 		target.apply_status_effect(/datum/status_effect/buff/lesserwolf)
 
 /obj/structure/ritualcircle/dendor/attack_hand(mob/living/user)
-	..()
+	if(!..())
+		return
 
-	var/user_skill = GET_MOB_SKILL_VALUE(user, /datum/attribute/skill/magic/arcane) || 0
-	var/req_skill = GLOB.all_rituals[RUNE_BEASTS]["level"]
+	var/user_skill = GET_MOB_SKILL_VALUE(user, /datum/attribute/skill/magic/ritual) || 0
+	var/req_skill = GLOB.all_rituals[RUNE_BEAST]["level"]
 
 	if(user_skill < req_skill)
 		to_chat(user, span_smallred("I lack the knowledge to invoke this rite."))
@@ -193,8 +202,8 @@
 							playsound(loc, 'sound/vo/mobs/wwolf/howl (2).ogg', 100, FALSE, -1)
 							lesser_wolf(src)
 							user.apply_status_effect(/datum/status_effect/debuff/ritesexpended)
-							spawn(120)
-								icon_state = "dendor_chalky"
+							addtimer(CALLBACK(src, PROC_REF(reset_icon)), 12 SECONDS)
+							icon_state = "dendor_chalky"
 
 /obj/structure/ritualcircle/death
 	name = "Rune of Death"
@@ -208,9 +217,10 @@
 		target.apply_status_effect(/datum/status_effect/buff/undermaidenbargain)
 
 /obj/structure/ritualcircle/death/attack_hand(mob/living/user)
-	. = ..()
+	if(!..())
+		return
 
-	var/user_skill = GET_MOB_SKILL_VALUE(user, /datum/attribute/skill/magic/arcane) || 0
+	var/user_skill = GET_MOB_SKILL_VALUE(user, /datum/attribute/skill/magic/ritual) || 0
 	var/req_skill = GLOB.all_rituals[RUNE_DEATH]["level"]
 
 	if(user_skill < req_skill)
@@ -246,8 +256,8 @@
 							undermaiden_bargain(src)
 							user.apply_status_effect(/datum/status_effect/debuff/ritesexpended)
 
-							spawn(120)
-								icon_state = "necra_chalky"
+							addtimer(CALLBACK(src, PROC_REF(reset_icon)), 12 SECONDS)
+							icon_state = "necra_chalky"
 
 /obj/structure/ritualcircle/eora
     name = "Rune of Love"
@@ -282,9 +292,10 @@
             to_chat(user, span_warning("[target.real_name] rejected your memory about '[emotion_to_change]'."))
 
 /obj/structure/ritualcircle/eora/attack_hand(mob/living/user)
-	. = ..()
+	if(!..())
+		return
 
-	var/user_skill = GET_MOB_SKILL_VALUE(user, /datum/attribute/skill/magic/arcane) || 0
+	var/user_skill = GET_MOB_SKILL_VALUE(user, /datum/attribute/skill/magic/ritual) || 0
 	var/req_skill = GLOB.all_rituals[RUNE_LOVE]["level"]
 
 	if(user_skill < req_skill)
@@ -304,8 +315,8 @@
 							icon_state = "eora_active"
 							pacify(src)  // Apply Pacify Effect
 							user.apply_status_effect(/datum/status_effect/debuff/ritesexpended)
-							spawn(120)
-								icon_state = "eora_chalky"
+							addtimer(CALLBACK(src, PROC_REF(reset_icon)), 12 SECONDS)
+							icon_state = "eora_chalky"
 
 		if ("Rite of Oblivion")
 			loc.visible_message(span_warning("[user]'s eyes roll back as they begin to chant, the air thickening around them."))
@@ -352,7 +363,7 @@
 					to_chat(target, span_userdanger("Her touch slices deep!"))
 
 				if (do_after(user, 20))
-					to_chat("[user] begins to speak faster, their voice tinged with power...")
+					user.visible_message("[user] begins to speak faster, their voice tinged with power...")
 					if (do_after(user, 40))
 						user.say("With threads unseen, I begin to weave...")
 						if (do_after(user, 50))
@@ -374,5 +385,5 @@
 						playsound(loc, 'sound/misc/bell.ogg', 80, FALSE, -1)
 
 						rite_of_oblivion(src, user, emotion_to_change, memory_suggestion)
-						spawn(120)
-							icon_state = "eora_chalky"
+						addtimer(CALLBACK(src, PROC_REF(reset_icon)), 12 SECONDS)
+						icon_state = "eora_chalky"
