@@ -51,14 +51,17 @@
 
 /obj/structure/ritualcircle/attack_hand_secondary(mob/living/carbon/human/user)
 	user.visible_message(span_warning("[user] begins wiping away the rune"))
-	if(do_after(user, 15))
+	if(do_after(user, 1.5 SECONDS))
 		playsound(loc, 'sound/foley/cloth_wipe (1).ogg', 100, TRUE)
 		qdel(src)
 
 /obj/structure/ritualcircle/attack_hand(mob/living/user)
 	if(!can_invoke(user))
 		return
-	return TRUE
+	var/rite = input(user, "Rites", name) as null | anything in special_rites
+	if(!rite)
+		return
+	perform_rite(user, rite)
 
 /obj/structure/ritualcircle/astrata
 	name = "Rune of the Sun"
@@ -95,15 +98,10 @@
 	guidinglight() // Actually starts the proc for applying the buff
 	finish_rite(user)
 
-/obj/structure/ritualcircle/astrata/attack_hand(mob/living/user)
+/obj/structure/ritualcircle/astrata/attack_hand(mob/living/user, rite)
 	. = ..()
 	if(!.)
 		return
-
-	var/rite = input(user, "Rites", name) as null | anything in special_rites
-	if(!rite)
-		return
-
 	perform_rite(user, rite)
 
 /obj/structure/ritualcircle/noc
@@ -111,6 +109,7 @@
 	icon_state = "noc_chalky"
 	desc = "A Holy Rune of Noc"
 	special_rites = list("Moonlight Dance") // list for more to be added later
+	rune_key = RUNE_MOON
 	chants = list(
 		"I beseech the he-form of the Twinned God!!",
 		"To bring Wisdom to a world of naught!!",
@@ -132,15 +131,10 @@
 	moonlightdance()
 	finish_rite(user)
 
-/obj/structure/ritualcircle/noc/attack_hand(mob/living/user)
+/obj/structure/ritualcircle/noc/attack_hand(mob/living/user, rite)
 	. = ..()
 	if(!.)
 		return
-
-	var/rite = input(user, "Rites", name) as null | anything in special_rites
-	if(!rite)
-		return
-
 	perform_rite(user, rite)
 
 /obj/structure/ritualcircle/pestra
@@ -148,6 +142,7 @@
 	desc = "A Rune of Disease. Looking at it makes you feel sick."
 	icon_state = "pestra_chalky"
 	special_rites = list("Flylord's Triage")
+	rune_key = RUNE_PLAGUE
 	chants = list(
 		"O Queen of Blight, whose breath is plague,",
 		"Whose kiss is rot, whose will is vague.",
@@ -177,15 +172,10 @@
 	flylords_triage()
 	finish_rite(user)
 
-/obj/structure/ritualcircle/pestra/attack_hand(mob/living/user)
+/obj/structure/ritualcircle/pestra/attack_hand(mob/living/user, rite)
 	. = ..()
 	if(!.)
 		return
-
-	var/rite = input(user, "Rites", name) as null | anything in special_rites
-	if(!rite)
-		return
-
 	perform_rite(user, rite)
 
 /obj/structure/ritualcircle/dendor
@@ -193,10 +183,10 @@
 	desc = "A Holy Rune of Dendor"
 	icon_state = "dendor_chalky"
 	special_rites = list("Rite of the Lesser Wolf")
+	rune_key = RUNE_BEAST
 	chants = list(
 		"Beast brothers, answer my call!",
 		"All of you, strong, tough, or small!",
-		"Snapping and snarling at the rune. Drool runs down one's lip..."
 	)
 
 /obj/structure/ritualcircle/dendor/proc/lesser_wolf()
@@ -214,28 +204,22 @@
 	lesser_wolf()
 	finish_rite(user)
 
-/obj/structure/ritualcircle/dendor/attack_hand(mob/living/user)
+/obj/structure/ritualcircle/dendor/attack_hand(mob/living/user, rite)
 	. = ..()
 	if(!.)
 		return
-
-	var/rite = input(user, "Rites", name) as null | anything in special_rites
-	if(!rite)
-		return
-
 	perform_rite(user, rite)
 
 /obj/structure/ritualcircle/death
 	name = "Rune of Death"
 	desc = "A Rue of Death. Looking at it makes you feel uncomfortable."
 	icon_state = "necra_chalky"
+	rune_key = RUNE_DEATH
 	special_rites = list("Undermaiden's Bargain")
 	chants = list(
-		"They sway before the rune, they open their mouth, though no words come out...",
-		"They silently weep, yet their tears do not flow...",
-		"They shudder, the scent of dirt filling the air.",
-		"Their eyes roll back into their head. Was this a good idea?",
-		"Forgive me, the bargain is intoned!",
+		"Placeholder chant!",
+		"Placeholder chant!",
+		"Placeholder chant!",
 	)
 
 /obj/structure/ritualcircle/death/proc/undermaiden_bargain()
@@ -254,21 +238,17 @@
 	undermaiden_bargain()
 	finish_rite(user)
 
-/obj/structure/ritualcircle/death/attack_hand(mob/living/user)
+/obj/structure/ritualcircle/death/attack_hand(mob/living/user, rite)
 	. = ..()
 	if(!.)
 		return
-
-	var/rite = input(user, "Rites", name) as null | anything in special_rites
-	if(!rite)
-		return
-
 	perform_rite(user, rite)
 
 /obj/structure/ritualcircle/eora
 	name = "Rune of Love"
 	desc = "A Holy Rune of Eora"
 	icon_state = "eora_chalky"
+	rune_key = RUNE_LOVE
 	special_rites = list("Rite of Oblivion")
 	chants = list(
 		"Slip through cracks where time won't tread,",
@@ -278,26 +258,6 @@
 		"The name, the touch, the setting sun.",
 	)
 
-
-/obj/structure/ritualcircle/eora/proc/rite_of_oblivion(mob/living/user, emotion_to_change, memory_suggestion)
-	var/ritualtargets = view(0, loc)
-
-	for(var/mob/living/carbon/human/target in ritualtargets)
-		loc.visible_message(span_warning("[target] seems to fade from existence, their mind clearing of all burdens..."))
-		target.visible_message(span_blue("You feel an eerie calm... Something stirs—a thought not your own."))
-
-		// Ask the target if they accept the memory
-		var/choice = input(target, "A foreign memory whispers into your thoughts. It seeks to implant the memory of '[memory_suggestion]' by focusing on your '[emotion_to_change]''. Do you accept it? The closer your memory and emotions align, the more difficult it is to fight!", "Memory Intrusion") in list("Accept", "Reject")
-
-		if (choice == "Accept")
-			to_chat(target, span_green("You embrace the feeling... Something new has taken root within."))
-			to_chat(user, span_notice("[target.real_name] accepted your memory about '[memory_suggestion]'."))
-
-
-		else
-			to_chat(target, span_warning("You shudder and push the thought away—it wasn’t yours."))
-			to_chat(user, span_warning("[target.real_name] rejected your memory about '[emotion_to_change]'."))
-
 /obj/structure/ritualcircle/eora/perform_rite(mob/living/user, rite)
 	if(rite != "Rite of Oblivion")
 		return
@@ -306,13 +266,8 @@
 	//todo : get target's memories and alter them
 	finish_rite(user)
 
-/obj/structure/ritualcircle/eora/attack_hand(mob/living/user)
+/obj/structure/ritualcircle/eora/attack_hand(mob/living/user, rite)
 	. = ..()
 	if(!.)
 		return
-
-	var/rite = input(user, "Rites", name) as null | anything in special_rites
-	if(!rite)
-		return
-
 	perform_rite(user, rite)
