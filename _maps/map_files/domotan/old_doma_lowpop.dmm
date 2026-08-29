@@ -155,7 +155,8 @@
 /obj/structure/fluff/signage{
 	pixel_y = 22;
 	name = "MAGE TOWER - EAST";
-	pixel_x = -6
+	pixel_x = -6;
+	density = 0
 	},
 /turf/open/floor/cobblerock,
 /area/outdoors/exposed)
@@ -8243,6 +8244,14 @@
 	},
 /turf/open/floor/ruinedwood,
 /area/outdoors/town/plaza)
+"ftD" = (
+/obj/structure/curtain/bounty,
+/obj/structure/stairs{
+	dir = 8
+	},
+/obj/structure/fake_machine/scomm,
+/turf/open/floor/ruinedwood,
+/area/indoors/town/clinic_large)
 "ftG" = (
 /obj/effect/decal/cobbleedge{
 	dir = 10;
@@ -8430,7 +8439,7 @@
 /turf/open/floor/blocks/green,
 /area/under/town/sewer)
 "fAL" = (
-/obj/structure/gate/bars{
+/obj/structure/gate/bars/preopen{
 	redstone_id = "keepgatenorth"
 	},
 /turf/open/floor/cobblerock,
@@ -8772,7 +8781,8 @@
 	name = "CLINIC - WEST";
 	dir = 1;
 	pixel_y = 22;
-	pixel_x = 4
+	pixel_x = 4;
+	density = 0
 	},
 /turf/open/floor/cobblerock,
 /area/indoors/town/keep)
@@ -12822,7 +12832,8 @@
 /obj/structure/fluff/signage{
 	pixel_y = 26;
 	name = "MAGE TOWER - EAST";
-	pixel_x = 2
+	pixel_x = 2;
+	density = 0
 	},
 /turf/open/floor/wood,
 /area/outdoors/town)
@@ -18364,6 +18375,10 @@
 /area/indoors/town/church/inquisition)
 "lQZ" = (
 /obj/structure/table/optable,
+/obj/machinery/light/fueled/wallfire/candle/lamp{
+	pixel_y = 0;
+	pixel_x = -32
+	},
 /turf/open/floor/greenstone,
 /area/indoors/town/clinic_large)
 "lRr" = (
@@ -25547,7 +25562,10 @@
 /area/indoors/town/tavern)
 "qsC" = (
 /obj/structure/table/optable,
-/obj/structure/fake_machine/scomm/l,
+/obj/machinery/light/fueled/wallfire/candle/lamp{
+	pixel_y = 0;
+	pixel_x = -32
+	},
 /turf/open/floor/ruinedwood,
 /area/indoors/town/clinic_large)
 "qte" = (
@@ -25962,7 +25980,8 @@
 	name = "CLINIC - WEST";
 	dir = 1;
 	pixel_y = 26;
-	pixel_x = -6
+	pixel_x = -6;
+	density = 0
 	},
 /turf/open/floor/wood,
 /area/outdoors/town)
@@ -75101,7 +75120,7 @@ eeg
 oOc
 oOc
 oOc
-qkU
+ftD
 qkU
 oOc
 tYM
