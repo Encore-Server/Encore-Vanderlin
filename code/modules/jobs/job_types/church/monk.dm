@@ -219,6 +219,7 @@
 	beltr = /obj/item/storage/belt/pouch/coins/poor
 	beltl = /obj/item/key/church
 	backl = /obj/item/weapon/polearm/woodstaff/quarterstaff
+	backr = /obj/item/storage/backpack/satchel
 	backpack_contents = list(
 		/obj/item/needle = 1,
 		/obj/item/weapon/knife/dagger/steel/holysee = 1
