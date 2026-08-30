@@ -3383,6 +3383,7 @@
 #include "code\modules\jobs\job_types\statueitems.dm"
 #include "code\modules\jobs\job_types\adventurer\adventurer.dm"
 #include "code\modules\jobs\job_types\adventurer\bandit.dm"
+#include "code\modules\jobs\job_types\adventurer\lich.dm"
 #include "code\modules\jobs\job_types\adventurer\pilgrim.dm"
 #include "code\modules\jobs\job_types\adventurer\vampirelord.dm"
 #include "code\modules\jobs\job_types\adventurer\villager.dm"
