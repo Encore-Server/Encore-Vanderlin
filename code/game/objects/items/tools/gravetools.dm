@@ -273,6 +273,7 @@
 /obj/item/weapon/shovel/necran/Initialize()
 	. = ..()
 	AddElement(/datum/element/walking_stick)
+	enchant(/datum/enchantment/silver)
 
 /obj/item/weapon/shovel/necran/getonmobprop(tag)
 	. = ..()
