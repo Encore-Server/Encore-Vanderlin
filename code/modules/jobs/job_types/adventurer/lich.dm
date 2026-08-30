@@ -3,7 +3,7 @@
 	tutorial = "A hell-touched undead spellcaster that rivals the necromantic prowess of even the Shirleighs. You rule Wey Whisperen from your sea fortress and exert your will on the town through your connection to the Smuggler's Den. Make deals, force your way of thinking onto the weak, and rule."
 	department_flag = OUTSIDERS
 	job_flags = (JOB_EQUIP_RANK | JOB_NEW_PLAYER_JOINABLE | JOB_SHOW_IN_CREDITS)
-	faction = FACTION_UNDEAD
+	factions = list(FACTION_UNDEAD)
 	total_positions = 1
 	spawn_positions = 1
 

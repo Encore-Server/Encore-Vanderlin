@@ -1,13 +1,12 @@
 /datum/action/cooldown/spell/strengthen_undead
 	name = "Repair Undead"
-	desc = "Repair undead or smite the living."
+	desc = "Repair undead or smite the living. (Heretical)"
 	button_icon_state = "raiseskele"
 	sound = 'sound/magic/whiteflame.ogg'
 
-	attunements = list(
-		/datum/attunement/dark = 0.4,
-		/datum/attunement/death = 0.5,
-	)
+	required_form = FORM_DEATH
+	required_technique = TECHNIQUE_RESTORATION
+	required_level = 2
 
 	charge_required = FALSE
 	cooldown_time = 15 SECONDS
@@ -35,5 +34,6 @@
 		cast_on.visible_message(span_danger("[cast_on] reforms under the vile energy!"), span_notice("I'm remade by dark magic!"))
 	else
 		cast_on.visible_message(span_info("Necrotic energy floods over [cast_on]!"), span_userdanger("I feel colder as the dark energy floods into me!"))
-		cast_on.Paralyze(5 SECONDS)
+		if(spell_magnitude_modifier >= 2)
+			cast_on.Paralyze(5 SECONDS)
 		cast_on.adjustBruteLoss(20, damage_type = BCLASS_LASHING)

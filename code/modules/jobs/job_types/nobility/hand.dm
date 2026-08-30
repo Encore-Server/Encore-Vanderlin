@@ -1,15 +1,15 @@
 /datum/job/hand
 	title = JOB_HAND
 	tutorial = "You owe everything to your liege. \
-	You are the most trusted of the ruler- their sibling, in fact. \
-	You have played spymaster and confidant to the Shirleighs for so long that you are a vault of intrigue, \
+	You are the most trusted of the ruler- a close friend, a dependable ally, or an object of their favouritism. \
+	You have played advisor and confidant to the Shirleighs for so long that you are a vault of intrigue, \
 	something you exploit with potent conviction. Let no man ever forget whose ear you whisper into. \
 	You have killed more men with those lips than any blademaster could ever claim to.\
 	You can add and remove agents with your Frumentarii scroll."
 	department_flag = NOBLEMEN
 	display_order = JDO_HAND
 	job_flags = (JOB_ANNOUNCE_ARRIVAL | JOB_SHOW_IN_CREDITS | JOB_EQUIP_RANK | JOB_NEW_PLAYER_JOINABLE)
-	faction = FACTION_TOWN
+	factions = list(FACTION_TOWN)
 	total_positions = 2
 	spawn_positions = 2
 	spells = list(/datum/action/cooldown/spell/undirected/list_target/grant_title)
@@ -18,6 +18,11 @@
 	outfit = /datum/outfit/hand
 	advclass_cat_rolls = list(CTAG_HAND = 20)
 	give_bank_account = 120
+
+	knows_the_town = TRUE
+	known_by_the_town = TRUE
+	jobs_always_know_me = list(JOB_COURT_AGENT)
+
 	noble_income = 22
 	job_bitflag = BITFLAG_ROYALTY
 	exp_type = list(EXP_TYPE_NOBLE, EXP_TYPE_LIVING)
@@ -30,22 +35,29 @@
 	honorary = "Lord"
 	honorary_f = "Lady"
 
+	mind_traits = list(
+		TRAIT_KNOW_KEEP_DOORS,
+		TRAIT_KNOW_COURTAGENT_DOORS,
+		TRAIT_KNOWCOURTAGENTS
+	)
 	traits = list(
 		TRAIT_NOBLE_BLOOD,
 		TRAIT_NOBLE_POWER,
 		TRAIT_NOBLE_LOCAL,
 	)
 
+	languages = list(/datum/language/thievescant)
+
 /datum/outfit/hand
 	name = JOB_HAND
 	belt = /obj/item/storage/belt/leather/black
 	beltr = /obj/item/storage/keyring/hand
+	ring = /obj/item/clothing/ring/courtagent_ring/blacksteel
 
 
 /datum/job/hand/after_spawn(mob/living/carbon/human/spawned, client/player_client)
 	. = ..()
 	add_verb(spawned, /mob/living/carbon/human/proc/torture_victim)
-	addtimer(CALLBACK(SSfamilytree, TYPE_PROC_REF(/datum/controller/subsystem/familytree, AddRoyal), spawned, FAMILY_OMMER), 10 SECONDS)
 	// i know this sucks, but due to how job loading is, we can't just get the agents to load before the hand without some reworks
 	if(SSticker.current_state < GAME_STATE_PLAYING)
 		SSticker.OnRoundstart(CALLBACK(src, PROC_REF(agent_callback), spawned))
@@ -56,16 +68,16 @@
 	addtimer(CALLBACK(src, PROC_REF(know_agents), H), 6 SECONDS)
 
 /datum/job/hand/proc/know_agents(mob/living/carbon/human/H)
-	if(!GLOB.roundstart_court_agents.len)
+	if(!length(GLOB.court_agents))
 		to_chat(H, span_notice("You began the week with no agents."))
 	else
 		to_chat(H, span_notice("We began the week with these agents:"))
-		for(var/name in GLOB.roundstart_court_agents)
+		for(var/name in GLOB.court_agents)
 			to_chat(H, span_notice(name))
-			H.mind.cached_frumentarii[name] = TRUE
 
 /datum/job/advclass/hand
-	exp_types_granted = list(EXP_TYPE_NOBLE)
+	exp_types_granted = list(EXP_TYPE_NOBLE, EXP_TYPE_LEADERSHIP)
+	factions = list(FACTION_TOWN)
 
 /datum/attribute_holder/sheet/job/hand
 	raw_attribute_list = list(
@@ -92,7 +104,6 @@
 	outfit = /datum/outfit/hand/handclassic
 	category_tags = list(CTAG_HAND)
 	cmode_music = 'sound/music/cmode/nobility/combat_noble.ogg'
-	exp_types_granted  = list(EXP_TYPE_NOBLE)
 
 	attribute_sheet = /datum/attribute_holder/sheet/job/hand
 	honorary = "General"
@@ -106,8 +117,8 @@
 	shirt = /obj/item/clothing/shirt/undershirt/fancy
 	backr = /obj/item/storage/backpack/satchel/black
 	backpack_contents = list(
-		/obj/item/weapon/knife/dagger/steel = 1,
-		/obj/item/paper/scroll/frumentarii/roundstart = 1
+		/obj/item/weapon/knife/dagger/steel/special = 1,
+		/obj/item/frumentarii = 1
 	)
 	armor = /obj/item/clothing/armor/leather/jacket/handjacket
 	pants = /obj/item/clothing/pants/tights/colored/black
@@ -146,7 +157,6 @@
 	outfit = /datum/outfit/hand/spymaster
 	category_tags = list(CTAG_HAND)
 	cmode_music = 'sound/music/cmode/nobility/CombatSpymaster.ogg'
-	exp_types_granted  = list(EXP_TYPE_NOBLE)
 
 	attribute_sheet = /datum/attribute_holder/sheet/job/spymaster
 	honorary = "Spymaster"
@@ -166,10 +176,10 @@
 	backr = /obj/item/storage/backpack/satchel/black
 	wrists = /obj/item/clothing/wrists/bracers/leather/scabbard
 	beltl = /obj/item/weapon/knife/dagger/steel/hand/parry
-	shoes = /obj/item/clothing/shoes/boots
+	shoes = /obj/item/clothing/shoes/boots/darkboots
 	backpack_contents = list(
 		/obj/item/lockpickring/mundane = 1,
-		/obj/item/paper/scroll/frumentarii/roundstart = 1,
+		/obj/item/frumentarii = 1,
 		/obj/item/weapon/knife/dagger/steel/hand = 1,
 	)
 
@@ -230,7 +240,6 @@
 	outfit = /datum/outfit/hand/advisor
 	category_tags = list(CTAG_HAND)
 	cmode_music = 'sound/music/cmode/nobility/combat_noble.ogg'
-	exp_types_granted  = list(EXP_TYPE_NOBLE)
 
 	attribute_sheet = /datum/attribute_holder/sheet/job/advisor
 	attribute_sheet_old = /datum/attribute_holder/sheet/job/advisor/old
@@ -240,15 +249,15 @@
 	name = "Advisor (Hand)"
 	shirt = /obj/item/clothing/shirt/undershirt/fancy
 	backr = /obj/item/storage/backpack/satchel/black
-	backpack_contents = list(
-		/obj/item/weapon/knife/dagger/steel = 1,
-		/obj/item/reagent_containers/glass/bottle/poison = 1,
-		/obj/item/paper/scroll/frumentarii/roundstart = 1
-	)
 	armor = /obj/item/clothing/armor/gambeson/hand
 	pants = /obj/item/clothing/pants/tights/colored/black
-	shoes = /obj/item/clothing/shoes/boots
+	shoes = /obj/item/clothing/shoes/boots/darkboots
 	beltl = /obj/item/weapon/sword/rapier/caneblade/hand
+	backpack_contents = list(
+		/obj/item/weapon/knife/dagger/steel/special = 1,
+		/obj/item/reagent_containers/glass/bottle/poison = 1,
+		/obj/item/frumentarii = 1
+	)
 	scabbards = list(/obj/item/weapon/scabbard/cane/hand)
 
 /datum/attribute_holder/sheet/job/huntsmaster
@@ -316,14 +325,13 @@
 /datum/job/advclass/hand/huntsmaster
 	title = "Huntsmaster"
 	tutorial = " A hunter of the crown, you have tracked more living beings through the Wild than you can remember; \
-    a loyal hound by your side, a powerful saiga underneath. You've learnt the rules of the hunt are no different from the court, just simpifed, primal. \
-    The strong survive, the weak die. So, loose your bow over these lands, and let no man, no beast, and no demons think themselves safe from your arrows. \
-    Your agents by your side, you will rid this town of ruffians, rooting out would-be's like one does with a lowly cabbit. \
-    Let the world remember you, the Huntsmaster, as a true slayer of beast, monster, and man."
+	a loyal hound by your side, a powerful saiga underneath. You've learnt the rules of the hunt are no different from the court, just simpifed, primal. \
+	The strong survive, the weak die. So, loose your bow over these lands, and let no man, no beast, and no demons think themselves safe from your arrows. \
+	Your agents by your side, you will rid this town of ruffians, rooting out would-be's like one does with a lowly cabbit. \
+	Let the world remember you, the Huntsmaster, as a true slayer of beast, monster, and man."
 	outfit = /datum/outfit/hand/huntsmaster
 	category_tags = list(CTAG_HAND)
 	cmode_music = 'sound/music/cmode/nobility/combat_noble.ogg'
-	exp_types_granted  = list(EXP_TYPE_NOBLE)
 
 	attribute_sheet = /datum/attribute_holder/sheet/job/huntsmaster
 	attribute_sheet_old = /datum/attribute_holder/sheet/job/huntsmaster/old
@@ -343,19 +351,19 @@
 	backl = /obj/item/gun/ballistic/bow/long
 	backr = /obj/item/storage/backpack/satchel
 	wrists = /obj/item/clothing/wrists/bracers/leather
+	armor = /obj/item/clothing/armor/leather/jerkin/belted/long
+	pants = /obj/item/clothing/pants/trou/leathertights
+	shoes = /obj/item/clothing/shoes/boots/hunter
+	beltl = /obj/item/ammo_holder/quiver/arrows
+	beltr = /obj/item/weapon/sword/rapier/dec
 	backpack_contents = list(
-		/obj/item/weapon/knife/dagger/steel = 1,
+		/obj/item/weapon/knife/dagger/steel/special = 1,
 		/obj/item/reagent_containers/glass/bottle/poison = 1,
-		/obj/item/paper/scroll/frumentarii/roundstart = 1,
+		/obj/item/frumentarii = 1,
 		/obj/item/flint = 1,
 		/obj/item/bait = 1,
 		/obj/item/flashlight/flare/torch/lantern/bronzelamptern = 1,
 	)
-	armor = /obj/item/clothing/armor/leather/jerkin/belted/long
-	pants = /obj/item/clothing/pants/trou/leathertights
-	shoes = /obj/item/clothing/shoes/boots/leather/advanced
-	beltl = /obj/item/ammo_holder/quiver/arrows
-	beltr = /obj/item/weapon/sword/rapier/dec
 	scabbards = list(/obj/item/weapon/scabbard/sword/royal)
 
 /datum/job/advclass/hand/huntsmaster/after_spawn(mob/living/carbon/human/H)
@@ -363,7 +371,9 @@
 
 	var/mob/living/simple_animal/hostile/retaliate/hound = new /mob/living/simple_animal/hostile/retaliate/hound(get_turf(H))
 	hound.tamed(H)
+
 /datum/quirk/boon/pet/on_spawn()
+	. = ..()
 	if(!get_turf(owner))
 		addtimer(CALLBACK(src, PROC_REF(on_spawn)), 0.5 SECONDS)
 		return
@@ -386,3 +396,123 @@
 			pet_mob.fully_replace_character_name(null, new_name)
 	pet_mob.tamed(H)
 	ADD_TRAIT(pet_mob, TRAIT_CRITICAL_RESISTANCE, INNATE_TRAIT)
+
+/datum/attribute_holder/sheet/job/magister
+	attribute_variance = list(
+		STAT_INTELLIGENCE = list(0, 1)
+	)
+	raw_attribute_list = list(
+		STAT_INTELLIGENCE = 4,
+		STAT_PERCEPTION = 3,
+		STAT_CONSTITUTION = -2,
+		/datum/attribute/skill/magic/arcane = 40,
+		/datum/attribute/skill/combat/swords = 20,
+		/datum/attribute/skill/misc/swimming = 30,
+		/datum/attribute/skill/misc/climbing = 30,
+		/datum/attribute/skill/misc/athletics = 30,
+		/datum/attribute/skill/combat/wrestling = 20,
+		/datum/attribute/skill/misc/reading = 50,
+		/datum/attribute/skill/misc/riding = 20,
+		/datum/attribute/skill/craft/alchemy = 30,
+		/datum/attribute/skill/misc/medicine = 30,
+		/datum/attribute/skill/labor/mathematics = 30
+	)
+
+/datum/attribute_holder/sheet/job/magister/old
+	raw_attribute_list = list(
+		STAT_INTELLIGENCE = 5,
+		STAT_PERCEPTION = 4,
+		STAT_CONSTITUTION = -3,
+		STAT_SPEED = -1,
+		STAT_STRENGTH = -1,
+		/datum/attribute/skill/magic/arcane = 40,
+		/datum/attribute/skill/combat/swords = 30,
+		/datum/attribute/skill/misc/swimming = 30,
+		/datum/attribute/skill/misc/climbing = 30,
+		/datum/attribute/skill/misc/athletics = 30,
+		/datum/attribute/skill/combat/wrestling = 20,
+		/datum/attribute/skill/misc/reading = 50,
+		/datum/attribute/skill/misc/riding = 30,
+		/datum/attribute/skill/craft/alchemy = 40,
+		/datum/attribute/skill/misc/medicine = 40,
+		/datum/attribute/skill/labor/mathematics = 30
+	)
+
+/datum/job/advclass/hand/magister
+	title = "Magister"
+	tutorial = " You have played researcher and magician to the Shirleighs for so long that you are a vault of knowledge, \
+	something you exploit with potent conviction. Let no man ever forget the magic you wield. \
+	You've silenced more men with those spells than any blademaster or spymaster could ever claim to."
+	outfit = /datum/outfit/hand/magister/male
+	outfit_female = /datum/outfit/hand/magister/female
+	category_tags = list(CTAG_HAND)
+	magic_user = TRUE
+	cmode_music = 'sound/music/cmode/nobility/combat_noble.ogg'
+	exp_types_granted  = list(EXP_TYPE_NOBLE, EXP_TYPE_MAGICK)
+	book_type = /obj/item/recipe_book/arcyne
+
+	attribute_sheet = /datum/attribute_holder/sheet/job/magister
+	attribute_sheet_old = /datum/attribute_holder/sheet/job/magister/old
+	honorary = "Magister"
+	honorary_f = "Magistrix"
+
+	traits = list(
+		TRAIT_NOBLE_BLOOD,
+		TRAIT_NOBLE_POWER,
+		TRAIT_NOBLE_LOCAL,
+		TRAIT_VIRGIN,
+	)
+
+/datum/job/advclass/hand/magister/after_spawn(mob/living/carbon/human/spawned, client/player_client)
+	. = ..()
+	if(prob(1))
+		spawned.cmode_music = 'sound/music/cmode/antag/combat_evilwizard.ogg'
+
+	if(istype(spawned.patron, /datum/patron/inhumen/archdevils))
+		spawned.grant_language(/datum/language/hellspeak)
+
+	if(spawned.gender == MALE && spawned.dna?.species  && spawned.dna.species.id != SPEC_ID_MEDICATOR)
+		spawned.dna.species.soundpack_m = new /datum/voicepack/male/wizard()
+
+/datum/job/advclass/hand/magister/on_roundstart(mob/living/spawned, client/player_client)
+	. = ..()
+	var/static/list/selectable_books = list(
+		"Blazing Tome (Fire)" = /obj/item/spellbook/master/starter/fire,
+		"Frostbound Tome (Ice)" = /obj/item/spellbook/master/starter/ice,
+		"Storm-Charged Tome (Lightning)" = /obj/item/spellbook/master/starter/lightning,
+		"Stoneveined Tome (Earth)" = /obj/item/spellbook/master/starter/earth,
+		"Thrice-Warded Tome (Arcane)" = /obj/item/spellbook/master/starter/arcane,
+		"Decay-Touched Tome (Entropy)" = /obj/item/spellbook/master/starter/death,
+		"Verdant Tome (Life)" = /obj/item/spellbook/master/starter/life,
+		"Windswept Tome (Air)" = /obj/item/spellbook/master/starter/air,
+		"Tidebound Tome (Water)" = /obj/item/spellbook/master/starter/water,
+	)
+
+	grant_selected_spellbooks(spawned, selectable_books, 2)
+
+/datum/outfit/hand/magister
+	name = "Magister Base (Hand)"
+	head = /obj/item/clothing/head/roguehood/colored/black
+	shirt = /obj/item/clothing/shirt/undershirt/fancy
+	backr = /obj/item/storage/backpack/satchel
+	neck = /obj/item/clothing/neck/mana_star
+	backpack_contents = list(
+		/obj/item/scrying = 1,
+		/obj/item/chalk = 1,
+		/obj/item/frumentarii = 1
+	)
+	armor = /obj/item/clothing/armor/gambeson/hand
+	cloak = /obj/item/clothing/cloak/half
+	pants = /obj/item/clothing/pants/tights/colored/black
+	shoes = /obj/item/clothing/shoes/boots
+	beltl = /obj/item/storage/magebag/apprentice
+	beltr = /obj/item/weapon/sword/rapier/caneblade/hand
+	scabbards = list(/obj/item/weapon/scabbard/cane/hand)
+
+/datum/outfit/hand/magister/male //Sol
+	name = "Male Magister (Hand)"
+	mask = /obj/item/clothing/face/facemask/goldveil
+
+/datum/outfit/hand/magister/female //Luna
+	name = "Female Magister (Hand)"
+	mask = /obj/item/clothing/face/facemask/silverveil
