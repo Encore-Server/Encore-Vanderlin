@@ -14,12 +14,13 @@
 		/datum/attribute/skill/combat/wrestling = 30,
 		/datum/attribute/skill/combat/unarmed = 10,
 		/datum/attribute/skill/combat/swords = 20,
+		/datum/attribute/skill/combat/axesmaces = 20,
 		/datum/attribute/skill/combat/knives = 20,
 		/datum/attribute/skill/misc/swimming = 10,
 		/datum/attribute/skill/misc/climbing = 10,
 		/datum/attribute/skill/misc/athletics = 10,
-
-		/datum/attribute/skill/labor/mathematics = 40
+		/datum/attribute/skill/misc/medicine = 20,
+		/datum/attribute/skill/labor/mathematics = 40,
 	)
 
 /datum/antagonist/lich
@@ -39,7 +40,6 @@
 	var/datum/weakref/lich_body_ref
 
 	innate_traits = list(
-		TRAIT_NOSTAMINA,
 		TRAIT_NOHUNGER,
 		TRAIT_NOHYGIENE,
 		TRAIT_NOBREATH,
@@ -59,8 +59,6 @@
 	)
 
 	var/list/spells = list(
-		/datum/action/cooldown/spell/projectile/fireball,
-		/datum/action/cooldown/spell/projectile/blood_bolt,
 		/datum/action/cooldown/spell/projectile/sickness,
 		/datum/action/cooldown/spell/projectile/fetch,
 		/datum/action/cooldown/spell/undirected/arcyne_eye,
