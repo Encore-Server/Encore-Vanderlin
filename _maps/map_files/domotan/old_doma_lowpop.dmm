@@ -85,7 +85,7 @@
 /obj/structure/bars/cemetery,
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/blocks,
-/area/indoors/town/church)
+/area/indoors/town/church/crypt)
 "ach" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -986,7 +986,7 @@
 /area/indoors/town/church/chapel)
 "aHk" = (
 /turf/open/floor/ruinedwood/darker,
-/area/indoors/town/church)
+/area/indoors/town/church/crypt)
 "aHy" = (
 /obj/structure/rack/shelf/biggest,
 /turf/open/floor/cobble,
@@ -1078,7 +1078,7 @@
 	},
 /obj/structure/handcart,
 /turf/open/floor/church,
-/area/indoors/town/church)
+/area/indoors/town/church/crypt)
 "aJI" = (
 /obj/structure/chair/stool,
 /turf/open/floor/ruinedwood/turned,
@@ -1834,13 +1834,13 @@
 "bis" = (
 /obj/structure/table/stone_small,
 /turf/open/floor/blocks,
-/area/indoors/town/church)
+/area/indoors/town/church/crypt)
 "bit" = (
 /obj/structure/fluff/statue/knight/interior{
 	layer = 4.2
 	},
 /turf/open/floor/blocks,
-/area/indoors/town/church)
+/area/indoors/town/church/crypt)
 "biM" = (
 /obj/machinery/light/fueled/torchholder/l,
 /obj/item/rope/chain,
@@ -2937,6 +2937,9 @@
 	},
 /turf/open/floor/twig,
 /area/under/town/sewer)
+"bXs" = (
+/turf/open/floor/church/purple,
+/area/indoors/town/church/crypt)
 "bYa" = (
 /turf/open/floor/blocks/stonered,
 /area/indoors/town/keep/library)
@@ -3532,10 +3535,10 @@
 "crF" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/cobble,
-/area/indoors/town/church)
+/area/indoors/town/church/crypt)
 "crH" = (
 /turf/open/floor/dirt/road,
-/area/indoors/town/church)
+/area/indoors/town/church/crypt)
 "csd" = (
 /obj/structure/closet/crate/chest,
 /obj/effect/spawner/guaranteed_map_spawner/listed/weapons/ranged,
@@ -3905,7 +3908,7 @@
 "cEN" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/ruinedwood/turned/darker,
-/area/indoors/town/church)
+/area/indoors/town/church/crypt)
 "cFc" = (
 /obj/structure/bed/wool,
 /obj/structure/bed/wool{
@@ -3925,7 +3928,7 @@
 	},
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/churchmarble,
-/area/indoors/town/church)
+/area/indoors/town/church/crypt)
 "cFt" = (
 /obj/structure/stairs,
 /turf/open/floor/greenstone,
@@ -4677,7 +4680,7 @@
 "dfJ" = (
 /obj/structure/closet/crate/coffin,
 /turf/open/floor/blocks,
-/area/indoors/town/church)
+/area/indoors/town/church/crypt)
 "dgf" = (
 /turf/open/floor/churchrough/purple,
 /area/indoors/town/keep)
@@ -5132,7 +5135,7 @@
 	},
 /obj/structure/fluff/statue/gargoyle/candles,
 /turf/open/floor/church,
-/area/indoors/town/church)
+/area/indoors/town/church/crypt)
 "dwq" = (
 /obj/structure/fluff/railing/border{
 	dir = 6
@@ -5158,7 +5161,7 @@
 "dwM" = (
 /obj/structure/rack/shelf/biggest,
 /turf/open/floor/church,
-/area/indoors/town/church)
+/area/indoors/town/church/crypt)
 "dwP" = (
 /obj/structure/door/viewport{
 	dir = 1
@@ -5223,7 +5226,7 @@
 "dzg" = (
 /obj/structure/fluff/statue/gargoyle/candles,
 /turf/open/floor/dirt,
-/area/indoors/town/church)
+/area/indoors/town/church/crypt)
 "dzT" = (
 /obj/structure/door/stone{
 	name = "Adept Quarters"
@@ -5322,8 +5325,11 @@
 /area/indoors/town/steward)
 "dBM" = (
 /obj/structure/bed/wool,
+/obj/effect/landmark/start/gravedigger{
+	dir = 8
+	},
 /turf/open/floor/ruinedwood/darker,
-/area/indoors/town/church)
+/area/indoors/town/church/crypt)
 "dBS" = (
 /obj/structure/rack/shelf/biggest,
 /turf/open/floor/churchmarble,
@@ -6400,7 +6406,7 @@
 	pixel_y = 6
 	},
 /turf/open/floor/church,
-/area/indoors/town/church)
+/area/indoors/town/church/crypt)
 "emH" = (
 /obj/structure/closet/crate/chest/neu,
 /obj/effect/spawner/guaranteed_map_spawner/listed/inn_keys/full,
@@ -6615,7 +6621,7 @@
 /area/outdoors/town/docksmortimer)
 "etc" = (
 /turf/closed/mineral,
-/area/indoors/town/church)
+/area/indoors/town/church/crypt)
 "eti" = (
 /obj/structure/bars{
 	icon_state = "barsbent";
@@ -6639,7 +6645,7 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/machinery/light/fueled/firebowl/standing/blue,
 /turf/open/floor/cobble,
-/area/indoors/town/church)
+/area/indoors/town/church/crypt)
 "eui" = (
 /obj/structure/flora/grass,
 /turf/open/floor/grass/yel,
@@ -6931,7 +6937,7 @@
 /area/indoors/town/tavern)
 "eEo" = (
 /turf/open/water/bath,
-/area/indoors/town/church)
+/area/indoors/town/church/crypt)
 "eEr" = (
 /obj/structure/fluff/railing/border{
 	dir = 10
@@ -7052,7 +7058,7 @@
 "eHs" = (
 /obj/structure/closet/dirthole/grave,
 /turf/open/floor/dirt/road,
-/area/indoors/town/church)
+/area/indoors/town/church/crypt)
 "eHx" = (
 /turf/open/floor/hexstone,
 /area/indoors/town/church/inquisition)
@@ -7099,7 +7105,7 @@
 	pixel_y = -3
 	},
 /turf/open/floor/church/purple,
-/area/indoors/town/church)
+/area/indoors/town/church/crypt)
 "eIY" = (
 /obj/structure/fluff/walldeco/vinez,
 /turf/closed/wall/mineral/stone/moss/red,
@@ -8021,7 +8027,7 @@
 	},
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/church,
-/area/indoors/town/church)
+/area/indoors/town/church/crypt)
 "flA" = (
 /obj/structure/table/wood/plain,
 /obj/effect/landmark/quest_dropoff/counter{
@@ -8860,6 +8866,21 @@
 "fOb" = (
 /turf/closed/mineral/bedrock,
 /area)
+"fOf" = (
+/obj/structure/fluff/psycross/valdala{
+	pixel_y = 22;
+	density = 0
+	},
+/obj/item/candle/floorcandle1/lit{
+	pixel_y = 7
+	},
+/obj/structure/carpet/navy,
+/obj/machinery/light/fueled/wallfire/candle/incense{
+	pixel_y = 2;
+	pixel_x = -10
+	},
+/turf/open/floor/church/purple,
+/area/indoors/town/church/crypt)
 "fOg" = (
 /obj/structure/fluff/railing/border{
 	dir = 10
@@ -9003,6 +9024,9 @@
 "fVL" = (
 /turf/closed/wall/mineral/pipe,
 /area/indoors/town/keep)
+"fVV" = (
+/turf/open/floor/church,
+/area/indoors/town/church/crypt)
 "fWn" = (
 /obj/structure/closet/crate/crafted_closet/inn,
 /obj/item/key/tailor{
@@ -9245,7 +9269,7 @@
 	dir = 4
 	},
 /turf/open/floor/church,
-/area/indoors/town/church)
+/area/indoors/town/church/crypt)
 "gcF" = (
 /obj/structure/pottery_lathe,
 /turf/open/floor/dirt,
@@ -10026,16 +10050,13 @@
 /area/indoors/town/keep/kitchen/cellar)
 "gFU" = (
 /obj/effect/decal/shadow_floor{
-	dir = 4
-	},
-/obj/effect/decal/shadow_floor{
-	dir = 1
-	},
-/obj/effect/decal/shadow_floor{
 	dir = 8
 	},
+/obj/effect/decal/shadow_floor{
+	dir = 4
+	},
 /turf/open/floor/churchmarble,
-/area/indoors/town/church)
+/area/indoors/town/church/crypt)
 "gFV" = (
 /obj/structure/flora/grass/herb/random,
 /turf/open/floor/grass/yel,
@@ -11027,7 +11048,7 @@
 "hns" = (
 /obj/structure/fake_machine/scomm/l,
 /turf/open/floor/ruinedwood/turned/darker,
-/area/indoors/town/church)
+/area/indoors/town/church/crypt)
 "hnP" = (
 /obj/structure/fluff/railing/wood{
 	dir = 1;
@@ -11510,7 +11531,7 @@
 "hAW" = (
 /obj/structure/flora/grass/bush_meagre,
 /turf/open/floor/dirt,
-/area/indoors/town/church)
+/area/indoors/town/church/crypt)
 "hAY" = (
 /obj/structure/rack,
 /obj/machinery/light/fueled/torchholder/l,
@@ -11994,7 +12015,7 @@
 	},
 /obj/machinery/light/fueled/firebowl/firebowlb,
 /turf/open/floor/churchmarble,
-/area/indoors/town/church)
+/area/indoors/town/church/crypt)
 "hQb" = (
 /obj/structure/fluff/railing/tall/retaining{
 	dir = 1
@@ -12721,7 +12742,7 @@
 	dir = 8
 	},
 /turf/open/floor/cobble,
-/area/indoors/town/church)
+/area/indoors/town/church/crypt)
 "img" = (
 /obj/structure/closet/crate/chest/wicker,
 /turf/open/floor/grass/yel,
@@ -13077,6 +13098,10 @@
 /obj/structure/flora/grass/water,
 /turf/open/water/river,
 /area/outdoors/town/neighborhood/east)
+"iwv" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/dirt/road,
+/area/indoors/town/church/crypt)
 "iwA" = (
 /obj/structure/door/red{
 	name = "Lieutenant's Quarters"
@@ -13213,7 +13238,7 @@
 	},
 /obj/structure/chair/bench,
 /turf/open/floor/church,
-/area/indoors/town/church)
+/area/indoors/town/church/crypt)
 "iAQ" = (
 /obj/structure/bed,
 /obj/item/bedsheet/cloth,
@@ -14576,7 +14601,7 @@
 "jqH" = (
 /obj/machinery/light/fueled/wallfire/candle/blue/r,
 /turf/open/floor/ruinedwood/darker,
-/area/indoors/town/church)
+/area/indoors/town/church/crypt)
 "jqJ" = (
 /obj/effect/decal/cobbleedge{
 	dir = 9
@@ -14979,7 +15004,7 @@
 	pixel_x = 16
 	},
 /turf/open/floor/blocks,
-/area/indoors/town/church)
+/area/indoors/town/church/crypt)
 "jEf" = (
 /obj/effect/decal/cobbleedge{
 	dir = 10;
@@ -16017,7 +16042,7 @@
 	dir = 4
 	},
 /turf/open/floor/church,
-/area/indoors/town/church)
+/area/indoors/town/church/crypt)
 "kky" = (
 /obj/structure/fluff/millstone,
 /obj/machinery/light/fueled/torchholder/l,
@@ -16552,7 +16577,7 @@
 	dir = 4
 	},
 /turf/open/floor/church,
-/area/indoors/town/church)
+/area/indoors/town/church/crypt)
 "kAJ" = (
 /obj/machinery/light/fueled/torchholder/r,
 /turf/open/floor/cobblerock,
@@ -17007,7 +17032,7 @@
 	dir = 4
 	},
 /turf/open/floor/blocks,
-/area/indoors/town/church)
+/area/indoors/town/church/crypt)
 "kUj" = (
 /obj/structure/chair/stool,
 /turf/open/floor/dirt,
@@ -17259,7 +17284,7 @@
 	},
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/churchmarble,
-/area/indoors/town/church)
+/area/indoors/town/church/crypt)
 "leB" = (
 /obj/structure/stairs/stone{
 	dir = 8
@@ -17384,7 +17409,7 @@
 /obj/structure/flora/grass/bush_meagre,
 /obj/machinery/light/fueled/wallfire/candle/blue/l,
 /turf/open/floor/dirt,
-/area/indoors/town/church)
+/area/indoors/town/church/crypt)
 "lkZ" = (
 /obj/effect/decal/cobbleedge{
 	dir = 10;
@@ -18664,7 +18689,7 @@
 "lYF" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/ruinedwood/darker,
-/area/indoors/town/church)
+/area/indoors/town/church/crypt)
 "lYK" = (
 /turf/open/floor/tile/bath/pool,
 /area/indoors/town/church/inquisition)
@@ -18834,7 +18859,7 @@
 	dir = 8
 	},
 /turf/open/floor/church,
-/area/indoors/town/church)
+/area/indoors/town/church/crypt)
 "mdI" = (
 /obj/structure/fluff/railing/wood,
 /obj/structure/fluff/walldeco/bath/five,
@@ -19194,7 +19219,7 @@
 /obj/effect/mapping_helpers/access/locker,
 /obj/effect/mapping_helpers/access/keyset/church/grave,
 /turf/open/floor/ruinedwood/darker,
-/area/indoors/town/church)
+/area/indoors/town/church/crypt)
 "mmU" = (
 /obj/structure/fluff/railing/wood{
 	dir = 4;
@@ -19512,7 +19537,7 @@
 "muT" = (
 /obj/machinery/light/fueled/firebowl/standing/blue,
 /turf/open/floor/church/purple,
-/area/indoors/town/church)
+/area/indoors/town/church/crypt)
 "mvn" = (
 /obj/machinery/light/fueled/torchholder/r,
 /turf/open/floor/ruinedwood,
@@ -20618,7 +20643,7 @@
 	dir = 1
 	},
 /turf/open/floor/church,
-/area/indoors/town/church)
+/area/indoors/town/church/crypt)
 "nhm" = (
 /turf/closed/wall/mineral/wooddark,
 /area/outdoors/beach/boat)
@@ -20648,7 +20673,7 @@
 "nid" = (
 /obj/machinery/light/fueled/firebowl/standing/blue,
 /turf/open/floor/dirt,
-/area/indoors/town/church)
+/area/indoors/town/church/crypt)
 "nig" = (
 /obj/machinery/light/fueled/torchholder/r,
 /turf/open/floor/ruinedwood/spiralfade,
@@ -20689,8 +20714,11 @@
 /obj/item/flashlight/flare/torch/lantern,
 /obj/item/flashlight/flare/torch/lantern,
 /obj/item/flashlight/flare/torch/lantern,
+/obj/item/reagent_containers/food/snacks/tallow/red,
+/obj/item/reagent_containers/food/snacks/tallow/red,
+/obj/item/inqarticles/tallowpot,
 /turf/open/floor/ruinedwood/darker,
-/area/indoors/town/church)
+/area/indoors/town/church/crypt)
 "nkC" = (
 /turf/closed/wall/mineral/stone/moss,
 /area/outdoors/town/noble_manor/blue)
@@ -20743,7 +20771,7 @@
 	dir = 1
 	},
 /turf/open/floor/churchmarble,
-/area/indoors/town/church)
+/area/indoors/town/church/crypt)
 "nme" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/blocks/stonered,
@@ -20916,7 +20944,7 @@
 	pixel_y = 7
 	},
 /turf/open/floor/dirt/road,
-/area/indoors/town/church)
+/area/indoors/town/church/crypt)
 "nqU" = (
 /obj/structure/table/wood/reinforced,
 /obj/machinery/light/fueledstreet/orange/wall{
@@ -21257,7 +21285,7 @@
 "nBV" = (
 /obj/structure/bars/cemetery,
 /turf/open/floor/blocks,
-/area/indoors/town/church)
+/area/indoors/town/church/crypt)
 "nBX" = (
 /obj/machinery/light/fueled/wallfire/candle/r,
 /turf/open/openspace,
@@ -21520,7 +21548,7 @@
 	},
 /obj/effect/landmark/start/tombwarden,
 /turf/open/floor/churchmarble,
-/area/indoors/town/church)
+/area/indoors/town/church/crypt)
 "nLb" = (
 /turf/open/floor/herringbone,
 /area/indoors/town)
@@ -22508,6 +22536,10 @@
 /obj/structure/flora/ausbushes/ywflowers,
 /turf/open/floor/grass/yel,
 /area/outdoors/farm)
+"oua" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/church/purple,
+/area/indoors/town/church/crypt)
 "ouk" = (
 /obj/structure/door/viewport{
 	dir = 8;
@@ -22640,13 +22672,13 @@
 "oyr" = (
 /obj/structure/stairs/stone,
 /turf/open/floor/church,
-/area/indoors/town/church)
+/area/indoors/town/church/crypt)
 "oyu" = (
 /obj/effect/mapping_helpers/access/keyset/church/grave,
 /obj/effect/mapping_helpers/access/locker,
 /obj/structure/door/iron/bars,
 /turf/open/floor/blocks,
-/area/indoors/town/church)
+/area/indoors/town/church/crypt)
 "ozs" = (
 /obj/item/paper/scroll,
 /obj/item/natural/feather,
@@ -22883,12 +22915,18 @@
 /turf/open/floor/twig,
 /area/indoors/town/clinic_large)
 "oFk" = (
-/obj/effect/landmark/start/gravedigger{
-	dir = 8
-	},
 /obj/effect/decal/cleanable/dirt/cobweb,
+/obj/structure/closet/crate/crafted_closet/dark,
+/obj/item/clothing/cloak/raincloak/colored/mortus,
+/obj/item/clothing/cloak/raincloak/colored/mortus,
+/obj/item/clothing/head/padded/deathshroud,
+/obj/item/clothing/head/padded/deathshroud,
+/obj/item/clothing/shirt/robe/valdala,
+/obj/item/clothing/shirt/robe/valdala,
+/obj/item/clothing/head/leather/inqhat/gravehat,
+/obj/item/clothing/head/leather/inqhat/gravehat,
 /turf/open/floor/ruinedwood/darker,
-/area/indoors/town/church)
+/area/indoors/town/church/crypt)
 "oFE" = (
 /obj/structure/flora/driftwood,
 /turf/open/floor/sand/sandstone,
@@ -23165,7 +23203,7 @@
 	dir = 4
 	},
 /turf/open/floor/church,
-/area/indoors/town/church)
+/area/indoors/town/church/crypt)
 "oSe" = (
 /turf/open/floor/ruinedwood/darker,
 /area/outdoors/beach/boat)
@@ -23384,7 +23422,7 @@
 	name = "To Graveyard"
 	},
 /turf/open/floor/church,
-/area/indoors/town/church)
+/area/indoors/town/church/crypt)
 "oZa" = (
 /obj/structure/stairs{
 	dir = 8
@@ -23527,7 +23565,7 @@
 	icon_state = "tablewood1"
 	},
 /turf/open/floor/ruinedwood/turned/darker,
-/area/indoors/town/church)
+/area/indoors/town/church/crypt)
 "pcw" = (
 /obj/structure/closet/crate/chest,
 /obj/item/reagent_containers/powder/salt,
@@ -24190,8 +24228,11 @@
 /area/outdoors/town/roofs)
 "pzZ" = (
 /obj/structure/bed/wool,
+/obj/effect/landmark/start/gravedigger{
+	dir = 8
+	},
 /turf/open/floor/ruinedwood/turned/darker,
-/area/indoors/town/church)
+/area/indoors/town/church/crypt)
 "pAb" = (
 /obj/structure/table/wood{
 	icon_state = "tablewood1"
@@ -24923,7 +24964,7 @@
 /obj/structure/fluff/statue/gargoyle/candles,
 /obj/machinery/light/fueled/wallfire/candle/blue/r,
 /turf/open/floor/church,
-/area/indoors/town/church)
+/area/indoors/town/church/crypt)
 "pYC" = (
 /obj/structure/fluff/railing/border,
 /turf/open/floor/cobble,
@@ -25016,7 +25057,7 @@
 /obj/structure/fluff/walldeco/church/line,
 /obj/structure/fake_machine/scomm/l,
 /turf/open/floor/church,
-/area/indoors/town/church)
+/area/indoors/town/church/crypt)
 "qbk" = (
 /turf/open/floor/ruinedwood/turned,
 /area/outdoors/exposed)
@@ -25058,7 +25099,7 @@
 "qdE" = (
 /obj/structure/fluff/walldeco/church/line,
 /turf/open/floor/church,
-/area/indoors/town/church)
+/area/indoors/town/church/crypt)
 "qdW" = (
 /obj/effect/landmark/start/steward{
 	dir = 4
@@ -25176,7 +25217,7 @@
 	},
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/church,
-/area/indoors/town/church)
+/area/indoors/town/church/crypt)
 "qiv" = (
 /obj/structure/table/wood/plain_alt,
 /turf/open/floor/ruinedwood/turned,
@@ -26038,6 +26079,15 @@
 	},
 /turf/open/floor/tile/brick,
 /area/indoors/town/bath)
+"qIr" = (
+/obj/structure/fluff/traveltile{
+	aallmig = "z2-townsouth2";
+	aportalgoesto = "z2-townsouth2-out";
+	aportalid = "z2-townsouth2-in";
+	name = "To the County of Etgard"
+	},
+/turf/open/floor/dirt/road,
+/area/under/cavewet)
 "qIu" = (
 /obj/structure/fluff/railing/wood{
 	dir = 4
@@ -26066,7 +26116,7 @@
 	dir = 1
 	},
 /turf/open/floor/church,
-/area/indoors/town/church)
+/area/indoors/town/church/crypt)
 "qJz" = (
 /obj/structure/fluff/signage{
 	name = "COUNTY OF ETGARD - EAST"
@@ -26570,7 +26620,7 @@
 /area/under/town/sewer)
 "ref" = (
 /turf/closed/wall/mineral/stone/moss,
-/area/indoors/town/church)
+/area/indoors/town/church/crypt)
 "rez" = (
 /obj/effect/decal/cobbleedge{
 	dir = 10;
@@ -26766,7 +26816,7 @@
 "rlI" = (
 /obj/structure/fluff/statue{
 	name = "vestments of the end time";
-	desc = "A rickety statue depicting an agent of Mjallidhorn and His will. Made to ferry lost souls from the grasp of Hell after their passing."
+	desc = "A rickety statue depicting an agent of Valdala and Her will. Made to ferry lost souls from the grasp of Hell after their passing."
 	},
 /turf/open/floor/cobble,
 /area/under/town/basement)
@@ -27484,7 +27534,7 @@
 /area/outdoors/town/noble_manor/yellow)
 "rMV" = (
 /turf/closed/wall/mineral/stone,
-/area/indoors/town/church)
+/area/indoors/town/church/crypt)
 "rMZ" = (
 /obj/structure/flora/grass/bush/wall,
 /turf/open/floor/grass/cold,
@@ -27752,8 +27802,8 @@
 "rZt" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/structure/closet/dirthole/grave,
-/turf/open/floor/cobble,
-/area/indoors/town/church)
+/turf/open/floor/dirt/road,
+/area/indoors/town/church/crypt)
 "rZu" = (
 /obj/structure/flora/grass/herb/random,
 /turf/open/floor/dirt,
@@ -27925,7 +27975,7 @@
 /obj/machinery/light/fueled/firebowl/standing/blue,
 /obj/effect/decal/cleanable/dirt/cobweb,
 /turf/open/floor/dirt,
-/area/indoors/town/church)
+/area/indoors/town/church/crypt)
 "sfu" = (
 /turf/open/floor/ruinedwood/alt,
 /area/indoors/town)
@@ -29258,11 +29308,23 @@
 /turf/open/floor/grass/cold,
 /area/outdoors/farm)
 "sXo" = (
-/obj/effect/landmark/start/gravedigger{
-	dir = 8
+/obj/structure/closet/crate/crafted_closet{
+	name = "gravemarker supplies"
 	},
+/obj/item/natural/stone,
+/obj/item/natural/stone,
+/obj/item/natural/stone,
+/obj/item/natural/stone,
+/obj/item/natural/stone,
+/obj/item/natural/stone,
+/obj/item/natural/stone,
+/obj/item/natural/stone,
+/obj/item/rope,
+/obj/item/rope,
+/obj/item/rope,
+/obj/item/rope,
 /turf/open/floor/ruinedwood/darker,
-/area/indoors/town/church)
+/area/indoors/town/church/crypt)
 "sXC" = (
 /obj/structure/fluff/railing/border{
 	dir = 1
@@ -29527,11 +29589,8 @@
 /turf/open/floor/carpet/red,
 /area/indoors/town/clinic_large)
 "tgV" = (
-/obj/effect/landmark/start/gravedigger{
-	dir = 8
-	},
 /turf/open/floor/ruinedwood/turned/darker,
-/area/indoors/town/church)
+/area/indoors/town/church/crypt)
 "tgY" = (
 /obj/effect/decal/borderfall{
 	dir = 1
@@ -29690,7 +29749,7 @@
 	dir = 8
 	},
 /turf/open/floor/churchmarble,
-/area/indoors/town/church)
+/area/indoors/town/church/crypt)
 "tmb" = (
 /obj/machinery/light/fueled/wallfire/candle/blue/r,
 /obj/structure/bed/wool/double,
@@ -29833,7 +29892,7 @@
 /obj/item/key/graveyard,
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/ruinedwood/darker,
-/area/indoors/town/church)
+/area/indoors/town/church/crypt)
 "trD" = (
 /obj/structure/fluff/psycross/gani,
 /turf/open/floor/metal,
@@ -30606,7 +30665,7 @@
 /area/indoors/town/keep/magician)
 "tRW" = (
 /turf/closed/wall/mineral/craftstone,
-/area/indoors/town/church)
+/area/indoors/town/church/crypt)
 "tSI" = (
 /obj/structure/closet/crate/chest/neu,
 /obj/effect/decal/cobbleedge{
@@ -30979,7 +31038,7 @@
 "ugm" = (
 /obj/machinery/light/fueled/firebowl/standing/blue,
 /turf/open/floor/church,
-/area/indoors/town/church)
+/area/indoors/town/church/crypt)
 "ugr" = (
 /obj/structure/window,
 /obj/structure/curtain/bounty/dir{
@@ -31143,9 +31202,6 @@
 /turf/open/floor/tile,
 /area/indoors/town/tavern)
 "umC" = (
-/obj/item/burial_shroud,
-/obj/item/burial_shroud,
-/obj/item/burial_shroud,
 /obj/structure/closet/crate/crafted_closet,
 /obj/structure/fluff/walldeco/church/line{
 	dir = 1
@@ -31153,8 +31209,11 @@
 /obj/structure/fluff/walldeco/church/line{
 	dir = 1
 	},
+/obj/item/burial_shroud,
+/obj/item/burial_shroud,
+/obj/item/burial_shroud,
 /turf/open/floor/church,
-/area/indoors/town/church)
+/area/indoors/town/church/crypt)
 "und" = (
 /obj/structure/fluff/railing/wood,
 /obj/structure/closet/crate/chest/crate,
@@ -31204,13 +31263,20 @@
 /turf/open/floor/ruinedwood/alt,
 /area/outdoors/town/docksmortimer)
 "uqm" = (
-/obj/structure/closet/crate/crafted_closet/dark,
-/obj/item/clothing/cloak/raincloak/colored/mortus,
-/obj/item/clothing/cloak/raincloak/colored/mortus,
-/obj/item/clothing/head/padded/deathshroud,
-/obj/item/clothing/head/padded/deathshroud,
+/obj/structure/closet/crate/crafted_closet{
+	name = "gravemarker supplies"
+	},
+/obj/item/natural/bundle/stoneblock{
+	amount = 4
+	},
+/obj/item/natural/bundle/stoneblock{
+	amount = 4
+	},
+/obj/item/natural/bundle/stick{
+	amount = 10
+	},
 /turf/open/floor/ruinedwood/darker,
-/area/indoors/town/church)
+/area/indoors/town/church/crypt)
 "uqC" = (
 /obj/structure/closet/crate/crafted_closet,
 /obj/item/reagent_containers/glass/bottle/manapot,
@@ -31575,8 +31641,17 @@
 	pixel_x = -8;
 	pixel_y = 3
 	},
-/turf/open/floor/church,
-/area/indoors/town/church)
+/obj/effect/decal/shadow_floor{
+	dir = 1
+	},
+/obj/effect/decal/shadow_floor{
+	dir = 8
+	},
+/obj/effect/decal/shadow_floor{
+	dir = 4
+	},
+/turf/open/floor/churchmarble,
+/area/indoors/town/church/crypt)
 "uBa" = (
 /obj/structure/stairs/stone,
 /turf/open/floor/blocks/paving,
@@ -32192,7 +32267,7 @@
 /obj/machinery/light/fueled/wallfire/candle/blue/l,
 /obj/structure/closet/crate/coffin,
 /turf/open/floor/church,
-/area/indoors/town/church)
+/area/indoors/town/church/crypt)
 "uUt" = (
 /obj/structure/table/wood/plain,
 /obj/item/candle/yellow/lit{
@@ -32634,7 +32709,7 @@
 	dir = 8
 	},
 /turf/open/floor/church,
-/area/indoors/town/church)
+/area/indoors/town/church/crypt)
 "vjc" = (
 /obj/item/reagent_containers/glass/bucket/wooden{
 	pixel_x = -6;
@@ -33752,7 +33827,7 @@
 "vYo" = (
 /obj/machinery/light/fueled/wallfire/candle/blue/r,
 /turf/open/floor/ruinedwood/turned/darker,
-/area/indoors/town/church)
+/area/indoors/town/church/crypt)
 "vYq" = (
 /obj/structure/fluff/railing/tall/retaining/stone{
 	dir = 4
@@ -33955,15 +34030,15 @@
 /turf/open/floor/cobble/alt,
 /area/under/town/basement/smugglers_tunnels)
 "wgG" = (
-/obj/item/burial_shroud,
-/obj/item/burial_shroud,
-/obj/item/burial_shroud,
 /obj/structure/closet/crate/crafted_closet,
 /obj/structure/fluff/walldeco/church/line{
 	dir = 1
 	},
+/obj/item/burial_shroud,
+/obj/item/burial_shroud,
+/obj/item/burial_shroud,
 /turf/open/floor/church,
-/area/indoors/town/church)
+/area/indoors/town/church/crypt)
 "wgZ" = (
 /obj/effect/decal/carpet/kover_black,
 /obj/effect/landmark/start/lord,
@@ -34242,7 +34317,7 @@
 	dir = 8
 	},
 /turf/open/floor/church,
-/area/indoors/town/church)
+/area/indoors/town/church/crypt)
 "woR" = (
 /obj/structure/lever/hidden/thieves_guild{
 	redstone_id = "slitherway1"
@@ -34689,8 +34764,8 @@
 	layer = 2.7;
 	pixel_y = 7
 	},
-/turf/open/floor/cobble,
-/area/indoors/town/church)
+/turf/open/floor/dirt/road,
+/area/indoors/town/church/crypt)
 "wGY" = (
 /obj/effect/decal/borderfall{
 	dir = 1
@@ -34840,7 +34915,7 @@
 "wKk" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/church,
-/area/indoors/town/church)
+/area/indoors/town/church/crypt)
 "wKv" = (
 /turf/open/floor/blocks,
 /area/outdoors/town)
@@ -34936,7 +35011,7 @@
 	dir = 4
 	},
 /turf/open/floor/church,
-/area/indoors/town/church)
+/area/indoors/town/church/crypt)
 "wNT" = (
 /obj/effect/decal/cobbleedge{
 	dir = 10;
@@ -34986,7 +35061,7 @@
 "wON" = (
 /obj/machinery/light/fueled/wallfire/candle/blue,
 /turf/open/floor/church/purple,
-/area/indoors/town/church)
+/area/indoors/town/church/crypt)
 "wPa" = (
 /obj/item/candle/yellow,
 /obj/structure/table/church{
@@ -35013,12 +35088,16 @@
 /turf/open/floor/ruinedwood,
 /area/indoors/town/shop)
 "wQY" = (
-/obj/item/burial_shroud,
 /obj/structure/table/wood{
 	icon_state = "tablewood1"
 	},
+/obj/item/weapon/hammer/iron{
+	pixel_y = 6;
+	pixel_x = -2
+	},
+/obj/item/weapon/chisel/iron,
 /turf/open/floor/ruinedwood/darker,
-/area/indoors/town/church)
+/area/indoors/town/church/crypt)
 "wRa" = (
 /obj/structure/stairs/fancy/c{
 	dir = 1
@@ -36159,8 +36238,8 @@
 /obj/effect/decal/cleanable/dirt/cobweb{
 	dir = 8
 	},
-/turf/open/floor/cobble,
-/area/indoors/town/church)
+/turf/open/floor/dirt/road,
+/area/indoors/town/church/crypt)
 "xDX" = (
 /obj/machinery/light/fueledstreet/orange/wall{
 	dir = 4
@@ -42694,8 +42773,8 @@ bit
 dfJ
 bis
 abT
-jlQ
-jlQ
+bXs
+bXs
 abT
 bis
 dfJ
@@ -42826,8 +42905,8 @@ nqT
 crH
 crH
 oyu
-jlQ
-cRO
+bXs
+oua
 oyu
 crH
 crH
@@ -42958,8 +43037,8 @@ nqT
 crH
 crH
 oyu
-jlQ
-cRO
+bXs
+oua
 oyu
 crH
 crH
@@ -43087,14 +43166,14 @@ bBv
 ibX
 etc
 wGM
-crF
+iwv
 ilR
 nBV
-jlQ
-jlQ
+bXs
+bXs
 nBV
 etO
-crF
+iwv
 xCT
 ref
 jdz
@@ -43354,7 +43433,7 @@ rMV
 sfr
 hAW
 lkI
-xiw
+fVV
 nlP
 ref
 hAW
@@ -43625,8 +43704,8 @@ eEo
 eEo
 eEo
 aJr
-xiw
-xiw
+fVV
+fVV
 oyr
 oYY
 rMV
@@ -43750,15 +43829,15 @@ rMV
 woJ
 flz
 flz
-xiw
+fVV
 lez
-xiw
+fVV
 gcx
 viK
 viK
-xiw
-xiw
-xiw
+fVV
+fVV
+fVV
 oyr
 oYY
 rMV
@@ -43888,8 +43967,8 @@ nKV
 tlI
 tlI
 tlI
+tlI
 gFU
-xiw
 uAV
 rMV
 rMV
@@ -44014,14 +44093,14 @@ ref
 wNO
 kAI
 kAI
-xiw
+fVV
 nlP
-xiw
+fVV
 kAI
 kAI
 wKk
 wKk
-xiw
+fVV
 ugm
 rMV
 jdz
@@ -44152,8 +44231,8 @@ qdE
 eEo
 eEo
 wgG
-xiw
-xiw
+fVV
+fVV
 dwM
 rMV
 jdz
@@ -44284,8 +44363,8 @@ qdE
 eEo
 eEo
 umC
-xiw
-xiw
+fVV
+fVV
 emx
 rMV
 jdz
@@ -44411,7 +44490,7 @@ nid
 hAW
 hAW
 ref
-xiw
+nlP
 rMV
 nid
 hAW
@@ -44549,7 +44628,7 @@ rMV
 rMV
 rMV
 wON
-jlQ
+bXs
 abT
 bis
 kTX
@@ -44680,8 +44759,8 @@ tgV
 hns
 sXo
 abT
-jlQ
-cRO
+bXs
+oua
 oyu
 crH
 eHs
@@ -44812,8 +44891,8 @@ lYF
 cEN
 uqm
 rMV
-jlQ
-cRO
+fOf
+oua
 oyu
 crH
 eHs
@@ -44944,8 +45023,8 @@ trp
 aHk
 wQY
 abT
-cRO
-jlQ
+oua
+bXs
 nBV
 crF
 rZt
@@ -45076,8 +45155,8 @@ dBM
 jqH
 dBM
 rMV
-muT
-jlQ
+wON
+bXs
 rMV
 rMV
 rMV
@@ -82963,11 +83042,11 @@ aCt
 nzI
 nIj
 nIj
-uGC
+nIj
+nIj
 aCt
-aCt
-aCt
-wyv
+nIj
+qIr
 "}
 (98,1,3) = {"
 qxY
@@ -83095,11 +83174,11 @@ aCt
 aCt
 nIj
 nIj
-uGC
-uGC
-aCt
-aCt
-wyv
+nIj
+nIj
+nIj
+nIj
+qIr
 "}
 (99,1,3) = {"
 qxY
@@ -83229,7 +83308,7 @@ nIj
 nIj
 uev
 uGC
-aCt
+nIj
 aCt
 wyv
 "}

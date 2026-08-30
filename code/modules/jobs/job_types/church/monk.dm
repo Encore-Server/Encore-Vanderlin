@@ -117,7 +117,18 @@
 	bypass_lastclass = TRUE
 
 	allowed_races = RACES_LESS_DISCRIMINATED
-	allowed_patrons = ALL_TEMPLE_PATRONS
+	allowed_patrons = list(
+		/datum/patron/divine/centrist,
+		/datum/patron/divine/visires,
+		/datum/patron/divine/akan,
+		/datum/patron/divine/iliope,
+		/datum/patron/divine/erdl,
+		/datum/patron/divine/gani,
+		/datum/patron/divine/golerkanh,
+		/datum/patron/divine/pomette,
+		/datum/patron/divine/mjallidhorn,
+		/datum/patron/divine/mordsol,
+		)//Valdala isn't on this list because Gravetenders are her Acolytes.
 
 	outfit = /datum/outfit/monk
 	give_bank_account = TRUE
@@ -139,11 +150,6 @@
 	switch(spawned.patron?.type)
 		if(/datum/patron/divine/visires)
 			spawned.cmode_music = 'sound/music/cmode/adventurer/CombatMonk.ogg'
-		if(/datum/patron/divine/valdala)
-			spawned.attributes?.add_sheet(/datum/attribute_holder/sheet/job/acolyte/patron/valdala)
-			spawned.cmode_music = 'sound/music/cmode/church/CombatGravekeeper.ogg'
-			ADD_TRAIT(spawned, TRAIT_DEADNOSE, TRAIT_GENERIC)
-			ADD_TRAIT(spawned, TRAIT_GRAVEROBBER, TRAIT_GENERIC)
 		if(/datum/patron/divine/pomette)
 			ADD_TRAIT(spawned, TRAIT_BEAUTIFUL, TRAIT_GENERIC)
 			ADD_TRAIT(spawned, TRAIT_EMPATH, TRAIT_GENERIC)
@@ -227,17 +233,6 @@
 			wrists = /obj/item/clothing/wrists/wrappings
 			shoes = /obj/item/clothing/shoes/sandals
 			armor = /obj/item/clothing/shirt/robe/visires
-		if(/datum/patron/divine/valdala)
-			head = /obj/item/clothing/head/padded/deathshroud
-			neck = /obj/item/clothing/neck/psycross/silver/divine/valdala
-			shoes = /obj/item/clothing/shoes/boots
-			pants = /obj/item/clothing/pants/trou/leather/mourning
-			armor = /obj/item/clothing/shirt/robe/valdala
-			backpack_contents = list(/obj/item/inqarticles/tallowpot, /obj/item/reagent_containers/food/snacks/tallow/red) // Needed for coffin sanctification, they get enough for one, the rest they must source themselves.
-			if(equipped_human.age == AGE_OLD)
-				l_hand = /obj/item/weapon/mace/cane/valdalan
-			else
-				backl = /obj/item/weapon/polearm/woodstaff/quarterstaff
 		if(/datum/patron/divine/pomette)
 			mask = /obj/item/clothing/face/operavisage
 			neck = /obj/item/clothing/neck/psycross/silver/divine/pomette

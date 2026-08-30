@@ -123,9 +123,14 @@
 	first_time_text = "CHURCH OF THE ELEMENTS"
 
 /area/indoors/town/church/crypt
-	name = "royal crypt"
+	name = "crypt"
 	icon_state = "crypt"
-	first_time_text = "THE ROYAL CRYPT"
+	first_time_text = "THE CRYPT OF OLD DOMA"
+
+/area/indoors/town/church/graveyard
+	name = "graveyard"
+	icon_state = "crypt"
+	first_time_text = "THE GRAVEYARD OF OLD DOMA"
 
 /area/indoors/town/church/inquisition
 	name = "inquisition"

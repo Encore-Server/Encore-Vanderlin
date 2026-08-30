@@ -71,7 +71,8 @@
 /datum/attribute_holder/sheet/job/templar/patron/valdala
 	raw_attribute_list = list(
 		/datum/attribute/skill/misc/medicine = 20,
-		/datum/attribute/skill/craft/alchemy = 20
+		/datum/attribute/skill/craft/alchemy = 20,
+		/datum/attribute/skill/craft/masonry = 20
 	)
 
 /datum/attribute_holder/sheet/job/templar/patron/valdala/flail
