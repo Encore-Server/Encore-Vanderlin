@@ -20717,6 +20717,7 @@
 /obj/item/reagent_containers/food/snacks/tallow/red,
 /obj/item/reagent_containers/food/snacks/tallow/red,
 /obj/item/inqarticles/tallowpot,
+/obj/item/flint,
 /turf/open/floor/ruinedwood/darker,
 /area/indoors/town/church/crypt)
 "nkC" = (
@@ -23560,10 +23561,10 @@
 /turf/open/floor/ruinedwood,
 /area/outdoors/town)
 "pbY" = (
-/obj/item/flint,
 /obj/structure/table/wood{
 	icon_state = "tablewood1"
 	},
+/obj/item/alch/herb/necralily,
 /turf/open/floor/ruinedwood/turned/darker,
 /area/indoors/town/church/crypt)
 "pcw" = (
