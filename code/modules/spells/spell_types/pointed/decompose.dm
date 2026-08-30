@@ -1,17 +1,18 @@
 // TODO touch spell?
 /datum/action/cooldown/spell/decompose
 	name = "Decompose"
-	desc = "Instantly rots the target, if humanoid creates a deadite. (Heretical)"
+	desc = "Instantly rots the target, if humanoid creates a deadite."
 	button_icon_state = "orison"
 	sound = 'sound/magic/whiteflame.ogg'
 	self_cast_possible = FALSE
 	spell_flags = SPELL_RITUOS
 	cast_range = 1
+	point_cost = 3
 	associated_skill = /datum/attribute/skill/magic/blood
-
-	required_form = FORM_DEATH
-	required_technique = TECHNIQUE_ALTERATION
-
+	attunements = list(
+		/datum/attunement/death = 0.3,
+		/datum/attunement/blood = 0.2,
+	)
 	invocation = "Return to rot."
 	invocation_type = INVOCATION_WHISPER
 

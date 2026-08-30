@@ -4,8 +4,9 @@
 	button_icon_state = "raiseskele"
 	sound = 'sound/items/beartrap.ogg'
 
-	required_form = FORM_DEATH
-	required_level = 2
+	attunements = list(
+		/datum/attunement/dark = 0.4,
+	)
 
 	charge_time = 2 SECONDS
 	charge_drain = 1

@@ -27,7 +27,7 @@
 	department_flag = COMPANY
 	display_order = JDO_GRABBER
 	job_flags = (JOB_ANNOUNCE_ARRIVAL | JOB_SHOW_IN_CREDITS | JOB_EQUIP_RANK | JOB_NEW_PLAYER_JOINABLE)
-	factions = list(FACTION_TOWN)
+	faction = FACTION_TOWN
 	total_positions = 99
 	spawn_positions = 99
 	bypass_lastclass = TRUE
@@ -35,8 +35,7 @@
 	allowed_races = RACES_PLAYER_ALL
 
 	outfit = /datum/outfit/grabber
-	knows_the_town = TRUE
-	known_by_the_town = TRUE
+	give_bank_account = TRUE
 	cmode_music = 'sound/music/cmode/towner/CombatTowner2.ogg'
 	exp_types_granted = list(EXP_TYPE_MERCHANT_COMPANY)
 	can_be_apprentice = TRUE

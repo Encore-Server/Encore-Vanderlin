@@ -8,7 +8,7 @@
 	job_flags = (JOB_ANNOUNCE_ARRIVAL | JOB_SHOW_IN_CREDITS | JOB_EQUIP_RANK | JOB_NEW_PLAYER_JOINABLE)
 	display_order = JDO_SHEPHERD
 	selection_color = JCOLOR_INQUISITION
-	factions = list(FACTION_TOWN)
+	faction = FACTION_TOWN
 	total_positions = 99
 	spawn_positions = 99
 	bypass_lastclass = TRUE
@@ -28,11 +28,11 @@
 	mind_traits = list(
 		TRAIT_KNOW_INQUISITION_DOORS
 	)
-	languages = list(/datum/language/newunsundered)
+	languages = list(/datum/language/oldunsundered)
 
 /datum/outfit/adept // Base outfit for Adepts, before loadouts
 	name = JOB_ADEPT
-	shoes = /obj/item/clothing/shoes/boots/darkboots
+	shoes = /obj/item/clothing/shoes/boots
 	mask = /obj/item/clothing/face/facemask/silver
 	beltr = /obj/item/storage/belt/pouch/coins/poor
 	pants = /obj/item/clothing/pants/trou/leather
@@ -64,4 +64,3 @@
 
 /datum/job/advclass/adept
 	exp_types_granted = list(EXP_TYPE_INQUISITION, EXP_TYPE_COMBAT)
-	factions = list(FACTION_INQUISITION, FACTION_TOWN)

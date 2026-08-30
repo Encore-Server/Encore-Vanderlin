@@ -12,6 +12,7 @@
 /mob/living/carbon/human/species/human/northern/base/Initialize()
 	. = ..()
 	AddElement(/datum/element/ai_retaliate)
+	set_species(/datum/species/human/northern)
 	AddComponent(/datum/component/ai_aggro_system)
 	set_patron(/datum/patron/inhumen/archdevils, TRUE)
 	job = "Archdevilsite Humen"

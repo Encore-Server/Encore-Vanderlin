@@ -4,8 +4,10 @@
 	button_icon_state = "frostbite"
 	sound = 'sound/magic/whiteflame.ogg'
 
-	required_form = FORM_ICE
-	required_technique = TECHNIQUE_DESTRUCTION
+	point_cost = 1
+	attunements = list(
+		/datum/attunement/ice = 0.7,
+	)
 
 	invocation = "Beam of Frost!!"
 	invocation_type = INVOCATION_SHOUT
@@ -24,7 +26,7 @@
 
 /datum/action/cooldown/spell/projectile/frost_bolt/ready_projectile(obj/projectile/to_fire, atom/target, mob/user, iteration)
 	. = ..()
-	to_fire.damage *= spell_magnitude_modifier
+	to_fire.damage *= attuned_strength
 
 /obj/projectile/magic/frostbolt
 	name = "frost bolt"

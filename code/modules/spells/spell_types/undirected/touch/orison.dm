@@ -32,6 +32,7 @@
 
 	spell_type = SPELL_MIRACLE
 	associated_skill = /datum/attribute/skill/magic/holy
+	school = SCHOOL_TRANSMUTATION
 
 	cooldown_time = 3 MINUTES
 

@@ -27,7 +27,7 @@
 
 	food_type = /obj/item/reagent_containers/food/snacks/meat/organ/lungs
 
-/obj/item/organ/lungs/applyOrganDamage(damage_amount, maximum)
+/obj/item/organ/lungs/applyOrganDamage(d, maximum)
 	. = ..()
 	if(!.)
 		return
@@ -85,3 +85,13 @@
 /obj/item/organ/lungs/regenerate_organ()
 	. = ..()
 	failed = FALSE
+
+/obj/item/organ/lungs/plasmaman
+	name = "plasma filter"
+	desc = ""
+	icon_state = "lungs-plasma"
+
+
+/obj/item/organ/lungs/slime
+	name = "vacuole"
+	desc = ""

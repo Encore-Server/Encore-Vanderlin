@@ -4,6 +4,7 @@
  * Create a single item, attaching [/datum/component/conjured_item]
  */
 /datum/action/cooldown/spell/undirected/conjure_item
+	school = SCHOOL_CONJURATION
 	invocation_type = INVOCATION_NONE
 	charge_required = FALSE
 

@@ -2,7 +2,6 @@
 	id = "bone_ward"
 	alert_type = /atom/movable/screen/alert/status_effect/buff/bone_ward
 	duration = -1
-	tick_interval = STATUS_EFFECT_NO_TICK
 
 /datum/status_effect/buff/bone_ward/on_apply()
 	. = ..()

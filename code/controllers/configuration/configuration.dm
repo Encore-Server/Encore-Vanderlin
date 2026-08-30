@@ -21,14 +21,7 @@
 	var/motd
 	var/policy
 
-	/// If the configuration is loaded
-	var/loaded = FALSE
-
 	var/static/regex/ic_filter_regex
-
-/datum/controller/configuration/stat_entry(msg)
-	msg = "Edit"
-	return msg
 
 /datum/controller/configuration/proc/admin_reload()
 	if(IsAdminAdvancedProcCall())
@@ -63,8 +56,6 @@
 	LoadPolicy()
 	LoadRelays()
 
-	loaded = TRUE
-
 	if(Master)
 		Master.OnConfigLoad()
 
@@ -90,10 +81,11 @@
 	var/list/_entries_by_type = list()
 	entries_by_type = _entries_by_type
 
-	for(var/datum/config_entry/E as anything in typesof(/datum/config_entry))	//typesof is faster in this case
-		if(IS_ABSTRACT(E))
+	for(var/I in typesof(/datum/config_entry))	//typesof is faster in this case
+		var/datum/config_entry/E = I
+		if(initial(E.abstract_type) == I)
 			continue
-		E = new E
+		E = new I
 		var/esname = E.name
 		var/datum/config_entry/test = _entries[esname]
 		if(test)
@@ -101,7 +93,7 @@
 			qdel(E)
 			continue
 		_entries[esname] = E
-		_entries_by_type[E.type] = E
+		_entries_by_type[I] = E
 
 /datum/controller/configuration/proc/RemoveEntry(datum/config_entry/CE)
 	entries -= CE.name
@@ -111,7 +103,7 @@
 	if(IsAdminAdvancedProcCall())
 		return
 
-	var/filename_to_test = world.system_type == MS_WINDOWS ? LOWER_TEXT(filename) : filename
+	var/filename_to_test = world.system_type == MS_WINDOWS ? lowertext(filename) : filename
 	if(filename_to_test in stack)
 		log_config("Warning: Config recursion detected ([english_list(stack)]), breaking!")
 		return
@@ -138,10 +130,10 @@
 		var/value = null
 
 		if(pos)
-			entry = LOWER_TEXT(copytext(L, 1, pos))
+			entry = lowertext(copytext(L, 1, pos))
 			value = copytext(L, pos + 1)
 		else
-			entry = LOWER_TEXT(L)
+			entry = lowertext(L)
 
 		if(!entry)
 			continue
@@ -280,10 +272,10 @@ Example config:
 		var/data = null
 
 		if(pos)
-			command = LOWER_TEXT(copytext(t, 1, pos))
+			command = lowertext(copytext(t, 1, pos))
 			data = copytext(t, pos + length(t[pos]))
 		else
-			command = LOWER_TEXT(t)
+			command = lowertext(t)
 
 		if(!command)
 			continue

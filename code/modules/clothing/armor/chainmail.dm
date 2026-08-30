@@ -12,7 +12,7 @@
 	sellprice = VALUE_STEEL_ARMOR
 
 	armor_class = AC_MEDIUM
-	armor_type = /datum/armor/maille
+	armor = ARMOR_MAILLE
 	body_parts_covered = COVERAGE_ALL_BUT_LEGS
 	prevent_crits = ALL_EXCEPT_BLUNT
 	max_integrity = INTEGRITY_STRONG
@@ -28,7 +28,7 @@
 	smeltresult = /obj/item/ingot/iron
 	sellprice = VALUE_IRON_ARMOR
 
-	armor_type = /datum/armor/maille/iron
+	armor = ARMOR_MAILLE_IRON
 	body_parts_covered = COVERAGE_ALL_BUT_LEGS
 	max_integrity = INTEGRITY_STRONG
 	item_weight = 8.2 KILOGRAMS
@@ -71,7 +71,7 @@
 	sellprice = VALUE_IRON_ARMOR_UNUSUAL
 	smeltresult = /obj/item/ingot/iron
 
-	armor_type = /datum/armor/maille/iron
+	armor = ARMOR_MAILLE_IRON
 	max_integrity = INTEGRITY_STRONG
 	item_weight = 11 KILOGRAMS
 

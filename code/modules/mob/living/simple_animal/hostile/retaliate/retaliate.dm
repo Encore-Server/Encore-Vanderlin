@@ -7,7 +7,7 @@
 	response_harm_simple = "kick"
 
 	gender = MALE
-	faction = list(FACTION_HOSTILE)
+	faction = list("rogueanimal")
 	mob_biotypes = MOB_ORGANIC|MOB_BEAST
 	footstep_type = FOOTSTEP_MOB_BAREFOOT
 	speak_chance = 1

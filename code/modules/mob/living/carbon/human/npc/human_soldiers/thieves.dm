@@ -1,5 +1,5 @@
 /mob/living/carbon/human/species/human/northern/thief //I'm a thief, give me your shit
-	faction = list(FACTION_HOSTILE)
+	faction = list("thieves")
 	ambushable = FALSE
 	dodgetime = 30
 	flee_in_pain = TRUE
@@ -12,6 +12,7 @@
 /mob/living/carbon/human/species/human/northern/thief/Initialize()
 	. = ..()
 	AddComponent(/datum/component/ai_aggro_system)
+	set_species(/datum/species/human/northern)
 	addtimer(CALLBACK(src, PROC_REF(after_creation)), 1 SECONDS)
 
 /mob/living/carbon/human/species/human/northern/thief/after_creation()

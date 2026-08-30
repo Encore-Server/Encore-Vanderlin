@@ -51,28 +51,32 @@
 	)
 	. += emissive_appearance(contained_node.icon, contained_node.icon_state, alpha = contained_node.alpha)
 
-/obj/item/essence_node_jar/interact_with_atom(atom/interacting_with, mob/living/user, list/modifiers)
-	if(!contained_node)
-		return NONE
+/obj/item/essence_node_jar/afterattack(atom/target, mob/user, proximity_flag, list/modifiers)
+	if(!proximity_flag)
+		. = ..()
+		return
 
-	var/turf/deploy_turf = get_turf(interacting_with)
+	if(!contained_node)
+		return
+
+	var/turf/deploy_turf = get_turf(target)
 	if(!deploy_turf)
-		return NONE
+		return
 
 	//to prevent the node getting put back insidethe harvester
 	if(locate(/obj/machinery/essence/harvester) in deploy_turf)
-		return NONE
+		return
 
 	if(deploy_turf.density)
 		to_chat(user, span_warning("You cannot deploy the node here - the ground is not suitable."))
-		return ITEM_INTERACT_BLOCKING
+		return
 
 	if(locate(/obj/structure/essence_node) in deploy_turf)
 		to_chat(user, span_warning("There's already an essence node here."))
-		return ITEM_INTERACT_BLOCKING
+		return
 
 	if(!do_after(user, 3 SECONDS, deploy_turf))
-		return ITEM_INTERACT_BLOCKING
+		return
 
 	var/obj/structure/essence_node/deployed_node = new(deploy_turf)
 	deployed_node.essence_type = contained_node.essence_type
@@ -89,8 +93,6 @@
 	qdel(contained_node)
 	contained_node = null
 	update_appearance(UPDATE_OVERLAYS)
-
-	return ITEM_INTERACT_SUCCESS
 
 /obj/item/essence_node_jar/examine(mob/user)
 	. = ..()

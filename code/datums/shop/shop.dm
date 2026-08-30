@@ -5,10 +5,6 @@
 	var/datum/tgui_triumph_shop/ui = new /datum/tgui_triumph_shop(mob.client)
 	ui.ui_interact(mob)
 
-/datum/preferences/proc/open_gossip(mob/mob)
-	var/datum/gossip_prefs/gossip = new /datum/gossip_prefs(mob)
-	gossip.ui_interact(mob)
-
 /datum/preferences/proc/load_triumph_shop_character_data(savefile/S)
 	if(!S)
 		return
@@ -121,12 +117,11 @@
 
 		slot++
 
-	if(length(player.prefs.single_round_loadout) || length(player.prefs.single_round_loadout_colors))
-		if(!player.is_donator())
-			player.prefs.single_round_loadout = list()
-			player.prefs.single_round_loadout_colors = list()
-			player.prefs.save_preferences()
-			player.prefs.save_character()
+	if(!player.is_donator())
+		player.prefs.single_round_loadout = list()
+		player.prefs.single_round_loadout_colors = list()
+	player.prefs.save_preferences()
+	player.prefs.save_character()
 
 /proc/apply_item_colors(obj/item/spawned_item, datum/mind/mind)
 	if(!spawned_item || !mind?.loadout_item_colors)
@@ -589,6 +584,7 @@
 		"type" = t.ticket_type,
 	))
 	owner.prefs.save_preferences()
+	owner.prefs.save_character()
 
 	log_game("TRIUMPH SHOP: [owner.ckey] converted [amount] triumphs into a triumph ticket.")
 	to_chat(owner.mob, span_notice("Converted <b>[amount] triumphs</b> into a tradeable ticket!"))
@@ -614,6 +610,7 @@
 		adjust_triumphs(owner, -item.triumph_cost_permanent, TRUE, "Triumph Shop: permanent unlock [item.name]", FALSE, TRUE)
 	owner.prefs.owned_loadout_items += path_str
 	owner.prefs.save_preferences()
+	owner.prefs.save_character()
 	log_game("TRIUMPH SHOP: [owner.ckey] permanently unlocked [path_str] for [item.triumph_cost_permanent] triumphs.")
 	to_chat(owner.mob, span_notice("Permanently unlocked [item.name]!"))
 	if(item.triumph_cost_permanent)
@@ -652,6 +649,7 @@
 	var/donator_free_use = owner.is_donator() && !(item.loadout_flags & LOADOUT_FLAG_NO_DONATOR_FREE)
 	owner.prefs.single_round_loadout += path_str
 	owner.prefs.save_preferences()
+	owner.prefs.save_character()
 	log_game("TRIUMPH SHOP: [owner.ckey] [donator_free_use ? "trialing" : "rented"] [path_str] [donator_free_use ? "(free, donator)" : "for one round ([CEILING(item.triumph_cost_permanent * 0.05, 1)] triumphs)"].")
 	to_chat(owner.mob, span_notice("[donator_free_use ? "Trying out [item.name] for this round (Patreon perk, no cost)." : "Rented [item.name] for this round."]"))
 	return TRUE
@@ -670,14 +668,20 @@
 		to_chat(owner.mob, span_warning("All 3 loadout slots are in use."))
 		return FALSE
 	owner.prefs.equipped_loadout += path_str
+	owner.prefs.save_preferences()
+	owner.prefs.save_character()
 	return TRUE
 
 /datum/tgui_triumph_shop/proc/handle_unequip(path_str)
 	if(path_str in owner.prefs.equipped_loadout)
 		owner.prefs.equipped_loadout -= path_str
+		owner.prefs.save_preferences()
+		owner.prefs.save_character()
 		return TRUE
 	if(path_str in owner.prefs.single_round_loadout)
 		owner.prefs.single_round_loadout -= path_str
+		owner.prefs.save_preferences()
+		owner.prefs.save_character()
 		var/datum/loadout_item/item = GLOB.loadout_items[text2path(path_str)]
 		var/donator_free_use = owner.is_donator() && !(item?.loadout_flags & LOADOUT_FLAG_NO_DONATOR_FREE)
 		if(!donator_free_use && CEILING(item?.triumph_cost_permanent * 0.05, 1) > 0)
@@ -795,6 +799,8 @@
 		color_store[path_str] = list("base" = null, "detail" = null)
 
 	color_store[path_str][layer] = hex
+	owner.prefs.save_preferences()
+	owner.prefs.save_character()
 
 	log_game("TRIUMPH SHOP: [owner.ckey] set [layer] color of [path_str] to [hex].")
 	return TRUE
@@ -815,4 +821,6 @@
 		return TRUE // already clear
 
 	color_store[path_str][layer] = null
+	owner.prefs.save_preferences()
+	owner.prefs.save_character()
 	return TRUE

@@ -82,10 +82,7 @@
 	if(duration != STATUS_EFFECT_PERMANENT || tick_interval != STATUS_EFFECT_NO_TICK) //don't process if we don't care
 		switch(processing_speed)
 			if(STATUS_EFFECT_FAST_PROCESS)
-				if(tick_interval == STATUS_EFFECT_NO_TICK)
-					START_PROCESSING(SSprocessing, src)
-				else
-					START_PROCESSING(SSfastprocess, src)
+				START_PROCESSING(SSfastprocess, src)
 			if(STATUS_EFFECT_NORMAL_PROCESS)
 				START_PROCESSING(SSprocessing, src)
 
@@ -122,7 +119,7 @@
 		tick(seconds_per_tick)
 	else if(tick_interval != STATUS_EFFECT_NO_TICK && time_until_next_tick <= 0)
 		time_until_next_tick = tick_interval // same here as well
-		tick(tick_interval * 0.1)
+		tick(tick_interval / 10)
 
 	if(QDELING(src))
 		return // tick deleted us, no need to continue
@@ -136,8 +133,7 @@
 /datum/status_effect/proc/on_apply()
 	SHOULD_CALL_PARENT(TRUE)
 
-	if(length(effectedstats))
-		owner.set_stat_modifier("[id]", effectedstats)
+	owner.set_stat_modifier("[id]", effectedstats)
 
 	if(mob_overlay_icon && mob_overlay_icon_state)
 		mob_visual = build_mob_icon()
@@ -153,8 +149,7 @@
 /datum/status_effect/proc/on_remove()
 	SHOULD_CALL_PARENT(TRUE)
 
-	if(length(effectedstats))
-		owner.remove_stat_modifier("[id]")
+	owner.remove_stat_modifier("[id]")
 
 	if(mob_visual)
 		QDEL_NULL(mob_visual)

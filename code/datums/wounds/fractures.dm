@@ -10,7 +10,7 @@
 	)
 	sound_effect = "wetbreak"
 	whp = 40
-	woundpain = 30
+	woundpain = 60
 	mob_overlay = "frac"
 	can_sew = FALSE
 	can_cauterize = FALSE
@@ -18,9 +18,11 @@
 	critical = TRUE
 	sleep_healing = 0 // no sleep healing that is dumb
 
-	bleed_rate = 2.5
-	clotting_threshold = 0.25
-	clotting_rate = 0.60
+	// Limbs hemorrhage but clot quickly
+	// Lose 164.3 blood over 19 ticks then clot
+	bleed_rate = 0.8
+	clotting_threshold = 0.2
+	clotting_rate = 0.02
 
 	limb_efficiency_reduction = 30
 
@@ -38,8 +40,6 @@
 
 	/// Whether or not we can be surgically set
 	var/can_set = TRUE
-	/// If we have been set
-	var/bone_set = FALSE
 	/// Emote we use when applied
 	var/gain_emote = "paincrit"
 
@@ -84,13 +84,13 @@
 	shake_camera(affected, 2, 2)
 
 /datum/wound/fracture/proc/set_bone()
-	if(!can_set || bone_set)
+	if(!can_set)
 		return FALSE
-	bone_set = TRUE
 	bleed_rate = set_bleed_rate
 	sleep_healing = max(sleep_healing, 1)
 	passive_healing = max(passive_healing, 1)
 	heal_wound(initial(whp)/1.6) //heal a little more than of maximum fracture
+	can_set = FALSE
 	record_round_statistic(STATS_WOUNDS_FIXED)
 	return TRUE
 
@@ -105,17 +105,14 @@
 	)
 	sound_effect = "headcrush"
 	whp = 80
-	bleed_rate = 3
-	clotting_threshold = 0.3
+	bleed_rate = 1.6
+	clotting_threshold = null
 
 	mortal = TRUE
 	viable_zones = list(BODY_ZONE_HEAD)
 	/// Brain case fractures (Depressed Cranium, Temporal) cause paralysis
 	var/paralysis = FALSE
 	var/knockout = 15 SECONDS
-
-/datum/wound/fracture/head/surgical
-	knockout = 0
 
 /datum/wound/fracture/head/on_mob_gain(mob/living/affected)
 	. = ..()
@@ -156,7 +153,7 @@
 		"The cranium is shattered!",
 	)
 	whp = 150
-	bleed_rate = 5	// Aooouuugh.. my brain..
+	bleed_rate = 2.3
 	paralysis = TRUE
 	knockout = 25 SECONDS
 	min_damage_dividend = 0.95
@@ -226,9 +223,9 @@
 	)
 	whp = 50
 
-	bleed_rate = 1
-	clotting_threshold = 0.3
-	clotting_rate = 0.1
+	bleed_rate = 0.4
+	clotting_threshold = 0.2
+	clotting_rate = 0.33
 	viable_zones = list(BODY_ZONE_PRECISE_MOUTH)
 
 /datum/wound/fracture/mouth/on_mob_gain(mob/living/affected)
@@ -284,9 +281,12 @@
 		"The ribs are mauled!",
 		"The ribcage caves in!",
 	)
-	woundpain = 25
+	woundpain = 50
 	whp = 50
-	bleed_rate = 0.5
+	// Lose 224.6 blood over 18 ticks then clot
+	bleed_rate = 0.4
+	clotting_threshold = 0.2
+	clotting_rate = 0.33
 	viable_zones = list(BODY_ZONE_CHEST)
 
 /datum/wound/fracture/chest/on_mob_gain(mob/living/affected)
@@ -304,9 +304,9 @@
 	)
 	whp = 50
 	gain_emote = "groin"
-	bleed_rate = 5
-	clotting_threshold = 1
-	clotting_rate = 0.5
+	bleed_rate = 1.6
+	clotting_threshold = 0.6
+	clotting_rate = 0.02
 	viable_zones = list(BODY_ZONE_PRECISE_GROIN)
 
 /datum/wound/fracture/groin/on_mob_gain(mob/living/affected)

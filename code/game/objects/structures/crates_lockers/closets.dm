@@ -9,7 +9,7 @@
 	drag_slowdown = 1.5		// Same as a prone mob
 	max_integrity = 200
 	integrity_failure = 0.25
-	armor_type = /datum/armor/closet
+	armor = list("blunt" = 20, "slash" = 20, "stab" = 20,  "piercing" = 10, "fire" = 70, "acid" = 60)
 
 	var/icon_door = null
 	var/icon_door_override = FALSE //override to have open overlay use icon different to its base's
@@ -218,15 +218,12 @@
 	if(!obj_broken)
 		bust_open()
 
-/obj/structure/closet/item_interaction(mob/living/user, obj/item/tool, list/modifiers)
+/obj/structure/closet/attackby(obj/item/I, mob/user, list/modifiers)
 	if(user in src)
-		return ITEM_INTERACT_BLOCKING
-
-	if(user.cmode)
-		return NONE
-
-	if(tool_interact(tool, user))
-		return ITEM_INTERACT_SUCCESS
+		return TRUE
+	if(tool_interact(I, user))
+		return TRUE
+	return ..()
 
 /obj/structure/closet/proc/tool_interact(obj/item/I, mob/user)//returns TRUE if attackBy call shouldnt be continued (because tool was used/closet was of wrong type), FALSE if otherwise
 	. = FALSE

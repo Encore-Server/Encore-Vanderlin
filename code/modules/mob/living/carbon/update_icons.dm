@@ -355,8 +355,6 @@
 
 
 /mob/living/carbon/update_body()
-	if(status_flags & BUILDING_ORGANS)
-		return
 	update_body_parts()
 
 /mob/living/carbon/proc/update_body_parts()

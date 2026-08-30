@@ -107,22 +107,20 @@
 	else
 		..()
 
-/obj/item/fishingrod/item_interaction(mob/living/user, obj/item/tool, list/modifiers)
+/obj/item/fishingrod/attackby(obj/item/I, mob/user, list/modifiers)
 	if(baited && reel && hook && line)
-		return NONE
+		return ..()
 
-	// This is disgusting
-	if(istype(tool, /obj/item/fishing/lure) || istype(tool, /obj/item/natural/worms) || istype(tool, /obj/item/natural/bundle/worms) || istype(tool, /obj/item/fishing/lure) || istype(tool, /obj/item/reagent_containers/food/snacks))
-		if(istype(tool, /obj/item/fishing/lure) || istype(tool, /obj/item/natural/worms) || istype(tool, /obj/item/fishing/lure))
+	if(istype(I, /obj/item/fishing/lure) || istype(I, /obj/item/natural/worms) || istype(I, /obj/item/natural/bundle/worms) || istype(I, /obj/item/fishing/lure) || istype(I, /obj/item/reagent_containers/food/snacks))
+		if(istype(I, /obj/item/fishing/lure) || istype(I, /obj/item/natural/worms) || istype(I, /obj/item/fishing/lure))
 			if(!baited)
-				tool.forceMove(src)
-				baited = tool
-				user.visible_message("<span class='notice'>[user] hooks something to [src].</span>", "<span class='notice'>I hook [tool] to [src].</span>")
+				I.forceMove(src)
+				baited = I
+				user.visible_message("<span class='notice'>[user] hooks something to [src].</span>", "<span class='notice'>I hook [I] to [src].</span>")
 				playsound(src, 'sound/foley/pierce.ogg', 50, FALSE)
-			return ITEM_INTERACT_SUCCESS
-		else if(istype(tool, /obj/item/natural/bundle/worms))
+		else if(istype(I, /obj/item/natural/bundle/worms))
 			if(!baited)
-				var/obj/item/natural/bundle/worms/W = tool
+				var/obj/item/natural/bundle/worms/W = I
 				baited = new W.stacktype(src)
 				W.amount--
 				if(W.amount == 1)
@@ -130,35 +128,31 @@
 					qdel(W)
 				user.visible_message("<span class='notice'>[user] hooks something to [src].</span>", "<span class='notice'>I hook [W.stacktype] to [src].</span>")
 				playsound(src, 'sound/foley/pierce.ogg', 50, FALSE)
-			return ITEM_INTERACT_SUCCESS
-		else if(!baited)
-			tool.forceMove(src)
-			baited = tool
-			user.visible_message("<span class='notice'>[user] hooks something to the line.</span>", "<span class='notice'>I hook [tool] to my line.</span>")
-			playsound(src, 'sound/foley/pierce.ogg', 50, FALSE)
-			return ITEM_INTERACT_SUCCESS
+		else
+			if(!baited)
+				I.forceMove(src)
+				baited = I
+				user.visible_message("<span class='notice'>[user] hooks something to the line.</span>", "<span class='notice'>I hook [I] to my line.</span>")
+				playsound(src, 'sound/foley/pierce.ogg', 50, FALSE)
 
-	else if(istype(tool, /obj/item/fishing)) //bait has a null attachtype and is accounted for in the previous check so i don't have to worry about it
-		var/obj/item/fishing/T = tool
+	else if(istype(I, /obj/item/fishing)) //bait has a null attachtype and is accounted for in the previous check so i don't have to worry about it
+		var/obj/item/fishing/T = I
 		switch(T.attachtype)
 			if("line")
 				if(!line)
-					tool.forceMove(src)
-					line = tool
-					to_chat(user, "<span class='notice'>I add [tool] to [src]...</span>")
+					I.forceMove(src)
+					line = I
+					to_chat(user, "<span class='notice'>I add [I] to [src]...</span>")
 			if("hook")
 				if(!hook)
-					tool.forceMove(src)
-					hook = tool
-					to_chat(user, "<span class='notice'>I add [tool] to [src]...</span>")
+					I.forceMove(src)
+					hook = I
+					to_chat(user, "<span class='notice'>I add [I] to [src]...</span>")
 			if("reel")
 				if(!reel)
-					tool.forceMove(src)
-					reel = tool
-					to_chat(user, "<span class='notice'>I add [tool] to [src]...</span>")
-
-		return ITEM_INTERACT_SUCCESS
-
+					I.forceMove(src)
+					reel = I
+					to_chat(user, "<span class='notice'>I add [I] to [src]...</span>")
 	update_appearance(UPDATE_OVERLAYS)
 
 /obj/item/fishingrod/attack_hand_secondary(mob/user, list/modifiers)
@@ -436,8 +430,7 @@
 	if(isopenspace(atom_hit_by_hook_projectile))
 		dropped = TRUE
 		while(isopenspace(atom_hit_by_hook_projectile))
-			var/turf/turf = get_turf(atom_hit_by_hook_projectile)
-			atom_hit_by_hook_projectile = GET_TURF_BELOW(turf) // we know this will always be a turf so no need for get_turf
+			atom_hit_by_hook_projectile = GET_TURF_BELOW(atom_hit_by_hook_projectile) // we know this will always be a turf so no need for get_turf
 
 	if(dropped)
 		for(var/mob/living/mob in atom_hit_by_hook_projectile.contents)

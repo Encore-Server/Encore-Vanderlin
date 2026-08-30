@@ -1,3 +1,6 @@
+GLOBAL_LIST_EMPTY(inqsupplies)
+
+
 /datum/inqports
 	var/name = null
 	var/item_type = null

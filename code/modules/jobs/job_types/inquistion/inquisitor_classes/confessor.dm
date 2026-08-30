@@ -63,7 +63,7 @@
 		TRAIT_FOREIGNER,
 	)
 
-	languages = list(/datum/language/newunsundered)
+	languages = list(/datum/language/oldunsundered)
 
 /datum/job/advclass/sacrestant/confessor/after_spawn(mob/living/carbon/human/spawned, client/player_client)
 	. = ..()
@@ -127,7 +127,7 @@
 	pants = /obj/item/clothing/pants/tights/colored/black
 	shoes = /obj/item/clothing/shoes/angrosboots
 	mask = /obj/item/clothing/face/facemask/steel/confessor
-	ring = /obj/item/clothing/ring/signet/psy
+	ring = /obj/item/clothing/ring/signet/silver
 	backpack_contents = list(
 		/obj/item/storage/keyring/inquisitor = 1,
 		/obj/item/rope/inqarticles/inquirycord = 1,

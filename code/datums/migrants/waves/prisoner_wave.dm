@@ -108,6 +108,7 @@
 /datum/outfit/mig_prisoner
 	name = "Convoy Prisoner"
 	pants = /obj/item/clothing/pants/loincloth/colored/brown
+	mask = /obj/item/clothing/face/facemask/prisoner
 
 /datum/migrant_role/prisoner_guard
 	name = "Convoy Guard"
@@ -172,7 +173,7 @@
 	beltl = /obj/item/weapon/mace
 	pants = /obj/item/clothing/pants/trou/leather
 	cloak = /obj/item/clothing/cloak/stabard/guard
-	shoes = /obj/item/clothing/shoes/boots/darkboots
+	shoes = /obj/item/clothing/shoes/boots
 	belt = /obj/item/storage/belt/leather
 	backpack_contents = list(
 		/obj/item/storage/keyring/guard,

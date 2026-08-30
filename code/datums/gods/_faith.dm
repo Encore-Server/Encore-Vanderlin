@@ -1,3 +1,5 @@
+GLOBAL_LIST_EMPTY(faith_list)
+
 /datum/faith
 	abstract_type = /datum/faith
 	/// Name of the faith
@@ -15,7 +17,7 @@
 		return FALSE
 
 	for(var/datum/patron/patron as anything in patrons)
-		patron = GLOB.patron_list[patron]
+		patron = GLOB.patrons_by_type[patron]
 
 		if(patron.preference_accessible(prefs))
 			return TRUE

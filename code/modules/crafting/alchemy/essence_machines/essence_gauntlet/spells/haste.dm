@@ -4,7 +4,9 @@
 	button_icon_state = "haste"
 	//sound = 'sound/magic/whiff.ogg'
 	cast_range = 0
+	point_cost = 4
 	has_visual_effects = FALSE
+	attunements = list(/datum/attunement/aeromancy)
 	essences = list(/datum/thaumaturgical_essence/air)
 
 /datum/action/cooldown/spell/essence/haste/cast(atom/cast_on)
@@ -13,14 +15,5 @@
 	//playsound(owner, 'sound/magic/whiff.ogg', 50, TRUE)
 
 	var/mob/living/L = owner
-	L.apply_status_effect(/datum/status_effect/buff/haste, 5 MINUTES)
+	L.apply_status_effect(/datum/status_effect/buff/haste, 10 SECONDS)
 	new /obj/effect/temp_visual/snake/swarm(null, L)
-
-/datum/action/cooldown/spell/essence/haste/spell
-	name = "Lesser Haste"
-	charge_required = TRUE
-	charge_time = 0.2 SECONDS
-	spell_cost = 25
-	spell_type = SPELL_MANA
-
-	required_form = FORM_AIR

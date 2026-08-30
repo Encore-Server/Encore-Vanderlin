@@ -94,7 +94,7 @@
 	shoes = /obj/item/clothing/shoes/angrosboots
 	belt = /obj/item/storage/belt/leather/black
 	beltl = /obj/item/storage/belt/pouch/coins/mid
-	ring = /obj/item/clothing/ring/signet/psy
+	ring = /obj/item/clothing/ring/signet/silver
 	backpack_contents = list(
 		/obj/item/storage/keyring/inquisitor = 1,
 		/obj/item/paper/inqslip/arrival/ortho = 1,

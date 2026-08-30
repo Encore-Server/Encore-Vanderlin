@@ -69,7 +69,7 @@
 
 /datum/outfit/pilgrim/noble
 	name = "Noble (Pilgrim)"
-	shoes = /obj/item/clothing/shoes/boots/darkboots
+	shoes = /obj/item/clothing/shoes/boots
 	backl = /obj/item/storage/backpack/satchel
 	neck = /obj/item/storage/belt/pouch/coins/veryrich
 	belt = /obj/item/storage/belt/leather

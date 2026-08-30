@@ -10,7 +10,8 @@
 /mob/living/carbon/Move(NewLoc, direct)
 	. = ..()
 	if(. && !(movement_type & FLOATING)) //floating is easy
-		for(var/datum/injury/injury as anything in all_injuries)
+		for(var/thing in all_injuries)
+			var/datum/injury/injury = thing
 			injury.movement_infect(src)
 
 		if(HAS_TRAIT(src, TRAIT_NOHUNGER))

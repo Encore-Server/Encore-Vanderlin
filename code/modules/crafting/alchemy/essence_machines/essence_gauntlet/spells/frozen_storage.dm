@@ -3,6 +3,8 @@
 	desc = "Prevents rot from ever touching."
 	button_icon_state = "fridigitation"
 	cast_range = 1
+	point_cost = 6
+	attunements = list(/datum/attunement/ice, /datum/attunement/blood)
 	essences = list(/datum/thaumaturgical_essence/frost, /datum/thaumaturgical_essence/water)
 
 /datum/action/cooldown/spell/fridigitation/cast(atom/cast_on, mob/user = usr)
@@ -22,10 +24,3 @@
 	else
 		to_chat(user, span_warning("That is not a valid target for Fridigitation."))
 		return FALSE
-
-/datum/action/cooldown/spell/essence/frozen_storage/spell
-	name = "Greater Fridigitation"
-	spell_cost = 5
-	spell_type = SPELL_MANA
-
-	required_form = FORM_ICE

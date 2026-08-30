@@ -2,7 +2,6 @@
 	group = "Instruments"
 	crate_name = "merchant guild's crate"
 	crate_type = /obj/structure/closet/crate/chest/merchant
-	abstract_type = /datum/supply_pack/instruments
 
 /datum/supply_pack/instruments/mbox
 	name = "Dwarven Music Box"

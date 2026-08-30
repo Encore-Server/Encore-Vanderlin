@@ -99,19 +99,25 @@
 	secondary_direction = dir
 	setDir(last_direction)
 
-/obj/structure/minecart_rail/multitool_act_secondary(mob/living/user, obj/item/tool)
-	rotate_direction(user)
-	return ITEM_INTERACT_SUCCESS
-
-/obj/structure/minecart_rail/attack_hand_secondary(mob/user, list/modifiers)
+/obj/structure/minecart_rail/attackby_secondary(obj/item/I, mob/user, list/modifiers)
 	. = ..()
-	var/choice = browser_input_list(user, "Choose a direction to cycle to when activated by a trigger.", "Directions", directions)
+	if(. == SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN)
+		return
+
+	. = SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
+
+	if(I?.tool_behaviour == TOOL_MULTITOOL)
+		rotate_direction(user)
+		return
+
+	var/choice = browser_input_list(user, "Choose a direction to cycle to when activated by a trigger.", src, list("Downwards Left Turn", "Downwards Right Turn", "Upwards Left Turn", "Upwards Right Turn", "Up and Down", "Left and Right"))
 	if(!choice || QDELETED(user) || QDELETED(src))
 		return
+
 	secondary_direction = directions[choice]
 
 /obj/structure/minecart_rail/proc/rotate_direction(mob/user)
-	var/choice = browser_input_list(user, "Rotate the rail towards a direction.", "Directions", directions)
+	var/choice = browser_input_list(user, "Rotate the rail towards a direction.", src, list("Downwards Left Turn", "Downwards Right Turn", "Upwards Left Turn", "Upwards Right Turn", "Up and Down", "Left and Right"))
 	if(!choice)
 		return
 
@@ -143,8 +149,7 @@
 				if(!structure.try_network_merge(src))
 					rotation_break()
 			else
-				var/result = structure.try_connect(src)
-				if(result == FALSE)
+				if(!structure.try_connect(src))
 					rotation_break()
 
 	if(!rotation_network)
@@ -158,10 +163,13 @@
 		return list()
 	. = ..()
 
-/obj/structure/minecart_rail/propagate_rotation_to_network(new_direction, new_rpm)
+/obj/structure/minecart_rail/find_and_propagate(list/checked, first = FALSE)
+	if(!length(checked))
+		checked = list()
+	checked |= src
 	if(ISDIAGONALDIR(dir))
-		return
-	..()
+		return checked
+	. = ..()
 
 /obj/structure/minecart_rail/set_rotations_per_minute(speed)
 	. = ..()

@@ -5,6 +5,8 @@
 	button_icon_state = "aerosolize"
 	sound = 'sound/magic/whiteflame.ogg'
 
+	point_cost = 1
+
 	charge_required = FALSE
 	cooldown_time = 20 SECONDS
 	spell_cost = 30
@@ -12,9 +14,10 @@
 	invocation = "Create cloud!"
 	invocation_type = INVOCATION_SHOUT
 
-	required_form = FORM_WATER
-	required_technique = TECHNIQUE_ALTERATION
-	required_level = 4
+	attunements = list(
+		/datum/attunement/blood = 0.3,
+		/datum/attunement/death = 0.3,
+	)
 
 /datum/action/cooldown/spell/undirected/create_cloud/is_valid_target(atom/cast_on)
 	. = ..()
@@ -48,5 +51,4 @@
 	var/datum/effect_system/smoke_spread/chem/smoke = new
 	smoke.set_up(reagents, 3, get_turf(owner), FALSE)
 	smoke.start()
-	held_item.reagents.remove_all(held_item.reagents.total_volume)
 

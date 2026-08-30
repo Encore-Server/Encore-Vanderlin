@@ -43,15 +43,10 @@
 	allows_disabling = TRUE
 	default_disabled = TRUE
 
-/datum/customizer/bodypart_feature/accessory/is_allowed(mob/living/carbon/human/human)
+/datum/customizer/bodypart_feature/accessory/is_allowed(datum/preferences/prefs)
 	. = ..()
-	if(istype(human))//shitcode but fuck man
-		if(human.age == AGE_CHILD)
-			return FALSE
-	else
-		var/datum/preferences/pref = human
-		if(pref.read_preference(/datum/preference/choiced/age) == AGE_CHILD)
-			return FALSE
+	if(prefs.age == AGE_CHILD)
+		return FALSE
 
 /datum/customizer_choice/bodypart_feature/accessory
 	name = "Accessory"

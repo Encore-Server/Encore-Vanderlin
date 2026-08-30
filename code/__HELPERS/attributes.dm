@@ -25,11 +25,11 @@
 
 /proc/initialize_skill_categories()
 	. = list()
-
-	for(var/datum/attribute/skill/skill as anything in GLOB.all_skills)
-		skill = GET_ATTRIBUTE_DATUM(skill)
+	var/datum/attribute/skill/skill
+	for(var/skill_type in GLOB.all_skills)
+		skill = GET_ATTRIBUTE_DATUM(skill_type)
 		LAZYINITLIST(.[skill.category])
-		.[skill.category] += skill.type
+		.[skill.category] += skill_type
 
 /proc/GET_MOB_SKILL_SPEED_MOD(mob/mob, datum/attribute/skill/skill)
 	var/datum/attribute/skill/singleton = GET_ATTRIBUTE_DATUM(skill)

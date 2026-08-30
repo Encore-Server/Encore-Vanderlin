@@ -63,8 +63,7 @@
 			if(!structure.try_network_merge(src))
 				rotation_break()
 		else
-			var/result = structure.try_connect(src)
-			if(result == FALSE)
+			if(!structure.try_connect(src))
 				rotation_break()
 
 	if(!rotation_network)

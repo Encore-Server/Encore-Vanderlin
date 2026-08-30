@@ -70,7 +70,7 @@ GLOBAL_LIST_EMPTY(active_chimeric_surgeries)
 	. = ..()
 	if(!stored_node)
 		return
-	name = "[LOWER_TEXT(stored_node.name)] humor"
+	name = "[lowertext(stored_node.name)] humor"
 
 /mob/living/proc/generate_random_chimeric_organs(amount = 3)
 	for(var/i=1 to amount)
@@ -78,34 +78,34 @@ GLOBAL_LIST_EMPTY(active_chimeric_surgeries)
 		var/obj/item/organ/new_organ = new organ_type(get_turf(src))
 		new_organ.generate_chimeric_organ(src)
 
-/obj/item/chimeric_node/item_interaction(mob/living/user, obj/item/tool, list/modifiers)
+/obj/item/chimeric_node/attackby(obj/item/I, mob/user, list/modifiers)
 	var/datum/chimeric_surgery_state/surgery = GLOB.active_chimeric_surgeries?[src]
 
-	if(istype(tool, /obj/item/weapon/surgery/scalpel))
+	if(istype(I, /obj/item/weapon/surgery/scalpel))
 		if(!surgery)
 			start_node_surgery(user)
-		return ITEM_INTERACT_SUCCESS
+		return TRUE
 
 	if(!surgery)
-		return NONE
+		return ..()
 
-	if(istype(tool, /obj/item/weapon/surgery/hemostat))
+	if(istype(I, /obj/item/weapon/surgery/hemostat))
 		if(!surgery.extracted)
 			surgery_step_extract(user)
-		return ITEM_INTERACT_SUCCESS
+		return TRUE
 
-	if(istype(tool, /obj/item/weapon/surgery/retractor))
+	if(istype(I, /obj/item/weapon/surgery/retractor))
 		if(surgery.extracted && !surgery.selected_node)
 			surgery_step_select_node(user)
-		return ITEM_INTERACT_SUCCESS
+		return TRUE
 
-	if(istype(tool, /obj/item/weapon/surgery/cautery))
+	if(istype(I, /obj/item/weapon/surgery/cautery))
 		if(surgery.selected_node)
 			surgery_step_seal(user)
-		return ITEM_INTERACT_SUCCESS
+		return TRUE
 
 	to_chat(user, span_warning("That tool isn't useful at this stage of the surgery."))
-	return ITEM_INTERACT_BLOCKING
+	return TRUE
 
 /obj/item/chimeric_node/proc/start_node_surgery(mob/user)
 	if(!stored_node)

@@ -65,7 +65,7 @@
 	if(source == host)
 		hasprox_receiver?.HasProximity(host)
 
-/datum/proximity_monitor/proc/on_z_change(turf/old_turf, turf/new_turf)
+/datum/proximity_monitor/proc/on_z_change()
 	SIGNAL_HANDLER
 	return
 

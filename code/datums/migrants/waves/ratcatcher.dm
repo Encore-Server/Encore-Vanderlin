@@ -46,7 +46,7 @@
 	head = /obj/item/clothing/head/helmet/leather
 	gloves = /obj/item/clothing/gloves/fingerless
 	pants = /obj/item/clothing/pants/tights/colored/vagrant
-	shoes = /obj/item/clothing/shoes/boots/darkboots
+	shoes = /obj/item/clothing/shoes/boots
 	belt = /obj/item/storage/belt/leather
 	beltr = /obj/item/flashlight/flare/torch/lantern
 	beltl = /obj/item/storage/belt/pouch/coins/poor

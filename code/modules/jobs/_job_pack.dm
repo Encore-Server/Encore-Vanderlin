@@ -13,15 +13,15 @@ GLOBAL_LIST_INIT(job_pack_singletons, init_jobpacks())
 	/// Name for identification
 	var/name = "Generic"
 	/// list of sheets to apply when picking this (should realistically only be 1)
-	var/list/pack_sheets
+	var/list/pack_sheets = list()
 	/// List of Traits
-	var/list/pack_traits
+	var/list/pack_traits = list()
 	/// List of spells
-	var/list/pack_spells
+	var/list/pack_spells = list()
 	/// Associative list of item to slot, set null slot for auto
-	var/list/pack_contents
+	var/list/pack_contents = list()
 	/// Associative list of item paths to number of items for backpack storage
-	var/list/pack_backpack_contents
+	var/list/pack_backpack_contents = list()
 
 /datum/job_pack/proc/can_pick_pack(mob/living/carbon/human/picker, list/previous_picked_types)
 	return TRUE

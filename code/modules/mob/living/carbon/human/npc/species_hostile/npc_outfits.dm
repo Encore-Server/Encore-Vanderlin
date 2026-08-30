@@ -44,7 +44,7 @@
 
 	// Shoes
 	if(prob(60))
-		shoes = /obj/item/clothing/shoes/boots/darkboots
+		shoes = /obj/item/clothing/shoes/boots
 	else
 		shoes = /obj/item/clothing/shoes/boots/leather
 

@@ -44,7 +44,7 @@
 	)
 	isgoodguy = TRUE
 	chooses_name = FALSE
-	ascension_level = 4
+	ascended = 4
 	outfit = /datum/outfit/daewalker
 	patron = /datum/patron/divine/visires
 	innate_traits = list(
@@ -106,7 +106,7 @@
 	blade.grant_language(/datum/language/celestial)
 	blade.grant_language(/datum/language/newunsundered)
 	blade.grant_language(/datum/language/oldunsundered)
-	blade.add_quirk(/datum/quirk/vice/addiction/godfearing)
+	blade.add_quirk(/datum/quirk/vice/godfearing)
 
 	RegisterSignal(blade, COMSIG_ATOM_EXAMINE, PROC_REF(on_examine))
 
@@ -185,6 +185,7 @@
 	wdefense = ULTMATE_PARRY
 	max_blade_int = 50000
 	max_integrity = 50000
+	randomize_blade_int = FALSE
 	resistance_flags = INDESTRUCTIBLE
 	sellprice = 0
 	slot_flags = 0 //scabbard only
@@ -258,7 +259,7 @@
 	icon_state = "psydonboots"
 	item_state = "psydonboots"
 	color = CLOTHING_ROYAL_BLACK
-	armor_type = /datum/armor/boots/leather/daewalker
+	armor = list("blunt" = 80, "slash" = 60, "stab" = 40, "piercing" = 0,"fire" = 0, "acid" = 0)
 	prevent_crits = list(BCLASS_CUT, BCLASS_BLUNT, BCLASS_TWIST, BCLASS_CHOP)
 	max_integrity = INTEGRITY_STRONG
 	misc_flags = CRAFTING_TEST_EXCLUDE
@@ -269,13 +270,13 @@
 
 /obj/item/clothing/pants/trou/beltpants/daewalker
 	color = CLOTHING_ROYAL_BLACK
-	armor_type = /datum/armor/pants/leather/daewalker
+	armor = list("blunt" = 70, "slash" = 60, "stab" = 30, "piercing" = 20,"fire" = 0, "acid" = 0)
 	prevent_crits = list(BCLASS_CUT, BCLASS_BLUNT, BCLASS_TWIST)
 	max_integrity = INTEGRITY_STRONG
 	misc_flags = CRAFTING_TEST_EXCLUDE
 
 /obj/item/clothing/wrists/bracers/leather/scabbard/daewalker
-	armor_type = /datum/armor/wrist/leather/advanced
+	armor = list("blunt" = 60, "slash" = 40, "stab" = 20, "piercing" = 0, "fire" = 0, "acid" = 0)
 	prevent_crits = list(BCLASS_CUT, BCLASS_BLUNT, BCLASS_TWIST)
 	max_integrity = INTEGRITY_STANDARD + 50
 	misc_flags = CRAFTING_TEST_EXCLUDE

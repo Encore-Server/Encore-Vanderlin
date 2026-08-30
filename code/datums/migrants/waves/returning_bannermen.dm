@@ -80,7 +80,7 @@
 	shirt = /obj/item/clothing/shirt/undershirt/colored/guardsecond
 	armor = /obj/item/clothing/armor/medium/scale
 	neck = /obj/item/clothing/neck/gorget
-	shoes = /obj/item/clothing/shoes/boots/darkboots
+	shoes = /obj/item/clothing/shoes/boots
 	belt = /obj/item/storage/belt/leather
 	beltr = /obj/item/weapon/sword/arming
 	beltl = /obj/item/storage/keyring/guard
@@ -141,7 +141,7 @@
 	backr = /obj/item/gun/ballistic/bow
 	shirt = /obj/item/clothing/shirt/shortshirt/colored/merc
 	cloak = /obj/item/clothing/cloak/stabard/guard
-	shoes = /obj/item/clothing/shoes/boots/darkboots
+	shoes = /obj/item/clothing/shoes/boots
 	belt = /obj/item/storage/belt/leather
 	beltl = /obj/item/storage/keyring/guard
 	beltr = /obj/item/ammo_holder/quiver/arrows
@@ -207,7 +207,7 @@
 	backr = /obj/item/gun/ballistic/bow/cross
 	shirt = /obj/item/clothing/shirt/shortshirt/colored/merc
 	cloak = /obj/item/clothing/cloak/stabard/guard
-	shoes = /obj/item/clothing/shoes/boots/darkboots
+	shoes = /obj/item/clothing/shoes/boots
 	belt = /obj/item/storage/belt/leather
 	beltl = /obj/item/storage/keyring/guard
 	beltr = /obj/item/ammo_holder/quiver/bolts
@@ -277,7 +277,7 @@
 	beltl = /obj/item/weapon/mace
 	pants = /obj/item/clothing/pants/trou/leather
 	cloak = /obj/item/clothing/cloak/stabard/guard
-	shoes = /obj/item/clothing/shoes/boots/darkboots
+	shoes = /obj/item/clothing/shoes/boots
 	belt = /obj/item/storage/belt/leather
 
 /datum/migrant_role/pikeman_bannerman
@@ -331,18 +331,17 @@
 	beltr = /obj/item/weapon/sword/scimitar/messer
 	pants = /obj/item/clothing/pants/trou/leather
 	cloak = /obj/item/clothing/cloak/stabard/guard
-	shoes = /obj/item/clothing/shoes/boots/darkboots
+	shoes = /obj/item/clothing/shoes/boots
 	belt = /obj/item/storage/belt/leather
 
-/datum/job/migrant/pikeman_bannerman/on_roundstart(mob/living/carbon/human/equipped_human, client/player_client)
+/datum/outfit/pikeman_bannerman/pre_equip(mob/living/carbon/human/equipped_human, visuals_only)
 	. = ..()
-	var/static/list/weapons = list("Spear", "Bardiche")
-	var/weapon_choice = browser_input_list(equipped_human, "CHOOSE YOUR WEAPON.", "FOR THE CROWN.", weapons)
-	switch(weapon_choice)
+	var/weapontype = pickweight(list("Spear" = 6, "Bardiche" = 4))
+	switch(weapontype)
 		if("Spear")
-			equipped_human.equip_to_slot_or_del(new /obj/item/weapon/polearm/spear, ITEM_SLOT_BACK_R, TRUE)
+			backr = /obj/item/weapon/polearm/spear
 		if("Bardiche")
-			equipped_human.equip_to_slot_or_del(new /obj/item/weapon/polearm/halberd/bardiche, ITEM_SLOT_BACK_R, TRUE)
+			backr = /obj/item/weapon/polearm/halberd/bardiche
 
 /datum/migrant_wave/returning_bannermen
 	name = "The Bannermen's Return"

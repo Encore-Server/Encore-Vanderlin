@@ -46,7 +46,7 @@
 		TRAIT_DODGEEXPERT,
 	)
 
-	languages = list(/datum/language/newunsundered)
+	languages = list(/datum/language/celestial)
 
 /datum/job/advclass/combat/lakkariancleric/after_spawn(mob/living/carbon/human/spawned, client/player_client)
 	. = ..()
@@ -56,6 +56,8 @@
 		var/datum/devotion/devotion = new holder()
 		devotion.make_cleric()
 		devotion.grant_to(spawned)
+
+	spawned.virginity = TRUE
 
 /datum/job/advclass/combat/lakkariancleric/on_roundstart(mob/living/carbon/human/spawned, client/player_client)
 	. = ..()

@@ -15,6 +15,7 @@ SUBSYSTEM_DEF(throwing)
 	msg = "P:[length(processing)]"
 	return ..()
 
+
 /datum/controller/subsystem/throwing/fire(resumed = 0)
 	if (!resumed)
 		src.currentrun = processing.Copy()
@@ -23,7 +24,7 @@ SUBSYSTEM_DEF(throwing)
 	var/list/currentrun = src.currentrun
 
 	while(length(currentrun))
-		var/atom/movable/AM = currentrun[length(currentrun)]
+		var/atom/movable/AM = currentrun[currentrun.len]
 		var/datum/thrownthing/TT = currentrun[AM]
 		currentrun.len--
 		if (QDELETED(AM) || QDELETED(TT))
@@ -57,7 +58,7 @@ SUBSYSTEM_DEF(throwing)
 	///The speed of the projectile thrownthing being thrown.
 	var/speed
 	///If a mob is the one who has thrown the object, then it's moved here. This can be null and must be null checked before trying to use it.
-	var/datum/weakref/thrower
+	var/mob/thrower
 	///A variable that helps in describing objects thrown at an angle, if it should be moved diagonally first or last.
 	var/diagonals_first
 	///Set to TRUE if the throw is exclusively diagonal (45 Degree angle throws for example)
@@ -100,8 +101,7 @@ SUBSYSTEM_DEF(throwing)
 	src.init_dir = init_dir
 	src.maxrange = maxrange
 	src.speed = speed
-	if(thrower)
-		src.thrower = WEAKREF(thrower)
+	src.thrower = thrower
 	src.diagonals_first = diagonals_first
 	src.force = force
 	src.gentle = gentle
@@ -124,15 +124,9 @@ SUBSYSTEM_DEF(throwing)
 
 	qdel(src)
 
-/// Returns the thrower, or null
-/datum/thrownthing/proc/get_thrower()
-	. = thrower?.resolve()
-	if(isnull(.))
-		thrower = null
-
 /datum/thrownthing/proc/tick()
 	var/atom/movable/AM = thrownthing
-	if(!isturf(AM.loc) || !AM.throwing)
+	if (!isturf(AM.loc) || !AM.throwing)
 		finalize()
 		return
 
@@ -141,18 +135,17 @@ SUBSYSTEM_DEF(throwing)
 		return
 
 	var/atom/movable/actual_target = initial_target?.resolve()
-	var/atom/thrower = get_thrower()
 
 	if(dist_travelled) //to catch sneaky things moving on our tile while we slept
 		for(var/atom/movable/obstacle as anything in get_turf(thrownthing))
-			if(obstacle == thrownthing || (obstacle == thrower && !ismob(thrownthing)))
+			if (obstacle == thrownthing || (obstacle == thrower && !ismob(thrownthing)))
 				continue
 			if(ismob(obstacle) && thrownthing.pass_flags & PASSMOB && (obstacle != actual_target))
 				continue
 			if(obstacle.pass_flags_self & LETPASSTHROW)
 				if(!(ismob(thrownthing) || ismobholder(thrownthing)) || !(obstacle.pass_flags_self & NOTLETPASSTHROWNMOB))
 					continue
-			if(obstacle == actual_target || (obstacle.density && !(obstacle.flags_1 & ON_BORDER_1) && !(obstacle in AM.buckled_mobs) && !(AM in obstacle.buckled_mobs)))
+			if (obstacle == actual_target || (obstacle.density && !(obstacle.flags_1 & ON_BORDER_1) && !(obstacle in AM.buckled_mobs)))
 				finalize(TRUE, obstacle)
 				return
 
@@ -162,22 +155,22 @@ SUBSYSTEM_DEF(throwing)
 
 	//calculate how many tiles to move, making up for any missed ticks.
 	var/tilestomove = CEILING(min(((((world.time+world.tick_lag) - start_time + delayed_time) * speed) - (dist_travelled ? dist_travelled : -1)), speed*MAX_TICKS_TO_MAKE_UP) * (world.tick_lag * SSthrowing.wait), 1)
-	while(tilestomove-- > 0)
-		if((dist_travelled >= maxrange || AM.loc == target_turf))
+	while (tilestomove-- > 0)
+		if ((dist_travelled >= maxrange || AM.loc == target_turf))
 			finalize()
 			return
 
-		if(dist_travelled <= max(dist_x, dist_y)) //if we haven't reached the target yet we home in on it, otherwise we use the initial direction
+		if (dist_travelled <= max(dist_x, dist_y)) //if we haven't reached the target yet we home in on it, otherwise we use the initial direction
 			step = get_step(AM, get_dir(AM, target_turf))
 		else
 			step = get_step(AM, init_dir)
 
-		if(!pure_diagonal && !diagonals_first) // not a purely diagonal trajectory and we don't want all diagonal moves to be done first
-			if(diagonal_error >= 0 && max(dist_x,dist_y) - dist_travelled != 1) //we do a step forward unless we're right before the target
+		if (!pure_diagonal && !diagonals_first) // not a purely diagonal trajectory and we don't want all diagonal moves to be done first
+			if (diagonal_error >= 0 && max(dist_x,dist_y) - dist_travelled != 1) //we do a step forward unless we're right before the target
 				step = get_step(AM, dx)
 			diagonal_error += (diagonal_error < 0) ? dist_x/2 : -dist_y
 
-		if(!step) // going off the edge of the map makes get_step return null, don't let things go off the edge
+		if (!step) // going off the edge of the map makes get_step return null, don't let things go off the edge
 			finalize()
 			return
 
@@ -192,19 +185,16 @@ SUBSYSTEM_DEF(throwing)
 			finalize(TRUE, actual_target)
 			return
 
-		if(dist_travelled > MAX_THROWING_DIST)
+		if (dist_travelled > MAX_THROWING_DIST)
 			finalize()
 			return
 
 /datum/thrownthing/proc/finalize(hit = FALSE, target=null)
 	set waitfor = FALSE
-
 	//done throwing, either because it hit something or it finished moving
 	if(!thrownthing)
 		return
-
 	thrownthing.throwing = null
-
 	if(!hit)
 		for(var/atom/movable/obstacle as anything in get_turf(thrownthing)) //looking for our target on the turf we land on.
 			if(obstacle == target)
@@ -218,7 +208,6 @@ SUBSYSTEM_DEF(throwing)
 			var/turf/T = get_turf(thrownthing)
 			if(T?.zFall(thrownthing)) // throwing has been nulled so this works
 				var/atom/movable/actual_target = initial_target?.resolve()
-				var/atom/thrower = get_thrower()
 				for(var/atom/movable/obstacle as anything in get_turf(thrownthing))
 					if (obstacle == thrownthing || (obstacle == thrower && !ismob(thrownthing)))
 						continue
@@ -242,11 +231,8 @@ SUBSYSTEM_DEF(throwing)
 		if(QDELETED(thrownthing)) //throw_impact can delete things, such as glasses smashing
 			return //deletion should already be handled by on_thrownthing_qdel()
 
-	if(callback)
+	if (callback)
 		callback.Invoke()
-		// Same can happen in the callback
-		if(QDELETED(thrownthing))
-			return
 
 	if(!thrownthing?.currently_z_moving) // I don't think you can zfall while thrown but hey, just in case.
 		var/turf/T = get_turf(thrownthing)

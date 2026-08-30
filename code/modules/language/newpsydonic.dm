@@ -1,6 +1,6 @@
 /datum/language/newunsundered
 	name = "Unsundered"
-	icon_state = "celestial"
+	icon_state = "psydon_new"
 	spans = list(SPAN_ANGROS)
 	desc = "The common language of the Katholikos, evolved from the original Aspect's tongue over centuries."
 	speech_verb = "states"

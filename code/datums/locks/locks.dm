@@ -38,28 +38,28 @@
 
 /datum/lock/key/vendor
 	locked = TRUE
-	difficulty = LOCK_EXPERT
+	difficulty = 3
 	requires_turning = FALSE
 
 /datum/lock/key/goldface
 	lockid_list = list(ACCESS_MERCHANT)
 	locked = TRUE
-	difficulty = LOCK_EXPERT
+	difficulty = 3
 
 /datum/lock/key/purity
 	lockid_list = list(ACCESS_APOTHECARY)
 	locked = TRUE
-	difficulty = LOCK_EXPERT
+	difficulty = 3
 
 /datum/lock/key/nerve
 	lockid_list = list(ACCESS_STEWARD)
 	locked = TRUE
-	difficulty = LOCK_NOVICE
+	difficulty = 5
 
 /datum/lock/key/hailer
 	lockid_list = list(ACCESS_TOMBWARDEN)
 	locked = TRUE
-	difficulty = LOCK_LEGENDARY
+	difficulty = 1
 
 ///// Multiple key locks
 /datum/lock/key/pillory

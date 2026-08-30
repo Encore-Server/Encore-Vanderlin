@@ -26,7 +26,7 @@
 				. += "Suture or bandage cuts, bites, or punctures to allow them to heal."
 			if(WOUND_BLUNT, WOUND_LASH)
 				. += "Bandage bruises and lashes to allow them to heal."
-			if(WOUND_BURN, WOUND_INTENSE_BURN)
+			if(WOUND_BURN)
 				. += "Disinfect and salve burns to allow them to heal."
 			if("germs")
 				. += "Infected injuries can be disinfected by covering them in beer or other disinfectent soaked bandages."
@@ -37,19 +37,20 @@
 	. = ..()
 	if(owner)
 		return
-
 	var/list/head_status = list()
 	if(!brain)
 		head_status += "<span class='dead'>The brain is missing.</span>"
 
 	if(!eyes_left)
 		head_status += "<span class='warning'>The left eye is missing.</span>"
-
 	if(!eyes_right)
 		head_status += "<span class='warning'>The right eye is missing.</span>"
 
 	if(!ears)
 		head_status += "<span class='warning'>The ears are missing.</span>"
+
+	if(!tongue)
+		head_status += "<span class='warning'>The tongue is missing.</span>"
 
 	if(length(head_status))
 		. += "<B>Organs:</B>"
@@ -235,7 +236,7 @@
 			if(get_cut(ignore_gauze = TRUE))
 				status += span_artery(uppertext("cut [possible_artery.name]"))
 			else
-				status += span_artery(uppertext("bruised [possible_artery.name]"))
+				status += span_artery(uppertext("internal bleeding"))
 
 	if(skeletonized)
 		status += "<span class='dead'>SKELETON</span>"
@@ -279,7 +280,8 @@
 /obj/item/bodypart/proc/get_injuries_desc()
 	var/list/flavor_text = list()
 	var/list/injury_descriptors = list()
-	for(var/datum/injury/injury as anything in injuries)
+	for(var/thing in injuries)
+		var/datum/injury/injury = thing
 		var/this_injury_desc = injury.get_desc()
 		if(!this_injury_desc)
 			continue
@@ -325,6 +327,9 @@
 		var/clean_final = ""
 		final_text += injury
 		clean_final = injury
+		if(findtext(final_text, "[COLOR_PALE_RED_GRAY];"))
+			final_text += "<span style='color: [COLOR_PALE_RED_GRAY];'>s</span>"
+			clean_final += "<span style='color: [COLOR_PALE_RED_GRAY];'>s</span>"
 		switch(injury_descriptors[injury])
 			if(-INFINITY to 1)
 				final_text = ""

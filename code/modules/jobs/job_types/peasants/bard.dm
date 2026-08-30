@@ -21,7 +21,6 @@
 
 /datum/job/bard
 	title = JOB_BARD
-	alt_titles = list("Carouser", "Piper", "Flutist", "Guitarist", "Fiddler", "Drummer")
 	tutorial = "Bards make up one of the largest populations of registered adventurers in Domotan, \
 	mostly because they are the last ones in a party to die. \
 	Their wish is to experience the greatest adventures of the age and write amazing songs \
@@ -29,12 +28,10 @@
 	department_flag = PEASANTS
 	display_order = JDO_BARD
 	job_flags = (JOB_ANNOUNCE_ARRIVAL | JOB_SHOW_IN_CREDITS | JOB_EQUIP_RANK | JOB_NEW_PLAYER_JOINABLE)
-	factions = list(FACTION_TOWN)
+	faction = FACTION_TOWN
 	total_positions = 99
 	spawn_positions = 99
 	bypass_lastclass = TRUE
-	knows_the_town = TRUE
-	known_by_the_town = TRUE
 
 	allowed_races = RACES_PLAYER_ALL
 	outfit = /datum/outfit/bard
@@ -80,7 +77,7 @@
 /datum/outfit/bard
 	name = JOB_BARD
 	head = /obj/item/clothing/head/bardhat
-	shoes = /obj/item/clothing/shoes/boots/darkboots
+	shoes = /obj/item/clothing/shoes/boots
 	pants = /obj/item/clothing/pants/tights/colored/random
 	shirt = /obj/item/clothing/shirt/tunic/noblecoat
 	belt = /obj/item/storage/belt/leather

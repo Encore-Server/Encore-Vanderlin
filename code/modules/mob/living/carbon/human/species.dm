@@ -1,3 +1,6 @@
+// This code handles different species in the game.
+GLOBAL_LIST_EMPTY(roundstart_species)
+
 /datum/species
 	/// The name used for examine text and so on
 	var/name
@@ -134,11 +137,11 @@
 	var/say_mod = "says"
 
 	/// Multipler for how quickly nutrition decreases
-	var/nutrition_mod = 0.25
+	var/nutrition_mod = 1
 	/// Multiplier for how quickly hygiene decreases
-	var/hygiene_mod = 0.1
+	var/hygiene_mod = 1
 	/// Multipler for blood loss
-	var/bleed_mod = 0.5
+	var/bleed_mod = 1
 	/// Multipler for pain
 	var/pain_mod = 1
 	/// Electrocution coeffcient
@@ -425,15 +428,12 @@
 
 			var/list/language_map = list(
 				/datum/language/common = "Common",
-				/datum/language/elvish = "Elven",
-				/datum/language/dwarvish = "Dwarven",
+				/datum/language/elvish = "Elfish",
+				/datum/language/dwarvish = "Dwarfish",
 				/datum/language/hellspeak = "Infernal",
 				/datum/language/orcish = "Orcish",
 				/datum/language/celestial = "Celestial",
 				/datum/language/qadirid = "Qadirid",
-				/datum/language/nortic = "Nortic",
-				/datum/language/cudese = "Cudese",
-				/datum/language/noman = "Noman",
 				/datum/language/deepspeak = "Deepspeak",
 				/datum/language/oldunsundered = "Old Unsundered",
 				/datum/language/newunsundered = "Unsundered",
@@ -512,7 +512,10 @@
 	return " [pick(possible_surnames)]"
 
 /datum/species/proc/get_spec_undies_list(gender)
-	var/list/used_list
+	if(!GLOB.underwear_list.len)
+		init_sprite_accessory_subtypes(/datum/sprite_accessory/underwear, GLOB.underwear_list, GLOB.underwear_m, GLOB.underwear_f)
+
+	var/list/used_list = GLOB.underwear_list
 	if(gender == MALE)
 		used_list = GLOB.underwear_m
 	else if(gender == FEMALE)
@@ -522,9 +525,7 @@
 
 	var/list/spec_undies = list()
 	for(var/name in used_list)
-		var/datum/sprite_accessory/accessory = GLOB.underwear_list[name]
-		if(!accessory)
-			continue
+		var/datum/sprite_accessory/accessory = used_list[name]
 		if(!accessory.roundstart)
 			continue
 		if(!(used_species_id in accessory.specuse))
@@ -580,18 +581,15 @@
 		var/list/organ_dna_list = pref_load.get_organ_dna_list()
 		for(var/organ_slot in organ_dna_list)
 			C.dna.organ_dna[organ_slot] = organ_dna_list[organ_slot]
-
 	//what should be put in if there is no mutantorgan (brains handled seperately)
 	var/list/slot_mutantorgans = organs
 	var/list/slots_to_iterate = list()
 	for(var/slot in C.dna.organ_dna)
 		slots_to_iterate |= slot
-
 	for(var/slot in slot_mutantorgans)
 		if(!is_organ_slot_allowed(C, slot))
 			continue
 		slots_to_iterate |= slot
-
 	// Remove the organs from the slots they should have nothing in
 	for(var/obj/item/organ/organ in C.internal_organs)
 		if(organ.slot in slots_to_iterate)
@@ -600,7 +598,6 @@
 			continue
 		organ.Remove(C, TRUE)
 		QDEL_NULL(organ)
-
 	var/list/source_key_list = color_key_source_list_from_carbon(C)
 	for(var/slot in slots_to_iterate)
 		var/obj/item/organ/oldorgan = C.getorganslot(slot) //used in removing
@@ -629,14 +626,14 @@
 		else
 			should_have = TRUE
 
-		if(slot in optional_organ_slots)
-			should_have = !!C.dna.organ_dna[slot]
+		if((slot in optional_organ_slots) && !C.dna.organ_dna[slot])
+			should_have = FALSE
 
 		if(oldorgan && (!should_have || replace_current) && !(oldorgan.zone in excluded_zones))
 			if(slot == ORGAN_SLOT_BRAIN)
 				var/obj/item/organ/brain/brain = oldorgan
 				if(!brain.decoy_override)//"Just keep it if it's fake" - confucius, probably
-					brain.Remove(C, TRUE, movement_flags = NO_ID_TRANSFER) //brain argument used so it doesn't cause any... sudden death.
+					brain.Remove(C,TRUE, TRUE) //brain argument used so it doesn't cause any... sudden death.
 					QDEL_NULL(brain)
 					oldorgan = null //now deleted
 			else
@@ -649,7 +646,7 @@
 		else if(should_have && !(initial(neworgan.zone) in excluded_zones))
 			used_neworgan = TRUE
 			if(neworgan)
-				neworgan.Insert(C, TRUE)
+				neworgan.Insert(C, TRUE, FALSE)
 				if(slot in PAIRED_ORGAN_SLOTS)
 					var/obj/item/organ/paired_organ = new neworgan.type()
 					paired_organ.switch_side(neworgan.side == RIGHT_SIDE ? LEFT_SIDE : RIGHT_SIDE)
@@ -660,7 +657,7 @@
 					if(pref_load)
 						pref_load.customize_organ(paired_organ)
 					if(!(initial(paired_organ.zone) in excluded_zones))
-						paired_organ.Insert(C, TRUE)
+						paired_organ.Insert(C, TRUE, FALSE)
 					else
 						qdel(paired_organ)
 		if(!used_neworgan)
@@ -738,7 +735,7 @@
 	/// Check if we have any customizer entries that don't match.
 	for(var/datum/customizer_entry/entry as anything in customizer_entries)
 		var/validated = FALSE
-		for(var/customizer_type in customizers)
+		for(var/customizer_type as anything in customizers)
 			if(customizer_type != entry.customizer_type)
 				continue
 			var/datum/customizer/customizer = CUSTOMIZER(customizer_type)
@@ -754,7 +751,7 @@
 			customizer_entries -= entry
 
 	/// Check if we have any missing customizer entries
-	for(var/customizer_type in customizers)
+	for(var/customizer_type as anything in customizers)
 		var/found = FALSE
 		for(var/datum/customizer_entry/entry as anything in customizer_entries)
 			if(entry.customizer_type != customizer_type)
@@ -805,15 +802,15 @@
 			else	//Entries in the list should only ever be items or null, so if it's not an item, we can assume it's an empty hand
 				C.put_in_hands(new mutanthands())
 
-	for(var/trait in inherent_traits)
+	for(var/trait as anything in inherent_traits)
 		ADD_TRAIT(C, trait, SPECIES_TRAIT)
 
 	if(LAZYLEN(inherent_traits_f) && C.gender == FEMALE)
-		for(var/trait in inherent_traits_f)
+		for(var/trait as anything in inherent_traits_f)
 			ADD_TRAIT(C, trait, SPECIES_TRAIT)
 
 	if(LAZYLEN(inherent_traits_m) && C.gender == MALE)
-		for(var/trait in inherent_traits_m)
+		for(var/trait as anything in inherent_traits_m)
 			ADD_TRAIT(C, trait, SPECIES_TRAIT)
 
 	if(inherent_sheet)
@@ -826,7 +823,7 @@
 		C.setToxLoss(0, TRUE, TRUE)
 
 	if(TRAIT_NOMETABOLISM in inherent_traits)
-		C.reagents?.end_metabolization(src, keep_liverless = TRUE)
+		C.reagents.end_metabolization(src, keep_liverless = TRUE)
 
 	if(inherent_factions)
 		C.add_faction(inherent_factions)
@@ -849,10 +846,6 @@
 
 	on_gender_update(C)
 	C.update_organ_requirements() //post species trait gains
-
-	if(!(C.status_flags & BUILDING_ORGANS))
-		C.regenerate_icons()
-
 	SEND_SIGNAL(C, COMSIG_SPECIES_GAIN, src, old_species)
 
 /datum/species/proc/on_gender_update(mob/living/carbon/human/C, old_gender)
@@ -1338,12 +1331,12 @@
 	return
 
 /datum/species/proc/help(mob/living/carbon/human/user, mob/living/carbon/human/target, datum/martial_art/attacker_style)
+//	if(!((target.health < 0 || HAS_TRAIT(target, TRAIT_FAKEDEATH)) && !(target.mobility_flags & MOBILITY_STAND)))
 	if(!(istype(user.rmb_intent, /datum/rmb_intent/weak)) && target.body_position == LYING_DOWN)
 		target.help_shake_act(user)
 		if(target != user)
 			log_combat(user, target, "shaken")
 		return TRUE
-
 	else if(istype(user.rmb_intent, /datum/rmb_intent/weak) && (target.body_position == LYING_DOWN) && (user.zone_selected in list(BODY_ZONE_CHEST, BODY_ZONE_PRECISE_MOUTH)))
 		user.do_cpr(target, user.zone_selected == BODY_ZONE_CHEST ? CPR_CHEST : CPR_MOUTH)
 		return TRUE
@@ -1651,7 +1644,7 @@
 				target.mind.attackedme[user.real_name] = world.time
 			var/selzone = accuracy_check(user.zone_selected, user, target, /datum/attribute/skill/combat/unarmed, user.used_intent)
 			var/obj/item/bodypart/affecting = target.get_bodypart(check_zone(selzone))
-			var/damage = user.get_kick_damage() * 1.5
+			var/damage = user.get_kick_damage(2.5)
 			var/armor_block = target.run_armor_check(selzone, "blunt", blade_dulling = BCLASS_BLUNT)
 			var/balance = 10
 			target.next_attack_msg.Cut()
@@ -1758,7 +1751,7 @@
 		if(!affecting)
 			affecting = target.get_bodypart(BODY_ZONE_CHEST)
 		var/armor_block = target.run_armor_check(selzone, "blunt", blade_dulling = BCLASS_BLUNT)
-		var/damage = user.get_kick_damage()
+		var/damage = user.get_kick_damage(1.4)
 		var/damage_blocked = FALSE
 
 		if(!target.apply_damage(damage, user.dna.species.attack_type, affecting, armor_block))
@@ -1819,7 +1812,7 @@
 		harm(M, H, attacker_style)
 
 // We need to remove this
-/datum/species/proc/spec_attacked_by(obj/item/I, mob/living/user, obj/item/bodypart/affecting, intent, mob/living/carbon/human/H, selzone, accurate = FALSE, signal)
+/datum/species/proc/spec_attacked_by(obj/item/I, mob/living/user, obj/item/bodypart/affecting, intent, mob/living/carbon/human/H, selzone, accurate = FALSE)
 	if(!I || !affecting)
 		return FALSE
 
@@ -1863,7 +1856,7 @@
 		if((blunt || I.wbalance >= HARD_TO_DODGE) && attacker_sneaking >= 10)
 			H.next_attack_msg += " [span_userdanger("SNEAK ATTACK!")]"
 			// Get extra damage as a percent of 50% extra based on skill
-			var/percentage = attacker_sneaking / SKILL_LEVEL_LEGENDARY
+			var/percentage = attacker_sneaking / (SKILL_LEVEL_LEGENDARY * 10)
 			if(blunt)
 				knockout_modifier = FLOOR(15 * percentage, 1)
 			item_force += (item_force * 0.5) * percentage
@@ -1872,8 +1865,6 @@
 	var/def_zone = affecting.body_zone
 
 	var/armor_block = H.run_armor_check(selzone, I.damage_type, "", "", pen, damage = item_force, blade_dulling = user.used_intent.blade_class)
-	if(signal & COMPONENT_ITEM_NO_DEFENSE)
-		armor_block = 0
 	var/weakness = H.check_weakness(I, user)
 	var/actual_damage = apply_damage(item_force * weakness, I.damtype, def_zone, armor_block, H, skip_dtype = TRUE)
 	SEND_SIGNAL(I, COMSIG_ITEM_SPEC_ATTACKEDBY, H, user, affecting, actual_damage)
@@ -1988,7 +1979,7 @@
 	var/damage_amount = damage
 	var/list/mods = list()
 	if(!can_crit)
-		mods = list(CRIT_MOD_CHANCE = CANT_CRIT)
+		mods = list(CRIT_MOD_CHANCE = -100)
 	switch(damagetype)
 		if(BRUTE)
 			H.damageoverlaytemp = 20
@@ -2042,7 +2033,7 @@
 					if(BP.receive_damage(0, damage_amount, flashes = flashes))
 						H.update_damage_overlays()
 				else
-					BP.bodypart_attacked_by(BCLASS_BURN, damage_amount, modifiers = list(CRIT_MOD_CHANCE = CANT_CRIT)) // burns can't crit
+					BP.bodypart_attacked_by(BCLASS_BURN, damage_amount, modifiers = list(CRIT_MOD_CHANCE = -100)) // burns can't crit
 					H.update_damage_overlays()
 			else
 				H.adjustFireLoss(damage_amount)

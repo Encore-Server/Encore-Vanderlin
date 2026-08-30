@@ -33,8 +33,6 @@
 	allowed_races = RACES_NON_ANTAG
 	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED, AGE_OLD, AGE_IMMORTAL)
 	total_positions = 1
-	knows_the_town = TRUE
-	known_by_the_town = TRUE
 	cmode_music = 'sound/music/cmode/nobility/combat_noble.ogg'
 	outfit = /datum/outfit/wretch/reject
 

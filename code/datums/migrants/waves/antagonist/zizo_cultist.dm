@@ -109,7 +109,7 @@
 	wrists = /obj/item/clothing/neck/psycross/heretical
 	gloves = /obj/item/clothing/gloves/fingerless/shadowgloves
 	pants = /obj/item/clothing/pants/trou/leather/splint
-	shoes = /obj/item/clothing/shoes/boots/darkboots
+	shoes = /obj/item/clothing/shoes/boots
 	belt = /obj/item/storage/belt/leather/black
 	beltl = /obj/item/weapon/sword/sabre/stalker
 	beltr = /obj/item/weapon/sword/sabre/stalker

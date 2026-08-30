@@ -7,7 +7,7 @@
 	department_flag = GARRISON
 	job_flags = (JOB_ANNOUNCE_ARRIVAL | JOB_SHOW_IN_CREDITS | JOB_EQUIP_RANK | JOB_NEW_PLAYER_JOINABLE)
 	display_order = JDO_GATEMASTER
-	factions = list(FACTION_TOWN)
+	faction = FACTION_TOWN
 	total_positions = 99
 	spawn_positions = 99
 	bypass_lastclass = TRUE
@@ -17,10 +17,7 @@
 	outfit = /datum/outfit/gatemaster
 	advclass_cat_rolls = list(CTAG_GATEMASTER = 20)
 	give_bank_account = 30
-	knows_the_town = TRUE
-	known_by_the_town = TRUE
 	cmode_music = 'sound/music/cmode/garrison/CombatGatekeeper.ogg'
-	starting_wage = 30
 
 	job_bitflag = BITFLAG_GARRISON
 
@@ -34,7 +31,6 @@
 
 	traits = list(
 		TRAIT_STEELHEARTED,
-		TRAIT_GATEKEEPER,
 	)
 	mind_traits = list(TRAIT_KNOWBANDITS)
 
@@ -49,7 +45,7 @@
 	shirt = /obj/item/clothing/armor/chainmail
 	belt = /obj/item/storage/belt/leather/black
 	pants = /obj/item/clothing/pants/trou/leather
-	shoes = /obj/item/clothing/shoes/boots/darkboots
+	shoes = /obj/item/clothing/shoes/boots
 
 /datum/outfit/gatemaster/post_equip(mob/living/carbon/human/H, visuals_only = FALSE)
 	. = ..()
@@ -60,7 +56,6 @@
 	inherit_parent_title = TRUE
 	exp_type = list(EXP_TYPE_GARRISON, EXP_TYPE_COMBAT)
 	exp_types_granted = list(EXP_TYPE_GARRISON, EXP_TYPE_COMBAT)
-	factions = list(FACTION_TOWN)
 
 /datum/attribute_holder/sheet/job/gatemaster/whip
 	raw_attribute_list = list(

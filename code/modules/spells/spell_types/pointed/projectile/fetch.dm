@@ -5,7 +5,10 @@
 	cast_range = 15
 	sound = 'sound/magic/magnet.ogg'
 
-	required_form = FORM_AIR
+	point_cost = 2
+	attunements = list(
+		/datum/attunement/aeromancy = 0.4,
+	)
 
 	//yoink
 	invocation = "YO'EIN'KAR!"

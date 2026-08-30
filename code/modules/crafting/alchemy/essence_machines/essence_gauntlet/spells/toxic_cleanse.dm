@@ -3,6 +3,8 @@
 	desc = "Completely purges an area of all toxic substances and poisons."
 	button_icon_state = "detect_poison"
 	cast_range = 3
+	point_cost = 7
+	attunements = list(/datum/attunement/life, /datum/attunement/blood)
 	essences = list(/datum/thaumaturgical_essence/poison, /datum/thaumaturgical_essence/water)
 
 /datum/action/cooldown/spell/essence/toxic_cleanse/cast(atom/cast_on)
@@ -13,8 +15,8 @@
 	owner.visible_message(span_notice("[owner] cleanses all toxins from the area."))
 
 	for(var/mob/living/M in range(2, target_turf))
-		M.reagents?.remove_all_type(/datum/reagent/toxin, 999)
-		M.reagents?.remove_all_type(/datum/reagent/poison, 999)
+		M.reagents?.remove_all_type(/datum/reagent/toxin)
+		M.reagents?.remove_all_type(/datum/reagent/poison)
 		M.apply_status_effect(/datum/status_effect/buff/toxin_immunity, 300 SECONDS)
 		new /obj/effect/temp_visual/snake/twin_up(null, M)
 
@@ -36,14 +38,3 @@
 /datum/status_effect/buff/toxin_immunity/on_remove()
 	. = ..()
 	REMOVE_TRAIT(owner, TRAIT_TOXINLOVER, TRAIT_STATUS_EFFECT(id))
-
-/datum/action/cooldown/spell/essence/toxic_cleanse/spell
-	name = "Detoxify"
-	charge_required = TRUE
-	charge_time = 5 SECONDS
-	spell_cost = 80
-	spell_type = SPELL_MANA
-
-	required_form = FORM_LIFE
-	required_technique = TECHNIQUE_RESTORATION
-	required_level = 6

@@ -7,7 +7,7 @@
 	department_flag = NOBLEMEN
 	job_flags = (JOB_ANNOUNCE_ARRIVAL | JOB_SHOW_IN_CREDITS | JOB_EQUIP_RANK | JOB_NEW_PLAYER_JOINABLE)
 	display_order = JDO_CONSORT
-	factions = list(FACTION_TOWN)
+	faction = FACTION_TOWN
 	total_positions = 0
 	spawn_positions = 1
 	bypass_lastclass = TRUE
@@ -17,8 +17,6 @@
 	outfit = /datum/outfit/consort
 	advclass_cat_rolls = list(CTAG_CONSORT = 20)
 	give_bank_account = 500
-	knows_the_town = TRUE
-	known_by_the_town = TRUE
 	apprentice_name = JOB_SERVANT
 	cmode_music = 'sound/music/cmode/nobility/combat_noble.ogg'
 	noble_income = 22
@@ -60,7 +58,7 @@
 /datum/outfit/consort
 	name = JOB_CONSORT
 	head = /obj/item/clothing/head/crown/nyle/consortcrown
-	shoes = /obj/item/clothing/shoes/boots/darkboots
+	shoes = /obj/item/clothing/shoes/boots
 	ring = /obj/item/clothing/ring/silver
 	belt = /obj/item/storage/belt/leather
 	beltl = /obj/item/key/consort
@@ -74,7 +72,6 @@
 /datum/job/advclass/consort
 	inherit_parent_title = TRUE
 	exp_types_granted = list(EXP_TYPE_NOBLE)
-	factions = list(FACTION_TOWN)
 
 /datum/attribute_holder/sheet/job/highborn
 	raw_attribute_list = list(
@@ -359,7 +356,7 @@
 /datum/job/exlady //just used to change the consort title
 	title = "Ex-Consort"
 	department_flag = NOBLEMEN
-	factions = list(FACTION_TOWN)
+	faction = FACTION_TOWN
 	total_positions = 0
 	spawn_positions = 0
 	display_order = JDO_CONSORT

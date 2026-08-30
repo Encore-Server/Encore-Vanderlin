@@ -6,7 +6,7 @@
 /datum/component/liquids_interaction/Initialize(on_interaction_callback)
 	. = ..()
 
-	if(!isitem(parent))
+	if(!istype(parent, /obj/item))
 		return COMPONENT_INCOMPATIBLE
 
 	interaction_callback = CALLBACK(parent, on_interaction_callback)
@@ -16,18 +16,16 @@
 	return ..()
 
 /datum/component/liquids_interaction/RegisterWithParent()
-	RegisterSignal(parent, COMSIG_ITEM_INTERACTING_WITH_ATOM, PROC_REF(try_interact)) //The only signal allowing item -> turf interaction
+	RegisterSignal(parent, COMSIG_ITEM_AFTERATTACK, PROC_REF(AfterAttack)) //The only signal allowing item -> turf interaction
 
 /datum/component/liquids_interaction/UnregisterFromParent()
-	UnregisterSignal(parent, COMSIG_ATOM_ITEM_INTERACTION)
+	UnregisterSignal(parent, COMSIG_ITEM_AFTERATTACK)
 
-/datum/component/liquids_interaction/proc/try_interact(datum/source, mob/living/user, atom/target, list/modifiers)
-	SIGNAL_HANDLER
+/datum/component/liquids_interaction/proc/AfterAttack(datum/source, atom/victim, mob/caster, proximity_flag, list/modifiers)
+	var/turf/turf_target = victim
 
-	if(!isturf(target))
-		return NONE
+	if(!isturf(turf_target) || !turf_target.liquids)
+		return
 
-	var/turf/target_turf = target
-
-	if(interaction_callback.Invoke(source, target, user, target_turf.liquids))
-		return ITEM_INTERACT_SUCCESS
+	if(!interaction_callback.Invoke(parent, victim, caster, turf_target.liquids))
+		return

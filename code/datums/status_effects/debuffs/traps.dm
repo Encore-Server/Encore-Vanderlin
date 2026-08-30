@@ -2,7 +2,6 @@
 	id = "frozen_trapped"
 	duration = 10 SECONDS
 	status_type = STATUS_EFFECT_UNIQUE
-	tick_interval = STATUS_EFFECT_NO_TICK
 	alert_type = /atom/movable/screen/alert/status_effect/frozen_solid
 	var/icon/cube
 

@@ -24,12 +24,9 @@
 
 	languages = list(
 		/datum/language/elvish,
-		/datum/language/dwarvish,
-		/datum/language/nortic,
-		/datum/language/cudese,
-		/datum/language/noman,
-		/datum/language/qadirid,
-		/datum/language/newunsundered
+		/datum/language/celestial,
+		/datum/language/hellspeak,
+		/datum/language/orcish
 	)
 
 	traits = list(	TRAIT_DODGEEXPERT,

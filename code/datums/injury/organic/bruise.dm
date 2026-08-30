@@ -3,8 +3,7 @@
 	bleed_threshold = 20
 	autoheal_cutoff = 50
 	damage_type = WOUND_BLUNT
-	bleed_rate = 0.4
-	pain_modifier = 1.3
+	bleed_rate = 0.8
 
 /datum/injury/bruise/small
 	stages = list(

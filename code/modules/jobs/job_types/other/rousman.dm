@@ -1,7 +1,7 @@
 /datum/job/rousman
 	title = "Rousman"
 	job_flags = JOB_EQUIP_RANK
-	factions = list(FACTION_TOWN)
+	faction = FACTION_TOWN
 	total_positions = 0
 	spawn_positions = 0
 	allowed_races = RACES_PLAYER_ALL
@@ -20,7 +20,7 @@
 		spawned.clear_quirks()
 
 	spawned.remove_all_languages()
-	spawned.grant_language(/datum/language/cudese)
+	spawned.grant_language(/datum/language/rousman)
 	spawned.grant_language(/datum/language/common)
 
 /datum/outfit/rousman

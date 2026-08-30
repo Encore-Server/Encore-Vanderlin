@@ -9,10 +9,9 @@
 	invocation = "VANISHIKA"
 	invocation_type = INVOCATION_SHOUT
 
-	required_form = FORM_ARCANE
-	required_technique = TECHNIQUE_ALTERATION
-	required_level = 12 //lol
-	initial_charges = 3
+	attunements = list(
+		/datum/attunement/arcyne = 0.4,
+	)
 
 	jaunt_type = /obj/effect/dummy/phased_mob/spell_jaunt
 

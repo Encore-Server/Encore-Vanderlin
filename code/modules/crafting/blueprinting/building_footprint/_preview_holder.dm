@@ -26,7 +26,8 @@
 
 	// Find origin (top-left corner) from the first z=1 gridset.
 	var/datum/grid_set/first_gset
-	for(var/datum/grid_set/gset as anything in parsed.gridSets)
+	for(var/gset_item in parsed.gridSets)
+		var/datum/grid_set/gset = gset_item
 		if(gset.zcrd == 1)
 			first_gset = gset
 			break
@@ -39,7 +40,8 @@
 	var/origin_ycrd = first_gset.ycrd
 
 	Master.StartLoadingMap()
-	for(var/datum/grid_set/gset as anything in parsed.gridSets)
+	for(var/gset_item in parsed.gridSets)
+		var/datum/grid_set/gset = gset_item
 		var/zcrd = gset.zcrd
 
 		var/ycrd = gset.ycrd

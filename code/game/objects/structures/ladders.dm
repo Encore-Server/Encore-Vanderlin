@@ -237,13 +237,16 @@
 	use(user)
 	return TRUE
 
-/obj/structure/ladder/item_interaction(mob/living/user, obj/item/tool, list/modifiers)
+/obj/structure/ladder/attackby(obj/item/item, mob/user, list/modifiers, list/attack_modifiers)
 	use(user)
-	return ITEM_INTERACT_SUCCESS
+	return TRUE
 
-/obj/structure/ladder/item_interaction_secondary(mob/living/user, obj/item/tool, list/modifiers)
+/obj/structure/ladder/attackby_secondary(obj/item/item, mob/user, list/modifiers, list/attack_modifiers)
+	. = ..()
+	if(. == SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN)
+		return
 	use(user, going_up = FALSE)
-	return ITEM_INTERACT_SUCCESS
+	return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
 
 //ATTACK GHOST IGNORING PARENT RETURN VALUE
 /obj/structure/ladder/attack_ghost(mob/dead/observer/user)

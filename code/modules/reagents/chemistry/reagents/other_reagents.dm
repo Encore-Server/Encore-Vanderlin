@@ -18,7 +18,6 @@
 	name = "Tiefling Blood"
 	glows = TRUE
 	toxicity = 0 // yum
-	price_per_unit = 0.5
 
 /datum/reagent/blood/putrid
 	name = "Putrid Blood"

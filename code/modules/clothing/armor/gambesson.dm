@@ -20,7 +20,7 @@
 	sellprice = VALUE_GAMBESSON
 
 	armor_class = AC_LIGHT
-	armor_type = /datum/armor/padded
+	armor = ARMOR_PADDED
 	body_parts_covered = COVERAGE_FULL
 	prevent_crits = ALL_EXCEPT_CHOP_AND_STAB
 
@@ -34,7 +34,7 @@
 	color = CLOTHING_LINEN
 	sellprice = VALUE_LIGHT_GAMBESSON
 
-	armor_type = /datum/armor/padded/bad
+	armor = ARMOR_PADDED_BAD
 	prevent_crits = MINOR_CRITICALS
 	item_weight = 3 KILOGRAMS
 
@@ -55,7 +55,7 @@
 	icon_state = "gambesonp"
 	sellprice = VALUE_HEAVY_GAMBESSON
 
-	armor_type = /datum/armor/padded/good
+	armor = ARMOR_PADDED_GOOD
 	item_weight = 4 KILOGRAMS
 
 /obj/item/clothing/armor/gambeson/heavy/colored
@@ -63,9 +63,6 @@
 
 /obj/item/clothing/armor/gambeson/heavy/colored/dark
 	color = CLOTHING_DARK_INK
-
-/obj/item/clothing/armor/gambeson/heavy/colored/brown
-	color = CLOTHING_MUD_BROWN
 
 /obj/item/clothing/armor/gambeson/heavy/lakkarijupon
 	name = "robed jupon"
@@ -79,7 +76,7 @@
 	salvage_result = /obj/item/natural/cloth
 	dyeable = TRUE
 
-	armor_type = /datum/armor/padded/good
+	armor = ARMOR_PADDED_GOOD
 
 /obj/item/clothing/armor/gambeson/apothecary
 	name = "apothecary overcoat"
@@ -87,7 +84,7 @@
 	icon_state = "apothover"
 	item_state = "apothover"
 
-	armor_type = /datum/armor/padded/good
+	armor = ARMOR_PADDED_GOOD
 
 /obj/item/clothing/armor/gambeson/steward
 	name = "steward tailcoat"
@@ -95,7 +92,7 @@
 	sleeved = 'icons/roguetown/clothing/special/onmob/steward.dmi'
 	icon_state = "stewardtailcoat"
 	item_state = "stewardtailcoat"
-	armor_type = /datum/armor/padded
+	armor = ARMOR_PADDED
 	icon = 'icons/roguetown/clothing/special/steward.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/special/onmob/steward.dmi'
 
@@ -105,7 +102,7 @@
 	sleeved = 'icons/roguetown/clothing/special/onmob/hand.dmi'
 	icon_state = "handgambeson"
 	item_state = "handgambeson"
-	armor_type = /datum/armor/padded/good
+	armor = ARMOR_PADDED_GOOD
 	icon = 'icons/roguetown/clothing/special/hand.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/special/onmob/hand.dmi'
 	detail_tag = "_detail"
@@ -114,20 +111,6 @@
 /obj/item/clothing/armor/gambeson/hand/spy
 	detail_color = CLOTHING_ROYAL_PURPLE
 	misc_flags = CRAFTING_TEST_EXCLUDE
-
-/obj/item/clothing/armor/gambeson/hunts
-	name = "hunting gambeson"
-	desc = "A thick, protective, rogueish looking gambeson, fashioned not for those looking to just look fancy- No, this is for a true hunter who knows exactly what they want, and how to get it, a hunter who knows what they need to protect them from stray thorns, and savage beasts."
-	sleeved = 'icons/roguetown/clothing/special/onmob/hand.dmi'
-	icon_state = "handhunt"
-	item_state = "handhunt"
-	armor_type = /datum/armor/padded/good
-	icon = 'icons/roguetown/clothing/special/hand.dmi'
-	mob_overlay_icon = 'icons/roguetown/clothing/special/onmob/hand.dmi'
-	icon = 'icons/roguetown/clothing/special/hand.dmi'
-	mob_overlay_icon = 'icons/roguetown/clothing/special/onmob/hand.dmi'
-	detail_tag = "_detail"
-	detail_color = CLOTHING_WHITE
 
 //................ Padded Dress ............... //
 /obj/item/clothing/armor/gambeson/heavy/dress
@@ -206,7 +189,7 @@
 	icon_state = "leathertunic"
 	color = null
 	prevent_crits = list(BCLASS_CUT, BCLASS_BLUNT, BCLASS_CHOP)
-	armor_type = /datum/armor/padded
+	armor = ARMOR_PADDED
 	body_parts_covered = COVERAGE_ALL_BUT_LEGS
 
 /obj/item/clothing/armor/gambeson/hunts
@@ -215,7 +198,7 @@
 	sleeved = 'icons/roguetown/clothing/special/onmob/hand.dmi'
 	icon_state = "handhunt"
 	item_state = "handhunt"
-	armor_type = /datum/armor/leather/good
+	armor = ARMOR_PADDED_GOOD
 	icon = 'icons/roguetown/clothing/special/hand.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/special/onmob/hand.dmi'
 	icon = 'icons/roguetown/clothing/special/hand.dmi'

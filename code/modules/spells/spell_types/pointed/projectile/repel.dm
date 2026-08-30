@@ -5,7 +5,10 @@
 	cast_range = 10
 	sound = 'sound/magic/unmagnet.ogg'
 
-	required_form = FORM_AIR
+	point_cost = 3
+	attunements = list(
+		/datum/attunement/aeromancy = 0.4,
+	)
 
 	invocation = "Repel!"
 	invocation_type = INVOCATION_SHOUT

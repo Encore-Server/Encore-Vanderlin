@@ -5,11 +5,12 @@
 	button_icon_state = "fireball_greater"
 	sound = 'sound/magic/meteorstorm.ogg'
 
-	required_form = FORM_FIRE
-	required_technique = TECHNIQUE_DESTRUCTION
-	required_level = 4
+	point_cost = 8
+	attunements = list(
+		/datum/attunement/fire = 1.2
+	)
 
-	charge_time = CHARGETIME_HEAVY
+	charge_time = 25 SECONDS
 	charge_drain = 2
 	charge_slowdown = 1.3
 	cooldown_time = 3 MINUTES
@@ -27,5 +28,5 @@
 	cast_on.visible_message(span_boldwarning("Fire is raining from the sky!"))
 
 /datum/action/cooldown/spell/aoe/on_turf/meteor_storm/cast_on_thing_in_aoe(turf/victim, atom/caster)
-	if(prob(20 * spell_magnitude_modifier))
+	if(prob(20 * attuned_strength))
 		new /obj/effect/temp_visual/target/meteor(get_turf(victim))

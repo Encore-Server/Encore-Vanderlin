@@ -26,8 +26,7 @@ SUBSYSTEM_DEF(overwatch)
 	return ..()
 
 /datum/controller/subsystem/overwatch/stat_entry(msg)
-	msg = "[is_active ? "ACTIVE" : "OFFLINE"]"
-	return ..()
+	.. ("[is_active ? "ACTIVE" : "OFFLINE"]")
 
 /datum/controller/subsystem/overwatch/proc/Toggle(mob/user)
 	if(SSdbcore.shutting_down)

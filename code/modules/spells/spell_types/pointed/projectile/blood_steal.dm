@@ -1,12 +1,13 @@
 /datum/action/cooldown/spell/projectile/blood_steal
 	name = "Blood Steal"
-	desc = "Launch a bolt which leeches the blood of those hit. (Heretical)"
+	desc = "Launch a bolt which leeches the blood of those hit."
 	button_icon_state = "bloodsteal"
 	sound = 'sound/magic/vlightning.ogg'
 
 	associated_skill = /datum/attribute/skill/magic/blood
-	required_form = FORM_WATER
-	required_technique = TECHNIQUE_ALTERATION
+	attunements = list(
+		/datum/attunement/blood = 0.7,
+	)
 
 	invocation = "DR'N LF'E!"
 	invocation_type = INVOCATION_SHOUT
@@ -23,6 +24,9 @@
 	. = ..()
 
 	if(!firer || !ishuman(hit))
+		return
+
+	if(!firer.clan)
 		return
 
 	var/mob/living/carbon/human/H = hit

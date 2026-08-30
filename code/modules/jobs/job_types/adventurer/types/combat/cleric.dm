@@ -58,10 +58,9 @@
 
 	traits = list(
 		TRAIT_MEDIUMARMOR,
-		TRAIT_VIRGIN,
 	)
 
-	languages = list(/datum/language/newunsundered)
+	languages = list(/datum/language/celestial)
 
 	cmode_music = 'sound/music/cmode/adventurer/CombatMonk.ogg'
 
@@ -69,6 +68,8 @@
 	. = ..()
 	if(spawned.age == AGE_OLD)
 		ADD_TRAIT(spawned, TRAIT_STEELHEARTED, TRAIT_GENERIC)
+
+	spawned.virginity = TRUE
 
 	if(spawned.patron)
 		switch(spawned.patron.type)
@@ -82,7 +83,7 @@
 				ADD_TRAIT(spawned, TRAIT_GRAVEROBBER, TRAIT_GENERIC)
 			if(/datum/patron/divine/pomette)
 				spawned.cmode_music = 'sound/music/cmode/church/CombatEora.ogg'
-				REMOVE_TRAIT(spawned, TRAIT_VIRGIN, JOB_TRAIT)
+				spawned.virginity = FALSE
 				ADD_TRAIT(spawned, TRAIT_BEAUTIFUL, TRAIT_GENERIC)
 			if(/datum/patron/divine/mordsol)
 				spawned.cmode_music = 'sound/music/cmode/church/CombatRavox.ogg'
@@ -113,8 +114,7 @@
 	var/static/list/selectableweapon = list(
 		"Sword" = pick(list(/obj/item/weapon/sword/iron, /obj/item/weapon/sword/scimitar/messer, /obj/item/weapon/sword/sabre/scythe)),
 		"Axe" = /obj/item/weapon/axe/iron,
-		"Mace" = pick(list(/obj/item/weapon/mace/bludgeon, /obj/item/weapon/mace/spiked, /obj/item/weapon/hammer/sledgehammer)),
-		"Warhammer" = /obj/item/weapon/mace/warhammer,
+		"Mace" = pick(list(/obj/item/weapon/mace/bludgeon, /obj/item/weapon/mace/warhammer, /obj/item/weapon/mace/spiked, /obj/item/weapon/hammer/sledgehammer)),
 		"Spear" = /obj/item/weapon/polearm/spear,
 		"Flail" = pick(list(/obj/item/weapon/flail, /obj/item/weapon/flail/militia)),
 		"Great flail" = /obj/item/weapon/flail/peasant,
@@ -132,7 +132,7 @@
 	switch(weaponchoice)
 		if("Sword")
 			weapon_skill_path = /datum/attribute/skill/combat/swords
-		if("Axe", "Mace", "Goedendag", "Great axe", "Warhammer")
+		if("Axe", "Mace", "Goedendag", "Great axe")
 			weapon_skill_path = /datum/attribute/skill/combat/axesmaces
 		if("Spear")
 			weapon_skill_path = /datum/attribute/skill/combat/polearms
@@ -170,7 +170,6 @@
 	backl = /obj/item/storage/backpack/satchel
 	cloak = /obj/item/clothing/cloak/tabard/crusader
 	wrists = /obj/item/clothing/neck/psycross/silver
-	backl = /obj/item/storage/backpack/satchel
 	backpack_contents = list(/obj/item/storage/belt/pouch/coins/poor = 1, /obj/item/reagent_containers/food/snacks/hardtack = 1)
 
 /datum/outfit/adventurer/cleric/pre_equip(mob/living/carbon/human/equipped_human, visuals_only)
@@ -178,6 +177,7 @@
 	head = pick(/obj/item/clothing/head/helmet/skullcap, /obj/item/clothing/head/helmet/sallet/iron, /obj/item/clothing/head/helmet/leather/headscarf)
 	armor = pick(/obj/item/clothing/armor/chainmail/iron, /obj/item/clothing/armor/leather/splint, /obj/item/clothing/armor/cuirass/iron, /obj/item/clothing/armor/brigandine/light)
 	neck = pick(/obj/item/clothing/neck/chaincoif/iron, /obj/item/clothing/neck/gorget, /obj/item/clothing/neck/highcollier/iron, /obj/item/clothing/neck/coif/cloth, /obj/item/clothing/neck/coif)
+	backl = pick(/obj/item/storage/backpack/satchel, /obj/item/storage/backpack/satchel/cloth)
 
 	if(equipped_human.patron)
 		switch(equipped_human.patron.type)

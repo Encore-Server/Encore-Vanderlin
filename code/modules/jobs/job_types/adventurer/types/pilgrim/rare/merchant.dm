@@ -51,7 +51,7 @@
 
 /datum/outfit/pilgrim/merchant
 	name = "Travelling Merchant (Pilgrim)"
-	shoes = /obj/item/clothing/shoes/boots/darkboots
+	shoes = /obj/item/clothing/shoes/boots
 	belt = /obj/item/storage/belt/leather/black
 	beltr = /obj/item/flashlight/flare/torch/lantern
 	backl = /obj/item/storage/backpack/backpack

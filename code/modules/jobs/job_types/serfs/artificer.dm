@@ -46,14 +46,13 @@
 
 /datum/job/artificer
 	title = JOB_ARTIFICER
-	alt_titles = list("Engineer", "Artillerist", "Plumber", "Machinist", "Millwright")
 	tutorial = "You are one of the greatest minds of the Goblet- an artificer, an engineer. \
 	You will build the future, regardless of what superstition the more mystical minded may spout. \
 	You know your machines' inner workings as well as you do stone, down to the last cog."
 	department_flag = SERFS
 	job_flags = (JOB_ANNOUNCE_ARRIVAL | JOB_SHOW_IN_CREDITS | JOB_EQUIP_RANK | JOB_NEW_PLAYER_JOINABLE)
 	display_order = JDO_ARTIFICER
-	factions = list(FACTION_TOWN)
+	faction = FACTION_TOWN
 	total_positions = 99
 	spawn_positions = 99
 	bypass_lastclass = TRUE
@@ -61,8 +60,6 @@
 
 	outfit = /datum/outfit/artificer
 	give_bank_account = 8
-	knows_the_town = TRUE
-	known_by_the_town = TRUE
 	cmode_music = 'sound/music/cmode/adventurer/CombatDream.ogg'
 
 	job_bitflag = BITFLAG_CONSTRUCTOR

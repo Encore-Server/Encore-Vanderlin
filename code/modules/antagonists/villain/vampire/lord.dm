@@ -1,4 +1,3 @@
-#define MAX_ASCENT 4
 /datum/attribute_holder/sheet/job/vampire_lord
 	clamped_adjustment = list(
 		/datum/attribute/skill/combat/unarmed = list(40, 40)
@@ -28,7 +27,7 @@
 	var/outfit = /datum/outfit/vamplord
 	var/patron = /datum/patron/godless/autotheist
 
-	var/ascension_level = 0
+	var/ascended = FALSE
 	// thralls to set the clan of on creation
 	var/list/starting_thralls = list()
 	antag_flags = NONE
@@ -56,8 +55,6 @@
 	if(chooses_name)
 		addtimer(CALLBACK(owner.current, TYPE_PROC_REF(/mob/living/carbon/human, choose_name_popup), "[name]"), 5 SECONDS)
 
-/datum/antagonist/vampire/lord/proc/ascension_resistance()
-	return ascension_level / MAX_ASCENT
 
 /datum/antagonist/vampire/lord/greet()
 	to_chat(owner.current, span_userdanger("I am ancient. I am the Land. And I am now awoken to trespassers upon my domain."))
@@ -92,7 +89,7 @@
 	beltl = /obj/item/key/vampire
 	beltr = /obj/item/storage/belt/pouch/coins/veryrich
 	cloak = /obj/item/clothing/cloak/cape/puritan
-	shoes = /obj/item/clothing/shoes/boots/darkboots
+	shoes = /obj/item/clothing/shoes/boots
 	backl = /obj/item/storage/backpack/satchel/black
 	if(!(HAS_TRAIT(H, TRAIT_FOREIGNER)))
 		ADD_TRAIT(H, TRAIT_FOREIGNER, TRAIT_GENERIC)
@@ -166,5 +163,3 @@
 		if(!has_world_trait(/datum/world_trait/death_knight))
 			to_chat(src, span_warning("Another soul was chosen."))
 		returntolobby()
-
-#undef MAX_ASCENT

@@ -18,7 +18,6 @@
  * (generally) inadvisable unless you know what you're doing
  */
 /datum/action/cooldown/spell/undirected/touch
-	abstract_type = /datum/action/cooldown/spell/undirected/touch
 	check_flags = AB_CHECK_CONSCIOUS|AB_CHECK_HANDS_BLOCKED
 	charge_required = FALSE
 	has_visual_effects = FALSE
@@ -100,11 +99,10 @@
  * If reset_cooldown_after is TRUE, we will additionally refund the cooldown of the spell.
  * If reset_cooldown_after is FALSE, we will instead just start the spell's cooldown
  */
-/datum/action/cooldown/spell/undirected/touch/proc/remove_hand(mob/living/hand_owner, reset_cooldown_after = FALSE, skipper = FALSE)
+/datum/action/cooldown/spell/undirected/touch/proc/remove_hand(mob/living/hand_owner, reset_cooldown_after = FALSE)
 	if(!QDELETED(attached_hand))
 		unregister_hand_signals()
-		if(!skipper)
-			hand_owner?.temporarilyRemoveItemFromInventory(attached_hand)
+		hand_owner?.temporarilyRemoveItemFromInventory(attached_hand)
 		QDEL_NULL(attached_hand)
 	attached_hand = null
 
@@ -316,10 +314,6 @@
 		return TRUE
 	return ..()
 
-/obj/item/melee/touch_attack/dropped(mob/user, silent)
-	. = ..()
-	remove_hand_with_no_refund(user, TRUE)
-
 /**
  * When the hand component of a touch spell is qdel'd, (the hand is dropped or otherwise lost),
  * the cooldown on the spell that made it is automatically refunded.
@@ -327,15 +321,14 @@
  * However, if you want to consume the hand and not give a cooldown,
  * such as adding a unique behavior to the hand specifically, this function will do that.
  */
-/obj/item/melee/touch_attack/proc/remove_hand_with_no_refund(mob/holder, skipper = FALSE)
+/obj/item/melee/touch_attack/proc/remove_hand_with_no_refund(mob/holder)
 	var/datum/action/cooldown/spell/undirected/touch/hand_spell = spell_which_made_us?.resolve()
 	if(!QDELETED(hand_spell))
-		hand_spell.remove_hand(holder, reset_cooldown_after = FALSE, skipper = skipper)
+		hand_spell.remove_hand(holder, reset_cooldown_after = FALSE)
 		return
 
 	// We have no spell associated for some reason, just delete us as normal.
-	if(!skipper)
-		holder.temporarilyRemoveItemFromInventory(src, force = TRUE)
+	holder.temporarilyRemoveItemFromInventory(src, force = TRUE)
 	qdel(src)
 
 /obj/item/melee/touch_attack/attack_self(mob/user, list/modifiers)

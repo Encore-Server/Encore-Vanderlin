@@ -1,8 +1,6 @@
 /datum/language/dwarvish
 	name = "Dwarven"
-	desc = "The tongue of Geramor and its dwarves, descended from the Old Arnkin. \
-	Unlike the quieter Elven tongue, this speech became loud and booming, to be \
-	heard clearly within the deep and cavernous places of the Earth."
+	desc = ""
 	icon_state = "dwarf"
 	spans = list(SPAN_DWARF)
 	speech_verb = "blabbers"

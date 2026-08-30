@@ -32,10 +32,10 @@ GLOBAL_LIST_INIT(potentialRandomZlevels, generateMapList(filename = "[global.con
 		var/name = null
 
 		if (pos)
-			name = LOWER_TEXT(copytext(t, 1, pos))
+			name = lowertext(copytext(t, 1, pos))
 
 		else
-			name = LOWER_TEXT(t)
+			name = lowertext(t)
 
 		if (!name)
 			continue

@@ -149,6 +149,7 @@
 
 	swingsound = BLUNTWOOSH_HUGE
 	slot_flags = null //No.
+	dropshrink = 0.6
 	bigboy = TRUE
 	gripsprite = TRUE
 	item_weight = 6 KILOGRAMS

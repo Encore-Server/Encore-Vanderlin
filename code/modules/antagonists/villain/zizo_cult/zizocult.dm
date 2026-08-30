@@ -1,5 +1,3 @@
-#define LIST_PRAISE_HELL list("Praise Hell!", "Hail the Inferno!", "Glory to the Underworld!")
-
 /datum/attribute_holder/sheet/job/archdevilcultist
 	raw_attribute_list = list(
 		STAT_STRENGTH = 4,
@@ -70,7 +68,8 @@
 	)
 
 /datum/antagonist/archdevilcultist/examine_target(mob/user, mob/examined, list/P, list/examine_contents)
-	if(HAS_TRAIT(examined, TRAIT_VIRGIN))
+	var/mob/living/carbon/human/H = examined
+	if(istype(H) && H.virginity)
 		LAZYADDASSOCLIST(examine_contents, EXAMINE_SECT_BODY, span_purple(html_tag("B", "[P[THEYRE]] a virgin!")))
 	. = ..()
 
@@ -131,6 +130,8 @@
 			return FALSE
 		if(new_owner.unconvertable)
 			return FALSE
+		if(new_owner.current && HAS_TRAIT(new_owner.current, TRAIT_MINDSHIELD))
+			return FALSE
 
 /datum/antagonist/archdevilcultist/proc/add_cultist(datum/mind/cult_mind)
 	cult_mind.add_antag_datum(/datum/antagonist/archdevilcultist)
@@ -190,7 +191,7 @@
 					traitorwin = FALSE
 				count += objective.triumph_count
 
-	var/special_role_text = LOWER_TEXT(name)
+	var/special_role_text = lowertext(name)
 	if(traitorwin)
 		if(count)
 			if(owner)
@@ -212,7 +213,7 @@
 	if(stat >= UNCONSCIOUS || !can_speak_vocal())
 		return
 	record_round_statistic(STATS_ARCHDEVILS_PRAISED)
-	say(pick(LIST_PRAISE_HELL), spans = list("god_archdevils"), sanitize = FALSE, language = /datum/language/undead)
+	audible_message("\The [src] praises <span class='bold'>Hell</span>!")
 	playsound(src, 'sound/vo/cult/praise.ogg', 45, 1)
 	log_say("[src] has praised the Archdevils! (hell cultist verb)")
 
@@ -454,7 +455,7 @@
 
 	var/list/runes = list("Servantry", "Transmutation", "Fleshcrafting")
 
-	if(!bloody_hands && !get_bleed_rate())
+	if(!bloody_hands || get_bleed_rate())
 		to_chat(src, span_danger("My hands aren't bloody enough."))
 		return
 
@@ -470,9 +471,6 @@
 	set name = "Release Lackey"
 	set category = "RoleUnique.Zizo"
 
-	if(!istype(src) || stat == DEAD)
-		return
-
 	var/list/mob/living/carbon/human/possible = list()
 	for(var/datum/mind/V in SSmapping.retainer.cultists)
 		if(V.special_role == "Fiendish Lackey")
@@ -487,5 +485,3 @@
 			sleep(20)
 			choice.gib() // Cooler than dusting.
 			SSmapping.retainer.cultists -= choice.mind
-
-#undef LIST_PRAISE_HELL

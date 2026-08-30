@@ -370,16 +370,6 @@
 	},
 /turf/open/water/ocean/abyss,
 /area/outdoors/woods/crossroads)
-"bB" = (
-/obj/structure/fluff/railing/tall/retaining/rock{
-	dir = 6
-	},
-/obj/structure/fluff/railing/tall/retaining/rock{
-	dir = 1
-	},
-/obj/structure/fluff/railing/tall/retaining/rock,
-/turf/open/lava,
-/area/indoors/shelter)
 "bC" = (
 /obj/structure/flora/tree/burnt,
 /turf/open/floor/dirt,
@@ -391,21 +381,6 @@
 /obj/item/weapon/hammer/copper,
 /turf/open/floor/ruinedwood/alt,
 /area/indoors/shelter/woods)
-"bE" = (
-/obj/structure/fluff/railing/tall/retaining/rock{
-	dir = 8
-	},
-/obj/structure/fluff/railing/tall/retaining/rock{
-	dir = 9
-	},
-/obj/structure/fluff/railing/tall/retaining/rock{
-	dir = 1
-	},
-/obj/structure/fluff/railing/tall/retaining/rock{
-	dir = 4
-	},
-/turf/open/lava,
-/area/indoors/shelter)
 "bG" = (
 /turf/open/floor/naturalstone,
 /area/under/cave)
@@ -498,10 +473,6 @@
 /obj/structure/bars,
 /turf/open/floor/blocks/green,
 /area/under/cavewet)
-"cd" = (
-/obj/machinery/light/fueled/campfire/longlived,
-/turf/open/floor/naturalstone,
-/area/indoors/shelter)
 "cf" = (
 /turf/closed/wall/mineral/stone,
 /area/indoors/shelter/woods)
@@ -636,10 +607,6 @@
 	},
 /turf/open/floor/cobblerock/alt,
 /area/outdoors/bog/w_highroad)
-"cH" = (
-/obj/structure/wild_plant/nospread/manabloom,
-/turf/open/floor/dirt/road,
-/area/outdoors/woods/crossroads)
 "cI" = (
 /obj/structure/fluff/railing/border,
 /obj/structure/fermentation_keg/random/water,
@@ -788,9 +755,6 @@
 	},
 /turf/open/water/ocean/abyss,
 /area/outdoors/woods/crossroads)
-"dn" = (
-/turf/open/floor/blocks/green,
-/area/outdoors/woods/crossroads)
 "do" = (
 /obj/structure/bridge_stakes{
 	dir = 4
@@ -848,10 +812,6 @@
 /obj/structure/bridge,
 /turf/open/openspace,
 /area/outdoors/woods/heavenscoast)
-"dC" = (
-/obj/structure/roguetent,
-/turf/open/floor/volcanic,
-/area/indoors/shelter)
 "dD" = (
 /obj/structure/chair/wood/alt/chair_noble/purple,
 /turf/open/floor/ruinedwood/darker,
@@ -1249,7 +1209,7 @@
 /area/indoors/shelter/bog/witch)
 "fg" = (
 /obj/structure/fluff/walldeco/vinez/red,
-/turf/closed/mineral/random/warm,
+/turf/closed/mineral,
 /area/under/cave)
 "fh" = (
 /obj/structure/fluff/walldeco/bath/wallpipes/innie,
@@ -1293,10 +1253,6 @@
 /obj/structure/fluff/walldeco/stone,
 /turf/closed/wall/mineral/stone/moss,
 /area/indoors/shelter/woods)
-"fr" = (
-/obj/item/reagent_containers/glass/bucket/wooden,
-/turf/open/floor/naturalstone,
-/area/indoors/shelter)
 "fs" = (
 /obj/structure/fluff/railing/tall/retaining{
 	dir = 1
@@ -2259,7 +2215,7 @@
 /turf/open/floor/greenstone,
 /area/indoors/shelter/bog)
 "jD" = (
-/turf/closed/mineral/random/warm,
+/turf/closed/mineral,
 /area/outdoors/woods/heavenscoast)
 "jF" = (
 /obj/machinery/light/fueled/torchholder/metal_torch/east,
@@ -2449,16 +2405,6 @@
 /obj/effect/spawner/map_spawner/loot/common,
 /turf/open/floor/cobble,
 /area/under/cavewet)
-"kt" = (
-/obj/structure/fluff/railing/tall/retaining/rock{
-	dir = 9
-	},
-/obj/structure/fluff/railing/tall/retaining/rock{
-	dir = 4
-	},
-/obj/structure/fluff/railing/tall/retaining/rock,
-/turf/open/lava,
-/area/indoors/shelter)
 "ku" = (
 /mob/living/carbon/human/species/skeleton/npc/warrior,
 /turf/open/floor/ruinedwood,
@@ -2472,12 +2418,6 @@
 	},
 /turf/open/floor/ruinedwood/darker,
 /area/indoors/shelter/bog/witch)
-"kw" = (
-/obj/structure/meathook,
-/obj/effect/decal/cleanable/blood/old,
-/obj/item/weapon/knife/stone,
-/turf/open/floor/naturalstone,
-/area/indoors/shelter)
 "ky" = (
 /mob/living/simple_animal/hostile/skeleton/bow,
 /turf/open/floor/cobble,
@@ -2903,18 +2843,6 @@
 /obj/structure/bars,
 /turf/open/floor/blocks/green,
 /area/under/cavewet)
-"mv" = (
-/obj/structure/fluff/railing/tall/retaining/rock{
-	dir = 6
-	},
-/obj/structure/fluff/railing/tall/retaining/rock{
-	dir = 5
-	},
-/obj/structure/fluff/railing/tall/retaining/rock{
-	dir = 10
-	},
-/turf/open/lava,
-/area/indoors/shelter)
 "mw" = (
 /obj/effect/decal/borderfall{
 	dir = 1
@@ -3065,7 +2993,7 @@
 /turf/open/floor/hexstone,
 /area/under/cavewet)
 "na" = (
-/turf/closed/mineral/random/warm,
+/turf/closed/mineral,
 /area/under/cave)
 "nb" = (
 /obj/item/gem/violet,
@@ -3123,10 +3051,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/cobble,
 /area/under/cavewet)
-"nl" = (
-/obj/structure/leyline,
-/turf/open/floor/blocks/green,
-/area/outdoors/woods/crossroads)
 "nm" = (
 /obj/structure/table/wood/counter/end{
 	dir = 1
@@ -3194,7 +3118,7 @@
 /turf/open/floor/twig,
 /area/outdoors/bog/witch)
 "nE" = (
-/turf/closed/mineral/random/warm,
+/turf/closed/mineral,
 /area/under/town/basement)
 "nG" = (
 /obj/machinery/light/fueled/firebowl/church,
@@ -3500,13 +3424,6 @@
 	},
 /turf/open/floor/naturalstone,
 /area/under/town/basement)
-"oG" = (
-/obj/structure/table/church/m,
-/obj/structure/fluff/psycross/visires{
-	pixel_y = 21
-	},
-/turf/open/floor/volcanic,
-/area/indoors/shelter)
 "oH" = (
 /turf/open/floor/blocks/bluestone,
 /area/outdoors/beach)
@@ -3818,9 +3735,6 @@
 /obj/structure/notice_board,
 /turf/open/floor/grass/yel,
 /area/outdoors/woods/crossroads)
-"pL" = (
-/turf/open/floor/dirt,
-/area/indoors/shelter)
 "pM" = (
 /mob/living/carbon/human/species/skeleton/npc/peasant,
 /turf/open/floor/wood/nosmooth,
@@ -4226,22 +4140,6 @@
 /mob/living/carbon/human/species/human/northern/bog_deserters,
 /turf/open/floor/cobble/alt,
 /area/indoors/shelter/bog)
-"rC" = (
-/obj/structure/fluff/railing/tall/retaining/rock{
-	dir = 1
-	},
-/obj/structure/fluff/railing/tall/retaining/rock{
-	dir = 4
-	},
-/obj/structure/fluff/railing/tall/retaining/rock,
-/obj/structure/fluff/railing/tall/retaining/rock{
-	dir = 5
-	},
-/obj/structure/fluff/railing/tall/retaining/rock{
-	dir = 6
-	},
-/turf/open/lava,
-/area/indoors/shelter)
 "rD" = (
 /obj/structure/flora/grass/water/reeds,
 /obj/structure/flora/grass/water,
@@ -4744,7 +4642,7 @@
 /obj/effect/decal/cobbleedge{
 	dir = 8
 	},
-/turf/closed/mineral/random/warm,
+/turf/closed/mineral,
 /area/under/cavewet)
 "tL" = (
 /obj/structure/fluff/walldeco/church/line{
@@ -5294,9 +5192,6 @@
 /obj/effect/spawner/map_spawner/loot/coin/med,
 /turf/open/floor/naturalstone,
 /area/under/cavewet)
-"wl" = (
-/turf/open/floor/greenstone,
-/area/outdoors/woods/crossroads)
 "wm" = (
 /obj/structure/flora/tree/pine,
 /turf/open/floor/grass,
@@ -5378,11 +5273,6 @@
 /obj/structure/fluff/railing/tall,
 /turf/open/floor/sand/sandstone,
 /area/outdoors/woods/crossroads)
-"wI" = (
-/obj/structure/closet/crate/chest/wicker,
-/obj/item/reagent_containers/food/snacks/hardtack,
-/turf/open/floor/naturalstone,
-/area/indoors/shelter)
 "wJ" = (
 /obj/effect/decal/borderfall{
 	dir = 1
@@ -6771,9 +6661,6 @@
 /obj/machinery/light/fueled/torchholder/hotspring/standing,
 /turf/open/floor/cobble/mossy,
 /area/outdoors/bog/witch)
-"Cl" = (
-/turf/open/floor/greenstone/runed,
-/area/outdoors/woods/crossroads)
 "Cm" = (
 /obj/structure/closet/crate/coffin,
 /turf/open/floor/cobble/mossy,
@@ -6814,22 +6701,6 @@
 "Cv" = (
 /turf/open/floor/cobblerock/alt,
 /area/outdoors/bog/w_highroad)
-"Cw" = (
-/obj/structure/fluff/railing/tall/retaining/rock{
-	dir = 8
-	},
-/obj/structure/fluff/railing/tall/retaining/rock,
-/obj/structure/fluff/railing/tall/retaining/rock{
-	dir = 10
-	},
-/obj/structure/fluff/railing/tall/retaining/rock{
-	dir = 1
-	},
-/obj/structure/fluff/railing/tall/retaining/rock{
-	dir = 9
-	},
-/turf/open/lava,
-/area/indoors/shelter)
 "Cx" = (
 /obj/structure/bed/hay,
 /obj/item/bedsheet/cloth,
@@ -7310,9 +7181,6 @@
 "EB" = (
 /turf/open/water/swamp/deep,
 /area/outdoors/bog)
-"EC" = (
-/turf/open/floor/volcanic,
-/area/indoors/shelter)
 "ED" = (
 /obj/item/grown/log/tree/small,
 /mob/living/carbon/human/species/skeleton/npc/medium,
@@ -7331,7 +7199,7 @@
 /turf/open/water/ocean/abyss,
 /area/outdoors/woods/heavenscoast)
 "EH" = (
-/turf/closed/mineral/random/warm,
+/turf/closed/mineral,
 /area/outdoors/woods/crossroads)
 "EI" = (
 /obj/structure/closet/crate/chest/neu_iron,
@@ -7574,22 +7442,6 @@
 	},
 /turf/open/floor/naturalstone,
 /area/under/cavewet)
-"FD" = (
-/obj/structure/fluff/railing/tall/retaining/rock{
-	dir = 8
-	},
-/obj/structure/fluff/railing/tall/retaining/rock{
-	dir = 4
-	},
-/obj/structure/fluff/railing/tall/retaining/rock,
-/obj/structure/fluff/railing/tall/retaining/rock{
-	dir = 6
-	},
-/obj/structure/fluff/railing/tall/retaining/rock{
-	dir = 10
-	},
-/turf/open/lava,
-/area/indoors/shelter)
 "FE" = (
 /obj/structure/table/wood{
 	icon_state = "largetable";
@@ -7609,12 +7461,6 @@
 /obj/structure/closet/crate/coffin,
 /turf/open/floor/cobble/mossy,
 /area/indoors/shelter/woods)
-"FL" = (
-/obj/structure/rack,
-/obj/item/weapon/whip/chain,
-/obj/item/weapon/whip/chain,
-/turf/open/floor/church,
-/area/indoors/shelter)
 "FM" = (
 /obj/structure/rack/shelf/biggest,
 /obj/effect/decal/cleanable/dirt/cobweb{
@@ -7777,15 +7623,6 @@
 "Gy" = (
 /turf/closed/wall/mineral/wooddark,
 /area/outdoors/woods/heavenscoast)
-"Gz" = (
-/obj/structure/fluff/railing/tall/retaining/rock{
-	dir = 1
-	},
-/obj/structure/fluff/railing/tall/retaining/rock{
-	dir = 8
-	},
-/turf/open/lava,
-/area/indoors/shelter)
 "GB" = (
 /obj/machinery/light/fueled/torchholder/c,
 /turf/open/floor/blocks/newstone,
@@ -7869,6 +7706,17 @@
 /obj/item/essence_connector,
 /obj/item/essence_connector,
 /obj/item/clothing/gloves/essence_gauntlet,
+/obj/projectile/bullet/reusable/arrow/vial,
+/obj/projectile/bullet/reusable/arrow/vial,
+/obj/projectile/bullet/reusable/arrow/vial,
+/obj/projectile/bullet/reusable/arrow/vial,
+/obj/projectile/bullet/reusable/arrow/vial,
+/obj/projectile/bullet/reusable/arrow/vial,
+/obj/projectile/bullet/reusable/arrow/vial,
+/obj/projectile/bullet/reusable/arrow/vial,
+/obj/projectile/bullet/reusable/arrow/vial,
+/obj/projectile/bullet/reusable/arrow/vial,
+/obj/projectile/bullet/reusable/arrow/vial,
 /obj/item/explosive/deathshell,
 /obj/item/explosive/deathshell,
 /obj/machinery/light/fueled/wallfire/candle/blue/r,
@@ -8086,7 +7934,7 @@
 /turf/open/floor/blocks/newstone,
 /area/indoors/lich)
 "HN" = (
-/turf/closed/mineral/random/warm,
+/turf/closed/mineral,
 /area/outdoors/bog)
 "HO" = (
 /obj/effect/decal/cobbleedge{
@@ -8253,14 +8101,6 @@
 "IK" = (
 /turf/open/floor/twig,
 /area/indoors/shelter/bog/witch)
-"IL" = (
-/obj/structure/table/church,
-/obj/item/candle/yellow/lit/infinite/strong{
-	pixel_y = 11;
-	desc = "An ordinary wax candle... or is it? It burns with an unfamiliar intensity, never seeming to truly go out, and shines far brighter than it should. You can hardly bring yourself to touch it, let alone take it."
-	},
-/turf/open/floor/volcanic,
-/area/indoors/shelter)
 "IM" = (
 /obj/structure/chair/wood/alt/chair3,
 /turf/open/floor/ruinedwood/turned,
@@ -8459,13 +8299,6 @@
 	},
 /turf/open/water/ocean/abyss,
 /area/outdoors/woods/crossroads)
-"JI" = (
-/obj/structure/fluff/railing/tall/retaining/rock{
-	dir = 8
-	},
-/obj/structure/fluff/railing/tall/retaining/rock,
-/turf/open/lava,
-/area/indoors/shelter)
 "JJ" = (
 /obj/structure/fluff/railing/tall/retaining{
 	dir = 5
@@ -8911,10 +8744,6 @@
 /obj/structure/bridge_stakes,
 /turf/open/floor/dirt/road,
 /area/outdoors/woods/heavenscoast)
-"Mc" = (
-/obj/structure/roguetent,
-/turf/open/floor/naturalstone,
-/area/indoors/shelter)
 "Md" = (
 /turf/closed/wall/mineral/wood,
 /area/indoors/shelter/woods)
@@ -9583,7 +9412,7 @@
 /area/under/town/basement)
 "OX" = (
 /obj/structure/fluff/walldeco/vinez,
-/turf/closed/mineral/random/warm,
+/turf/closed/mineral,
 /area/under/cave)
 "OY" = (
 /obj/effect/decal/cobbleedge{
@@ -9636,9 +9465,6 @@
 	},
 /turf/open/floor/ruinedwood,
 /area/indoors/shelter)
-"Pn" = (
-/turf/closed/mineral/random/warm,
-/area/indoors/shelter)
 "Po" = (
 /obj/item/natural/stone,
 /turf/open/floor/grass,
@@ -9688,10 +9514,6 @@
 /obj/item/reagent_containers/food/snacks/crow,
 /turf/open/floor/dirt/road,
 /area/indoors/shelter/bog)
-"Px" = (
-/obj/effect/decal/remains/wolf,
-/turf/open/floor/naturalstone,
-/area/indoors/shelter)
 "Pz" = (
 /obj/effect/decal/cobbleedge{
 	icon_state = "mossyedge-sread"
@@ -10520,18 +10342,6 @@
 "SL" = (
 /turf/open/water/swamp,
 /area/under/town/basement)
-"SM" = (
-/obj/structure/fluff/railing/tall/retaining/rock{
-	dir = 8
-	},
-/obj/structure/fluff/railing/tall/retaining/rock{
-	dir = 9
-	},
-/obj/structure/fluff/railing/tall/retaining/rock{
-	dir = 6
-	},
-/turf/open/lava,
-/area/indoors/shelter)
 "SO" = (
 /obj/machinery/light/fueled/wallfire/candle/l,
 /obj/structure/rack,
@@ -10917,15 +10727,6 @@
 	},
 /turf/open/floor/dirt,
 /area/indoors/shelter/woods)
-"Um" = (
-/obj/structure/fluff/railing/tall/retaining/rock{
-	dir = 1
-	},
-/obj/structure/fluff/railing/tall/retaining/rock{
-	dir = 4
-	},
-/turf/open/lava,
-/area/indoors/shelter)
 "Un" = (
 /obj/item/natural/stone,
 /turf/open/floor/dirt/road,
@@ -11328,7 +11129,7 @@
 /turf/open/floor/ruinedwood,
 /area/indoors/shelter/bog)
 "Wj" = (
-/turf/closed/mineral/random/warm,
+/turf/closed/mineral,
 /area/under/cavewet)
 "Wk" = (
 /turf/open/floor/rooftop/green{
@@ -11478,16 +11279,6 @@
 	},
 /turf/open/floor/hexstone,
 /area/indoors/villagegarrison)
-"WQ" = (
-/obj/structure/table/church{
-	dir = 1
-	},
-/obj/item/candle/yellow/lit/infinite/strong{
-	pixel_y = 11;
-	desc = "An ordinary wax candle... or is it? It burns with an unfamiliar intensity, never seeming to truly go out, and shines far brighter than it should. You can hardly bring yourself to touch it, let alone take it."
-	},
-/turf/open/floor/volcanic,
-/area/indoors/shelter)
 "WS" = (
 /obj/structure/fluff/walldeco/chains,
 /turf/open/floor/dirt,
@@ -11796,6 +11587,7 @@
 /obj/item/clothing/shirt/explorer,
 /obj/item/clothing/shirt/undershirt/fancy,
 /obj/item/clothing/pants/tights,
+/obj/item/clothing/shoes/boots,
 /obj/item/clothing/shoes/nobleboot,
 /turf/open/floor/churchmarble,
 /area/indoors/lich)
@@ -11853,7 +11645,7 @@
 /area/indoors/lich)
 "Yw" = (
 /obj/effect/landmark/map_load_mark/generic_tile/two_level,
-/turf/closed/mineral/random/warm,
+/turf/closed/mineral,
 /area/under/cavewet)
 "YA" = (
 /obj/structure/closet/crate/chest/wicker,
@@ -32465,10 +32257,10 @@ eS
 eS
 eS
 eS
-Pn
-Pn
-Pn
-Pn
+eS
+eS
+eS
+eS
 eS
 eS
 eS
@@ -32718,16 +32510,16 @@ eS
 eS
 eS
 eS
-Pn
-Pn
-Pn
-Pn
-Pn
-Pn
-Pn
-Pn
-Pn
-Pn
+eS
+eS
+eS
+eS
+na
+na
+na
+bG
+na
+na
 eS
 eS
 eS
@@ -32974,17 +32766,17 @@ eS
 eS
 eS
 eS
-Pn
-Pn
-Pn
-Pn
-Pn
-Pn
-Pn
-pL
-pL
-Pn
-Pn
+eS
+na
+na
+na
+na
+na
+na
+bG
+bG
+na
+na
 eS
 eS
 eS
@@ -33231,21 +33023,21 @@ eS
 eS
 eS
 eS
-Pn
-Pn
-Pn
-Gz
-JI
-Pn
-Pn
-EC
-pL
-pL
-Pn
-Pn
-Pn
-Pn
-Pn
+eS
+na
+na
+na
+na
+na
+na
+bG
+bG
+bG
+na
+na
+na
+na
+na
 eS
 eS
 eS
@@ -33489,20 +33281,20 @@ eS
 eS
 eS
 eS
-Pn
-Pn
-Um
-mv
-FD
-EC
-EC
-EC
-pL
-Pn
-Pn
-Pn
-Pn
-Pn
+na
+na
+na
+na
+na
+bG
+bG
+bG
+bG
+na
+na
+na
+na
+na
 eS
 eS
 eS
@@ -33745,21 +33537,21 @@ eS
 eS
 eS
 eS
-Pn
-Pn
-Pn
-Pn
-FL
-EC
-EC
-EC
-EC
-pL
-pL
-pL
-Pn
-Pn
-Pn
+na
+na
+na
+na
+na
+bG
+bG
+bG
+bG
+bG
+bG
+bG
+na
+na
+na
 eS
 eS
 eS
@@ -34002,22 +33794,22 @@ eS
 eS
 eS
 eS
-Pn
-Pn
-Pn
-IL
-EC
-EC
-EC
-EC
-EC
-EC
-pL
-Pn
-Pn
-Pn
-Pn
-Pn
+na
+na
+na
+bG
+bG
+bG
+na
+na
+na
+na
+na
+bG
+na
+na
+na
+na
 eS
 eS
 eS
@@ -34259,24 +34051,24 @@ eS
 eS
 eS
 eS
-Pn
-Pn
-Pn
-oG
-EC
-EC
-EC
-EC
-EC
-EC
-EC
-Pn
-Pn
-ob
-Pn
-Pn
-Pn
-Pn
+na
+na
+bG
+bG
+na
+bG
+bG
+na
+bG
+bG
+bG
+bG
+na
+na
+na
+na
+na
+na
 eS
 eS
 eS
@@ -34516,26 +34308,26 @@ eS
 eS
 eS
 eS
-Pn
-Pn
-Pn
-WQ
-EC
-EC
-EC
-EC
-EC
-EC
-EC
-dC
-ob
-ob
-ob
-pL
-pL
-Pn
-Pn
-Pn
+na
+na
+bG
+na
+na
+na
+bG
+na
+na
+bG
+bG
+bG
+bG
+bG
+bG
+bG
+bG
+na
+na
+na
 eS
 eS
 eS
@@ -34773,26 +34565,26 @@ eS
 eS
 eS
 eS
-Pn
-Pn
-Pn
-Pn
-Cw
-EC
-EC
-EC
-EC
-pL
-Pn
-Pn
-Pn
-ob
-Pn
-Pn
-ob
-Pn
-Pn
-Pn
+na
+na
+bG
+na
+na
+na
+bG
+na
+na
+na
+na
+na
+na
+na
+na
+na
+bG
+na
+na
+na
 eS
 eS
 eS
@@ -35030,26 +34822,26 @@ eS
 eS
 eS
 eS
-Pn
-Pn
-bE
-SM
-kt
-EC
-EC
-EC
-pL
-pL
-Pn
-Pn
-QZ
-ob
-Pn
-Pn
-ob
-Pn
-Pn
-Pn
+eS
+na
+bG
+na
+na
+na
+na
+na
+na
+na
+na
+na
+na
+na
+na
+na
+bG
+na
+na
+na
 eS
 eS
 eS
@@ -35287,26 +35079,26 @@ eS
 eS
 eS
 eS
-Pn
-Pn
-Pn
-bB
-EC
-EC
-Pn
-EC
-pL
-Pn
-Pn
-fr
-ob
-ob
-cd
-Pn
-ob
-pL
-Pn
-Pn
+eS
+na
+bG
+na
+bG
+na
+na
+na
+na
+na
+na
+na
+bG
+na
+na
+na
+bG
+bG
+na
+na
 eS
 eS
 eS
@@ -35544,26 +35336,26 @@ eS
 eS
 eS
 eS
-Pn
-Pn
-Pn
-rC
-Pn
-Pn
-Pn
-pL
-Pn
-Pn
-Pn
-kw
-Px
-ob
-Pn
-Pn
-ob
-Pn
-Pn
-ob
+eS
+na
+bG
+bG
+bG
+na
+na
+bG
+na
+na
+na
+na
+na
+na
+na
+na
+na
+bG
+na
+bG
 eS
 eS
 eS
@@ -35802,25 +35594,25 @@ eS
 eS
 eS
 eS
-Pn
-Pn
-Pn
-Pn
-Pn
-Pn
-Pn
-Pn
-Pn
-Pn
-Pn
-Pn
-ob
-ob
-ob
-ob
-Mc
-ob
-ob
+na
+bG
+bG
+bG
+na
+na
+na
+na
+na
+na
+na
+na
+na
+na
+bG
+na
+na
+bG
+bG
 eS
 eS
 eS
@@ -36059,25 +35851,25 @@ eS
 eS
 eS
 eS
-Pn
-Pn
-Pn
-Pn
-Pn
-Pn
-Pn
-Pn
-Pn
-Pn
-Pn
-Pn
-Pn
-Pn
-ob
-Pn
-Pn
-ob
-Pn
+na
+na
+bG
+na
+na
+na
+na
+na
+na
+na
+na
+na
+na
+na
+bG
+bG
+na
+bG
+na
 eS
 eS
 eS
@@ -36328,10 +36120,10 @@ eS
 eS
 eS
 eS
-Pn
-Pn
-pL
-Pn
+jD
+jD
+jD
+jD
 eS
 Tx
 Tx
@@ -36585,10 +36377,10 @@ eS
 eS
 eS
 eS
-Pn
-ob
-pL
-Pn
+jD
+jD
+jD
+jD
 eS
 Tx
 eS
@@ -36841,11 +36633,11 @@ eS
 eS
 eS
 eS
-Pn
-Pn
-Mc
-Pn
-Pn
+jD
+jD
+jD
+jD
+jD
 eS
 Tx
 vL
@@ -37098,11 +36890,11 @@ eS
 eS
 eS
 eS
-Pn
-Pn
-ob
-Pn
-Pn
+jD
+jD
+jD
+jD
+jD
 eS
 Tx
 vL
@@ -37355,11 +37147,11 @@ eS
 eS
 eS
 eS
-Pn
-ob
-ob
-ob
-Pn
+jD
+jD
+jD
+jD
+jD
 eS
 Tx
 vL
@@ -37612,11 +37404,11 @@ eS
 eS
 eS
 eS
-Pn
-Pn
-ob
-ob
-Pn
+jD
+jD
+jD
+jD
+jD
 eS
 Tx
 vL
@@ -37869,11 +37661,11 @@ eS
 eS
 eS
 eS
-Pn
-Pn
-ob
-ob
-Pn
+jD
+jD
+jD
+jD
+jD
 eS
 Tx
 vL
@@ -38127,10 +37919,10 @@ eS
 eS
 eS
 eS
-Pn
-ob
-Pn
-Pn
+jD
+jD
+jD
+jD
 eS
 Tx
 Tx
@@ -38384,10 +38176,10 @@ eS
 eS
 eS
 eS
-Pn
-wI
-Pn
-Pn
+jD
+jD
+jD
+jD
 eS
 eS
 Hc
@@ -38641,10 +38433,10 @@ eS
 eS
 eS
 eS
-Pn
-Pn
-Pn
-Pn
+jD
+jD
+jD
+jD
 eS
 eS
 Hc
@@ -38898,10 +38690,10 @@ eS
 eS
 eS
 eS
-Pn
-Pn
-Pn
-Pn
+jD
+jD
+jD
+jD
 eS
 eS
 Tx
@@ -39157,7 +38949,7 @@ eS
 eS
 eS
 eS
-Pn
+jD
 eS
 eS
 eS
@@ -67988,11 +67780,11 @@ na
 na
 na
 na
+bG
 na
 na
 na
-na
-na
+bG
 na
 na
 bG
@@ -68056,9 +67848,9 @@ GU
 bG
 GU
 bG
-bG
-bG
-bG
+GU
+GU
+GU
 bG
 bG
 bG
@@ -68244,8 +68036,8 @@ na
 na
 na
 na
-na
-na
+bG
+bG
 na
 na
 na
@@ -68533,11 +68325,11 @@ na
 na
 na
 na
+bG
 na
 na
 na
-na
-na
+bG
 na
 na
 na
@@ -68789,12 +68581,12 @@ na
 na
 na
 na
+bG
+bG
 na
 na
-na
-na
-na
-na
+bG
+bG
 na
 na
 na
@@ -69020,7 +68812,7 @@ na
 na
 na
 na
-na
+bG
 na
 na
 bG
@@ -69040,6 +68832,8 @@ na
 na
 na
 na
+qd
+qd
 na
 na
 na
@@ -69049,9 +68843,7 @@ na
 na
 na
 na
-na
-na
-na
+bG
 na
 na
 na
@@ -69277,7 +69069,7 @@ na
 na
 na
 na
-na
+bG
 na
 na
 bG
@@ -69296,10 +69088,10 @@ na
 na
 na
 na
-na
-na
-na
-na
+qd
+qd
+qd
+qd
 na
 na
 na
@@ -69534,7 +69326,7 @@ na
 na
 na
 na
-na
+bG
 na
 na
 bG
@@ -69551,21 +69343,21 @@ na
 na
 na
 na
+qd
+qd
+qd
+qd
+qd
+qd
+qd
 na
 na
 na
 na
 na
-na
-na
-na
-na
-na
-na
-na
-na
-na
-na
+bG
+bG
+bG
 na
 na
 bG
@@ -69791,7 +69583,7 @@ na
 na
 na
 na
-na
+bG
 na
 na
 bG
@@ -69808,13 +69600,13 @@ na
 na
 na
 na
-na
-na
-na
-na
-na
-na
-na
+qd
+qd
+qd
+qd
+qd
+qd
+qd
 na
 na
 na
@@ -70057,20 +69849,20 @@ bG
 bG
 na
 na
+qd
+qd
+qd
 na
 na
+qd
 na
 na
-na
-na
-na
-na
-na
-na
-na
-na
-na
-na
+qd
+qd
+qd
+qd
+qd
+qd
 na
 na
 na
@@ -70316,17 +70108,17 @@ bG
 na
 na
 na
-na
-na
-na
-na
-na
-na
-na
-na
-na
-na
-na
+qd
+qd
+qd
+qd
+qd
+qd
+qd
+qd
+qd
+qd
+qd
 na
 na
 na
@@ -70574,12 +70366,12 @@ bG
 na
 na
 na
-na
-na
-na
-na
-na
-na
+qd
+qd
+qd
+qd
+qd
+qd
 na
 na
 na
@@ -70835,7 +70627,7 @@ na
 na
 na
 na
-na
+qd
 na
 na
 na
@@ -72618,8 +72410,8 @@ na
 na
 na
 na
-na
-na
+qd
+qd
 na
 na
 na
@@ -72875,8 +72667,8 @@ na
 na
 na
 na
-na
-na
+qd
+qd
 na
 na
 na
@@ -72886,11 +72678,11 @@ bG
 na
 na
 na
+bG
 na
 na
 na
-na
-na
+bG
 na
 na
 na
@@ -73132,9 +72924,9 @@ na
 na
 na
 na
-na
-na
-na
+qd
+qd
+qd
 na
 na
 na
@@ -73142,7 +72934,7 @@ bG
 bG
 na
 na
-na
+bG
 na
 na
 na
@@ -73389,9 +73181,9 @@ na
 na
 na
 na
-na
-na
-na
+qd
+qd
+qd
 na
 na
 na
@@ -73647,6 +73439,33 @@ na
 na
 na
 na
+qd
+qd
+qd
+na
+na
+na
+bG
+na
+na
+na
+na
+na
+na
+na
+qd
+qd
+na
+na
+na
+na
+na
+na
+na
+na
+na
+na
+na
 na
 na
 na
@@ -73661,33 +73480,6 @@ na
 na
 na
 na
-na
-na
-na
-na
-na
-na
-na
-na
-na
-na
-na
-na
-na
-na
-na
-na
-na
-na
-na
-na
-na
-na
-na
-na
-na
-na
-na
 bG
 na
 na
@@ -73701,19 +73493,19 @@ bG
 na
 na
 bG
-bG
-bG
-bG
-bG
-GU
-bG
-GU
 bG
 bG
 bG
 GU
-bG
-bG
+GU
+GU
+GU
+GU
+GU
+GU
+GU
+GU
+GU
 bG
 bG
 bG
@@ -73904,10 +73696,13 @@ na
 na
 na
 na
+qd
+qd
+qd
 na
 na
 na
-na
+bG
 na
 na
 bG
@@ -73916,6 +73711,8 @@ na
 na
 na
 na
+qd
+qd
 na
 na
 na
@@ -73929,15 +73726,10 @@ na
 na
 na
 na
-na
-na
-na
-na
-na
-na
-na
-na
-na
+bG
+bG
+bG
+bG
 na
 na
 na
@@ -74162,9 +73954,12 @@ na
 na
 na
 na
+qd
+qd
 na
 na
 na
+bG
 na
 na
 bG
@@ -74173,12 +73968,9 @@ na
 na
 na
 na
-na
-na
-na
-na
-na
-na
+qd
+qd
+qd
 na
 na
 na
@@ -74419,9 +74211,12 @@ na
 na
 na
 na
+qd
+qd
+qd
 na
 na
-na
+bG
 na
 na
 bG
@@ -74431,12 +74226,9 @@ na
 na
 na
 na
-na
-na
-na
-na
-na
-na
+qd
+qd
+qd
 na
 na
 na
@@ -74676,9 +74468,12 @@ na
 na
 na
 na
+qd
+qd
+qd
 na
 na
-na
+bG
 na
 na
 bG
@@ -74688,12 +74483,9 @@ na
 na
 na
 na
-na
-na
-na
-na
-na
-na
+qd
+qd
+qd
 na
 na
 na
@@ -74933,6 +74725,9 @@ na
 na
 na
 na
+qd
+qd
+qd
 na
 na
 na
@@ -74945,13 +74740,10 @@ na
 na
 na
 na
-na
-na
-na
-na
-na
-na
-na
+qd
+qd
+qd
+qd
 na
 na
 na
@@ -75190,6 +74982,9 @@ na
 na
 na
 na
+qd
+qd
+qd
 na
 na
 na
@@ -75202,13 +74997,10 @@ na
 na
 na
 na
-na
-na
-na
-na
-na
-na
-na
+qd
+qd
+qd
+qd
 na
 na
 na
@@ -75238,11 +75030,11 @@ na
 na
 na
 na
+bG
 na
 na
 na
-na
-na
+bG
 na
 na
 na
@@ -75254,7 +75046,7 @@ GU
 na
 na
 na
-na
+bG
 na
 na
 na
@@ -75448,6 +75240,11 @@ na
 na
 na
 na
+qd
+qd
+na
+qd
+qd
 na
 na
 na
@@ -75458,17 +75255,7 @@ na
 na
 na
 na
-na
-na
-na
-na
-na
-na
-na
-na
-na
-na
-na
+qd
 na
 na
 na
@@ -75485,6 +75272,11 @@ na
 na
 na
 bG
+na
+na
+na
+na
+bG
 bG
 na
 na
@@ -75494,12 +75286,12 @@ na
 na
 na
 na
-na
-na
-na
-na
-na
-na
+bG
+bG
+bG
+bG
+bG
+bG
 na
 na
 na
@@ -75511,7 +75303,7 @@ GU
 na
 na
 na
-na
+bG
 na
 na
 na
@@ -75706,6 +75498,9 @@ na
 na
 na
 na
+qd
+qd
+qd
 na
 na
 na
@@ -75733,10 +75528,7 @@ na
 na
 na
 na
-na
-na
-na
-na
+bG
 na
 na
 na
@@ -75768,7 +75560,7 @@ GU
 na
 na
 na
-na
+bG
 na
 na
 na
@@ -75991,9 +75783,9 @@ na
 na
 na
 na
-na
-na
-na
+bG
+bG
+bG
 na
 na
 na
@@ -76779,7 +76571,7 @@ na
 bG
 na
 na
-na
+bG
 na
 na
 na
@@ -77036,12 +76828,12 @@ na
 na
 na
 na
-na
-na
-na
-na
-na
-na
+bG
+bG
+bG
+bG
+bG
+bG
 na
 na
 na
@@ -98001,10 +97793,10 @@ Xr
 Xr
 Xr
 Xr
-kp
-kp
-kp
-kp
+Xr
+Xr
+Xr
+Xr
 Xr
 Xr
 Xr
@@ -98254,10 +98046,10 @@ Xr
 Xr
 Xr
 Xr
-kp
-kp
-kp
-kp
+Xr
+Xr
+Xr
+Xr
 kp
 kp
 kp
@@ -98510,7 +98302,7 @@ Xr
 Xr
 Xr
 Xr
-kp
+Xr
 kp
 kp
 kp
@@ -98767,7 +98559,7 @@ Xr
 Xr
 Xr
 Xr
-kp
+Xr
 kp
 kp
 kp
@@ -100566,7 +100358,7 @@ Xr
 Xr
 Xr
 Xr
-kp
+Xr
 kp
 kp
 kp
@@ -100823,7 +100615,7 @@ Xr
 Xr
 Xr
 Xr
-kp
+Xr
 kp
 kp
 kp
@@ -101080,7 +100872,7 @@ Xr
 Xr
 Xr
 Xr
-kp
+Xr
 kp
 kp
 kp
@@ -114799,11 +114591,11 @@ Vy
 Vy
 Vy
 Vy
-wl
 Vy
 Vy
-NH
-NH
+Vy
+Vy
+Vy
 Vy
 Vy
 Vy
@@ -115056,9 +114848,9 @@ Vy
 Vy
 Vy
 Vy
-NH
-wl
-cH
+Vy
+Vy
+Vy
 Vy
 Vy
 Vy
@@ -115312,13 +115104,13 @@ Vy
 Vy
 Vy
 Vy
-NH
 Vy
-Cl
-dn
-Cl
 Vy
-wl
+Vy
+Vy
+Vy
+Vy
+Vy
 Vy
 Vy
 Vy
@@ -115570,11 +115362,11 @@ Vy
 Vy
 Vy
 Vy
-wl
-dn
-nl
-dn
-wl
+Vy
+Vy
+Vy
+Vy
+Vy
 Vy
 Vy
 Vy
@@ -115827,11 +115619,11 @@ Vy
 wE
 Vy
 Vy
-NH
-Cl
-dn
-Cl
-cH
+Vy
+Vy
+Vy
+Vy
+Vy
 Vy
 Vy
 Vy
@@ -116083,12 +115875,12 @@ Vy
 Vy
 Vy
 Vy
-wl
-cH
-NH
-wl
 Vy
-NH
+Vy
+Vy
+Vy
+Vy
+Vy
 Vy
 Vy
 Vy
@@ -116342,9 +116134,9 @@ Vy
 Vy
 Vy
 Vy
-wl
 Vy
-wl
+Vy
+Vy
 Vy
 Vy
 Vy

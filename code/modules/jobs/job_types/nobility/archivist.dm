@@ -1,6 +1,5 @@
 /datum/job/archivist
 	title = JOB_ARCHIVIST
-	alt_titles = list("Librarian", "Historian", "Antiquarian")
 	tutorial = "A well-traveled and well-learned seeker of wisdom, the Archivist serves endeavours to espouse the mightiness of the quill to the heirs of Shirleigh.\
 	Hired by King Malryck and Queen Alyssandrine, you are tasked primarily with the education and tutorship of Etgard's heirs.\
 	Secondary to this, you also are responsible for recording court events, and maintaining Etgard's archives.\
@@ -8,7 +7,7 @@
 	department_flag = NOBLEMEN
 	job_flags = (JOB_ANNOUNCE_ARRIVAL | JOB_SHOW_IN_CREDITS | JOB_EQUIP_RANK | JOB_NEW_PLAYER_JOINABLE)
 	display_order = 19 //lol?
-	factions = list(FACTION_TOWN)
+	faction = FACTION_TOWN
 	total_positions = 2
 	spawn_positions = 2
 	bypass_lastclass = TRUE
@@ -19,8 +18,6 @@
 	cmode_music = 'sound/music/cmode/nobility/CombatCourtMagician.ogg'
 	advclass_cat_rolls = list(CTAG_ARCHIVIST = 20)
 	give_bank_account = 100
-	knows_the_town = TRUE
-	known_by_the_town = TRUE
 
 	job_bitflag = BITFLAG_ROYALTY
 
@@ -38,11 +35,11 @@
 		/datum/language/elvish,
 		/datum/language/dwarvish,
 		/datum/language/qadirid,
-		/datum/language/noman,
-		/datum/language/cudese,
-		/datum/language/newunsundered,
-		/datum/language/nortic,
+		/datum/language/celestial,
 		/datum/language/hellspeak,
+		/datum/language/newunsundered,
+		/datum/language/oldunsundered,
+		/datum/language/orcish,
 		/datum/language/deepspeak
 	)
 
@@ -50,11 +47,12 @@
 		TRAIT_NOBLE_BLOOD,
 		TRAIT_NOBLE_POWER,
 		TRAIT_NOBLE_LOCAL,
-		TRAIT_VIRGIN,
 	)
 
-/datum/job/advclass/archivist
-	factions = list(FACTION_TOWN)
+/datum/job/archivist/after_spawn(mob/living/carbon/human/spawned, client/player_client)
+	. = ..()
+
+	spawned.virginity = TRUE
 
 /datum/attribute_holder/sheet/job/chronicler
 	raw_attribute_list = list(
@@ -91,6 +89,7 @@
 	category_tags = list(CTAG_ARCHIVIST)
 	magic_user = TRUE
 	spells = list(
+		/datum/action/cooldown/spell/undirected/learn,
 		/datum/action/cooldown/spell/undirected/touch/prestidigitation,
 		/datum/action/cooldown/spell/undirected/conjure_item/summon_parchment,
 		/datum/action/cooldown/spell/undirected/conjure_item/summon_parchment/scroll,
@@ -99,27 +98,12 @@
 	attribute_sheet = /datum/attribute_holder/sheet/job/chronicler
 	attribute_sheet_old = /datum/attribute_holder/sheet/job/chronicler/old
 
-/datum/job/advclass/archivist/chronicler/on_roundstart(mob/living/spawned, client/player_client)
-	. = ..()
-	var/static/list/selectable_books = list(
-		"Blazing Tome (Fire)" = /obj/item/spellbook/expert/starter/fire,
-		"Frostbound Tome (Ice)" = /obj/item/spellbook/expert/starter/ice,
-		"Storm-Charged Tome (Lightning)" = /obj/item/spellbook/expert/starter/lightning,
-		"Stoneveined Tome (Earth)" = /obj/item/spellbook/expert/starter/earth,
-		"Thrice-Warded Tome (Arcane)" = /obj/item/spellbook/expert/starter/arcane,
-		"Grave-Touched Tome (Death)" = /obj/item/spellbook/expert/starter/death,
-		"Verdant Tome (Life)" = /obj/item/spellbook/expert/starter/life,
-		"Windswept Tome (Air)" = /obj/item/spellbook/expert/starter/air,
-		"Tidebound Tome (Water)" = /obj/item/spellbook/expert/starter/water,
-	)
-
-	grant_selected_spellbooks(spawned, selectable_books, 2)
-
 /datum/outfit/archivist/chronicler
 	name = "Chronicler (Archivist)"
-	shoes = /obj/item/clothing/shoes/boots/darkboots
+	shoes = /obj/item/clothing/shoes/boots
 	belt = /obj/item/storage/belt/leather/plaquesilver
 	beltl = /obj/item/storage/keyring/archivist
+	beltr = /obj/item/book/granter/spellbook/expert
 	backl = /obj/item/storage/backpack/satchel
 	neck = /obj/item/storage/belt/pouch/coins/poor
 	backpack_contents = list(
@@ -210,7 +194,7 @@
 /datum/outfit/archivist/dreamwatcher
 	name = "Dreamwatcher (Archivist)"
 	armor = /obj/item/clothing/shirt/robe/colored/black
-	shoes = /obj/item/clothing/shoes/boots/darkboots
+	shoes = /obj/item/clothing/shoes/boots
 	belt = /obj/item/storage/belt/leather/plaquesilver
 	beltr = /obj/item/storage/keyring/archivist
 	wrists = /obj/item/clothing/wrists/nocwrappings

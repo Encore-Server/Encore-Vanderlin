@@ -68,5 +68,3 @@
 #define COMSIG_GLOBAL_ROLE_CONVERTED "role_converted"
 
 #define COMSIG_GHOST_VESSEL_POSSESSED "ghost_vessel_possessed"
-
-#define COMSIG_GLOBAL_PLANT_HARVESTED "global_plant_harvest"

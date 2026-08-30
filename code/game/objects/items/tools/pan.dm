@@ -21,13 +21,6 @@
 	ingsize = 3
 	item_weight = 2.1 KILOGRAMS
 
-/obj/item/cooking/pan/stone
-	name = "hotrock"
-	icon_state = "cookingrock"
-
-	anvilrepair = /datum/attribute/skill/craft/crafting
-	smeltresult = null
-
 /obj/item/cooking/pan/Initialize()
 	. = ..()
 	AddComponent(/datum/component/storage/concrete/grid/food/cooking/pan)

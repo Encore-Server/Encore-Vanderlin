@@ -61,9 +61,8 @@ GLOBAL_PROTECT(no_child_icons)
 
 
 /mob/living/carbon/human/update_body()
-	if(!(status_flags & BUILDING_ORGANS))
-		dna?.species?.handle_body(src)
-		return ..()
+	dna?.species?.handle_body(src) //create destroy moment
+	..()
 
 /mob/living/carbon/human/proc/update_organ_colors()
 	var/list/colors = color_key_source_list_from_carbon(src)
@@ -176,14 +175,6 @@ GLOBAL_PROTECT(no_child_icons)
 					isnum(wound.armdam_override) ? wound.armdam_override : ARM_DAMAGE_LAYER,
 					wound.use_blood_color
 				)
-		if(BP.get_cut() && BP.is_artery_torn())
-			wound_overlays["s1"] = list(
-				DAMAGE_LAYER,
-				LEG_DAMAGE_LAYER,
-				ARM_DAMAGE_LAYER,
-				TRUE
-			)
-
 		for(var/wound_overlay in wound_overlays)
 			var/mutable_appearance/damage_overlay = mutable_appearance(limb_icon, "[BP.body_zone]_[wound_overlay]", -wound_overlays[wound_overlay][1])
 			damage_overlays += damage_overlay
@@ -549,11 +540,7 @@ GLOBAL_PROTECT(no_child_icons)
 		//add sleeve overlays, then offset
 		var/list/sleeves = list()
 		if(wear_wrists.sleeved && armsindex > 0)
-			var/obj/item/clothing/wrists/wrists_item = wear_wrists
-			var/wrists_sleeves_layer = WRISTSLEEVE_LAYER
-			if(istype(wrists_item) && wrists_item.alternate_sleeve_layer)
-				wrists_sleeves_layer = wrists_item.alternate_sleeve_layer
-			sleeves = get_sleeves_layer(wear_wrists, armsindex, wrists_sleeves_layer)
+			sleeves = get_sleeves_layer(wear_wrists,armsindex,WRISTSLEEVE_LAYER)
 
 		if(sleeves)
 			for(var/mutable_appearance/S as anything in sleeves)

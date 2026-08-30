@@ -14,7 +14,7 @@
 	name = "corset"
 	desc = "A leather binding to constrict one's figure... and lungs."
 	icon_state = "corset"
-	armor_type = /datum/armor/padded/bad
+	armor = ARMOR_PADDED_BAD
 	body_parts_covered = COVERAGE_VEST
 	item_weight = 230 GRAMS
 
@@ -34,7 +34,7 @@
 	// It looks better without these
 	flags_inv = HIDEUNDIES
 	armor_class = AC_LIGHT
-	armor_type = /datum/armor/leather/good
+	armor = ARMOR_LEATHER_GOOD
 	body_parts_covered = COVERAGE_TORSO
 	prevent_crits = ALL_EXCEPT_BLUNT
 	item_weight = 3.2 KILOGRAMS
@@ -57,7 +57,7 @@
 	clothing_flags = CANT_SLEEP_IN
 
 	armor_class = AC_HEAVY
-	armor_type = /datum/armor/brigandine
+	armor = ARMOR_BRIGANDINE
 	body_parts_covered = COVERAGE_ALL_BUT_LEGS
 	max_integrity = INTEGRITY_STRONGEST
 	prevent_crits = ALL_EXCEPT_BLUNT
@@ -95,7 +95,6 @@
 	icon_state = "abyssal_robe"
 	item_state = "abyssal_robe"
 	smeltresult = /obj/item/ingot/bronze
-	melting_material = /datum/material/bronze
 
 /obj/item/clothing/armor/brigandine/mjallidhorn/Initialize()
 	. = ..()
@@ -119,7 +118,7 @@
 	sellprice = VALUE_BRIGANDINE
 	clothing_flags = CANT_SLEEP_IN
 	armor_class = AC_HEAVY
-	armor_type = /datum/armor/plate/bad
+	armor = ARMOR_PLATE_BAD
 	body_parts_covered = COVERAGE_ALL_BUT_LEGS
 	max_integrity = INTEGRITY_STRONGEST
 	prevent_crits = ALL_EXCEPT_BLUNT
@@ -138,21 +137,24 @@
 	icon_state = "coat_of_plates"
 	blocksound = PLATEHIT
 	sellprice = VALUE_SNOWFLAKE_STEEL
-	armor_type = /datum/armor/plate/bad
+	armor = ARMOR_PLATE_BAD
 	// add armor plate bad from defines
 	stand_speed_reduction = 1.05
 
 	max_integrity = INTEGRITY_STRONG
 
 /obj/item/clothing/armor/brigandine/light
+	slot_flags = ITEM_SLOT_ARMOR
 	name = "lightweight brigandine"
 	desc = "A light riveted coat with plates concealed inside an exterior fabric. Susceptible to daggers being shoved into your ribs."
 	icon_state = "light_brigandine"
+	blocksound = SOFTHIT
 	body_parts_covered = COVERAGE_TORSO
+	armor = ARMOR_BRIGANDINE
 	max_integrity = ARMOR_INT_CHEST_PLATE_BRIGANDINE
 	smeltresult = /obj/item/ingot/iron
-	melting_material = /datum/material/iron
-	armor_class = AC_LIGHT //steel version of the studded leather armor now
+	equip_delay_self = 40
+	armor_class = AC_LIGHT//steel version of the studded leather armor now
 	w_class = WEIGHT_CLASS_BULKY
 	prevent_crits = ALL_EXCEPT_STAB
 	item_weight = 3.95 KILOGRAMS
@@ -162,7 +164,7 @@
 	desc = "A chiseled breastplate of bronze, further padded with hide to comfort its championing bod. The plates have been carefully forged to mimic the statuesque physiques of Psydonia's ancient heroes. Wearing it bolsters you with determination."
 	body_parts_covered = CHEST | VITALS | LEGS
 	icon_state = "bronzecuirass"
-	armor_type = /datum/armor/brigandine
+	armor = ARMOR_BRIGANDINE
 	melt_amount = 150
 	melting_material = /datum/material/bronze
 	max_integrity = ARMOR_INT_CHEST_MEDIUM_SCALE
@@ -177,4 +179,4 @@
 	body_parts_covered = CHEST | VITALS
 	max_integrity = ARMOR_INT_CHEST_MEDIUM_SCALE //250 INT, or a little above Iron - and +100 INT over the Copper variant.
 	armor_class = AC_LIGHT
-	armor_type = /datum/armor/brigandine
+	armor = ARMOR_BRIGANDINE

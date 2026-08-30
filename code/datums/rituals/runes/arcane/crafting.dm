@@ -65,19 +65,15 @@
 	to_chat(user, span_cultsmall("The items clatter free from the rune."))
 	playsound(src, 'sound/magic/glass.ogg', 40, TRUE)
 
-/obj/effect/decal/cleanable/ritual_rune/arcyne/crafting/item_interaction(mob/living/user, obj/item/tool, list/modifiers)
-	if(user.cmode)
-		return NONE
-
-	if(tool.item_flags & ABSTRACT || HAS_TRAIT(tool, TRAIT_NODROP))
-		return NONE
-
+/obj/effect/decal/cleanable/ritual_rune/arcyne/crafting/attackby(obj/item/W, mob/user, list/modifiers)
+	if(istype(W, /obj/item/melee/touch_attack))
+		return ..()
 	if(animating)
 		to_chat(user, span_notice("The rune is already working..."))
-		return ITEM_INTERACT_BLOCKING
-
-	try_place_item(user, tool)
-	return ITEM_INTERACT_SUCCESS
+		return
+	// try to stage it.
+	if(!try_place_item(user, W))
+		return ..()
 
 /// Attempts to place the held item into the next open slot.
 /obj/effect/decal/cleanable/ritual_rune/arcyne/crafting/proc/try_place_item(mob/living/user, obj/item/item)
@@ -143,7 +139,7 @@
 	for(var/datum/crafting_slot/S in slots)
 		staged_types += S.item.type
 
-	for(var/recipe_type in subtypesof(/datum/arcyne_crafting_recipe))
+	for(var/recipe_type as anything in subtypesof(/datum/arcyne_crafting_recipe))
 		var/datum/arcyne_crafting_recipe/R = new recipe_type
 		var/list/needed = R.ingredients.Copy()
 		if(length(needed) != length(slots))
@@ -254,7 +250,7 @@
 		if(S.item && !QDELETED(S.item))
 			S.item.anchored = FALSE
 			animate(S.item, pixel_x = 0, pixel_y = 0, time = 0.5 SECONDS, flags = ANIMATION_END_NOW)
-	QDEL_LIST(slots)
+	slots.Cut()
 	matched_recipe = null
 	animating = FALSE
 	rune_in_use = FALSE
@@ -271,7 +267,3 @@
 	var/px = 0
 	/// Pixel Y offset from the rune's tile center
 	var/py = 0
-
-/datum/crafting_slot/Destroy(force)
-	. = ..()
-	item = null

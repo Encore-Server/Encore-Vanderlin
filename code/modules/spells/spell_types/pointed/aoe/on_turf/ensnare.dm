@@ -2,9 +2,11 @@
 	name = "Ensnare"
 	desc = "Tendrils of arcyne force will hold all in an area in place, for a time."
 	button_icon_state = "ensnare"
-
-	required_form = FORM_ARCANE
-	required_technique = TECHNIQUE_CREATION
+	point_cost = 3
+	attunements = list(
+		/datum/attunement/time = 0.3,
+		/datum/attunement/arcyne = 0.4,
+	)
 
 	invocation = "H'ld D'wn!"
 	invocation_type = INVOCATION_SHOUT

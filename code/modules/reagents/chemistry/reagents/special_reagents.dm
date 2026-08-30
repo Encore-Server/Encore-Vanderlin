@@ -7,7 +7,6 @@
 	taste_description = "burning chemicals"
 	harmful = TRUE
 	boiling_point = T0C + 140
-	price_per_unit = 4
 
 /datum/reagent/drug/methamphetamine
 	name = "Methamphetamine"
@@ -16,7 +15,6 @@
 	color = "#78C8FA" //best case scenario is the "default", gets muddled depending on purity
 	overdose_threshold = 20
 	metabolization_rate = 0.75 * REAGENTS_METABOLISM
-	price_per_unit = 10
 
 /datum/reagent/drug/methamphetamine/on_mob_metabolize(mob/living/L)
 	..()
@@ -66,7 +64,6 @@
 	reagent_state = LIQUID
 	color = "#7FE0FF"
 	metabolization_rate = 0.75 * REAGENTS_METABOLISM
-	price_per_unit = 7
 
 /datum/reagent/drug/phlogiston_elasticum/on_mob_metabolize(mob/living/L)
 	. = ..()
@@ -82,7 +79,6 @@
 	reagent_state = LIQUID
 	color = "#5FA8FF"
 	metabolization_rate = 0.75 * REAGENTS_METABOLISM
-	price_per_unit = 7
 
 /datum/reagent/drug/gravitum_elixir/on_mob_metabolize(mob/living/L)
 	. = ..()
@@ -100,7 +96,6 @@
 	reagent_state = LIQUID
 	color = "#BFEFFF"
 	metabolization_rate = 0.75 * REAGENTS_METABOLISM
-	price_per_unit = 7
 
 /datum/reagent/drug/subtilum_tincture/on_mob_metabolize(mob/living/L)
 	. = ..()
@@ -118,7 +113,6 @@
 	color = "#929292"
 	metabolization_rate = 10 * REAGENTS_METABOLISM
 	taste_description = "rocks"
-	price_per_unit = 11
 
 	/// Less than this and it wont petrify
 	var/min_volume_to_pretrify = 3
@@ -140,7 +134,6 @@
 	color = "#88BFFF"
 	metabolization_rate = 0.5 * REAGENTS_METABOLISM
 	taste_description = "biting cold"
-	price_per_unit = 7
 
 	/// Minimum volume before frost begins to take hold
 	var/min_volume_to_affect = 5

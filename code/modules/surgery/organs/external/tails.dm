@@ -10,11 +10,10 @@
 	var/can_wag = TRUE
 	var/wagging = FALSE
 
-/obj/item/organ/tail/on_mob_remove(mob/living/carbon/organ_owner, special, movement_flags)
+/obj/item/organ/tail/Remove(mob/living/carbon/human/H,  special = 0)
 	. = ..()
-
-	if(organ_owner.dna?.species)
-		organ_owner.dna.species.stop_wagging_tail(organ_owner)
+	if(H && H.dna && H.dna.species)
+		H.dna.species.stop_wagging_tail(H)
 
 /obj/item/organ/tail/cat
 	name = "cat tail"
@@ -38,15 +37,13 @@
 		QDEL_NULL(stillness)
 	return ..()
 
-/obj/item/organ/tail/medicator/on_mob_insert(mob/living/carbon/organ_owner, special, movement_flags)
+/obj/item/organ/tail/medicator/Insert(mob/living/carbon/M, special, drop_if_replaced, new_zone = null)
 	. = ..()
-
 	if(!istype(owner, /mob/living/carbon/human/dummy))
 		stillness = owner.AddComponent(/datum/component/stillness_timer, 25 SECONDS, null, CALLBACK(src, PROC_REF(do_goop)))
 
-/obj/item/organ/tail/medicator/on_mob_remove(mob/living/carbon/organ_owner, special, movement_flags)
+/obj/item/organ/tail/medicator/Remove(mob/living/carbon/human/H, special)
 	. = ..()
-
 	if(stillness)
 		QDEL_NULL(stillness)
 

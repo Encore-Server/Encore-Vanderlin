@@ -11,7 +11,7 @@
 	pass_flags_self = PASSDOORS|PASSSTRUCTURE
 	max_integrity = 1000
 	integrity_failure = 0.5
-	armor_type = /datum/armor/door
+	armor = list("blunt" = 10, "slash" = 10, "stab" = 10,  "piercing" = 0, "fire" = 0, "acid" = 0)
 	damage_deflection = 10
 	CanAtmosPass = ATMOS_PASS_DENSITY
 	break_sound = 'sound/combat/hits/onwood/destroywalldoor.ogg'
@@ -20,8 +20,6 @@
 	can_add_lock = TRUE
 
 	var/omni_bolt = FALSE
-
-	var/smashable = TRUE
 
 	/// Can people riding go through without falling off their mount
 	var/ridethrough = FALSE
@@ -148,19 +146,15 @@
 	. = ..()
 	if(.)
 		return
-
 	if(obj_broken || switching_states)
 		return
-
 	if(!locked())
 		return TryToSwitchState(user)
-
 	if(user.used_intent.type == /datum/intent/unarmed/claw)
 		user.changeNext_move(CLICK_CD_MELEE)
 		to_chat(user, span_warning("I claw at [src]"))
 		take_damage(40, BRUTE, BCLASS_CUT, TRUE)
 		return
-
 	if(isliving(user) && world.time > last_bump + 1 SECONDS)
 		last_bump = world.time
 		var/mob/living/L = user
@@ -184,29 +178,19 @@
 		return FALSE
 	return ..()
 
-/// We failed to lock / unlock (signal handled it) so we try to close
-/obj/structure/door/item_interaction(mob/living/user, obj/item/tool, list/modifiers)
-	if(user.cmode)
-		return NONE
-
+/obj/structure/door/attackby(obj/item/I, mob/user, list/modifiers)
 	if(switching_states)
-		return NONE
-
-	if(!door_opened || obj_broken)
-		return NONE
-
-	attack_hand(user)
-
-	return ITEM_INTERACT_SUCCESS
+		return
+	if(I.can_lock_interact())
+		return (..() || attack_hand(user))
+	return ..()
 
 /obj/structure/door/attack_hand_secondary(mob/user, list/modifiers)
 	. = ..()
 	if(. == SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN)
 		return
-
 	if(user.cmode)
 		return SECONDARY_ATTACK_CALL_NORMAL
-
 	user.changeNext_move(CLICK_CD_FAST)
 	if(has_bolt)
 		if(obj_broken)
@@ -217,7 +201,6 @@
 			return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
 		to_chat(user, span_notice("I can't reach the bolt from this side."))
 		return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
-
 	if(has_viewport)
 		if(obj_broken)
 			to_chat(user, span_warning("The viewport is broken!"))
@@ -487,7 +470,7 @@
 /obj/structure/door/iron
 	name = "iron door"
 	icon_state = "donjon"
-	armor_type = /datum/armor/door/heavy
+	armor = list("blunt" = 15, "slash" = 30, "stab" = 30,  "piercing" = 0, "fire" = 50, "acid" = 50)
 	max_integrity = 2000
 	damage_deflection = 15
 	resistance_flags = FIRE_PROOF
@@ -521,7 +504,7 @@
 /obj/structure/door/stone
 	name = "stone door"
 	icon_state = "stone"
-	armor_type = /datum/armor/door/heavy
+	armor = list("blunt" = 15, "slash" = 30, "stab" = 30,  "piercing" = 0, "fire" = 50, "acid" = 50)
 	open_sound = 'sound/foley/doors/stoneopen.ogg'
 	close_sound = 'sound/foley/doors/stoneclose.ogg'
 	repair_thresholds = list(/obj/item/natural/stone = 1)
@@ -541,7 +524,7 @@
 	name = "abyssal door"
 	icon_state = "abyssdoor"
 	icon = 'icons/delver/abyss_objects.dmi'
-	armor_type = /datum/armor/door/heavy
+	armor = list("blunt" = 15, "slash" = 30, "stab" = 30,  "piercing" = 0, "fire" = 50, "acid" = 50)
 	open_sound = 'sound/foley/doors/stoneopen.ogg'
 	close_sound = 'sound/foley/doors/stoneclose.ogg'
 	repair_thresholds = list(/obj/item/natural/stone = 1)

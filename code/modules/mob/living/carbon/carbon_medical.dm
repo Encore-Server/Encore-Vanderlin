@@ -1,10 +1,15 @@
 
 /mob/living/carbon/proc/pump_heart(mob/user, forced_pump)
 	if(!forced_pump)
-		var/heymedic = user ? max(GET_MOB_SKILL_VALUE(user, /datum/attribute/skill/misc/medicine), 0)/SKILL_MASTER : 0
+		var/heymedic = max(GET_MOB_SKILL_VALUE(user, /datum/attribute/skill/misc/medicine), 0)/SKILL_MASTER
 		recent_heart_pump = list("[world.time]" = (0.3 + CEILING(heymedic, 0.1)))
 	else
 		recent_heart_pump = list("[world.time]" = (0.3 + CEILING(forced_pump, 0.1)))
+	var/obj/item/organ/heart/heart = getorganslot(ORGAN_SLOT_HEART)
+	if(heart)
+		heart.current_blood = heart.max_blood_storage
+	set_heartattack(FALSE)
+	return TRUE
 
 /mob/living/carbon/proc/check_pulse(mob/living/carbon/user)
 	. = TRUE
@@ -73,7 +78,8 @@
 		return "0"
 
 	var/bypassed_heart = FALSE
-	for(var/obj/item/organ/heart/heart as anything in hearts)
+	for(var/thing in hearts)
+		var/obj/item/organ/heart/heart = thing
 		if(heart.open)
 			bypassed_heart = TRUE
 

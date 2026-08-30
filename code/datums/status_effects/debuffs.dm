@@ -1,7 +1,7 @@
 //Largely negative status effects go here, even if they have small benificial effects
 //STUN EFFECTS
 /datum/status_effect/incapacitating
-	tick_interval = STATUS_EFFECT_NO_TICK
+	tick_interval = 0
 	status_type = STATUS_EFFECT_REPLACE
 	alert_type = null
 	remove_on_fullheal = TRUE
@@ -167,21 +167,18 @@
 	id = "sleeping"
 	alert_type = /atom/movable/screen/alert/status_effect/asleep
 	needs_update_stat = TRUE
-	tick_interval = 0 //??? this is what it was set at the parent level IDK man
 	var/sleptonground = FALSE
 
 /datum/status_effect/incapacitating/sleeping/on_creation(mob/living/new_owner)
 	. = ..()
 	if(!.)
 		return
-	owner.become_blind(id) // to apply static black blindness
 	ADD_TRAIT(owner, TRAIT_KNOCKEDOUT, TRAIT_STATUS_EFFECT(id))
 
 	owner.cmode = FALSE
 	owner.set_typing_indicator(FALSE)
 
 /datum/status_effect/incapacitating/sleeping/on_remove()
-	owner.cure_blind(id)
 	REMOVE_TRAIT(owner, TRAIT_KNOCKEDOUT, TRAIT_STATUS_EFFECT(id))
 	owner.refresh_looping_ambience()
 
@@ -280,7 +277,6 @@
 	id = "strandling"
 	status_type = STATUS_EFFECT_UNIQUE
 	alert_type = /atom/movable/screen/alert/status_effect/strandling
-	tick_interval = STATUS_EFFECT_NO_TICK
 
 /datum/status_effect/strandling/on_apply()
 	ADD_TRAIT(owner, TRAIT_MAGIC_CHOKE, "dumbmoron")
@@ -349,7 +345,7 @@
 	id = "trance"
 	status_type = STATUS_EFFECT_UNIQUE
 	duration = 300
-	tick_interval = 1 SECONDS
+	tick_interval = 10
 	var/stun = TRUE
 	alert_type = /atom/movable/screen/alert/status_effect/trance
 
@@ -390,7 +386,7 @@
 	to_chat(owner, "<span class='warning'>I snap out of my trance!</span>")
 
 /datum/status_effect/trance/proc/hypnotize(datum/source, list/hearing_args)
-	if(HAS_TRAIT(owner, TRAIT_DEAF))
+	if(!owner.can_hear())
 		return
 	if(hearing_args[HEARING_SPEAKER] == owner)
 		return

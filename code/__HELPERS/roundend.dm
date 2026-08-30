@@ -14,7 +14,7 @@
 
 /mob/living/do_game_over()
 	..()
-	ADD_TRAIT(src, TRAIT_DEAF, TRAIT_GENERIC)
+	adjustEarDamage(0, 6000)
 	Stun(6000, 1, 1)
 	ADD_TRAIT(src, TRAIT_MUTE, TRAIT_GENERIC)
 	walk(src, 0) //stops them mid pathing even if they're stunimmune
@@ -31,7 +31,9 @@
 
 	log_game("The round has ended.")
 
-	to_chat(world, "<BR><BR><BR><span class='reallybig'>So ends this tale of [SSmapping.config?.map_name || "Vanderlin"].</span>")
+	INVOKE_ASYNC(world, TYPE_PROC_REF(/world, flush_byond_tracy))
+
+	to_chat(world, "<BR><BR><BR><span class='reallybig'>So ends this tale on Domotan Island.</span>")
 	get_end_reason()
 
 	var/list/key_list = list()
@@ -232,7 +234,7 @@
 
 	if(GLOB.round_id)
 		var/statspage = CONFIG_GET(string/roundstatsurl)
-		var/info = statspage ? "<a href='byond://?action=openLink&link=[url_encode(statspage)][GLOB.round_id]'>[GLOB.round_id]</a>" : GLOB.round_id
+		var/info = statspage ? "<a href='?action=openLink&link=[url_encode(statspage)][GLOB.round_id]'>[GLOB.round_id]</a>" : GLOB.round_id
 		parts += "[FOURSPACES]Round ID: <b>[info]</b>"
 	parts += "[FOURSPACES]Shift Duration: <B>[DisplayTimeText(world.time - SSticker.round_start_time)]</B>"
 	var/total_players = GLOB.joined_player_list.len

@@ -49,7 +49,6 @@
 	grid_height = 32
 	grid_width = 32
 	sellprice = 15
-	tool_behaviour = TOOL_FORK
 
 /obj/item/carvedgem/shell/spoon
 	name = "shell spoon"
@@ -58,7 +57,6 @@
 	grid_height = 32
 	grid_width = 32
 	sellprice = 15
-	tool_behaviour = TOOL_SPOON
 
 /obj/item/carvedgem/shell/cameo
 	name = "shell cameo"
@@ -198,7 +196,6 @@
 	grid_height = 32
 	grid_width = 32
 	sellprice = 20
-	tool_behaviour = TOOL_FORK
 
 /obj/item/carvedgem/rose/spoon
 	name = "rosellusk spoon"
@@ -207,7 +204,6 @@
 	grid_height = 32
 	grid_width = 32
 	sellprice = 20
-	tool_behaviour = TOOL_SPOON
 
 /obj/item/carvedgem/rose/cameo
 	name = "rosellusk cameo"
@@ -348,7 +344,6 @@
 	grid_height = 64
 	grid_width = 32
 	sellprice = 55
-	tool_behaviour = TOOL_FORK
 
 /obj/item/carvedgem/jade/spoon
 	name = "joapstone spoon"
@@ -357,7 +352,6 @@
 	grid_height = 64
 	grid_width = 32
 	sellprice = 55
-	tool_behaviour = TOOL_SPOON
 
 /obj/item/carvedgem/jade/cameo
 	name = "joapstone cameo"
@@ -489,7 +483,6 @@
 	grid_height = 32
 	grid_width = 32
 	sellprice = 35
-	tool_behaviour = TOOL_FORK
 
 /obj/item/carvedgem/onyxa/spoon
 	name = "onyxa spoon"
@@ -498,7 +491,6 @@
 	grid_height = 32
 	grid_width = 32
 	sellprice = 35
-	tool_behaviour = TOOL_SPOON
 
 /obj/item/carvedgem/onyxa/cameo
 	name = "onyxa cameo"
@@ -638,7 +630,6 @@
 	grid_height = 32
 	grid_width = 32
 	sellprice = 80
-	tool_behaviour = TOOL_FORK
 
 /obj/item/carvedgem/turq/spoon
 	name = "ceruleabaster spoon"
@@ -647,7 +638,6 @@
 	grid_height = 32
 	grid_width = 32
 	sellprice = 80
-	tool_behaviour = TOOL_SPOON
 
 /obj/item/carvedgem/turq/cameo
 	name = "ceruleabaster cameo"
@@ -788,7 +778,6 @@
 	grid_height = 32
 	grid_width = 32
 	sellprice = 65
-	tool_behaviour = TOOL_FORK
 
 /obj/item/carvedgem/coral/spoon
 	name = "aoetal spoon"
@@ -797,7 +786,6 @@
 	grid_height = 32
 	grid_width = 32
 	sellprice = 65
-	tool_behaviour = TOOL_SPOON
 
 /obj/item/carvedgem/coral/cameo
 	name = "aoetal cameo"
@@ -937,7 +925,6 @@
 	grid_height = 32
 	grid_width = 32
 	sellprice = 55
-	tool_behaviour = TOOL_FORK
 
 /obj/item/carvedgem/amber/spoon
 	name = "petriamber spoon"
@@ -946,7 +933,6 @@
 	grid_height = 32
 	grid_width = 32
 	sellprice = 55
-	tool_behaviour = TOOL_SPOON
 
 /obj/item/carvedgem/amber/cameo
 	name = "petriamber cameo"
@@ -1086,7 +1072,6 @@
 	grid_height = 32
 	grid_width = 32
 	sellprice = 85
-	tool_behaviour = TOOL_FORK
 
 /obj/item/carvedgem/opal/spoon
 	name = "opaloise spoon"
@@ -1095,7 +1080,6 @@
 	grid_height = 32
 	grid_width = 32
 	sellprice = 85
-	tool_behaviour = TOOL_SPOON
 
 /obj/item/carvedgem/opal/cameo
 	name = "opaloise cameo"

@@ -15,7 +15,7 @@
 	default_hidden = HIDEEARS|HIDEHAIR
 	dropshrink = 0.8
 
-	armor_type = /datum/armor/weak
+	armor = ARMOR_WEAK
 	prevent_crits = MINOR_CRITICALS
 	salvage_amount = 1
 	salvage_result = /obj/item/natural/silk
@@ -26,7 +26,7 @@
 	icon_state = "deathface"
 	flags_inv = HIDEEARS | HIDEHAIR | HIDEFACIALHAIR
 
-	armor_type = /datum/armor/weak
+	armor = ARMOR_WEAK
 	prevent_crits = MINOR_CRITICALS
 	item_weight = 250 GRAMS
 
@@ -63,12 +63,8 @@
 	worn_x_dimension = 64
 	worn_y_dimension = 64
 	resistance_flags = FIRE_PROOF // Made of metal
-	armor_type = /datum/armor/head/maille/iron
-	blocksound = CHAINHIT
-	prevent_crits = CUT_AND_MINOR_CRITS
-	break_sound = 'sound/foley/breaksound.ogg'
-	drop_sound = 'sound/foley/dropsound/armor_drop.ogg'
-	body_parts_covered = FACE | NECK
+	armor = ARMOR_WEAK
+	salvage_result = NUTRITION_LEVEL_HUNGRY
 
 /obj/item/clothing/head/roguehood/visires
 	name = "sun hood"
@@ -76,7 +72,7 @@
 	icon_state = "astratahood"
 	resistance_flags = FIRE_PROOF // Not the sun hat!
 
-	armor_type = /datum/armor/minimal
+	armor = ARMOR_MINIMAL
 	prevent_crits = MINOR_CRITICALS
 
 /obj/item/clothing/head/roguehood/priest
@@ -94,7 +90,7 @@
 	default_hidden = HIDEEARS|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
 	resistance_flags = FIRE_PROOF
 
-	armor_type = /datum/armor/weak
+	armor = ARMOR_WEAK
 	body_parts_covered = FULL_HEAD | NECK
 	prevent_crits = MINOR_CRITICALS
 

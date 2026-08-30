@@ -1225,7 +1225,7 @@
 			return
 		adjust_playerquality(amt2change, mob_client.ckey, usr.ckey, raisin)
 		for(var/client/C in GLOB.clients) // I hate this, but I'm not refactoring the cancer above this point.
-			if(LOWER_TEXT(C.key) == LOWER_TEXT(mob_client.ckey))
+			if(lowertext(C.key) == lowertext(mob_client.ckey))
 				to_chat(C, "<span class=\"admin\"><span class=\"prefix\">ADMIN LOG:</span> <span class=\"message linkify\">Your PQ has been adjusted by [amt2change] by [usr.key] for reason: [raisin]</span></span>")
 				return
 	else if(href_list["showpq"])
@@ -1268,7 +1268,7 @@
 		if(!ishuman(M))
 			return
 
-		var/patron_to_change_to = browser_input_list(usr, "Change to what patron?", "THE GODS", GLOB.patron_list)
+		var/patron_to_change_to = browser_input_list(usr, "Change to what patron?", "THE GODS", GLOB.patrons_by_type)
 		if(!patron_to_change_to)
 			return
 

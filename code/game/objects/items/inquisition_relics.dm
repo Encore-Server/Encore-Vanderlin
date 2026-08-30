@@ -26,40 +26,39 @@
 	name = "Reliquary Key"
 	desc = "The single use key with which to unleash woe. Choose wisely."
 
-/obj/structure/reliquarybox/item_interaction(mob/living/user, obj/item/tool, list/modifiers)
-	if(!istype(tool, /obj/item/key/angroskey))
-		return NONE
+/obj/structure/reliquarybox/attackby(obj/item/W, mob/user, list/modifiers)
+	if(ishuman(user))
+		if(istype(W, /obj/item/key/angroskey))
+			if(opened)
+				to_chat(user, span_info("The reliquary box has already been opened..."))
+				return
+			qdel(W)
+			to_chat(user, span_info("The reliquary lock takes my key as it opens, I take a moment to ponder what power was delivered to us..."))
+			playsound(src, 'sound/foley/doors/woodlock.ogg', 60)
+			to_chat(user,)
+			var/relics = list("Melancholic Crankbox - Antimagic", "Daybreak - Silver Whip", "Sanctum - Silver Halberd", "Crusade - Silver Greatsword", "Censer of Penitence")
+			var/relicchoice = input(user, "Choose your tool", "RELICS") as anything in relics
+			var/obj/choice
+			switch(relicchoice)
+				if("Melancholic Crankbox - Antimagic")
+					choice = /obj/item/angrosmusicbox
+				if("Daybreak - Silver Whip")
+					choice = /obj/item/weapon/whip/angros/relic
+				if("Sanctum - Silver Halberd")
+					choice = /obj/item/weapon/polearm/halberd/angros/relic
+					user.clamped_adjust_skill_level(/datum/attribute/skill/combat/polearms, 40, 40, TRUE)	//We make sure the weapon is usable by the Inquisitor.
+				if("Crusade - Silver Greatsword")
+					choice = /obj/item/weapon/sword/long/greatsword/angros
+					user.clamped_adjust_skill_level(/datum/attribute/skill/combat/swords, 40, 40, TRUE)		//Ditto.
+				if("Censer of Penitence")
+					choice = /obj/item/flashlight/flare/torch/lantern/psycenser
+			to_chat(user, span_info("I have chosen the relic, may HE guide my hand."))
+			var/obj/structure/closet/crate/chest/inqreliquary/realchest = new /obj/structure/closet/crate/chest/inqreliquary(get_turf(src))
+			realchest.populate_contents()
+			choice = new choice(realchest)
+			qdel(src)
 
-	if(opened)
-		to_chat(user, span_info("The reliquary box has already been opened..."))
-		return ITEM_INTERACT_BLOCKING
 
-	qdel(tool)
-	to_chat(user, span_info("The reliquary lock takes my key as it opens, I take a moment to ponder what power was delivered to us..."))
-	playsound(src, 'sound/foley/doors/woodlock.ogg', 60)
-	to_chat(user,)
-	var/relics = list("Melancholic Crankbox - Antimagic", "Daybreak - Silver Whip", "Sanctum - Silver Halberd", "Crusade - Silver Greatsword", "Censer of Penitence")
-	var/relicchoice = tgui_input_list(user, "Choose your tool", "RELICS", relics)
-	var/obj/choice
-	switch(relicchoice)
-		if("Melancholic Crankbox - Antimagic")
-			choice = /obj/item/angrosmusicbox
-		if("Daybreak - Silver Whip")
-			choice = /obj/item/weapon/whip/angros/relic
-		if("Sanctum - Silver Halberd")
-			choice = /obj/item/weapon/polearm/halberd/angros/relic
-			user.clamped_adjust_skill_level(/datum/attribute/skill/combat/polearms, 40, 40, TRUE)	//We make sure the weapon is usable by the Inquisitor.
-		if("Crusade - Silver Greatsword")
-			choice = /obj/item/weapon/sword/long/greatsword/angros
-			user.clamped_adjust_skill_level(/datum/attribute/skill/combat/swords, 40, 40, TRUE)		//Ditto.
-		if("Censer of Penitence")
-			choice = /obj/item/flashlight/flare/torch/lantern/psycenser
-	to_chat(user, span_info("I have chosen the relic, may the Aspects guide my hand."))
-	var/obj/structure/closet/crate/chest/inqreliquary/realchest = new /obj/structure/closet/crate/chest/inqreliquary(get_turf(src))
-	realchest.populate_contents()
-	choice = new choice(realchest)
-	qdel(src)
-	return ITEM_INTERACT_SUCCESS
 
 // Soul Churner - Music box which applies magic resistance to Inquisition members, greatly mood debuffs everyone not a Angros worshipper.
 /obj/item/angrosmusicbox
@@ -598,36 +597,23 @@
 		else
 			working = FALSE
 
-/obj/item/inqarticles/indexer/interact_with_atom(atom/interacting_with, mob/living/user, list/modifiers)
-	if(!isliving(interacting_with))
-		return NONE
-
-	if(!HAS_TRAIT(user, TRAIT_INQUISITION))
+/obj/item/inqarticles/indexer/attack(mob/living/M, mob/living/user, list/modifiers)
+	. = ..()
+	if(HAS_TRAIT(user, TRAIT_INQUISITION))
 		to_chat(user, span_warning("I don't know how to use this."))
-		return ITEM_INTERACT_BLOCKING
-
 	if(!active)
 		to_chat(user, span_warning("It's not primed."))
-		return ITEM_INTERACT_BLOCKING
-
+		return
+	if(!CAN_HAVE_BLOOD(M) || !M.get_blood_volume())
+		to_chat(user, span_warning("They don't have any blood to sample."))
+		return
 	if(full)
 		to_chat(user, span_warning("It's full."))
-		return ITEM_INTERACT_BLOCKING
+		return
 
-	var/mob/living/L = interacting_with
-
-	if(!CAN_HAVE_BLOOD(L) || !L.get_blood_volume())
-		to_chat(user, span_warning("[L] has no blood to sample."))
-		return ITEM_INTERACT_BLOCKING
-
-	visible_message(span_warning("[user] goes to jab [L] with [src]!"))
-
-	if(!do_after(user, 2 SECONDS, L))
-		return ITEM_INTERACT_BLOCKING
-
-	takeblood(L, user)
-
-	return ITEM_INTERACT_SUCCESS
+	visible_message(span_warning("[user] goes to jab [M] with [src]!"))
+	if(do_after(user, 2 SECONDS, M))
+		takeblood(M, user)
 
 /obj/item/inqarticles/tallowpot
 	name = "tallowpot"
@@ -1005,7 +991,7 @@
 	blocksound = SOFTHIT
 	break_sound = 'sound/foley/cloth_rip.ogg'
 	drop_sound = 'sound/foley/dropsound/cloth_drop.ogg'
-	armor_type = /datum/armor/blackbag
+	armor = ARMOR_BLACKBAG
 	prevent_crits = list(BCLASS_CUT, BCLASS_BLUNT, BCLASS_TWIST, BCLASS_PIERCE, BCLASS_CHOP, BCLASS_LASHING, BCLASS_STAB)
 	unequip_delay_self = 45
 	equip_delay_other = 360 SECONDS // No getting around it. Cheater. LEFT CLICK THEM!!!
@@ -1026,6 +1012,8 @@
 /obj/item/clothing/head/inqarticles/blackbag/proc/bagsound(mob/living/M)
 	if(bagging)
 		playsound(M, pick('sound/misc/blackbag.ogg','sound/misc/blackbag2.ogg','sound/misc/blackbag3.ogg','sound/misc/blackbag4.ogg','sound/misc/blackbag5.ogg'), 100, TRUE, 4)
+	else
+		return
 
 /obj/item/clothing/head/inqarticles/blackbag/proc/bagcheck(mob/living/M)
 	var/timer = 10
@@ -1034,39 +1022,53 @@
 		if(bagging)
 			addtimer(CALLBACK(src, PROC_REF(bagsound), M), timer)
 
-/obj/item/clothing/head/inqarticles/blackbag/interact_with_atom(atom/interacting_with, mob/living/user, list/modifiers)
-	if(!iscarbon(interacting_with))
-		return NONE
-
-	var/mob/living/carbon/M = interacting_with
-
-	if(HAS_TRAIT(M, TRAIT_BAGGED))
+/obj/item/clothing/head/inqarticles/blackbag/attack(mob/living/target, mob/living/user, list/modifiers)
+	. = ..()
+	if(!iscarbon(target))
+		return
+	if(HAS_TRAIT(target, TRAIT_BAGGED))
 		to_chat(user, span_warning("They've already been bagged."))
-		return ITEM_INTERACT_BLOCKING
-
-	var/obj/item/headgear = M.get_item_by_slot(ITEM_SLOT_HEAD)
-
+		return
+	var/obj/item/headgear = target.get_item_by_slot(ITEM_SLOT_HEAD)
 	var/trained = FALSE
 	var/timetobag = 8 SECONDS
 	if(HAS_TRAIT(user, TRAIT_BLACKBAGGER))
 		trained = TRUE
 		timetobag = 4 SECONDS
-
-	user.visible_message(span_danger("[user] goes to [trained ? "expertly" : "clumsily"] black bag [M]!"))
-
-	if(M.stat)
-		timetobag /= 2
-
-	bagging = TRUE
-	bagcheck(M)
-	if(do_after(user, timetobag, M))
-		bagging = FALSE
-		headgear?.doStrip(user, M)
-		M.equip_to_slot(src, ITEM_SLOT_HEAD) // Has to be unsafe otherwise it won't work on unconscious people. Ugh.
+	user.visible_message(span_danger("[user] goes to [trained ? "expertly" : "clumsily"] black bag [target]!"))
+	/*
+	if(HAS_TRAIT(target, TRAIT_GRABIMMUNE))
+		user.visible_message(span_danger("[target] slips past [user]'s attempt to black bag them!"))
+		playsound(target, pick('sound/misc/blackbag.ogg','sound/misc/blackbag2.ogg','sound/misc/blackbag3.ogg','sound/misc/blackbag4.ogg','sound/misc/blackbag5.ogg'), 100, TRUE, 4)
+		return
+	*/
+	if(!target.stat)
+		/* if(HAS_TRAIT(user, TRAIT_BLACKBAGGER) && !M.cmode) It was too much to handle. Too cold to hold.
+			bagging = TRUE
+			bagsound(target)
+			headgear.doStrip(user, target)
+			target.equip_to_slot(src, SLOT_HEAD) // Has to be unsafe otherwise it won't work on unconscious people. Ugh.
+			bagging = FALSE
+		else*/
+		bagging = TRUE
+		bagcheck(target)
+		if(do_after(user, timetobag, target))
+			bagging = FALSE
+			if(headgear)
+				headgear.doStrip(user, target)
+			target.equip_to_slot(src, ITEM_SLOT_HEAD) // Has to be unsafe otherwise it won't work on unconscious people. Ugh.
+		else
+			bagging = FALSE
 	else
-		bagging = FALSE
-
-	return ITEM_INTERACT_SUCCESS
+		bagging = TRUE
+		bagcheck(target)
+		if(do_after(user, timetobag / 2, target))
+			bagging = FALSE
+			if(headgear)
+				headgear.doStrip(user, target)
+			target.equip_to_slot(src, ITEM_SLOT_HEAD) // Has to be unsafe otherwise it won't work on unconscious people. Ugh.
+		else
+			bagging = FALSE
 
 /obj/item/clothing/head/inqarticles/blackbag/equipped(mob/living/carbon/human/user, slot)
 	. = ..()
@@ -1087,6 +1089,7 @@
 		REMOVE_TRAIT(user, TRAIT_BAGGED, TRAIT_GENERIC)
 		playsound(user, pick('sound/misc/blackunbag.ogg'), 100, TRUE, 4)
 		user.emote("gasp", forced = TRUE)
+		return
 
 /obj/item/clothing/head/inqarticles/blackbag/getonmobprop(tag)
 	. = ..()
@@ -1241,7 +1244,7 @@
 			if(!name)
 				return
 			for(var/mob/living/carbon/human/HL as anything in GLOB.player_list)
-				if(LOWER_TEXT(HL.real_name) == LOWER_TEXT(name))
+				if(lowertext(HL.real_name) == lowertext(name))
 					fixation = WEAKREF(HL)
 					target = HL
 					playsound(src, 'sound/items/blackmirror_no.ogg', 100, FALSE)
@@ -1291,27 +1294,25 @@
 	addtimer(CALLBACK(user, GLOBAL_PROC_REF(playsound), user, 'sound/items/blackeye.ogg', 100, FALSE), 4 SECONDS)
 	addtimer(TRAIT_CALLBACK_REMOVE(user, TRAIT_NOSSDINDICATOR, "blackmirror"), 4 SECONDS)
 
-/obj/item/inqarticles/bmirror/interact_with_atom(atom/interacting_with, mob/living/user, list/modifiers)
-	if(!isliving(interacting_with))
-		return NONE
-
-	var/mob/living/attacked = interacting_with
+/obj/item/inqarticles/bmirror/attack(mob/living/carbon/human/attacked, mob/living/carbon/human/user, list/modifiers)
+	if(!istype(attacked) || !istype(user))
+		return ..()
 
 	if(!opened)
 		to_chat(user, span_warning("I need to open it first."))
-		return ITEM_INTERACT_BLOCKING
+		return
 
 	if(feeder)
 		to_chat(user, span_warning("It's already been fed."))
-		return ITEM_INTERACT_BLOCKING
+		return
 
 	if(broken)
 		to_chat(user, span_warning("It's broken."))
-		return ITEM_INTERACT_BLOCKING
+		return
 
 	if(bloody)
 		to_chat(user, span_warning("The mirror is fogged over. I need to clean it with cloth before reuse."))
-		return ITEM_INTERACT_BLOCKING
+		return
 
 	var/time_taken = 3 SECONDS
 
@@ -1321,19 +1322,16 @@
 		user.visible_message(span_notice("[user] goes to press [attacked] with [src]'s needle."))
 		time_taken *= 2
 
-	if(!do_after(user, time_taken, attacked))
-		return ITEM_INTERACT_BLOCKING
-
-	playsound(src, 'sound/items/blackmirror_needle.ogg', 95, FALSE, 3)
-	attacked.flash_fullscreen("redflash3")
-	attacked.adjustBruteLoss(40, damage_type = BCLASS_PIERCE, can_crit = FALSE)
-	attacked.adjust_bloodpool(-240)
-	feeder = WEAKREF(attacked)
-	openstate = "bloody"
-	fedblood = TRUE
-	update_appearance(UPDATE_ICON_STATE)
-
-	return ITEM_INTERACT_SUCCESS
+	if(do_after(user, time_taken, attacked))
+		playsound(src, 'sound/items/blackmirror_needle.ogg', 95, FALSE, 3)
+		attacked.flash_fullscreen("redflash3")
+		attacked.adjustBruteLoss(5)
+		attacked.blood_volume = max(attacked.blood_volume - 20, 0)
+		attacked.handle_blood()
+		feeder = WEAKREF(attacked)
+		openstate = "bloody"
+		fedblood = TRUE
+		update_appearance(UPDATE_ICON_STATE)
 
 /obj/item/inqarticles/bmirror/attackby(obj/item/I, mob/user, list/modifiers)
 	. = ..()

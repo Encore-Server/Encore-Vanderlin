@@ -26,7 +26,7 @@
 	department_flag = OUTSIDERS
 	display_order = JDO_SUNLORD
 	job_flags = (JOB_EQUIP_RANK | JOB_NEW_PLAYER_JOINABLE | JOB_SHOW_IN_CREDITS | JOB_SHOW_IN_ACTOR_LIST)
-	factions = list(FACTION_RATS)
+	faction = FACTION_RATS
 	total_positions = 0
 	spawn_positions = 0
 	bypass_lastclass = TRUE
@@ -49,9 +49,6 @@
 		EXP_TYPE_CHURCH = 600
 	)
 
-	knows_the_town = TRUE
-	known_by_the_town = FALSE
-
 	cmode_music = 'sound/music/cmode/antag/combat_evilwizard.ogg'
 
 	attribute_sheet = /datum/attribute_holder/sheet/job/sunlord
@@ -72,6 +69,10 @@
 		TRAIT_NOMOOD,
 		TRAIT_CRITICAL_RESISTANCE,
 	)
+
+/datum/job/sunlord/New()
+	. = ..()
+	peopleknowme = list()
 
 /datum/job/sunlord/after_spawn(mob/living/carbon/human/spawned, client/player_client)
 	. = ..()
@@ -125,7 +126,6 @@
 	invocation = "LIGHTNING BOLT!!!"
 	spell_cost = 0
 
-	required_form = null
 	associated_skill = null
 
 

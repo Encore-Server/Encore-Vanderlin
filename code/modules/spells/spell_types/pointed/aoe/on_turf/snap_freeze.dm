@@ -3,8 +3,11 @@
 	desc = "Freeze the air in a small area in an instant."
 	button_icon_state = "snapfreeze"
 
-	required_form = FORM_ICE
-	required_technique = TECHNIQUE_DESTRUCTION
+	point_cost = 2
+	attunements = list(
+		/datum/attunement/blood = 0.3,
+		/datum/attunement/ice = 0.4,
+	)
 
 	invocation = "Air be still!"
 	invocation_type = INVOCATION_SHOUT
@@ -31,7 +34,7 @@
 			playsound(L, 'sound/magic/magic_nulled.ogg', 100)
 			continue
 		L.adjustFireLoss(35)
-		L.apply_status_effect(/datum/status_effect/debuff/frostbite, null, spell_magnitude_modifier)
+		L.apply_status_effect(/datum/status_effect/debuff/frostbite, null, attuned_strength)
 		to_chat(L, span_userdanger("The air chills your bones!"))
 
 /obj/effect/temp_visual/trapice

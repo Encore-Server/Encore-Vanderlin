@@ -38,7 +38,7 @@
 /atom/movable/emissive_blocker/ex_act(severity)
 	return FALSE
 
-/atom/movable/emissive_blocker/onTransitZ(turf/old_turf, turf/new_turf)
+/atom/movable/emissive_blocker/onTransitZ()
 	return
 
 //Prevents people from moving these after creation, because they shouldn't be.

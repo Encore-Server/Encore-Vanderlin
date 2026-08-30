@@ -5,7 +5,6 @@
 	id = "insane"
 	effectedstats = list(STAT_CONSTITUTION = -2, STAT_ENDURANCE = -2, STAT_SPEED = -2, STAT_FORTUNE = -2, STAT_INTELLIGENCE = -2)
 	alert_type = /atom/movable/screen/alert/status_effect/stress/stressinsane
-	tick_interval = STATUS_EFFECT_NO_TICK
 
 /atom/movable/screen/alert/status_effect/stress/stressinsane
 	name = "Insane"
@@ -16,7 +15,6 @@
 	id = "stressvbad"
 	effectedstats = list(STAT_CONSTITUTION = -1, STAT_ENDURANCE = -1, STAT_SPEED = -1, STAT_FORTUNE = -1, STAT_INTELLIGENCE = -1)
 	alert_type = /atom/movable/screen/alert/status_effect/stress/stressvbad
-	tick_interval = STATUS_EFFECT_NO_TICK
 
 /atom/movable/screen/alert/status_effect/stress/stressvbad
 	name = "Annoyed"
@@ -27,7 +25,6 @@
 	id = "stressbad"
 	effectedstats = list(STAT_FORTUNE = -1)
 	alert_type = /atom/movable/screen/alert/status_effect/stress/stressbad
-	tick_interval = STATUS_EFFECT_NO_TICK
 
 /atom/movable/screen/alert/status_effect/stress/stressbad
 	name = "Stressed"
@@ -38,7 +35,6 @@
 	id = "stressvgood"
 	effectedstats = list(STAT_FORTUNE = 1)
 	alert_type = /atom/movable/screen/alert/status_effect/stress/good/stressvgood
-	tick_interval = STATUS_EFFECT_NO_TICK
 
 /atom/movable/screen/alert/status_effect/stress/good/stressvgood
 	name = "Nirvana"

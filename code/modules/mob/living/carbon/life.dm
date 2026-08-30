@@ -20,24 +20,8 @@
 		. = ..()
 	else
 		//Reagent processing needs to come before breathing, to prevent edge cases.
-
-		var/virus_immunity = virus_immunity()
-		var/antibiotics = get_antibiotics()
-		var/immunity_weakness = immunity_weakness()
-		var/turf/turf_loc = get_turf(loc)
-		var/passed_temp = turf_loc?.return_temperature()
-
-		var/organ_flag = handle_organs(delta_time, times_fired,virus_immunity, antibiotics, immunity_weakness, passed_temp)
-		var/bodypart_flag = handle_bodyparts(delta_time, times_fired,virus_immunity, antibiotics, immunity_weakness, passed_temp)
-		var/sleep_flag = handle_sleep()
-
-		var/shock_flag = NONE
-		shock_flag |= handle_shock(delta_time, times_fired)
-		shock_flag |= handle_shock_stage(delta_time, times_fired)
-
-		if((organ_flag & ORGAN_PROCESS_UPDATE_HEALTH) || (bodypart_flag & BODYPART_LIFE_UPDATE_HEALTH) || (shock_flag & SHOCK_PROCESS_UPDATE_HEALTH) || (sleep_flag & BODYPART_LIFE_UPDATE_HEALTH))
-			updatehealth()
-			update_stamina()
+		handle_organs(delta_time, times_fired)
+		handle_bodyparts(delta_time, times_fired)
 
 		. = ..()
 
@@ -49,6 +33,10 @@
 		update_stress()
 		handle_nausea()
 
+		handle_shock(delta_time, times_fired)
+		handle_shock_stage(delta_time, times_fired)
+
+		handle_sleep()
 
 	check_cremation()
 
@@ -81,16 +69,15 @@
 		return TRUE
 	return FALSE
 
-/mob/living/carbon/proc/handle_bodyparts(delta_time, times_fired, virus_immunity, antibiotics, immunity_weakness, passed_temp)
+/mob/living/carbon/proc/handle_bodyparts(delta_time, times_fired)
 	for(var/obj/item/bodypart/bodypart as anything in bodyparts)
 		if(bodypart.needs_processing)
-			. |= bodypart.on_life(delta_time, times_fired, virus_immunity, antibiotics, immunity_weakness, passed_temp)
+			. |= bodypart.on_life(delta_time, times_fired)
 
-/mob/living/carbon/proc/handle_organs(delta_time, times_fired, virus_immunity, antibiotics, immunity_weakness, passed_temp)
+/mob/living/carbon/proc/handle_organs(delta_time, times_fired)
 	if(HAS_TRAIT(src, TRAIT_NO_ORGAN_PROCESS)) //internal stasis basically
 		return
 
-	var/in_bleedout = in_bleedout()
 	// This is no longer tied to mob stat since organs can live on their own
 	var/list/already_processed_life = list()
 	for(var/organ_slot in GLOB.organ_process_order)
@@ -101,9 +88,9 @@
 			if(QDELETED(src))
 				break
 			// This exists mostly because reagent metabolization can cause organ shuffling
-			if(!QDELETED(organ) && !already_processed_life[organ] && (organ.owner == src))
-				if(in_bleedout || organ.needs_processing)
-					. |= organ.on_life(delta_time, times_fired, in_bleedout, virus_immunity, antibiotics, immunity_weakness, passed_temp)
+			if(!QDELETED(organ) && !already_processed_life[organ_slot] && (organ.owner == src))
+				if(organ.needs_processing)
+					organ.on_life(delta_time, times_fired)
 				already_processed_life[organ] = TRUE
 
 	if(stat < DEAD)
@@ -112,11 +99,11 @@
 				break
 			var/datum/organ_process/organ_process = GLOB.organ_processes_by_slot[thing]
 			if(organ_process.needs_process(src))
-				. |= organ_process.handle_process(src, delta_time, times_fired)
+				organ_process.handle_process(src, delta_time, times_fired)
 	else
 		for(var/obj/item/organ/organ as anything in internal_organs)
 			//Needed so organs decay while inside the body
-			. |= organ.on_death(delta_time, times_fired, passed_temp)
+			organ.on_death(delta_time, times_fired)
 
 
 /mob/living/carbon/handle_embedded_objects()
@@ -172,8 +159,8 @@ All effects don't start immediately, but rather get worse over time; the rate is
 		drunkenness = max(drunkenness - (drunkenness * 0.04) - 0.01, 0)
 		if(drunkenness >= 1)
 			SEND_SIGNAL(src, COMSIG_DRUG_INDULGE)
-			if(has_quirk(/datum/quirk/vice/addiction/alcoholic))
-				sate_addiction(/datum/quirk/vice/addiction/alcoholic)
+			if(has_quirk(/datum/quirk/vice/alcoholic))
+				sate_addiction(/datum/quirk/vice/alcoholic)
 		if(drunkenness >= 3)
 			if(prob(3))
 				slurring += 2
@@ -282,7 +269,9 @@ All effects don't start immediately, but rather get worse over time; the rate is
 					adjust_blood_volume(-10)
 				if(limb.cremation_progress >= 50)
 					if(limb.status == BODYPART_ORGANIC) //Non-organic limbs don't burn
+						limb.skeletonize()
 						should_update_body = TRUE
+						limb.drop_limb()
 						limb.visible_message("<span class='warning'>[src]'s [limb.name] crumbles into ash!</span>")
 						qdel(limb)
 					else
@@ -296,7 +285,9 @@ All effects don't start immediately, but rather get worse over time; the rate is
 			head.cremation_progress += rand(1,4)
 			if(head.cremation_progress >= 50)
 				if(head.status == BODYPART_ORGANIC) //Non-organic limbs don't burn
+					head.skeletonize()
 					should_update_body = TRUE
+					head.drop_limb()
 					head.visible_message("<span class='warning'>[src]'s head crumbles into ash!</span>")
 					qdel(head)
 				else
@@ -339,7 +330,7 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	if(!needs_heart())
 		return FALSE
 	var/obj/item/organ/heart/heart = getorganslot(ORGAN_SLOT_HEART)
-	if(!heart || IS_ROBOTIC_ORGAN(heart))
+	if(!heart || (heart.organ_flags & ORGAN_SYNTHETIC))
 		return FALSE
 	return TRUE
 
@@ -410,13 +401,13 @@ All effects don't start immediately, but rather get worse over time; the rate is
 *	The mob tries to go to sleep or IS sleeping
 *
 *	Accounts for...
-*	TRAIT_SLEEPIMMUNE
+*	TRAIT_NOSLEEP
 *	CANT_SLEEP_IN
 *	Hunger and Hydration.
 */
 
 /mob/living/carbon/proc/handle_sleep()
-	if(HAS_TRAIT(src, TRAIT_SLEEPIMMUNE))
+	if(HAS_TRAIT(src, TRAIT_NOSLEEP))
 		return
 	var/cant_fall_asleep = FALSE
 	var/cause = "I just can't..."
@@ -455,13 +446,12 @@ All effects don't start immediately, but rather get worse over time; the rate is
 					if(!wound.sleep_healing)
 						continue
 					wound.heal_wound(wound.sleep_healing * sleepy_mod)
-			if(toxloss)
-				adjustToxLoss(-(sleepy_mod * 0.15), FALSE, TRUE)
-				. |= BODYPART_LIFE_UPDATE_HEALTH
-			if(eyesclosed && !HAS_TRAIT(src, TRAIT_SLEEPIMMUNE))
+			adjustToxLoss(-(sleepy_mod * 0.15))
+			updatehealth()
+			if(eyesclosed && !HAS_TRAIT(src, TRAIT_NOSLEEP))
 				Sleeping(300)
 		tiredness = 0
-	else if(!IsSleeping() && !HAS_TRAIT(src, TRAIT_SLEEPIMMUNE))
+	else if(!IsSleeping() && !HAS_TRAIT(src, TRAIT_NOSLEEP))
 		// Resting on a bed or something
 		if(buckled?.sleepy)
 			if(eyesclosed && !cant_fall_asleep || (eyesclosed && !(fallingas >= 10 && cant_fall_asleep)))

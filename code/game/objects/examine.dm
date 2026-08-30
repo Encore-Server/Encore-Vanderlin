@@ -72,7 +72,7 @@
 	for(var/datum/examine_effect/E in examine_effects)
 		E.trigger(user)
 
-	var/weight = get_carry_weight(user)
+	var/weight = get_carry_weight()
 	if(!weight)
 		return
 	if(weight < 1)

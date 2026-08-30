@@ -40,6 +40,7 @@
 /datum/outfit/grave/t1/prisoner
 	name = "Prisoner (grave)"
 	pants = /obj/item/clothing/pants/loincloth/colored/brown
+	mask = /obj/item/clothing/face/facemask/prisoner
 
 	weight = 1
 
@@ -49,7 +50,7 @@
 	shirt = /obj/item/clothing/armor/gambeson
 	pants = /obj/item/clothing/pants/trou/leather
 	cloak = /obj/item/clothing/cloak/stabard
-	shoes = /obj/item/clothing/shoes/boots/darkboots
+	shoes = /obj/item/clothing/shoes/boots
 	belt = /obj/item/storage/belt/leather
 
 /// Dead Townsman
@@ -94,7 +95,7 @@
 //// Dead Noble
 /datum/outfit/grave/t3/noble
 	name = "Noble (grave)"
-	shoes = /obj/item/clothing/shoes/boots/darkboots
+	shoes = /obj/item/clothing/shoes/boots
 	shirt = /obj/item/clothing/shirt/dress/silkdress/colored/random
 	backl = /obj/item/storage/backpack/satchel
 	neck = /obj/item/storage/belt/pouch/coins/rich

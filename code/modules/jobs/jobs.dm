@@ -20,13 +20,14 @@ GLOBAL_LIST_INIT(noble_courthand_positions, list(
 	/datum/job/prince::title,
 	/datum/job/captain::title,
 	/datum/job/steward::title,
+	/datum/job/magician::title,
 	/datum/job/archivist::title,
 	/datum/job/courtphys::title,
 	/datum/job/minor_noble::title,
-	/datum/job/courtagent::title,
+	/datum/job/adventurer/courtagent::title,
 	/datum/job/sunlord::title,
 ))
-GLOBAL_PROTECT(noble_courthand_positions)
+GLOBAL_PROTECT(noble_positions)
 
 GLOBAL_LIST_INIT(garrison_positions, list(
 	/datum/job/royalknight::title,
@@ -75,8 +76,7 @@ GLOBAL_LIST_INIT(serf_positions, list(
 	/datum/job/innkeep::title,
 	/datum/job/blacksmith::title,
 	/datum/job/tailor::title,
-	/datum/job/magician::title,
-	/datum/job/tower_mage::title,
+	/datum/job/alchemist::title,
 	/datum/job/artificer::title,
 	/datum/job/matron::title,
 	/datum/job/feldsher::title,
@@ -157,7 +157,7 @@ GLOBAL_LIST_EMPTY(job_assignment_order)
 
 /proc/get_job_assignment_order()
 	var/list/sorting_order = list()
-	sorting_order += GLOB.noble_courthand_positions
+	sorting_order += GLOB.noble_positions
 	sorting_order += GLOB.garrison_positions
 	sorting_order += GLOB.church_positions
 	sorting_order += GLOB.inquisition_positions

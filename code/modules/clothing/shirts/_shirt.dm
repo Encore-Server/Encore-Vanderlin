@@ -11,7 +11,7 @@
 	slot_flags = ITEM_SLOT_SHIRT
 	body_parts_covered = CHEST|VITALS
 	prevent_crits = list(BCLASS_LASHING)
-	armor_type = /datum/armor/none
+	armor = list("blunt" = 0, "slash" = 0, "stab" = 0,  "piercing" = 0, "fire" = 0, "acid" = 0)
 
 	edelay_type = 1
 	equip_delay_self = 25

@@ -116,7 +116,7 @@
 	if(armor)
 		. += "\n<u><b>DEFENSE:</b></u>\n"
 		var/list/defense_strings = list()
-		for(var/damage_key in ARMOR_LIST_DAMAGE)
+		for(var/damage_key in ARMOR_LIST_DAMAGE())
 			var/rating = armor.get_rating(damage_key)
 			defense_strings += "<font color='[armor_to_color(rating)]'>[armor_to_protection_name(damage_key)] [armor_to_protection_class(rating)]</font>"
 		. += defense_strings.Join(" | ")
@@ -128,7 +128,7 @@
 	if(body_parts_covered)
 		. += "\n<u><b>COVERAGE:</b></u>\n"
 		var/list/parsed_zones = list()
-		for(var/zone in cover_flags2body_zones(body_parts_covered))
+		for(var/zone in body_parts_covered2organ_names(body_parts_covered))
 			parsed_zones += "[parse_zone(zone)]"
 		. += parsed_zones.Join(" | ")
 
@@ -147,13 +147,16 @@
 			. += span_notice("It has one torn sleeve.")
 		else
 			. += span_notice("Both its sleeves have been torn!")
-
 	if(wet)
-		for(var/line in wet.get_examine_text())
-			. += line
-
+		var/list/t = wet.get_examine_text()
+		if(t)
+			for(var/line in t)
+				. += line
 	if(proper_drying)
-		. += span_notice("This was properly washed and dried off, it smells good!")
+		desc += span_notice("\n This was properly washed and dried off, it smells good!")
+
+
+
 
 /obj/item/clothing/MiddleClick(mob/living/user, list/modifiers)
 	..()
@@ -309,19 +312,17 @@
 	return FALSE
 
 /obj/item/clothing/attack(mob/living/M, mob/living/user, list/modifiers)
-	if(!M.on_fire)
+	if(M.on_fire)
+		if(user == M)
+			return
+		user.changeNext_move(CLICK_CD_MELEE)
+		M.visible_message(span_warning("[user] pats out the flames on [M] with [src]!"))
+		M.adjust_divine_fire_stacks(-2)
+		if(M.fire_stacks > 0)
+			M.adjust_fire_stacks(-2)
+		take_damage(10, BURN, "fire")
+	else
 		return ..()
-
-	if(user == M)
-		return
-
-	user.changeNext_move(CLICK_CD_MELEE)
-	M.visible_message(span_warning("[user] pats out the flames on [M] with [src]!"))
-	M.adjust_divine_fire_stacks(-2)
-	if(M.fire_stacks > 0)
-		M.adjust_fire_stacks(-2)
-
-	take_damage(10, BURN, "fire")
 
 /obj/item/clothing/dropped(mob/user)
 	..()
@@ -388,7 +389,7 @@
 	if(!damaged_clothes)
 		update_clothes_damaged_state(TRUE)
 	var/brokemessage = FALSE
-	var/list/armorlist = get_armor().get_rating_list()
+	var/list/armorlist = armor?.getList()
 	for(var/x in armorlist)
 		if(armorlist[x] > 0)
 			brokemessage = TRUE
@@ -502,6 +503,7 @@ BLIND     // can't see anything
 	flags_cover = initial(flags_cover)
 	block2add = initial(block2add)
 	body_parts_covered = initial(body_parts_covered)
+	prevent_crits = initial(prevent_crits)
 	gas_transfer_coefficient = initial(gas_transfer_coefficient)
 
 /obj/item/clothing/equipped(mob/living/carbon/user, slot)

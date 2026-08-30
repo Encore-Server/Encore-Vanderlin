@@ -16,6 +16,6 @@
 	summon_radius = 3
 	summon_amount = 0
 	spell_flags = SPELL_RITUOS
-
-	required_form = FORM_DEATH
-	required_technique = TECHNIQUE_CREATION
+	attunements = list(
+		/datum/attunement/death = 0.3,
+	)

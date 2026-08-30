@@ -14,7 +14,7 @@
 
 	item_weight = 3.7 KILOGRAMS
 
-	armor_type = /datum/armor/head/plate
+	armor = ARMOR_PLATE
 	body_parts_covered = FULL_HEAD
 	prevent_crits = ALL_EXCEPT_STAB
 	max_integrity = INTEGRITY_STRONGEST // no moving parts, steel
@@ -24,7 +24,7 @@
 	name = "bastion helm"
 	desc = "A modified great helm designed for Templars, this helmet with integrated neck protection serves as an unyielding bastion of protection for the devout."
 	icon_state = "topfhelm"
-	armor_type = /datum/armor/head/plate
+	armor = ARMOR_PLATE
 	flags_inv = HIDEEARS|HIDEFACE|HIDEHAIR
 	body_parts_covered = HEAD_NECK
 	prevent_crits = ALL_EXCEPT_BLUNT
@@ -81,7 +81,6 @@
 	icon_state = "psydonbarbute"
 	item_state = "psydonbarbute"
 	block2add = FOV_BEHIND
-	melting_material = /datum/material/silver
 
 /obj/item/clothing/head/helmet/heavy/angroshelm
 	name = "katholikon armet"
@@ -89,7 +88,6 @@
 	icon_state = "psydonarmet"
 	item_state = "psydonarmet"
 	block2add = FOV_BEHIND
-	melting_material = /datum/material/silver
 
 //................ Iron Plate Helmet ............... //
 /obj/item/clothing/head/helmet/heavy/ironplate
@@ -98,11 +96,10 @@
 	icon_state = "ironplate"
 	flags_inv = HIDEEARS
 	smeltresult = /obj/item/ingot/iron
-	melting_material = /datum/material/iron
 	sellprice = VALUE_CHEAP_IRON_HELMET
 	block2add = FOV_BEHIND
 
-	armor_type = /datum/armor/head/plate/bad
+	armor = ARMOR_PLATE_BAD
 	max_integrity = INTEGRITY_STRONG //isn't the same as a steel helmet but is better than a skullcap, costs 2 bars and protects the mouth
 	item_weight = 3.5 KILOGRAMS
 
@@ -117,7 +114,7 @@
 	flags_inv = HIDEEARS|HIDEFACE|HIDEHAIR
 	smeltresult = /obj/item/ingot/iron
 	sellprice = VALUE_IRON_ARMOR/2
-	armor_type = /datum/armor/head/plate/bad
+	armor = ARMOR_PLATE_BAD
 	max_integrity = INTEGRITY_STANDARD
 	item_weight = 2.4 KILOGRAMS
 
@@ -163,7 +160,7 @@
 	icon_state = "topfhelm"
 	flags_inv = HIDEEARS|HIDEFACE|HIDEHAIR
 
-	armor_type = /datum/armor/head/plate
+	armor = ARMOR_PLATE
 	prevent_crits = ALL_CRITICAL_HITS
 	item_weight = 4.3 KILOGRAMS
 
@@ -173,7 +170,7 @@
 	icon_state = "keeperhelm"
 	item_state = "keeperhelm"
 	// Best approximation for stone as we have no standard!
-	armor_type = /datum/armor/head/plate
+	armor = ARMOR_PLATE
 	armor_class = AC_LIGHT
 	smeltresult = null
 
@@ -191,7 +188,7 @@
 	worn_y_dimension = 64
 	flags_inv = HIDEEARS|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
 
-	armor_type = /datum/armor/head/plate/good
+	armor = ARMOR_PLATE_GOOD
 	prevent_crits = ALL_CRITICAL_HITS
 	item_weight = 4.5 KILOGRAMS
 
@@ -204,7 +201,7 @@
 	icon_state = "zizofrogmouth"
 	icon = 'icons/roguetown/clothing/special/evilarmor.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/special/onmob/evilarmor.dmi'
-	armor_type = /datum/armor/head/plate
+	armor = ARMOR_PLATE
 	prevent_crits = ALL_CRITICAL_HITS
 	item_weight = 4.5 KILOGRAMS
 	block2add = FOV_BEHIND
@@ -219,7 +216,7 @@
 	icon_state = "matthioshelm"
 	icon = 'icons/roguetown/clothing/special/evilarmor.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/special/onmob/evilarmor64x64.dmi'
-	armor_type = /datum/armor/head/plate
+	armor = ARMOR_PLATE
 	prevent_crits = ALL_CRITICAL_HITS
 	item_weight = 3.2 KILOGRAMS
 	block2add = FOV_BEHIND
@@ -237,7 +234,7 @@
 	icon_state = "graggarplatehelm"
 	icon = 'icons/roguetown/clothing/special/evilarmor.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/special/onmob/evilarmor.dmi'
-	armor_type = /datum/armor/head/plate
+	armor = ARMOR_PLATE
 	flags_cover = HEADCOVERSEYES
 	prevent_crits = ALL_CRITICAL_HITS
 	item_weight = 4.5 KILOGRAMS
@@ -256,7 +253,7 @@
 	worn_y_dimension = 64
 	bloody_icon = 'icons/effects/blood64x64.dmi'
 	bloody_icon_state = "helmetblood_big"
-	armor_type = /datum/armor/head/plate
+	armor = ARMOR_PLATE
 	prevent_crits = ALL_CRITICAL_HITS
 	item_weight = 4.5 KILOGRAMS
 	block2add = FOV_BEHIND
@@ -273,7 +270,7 @@
 	body_parts_covered = HEAD|NOSE|EYES
 	slot_flags = ITEM_SLOT_HEAD
 	flags_inv = HIDEFACE|HIDEHAIR
-	armor_type = /datum/armor/head/plate
+	armor = ARMOR_PLATE
 	resistance_flags = FIRE_PROOF
 	blocksound = PLATEHIT
 	prevent_crits = ALL_CRITICAL_HITS
@@ -369,16 +366,7 @@
 	item_state = "abyssorhelm"
 	item_weight = 5.5 KILOGRAMS
 
-//................ Deep Abyssor Helmet ............. //
-/obj/item/clothing/head/helmet/heavy/necked/deepabyssor
-	name = "deep abyssor helmet"
-	desc = "A great helmet crafted from bronze. The visor is slitted and ridged, evoking the gills of a great sea-beast. May His name be remembered..."
-	icon_state = "deepabyssorhelm"
-	item_state = "deepabyssorhelm"
-	item_weight = 5.5 KILOGRAMS
-	melting_material = /datum/material/bronze
-
-//............... Sinistar (Graggar) Helmet ............... //
+//............... Sinistar (Archdevil) Helmet ............... //
 /obj/item/clothing/head/helmet/heavy/sinistar
 	name = "sinistar helmet"
 	desc = "Glorious star, smeared in guts and greeted with a chorus of howls."
@@ -420,7 +408,7 @@
 		return
 	if(!picked)
 		var/list/icons = HELMET_KNIGHT_DECORATIONS
-		var/choice = tgui_input_list(user, "Choose a crest.", "Knightly crests", icons)
+		var/choice = input(user, "Choose a crest.", "Knightly crests") as anything in icons
 		var/playerchoice = icons[choice]
 		picked = TRUE
 		icon_state = playerchoice
@@ -436,7 +424,7 @@
 	name = "hounskull"
 	desc = "A lavish hounskull which allows a crest to be mounted on top."
 	icon_state = "decorated_hounskull"
-	armor_type = /datum/armor/head/plate/good
+	armor = ARMOR_PLATE_GOOD
 	max_integrity = INTEGRITY_STRONG
 	prevent_crits = ALL_CRITICAL_HITS
 	item_weight = 4.45 KILOGRAMS
@@ -448,7 +436,7 @@
 		return
 	if(!picked)
 		var/list/icons = HELMET_HOUNSKULL_DECORATIONS
-		var/choice = tgui_input_list(user, "Choose a crest.", "Knightly crests", icons)
+		var/choice = input(user, "Choose a crest.", "Knightly crests") as anything in icons
 		var/playerchoice = icons[choice]
 		picked = TRUE
 		icon_state = playerchoice
@@ -473,7 +461,7 @@
 		return
 	if(!picked)
 		var/list/icons = HELMET_BUCKET_DECORATIONS
-		var/choice = tgui_input_list(user, "Choose a crest.", "Knightly crests", icons)
+		var/choice = input(user, "Choose a crest.", "Knightly crests") as anything in icons
 		var/playerchoice = icons[choice]
 		picked = TRUE
 		icon_state = playerchoice
@@ -498,7 +486,7 @@
 		return
 	if(!picked)
 		var/list/icons = HELMET_GOLD_DECORATIONS
-		var/choice = tgui_input_list(user, "Choose a crest.", "Knightly crests", icons)
+		var/choice = input(user, "Choose a crest.", "Knightly crests") as anything in icons
 		var/playerchoice = icons[choice]
 		picked = TRUE
 		icon_state = playerchoice
@@ -528,7 +516,7 @@
 		return
 	if(!picked)
 		var/list/icons = BASCINET_DECORATIONS
-		var/choice = tgui_input_list(user, "Choose a crest.", "Knightly crests", icons)
+		var/choice = input(user, "Choose a crest.", "Knightly crests") as anything in icons
 		var/playerchoice = icons[choice]
 		picked = TRUE
 		icon_state = playerchoice
@@ -554,34 +542,35 @@
 	max_integrity = 350
 	var/plumed = FALSE
 
-/obj/item/clothing/head/helmet/heavy/ordinatorhelm/item_interaction(mob/living/user, obj/item/tool, list/modifiers)
-	if(!istype(tool, /obj/item/natural/feather))
-		return NONE
-
-	user.visible_message(span_warning("[user] starts to fashion plumage using [tool] for [src]."))
-	if(do_after(user, 4 SECONDS))
-		var/obj/item/clothing/head/helmet/heavy/ordinatorhelm/plume/P = new(get_turf(user))
-		if(user.is_holding(src))
-			user.dropItemToGround(src)
-			user.put_in_hands(P)
-		P.update_integrity(get_integrity())
-		qdel(src)
-		qdel(tool)
-
-	return ITEM_INTERACT_SUCCESS
+/obj/item/clothing/head/helmet/heavy/ordinatorhelm/attackby(obj/item/W, mob/living/user, params)
+	..()
+	if(istype(W, /obj/item/natural/feather))
+		user.visible_message(span_warning("[user] starts to fashion plumage using [W] for [src]."))
+		if(do_after(user, 4 SECONDS))
+			var/obj/item/clothing/head/helmet/heavy/ordinatorhelm/plume/P = new /obj/item/clothing/head/helmet/heavy/ordinatorhelm/plume(get_turf(src.loc))
+			if(user.is_holding(src))
+				user.dropItemToGround(src)
+				user.put_in_hands(P)
+			qdel(src)
+			qdel(W)
+		else
+			user.visible_message(span_warning("[user] stops fashioning plumage for [src]."))
+		return
 
 /obj/item/clothing/head/helmet/heavy/ordinatorhelm/plume
 	icon_state = "ordinatorhelmplume"
 	item_state = "ordinatorhelmplume"
 
-/obj/item/clothing/head/helmet/heavy/ordinatorhelm/plume/item_interaction(mob/living/user, obj/item/tool, list/modifiers)
-	return NONE
+/obj/item/clothing/head/helmet/heavy/ordinatorhelm/plume/attackby(obj/item/W, mob/living/user, params)
+	if(istype(W, /obj/item/natural/feather))
+		return
 
 /obj/item/clothing/head/helmet/heavy/absolver
 	name = "katholikon conical helm"
 	desc = "Its shape confounds and confuses the enemies of the Katholikon. Offering unfound protection in its visage, the gaze is horrific to those without understanding."
 	icon_state = "absolutionisthelm"
 	item_state = "absolutionisthelm"
+	emote_environment = 3
 	block2add = null
 	body_parts_covered = FULL_HEAD|NECK
 	max_integrity = 450 // Worst vision. Yes.
@@ -591,7 +580,6 @@
 	bloody_icon = 'icons/effects/blood64x64.dmi'
 	flags_inv = HIDEEARS|HIDEFACE|HIDEHAIR
 	clothing_flags = NONE
-	melting_material = /datum/material/silver
 
 /obj/item/clothing/head/helmet/heavy/psybucket
 	name = "katholikon bucket helmet"
@@ -602,7 +590,6 @@
 	adjustable = CAN_CADJUST
 	block2add = FOV_BEHIND
 	max_integrity = 400
-	melting_material = /datum/material/silver
 
 /obj/item/clothing/head/helmet/heavy/psysallet
 	name = "katholikon sallet"
@@ -613,7 +600,6 @@
 	adjustable = CAN_CADJUST
 	block2add = FOV_BEHIND
 	max_integrity = 400
-	melting_material = /datum/material/silver
 
 //............... Gronn Heavy Helmet ...............//
 /obj/item/clothing/head/helmet/heavy/ironplate/gronn

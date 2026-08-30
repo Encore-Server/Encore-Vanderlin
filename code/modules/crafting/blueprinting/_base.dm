@@ -1,16 +1,17 @@
 GLOBAL_LIST_EMPTY(blueprint_appearance_cache)
 GLOBAL_LIST_EMPTY(active_blueprints)
-GLOBAL_LIST_INIT(blueprint_recipes, init_blueprint_recipes())
+GLOBAL_LIST_EMPTY(blueprint_recipes)
 
 #define BLUEPRINT_SWITCHSTATE_NONE 0
 #define BLUEPRINT_SWITCHSTATE_RECIPES 1
 
 /proc/init_blueprint_recipes()
-	. = list()
+	if(GLOB.blueprint_recipes.len)
+		return
 	for(var/datum/blueprint_recipe/recipe as anything in subtypesof(/datum/blueprint_recipe))
 		if(IS_ABSTRACT(recipe))
 			continue
-		.[initial(recipe.name)] = new recipe
+		GLOB.blueprint_recipes[initial(recipe.name)] = new recipe
 
 /datum/blueprint_recipe
 	var/name = "Unknown Structure"

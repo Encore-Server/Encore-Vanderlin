@@ -44,11 +44,13 @@
 	traits = list(
 		TRAIT_HEAVYARMOR,
 		TRAIT_NOBLE_BLOOD,
-		TRAIT_VIRGIN,
 	)
 
 /datum/job/advclass/combat/paladin/after_spawn(mob/living/carbon/human/spawned, client/player_client)
 	. = ..()
+
+	spawned.virginity = TRUE
+
 	switch(spawned.patron?.type)
 		if(/datum/patron/angros, /datum/patron/angros/extremist)
 			spawned.cmode_music = 'sound/music/cmode/church/CombatInquisitor.ogg'
@@ -76,14 +78,14 @@
 			spawned.cmode_music = 'sound/music/cmode/adventurer/CombatOutlander2.ogg'
 		if(/datum/patron/divine/pomette)
 			spawned.cmode_music = 'sound/music/cmode/church/CombatEora.ogg'
-			REMOVE_TRAIT(spawned, TRAIT_VIRGIN, JOB_TRAIT)
+			spawned.virginity = FALSE
 			ADD_TRAIT(spawned, TRAIT_BEAUTIFUL, JOB_TRAIT)
 		else
 			spawned.cmode_music = 'sound/music/cmode/church/CombatInquisitor.ogg'
 
-	if(!spawned.has_language(/datum/language/newunsundered) && (spawned.patron?.type in ALL_TEMPLE_PATRONS))
-		spawned.grant_language(/datum/language/newunsundered)
-		to_chat(spawned, "<span class='info'>I can speak Unsundered with ,n before my speech.</span>")
+	if(!spawned.has_language(/datum/language/celestial) && (spawned.patron?.type in ALL_TEMPLE_PATRONS))
+		spawned.grant_language(/datum/language/celestial)
+		to_chat(spawned, "<span class='info'>I can speak Celestial with ,c before my speech.</span>")
 
 	if(spawned.dna?.species.id == SPEC_ID_HUMEN)
 		spawned.dna.species.soundpack_m = new /datum/voicepack/male/knight()
@@ -100,7 +102,7 @@
 	armor = /obj/item/clothing/armor/plate
 	shirt = /obj/item/clothing/armor/chainmail
 	pants = /obj/item/clothing/pants/platelegs
-	shoes = /obj/item/clothing/shoes/boots/darkboots
+	shoes = /obj/item/clothing/shoes/boots/armor
 	belt = /obj/item/storage/belt/leather/steel
 	beltl = /obj/item/storage/belt/pouch/coins/mid
 	ring = /obj/item/clothing/ring/silver/toper

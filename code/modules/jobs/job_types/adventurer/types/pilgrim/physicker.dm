@@ -18,7 +18,7 @@
 				their services."
 	allowed_races = RACES_PLAYER_ALL
 	outfit = /datum/outfit/pilgrim/physicker
-	category_tags = list(CTAG_PILGRIM)
+	category_tags = list(CTAG_PILGRIM, CTAG_TOWNER)
 	total_positions = 99
 	apprentice_name = "Physicker Apprentice"
 	cmode_music = 'sound/music/cmode/nobility/combat_physician.ogg'

@@ -4,7 +4,6 @@
 	group = "Seeds"
 	crate_name = "merchant guild's crate"
 	crate_type = /obj/structure/closet/crate/chest/merchant
-	abstract_type = /datum/supply_pack/seeds
 
 /datum/supply_pack/seeds/spelt
 	name = "Spelt"

@@ -4,6 +4,7 @@
 	var/mutable_appearance/preview_appearance
 	var/image/preview_image
 	var/atom/movable/screen/blueprint/recipe_button
+	var/list/recipe_buttons = list()
 	var/list/buttons = list()
 	var/current_category = "General"
 	var/datum/browser/recipe_browser = null
@@ -25,34 +26,32 @@
 	create_buttons()
 	holder.screen += buttons
 	holder.click_intercept = src
+	init_blueprint_recipes()
 	RegisterSignal(holder.mob, COMSIG_MOB_MOUSE_ENTERED, PROC_REF(on_mouse_moved))
 	RegisterSignal(holder?.mob, COMSIG_ATOM_MOUSE_ENTERED, PROC_REF(on_mouse_moved_pre))
 
-/datum/blueprint_system/Destroy()
-	holder.player_details.post_login_callbacks -= li_cb
-	li_cb = null
+/datum/blueprint_system/proc/quit()
+	holder.screen -= buttons
+	holder.click_intercept = null
 	clear_preview()
 	clear_pixel_positioning_dummy()
-	clear_selection()
 	if(recipe_browser)
 		recipe_browser.close()
 		recipe_browser = null
-	recipe_button = null
-	dir_button = null
-	pixel_button = null
-	if(buttons)
-		holder.screen -= buttons
-		QDEL_LIST(buttons)
-	holder.click_intercept = null
 	if(holder?.mob)
 		UnregisterSignal(holder.mob, COMSIG_MOB_MOUSE_ENTERED)
 		UnregisterSignal(holder.mob, COMSIG_ATOM_MOUSE_ENTERED)
-	holder.mob?.blueprints = null
-	holder = null
-	return ..()
-
-/datum/blueprint_system/proc/quit()
 	qdel(src)
+
+/datum/blueprint_system/Destroy()
+	holder.player_details.post_login_callbacks -= li_cb
+	holder = null
+	clear_preview()
+	clear_pixel_positioning_dummy()
+	if(recipe_browser)
+		recipe_browser.close()
+		recipe_browser = null
+	return ..()
 
 /datum/blueprint_system/proc/post_login()
 	if(QDELETED(holder))

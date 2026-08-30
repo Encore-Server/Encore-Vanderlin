@@ -77,6 +77,8 @@ GLOBAL_LIST_EMPTY(linked_recipe_cache)
 	var/list/data = list()
 	data["book_name"] = name
 	data["book_desc"] = desc
+	ensure_snack_mill_reverse()
+	build_obtained_from_reverse()
 	data["recipes"] = get_cached_book_recipes(type, FALSE)
 	data["linked_recipes"] = get_cached_linked_recipes(type)
 	return data
@@ -539,8 +541,8 @@ GLOBAL_LIST_EMPTY(linked_recipe_cache)
 
 	types = list(
 		/datum/book_entry/grimoire,
+		/datum/book_entry/attunement,
 		/datum/book_entry/mana_sources,
-		/datum/spellcraft_contribution,
 		/datum/arcyne_crafting_recipe,
 		/datum/repeatable_crafting_recipe/arcyne,
 		/datum/blueprint_recipe/arcyne,
@@ -614,7 +616,7 @@ GLOBAL_LIST_EMPTY(linked_recipe_cache)
 		/datum/chimeric_table,
 		/datum/chimeric_node,
 		/datum/wound,
-		/datum/surgery_operation,
+		/datum/surgery,
 		/obj/item/organ/heart,
 		/obj/item/organ/spleen,
 		/obj/item/organ/stomach,

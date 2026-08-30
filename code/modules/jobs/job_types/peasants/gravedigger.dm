@@ -28,7 +28,7 @@
 	department_flag = CHURCHMEN
 	display_order = JDO_GRAVETENDER
 	job_flags = (JOB_ANNOUNCE_ARRIVAL | JOB_SHOW_IN_CREDITS | JOB_EQUIP_RANK | JOB_NEW_PLAYER_JOINABLE)
-	factions = list(FACTION_TOWN)
+	faction = FACTION_TOWN
 	total_positions = 99
 	spawn_positions = 99
 	bypass_lastclass = TRUE
@@ -37,8 +37,7 @@
 	allowed_patrons = list(/datum/patron/divine/valdala)
 
 	outfit = /datum/outfit/undertaker
-	knows_the_town = TRUE
-	known_by_the_town = TRUE
+	give_bank_account = TRUE
 	cmode_music = 'sound/music/cmode/church/CombatGravekeeper.ogg'
 	can_be_apprentice = TRUE
 
@@ -54,7 +53,7 @@
 		TRAIT_GRAVEROBBER
 	)
 
-	languages = list(/datum/language/newunsundered)
+	languages = list(/datum/language/celestial)
 	book_type = /obj/item/recipe_book/gravemaking
 
 /datum/job/undertaker/after_spawn(mob/living/carbon/human/spawned, client/player_client)
@@ -72,7 +71,7 @@
 	neck = /obj/item/clothing/neck/psycross/silver/divine/valdala
 	pants = /obj/item/clothing/pants/trou/leather/mourning
 	armor = /obj/item/clothing/shirt/robe/valdala
-	shoes = /obj/item/clothing/shoes/boots/darkboots
+	shoes = /obj/item/clothing/shoes/boots
 	belt = /obj/item/storage/belt/leather
 	beltl = /obj/item/weapon/hammer/iron
 	beltr = /obj/item/storage/belt/pouch/coins/poor

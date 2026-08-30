@@ -9,11 +9,10 @@
 
 	if(istype(vamp_datum, /datum/antagonist/vampire/lord))
 		var/datum/antagonist/vampire/lord/lord_datum = vamp_datum
-		var/resistance = lord_datum.ascension_resistance()
-		if(resistance < 1)
+		if(!lord_datum.ascended)
 			to_chat(user, span_userdanger("I've consumed silver, it is my BANE!"))
-			user.Knockdown(10 * (1 - resistance))
-			user.Paralyze(10 * (1 - resistance))
+			user.Knockdown(10)
+			user.Paralyze(10)
 		return
 
 	if(wolf_datum?.transformed == TRUE || vamp_datum)

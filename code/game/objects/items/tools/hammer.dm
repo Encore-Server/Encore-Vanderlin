@@ -24,35 +24,36 @@
 /obj/structure
 	var/hammer_repair
 
-/obj/item/weapon/hammer/interact_with_atom(atom/interacting_with, mob/living/user, list/modifiers)
+// Convert to interact_with_atom
+/obj/item/weapon/hammer/pre_attack(atom/interacting_with, mob/living/user, list/modifiers)
+	if(iscarbon(interacting_with) && !user.cmode && try_heal_loop(interacting_with, user)) // convert to interact_with_atom
+		return TRUE
+	. = ..()
+
+/obj/item/weapon/hammer/attack_atom(atom/attacked_atom, mob/living/user)
+	if(!isobj(attacked_atom))
+		return ..()
 	if(!isliving(user) || !user.mind || user.cmode)
-		return NONE
-
-	if(iscarbon(interacting_with))
-		try_heal_loop(interacting_with, user)
-		return ITEM_INTERACT_SUCCESS
-
+		return ..()
 	var/datum/mind/blacksmith_mind = user.mind
 	var/repair_percent = 0.05 // 5% Repairing per hammer smack
-
 	/// Repairing is MUCH better with an anvil!
-	if(locate(/obj/machinery/anvil) in interacting_with.loc)
+	if(locate(/obj/machinery/anvil) in attacked_atom.loc)
+		repair_percent *= 1.5
+	if(HAS_TRAIT(attacked_atom, TRAIT_NEEDS_QUENCH))
 		repair_percent *= 1.5
 
-	if(HAS_TRAIT(interacting_with, TRAIT_NEEDS_QUENCH))
-		repair_percent *= 1.5
-
-	if(isbodypart(interacting_with))
+	if(isbodypart(attacked_atom))
 		. = TRUE
-		var/obj/item/bodypart/attacked_prosthetic = interacting_with
+		var/obj/item/bodypart/attacked_prosthetic = attacked_atom
 		if(!attacked_prosthetic.anvilrepair)
-			return NONE
-		if(!interacting_with.ontable() && !istype(interacting_with.loc, /obj/machinery/anvil))
-			to_chat(user, span_warning("I should put [interacting_with] on a table or an anvil first."))
-			return ITEM_INTERACT_BLOCKING
+			return
+		if(!attacked_atom.ontable() && !istype(attacked_atom.loc, /obj/machinery/anvil))
+			to_chat(user, span_warning("I should put [attacked_atom] on a table or an anvil first."))
+			return
 		if(attacked_prosthetic.get_integrity() >= attacked_prosthetic.max_integrity && attacked_prosthetic.brute_dam == 0 && attacked_prosthetic.burn_dam == 0 && attacked_prosthetic.wounds == null && attacked_prosthetic.bodypart_disabled == BODYPART_NOT_DISABLED) //A mouthful
 			to_chat(user, span_warning("There is nothing to further repair on [attacked_prosthetic]."))
-			return ITEM_INTERACT_BLOCKING
+			return
 
 		if(GET_MOB_SKILL_VALUE_OLD(user, attacked_prosthetic.anvilrepair) <= 0)
 			if(prob(30))
@@ -63,7 +64,6 @@
 			repair_percent *= GET_MOB_SKILL_VALUE_OLD(user, attacked_prosthetic.anvilrepair)
 
 		playsound(src,'sound/items/bsmith3.ogg', 100, FALSE)
-
 		if(repair_percent)
 			var/amt2raise = floor(GET_MOB_ATTRIBUTE_VALUE(user, STAT_INTELLIGENCE) * 0.25)
 			attacked_prosthetic.repair_damage(attacked_prosthetic.max_integrity * repair_percent)
@@ -79,26 +79,25 @@
 		else
 			user.visible_message(span_warning("[user] fumbles trying to repair [attacked_prosthetic]!"))
 			attacked_prosthetic.take_damage(attacked_prosthetic.max_integrity * 0.1, BRUTE, "blunt")
+		return
 
-		user.changeNext_move(CLICK_CD_MELEE)
-
-		return ITEM_INTERACT_SUCCESS
-
-	if(isitem(interacting_with))
-		var/obj/item/attacked_item = interacting_with
+	if(isitem(attacked_atom))
+		. = TRUE
+		var/obj/item/attacked_item = attacked_atom
 		if(!attacked_item.anvilrepair || !attacked_item.max_integrity)
-			return NONE
+			to_chat(user, span_warning("[attacked_item] cannot be repaired."))
+			return
 
-		if(!attacked_item.ontable() && !istype(interacting_with.loc, /obj/machinery/anvil))
+		if(!attacked_item.ontable() && !istype(attacked_atom.loc, /obj/machinery/anvil))
 			to_chat(user, span_warning("I should put [attacked_item] on a table or an anvil first."))
-			return ITEM_INTERACT_BLOCKING
+			return
 
 		var/skill_value = GET_MOB_SKILL_VALUE(user, attacked_item.anvilrepair) // 0-60 range typically
 		var/was_broken = attacked_item.obj_broken
 
 		if(!was_broken && attacked_item.get_integrity() >= attacked_item.max_integrity)
 			to_chat(user, span_warning("There is nothing to further repair on [attacked_item]."))
-			return ITEM_INTERACT_BLOCKING
+			return
 
 		if(skill_value <= 0)
 			if(prob(30))
@@ -138,29 +137,26 @@
 			amt2raise *= 0.25
 		blacksmith_mind.add_sleep_experience(attacked_item.anvilrepair, amt2raise)
 		playsound(src, 'sound/items/bsmithfail.ogg', 40, FALSE)
-		user.changeNext_move(CLICK_CD_MELEE)
-		return ITEM_INTERACT_SUCCESS
+		return
 
-	if(isstructure(interacting_with))
-		var/obj/structure/attacked_structure = interacting_with
+	if(isstructure(attacked_atom))
+		. = TRUE
+		var/obj/structure/attacked_structure = attacked_atom
 		if(!attacked_structure.hammer_repair || !attacked_structure.max_integrity || attacked_structure.obj_broken)
-			return NONE
-
+			to_chat(user, span_warning("[attacked_structure] cannot be repaired any further."))
+			return
 		if(GET_MOB_SKILL_VALUE_OLD(user, attacked_structure.hammer_repair) <= 0)
 			to_chat(user, span_warning("I don't know how to repair this.."))
-			return ITEM_INTERACT_BLOCKING
-
+			return
 		var/amt2raise = floor(GET_MOB_ATTRIBUTE_VALUE(user, STAT_INTELLIGENCE) * 0.25)
 		repair_percent *= GET_MOB_SKILL_VALUE_OLD(user, attacked_structure.hammer_repair)
-
 		attacked_structure.repair_damage(attacked_structure.max_integrity * repair_percent)
 		blacksmith_mind.add_sleep_experience(attacked_structure.hammer_repair, amt2raise)
 		playsound(src,'sound/items/bsmithfail.ogg', 100, FALSE)
 		user.visible_message(span_info("[user] repairs [attacked_structure]!"))
+		return
 
-		user.changeNext_move(CLICK_CD_MELEE)
-
-		return ITEM_INTERACT_SUCCESS
+	return ..()
 
 /obj/item/weapon/hammer/proc/try_heal_loop(atom/interacting_with, mob/living/user, repeating = FALSE)
 	var/mob/living/carbon/attacked_carbon = interacting_with
@@ -250,27 +246,6 @@
 	toolspeed = 1.1
 	no_spark = TRUE
 	item_weight = 1.12 KILOGRAMS
-
-/obj/item/weapon/hammer/stone
-	name = "stone hammer"
-	desc = "A simple, if crude and primitive hammer."
-	icon_state = "stonehammer"
-	icon = 'icons/roguetown/weapons/tools.dmi'
-	force = DAMAGE_HAMMER - 4
-	max_integrity = INTEGRITY_POOR
-	melting_material = /obj/item/natural/stone
-	toolspeed = 1
-	no_spark = TRUE
-	item_weight = 1.1 KILOGRAMS
-
-/obj/item/weapon/hammer/stone/rock
-	name = "hammerstone"
-	desc = "A simple rock, rounded and turned almost into a proper tool."
-	icon_state = "hammerstone"
-	force = DAMAGE_HAMMER - 6
-	max_integrity = INTEGRITY_WORST
-	toolspeed = 0.8
-	item_weight = 0.8 KILOGRAMS
 
 /obj/item/weapon/hammer/sledgehammer
 	name = "sledgehammer"

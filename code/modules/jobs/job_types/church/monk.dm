@@ -5,7 +5,6 @@
 		STAT_PERCEPTION = -1,
 		/datum/attribute/skill/misc/sewing = 20,
 		/datum/attribute/skill/misc/medicine = 30,
-		/datum/attribute/skill/craft/alchemy = 30,
 		/datum/attribute/skill/combat/polearms = 20,
 		/datum/attribute/skill/combat/unarmed = 10,
 		/datum/attribute/skill/combat/wrestling = 10,
@@ -52,7 +51,6 @@
 /datum/attribute_holder/sheet/job/acolyte/patron/gani
 	raw_attribute_list = list(
 		/datum/attribute/skill/labor/farming = 20,
-		/datum/attribute/skill/misc/medicine = 10,
 		/datum/attribute/skill/labor/taming = 10
 	)
 
@@ -63,10 +61,7 @@
 	)
 /datum/attribute_holder/sheet/job/acolyte/patron/valdala
 	raw_attribute_list = list(
-		/datum/attribute/skill/craft/masonry = 20,
-		/datum/attribute/skill/misc/medicine = 10,
-		/datum/attribute/skill/craft/alchemy = 10
-
+	/datum/attribute/skill/craft/masonry = 20
 	)
 
 /datum/attribute_holder/sheet/job/acolyte/patron/mordsol
@@ -81,9 +76,7 @@
 
 /datum/attribute_holder/sheet/job/acolyte/patron/iliope
 	raw_attribute_list = list(
-		/datum/attribute/skill/misc/stealing = 40,
-		/datum/attribute/skill/misc/lockpicking = 40,
-		/datum/attribute/skill/misc/sneaking = 40,
+		/datum/attribute/skill/misc/stealing = 20,
 		/datum/attribute/skill/misc/music = 30
 	)
 
@@ -101,9 +94,6 @@
 
 /datum/job/monk
 	title = JOB_ACOLYTE
-	unique_alt_honororary = TRUE
-	alt_honorary = list("Brother")
-	alt_honorary_female = list("Sister")
 	tutorial = "Chores, exercise, prayer... and more chores. \
 	You are a humble acolyte at the temple on Domotan Island, \
 	not yet a trained guardian or an ordained priest. \
@@ -111,7 +101,7 @@
 	department_flag = CHURCHMEN
 	job_flags = (JOB_ANNOUNCE_ARRIVAL | JOB_SHOW_IN_CREDITS | JOB_EQUIP_RANK | JOB_NEW_PLAYER_JOINABLE)
 	display_order = JDO_MONK
-	factions = list(FACTION_TOWN)
+	faction = FACTION_TOWN
 	total_positions = 99
 	spawn_positions = 99
 	bypass_lastclass = TRUE
@@ -121,8 +111,6 @@
 
 	outfit = /datum/outfit/monk
 	give_bank_account = TRUE
-	knows_the_town = TRUE
-	known_by_the_town = TRUE
 	job_bitflag = BITFLAG_CHURCH
 
 	exp_types_granted = list(EXP_TYPE_CHURCH, EXP_TYPE_CLERIC)
@@ -130,12 +118,12 @@
 	attribute_sheet = /datum/attribute_holder/sheet/job/acolyte
 	attribute_sheet_old = /datum/attribute_holder/sheet/job/acolyte/old
 
-	languages = list(/datum/language/newunsundered)
-	traits = list(TRAIT_VIRGIN)
+	languages = list(/datum/language/celestial)
 
 /datum/job/monk/after_spawn(mob/living/carbon/human/spawned, client/player_client)
 	. = ..()
 
+	spawned.virginity = TRUE
 	switch(spawned.patron?.type)
 		if(/datum/patron/divine/visires)
 			spawned.cmode_music = 'sound/music/cmode/adventurer/CombatMonk.ogg'
@@ -147,7 +135,7 @@
 		if(/datum/patron/divine/pomette)
 			ADD_TRAIT(spawned, TRAIT_BEAUTIFUL, TRAIT_GENERIC)
 			ADD_TRAIT(spawned, TRAIT_EMPATH, TRAIT_GENERIC)
-			REMOVE_TRAIT(spawned, TRAIT_VIRGIN, JOB_TRAIT)
+			spawned.virginity = FALSE
 			spawned.attributes?.add_sheet(/datum/attribute_holder/sheet/job/acolyte/patron/pomette)
 			spawned.cmode_music = 'sound/music/cmode/church/CombatEora.ogg'
 		if(/datum/patron/divine/akan)
@@ -214,8 +202,7 @@
 	beltl = /obj/item/key/church
 	backl = /obj/item/weapon/polearm/woodstaff/quarterstaff
 	backpack_contents = list(
-		/obj/item/needle = 1,
-		/obj/item/weapon/knife/dagger/steel/holysee = 1
+		/obj/item/needle = 1
 	)
 
 /datum/outfit/monk/pre_equip(mob/living/carbon/human/equipped_human, visuals_only)
@@ -263,7 +250,7 @@
 		if(/datum/patron/divine/mjallidhorn)
 			head = /obj/item/clothing/head/padded/mjallidhorn
 			neck = /obj/item/clothing/neck/psycross/silver/divine/mjallidhorn
-			shoes = /obj/item/clothing/shoes/boots/darkboots
+			shoes = /obj/item/clothing/shoes/boots
 			armor = /obj/item/clothing/shirt/robe/mjallidhorn
 		if(/datum/patron/divine/mordsol)
 			head = /obj/item/clothing/head/helmet/leather/headscarf
@@ -287,5 +274,5 @@
 		else
 			head = /obj/item/clothing/head/roguehood/colored/random
 			neck = /obj/item/clothing/neck/psycross/silver
-			shoes = /obj/item/clothing/shoes/boots/darkboots
+			shoes = /obj/item/clothing/shoes/boots
 			armor = /obj/item/clothing/shirt/robe/colored/plain

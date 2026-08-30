@@ -1,6 +1,6 @@
 /datum/action/cooldown/spell/control_undead
 	name = "Control Undead"
-	desc = "Attempt to make an undead your ally. (Heretical)"
+	desc = "Attempt to make an undead your ally."
 	button_icon_state = "raiseskele"
 	sound = 'sound/vo/smokedrag.ogg'
 	self_cast_possible = FALSE
@@ -9,9 +9,9 @@
 	spell_type = SPELL_MANA
 	antimagic_flags = MAGIC_RESISTANCE_UNHOLY
 	associated_skill = /datum/attribute/skill/magic/arcane
-
-	required_form = FORM_DEATH
-	required_technique = TECHNIQUE_SUMMONING
+	attunements = list(
+		/datum/attunement/death = 1,
+	)
 
 	invocation = "Obey me."
 	invocation_type = INVOCATION_WHISPER
@@ -19,10 +19,6 @@
 	charge_required = FALSE
 	cooldown_time = 1 MINUTES
 	spell_cost = 75
-
-	var/recoil_energy_floor = 200
-	var/recoil_severity = CONJURE_RECOIL_LIGHT
-	var/recoil_stamina_only = FALSE
 
 	var/static/list/pet_commands = list(
 		/datum/pet_command/idle,
@@ -56,7 +52,6 @@
 	cast_on.set_faction(list(FACTION_CABAL, FACTION_UNDEAD))
 	cast_on.befriend(owner)
 	cast_on.pet_passive = TRUE
-	cast_on.AddComponent(/datum/component/conjured_minion, owner, recoil_energy_floor, recoil_severity, recoil_stamina_only)
 
 	owner.visible_message(
 		span_greentext("[owner] soothes \the [cast_on] with Hell's blessing."),

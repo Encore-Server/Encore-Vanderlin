@@ -22,7 +22,7 @@
 	break_sound = 'sound/foley/breaksound.ogg'
 
 	slot_flags = ITEM_SLOT_ARMOR
-	armor_type = /datum/armor/minimal
+	armor = ARMOR_MINIMAL
 	experimental_onhip = TRUE // does this do anything on armor I wonder?
 	body_parts_covered = CHEST
 

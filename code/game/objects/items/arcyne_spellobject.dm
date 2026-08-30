@@ -27,13 +27,6 @@
 	var/list/datum/spellobject_entry/stored_spells = list()
 	/// TRUE while spells are actively granted (passive mode only)
 	var/active = FALSE
-	/// Whether or not it fills itself on spawn.
-	var/has_random_spells = FALSE
-
-/obj/item/arcyne_spellobject/Initialize(mapload)
-	. = ..()
-	if(has_random_spells)
-		generate_random_spells()
 
 /obj/item/arcyne_spellobject/examine(mob/user)
 	. = ..()
@@ -158,6 +151,7 @@
 					)
 
 	var/datum/action/cooldown/spell/instance = new E.spell_type(user)
+	instance.point_cost = 0
 	instance.spell_cost = 0
 	instance.cooldown_time = 0
 	instance.spell_flags |= SPELL_TEMPORARY
@@ -215,6 +209,7 @@
 	if(E.live_spell || !E.spell_type)
 		return
 	E.live_spell = new E.spell_type(user)
+	E.live_spell.point_cost = 0
 	E.live_spell.cooldown_time = 0
 	E.live_spell.spell_cost = 0
 	E.live_spell.spell_flags |= SPELL_TEMPORARY
@@ -298,8 +293,18 @@
 	w_class = WEIGHT_CLASS_SMALL
 	spellobject_flags = SPELLOBJECT_HIJACK_CLICK | SPELLOBJECT_CONSUMABLE | SPELLOBJECT_VISUAL | SPELLOBJECT_STABLE
 
-/obj/item/arcyne_spellobject/scroll/random
-	has_random_spells = TRUE
+/obj/item/arcyne_spellobject/scroll/random/Initialize(mapload)
+	. = ..()
+	var/datum/action/cooldown/spell/spell_type_path = pick(subtypesof(/datum/action/cooldown/spell))
+	while(IS_ABSTRACT(spell_type_path) || initial(spell_type_path.spell_tier) < min_spell_tier || initial(spell_type_path.spell_tier) > max_spell_tier)
+		spell_type_path = pick(subtypesof(/datum/action/cooldown/spell))
+
+	var/datum/spellobject_entry/E = new()
+	E.spell_type = spell_type_path
+	E.spell_name = initial(spell_type_path.name)
+	E.charges = rand(1, 3)
+	stored_spells += E
+	update_appearance(UPDATE_OVERLAYS)
 
 /obj/item/arcyne_spellobject/spellstone
 	name = "arcyne spellstone"
@@ -309,8 +314,18 @@
 	max_spells = 3
 	spellobject_flags = SPELLOBJECT_VISUAL
 
-/obj/item/arcyne_spellobject/spellstone/random
-	has_random_spells = TRUE
+/obj/item/arcyne_spellobject/spellstone/random/Initialize(mapload)
+	. = ..()
+	var/datum/action/cooldown/spell/spell_type_path = pick(subtypesof(/datum/action/cooldown/spell))
+	while(IS_ABSTRACT(spell_type_path) || initial(spell_type_path.spell_tier) < min_spell_tier || initial(spell_type_path.spell_tier) > max_spell_tier)
+		spell_type_path = pick(subtypesof(/datum/action/cooldown/spell))
+
+	var/datum/spellobject_entry/E = new()
+	E.spell_type = spell_type_path
+	E.spell_name = initial(spell_type_path.name)
+	E.charges = rand(1, 3)
+	stored_spells += E
+	update_appearance(UPDATE_OVERLAYS)
 
 /obj/item/arcyne_spellobject/spellstone/lesser
 	name = "lesser arcyne spellstone"
@@ -330,7 +345,6 @@
 	icon_state = "ruby"
 	max_spells = 4
 	min_spell_tier = 2
-	max_spell_tier = 3
 
 /obj/item/arcyne_spellobject/wand
 	name = "arcyne wand"
@@ -359,11 +373,11 @@
 /obj/item/arcyne_spellobject/wand/chaotic/random
 	name = "chaotic arcyne wand"
 	desc = "A warped wand fizzing with wild magic. Something is inside but what?"
-	has_random_spells = TRUE
 
-/obj/item/arcyne_spellobject/proc/generate_random_spells()
+/obj/item/arcyne_spellobject/wand/chaotic/random/Initialize(mapload)
+	. = ..()
 	var/datum/action/cooldown/spell/spell_type_path = pick(subtypesof(/datum/action/cooldown/spell))
-	while(IS_ABSTRACT(spell_type_path) || initial(spell_type_path.spell_tier) < min_spell_tier || initial(spell_type_path.spell_tier) > max_spell_tier || (initial(spell_type_path.spell_flags) & SPELL_UNETCHABLE) || (initial(spell_type_path.spell_flags) & SPELL_ESSENCE))
+	while(IS_ABSTRACT(spell_type_path) || initial(spell_type_path.spell_tier) < min_spell_tier || initial(spell_type_path.spell_tier) > max_spell_tier)
 		spell_type_path = pick(subtypesof(/datum/action/cooldown/spell))
 
 	var/datum/spellobject_entry/E = new()
@@ -371,4 +385,3 @@
 	E.spell_name = initial(spell_type_path.name)
 	E.charges = rand(1, 3)
 	stored_spells += E
-	update_appearance(UPDATE_OVERLAYS)

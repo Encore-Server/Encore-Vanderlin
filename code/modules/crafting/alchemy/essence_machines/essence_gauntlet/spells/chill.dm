@@ -4,6 +4,7 @@
 	button_icon_state = "chill"
 	//sound = 'sound/magic/whiff.ogg'
 	cast_range = 1
+	attunements = list(/datum/attunement/ice)
 	essences = list(/datum/thaumaturgical_essence/frost)
 
 /datum/action/cooldown/spell/essence/chill/cast(atom/cast_on)
@@ -42,12 +43,3 @@
 /obj/structure/ice_zone/Destroy()
 	remove_temp_effect()
 	return ..()
-
-/datum/action/cooldown/spell/essence/chill/spell
-	name = "Ice Zone"
-	charge_required = TRUE
-	charge_time = 0.5 SECONDS
-	spell_cost = 20
-	spell_type = SPELL_MANA
-
-	required_form = FORM_ICE

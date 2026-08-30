@@ -45,7 +45,6 @@
 		TRAIT_NOENERGY,
 		TRAIT_CRITICAL_RESISTANCE,
 		TRAIT_STRONG_GRABBER,
-		TRAIT_CLOSECOMBAT,
 	)
 	/// Traits that only get applied in the final sequence
 	var/static/list/final_traits = list(
@@ -386,7 +385,7 @@ GLOBAL_VAR_INIT(maniac_highlander, 0) // THERE CAN ONLY BE ONE!
 				traitorwin = FALSE
 			count += objective.triumph_count
 
-	var/special_role_text = LOWER_TEXT(name)
+	var/special_role_text = lowertext(name)
 	// if(!considered_alive(owner))
 	// 	traitorwin = FALSE
 

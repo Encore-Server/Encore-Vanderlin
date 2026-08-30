@@ -10,8 +10,8 @@
 	now_fixed = span_info("My heart begins to beat again.")
 	high_threshold_cleared = span_info("The pain in my chest has died down, and my breathing becomes more relaxed.")
 	organ_volume = 0.5
-	max_blood_storage = 600
-	current_blood = 600
+	max_blood_storage = 100
+	current_blood = 100
 	blood_req = 5
 	oxygen_req = 5
 	nutriment_req = 3
@@ -99,9 +99,8 @@
 		return (..() || !beating)
 	return ..()
 
-/obj/item/organ/heart/on_mob_remove(mob/living/carbon/organ_owner, special, movement_flags)
+/obj/item/organ/heart/Remove(mob/living/carbon/old_owner, special = FALSE)
 	. = ..()
-
 	if(!special)
 		addtimer(CALLBACK(src, PROC_REF(stop_if_unowned)), 12 SECONDS)
 
@@ -111,7 +110,7 @@
 		user.visible_message(span_notice("[user] squeezes [src] to make it beat again!"), \
 					span_notice("You squeeze [src] to make it beat again!"))
 		Restart()
-		addtimer(CALLBACK(src, PROC_REF(stop_if_unowned)), 12 SECONDS)
+		addtimer(CALLBACK(src, PROC_REF(stop_if_unowned)), 8 SECONDS)
 
 /obj/item/organ/heart/proc/can_stop()
 	return beating
@@ -128,13 +127,12 @@
 	update_appearance()
 	if(owner && old_beating)
 		var/deathsdoor = TRUE
-		for(var/obj/item/organ/heart/heart as anything in (owner.getorganslotlist(ORGAN_SLOT_HEART) - src))
+		for(var/thing in (owner.getorganslotlist(ORGAN_SLOT_HEART) - src))
+			var/obj/item/organ/heart/heart = thing
 			if(heart.beating)
 				deathsdoor = FALSE
 		if(deathsdoor)
-			if(owner.stat == CONSCIOUS)
-				owner.visible_message(span_danger("[owner] clutches at [owner.p_their()] chest!"))
-	consider_processing()
+			to_chat(owner, span_danger("I'm knocking on Necra's door!"))
 	return TRUE
 
 /obj/item/organ/heart/proc/Restart()
@@ -143,8 +141,6 @@
 	update_appearance()
 	if(owner && !old_beating)
 		to_chat(owner, span_userdanger("My [name] beats again!"))
-	current_blood = max(current_blood, 60)
-	consider_processing()
 	return TRUE
 
 /obj/item/organ/heart/get_availability(datum/species/S, mob/living/carbon/owner_mob)

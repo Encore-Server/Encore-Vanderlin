@@ -1,7 +1,7 @@
 
 /datum/world_faction/qadirid_traders
 	faction_name = "Qadirid"
-	desc = "Nomadic traders from the Burning Banner."
+	desc = "Nomadic traders from the harsh desert regions"
 	faction_color = "#D2691E"
 	trader_type_weights = list(
 		/datum/trader_data/exotic_merchant = 15,

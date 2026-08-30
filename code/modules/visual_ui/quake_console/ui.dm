@@ -266,7 +266,7 @@
 		message_admins(string)
 
 /datum/visual_ui/console/proc/convert_arg_type(arg, mob/sender, datum/marked)
-	switch(LOWER_TEXT(arg))
+	switch(lowertext(arg))
 		if("src")
 			return sender
 		if("marked")
@@ -285,7 +285,7 @@
 	if(path)
 		return path
 
-	switch(LOWER_TEXT(arg))
+	switch(lowertext(arg))
 		if("true", "yes", "on")
 			return TRUE
 		if("false", "no", "off")

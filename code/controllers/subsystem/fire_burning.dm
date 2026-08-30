@@ -7,9 +7,8 @@ SUBSYSTEM_DEF(fire_burning)
 	var/list/currentrun = list()
 	var/list/processing = list()
 
-/datum/controller/subsystem/fire_burning/stat_entry(msg)
-	msg = "P:[length(processing)]"
-	return ..()
+/datum/controller/subsystem/fire_burning/stat_entry()
+	..("P:[processing.len]")
 
 /datum/controller/subsystem/fire_burning/fire(resumed = 0)
 	if (!resumed)
@@ -22,8 +21,8 @@ SUBSYSTEM_DEF(fire_burning)
 	/// The longer the burn timer / stack the more intense the burn damage. Increases by  (Default: 5)
 	var/fire_intensity = 5
 
-	while(length(currentrun))
-		var/obj/O = currentrun[length(currentrun)]
+	while(currentrun.len)
+		var/obj/O = currentrun[currentrun.len]
 		currentrun.len--
 		fire_intensity = fire_intensity + CLAMP(fire_multiplier, 1, INFINITY) // 6 -> 7 -> 8 etc...
 		if (!O || QDELETED(O))

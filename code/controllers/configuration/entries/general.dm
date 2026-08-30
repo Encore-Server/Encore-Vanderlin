@@ -64,6 +64,8 @@
 
 /datum/config_entry/flag/log_virus	// log virology data
 
+/datum/config_entry/flag/log_cloning // log cloning actions.
+
 /datum/config_entry/flag/log_vote	// log voting
 
 /datum/config_entry/flag/log_whisper	// log client whisper
@@ -523,12 +525,3 @@
  */
 /datum/config_entry/number/tgui_max_chunk_count
 	default = 32
-
-/datum/config_entry/flag/auto_profile
-
-/datum/config_entry/number/profiler_interval
-	default = 300 SECONDS
-
-/datum/config_entry/flag/forbid_all_profiling
-
-/datum/config_entry/flag/forbid_admin_profiling

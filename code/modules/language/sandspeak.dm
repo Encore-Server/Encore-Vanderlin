@@ -1,7 +1,6 @@
 /datum/language/celestial
 	name = "Celestial"
-	desc = "The language of spirits, an ancient tongue spoken by those \
-	venerable beings from before recorded history."
+	desc = "The language of spirits, "
 	speech_verb = "says"
 	ask_verb = "asks"
 	exclaim_verb = "yells"
@@ -14,7 +13,7 @@
 	additional_syllable_high = -1
 	default_priority = 80
 	default_priority = 80
-	icon_state = "wyrmish"
+	icon_state = "celestial"
 	spans = list(SPAN_CELESTIAL)
 	syllables = list(
 		"ak",

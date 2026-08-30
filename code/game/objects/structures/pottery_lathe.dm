@@ -9,7 +9,7 @@
 
 /obj/item/natural/clay/set_material_information()
 	. = ..()
-	name = "[LOWER_TEXT(initial(main_material.name))] clay lump"
+	name = "[lowertext(initial(main_material.name))] clay lump"
 
 /obj/structure/pottery_lathe
 	name = "potter's lathe"

@@ -8,23 +8,9 @@
 	w_class = WEIGHT_CLASS_NORMAL
 	item_weight = 300 GRAMS
 	///How many things fit on this plate?
-	var/max_items = 3
-	///What items can be plated?
-	var/static/list/permitted_items = list(
-		/obj/item/kitchen/fork,
-		/obj/item/kitchen/spoon,
-		/obj/item/reagent_containers/food,
-		/obj/item/reagent_containers/glass/cup,
-		/obj/item/reagent_containers/glass/bowl,
-		/obj/item/reagent_containers/glass/carafe,
-		/obj/item/reagent_containers/glass/bottle,
-		/obj/item/reagent_containers/powder/spice,
-		/obj/item/reagent_containers/powder/moondust,
-		/obj/item/reagent_containers/powder/ozium,
-		/obj/item/alch/transisdust,
-	)
+	var/max_items = 2
 	///The offset from side to side the food items can have on the plate
-	var/max_x_offset = 5
+	var/max_x_offset = 4
 	///The max height offset the food can reach on the plate
 	var/max_height_offset = 5
 	///Offset of where the click is calculated from, due to how food is positioned in their DMIs.
@@ -75,7 +61,7 @@
 	if(item_flags & IN_STORAGE)
 		to_chat(user, span_warning("I cannot reach [src]."))
 		return
-	if(!is_type_in_list(I, permitted_items))
+	if(!istype(I, /obj/item/reagent_containers/food) && !istype(I, /obj/item/reagent_containers/glass/cup) && !istype(I, /obj/item/reagent_containers/glass/bowl))
 		to_chat(user, span_notice("[src] isn't made to carry that!"))
 		return
 	if(contents.len >= max_items)
@@ -89,14 +75,21 @@
 	if(user.transferItemToLoc(I, src, silent = FALSE))
 		I.pixel_x = I.base_pixel_x + clamp(text2num(LAZYACCESS(modifiers, ICON_X)) - 16, -max_x_offset, max_x_offset)
 		I.pixel_y = I.base_pixel_x + min(text2num(LAZYACCESS(modifiers, ICON_Y)) + placement_offset, max_height_offset)
-		if(istype(I, /obj/item/reagent_containers/glass/bottle) || istype(I, /obj/item/reagent_containers/glass/carafe))
-			I.pixel_y += 8
-		if(istype(I, /obj/item/reagent_containers/glass/cup/glassware/wineglass))
-			I.pixel_y += 6
 		to_chat(user, span_notice("You place [I] on [src]."))
 		AddToPlate(I, user)
 	else
 		return ..()
+
+/obj/item/plate/pre_attack(atom/A, mob/living/user, list/modifiers)
+	if(!iscarbon(A))
+		return
+	if(!contents.len)
+		return
+	if(user.used_intent.type != /datum/intent/food)
+		return
+	var/obj/item/object_to_eat = contents[1]
+	A.attackby(object_to_eat, user)
+	return TRUE //No normal attack
 
 ///This proc adds the food to viscontents and makes sure it can deregister if this changes.
 /obj/item/plate/proc/AddToPlate(obj/item/item_to_plate)
@@ -162,12 +155,13 @@
 
 /obj/item/plate/examine(mob/user)
 	. = ..()
+	desc = initial(desc)
 	if(dirty)
-		. += span_boldwarning("This platter is filthy... absolutely disgusting.")
+		desc += span_boldwarning("\nThis platter is filthy... absolutely disgusting.")
 	else if(cleaned)
-		. += span_info("This platter was cleaned recently!")
+		desc += span_notice("\nThis platter was cleaned recently!")
 	else
-		. += span_info("This platter looks clean enough.")
+		desc += "\nThis platter looks properly stored and clean enough."
 
 /obj/item/plate/clay
 	name = "clay platter"
@@ -179,7 +173,7 @@
 
 /obj/item/plate/clay/set_material_information()
 	. = ..()
-	name = "[LOWER_TEXT(initial(main_material.name))] clay platter"
+	name = "[lowertext(initial(main_material.name))] clay platter"
 
 /obj/item/plate/clay/throw_impact(atom/hit_atom, datum/thrownthing/thrownthing)
 	. = ..()

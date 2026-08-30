@@ -1,6 +1,6 @@
 /mob/living/carbon/human/species/human/northern/militia //weak peasant infantry. Neutral but can be given factions for events. doesn't attack players.
 	ai_controller = /datum/ai_controller/human_npc
-	faction = list(FACTION_NEUTRAL)
+	faction = list("neutral")
 	ambushable = FALSE
 	wander = TRUE
 	dodgetime = 30

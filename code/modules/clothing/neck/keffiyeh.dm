@@ -23,8 +23,9 @@
 	color = CLOTHING_LINEN
 	smeltresult = /obj/item/fertilizer/ash
 
+	armor = ARMOR_PADDED_BAD
 	prevent_crits = MINOR_CRITICALS
-	armor_type = /datum/armor/neck/leather/good
+	armor = ARMOR_LEATHER_GOOD
 	max_integrity = INTEGRITY_WORST
 
 /obj/item/clothing/neck/keffiyeh/AdjustClothes(mob/user)

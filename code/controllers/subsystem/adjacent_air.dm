@@ -2,13 +2,12 @@ SUBSYSTEM_DEF(adjacent_air)
 	name = "Atmos Adjacency"
 	flags = SS_BACKGROUND
 	runlevels = RUNLEVEL_GAME | RUNLEVEL_POSTGAME
-	wait = 1 SECONDS
+	wait = 10
 	priority = FIRE_PRIORITY_ATMOS_ADJACENCY
 	var/list/queue = list()
 
-/datum/controller/subsystem/adjacent_air/stat_entry(msg)
-	msg = "P:[length(queue)]"
-	return ..()
+/datum/controller/subsystem/adjacent_air/stat_entry()
+	..("P:[length(queue)]")
 
 /datum/controller/subsystem/adjacent_air/Initialize()
 	while(length(queue))
@@ -16,9 +15,10 @@ SUBSYSTEM_DEF(adjacent_air)
 	return ..()
 
 /datum/controller/subsystem/adjacent_air/fire(resumed = FALSE, mc_check = TRUE)
+
 	var/list/queue = src.queue
 
-	while(length(queue))
+	while (length(queue))
 		var/turf/currT = queue[1]
 		queue.Cut(1,2)
 

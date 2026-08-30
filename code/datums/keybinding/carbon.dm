@@ -13,7 +13,7 @@
 	description = "Toggle throwing the current item or not."
 	category = CATEGORY_CARBON
 
-/datum/keybinding/carbon/toggle_throw_mode/down(client/user, turf/target, mousepos_x, mousepos_y)
+/datum/keybinding/carbon/toggle_throw_mode/down(client/user)
 	. = ..()
 	if (!iscarbon(user.mob))
 		return FALSE
@@ -30,7 +30,7 @@
 	description = ""
 	category = CATEGORY_CARBON
 
-/datum/keybinding/carbon/intent_one/down(client/user, turf/target, mousepos_x, mousepos_y)
+/datum/keybinding/carbon/intent_one/down(client/user)
 	. = ..()
 	if (!iscarbon(user.mob))
 		return FALSE
@@ -54,7 +54,7 @@
 	description = ""
 	category = CATEGORY_CARBON
 
-/datum/keybinding/carbon/intent_two/down(client/user, turf/target, mousepos_x, mousepos_y)
+/datum/keybinding/carbon/intent_two/down(client/user)
 	. = ..()
 	if (!iscarbon(user.mob))
 		return FALSE
@@ -69,7 +69,7 @@
 	description = ""
 	category = CATEGORY_CARBON
 
-/datum/keybinding/carbon/intent_three/down(client/user, turf/target, mousepos_x, mousepos_y)
+/datum/keybinding/carbon/intent_three/down(client/user)
 	. = ..()
 	if (!iscarbon(user.mob))
 		return FALSE
@@ -84,7 +84,7 @@
 	description = ""
 	category = CATEGORY_CARBON
 
-/datum/keybinding/carbon/intent_four/down(client/user, turf/target, mousepos_x, mousepos_y)
+/datum/keybinding/carbon/intent_four/down(client/user)
 	. = ..()
 	if (!iscarbon(user.mob))
 		return FALSE
@@ -92,60 +92,21 @@
 	C.rog_intent_change(4)
 	return TRUE
 
-
-/datum/keybinding/carbon/toggle_arc_mode
-	hotkey_keys = list("ShiftG")
-	name = "toggle_arc_mode"
-	full_name = "Toggle Spell Alt Mode"
-	description = "Toggle alt mode on the currently active spell - arc mode for projectiles, ward type cycling, etc."
-	category = CATEGORY_CARBON
-
-/datum/keybinding/carbon/toggle_arc_mode/down(client/user)
-	. = ..()
-	if(!ishuman(user.mob))
-		return FALSE
-	var/mob/living/carbon/human/H = user.mob
-
-	// Check new V2 spell system first
-	var/datum/action/cooldown/spell/projectile/v2_spell = H.click_intercept
-	if(istype(v2_spell))
-		v2_spell.toggle_arc_mode(H)
-		return TRUE
-
-	// Check for generic alt mode (ward cycling, etc.)
-	var/datum/action/cooldown/spell/v2_generic = H.click_intercept
-	if(istype(v2_generic) && v2_generic.toggle_alt_mode(H))
-		return TRUE
-
-
 //****** Quad Intents ******
-
+/*
 /datum/keybinding/carbon/give_intent
 	hotkey_keys = list("G")
-	name = "Give_Item"
-	full_name = "Give item"
-	description = "Give the item you're currently holding"
+	name = "intent_give"
+	full_name = "Select Give Intent"
+	description = ""
 	category = CATEGORY_CARBON
 
-/datum/keybinding/carbon/give_intent/down(client/user, turf/target, mousepos_x, mousepos_y)
-	. = ..()
-	if(.)
-		return
-
-	if(!target)
+/datum/keybinding/carbon/give_intent/down(client/user)
+	if (!iscarbon(user.mob))
 		return FALSE
-
-	var/mob/living/living_user = user.mob
-	if(!living_user.Adjacent(target))
-		return FALSE
-
-	var/mob/living/offered = locate() in target
-	if(!offered)
-		return FALSE
-
-	living_user.give(offered)
-
-	return TRUE
+	var/mob/living/carbon/C = user.mob
+	C.mmb_intent_change(QINTENT_GIVE)
+	return TRUE*/
 
 /datum/keybinding/carbon/bite_intent
 	hotkey_keys = list("H")
@@ -154,7 +115,7 @@
 	description = ""
 	category = CATEGORY_CARBON
 
-/datum/keybinding/carbon/bite_intent/down(client/user, turf/target, mousepos_x, mousepos_y)
+/datum/keybinding/carbon/bite_intent/down(client/user)
 	. = ..()
 	if (!iscarbon(user.mob))
 		return FALSE
@@ -169,7 +130,7 @@
 	description = ""
 	category = CATEGORY_CARBON
 
-/datum/keybinding/carbon/jump_intent/down(client/user, turf/target, mousepos_x, mousepos_y)
+/datum/keybinding/carbon/jump_intent/down(client/user)
 	. = ..()
 	if (!iscarbon(user.mob))
 		return FALSE
@@ -184,7 +145,7 @@
 	description = ""
 	category = CATEGORY_CARBON
 
-/datum/keybinding/carbon/kick_intent/down(client/user, turf/target, mousepos_x, mousepos_y)
+/datum/keybinding/carbon/kick_intent/down(client/user)
 	. = ..()
 	if (!iscarbon(user.mob))
 		return FALSE
@@ -199,7 +160,7 @@
 	description = ""
 	category = CATEGORY_CARBON
 
-/datum/keybinding/carbon/steal_intent/down(client/user, turf/target, mousepos_x, mousepos_y)
+/datum/keybinding/carbon/steal_intent/down(client/user)
 	. = ..()
 	if (!iscarbon(user.mob))
 		return FALSE
@@ -216,7 +177,7 @@
 	description = "Selects the Feint RMB intent."
 	category = CATEGORY_CARBON
 
-/datum/keybinding/carbon/rmb_intent_1/down(client/user, turf/target, mousepos_x, mousepos_y)
+/datum/keybinding/carbon/rmb_intent_1/down(client/user)
 	. = ..()
 	if(!iscarbon(user.mob))
 		return FALSE
@@ -231,7 +192,7 @@
 	description = "Selects the Aimed RMB intent."
 	category = CATEGORY_CARBON
 
-/datum/keybinding/carbon/rmb_intent_2/down(client/user, turf/target, mousepos_x, mousepos_y)
+/datum/keybinding/carbon/rmb_intent_2/down(client/user)
 	. = ..()
 	if(!iscarbon(user.mob))
 		return FALSE
@@ -246,7 +207,7 @@
 	description = "Selects the Strong RMB intent."
 	category = CATEGORY_CARBON
 
-/datum/keybinding/carbon/rmb_intent_3/down(client/user, turf/target, mousepos_x, mousepos_y)
+/datum/keybinding/carbon/rmb_intent_3/down(client/user)
 	. = ..()
 	if(!iscarbon(user.mob))
 		return FALSE
@@ -261,7 +222,7 @@
 	description = "Selects the Swift RMB intent."
 	category = CATEGORY_CARBON
 
-/datum/keybinding/carbon/rmb_intent_4/down(client/user, turf/target, mousepos_x, mousepos_y)
+/datum/keybinding/carbon/rmb_intent_4/down(client/user)
 	. = ..()
 	if(!iscarbon(user.mob))
 		return FALSE
@@ -276,7 +237,7 @@
 	description = "Selects the Defend RMB intent."
 	category = CATEGORY_CARBON
 
-/datum/keybinding/carbon/rmb_intent_5/down(client/user, turf/target, mousepos_x, mousepos_y)
+/datum/keybinding/carbon/rmb_intent_5/down(client/user)
 	. = ..()
 	if(!iscarbon(user.mob))
 		return FALSE
@@ -291,7 +252,7 @@
 	description = "Selects the Weak RMB intent."
 	category = CATEGORY_CARBON
 
-/datum/keybinding/carbon/rmb_intent_6/down(client/user, turf/target, mousepos_x, mousepos_y)
+/datum/keybinding/carbon/rmb_intent_6/down(client/user)
 	. = ..()
 	if(!iscarbon(user.mob))
 		return FALSE
@@ -306,7 +267,7 @@
 	description = "Cycle through available Right Mouse Button (RMB) intents."
 	category = CATEGORY_CARBON
 
-/datum/keybinding/carbon/cycle_rmb_intent/down(client/user, turf/target, mousepos_x, mousepos_y)
+/datum/keybinding/carbon/cycle_rmb_intent/down(client/user)
 	. = ..()
 	if(!iscarbon(user.mob))
 		return FALSE
@@ -323,7 +284,7 @@
 	description = ""
 	category = CATEGORY_CARBON
 
-/datum/keybinding/carbon/select_help_intent/down(client/user, turf/target, mousepos_x, mousepos_y)
+/datum/keybinding/carbon/select_help_intent/down(client/user)
 	if(iscyborg(user.mob))
 		return FALSE
 	user.mob?.a_intent_change(INTENT_HELP)
@@ -337,7 +298,7 @@
 	description = ""
 	category = CATEGORY_CARBON
 
-/datum/keybinding/carbon/select_disarm_intent/down(client/user, turf/target, mousepos_x, mousepos_y)
+/datum/keybinding/carbon/select_disarm_intent/down(client/user)
 	user.mob?.a_intent_change(INTENT_DISARM)
 	return TRUE
 
@@ -349,7 +310,7 @@
 	description = ""
 	category = CATEGORY_CARBON
 
-/datum/keybinding/carbon/select_grab_intent/down(client/user, turf/target, mousepos_x, mousepos_y)
+/datum/keybinding/carbon/select_grab_intent/down(client/user)
 	user.mob?.a_intent_change(INTENT_GRAB)
 	return TRUE
 
@@ -361,7 +322,7 @@
 	description = ""
 	category = CATEGORY_CARBON
 
-/datum/keybinding/carbon/select_harm_intent/down(client/user, turf/target, mousepos_x, mousepos_y)
+/datum/keybinding/carbon/select_harm_intent/down(client/user)
 	if(iscyborg(user.mob))
 		return FALSE
 	user.mob?.a_intent_change(INTENT_HARM)

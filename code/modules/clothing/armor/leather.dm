@@ -15,7 +15,7 @@
 	sellprice = VALUE_LEATHER_ARMOR
 
 	armor_class = AC_LIGHT
-	armor_type = /datum/armor/leather/bad
+	armor = ARMOR_LEATHER_BAD
 	body_parts_covered = COVERAGE_TORSO
 	prevent_crits = ALL_EXCEPT_CHOP_AND_STAB
 	max_integrity = INTEGRITY_STANDARD
@@ -33,7 +33,7 @@
 	max_integrity = INTEGRITY_STRONG
 	body_parts_covered = CHEST|GROIN|VITALS|LEGS|ARMS
 	prevent_crits = ALL_EXCEPT_CHOP_AND_STAB
-	armor_type = /datum/armor/leather/advanced
+	armor = list("blunt" = 75, "slash" = 60, "stab" = 30, "piercing" = 10, "fire" = 0, "acid" = 0)
 
 
 /obj/item/clothing/armor/leather/masterwork
@@ -41,7 +41,7 @@
 	desc = "This leather armor is a craftsmanship marvel. Made with the finest leather. Strong, nimble, reliable."
 	max_integrity = INTEGRITY_STRONG + 100
 	prevent_crits = ALL_EXCEPT_STAB
-	armor_type = /datum/armor/leather/master
+	armor = list("blunt" = 100, "slash" = 70, "stab" = 40, "piercing" = 10, "fire" = 0, "acid" = 0)
 
 /obj/item/clothing/armor/leather/masterwork/Initialize()
 	. = ..()
@@ -54,7 +54,7 @@
 	icon_state = "hidearmor"
 	sellprice = VALUE_LEATHER_ARMOR_FUR
 
-	armor_type = /datum/armor/leather
+	armor = ARMOR_LEATHER
 	salvage_result = /obj/item/natural/hide/cured
 
 /obj/item/clothing/armor/leather/hide/advanced
@@ -62,14 +62,14 @@
 	desc = "A leather armor with additional thick internal padding of creacher fur. Offers higher integrity and comfort."
 	max_integrity = INTEGRITY_STRONG
 	prevent_crits = ALL_EXCEPT_CHOP_AND_STAB
-	armor_type = /datum/armor/leather/advanced
+	armor = list("blunt" = 75, "slash" = 60, "stab" = 30, "piercing" = 10, "fire" = 0, "acid" = 0)
 
 /obj/item/clothing/armor/leather/hide/masterwork
 	name = "masterwork hide armor"
 	desc = "A leather armor with a large amount of thick internal padding of the best creacher fur. Offers much higher integrity and comfort."
 	max_integrity = INTEGRITY_STRONG + 100
 	prevent_crits = ALL_EXCEPT_STAB
-	armor_type = /datum/armor/leather/master
+	armor = list("blunt" = 100, "slash" = 70, "stab" = 40, "piercing" = 10, "fire" = 0, "acid" = 0)
 
 /obj/item/clothing/armor/leather/hide/masterwork/Initialize()
 	. = ..()
@@ -81,7 +81,7 @@
 	icon_state = "hatangafur"
 	sellprice = VALUE_LEATHER_ARMOR_FUR
 
-	armor_type = /datum/armor/leather/good
+	armor = ARMOR_LEATHER_GOOD
 	body_parts_covered = COVERAGE_FULL
 	max_integrity = INTEGRITY_STRONG
 	item_weight = 4.5 KILOGRAMS
@@ -91,14 +91,14 @@
 	desc = "Worn by riders of the steppe, this stiffened leather armor is padded with thick beast fur for warmth and comfort."
 	max_integrity = INTEGRITY_STRONG
 	prevent_crits = ALL_EXCEPT_CHOP_AND_STAB
-	armor_type = /datum/armor/leather/advanced
+	armor = list("blunt" = 75, "slash" = 60, "stab" = 30, "piercing" = 10, "fire" = 0, "acid" = 0)
 
 /obj/item/clothing/armor/leather/hide/steppe/masterwork
 	name = "masterwork steppe hide armor"
 	desc = "Worn by veteran riders of the steppe, this stiffened leather armor is padded with the best, and most dangerous, thick beast fur for warmth and comfort."
 	max_integrity = INTEGRITY_STRONG + 100
 	prevent_crits = ALL_EXCEPT_STAB
-	armor_type = /datum/armor/leather/master
+	armor = list("blunt" = 100, "slash" = 70, "stab" = 40, "piercing" = 10, "fire" = 0, "acid" = 0)
 
 /obj/item/clothing/armor/leather/hide/steppe/masterwork/Initialize()
 	. = ..()
@@ -111,7 +111,7 @@
 	icon_state = "splint"
 	sellprice = VALUE_LEATHER_ARMOR_PLUS
 
-	armor_type = /datum/armor/leather/good
+	armor = ARMOR_LEATHER_GOOD
 	prevent_crits = ALL_EXCEPT_STAB
 	max_integrity = INTEGRITY_STRONG
 	item_weight = 4 KILOGRAMS
@@ -130,7 +130,7 @@
 	sleevetype = null
 	sleeved = null
 
-	armor_type = /datum/armor/leather/bad
+	armor = ARMOR_LEATHER_BAD
 	body_parts_covered = COVERAGE_VEST
 	prevent_crits = CUT_AND_MINOR_CRITS
 	salvage_result = /obj/item/natural/hide/cured
@@ -209,7 +209,7 @@
 	icon_state = "master_coat"
 	blocksound = SOFTHIT
 	slot_flags = ITEM_SLOT_ARMOR
-	armor_type = /datum/armor/maille/iron
+	armor = ARMOR_MAILLE_IRON
 	body_parts_covered = COVERAGE_ALL_BUT_LEGS
 	salvage_result = /obj/item/natural/cloth
 
@@ -218,7 +218,7 @@
 	desc = "A thick cloth padded coat specialty made for the gatemaster."
 	icon_state = "master_coat_cuirass"
 	blocksound = PLATEHIT
-	armor_type = /datum/armor/maille/good
+	armor = ARMOR_MAILLE_GOOD
 
 //................ Sea Jacket ............... //
 /obj/item/clothing/armor/leather/jacket/sea
@@ -228,7 +228,7 @@
 	icon_state = "sailorvest"
 	sleevetype = "shirt"
 
-	armor_type = /datum/armor/leather
+	armor = ARMOR_LEATHER
 	body_parts_covered = COVERAGE_VEST
 
 //................ Silk Coat ............... //
@@ -266,7 +266,7 @@
 	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_maids.dmi'
 	detail_color = CLOTHING_DARK_INK
 	slot_flags = ITEM_SLOT_ARMOR
-	armor_type = /datum/armor/padded
+	armor = ARMOR_PADDED
 	allowed_ages = ALL_AGES_LIST
 
 /obj/item/clothing/armor/leather/jacket/tailcoat/lord
@@ -290,7 +290,6 @@
 	sleeved = 'icons/roguetown/clothing/special/onmob/hand.dmi'
 	detail_tag = "_detail"
 	detail_color = CLOTHING_BERRY_BLUE
-	slot_flags = ITEM_SLOT_ARMOR|ITEM_SLOT_SHIRT|ITEM_SLOT_CLOAK
 	body_parts_covered = COVERAGE_SHIRT
 	uses_lord_coloring = LORD_PRIMARY
 
@@ -327,7 +326,7 @@
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/leathercoat.dmi'
 	sleeved = 'icons/roguetown/clothing/onmob/leathercoat.dmi'
 	boobed = TRUE
-	armor_type = /datum/armor/leather
+	armor = ARMOR_LEATHER
 	body_parts_covered = COVERAGE_ALL_BUT_LEGS
 
 /obj/item/clothing/armor/leather/jacket/leathercoat/confessor
@@ -339,7 +338,7 @@
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/armor.dmi'
 	body_parts_covered = COVERAGE_FULL
 	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_armor.dmi'
-	armor_type = /datum/armor/leather
+	armor = ARMOR_LEATHER
 	prevent_crits = list(BCLASS_CUT, BCLASS_STAB, BCLASS_BLUNT, BCLASS_CHOP, BCLASS_SMASH)
 	max_integrity = 250
 
@@ -351,7 +350,7 @@
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/leathercoat.dmi'
 	sleeved = 'icons/roguetown/clothing/onmob/leathercoat.dmi'
 	boobed = TRUE
-	armor_type = /datum/armor/leather
+	armor = ARMOR_LEATHER
 	body_parts_covered = COVERAGE_ALL_BUT_LEGS
 
 /obj/item/clothing/armor/leather/jacket/leathercoat/duelcoat
@@ -359,7 +358,7 @@
 	desc = "A stylish coat worn by the Duelists of Aelonda. Light and flexible, it doesn't impede the complex movements they are known for, Seems to be well-padded."
 	icon_state = "bwleathercoat"
 	boobed = TRUE
-	armor_type = /datum/armor/leather/good
+	armor = ARMOR_LEATHER_GOOD
 	body_parts_covered = COVERAGE_ALL_BUT_LEGS
 	prevent_crits = list(BCLASS_CUT, BCLASS_TWIST, BCLASS_STAB)
 
@@ -388,7 +387,7 @@
 	for its wearer, shielding from blows and weather alike."
 	icon_state = "roguearmor"
 	item_state = "roguearmor"
-	armor_type = /datum/armor/leather
+	armor = ARMOR_LEATHER
 	prevent_crits = ALL_EXCEPT_STAB
 	max_integrity = ARMOR_INT_CHEST_LIGHT_MASTER
 	sellprice = VALUE_LEATHER_ARMOR_PLUS
@@ -398,7 +397,7 @@
 	for its wearer, shielding from blows and weather alike. Utility pouches have been sewn into the front of it."
 	icon_state = "roguearmor_belt"
 	item_state = "roguearmor_belt"
-	armor_type = /datum/armor/leather/good
+	armor = ARMOR_LEATHER_GOOD
 	prevent_crits = list(BCLASS_CUT, BCLASS_STAB, BCLASS_BLUNT, BCLASS_CHOP, BCLASS_SMASH)
 	max_integrity = ARMOR_INT_CHEST_LIGHT_MASTER
 	sellprice = 20
@@ -412,7 +411,7 @@
 	mob_overlay_icon = 'icons/roguetown/clothing/special/onmob/gronn.dmi'
 	icon_state = "gronnleatherarmor"
 	item_state = "gronnleatherarmor"
-	armor_type = /datum/armor/leather/gronn
+	armor = ARMOR_GRONN_LIGHT
 	pocket_storage_component_path = /datum/component/storage/concrete/grid/cloak
 
 /obj/item/clothing/armor/leather/jerkin/belted/long
@@ -420,18 +419,6 @@
 	item_state = "roguearmor_coat"
 	body_parts_covered = COVERAGE_ALL_BUT_ARMS
 	sellprice = VALUE_LEATHER_ARMOR_LORD
-
-// gronnic subtype
-/obj/item/clothing/armor/leather/gronn
-	name = "nortic ravager mantle"
-	desc = "A carefully created mantle of bone and hardened leather. It offers superior protection against the threats of the wild while remaining light, \
-			A popular design in Nortmidst is to adorn a shoulder with a wolf pelt, a symbol of the Great Hunt."
-	icon = 'icons/roguetown/clothing/special/gronn.dmi'
-	mob_overlay_icon = 'icons/roguetown/clothing/special/onmob/gronn.dmi'
-	icon_state = "gronnleatherarmor"
-	item_state = "gronnleatherarmor"
-	armor_type = /datum/armor/leather/good
-	pocket_storage_component_path = /datum/component/storage/concrete/grid/cloak
 
 /obj/item/clothing/armor/leather/fencer
 	name = "fencer's jacket"
@@ -441,4 +428,4 @@
 	color = "#5E4440"
 	detail_color = "#c08955"
 	prevent_crits = ALL_EXCEPT_CHOP_AND_STAB
-	armor_type = /datum/armor/leather/advanced
+	armor = list("blunt" = 75, "slash" = 60, "stab" = 30, "piercing" = 10, "fire" = 0, "acid" = 0)

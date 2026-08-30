@@ -9,7 +9,11 @@
 	button_icon_state = "prestidigitation"
 	can_cast_on_self = TRUE
 
-	required_form = FORM_ARCANE
+	point_cost = 1
+	school = SCHOOL_TRANSMUTATION
+	attunements = list(
+		/datum/attunement/arcyne = 0.2,
+	)
 
 	cooldown_time = 1 MINUTES
 
@@ -58,12 +62,14 @@
 		var/mote_power = clamp(4 + (skill_level - 3), 4, 7) // every step above journeyman should get us 1 more tile of brightness
 		mote = new
 		mote.set_light_range(new_outer_range = mote_power)
+		if(mote.light_system == STATIC_LIGHT)
+			mote.update_light()
 
 		var/list/icon_dimensions = get_icon_dimensions(owner.icon)
 		var/orbitsize = (icon_dimensions["width"] + icon_dimensions["height"]) * 0.5
 		orbitsize -= (orbitsize/world.icon_size)*(world.icon_size*0.25)
 
-		mote.orbit(owner, orbitsize, rand(0, 1), 80, 36, TRUE)
+		mote.orbit(owner, orbitsize, pick(list(TRUE, FALSE)), 2000, 36, TRUE)
 		return TRUE
 
 	return FALSE
@@ -186,7 +192,7 @@
 	icon_state = "wisp"
 	light_outer_range =  4
 	light_color = "#3FBAFD"
-	light_system = MOVABLE_LIGHT
+	SET_BASE_PIXEL(20, 0)
 
 #undef PRESTI_CLEAN
 #undef PRESTI_GATHER

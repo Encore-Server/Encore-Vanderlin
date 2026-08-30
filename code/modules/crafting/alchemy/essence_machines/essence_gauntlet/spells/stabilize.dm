@@ -3,6 +3,8 @@
 	desc = "Prevents objects from moving or falling for a short time."
 	button_icon_state = "ravox_tug"
 	cast_range = 2
+	point_cost = 4
+	attunements = list(/datum/attunement/earth)
 	essences = list(/datum/thaumaturgical_essence/order)
 
 /datum/action/cooldown/spell/essence/stabilize/cast(atom/cast_on)

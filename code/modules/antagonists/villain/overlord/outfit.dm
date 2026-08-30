@@ -19,8 +19,7 @@
 
 	H.attributes?.add_sheet(/datum/attribute_holder/sheet/job/lich)
 
-	H.adjust_technique_mastery_points(12)
-	H.adjust_form_mastery_points(20)
+	H.adjust_spell_points(17)
 	H.grant_language(/datum/language/undead)
 	if(H.dna?.species)
 		H.dna.species.native_language = "Bonesong"

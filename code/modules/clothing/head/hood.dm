@@ -137,7 +137,7 @@
 	icon = 'icons/roguetown/clothing/head.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/head.dmi' //Overrides slot icon behavior
 	body_parts_covered = NECK
-	armor_type = /datum/armor/head/padded/bad
+	armor = ARMOR_PADDED_BAD
 	prevent_crits = list(BCLASS_CUT, BCLASS_BLUNT)
 	max_integrity = 100
 	slot_flags = ITEM_SLOT_HEAD|ITEM_SLOT_MASK
@@ -175,8 +175,8 @@
 	Protects from the eventual stabbing, but not much more."
 	icon_state = "leatherhood"
 	item_state = "leatherhood"
-	prevent_crits = MINOR_CRITICALS
-	armor_type = /datum/armor/leather
+	body_parts_covered = HEAD_EXCEPT_MOUTH | NECK
+	armor = ARMOR_LEATHER
 	blocksound = SOFTUNDERHIT
 	item_weight = 145 GRAMS
 
@@ -186,7 +186,7 @@
 	max_integrity = INTEGRITY_STRONG
 	body_parts_covered = HEAD_EXCEPT_MOUTH | NECK
 	prevent_crits = ALL_EXCEPT_CHOP_AND_STAB
-	armor_type = /datum/armor/head/leather/advanced
+	armor = list("blunt" = 70, "slash" = 60, "stab" = 35, "piercing" = 25, "fire" = 0, "acid" = 0)
 
 /obj/item/clothing/head/roguehood/leather/masterwork
 	name = "masterwork leather hood"
@@ -194,7 +194,7 @@
 	max_integrity = INTEGRITY_STRONG + 100
 	body_parts_covered = HEAD_EXCEPT_MOUTH | NECK
 	prevent_crits = ALL_EXCEPT_STAB
-	armor_type = /datum/armor/head/leather/master
+	armor = list("blunt" = 100, "slash" = 70, "stab" = 45, "piercing" = 15, "fire" = 0, "acid" = 0)
 
 /obj/item/clothing/head/roguehood/leather/masterwork/Initialize()
 	. = ..()
@@ -209,7 +209,7 @@
 	slot_flags = ITEM_SLOT_HEAD
 	flags_inv = HIDEEARS|HIDEHAIR
 	blocksound = SOFTHIT
-	armor_type = /datum/armor/leather
+	armor = ARMOR_LEATHER
 	max_integrity = ARMOR_INT_CHEST_LIGHT_MASTER
 	dynamic_hair_suffix = ""
 	edelay_type = 1

@@ -15,7 +15,6 @@ export const recipeTypeLabel = (type: string): string => {
     snack_processing: 'Processing', obtained_from: 'Source',
     source_page: 'Source', organ: 'Organ', chemical_reaction: 'Chemistry',
     distillation: 'Distillation', arcyne_crafting: 'Arcyne Crafting',
-    spellcraft: 'Spellcraft', 'spellcraft-item': 'Spellcraft Item',
   };
   return labels[type] || type;
 };
