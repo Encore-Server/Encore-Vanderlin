@@ -3482,7 +3482,13 @@
 /turf/open/floor/tile/diamond,
 /area/indoors/town/keep/garrison)
 "cFh" = (
-/turf/open/floor/church,
+/obj/effect/decal/shadow_floor{
+	dir = 4
+	},
+/obj/effect/decal/shadow_floor{
+	dir = 8
+	},
+/turf/open/floor/churchmarble,
 /area/indoors/town/church/crypt)
 "cFj" = (
 /obj/effect/decal/shadow_floor{
@@ -18056,6 +18062,20 @@
 	},
 /turf/open/floor/grass/cold,
 /area/outdoors/town/plaza)
+"mFx" = (
+/obj/structure/carpet/navy,
+/obj/structure/fluff/psycross/valdala{
+	pixel_y = 20
+	},
+/obj/item/candle/floorcandle1/lit{
+	pixel_y = 6
+	},
+/obj/machinery/light/fueled/wallfire/candle/incense{
+	pixel_y = 2;
+	pixel_x = -9
+	},
+/turf/open/floor/church/purple,
+/area/indoors/town/church/crypt)
 "mFX" = (
 /obj/effect/mapping_helpers/access/keyset/manor/general,
 /obj/effect/mapping_helpers/access/locker,
@@ -18105,9 +18125,6 @@
 /obj/structure/flora/ausbushes/fullgrass,
 /turf/open/floor/grass/healthy,
 /area/indoors/town/keep/magician)
-"mHN" = (
-/turf/open/floor/church/purple,
-/area/indoors/town/church/crypt)
 "mHU" = (
 /obj/structure/rousman_hole,
 /turf/open/floor/dirt,
@@ -18190,6 +18207,9 @@
 "mJF" = (
 /turf/open/floor/church/pale,
 /area/under/town/basement)
+"mJO" = (
+/turf/open/floor/church,
+/area/indoors/town/church/crypt)
 "mKi" = (
 /obj/structure/fluff/railing/border{
 	dir = 8
@@ -27161,13 +27181,7 @@
 /turf/open/floor/church/rust,
 /area/indoors/town/keep/garrison)
 "tlI" = (
-/obj/effect/decal/shadow_floor{
-	dir = 4
-	},
-/obj/effect/decal/shadow_floor{
-	dir = 8
-	},
-/turf/open/floor/churchmarble,
+/turf/open/floor/church/purple,
 /area/indoors/town/church/crypt)
 "tmF" = (
 /obj/structure/door/weak/bolt{
@@ -30990,14 +31004,18 @@
 	dir = 8
 	},
 /obj/structure/closet/crate/crafted_closet/inn,
-/obj/item/listeningdevice,
-/obj/item/listeningdevice,
-/obj/item/listeningdevice,
-/obj/item/listeningdevice,
 /obj/item/rope/inqarticles/inquirycord,
 /obj/item/rope/inqarticles/inquirycord,
 /obj/item/rope/inqarticles/inquirycord,
 /obj/item/rope/inqarticles/inquirycord,
+/obj/item/listeningdevice/inq,
+/obj/item/listeningdevice/inq,
+/obj/item/listeningdevice/inq,
+/obj/item/listeningdevice/inq,
+/obj/item/speaker/inq,
+/obj/item/speaker/inq,
+/obj/item/speaker/inq,
+/obj/item/speaker/inq,
 /turf/open/floor/churchrough/violet,
 /area/indoors/town/church/inquisition)
 "waq" = (
@@ -31404,20 +31422,6 @@
 /obj/structure/bed/wool,
 /turf/open/floor/ruinedwood,
 /area/indoors/town/tavern)
-"wmc" = (
-/obj/structure/carpet/navy,
-/obj/structure/fluff/psycross/valdala{
-	pixel_y = 20
-	},
-/obj/item/candle/floorcandle1/lit{
-	pixel_y = 6
-	},
-/obj/machinery/light/fueled/wallfire/candle/incense{
-	pixel_y = 2;
-	pixel_x = -9
-	},
-/turf/open/floor/church/purple,
-/area/indoors/town/church/crypt)
 "wmp" = (
 /turf/closed/wall/mineral/stone/moss/red,
 /area/under/cavewet)
@@ -39688,8 +39692,8 @@ bit
 dfJ
 bis
 abT
-mHN
-mHN
+tlI
+tlI
 abT
 bis
 dfJ
@@ -39820,8 +39824,8 @@ nqT
 crH
 crH
 oyu
-mHN
-mHN
+tlI
+tlI
 oyu
 crH
 crH
@@ -39952,8 +39956,8 @@ nqT
 crH
 crH
 oyu
-mHN
-mHN
+tlI
+tlI
 oyu
 crH
 crH
@@ -40084,8 +40088,8 @@ wGM
 iwv
 ilR
 nBV
-mHN
-mHN
+tlI
+tlI
 nBV
 etO
 iwv
@@ -40348,7 +40352,7 @@ rMV
 sfr
 hAW
 lkI
-cFh
+mJO
 nlP
 ref
 hAW
@@ -40619,8 +40623,8 @@ eEo
 eEo
 eEo
 aJr
-cFh
-cFh
+mJO
+mJO
 oyr
 oYY
 rMV
@@ -40744,15 +40748,15 @@ rMV
 woJ
 flz
 flz
-cFh
+mJO
 lez
-cFh
+mJO
 gcx
 viK
 viK
-cFh
-cFh
-cFh
+mJO
+mJO
+mJO
 oyr
 oYY
 rMV
@@ -40874,15 +40878,15 @@ bBv
 rMV
 ref
 qJa
-tlI
-tlI
-tlI
+cFh
+cFh
+cFh
 hPH
 nKV
-tlI
-tlI
-tlI
-tlI
+cFh
+cFh
+cFh
+cFh
 gFU
 uAV
 rMV
@@ -41008,14 +41012,14 @@ ref
 wNO
 kAI
 kAI
-cFh
+mJO
 nlP
-cFh
+mJO
 kAI
 kAI
 wKk
 wKk
-cFh
+mJO
 ugm
 rMV
 jdz
@@ -41146,8 +41150,8 @@ qdE
 eEo
 eEo
 wgG
-cFh
-cFh
+mJO
+mJO
 dwM
 rMV
 jdz
@@ -41278,8 +41282,8 @@ qdE
 eEo
 eEo
 umC
-cFh
-cFh
+mJO
+mJO
 emx
 rMV
 jdz
@@ -41543,7 +41547,7 @@ rMV
 rMV
 rMV
 wON
-mHN
+tlI
 abT
 bis
 kTX
@@ -41674,8 +41678,8 @@ tgV
 hns
 sXo
 abT
-mHN
-mHN
+tlI
+tlI
 oyu
 crH
 eHs
@@ -41806,8 +41810,8 @@ lYF
 cEN
 uqm
 rMV
-wmc
-mHN
+mFx
+tlI
 oyu
 crH
 eHs
@@ -41938,8 +41942,8 @@ trp
 aHk
 wQY
 abT
-mHN
-mHN
+tlI
+tlI
 nBV
 crF
 rZt
@@ -42071,7 +42075,7 @@ jqH
 dBM
 rMV
 wON
-mHN
+tlI
 rMV
 rMV
 rMV
