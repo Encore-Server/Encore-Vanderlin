@@ -408,7 +408,7 @@
 /area/outdoors/woods/etgard)
 "gp" = (
 /turf/open/floor/churchmarble,
-/area/indoors/town/church)
+/area/indoors/town/church/crypt)
 "gH" = (
 /turf/closed/mineral/random/med,
 /area/under/cavewet)
