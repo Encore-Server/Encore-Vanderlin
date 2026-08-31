@@ -76,7 +76,7 @@
 	},
 /obj/effect/mapping_helpers/access/keyset/church/inquisition,
 /obj/effect/mapping_helpers/access/locker,
-/turf/open/floor/churchrough/violet,
+/turf/open/floor/churchmarble/violet,
 /area/indoors/town/church/inquisition)
 "acJ" = (
 /turf/closed/mineral,
@@ -903,7 +903,7 @@
 	},
 /obj/effect/mapping_helpers/access/keyset/church/inquisition,
 /obj/effect/mapping_helpers/access/locker,
-/turf/open/floor/churchrough/violet,
+/turf/open/floor/churchmarble/violet,
 /area/indoors/town/church/inquisition)
 "aJr" = (
 /obj/structure/fluff/walldeco/church/line{
@@ -1133,13 +1133,16 @@
 	},
 /turf/open/floor/blocks,
 /area/outdoors/exposed)
+"aSX" = (
+/obj/effect/decal/shadow_floor{
+	dir = 1
+	},
+/turf/open/floor/churchmarble/purple,
+/area/indoors/town/church)
 "aTd" = (
-/obj/item/flashlight/flare/torch/lantern,
-/obj/item/flashlight/flare/torch/metal,
-/obj/item/flashlight/flare/torch/metal,
-/obj/item/flashlight/flare/torch/lantern,
-/obj/item/storage/backpack/satchel,
-/obj/structure/rack/shelf/biggest,
+/obj/structure/fluff/walldeco/church/line{
+	dir = 1
+	},
 /turf/open/floor/churchrough/purple,
 /area/indoors/town/church)
 "aTl" = (
@@ -1662,7 +1665,7 @@
 /obj/machinery/light/fueledstreet/orange/wall{
 	dir = 1
 	},
-/turf/open/floor/churchrough/violet,
+/turf/open/floor/churchmarble/violet,
 /area/indoors/town/church/inquisition)
 "bjm" = (
 /obj/effect/decal/cleanable/dirt,
@@ -2772,12 +2775,11 @@
 /turf/open/floor/ruinedwood/turned,
 /area/indoors/town/tavern/saiga)
 "ceU" = (
-/obj/structure/closet/crate/chest,
-/obj/item/flashlight/flare/torch/lantern,
-/obj/item/flashlight/flare/torch/lantern,
-/obj/item/flashlight/flare/torch/metal,
-/obj/item/flashlight/flare/torch/metal,
-/turf/open/floor/churchrough/purple,
+/obj/effect/decal/shadow_floor,
+/obj/effect/decal/shadow_floor{
+	dir = 1
+	},
+/turf/open/floor/churchmarble/purple,
 /area/indoors/town/church)
 "ceZ" = (
 /obj/machinery/light/fueled/torchholder/r,
@@ -3056,7 +3058,7 @@
 /obj/structure/fluff/walldeco/church/line{
 	dir = 1
 	},
-/turf/open/floor/churchrough/violet,
+/turf/open/floor/churchmarble/violet,
 /area/indoors/town/church/inquisition)
 "coQ" = (
 /obj/effect/decal/cobbleedge{
@@ -3275,7 +3277,7 @@
 "cwA" = (
 /obj/effect/mapping_helpers/access/keyset/church/general,
 /obj/structure/door/stone{
-	name = "Stock"
+	name = "Alchemy Laboratory"
 	},
 /turf/open/floor/blocks,
 /area/indoors/town/church)
@@ -4709,7 +4711,7 @@
 	},
 /obj/effect/mapping_helpers/access/keyset/church/inquisition,
 /obj/effect/mapping_helpers/access/locker,
-/turf/open/floor/churchrough/violet,
+/turf/open/floor/churchmarble/violet,
 /area/indoors/town/church/inquisition)
 "dAc" = (
 /obj/structure/fluff/railing/wood{
@@ -5332,18 +5334,9 @@
 /turf/open/floor/ruinedwood,
 /area/under/cavewet)
 "dVW" = (
-/obj/structure/closet/crate/chest/neu,
-/obj/item/natural/bundle/stick{
-	amount = 10
-	},
-/obj/item/natural/bundle/stick{
-	amount = 10
-	},
-/obj/item/natural/bundle/stick{
-	amount = 10
-	},
-/obj/item/natural/bundle/stick{
-	amount = 10
+/obj/machinery/essence/research_matrix,
+/obj/structure/fluff/walldeco/church/line{
+	dir = 4
 	},
 /turf/open/floor/churchrough/purple,
 /area/indoors/town/church)
@@ -5813,6 +5806,9 @@
 /obj/structure/closet/crate/crafted_closet,
 /obj/item/clothing/shirt/undershirt/priest,
 /obj/item/clothing/shirt/robe/priest,
+/obj/structure/fake_machine/mail{
+	mailtag = "Priest"
+	},
 /turf/open/floor/ruinedwood/chevron,
 /area/indoors/town/church)
 "eps" = (
@@ -5973,7 +5969,15 @@
 /turf/closed/mineral,
 /area/indoors/town/church/crypt)
 "etG" = (
-/obj/structure/carpet,
+/obj/structure/carpet/purple,
+/obj/structure/fluff/psycross/erdl{
+	pixel_y = 22;
+	density = 0
+	},
+/obj/machinery/light/fueled/wallfire/candle/incense{
+	pixel_y = 10;
+	pixel_x = 9
+	},
 /turf/open/floor/ruinedwood/chevron,
 /area/indoors/town/clinic_large)
 "etO" = (
@@ -6480,7 +6484,7 @@
 /obj/machinery/light/fueledstreet/orange/wall{
 	dir = 4
 	},
-/turf/open/floor/churchrough/violet,
+/turf/open/floor/churchmarble/violet,
 /area/indoors/town/church/inquisition)
 "eLI" = (
 /obj/effect/waterfall{
@@ -7005,7 +7009,7 @@
 	dir = 1
 	},
 /obj/machinery/light/fueledstreet/orange/wall,
-/turf/open/floor/churchrough/violet,
+/turf/open/floor/churchmarble/violet,
 /area/indoors/town/church/inquisition)
 "feA" = (
 /obj/structure/carpet/blue,
@@ -7044,7 +7048,7 @@
 	pixel_y = 32
 	},
 /obj/effect/landmark/start/puritan,
-/turf/open/floor/churchrough/violet,
+/turf/open/floor/churchmarble/violet,
 /area/indoors/town/church/inquisition)
 "ffK" = (
 /obj/structure/plough,
@@ -9151,7 +9155,7 @@
 /obj/structure/fluff/walldeco/church/line{
 	dir = 4
 	},
-/turf/open/floor/churchrough/violet,
+/turf/open/floor/churchmarble/violet,
 /area/indoors/town/church/inquisition)
 "gHr" = (
 /obj/structure/fluff/railing/border{
@@ -9731,28 +9735,21 @@
 /turf/open/floor/ruinedwood,
 /area/under/town/basement/smugglers_den)
 "hbm" = (
-/obj/structure/closet/crate/chest/crate,
-/obj/item/natural/bundle/cloth{
-	pixel_x = 5;
-	amount = 10
+/obj/machinery/essence/splitter{
+	pixel_y = 4
 	},
-/obj/item/natural/bundle/cloth{
-	pixel_x = 5;
-	amount = 10
+/obj/structure/table/wood/large_new{
+	dir = 10;
+	icon_state = "alt_largetable"
 	},
-/obj/item/natural/bundle/cloth{
-	pixel_x = 5;
-	amount = 10
+/obj/structure/table/wood/large_new{
+	dir = 2;
+	icon_state = "alt_largetable"
 	},
-/obj/item/natural/bundle/cloth{
-	pixel_x = 5;
-	amount = 10
+/obj/structure/fluff/walldeco/church/line,
+/obj/structure/fluff/walldeco/church/line{
+	dir = 8
 	},
-/obj/item/needle,
-/obj/item/needle,
-/obj/item/needle,
-/obj/item/needle,
-/obj/item/reagent_containers/powder/ozium,
 /turf/open/floor/churchrough/purple,
 /area/indoors/town/church)
 "hbA" = (
@@ -9900,7 +9897,7 @@
 /obj/structure/fluff/walldeco/church/line{
 	dir = 4
 	},
-/turf/open/floor/churchrough/violet,
+/turf/open/floor/churchmarble/violet,
 /area/indoors/town/church/inquisition)
 "hgc" = (
 /obj/structure/bars,
@@ -9988,7 +9985,9 @@
 /area/indoors/town/shop)
 "hkK" = (
 /obj/structure/table/church,
-/obj/item/candle/yellow,
+/obj/item/candle/floorcandle0/lit{
+	pixel_y = 3
+	},
 /turf/open/floor/church,
 /area/indoors/town/church/chapel)
 "hll" = (
@@ -10121,11 +10120,14 @@
 /turf/open/water/river,
 /area/outdoors/town/neighborhood/east)
 "hne" = (
-/obj/machinery/light/fueledstreet/orange/wall{
-	dir = 1
+/obj/effect/decal/shadow_floor{
+	dir = 4
 	},
-/turf/open/floor/church,
-/area/indoors/town/church/inquisition)
+/obj/effect/decal/shadow_floor{
+	dir = 8
+	},
+/turf/open/floor/churchmarble/purple,
+/area/indoors/town/church)
 "hns" = (
 /obj/structure/fake_machine/scomm/l,
 /turf/open/floor/ruinedwood/turned/darker,
@@ -10259,7 +10261,7 @@
 	dir = 1
 	},
 /obj/structure/fake_machine/scomm/r,
-/turf/open/floor/churchrough/violet,
+/turf/open/floor/churchmarble/violet,
 /area/indoors/town/church/inquisition)
 "htS" = (
 /obj/structure/fluff/railing/wood{
@@ -11516,7 +11518,7 @@
 /obj/structure/fluff/walldeco/church/line{
 	dir = 4
 	},
-/turf/open/floor/churchrough/violet,
+/turf/open/floor/churchmarble/violet,
 /area/indoors/town/church/inquisition)
 "ihS" = (
 /obj/effect/decal/cobbleedge{
@@ -12595,7 +12597,7 @@
 	},
 /obj/effect/mapping_helpers/access/keyset/church/inquisition,
 /obj/effect/mapping_helpers/access/locker,
-/turf/open/floor/churchrough/violet,
+/turf/open/floor/churchmarble/violet,
 /area/indoors/town/church/inquisition)
 "iRv" = (
 /obj/structure/fluff/railing/wood{
@@ -13121,6 +13123,21 @@
 /obj/structure/fluff/walldeco/chains,
 /turf/open/floor/churchbrick,
 /area/indoors/town/keep/magician/basement)
+"jhP" = (
+/obj/structure/table/wood/large_new{
+	dir = 10;
+	icon_state = "alt_largetable"
+	},
+/obj/structure/table/wood/large_new{
+	dir = 2;
+	icon_state = "alt_largetable"
+	},
+/obj/machinery/essence/reservoir{
+	pixel_y = 10
+	},
+/obj/structure/fluff/walldeco/church/line,
+/turf/open/floor/churchrough/purple,
+/area/indoors/town/church)
 "jhR" = (
 /turf/open/floor/church,
 /area/indoors/town/keep/kitchen)
@@ -13843,7 +13860,7 @@
 	name = "Bath"
 	},
 /obj/effect/mapping_helpers/access/keyset/church/inquisition,
-/turf/open/floor/churchrough/violet,
+/turf/open/floor/churchmarble/violet,
 /area/indoors/town/church/inquisition)
 "jGW" = (
 /obj/structure/table/wood{
@@ -13948,9 +13965,7 @@
 /turf/open/floor/carpet/red,
 /area/indoors/town/merc_guild)
 "jLx" = (
-/obj/machinery/light/fueledstreet/orange/wall{
-	dir = 4
-	},
+/obj/machinery/light/fueled/torchholder/metal_torch/east,
 /turf/open/floor/churchmarble,
 /area/indoors/town/church/inquisition)
 "jLP" = (
@@ -14357,7 +14372,7 @@
 /obj/structure/door/stone{
 	name = "Church"
 	},
-/turf/open/floor/churchrough/purple,
+/turf/open/floor/blocks,
 /area/indoors/town/church)
 "kaI" = (
 /obj/structure/stairs{
@@ -14860,7 +14875,9 @@
 /turf/open/floor/churchrough,
 /area/indoors/town/church)
 "kpC" = (
-/obj/machinery/light/fueledstreet/orange/wall,
+/obj/machinery/light/fueled/torchholder/metal_torch{
+	pixel_y = 32
+	},
 /turf/open/floor/churchmarble,
 /area/indoors/town/church/inquisition)
 "kpJ" = (
@@ -15481,6 +15498,22 @@
 "kOs" = (
 /turf/closed/wall/mineral/wood,
 /area/indoors/town/garrison)
+"kOK" = (
+/obj/item/rope/chain,
+/obj/item/rope/chain,
+/obj/item/rope/chain,
+/obj/item/rope/chain,
+/obj/item/rope/chain,
+/obj/item/rope/chain,
+/obj/item/rope,
+/obj/item/rope,
+/obj/item/rope,
+/obj/item/rope,
+/obj/item/rope,
+/obj/item/rope,
+/obj/structure/closet/crate/chest/neu,
+/turf/open/floor/church,
+/area/indoors/town/church)
 "kOL" = (
 /obj/structure/fluff/railing/tall/retaining{
 	dir = 1
@@ -15560,7 +15593,7 @@
 	name = "katholikon banner";
 	desc = "A proud banner demarking the territory of the Katholikon's Inquisition. Silver for purity of faith, red for the blood of the faithful."
 	},
-/turf/open/floor/churchrough/violet,
+/turf/open/floor/churchmarble/violet,
 /area/indoors/town/church/inquisition)
 "kRB" = (
 /obj/machinery/light/fueledstreet/orange/wall{
@@ -15793,7 +15826,7 @@
 /obj/structure/fluff/walldeco/church/line{
 	dir = 8
 	},
-/turf/open/floor/churchrough/violet,
+/turf/open/floor/churchmarble/violet,
 /area/indoors/town/church/inquisition)
 "lcw" = (
 /obj/item/reagent_containers/glass/bucket/wooden,
@@ -15805,7 +15838,7 @@
 	},
 /obj/effect/mapping_helpers/access/keyset/church/inquisition,
 /obj/effect/mapping_helpers/access/locker,
-/turf/open/floor/churchrough/violet,
+/turf/open/floor/churchmarble/violet,
 /area/indoors/town/church/inquisition)
 "lcS" = (
 /turf/open/water/ocean,
@@ -15989,6 +16022,13 @@
 /obj/item/reagent_containers/glass/bucket/wooden,
 /obj/item/soap,
 /obj/item/natural/cloth,
+/obj/item/clothing/gloves/leather/phys,
+/obj/item/clothing/cloak/apron/cook{
+	name = "barber's apron"
+	},
+/obj/item/clothing/face/shepherd/clothmask,
+/obj/item/clothing/face/phys,
+/obj/item/storage/backpack/satchel/surgbag/shit,
 /turf/open/floor/ruinedwood,
 /area/indoors/town/church)
 "lmU" = (
@@ -16318,10 +16358,8 @@
 /turf/open/openspace,
 /area/indoors/town/keep/heir/heir1)
 "lAp" = (
-/obj/structure/closet/crate/drawer,
-/obj/item/reagent_containers/glass/cup/silver,
-/obj/item/key/graveyard,
-/turf/open/floor/church,
+/obj/effect/decal/shadow_floor,
+/turf/open/floor/churchmarble/purple,
 /area/indoors/town/church)
 "lAA" = (
 /obj/structure/window/openclose/reinforced{
@@ -16812,7 +16850,7 @@
 /obj/structure/fluff/walldeco/church/line{
 	dir = 1
 	},
-/turf/open/floor/churchrough/violet,
+/turf/open/floor/churchmarble/violet,
 /area/indoors/town/church/inquisition)
 "lOM" = (
 /obj/structure/fluff/walldeco/vinez,
@@ -16876,7 +16914,7 @@
 /obj/machinery/light/fueledstreet/orange/wall{
 	dir = 1
 	},
-/turf/open/floor/churchrough/violet,
+/turf/open/floor/churchmarble/violet,
 /area/indoors/town/church/inquisition)
 "lQO" = (
 /obj/effect/decal/cleanable/dirt/dust,
@@ -17034,7 +17072,7 @@
 /obj/machinery/light/fueledstreet/orange/wall{
 	dir = 8
 	},
-/turf/open/floor/churchrough/violet,
+/turf/open/floor/churchmarble/violet,
 /area/indoors/town/church/inquisition)
 "lWk" = (
 /obj/structure/table/wood/reinf_long,
@@ -17968,7 +18006,7 @@
 	name = "Equipment Storage"
 	},
 /obj/effect/mapping_helpers/access/keyset/church/inquisition,
-/turf/open/floor/churchrough/violet,
+/turf/open/floor/churchmarble/violet,
 /area/indoors/town/church/inquisition)
 "mws" = (
 /obj/structure/carpet/green,
@@ -18294,10 +18332,15 @@
 /turf/open/floor/ruinedwood/chevron,
 /area/indoors/town/keep/magician)
 "mJd" = (
-/obj/structure/flora/ausbushes/sparsegrass,
-/obj/item/natural/stone,
-/turf/open/floor/dirt/road,
-/area/indoors/town/waterworks)
+/obj/effect/decal/shadow_floor{
+	dir = 4
+	},
+/obj/effect/decal/shadow_floor{
+	dir = 8
+	},
+/obj/effect/decal/shadow_floor,
+/turf/open/floor/churchmarble/purple,
+/area/indoors/town/church)
 "mJe" = (
 /obj/machinery/light/fueled/wallfire/candle{
 	pixel_x = -32;
@@ -18390,7 +18433,24 @@
 /turf/open/floor/cobble,
 /area/indoors/town/keep/kitchen/cellar)
 "mLo" = (
-/obj/structure/closet/crate/chest/neu_iron,
+/obj/structure/closet/crate/chest/neu,
+/obj/item/natural/bundle/stick{
+	amount = 10
+	},
+/obj/item/natural/bundle/stick{
+	amount = 10
+	},
+/obj/item/natural/bundle/stick{
+	amount = 10
+	},
+/obj/item/natural/bundle/stick{
+	amount = 10
+	},
+/obj/item/flashlight/flare/torch/lantern,
+/obj/item/flashlight/flare/torch/lantern,
+/obj/item/flashlight/flare/torch/lantern,
+/obj/item/flashlight/flare/torch/lantern,
+/obj/machinery/light/fueled/torchholder/r,
 /turf/open/floor/tile/checkeralt,
 /area/indoors/town/church)
 "mLE" = (
@@ -18536,7 +18596,7 @@
 	dir = 8
 	},
 /obj/structure/fluff/walldeco/church/line,
-/turf/open/floor/churchrough/violet,
+/turf/open/floor/churchmarble/violet,
 /area/indoors/town/church/inquisition)
 "mPs" = (
 /obj/structure/chair/wood{
@@ -18699,11 +18759,9 @@
 /turf/open/floor/ruinedwood/turned,
 /area/indoors/town/keep/garrison)
 "mWG" = (
-/obj/structure/ladder,
-/obj/structure/fluff/railing/wood{
-	dir = 8
-	},
-/turf/open/floor/ruinedwood,
+/obj/machinery/light/fueled/hearth,
+/obj/item/reagent_containers/glass/bucket/pot,
+/turf/open/floor/churchrough/purple,
 /area/indoors/town/church)
 "mWI" = (
 /obj/item/reagent_containers/glass/cup/wooden,
@@ -19991,9 +20049,18 @@
 /turf/open/floor/ruinedwood/alt,
 /area/outdoors/town)
 "nSQ" = (
-/obj/structure/fake_machine/mail{
-	mailtag = "Priest"
+/obj/machinery/essence/extractor{
+	pixel_y = 4
 	},
+/obj/structure/table/wood/large_new{
+	dir = 6;
+	icon_state = "alt_largetable"
+	},
+/obj/structure/table/wood/large_new{
+	dir = 2;
+	icon_state = "alt_largetable"
+	},
+/obj/structure/fluff/walldeco/church/line,
 /turf/open/floor/churchrough/purple,
 /area/indoors/town/church)
 "nTr" = (
@@ -20926,7 +20993,7 @@
 /obj/structure/fluff/walldeco/church/line{
 	dir = 4
 	},
-/turf/open/floor/churchrough/violet,
+/turf/open/floor/churchmarble/violet,
 /area/indoors/town/church/inquisition)
 "oBR" = (
 /obj/machinery/light/fueled/wallfire{
@@ -21725,7 +21792,7 @@
 	},
 /obj/effect/mapping_helpers/access/keyset/church/inquisition,
 /obj/effect/mapping_helpers/access/locker,
-/turf/open/floor/churchrough/violet,
+/turf/open/floor/churchmarble/violet,
 /area/indoors/town/church/inquisition)
 "pfz" = (
 /obj/machinery/light/fueled/torchholder/l,
@@ -22546,9 +22613,7 @@
 /turf/open/floor/ruinedwood/turned,
 /area/under/town/basement/smugglers_den)
 "pIz" = (
-/obj/machinery/light/fueledstreet/orange/wall{
-	dir = 8
-	},
+/obj/machinery/light/fueled/torchholder/metal_torch/west,
 /turf/open/floor/churchmarble,
 /area/indoors/town/church/inquisition)
 "pIB" = (
@@ -23468,6 +23533,16 @@
 /obj/effect/landmark/observer_start,
 /turf/open/floor/church/purple,
 /area/indoors/town/church/chapel)
+"qpi" = (
+/obj/effect/decal/shadow_floor{
+	dir = 8
+	},
+/obj/effect/decal/shadow_floor,
+/obj/effect/decal/shadow_floor{
+	dir = 1
+	},
+/turf/open/floor/churchmarble/purple,
+/area/indoors/town/church)
 "qpv" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/blocks/stonered,
@@ -23680,6 +23755,13 @@
 	},
 /turf/open/floor/blocks/stonered/tiny,
 /area/indoors/shelter/town)
+"qvu" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/structure/fluff/walldeco/feldshersign{
+	layer = 4.21
+	},
+/turf/open/floor/ruinedwood/chevron,
+/area/indoors/town/clinic_large)
 "qvJ" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/ruinedwood,
@@ -23861,6 +23943,38 @@
 	},
 /turf/open/floor/ruinedwood/spiral,
 /area/indoors/town/keep/magician)
+"qCu" = (
+/obj/structure/fluff/walldeco/church/line{
+	dir = 1
+	},
+/obj/structure/fluff/walldeco/church/line{
+	dir = 4
+	},
+/obj/structure/closet/crate/chest/neu,
+/obj/item/alch/airdust,
+/obj/item/alch/airdust,
+/obj/item/alch/earthdust,
+/obj/item/alch/earthdust,
+/obj/item/alch/firedust,
+/obj/item/alch/firedust,
+/obj/item/alch/waterdust,
+/obj/item/alch/waterdust,
+/obj/item/alch/magicdust,
+/obj/item/alch/magicdust,
+/obj/effect/spawner/map_spawner/loot/potion_ingredient/herb,
+/obj/effect/spawner/map_spawner/loot/potion_ingredient/herb,
+/obj/effect/spawner/map_spawner/loot/potion_ingredient/herb,
+/obj/effect/spawner/map_spawner/loot/potion_ingredient/herb,
+/obj/effect/spawner/map_spawner/loot/potion_ingredient/herb,
+/obj/effect/spawner/map_spawner/loot/potion_ingredient,
+/obj/effect/spawner/map_spawner/loot/potion_ingredient,
+/obj/effect/spawner/map_spawner/loot/potion_ingredient,
+/obj/effect/spawner/map_spawner/loot/potion_ingredient,
+/obj/effect/spawner/map_spawner/loot/potion_ingredient,
+/obj/item/reagent_containers/food/snacks/produce/poppy,
+/obj/item/reagent_containers/food/snacks/produce/poppy,
+/turf/open/floor/churchrough/purple,
+/area/indoors/town/church)
 "qCE" = (
 /obj/structure/handcart,
 /turf/open/floor/naturalstone,
@@ -24270,7 +24384,7 @@
 /obj/structure/fluff/walldeco/church/line{
 	dir = 8
 	},
-/turf/open/floor/churchrough/violet,
+/turf/open/floor/churchmarble/violet,
 /area/indoors/town/church/inquisition)
 "qRn" = (
 /obj/structure/fluff/railing/border{
@@ -24625,7 +24739,7 @@
 	name = "Retinue Quarters"
 	},
 /obj/effect/mapping_helpers/access/keyset/church/inquisition,
-/turf/open/floor/churchrough/violet,
+/turf/open/floor/churchmarble/violet,
 /area/indoors/town/church/inquisition)
 "riw" = (
 /obj/structure/fluff/steamvent,
@@ -25259,14 +25373,21 @@
 /turf/open/floor/snow,
 /area/outdoors/town/plaza)
 "rJQ" = (
-/obj/structure/closet/crate/chest,
-/obj/item/rope/chain,
-/obj/item/rope/chain,
-/obj/item/rope/chain,
-/obj/item/rope,
-/obj/item/rope,
-/obj/item/rope,
-/obj/machinery/light/fueled/torchholder/l,
+/obj/structure/table/wood/large_new{
+	dir = 6;
+	icon_state = "alt_largetable"
+	},
+/obj/structure/table/wood/large_new{
+	dir = 2;
+	icon_state = "alt_largetable"
+	},
+/obj/machinery/essence/reservoir{
+	pixel_y = 10
+	},
+/obj/structure/fluff/walldeco/church/line,
+/obj/structure/fluff/walldeco/church/line{
+	dir = 4
+	},
 /turf/open/floor/churchrough/purple,
 /area/indoors/town/church)
 "rJU" = (
@@ -25456,7 +25577,7 @@
 "rRO" = (
 /obj/structure/stairs/stone,
 /obj/structure/door/swing,
-/turf/open/floor/church,
+/turf/open/floor/churchmarble/violet,
 /area/indoors/town/church/inquisition)
 "rRX" = (
 /obj/machinery/light/fueledstreet/orange/wall,
@@ -25744,7 +25865,7 @@
 	dir = 1
 	},
 /obj/structure/fluff/walldeco/church/line,
-/turf/open/floor/churchrough/violet,
+/turf/open/floor/churchmarble/violet,
 /area/indoors/town/church/inquisition)
 "seY" = (
 /obj/effect/decal/borderfall{
@@ -26794,7 +26915,7 @@
 /obj/structure/fake_machine/mail{
 	mailtag = "Inquisition Storage Room"
 	},
-/turf/open/floor/churchrough/violet,
+/turf/open/floor/churchmarble/violet,
 /area/indoors/town/church/inquisition)
 "sSH" = (
 /obj/effect/decal/cobbleedge{
@@ -27356,6 +27477,19 @@
 /obj/machinery/light/fueled/firebowl/stump,
 /turf/open/floor/grass/yel,
 /area/outdoors/town/neighborhood/east)
+"tlp" = (
+/obj/effect/decal/shadow_floor{
+	dir = 4
+	},
+/obj/effect/decal/shadow_floor,
+/obj/effect/decal/shadow_floor{
+	dir = 1
+	},
+/obj/machinery/light/fueled/torchholder/r{
+	dir = 4
+	},
+/turf/open/floor/churchmarble/purple,
+/area/indoors/town/church)
 "tlA" = (
 /obj/structure/chair/stool,
 /turf/open/floor/church/rust,
@@ -27390,10 +27524,12 @@
 /turf/open/floor/dirt/road,
 /area/outdoors/town/neighborhood/west)
 "tnP" = (
-/obj/structure/fluff/walldeco/feldshersign,
-/obj/structure/carpet,
-/turf/open/floor/ruinedwood/chevron,
-/area/indoors/town/clinic_large)
+/obj/machinery/light/fueled/cauldron,
+/obj/structure/fluff/walldeco/church/line{
+	dir = 1
+	},
+/turf/open/floor/churchrough/purple,
+/area/indoors/town/church)
 "tnQ" = (
 /obj/machinery/light/fueled/wallfire/candle/blue/r,
 /obj/structure/toilet,
@@ -27543,7 +27679,7 @@
 	},
 /obj/effect/mapping_helpers/access/keyset/church/inquisition,
 /obj/effect/mapping_helpers/access/locker,
-/turf/open/floor/churchrough/violet,
+/turf/open/floor/churchmarble/violet,
 /area/indoors/town/church/inquisition)
 "ttj" = (
 /obj/effect/decal/carpet/square,
@@ -28119,7 +28255,7 @@
 	},
 /obj/effect/mapping_helpers/access/keyset/church/inquisition,
 /obj/effect/mapping_helpers/access/locker,
-/turf/open/floor/churchrough/violet,
+/turf/open/floor/churchmarble/violet,
 /area/indoors/town/church/inquisition)
 "tMd" = (
 /obj/item/weapon/hoe/stone,
@@ -30171,6 +30307,9 @@
 /area/under/town/basement)
 "vlV" = (
 /obj/machinery/light/fueled/torchholder/r,
+/obj/structure/closet/crate/drawer,
+/obj/item/reagent_containers/glass/cup/silver,
+/obj/item/key/graveyard,
 /turf/open/floor/church,
 /area/indoors/town/church)
 "vlX" = (
@@ -30950,7 +31089,24 @@
 /turf/open/floor/cobble,
 /area/indoors/town/tavern/saiga)
 "vNF" = (
-/obj/item/bin/water,
+/obj/structure/fluff/walldeco/church/line{
+	dir = 8
+	},
+/obj/structure/closet/crate/chest/neu,
+/obj/item/essence_connector,
+/obj/item/essence_vial,
+/obj/item/essence_vial,
+/obj/item/essence_vial,
+/obj/item/essence_vial,
+/obj/item/essence_vial,
+/obj/item/reagent_containers/glass/mortar,
+/obj/item/pestle,
+/obj/item/natural/bundle/stick{
+	amount = 10
+	},
+/obj/item/natural/bundle/stick{
+	amount = 10
+	},
 /turf/open/floor/churchrough/purple,
 /area/indoors/town/church)
 "vNV" = (
@@ -30990,7 +31146,7 @@
 /turf/open/floor/grass/cold,
 /area/outdoors/town/plaza)
 "vPS" = (
-/turf/open/floor/churchrough/violet,
+/turf/open/floor/churchmarble/violet,
 /area/indoors/town/church/inquisition)
 "vPW" = (
 /obj/structure/fluff/railing/border{
@@ -31739,7 +31895,35 @@
 /turf/open/floor/tile,
 /area/indoors/town/keep/kitchen)
 "wqk" = (
-/obj/machinery/tanningrack,
+/obj/item/natural/bundle/cloth{
+	pixel_x = 5;
+	amount = 10
+	},
+/obj/item/natural/bundle/cloth{
+	pixel_x = 5;
+	amount = 10
+	},
+/obj/item/natural/bundle/cloth{
+	pixel_x = 5;
+	amount = 10
+	},
+/obj/item/natural/bundle/cloth{
+	pixel_x = 5;
+	amount = 10
+	},
+/obj/item/needle,
+/obj/item/needle,
+/obj/item/needle,
+/obj/item/needle,
+/obj/item/reagent_containers/powder/ozium,
+/obj/structure/fluff/walldeco/church/line{
+	dir = 1
+	},
+/obj/structure/fluff/walldeco/church/line{
+	dir = 8
+	},
+/obj/structure/closet/crate/chest/neu,
+/obj/machinery/light/fueled/torchholder/r,
 /turf/open/floor/churchrough/purple,
 /area/indoors/town/church)
 "wql" = (
@@ -32353,10 +32537,10 @@
 /turf/open/openspace,
 /area/indoors/town/tavern/saiga)
 "wPa" = (
-/obj/item/candle/yellow,
 /obj/structure/table/church{
 	dir = 1
 	},
+/obj/item/candle/floorcandle1/lit,
 /turf/open/floor/church,
 /area/indoors/town/church/chapel)
 "wPx" = (
@@ -32398,7 +32582,7 @@
 /area/indoors/town/steward)
 "wRO" = (
 /obj/structure/door/stone{
-	name = "Stock"
+	name = "Alchemy Laboratory"
 	},
 /obj/effect/mapping_helpers/access/keyset/church/general,
 /turf/open/floor/blocks,
@@ -32544,7 +32728,7 @@
 	},
 /obj/structure/fluff/walldeco/church/line,
 /obj/structure/fake_machine/scomm/l,
-/turf/open/floor/churchrough/violet,
+/turf/open/floor/churchmarble/violet,
 /area/indoors/town/church/inquisition)
 "wWt" = (
 /obj/structure/rack/shelf/big{
@@ -40958,7 +41142,7 @@ vBb
 icE
 rgh
 cGo
-hne
+vLc
 icE
 uzd
 rqi
@@ -56246,12 +56430,12 @@ kqx
 awb
 kgF
 uGC
-mcA
-mcA
-mcA
-eaE
-mJd
-mcA
+hye
+hye
+hye
+hye
+hye
+hye
 eaE
 eaE
 mcA
@@ -56379,10 +56563,10 @@ srz
 kqx
 uGC
 hye
-hye
-hye
-hye
-hye
+jhP
+tlp
+tnP
+mWG
 hye
 hye
 hye
@@ -56514,7 +56698,7 @@ hye
 rJQ
 ceU
 aTd
-rJQ
+sSS
 hye
 iAQ
 iAQ
@@ -56643,9 +56827,9 @@ iyf
 dXP
 lsG
 kaB
-sSS
-sSS
-sSS
+mJd
+aSX
+qCu
 dVW
 hye
 bqt
@@ -56776,9 +56960,9 @@ hye
 hye
 hye
 hbm
-sSS
-sSS
-sSS
+lAp
+hne
+hne
 cwA
 jfL
 jfL
@@ -56908,7 +57092,7 @@ gVU
 dYd
 hye
 nSQ
-sSS
+qpi
 wqk
 vNF
 hye
@@ -58491,7 +58675,7 @@ hye
 hye
 inL
 hye
-xiw
+kOK
 bAJ
 xiw
 hye
@@ -58757,7 +58941,7 @@ hye
 hye
 wZh
 vlV
-lAp
+xiw
 oeo
 hye
 mJh
@@ -66535,7 +66719,7 @@ tDS
 veQ
 hTe
 xyj
-cCg
+jgF
 fSl
 rcS
 wLE
@@ -69448,7 +69632,7 @@ aJX
 aJX
 aJX
 hye
-mWG
+nAN
 fXe
 hye
 hye
@@ -78009,7 +78193,7 @@ oOc
 jwV
 jwV
 jwV
-oOc
+buR
 lEX
 uIA
 xtQ
@@ -78274,7 +78458,7 @@ jyx
 gGa
 cHy
 buR
-nWI
+qvu
 wSd
 nNI
 xtQ
@@ -78405,8 +78589,8 @@ oOc
 tgS
 wJs
 hCR
-xtQ
-tnP
+aGB
+hcs
 wSd
 jnU
 oOc
@@ -78537,7 +78721,7 @@ hbc
 gGa
 gGa
 cHy
-aGB
+xtQ
 etG
 hcs
 hcs
@@ -78801,7 +78985,7 @@ buR
 xtQ
 vMr
 buR
-oOc
+buR
 nIO
 uIA
 oOc
