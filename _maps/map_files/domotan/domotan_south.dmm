@@ -250,6 +250,7 @@
 /obj/effect/mapping_helpers/access/keyset/other/bogwitch,
 /obj/item/reagent_containers/lux,
 /obj/effect/mapping_helpers/access/locker,
+/obj/item/reagent_containers/lux_tainted,
 /turf/open/floor/hexstone,
 /area/indoors/shelter/bog/witch)
 "bf" = (
@@ -1143,9 +1144,9 @@
 /area/indoors/shelter/bog)
 "fe" = (
 /obj/structure/closet/dirthole/closed,
-/obj/effect/mapping_helpers/structure/grave_spawner/great_hunt,
+/obj/effect/mapping_helpers/structure/grave_spawner/t2/great_hunt,
 /turf/open/floor/dirt,
-/area/under/cavewet)
+/area/indoors/shelter/bog)
 "ff" = (
 /obj/structure/fermentation_keg,
 /turf/open/floor/greenstone,
@@ -1727,9 +1728,9 @@
 /area/indoors/shelter/woods)
 "ic" = (
 /obj/structure/closet/dirthole/closed,
-/obj/effect/mapping_helpers/structure/grave_spawner/t2/great_hunt,
+/obj/effect/mapping_helpers/structure/grave_spawner/great_hunt,
 /turf/open/floor/dirt,
-/area/under/cavewet)
+/area/indoors/shelter/bog)
 "id" = (
 /obj/effect/decal/cobbleedge{
 	icon_state = "mossyedge-e"
@@ -1979,6 +1980,7 @@
 /area/under/cave)
 "jm" = (
 /obj/structure/closet/dirthole/closed,
+/obj/effect/mapping_helpers/structure/grave_spawner/angros,
 /turf/open/floor/dirt,
 /area/outdoors/woods/crossroads)
 "jn" = (
@@ -4001,7 +4003,7 @@
 "sS" = (
 /obj/structure/fluff/walldeco/vinez,
 /turf/closed/mineral/moss,
-/area/under/cavewet)
+/area/indoors/shelter/bog)
 "sT" = (
 /obj/structure/fluff/traveltile{
 	aportalgoesto = "z1-southwest1-in";
@@ -4266,10 +4268,8 @@
 /turf/open/floor/grass/mixyel,
 /area/outdoors/bog)
 "ua" = (
-/obj/structure/closet/dirthole/closed,
-/obj/effect/mapping_helpers/structure/grave_spawner/great_hunt,
-/turf/open/floor/grass/mixyel,
-/area/under/cavewet)
+/turf/open/floor/naturalstone,
+/area/indoors/shelter/bog)
 "ub" = (
 /obj/effect/decal/cobbleedge{
 	icon_state = "mossyedge-sread"
@@ -6157,8 +6157,9 @@
 /turf/open/floor/cobble/mossy,
 /area/indoors/shelter/bog)
 "Cz" = (
-/obj/structure/closet/dirthole/grave,
-/turf/open/floor/grass/yel,
+/obj/structure/closet/dirthole/closed,
+/obj/effect/mapping_helpers/structure/grave_spawner/t2/angros,
+/turf/open/floor/dirt,
 /area/outdoors/woods/crossroads)
 "CB" = (
 /obj/structure/chair/bench/church/smallbench,
@@ -7286,7 +7287,7 @@
 /area/outdoors/woods/crossroads)
 "HL" = (
 /turf/closed/mineral/moss,
-/area/under/cavewet)
+/area/indoors/shelter/bog)
 "HN" = (
 /turf/closed/mineral/random/warm,
 /area/outdoors/bog)
@@ -8280,7 +8281,7 @@
 "Nx" = (
 /obj/machinery/light/fueled/firebowl/stumpg,
 /turf/open/floor/dirt,
-/area/under/cavewet)
+/area/indoors/shelter/bog)
 "Nz" = (
 /obj/structure/closet/crate/chest/neu,
 /obj/item/reagent_containers/glass/bottle/vial,
@@ -9695,7 +9696,7 @@
 "Ul" = (
 /obj/machinery/light/fueled/firebowl/stumpg,
 /turf/open/floor/grass/mixyel,
-/area/under/cavewet)
+/area/indoors/shelter/bog)
 "Um" = (
 /obj/structure/fluff/railing/tall/retaining/rock{
 	dir = 1
@@ -9974,7 +9975,7 @@
 "VR" = (
 /obj/structure/fluff/psycross/crafted/shrine/gani_gote,
 /turf/open/floor/grass/mixyel,
-/area/under/cavewet)
+/area/indoors/shelter/bog)
 "VS" = (
 /obj/structure/fluff/railing/tall/retaining,
 /obj/machinery/light/fueled/wallfire/candle/blue/l,
@@ -13952,9 +13953,9 @@ Eo
 En
 EB
 WX
+Nw
 Kh
-Kh
-Kh
+Nw
 XB
 EB
 En
@@ -14210,7 +14211,7 @@ En
 EB
 IV
 Ja
-kY
+xL
 Ja
 IV
 EB
@@ -18810,7 +18811,7 @@ Wj
 Wj
 WX
 Kh
-kY
+xL
 Ja
 XB
 EB
@@ -19066,7 +19067,7 @@ RS
 RS
 Wj
 WX
-Kh
+Nw
 Ja
 Ja
 IV
@@ -23692,7 +23693,7 @@ Wj
 Wj
 EB
 Np
-Kh
+Nw
 Ja
 Ja
 Np
@@ -23950,7 +23951,7 @@ Wj
 EB
 Np
 kY
-Kh
+Nw
 Ja
 mE
 Eo
@@ -24207,7 +24208,7 @@ Wj
 Wj
 WX
 Kh
-Kh
+Nw
 Ja
 XB
 ZB
@@ -29416,7 +29417,7 @@ Wj
 Wj
 HL
 HL
-fe
+ic
 Nx
 ic
 sS
@@ -29672,12 +29673,12 @@ Wj
 Wj
 HL
 sS
-YR
-YR
-NS
-YR
-NS
-fe
+Kh
+Kh
+lG
+Kh
+lG
+ic
 HL
 HL
 HL
@@ -29928,18 +29929,18 @@ HL
 HL
 HL
 HL
-YR
-NS
-NS
-YR
-NS
-NS
-NS
+Kh
+lG
+lG
+Kh
+lG
+lG
+lG
 Nx
 sS
 sS
-YR
-YR
+Kh
+Kh
 Gi
 Gi
 Gi
@@ -30182,21 +30183,21 @@ Wj
 Wj
 HL
 sS
-NS
-NS
-YR
-NS
-NS
-YR
+lG
+lG
+Kh
+lG
+lG
+Kh
 fe
 sS
-YR
-NS
-NS
-NS
-YR
-YR
-Gi
+Kh
+lG
+lG
+lG
+Kh
+Kh
+ua
 YR
 Wj
 Wj
@@ -30437,22 +30438,22 @@ Wj
 YR
 YR
 YR
-YR
-YR
-YR
-YR
-NS
-NS
-NS
+Kh
+Kh
+Kh
+Kh
+lG
+lG
+lG
 sS
 sS
 Nx
-NS
-NS
-NS
-YR
+lG
+lG
+lG
+Kh
 HL
-NS
+lG
 sS
 HL
 Wj
@@ -30698,15 +30699,15 @@ HL
 sS
 sS
 Ul
-NS
-NS
-NS
-fe
-YR
-NS
-NS
-YR
-YR
+lG
+lG
+lG
+ic
+Kh
+lG
+lG
+Kh
+Kh
 HL
 HL
 HL
@@ -30952,16 +30953,16 @@ YR
 YR
 YR
 sS
-YR
+Kh
 HL
 HL
 VR
-NS
-NS
-NS
-NS
-YR
-YR
+lG
+lG
+lG
+lG
+Kh
+Kh
 sS
 sS
 HL
@@ -31209,17 +31210,17 @@ YR
 YR
 YR
 YR
-YR
-YR
-YR
-YR
-NS
-NS
-NS
-YR
-NS
-NS
-YR
+Kh
+Kh
+Kh
+Kh
+lG
+lG
+lG
+Kh
+lG
+lG
+Kh
 HL
 Wj
 Wj
@@ -31466,15 +31467,15 @@ Wj
 Wj
 Wj
 YR
-YR
-NS
-YR
-NS
-YR
-ic
-Nx
+Kh
+lG
+Kh
+lG
+Kh
 fe
-YR
+Nx
+ic
+Kh
 HL
 HL
 HL
@@ -31725,9 +31726,9 @@ YR
 YR
 sS
 Ul
-NS
-ua
-YR
+lG
+ic
+Kh
 HL
 HL
 sS
@@ -31982,7 +31983,7 @@ Gi
 Gi
 HL
 HL
-NS
+lG
 sS
 sS
 HL
@@ -139600,7 +139601,7 @@ iW
 iO
 jm
 iO
-Cz
+iW
 Vy
 Vy
 Vy
@@ -140110,7 +140111,7 @@ na
 sY
 iW
 sY
-jm
+Cz
 sY
 iW
 sY
