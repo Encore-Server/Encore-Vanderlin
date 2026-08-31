@@ -145,13 +145,6 @@
 "by" = (
 /turf/open/floor/grass/cold,
 /area/outdoors/beach)
-"bz" = (
-/obj/structure/notice_board,
-/obj/effect/decal/borderfall{
-	dir = 1
-	},
-/turf/open/floor/snow,
-/area/outdoors/woods/etgard)
 "bC" = (
 /obj/structure/fluff/railing/border{
 	dir = 8
@@ -415,13 +408,7 @@
 /area/outdoors/woods/etgard)
 "gp" = (
 /turf/open/floor/churchmarble,
-/area/indoors/town/church/crypt)
-"gx" = (
-/obj/effect/decal/borderfall{
-	dir = 1
-	},
-/turf/open/floor/grass/cold,
-/area/outdoors/woods/etgard)
+/area/indoors/town/church)
 "gH" = (
 /turf/closed/mineral/random/med,
 /area/under/cavewet)
@@ -2542,9 +2529,6 @@
 /obj/structure/fluff/railing/border,
 /turf/open/floor/cobble/mossy,
 /area/under/cave)
-"TU" = (
-/turf/closed/wall/mineral/wooddark/end,
-/area/outdoors/woods/etgard)
 "TW" = (
 /obj/structure/closet/dirthole/closed,
 /obj/effect/mapping_helpers/structure/grave_spawner/t2/angros,
@@ -2670,9 +2654,6 @@
 "Wk" = (
 /turf/open/floor/cobble/alt,
 /area/outdoors/woods/etgard)
-"WA" = (
-/turf/closed/wall/mineral/wooddark/vertical,
-/area/outdoors/woods/etgard)
 "WB" = (
 /obj/item/natural/stone,
 /obj/machinery/light/fueled/torchholder/c,
@@ -2790,12 +2771,6 @@
 /obj/structure/flora/grass/water/reeds,
 /turf/open/floor/naturalstone,
 /area/under/cavewet)
-"YJ" = (
-/obj/effect/decal/borderfall{
-	dir = 1
-	},
-/turf/open/floor/snow,
-/area/outdoors/woods/etgard)
 "YP" = (
 /obj/structure/fluff/railing/wood,
 /turf/open/floor/snow,
@@ -33965,8 +33940,8 @@ Xy
 Hz
 Hz
 jW
-WA
-gx
+Hz
+Hz
 jW
 jW
 jW
@@ -34222,8 +34197,8 @@ Xy
 Hz
 Hz
 Xo
-TU
-bz
+Hz
+Hz
 OX
 jW
 OX
@@ -34479,8 +34454,8 @@ Xy
 Xy
 Xy
 Hz
-WA
-YJ
+Hz
+Hz
 Hz
 jW
 OX
