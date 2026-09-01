@@ -2824,10 +2824,6 @@
 /obj/structure/flora/grass/water,
 /turf/open/floor/sand,
 /area/outdoors/beach)
-"uR" = (
-/obj/structure/flora/ausbushes/ywflowers,
-/turf/open/floor/cobblerock,
-/area/outdoors/woods/west)
 "uS" = (
 /obj/machinery/light/fueled/firebowl,
 /turf/open/floor/grass/yel,
@@ -5577,19 +5573,9 @@
 "Nq" = (
 /obj/machinery/light/fueled/wallfire/candle/skull/l,
 /obj/structure/table/wood/fancy/red,
-/obj/effect/spawner/map_spawner/loot/coin/absurd,
-/obj/effect/spawner/map_spawner/loot/coin/absurd{
-	pixel_x = 0;
-	pixel_y = 0
-	},
-/obj/effect/spawner/map_spawner/loot/coin/absurd{
-	pixel_x = 0;
-	pixel_y = 0
-	},
-/obj/effect/spawner/map_spawner/loot/coin/absurd{
-	pixel_x = 0;
-	pixel_y = 0
-	},
+/obj/item/storage/belt/pouch/coins/veryrich,
+/obj/item/storage/belt/pouch/coins/veryrich,
+/obj/item/storage/belt/pouch/coins/veryrich,
 /turf/open/floor/church/purple,
 /area/indoors/vampire_manor)
 "Nr" = (
@@ -26318,10 +26304,10 @@ EB
 EB
 EB
 zz
-pt
-OD
-OD
-QB
+zz
+zz
+zz
+zz
 ou
 pM
 pM
@@ -26575,10 +26561,10 @@ zz
 zz
 zz
 zz
-pt
-OD
-OD
-ie
+zz
+zz
+zz
+zz
 eT
 pM
 pM
@@ -26832,10 +26818,10 @@ zz
 zz
 zz
 zz
-pt
-nV
-pt
-eT
+zz
+zz
+zz
+Lx
 pM
 pM
 pM
@@ -27089,8 +27075,8 @@ zz
 zz
 zz
 zz
-OD
-OD
+zz
+zz
 CG
 wG
 pM
@@ -27346,8 +27332,8 @@ zz
 zz
 zz
 zz
-OD
-OD
+zz
+zz
 CG
 wG
 pM
@@ -27603,8 +27589,8 @@ zz
 zz
 zz
 zz
-pt
-nV
+zz
+zz
 CG
 wG
 pM
@@ -27859,9 +27845,9 @@ zz
 zz
 zz
 zz
-OD
-OD
-OD
+zz
+zz
+zz
 CG
 pM
 pM
@@ -28116,8 +28102,8 @@ zz
 zz
 zz
 zz
-OD
-nV
+zz
+zz
 wG
 wG
 wG
@@ -28373,8 +28359,8 @@ zz
 zz
 zz
 zz
-OD
-OD
+zz
+zz
 wG
 CG
 pM
@@ -28629,9 +28615,9 @@ zz
 zz
 zz
 zz
-OD
-nV
-CN
+zz
+zz
+zz
 wG
 wG
 pM
@@ -28885,9 +28871,9 @@ zz
 zz
 zz
 zz
-OD
-OD
-OD
+zz
+zz
+zz
 OD
 wG
 wG
@@ -29142,9 +29128,9 @@ zz
 zz
 zz
 zz
+zz
+zz
 OD
-OD
-nV
 pt
 wG
 pM
@@ -29399,7 +29385,7 @@ zz
 zz
 zz
 zz
-OD
+zz
 OD
 sQ
 Ce
@@ -65894,12 +65880,12 @@ BT
 BT
 OD
 qk
+Jz
+Jz
 qk
-KE
 qk
-qk
-qk
-pt
+Jz
+Jz
 pt
 pt
 by
@@ -66151,13 +66137,13 @@ BT
 BT
 qk
 Jz
-uR
-uR
+Jz
+Jz
+qk
+Jz
+Jz
+Jz
 pt
-by
-by
-by
-by
 by
 by
 by
@@ -66410,11 +66396,11 @@ qk
 qk
 qk
 Jz
+Jz
+Jz
+qk
+qk
 pt
-by
-by
-by
-by
 by
 by
 by
@@ -66667,10 +66653,10 @@ qk
 qk
 Jz
 qk
+Jz
+qk
 pt
-by
-by
-by
+pt
 by
 by
 by
@@ -66922,11 +66908,11 @@ BT
 BT
 Jz
 Jz
-uR
+Jz
 KE
 pt
-by
-by
+OD
+OD
 by
 by
 by
@@ -67182,8 +67168,8 @@ Jz
 Jz
 qk
 pt
-by
-by
+OD
+pt
 by
 by
 by
@@ -67438,9 +67424,9 @@ qk
 qk
 Jz
 qk
+OD
+OD
 pt
-by
-by
 by
 by
 by
@@ -67695,9 +67681,9 @@ qk
 aB
 qk
 pt
-by
-by
-by
+OD
+OD
+pt
 by
 by
 by
@@ -67952,8 +67938,8 @@ qk
 CQ
 qk
 pt
-by
-by
+pt
+pt
 by
 by
 by
@@ -68209,8 +68195,8 @@ qk
 qk
 pt
 pt
-by
-by
+OD
+pt
 by
 by
 by
@@ -68465,9 +68451,9 @@ pt
 nV
 OD
 pt
-by
-by
-by
+OD
+pt
+pt
 by
 by
 by
@@ -68721,9 +68707,9 @@ OD
 OD
 pt
 pt
-by
-by
-by
+pt
+OD
+pt
 by
 by
 by
@@ -68978,8 +68964,8 @@ pt
 pt
 pL
 OD
-by
-by
+pt
+pt
 by
 by
 by
@@ -69235,7 +69221,7 @@ pt
 Hm
 pt
 pt
-by
+pt
 by
 by
 by
