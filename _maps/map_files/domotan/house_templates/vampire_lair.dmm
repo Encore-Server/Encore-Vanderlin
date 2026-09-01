@@ -39,7 +39,7 @@
 "gJ" = (/turf/open/floor/greenstone/runed,/area/indoors/vampire_manor)
 "gK" = (/obj/structure/table/wood/fancy/red,/obj/structure/fluff/walldeco/church/line,/obj/structure/fluff/walldeco/church/line{dir = 4},/turf/open/floor/tile/diamond,/area/indoors/vampire_manor)
 "gM" = (/obj/structure/chair/wood/alt/chair_noble/red{dir = 4},/turf/open/floor/churchmarble/violet,/area/indoors/vampire_manor)
-"gR" = (/obj/effect/decal/cleanable/blood/gibs/down,/obj/effect/decal/cleanable/blood/tracks{dir = 8},/obj/structure/fluff/traveltile{icon = 'icons/roguetown/topadd/death/vamp-lord.dmi'; icon_state = "portal"; name = "Blood Portal to the Smuggler's Den"; aportalgoesto = "vampsmugglerden"; aportalid = "vamplair"},/turf/open/floor/greenstone/runed,/area/indoors/vampire_manor)
+"gR" = (/obj/effect/decal/cleanable/blood/gibs/down,/obj/effect/decal/cleanable/blood/tracks{dir = 8},/obj/structure/fluff/traveltile{icon = 'icons/roguetown/topadd/death/vamp-lord.dmi'; icon_state = "portal"; name = "Blood Portal to the Smuggler's Den"; aportalgoesto = "smugglerdenvamplair"; aportalid = "vamplair"},/turf/open/floor/greenstone/runed,/area/indoors/vampire_manor)
 "gX" = (/obj/structure/fluff/walldeco/painting/skull{pixel_y = -32},/turf/open/floor/carpet/red,/area/indoors/vampire_manor)
 "hh" = (/obj/effect/decal/cleanable/blood/splatter,/turf/open/floor/churchrough,/area/indoors/vampire_manor)
 "hB" = (/obj/structure/closet/crate/chest,/obj/effect/spawner/guaranteed_map_spawner/listed/food/mushroom,/turf/open/floor/churchmarble/violet,/area/indoors/vampire_manor)
