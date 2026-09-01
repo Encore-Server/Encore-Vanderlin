@@ -5305,7 +5305,7 @@
 "yX" = (
 /obj/structure/closet/dirthole/closed,
 /obj/effect/mapping_helpers/structure/grave_spawner/angros,
-/turf/open/floor/grass/healthy,
+/turf/open/floor/dirt,
 /area/indoors/shelter/bog)
 "yZ" = (
 /obj/structure/bed/shit,
@@ -5490,7 +5490,7 @@
 "zN" = (
 /obj/structure/closet/dirthole/closed,
 /obj/effect/mapping_helpers/structure/grave_spawner/t2/angros,
-/turf/open/floor/grass/healthy,
+/turf/open/floor/dirt,
 /area/indoors/shelter/bog)
 "zP" = (
 /turf/open/floor/ruinedwood,
@@ -8602,7 +8602,7 @@
 "Pm" = (
 /obj/structure/closet/dirthole/closed,
 /obj/effect/mapping_helpers/structure/grave_spawner/t3/angros,
-/turf/open/floor/grass/healthy,
+/turf/open/floor/dirt,
 /area/indoors/shelter/bog)
 "Pn" = (
 /turf/closed/mineral/random/warm,
