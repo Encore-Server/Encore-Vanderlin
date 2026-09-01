@@ -151,9 +151,8 @@
 		to_chat(user, span_warning("Already in filter list."))
 		return FALSE
 	allowed_essence_types += essence_type
-	var/datum/thaumaturgical_essence/essence = new essence_type
-	to_chat(user, span_info("[essence.name] added to filter."))
-	qdel(essence)
+	var/datum/thaumaturgical_essence/essence = essence_type
+	to_chat(user, span_info("[initial(essence.name)] added to filter."))
 	if(network)
 		network.invalidate_cache()
 	return TRUE
@@ -163,9 +162,8 @@
 		to_chat(user, span_warning("Not in filter list."))
 		return FALSE
 	allowed_essence_types -= essence_type
-	var/datum/thaumaturgical_essence/essence = new essence_type
-	to_chat(user, span_info("[essence.name] removed from filter."))
-	qdel(essence)
+	var/datum/thaumaturgical_essence/essence = essence_type
+	to_chat(user, span_info("[initial(essence.name)] removed from filter."))
 	if(network)
 		network.invalidate_cache()
 	return TRUE
@@ -243,9 +241,8 @@
 			else
 				to_chat(user, span_info("Allowed essence types:"))
 				for(var/essence_type in allowed_essence_types)
-					var/datum/thaumaturgical_essence/e = new essence_type
-					to_chat(user, span_info("  - [e.name]"))
-					qdel(e)
+					var/datum/thaumaturgical_essence/essence = essence_type
+					to_chat(user, span_info("  - [initial(essence.name)]"))
 
 /obj/machinery/essence/reservoir/filled
 	var/list/essence_list = list()
