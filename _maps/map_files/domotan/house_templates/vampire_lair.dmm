@@ -133,7 +133,7 @@
 "yK" = (/obj/structure/fluff/statue/knight/interior,/turf/open/floor/carpet/red,/area/indoors/vampire_manor)
 "yN" = (/obj/effect/decal/cleanable/dirt,/turf/open/floor/grass/mixyel,/area/outdoors/exposed)
 "zc" = (/obj/structure/table/wood{dir = 1; icon_state = "longtable"},/obj/item/reagent_containers/glass/cup/glassware,/turf/open/floor/carpet/royalblack,/area/indoors/vampire_manor)
-"zd" = (/obj/structure/door/fancy,/obj/effect/mapping_helpers/access/locker,/turf/open/floor/carpet/red,/area/indoors/vampire_manor)
+"zd" = (/obj/effect/mapping_helpers/access/locker,/obj/structure/door/fancy{lockids = list("mansionvampire")},/turf/open/floor/carpet/red,/area/indoors/vampire_manor)
 "zh" = (/obj/structure/fluff/walldeco/church/line,/obj/structure/fluff/walldeco/church/line{dir = 1},/turf/open/floor/carpet/red,/area/indoors/vampire_manor)
 "zq" = (/obj/structure/fluff/walldeco/church/line{dir = 1},/turf/open/floor/carpet/red,/area/indoors/vampire_manor)
 "zs" = (/obj/machinery/light/fueled/firebowl/standing/blue,/turf/open/floor/ruinedwood/darker,/area/indoors/vampire_manor)
@@ -159,7 +159,6 @@
 "De" = (/obj/structure/bars,/obj/effect/decal/cleanable/blood/splatter,/turf/open/floor/tile/diamond,/area/indoors/vampire_manor)
 "Dh" = (/obj/structure/chair/wood/alt/chair_noble/fancyplush,/turf/open/floor/churchmarble/violet,/area/indoors/vampire_manor)
 "Dt" = (/obj/structure/chair/bench/couch/left,/turf/open/floor/ruinedwood/darker,/area/indoors/vampire_manor)
-"Dv" = (/obj/structure/door/fancy{lockids = list("mansionvampire")},/obj/effect/mapping_helpers/access/locker,/turf/open/floor/carpet/red,/area/indoors/vampire_manor)
 "Dy" = (/obj/structure/fluff/walldeco/church/line,/obj/structure/table/wood/fancy/red,/obj/item/reagent_containers/glass/cup/golden{pixel_x = 7; pixel_y = 6},/turf/open/floor/tile/diamond,/area/indoors/vampire_manor)
 "EN" = (/obj/structure/chair/bench/couch/right,/turf/open/floor/ruinedwood/darker,/area/indoors/vampire_manor)
 "EU" = (/obj/machinery/light/fueled/wallfire/candle/blue/r,/turf/open/floor/wood,/area/indoors/vampire_manor)
@@ -193,6 +192,7 @@
 "Jp" = (/obj/structure/chair/wood/alt/chair_noble/red{dir = 1},/turf/open/floor/ruinedwood/spiral,/area/indoors/vampire_manor)
 "Ju" = (/obj/machinery/light/fueled/wallfire/candle/blue/r,/obj/structure/rack/shelf/biggest,/obj/item/reagent_containers/glass/bottle/elfred{pixel_x = 6; pixel_y = 9},/obj/item/reagent_containers/glass/bottle/elfred{pixel_x = -7; pixel_y = 9},/obj/item/reagent_containers/glass/bottle/elfblue{pixel_x = 6; pixel_y = -1},/obj/item/reagent_containers/glass/bottle/elfblue{pixel_x = -7; pixel_y = -1},/turf/open/floor/churchmarble/violet,/area/indoors/vampire_manor)
 "Jv" = (/obj/structure/closet/crate/chest/wicker,/obj/item/reagent_containers/food/snacks/produce/grain/wheat,/obj/item/reagent_containers/food/snacks/produce/grain/wheat,/obj/item/reagent_containers/food/snacks/produce/grain/wheat,/obj/item/reagent_containers/food/snacks/produce/grain/wheat,/obj/item/reagent_containers/food/snacks/produce/grain/wheat,/obj/item/reagent_containers/food/snacks/produce/grain/wheat,/obj/item/reagent_containers/food/snacks/produce/grain/sunreed,/obj/item/reagent_containers/food/snacks/produce/grain/sunreed,/obj/item/reagent_containers/food/snacks/produce/grain/sunreed,/obj/item/reagent_containers/food/snacks/produce/grain/sunreed,/obj/item/reagent_containers/food/snacks/produce/fruit/tamto,/obj/item/reagent_containers/food/snacks/produce/fruit/tamto,/obj/item/reagent_containers/food/snacks/produce/fruit/tamto,/obj/item/reagent_containers/food/snacks/produce/vegetable/onion,/obj/item/reagent_containers/food/snacks/produce/vegetable/onion,/obj/item/reagent_containers/food/snacks/produce/vegetable/onion,/obj/item/reagent_containers/food/snacks/produce/vegetable/potato,/obj/item/reagent_containers/food/snacks/produce/vegetable/potato,/obj/item/reagent_containers/food/snacks/produce/vegetable/potato,/obj/item/reagent_containers/food/snacks/produce/vegetable/turnip,/obj/item/reagent_containers/food/snacks/produce/vegetable/turnip,/obj/item/reagent_containers/food/snacks/produce/vegetable/turnip,/obj/item/reagent_containers/food/snacks/produce/fruit/pompkaun,/obj/item/reagent_containers/food/snacks/produce/fruit/pompkaun,/obj/machinery/light/fueled/wallfire/candle/blue,/obj/item/reagent_containers/food/snacks/egg,/obj/item/reagent_containers/food/snacks/egg,/obj/item/reagent_containers/food/snacks/egg,/obj/machinery/light/fueled/wallfire/candle/blue/l,/turf/open/floor/churchmarble/violet,/area/indoors/vampire_manor)
+"Jw" = (/obj/structure/door/fancy{lockids = list("mansionvampire")},/obj/effect/mapping_helpers/access/locker,/turf/open/floor/carpet/red,/area/indoors/vampire_manor)
 "JO" = (/obj/structure/closet/crate/crafted_closet/dark,/obj/item/explosive/deathshell,/obj/item/explosive/deathshell,/obj/item/explosive/deathshell,/obj/item/explosive/bottle,/obj/item/explosive/bottle,/obj/item/explosive/bottle,/obj/item/flint,/obj/item/flint,/turf/open/floor/churchmarble/violet,/area/indoors/vampire_manor)
 "JY" = (/obj/structure/door/iron/bars{lockids = list("mansionvampire")},/obj/effect/mapping_helpers/access/locker,/turf/open/floor/ruinedwood/two,/area/indoors/vampire_manor)
 "Kk" = (/obj/structure/flora/grass/bush/wall/tall/tundra,/turf/open/floor/grass/red,/area/outdoors/exposed)
@@ -333,7 +333,7 @@ mmmmuJCmGGagcJWnjWxFzxzxdSxFuXROROROROuMSDxFlNTuAhBNvUBNmmmmmm
 mmmmBNTmAZQXlgPsSDyazxzxzxbNSDfWROROROROBNzscWTuTuBNvUBNmmmmmm
 mmmmBNIAGDGDZakBBNxFyKzxvlxFBNTdROROROdXSDHhHhHhHhHhHhSDmmmmmm
 mmmmSDHhHhHhSDHhSDzszxzxzxzsSDHhSDHhHhHhSDmmmmmmmmmmmmmmmmmmmm
-mmmmndRIPDKkSDHhHhSDzdHhDvSDHhHhSDrMlOrMYmmmmmmmmmmmmmmmmmmmmm
+mmmmndRIPDKkSDHhHhSDzdHhJwSDHhHhSDrMlOrMYmmmmmmmmmmmmmmmmmmmmm
 mmmmndlOrMIsZgxnKkBuIBIBIBBuRIPDKkIsPDxnYmmmmmmmmmmmmmmmmmmmmm
 mmmmndrMGAlOGAlOPDFbIBIBFbFbIBIBFbFbFbFbFcmmmmmmmmmmmmmmmmmmmm
 mmmmndGAGAGAlOGAGAFbFbIBIBFbFbFbFbIBIBFbypmmmmmmmmmmmmmmmmmmmm
