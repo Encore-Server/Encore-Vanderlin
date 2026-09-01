@@ -18,7 +18,7 @@
 "dr" = (/obj/structure/chair/wood/alt/chair_noble/red,/turf/open/floor/churchmarble/violet,/area/indoors/vampire_manor)
 "dv" = (/obj/structure/table/wood/fancy/red,/obj/item/reagent_containers/glass/cup/glassware/wineglass{pixel_x = 8; pixel_y = 1},/turf/open/floor/churchmarble/violet,/area/indoors/vampire_manor)
 "dE" = (/obj/structure/bars/passage/shutter{redstone_id = "skeletons"},/turf/open/floor/churchrough,/area/indoors/vampire_manor)
-"dH" = (/obj/structure/fluff/walldeco/church/line{dir = 1},/obj/structure/fluff/walldeco/church/line{dir = 8},/obj/structure/table/wood/fancy/red,/turf/open/floor/tile/diamond,/area/indoors/vampire_manor)
+"dH" = (/obj/structure/fluff/walldeco/church/line{dir = 1},/obj/structure/fluff/walldeco/church/line{dir = 8},/obj/structure/table/wood/fancy/red,/obj/item/reagent_containers/glass/cup/golden{pixel_x = 5; pixel_y = 1},/turf/open/floor/tile/diamond,/area/indoors/vampire_manor)
 "dS" = (/turf/open/floor/carpet/red{pixel_x = 0; pixel_y = 0},/area/indoors/vampire_manor)
 "dX" = (/obj/machinery/light/fueled/wallfire/candle/blue/r,/obj/structure/table/wood/nice/decorated,/obj/item/carvedgem/amber/tablet{pixel_x = -8; pixel_y = 11},/obj/item/carvedgem/rose/tablet{pixel_x = 5; pixel_y = 11},/obj/item/carvedgem/coral/tablet{pixel_x = 7; pixel_y = 3},/obj/item/carvedgem/shell/tablet{pixel_x = -6; pixel_y = 3},/turf/open/floor/ruinedwood/spiral,/area/indoors/vampire_manor)
 "ea" = (/obj/structure/door/stone{lockids = list("mansionvampire"); name = "Living Quarters"},/obj/effect/mapping_helpers/access/locker,/turf/open/floor/ruinedwood/two,/area/indoors/vampire_manor)
@@ -28,7 +28,7 @@
 "eY" = (/obj/structure/fluff/railing/tall/stone{dir = 5},/obj/structure/flora/grass/herb/rosa,/turf/open/floor/grass/mixyel,/area/outdoors/exposed)
 "eZ" = (/obj/structure/table/wood/fancy/red,/turf/open/floor/churchmarble/violet,/area/indoors/vampire_manor)
 "fb" = (/obj/structure/table/wood/fancy/red,/obj/item/reagent_containers/powder/moondust_purest{pixel_x = 1; pixel_y = 10},/obj/item/reagent_containers/powder/moondust{pixel_x = 7; pixel_y = 5},/obj/item/reagent_containers/powder/moondust{pixel_x = -7; pixel_y = 5},/turf/open/floor/ruinedwood/darker,/area/indoors/vampire_manor)
-"fg" = (/obj/structure/door/stone{lockids = list("mansionvampire"); name = "Portal Room"},/turf/open/floor/churchmarble/violet,/area/indoors/vampire_manor)
+"fg" = (/obj/structure/door/stone{lockids = list("mansionvampire"); name = "Portal Room"},/obj/effect/mapping_helpers/access/locker,/turf/open/floor/churchmarble/violet,/area/indoors/vampire_manor)
 "fl" = (/obj/effect/mapping_helpers/secret_door_creator{redstone_id = "vampkitchencellar"},/turf/closed/wall/mineral/decostone,/area/indoors/vampire_manor)
 "fv" = (/obj/effect/decal/cleanable/blood/gibs/body{pixel_x = 8; pixel_y = 5},/turf/open/floor/greenstone,/area/indoors/vampire_manor)
 "fB" = (/obj/machinery/light/fueled/wallfire/candle/skull/r,/turf/open/floor/dirt,/area/indoors/vampire_manor)
@@ -50,7 +50,7 @@
 "jB" = (/obj/structure/rack,/obj/item/rope/chain,/obj/item/rope/chain,/obj/item/rope/chain,/obj/machinery/light/fueled/wallfire/candle/skull/l,/turf/open/floor/ruinedwood/two,/area/indoors/vampire_manor)
 "jD" = (/obj/structure/dye_bin/luxury,/turf/open/floor/churchmarble/violet,/area/indoors/vampire_manor)
 "jH" = (/obj/structure/fluff/walldeco/church/line,/obj/structure/table/wood/fancy/red,/turf/open/floor/tile/diamond,/area/indoors/vampire_manor)
-"jW" = (/obj/structure/door/fancy,/turf/open/floor/churchmarble/violet,/area/indoors/vampire_manor)
+"jW" = (/obj/effect/mapping_helpers/access/locker,/obj/structure/door/fancy{lockids = list("mansionvampire"); name = "Kitchen"},/turf/open/floor/churchmarble/violet,/area/indoors/vampire_manor)
 "kg" = (/obj/structure/table/wood{icon_state = "longtable"},/obj/item/reagent_containers/glass/carafe/water,/turf/open/floor/carpet/royalblack,/area/indoors/vampire_manor)
 "kl" = (/obj/structure/rack,/obj/item/natural/bundle/cloth/full,/obj/item/needle/thorn{pixel_x = 5; pixel_y = -7},/obj/item/needle/thorn{pixel_x = 5; pixel_y = -7},/turf/open/floor/ruinedwood/two,/area/indoors/vampire_manor)
 "ko" = (/obj/structure/rack/shelf/biggest,/obj/item/reagent_containers/glass/bottle/beer/stonebeardreserve{pixel_x = -4; pixel_y = 6},/obj/item/reagent_containers/glass/bottle/beer/stonebeardreserve{pixel_x = 7; pixel_y = 7},/obj/item/reagent_containers/glass/bottle/beer/spottedhen{pixel_x = -5; pixel_y = 0},/obj/item/reagent_containers/glass/bottle/beer/spottedhen{pixel_x = 6; pixel_y = 0},/turf/open/floor/churchmarble/violet,/area/indoors/vampire_manor)
@@ -63,19 +63,20 @@
 "kX" = (/obj/structure/table/wood/fancy/red,/obj/item/dice/d6/bone{pixel_x = -7},/obj/item/toy/cards/deck{pixel_x = 10; pixel_y = 3},/obj/item/reagent_containers/glass/cup/coralfancy,/turf/open/floor/ruinedwood/darker,/area/indoors/vampire_manor)
 "lc" = (/obj/structure/table/vtable/v2,/obj/item/natural/feather{pixel_x = -4; pixel_y = 5},/obj/item/candle/skull/lit{pixel_x = 7; pixel_y = 5},/turf/open/floor/ruinedwood/darker,/area/indoors/vampire_manor)
 "lg" = (/obj/structure/fluff/walldeco/church/line{dir = 4},/obj/structure/fluff/walldeco/church/line,/turf/open/floor/tile/diamond,/area/indoors/vampire_manor)
-"lo" = (/obj/machinery/light/fueled/wallfire/candle/blue/l,/turf/open/water/river/blood,/area/indoors/vampire_manor)
+"lo" = (/obj/machinery/light/fueled/wallfire/candle/blue/l,/turf/open/water/blood,/area/indoors/vampire_manor)
 "lw" = (/obj/structure/door/iron/bars{lockids = list("mansionvampire")},/obj/effect/mapping_helpers/access/locker,/obj/effect/decal/cleanable/blood/tracks{dir = 8},/turf/open/floor/tile/diamond,/area/indoors/vampire_manor)
-"lA" = (/obj/structure/fluff/walldeco/church/line{dir = 4},/obj/structure/fluff/walldeco/church/line{dir = 8},/obj/structure/lever/wall{dir = 8; pixel_x = -8; pixel_y = 0; redstone_id = "vampkichencellar"},/turf/open/floor/carpet/red,/area/indoors/vampire_manor)
+"lA" = (/obj/structure/fluff/walldeco/church/line{dir = 4},/obj/structure/fluff/walldeco/church/line{dir = 8},/obj/structure/lever/wall{dir = 8; pixel_x = -8; pixel_y = 0; redstone_id = "vampkitchencellar"},/turf/open/floor/carpet/red,/area/indoors/vampire_manor)
 "lD" = (/obj/structure/table/wood/fancy/royalblack,/turf/open/floor/ruinedwood/spiral,/area/indoors/vampire_manor)
 "lL" = (/obj/structure/table/wood/fancy/purple,/obj/item/reagent_containers/glass/cup/glassware/wineglass{pixel_x = 0; pixel_y = 5},/obj/machinery/light/fueled/wallfire/candle/blue/l,/turf/open/floor/ruinedwood/spiral,/area/indoors/vampire_manor)
 "lN" = (/obj/structure/chair/wood/alt/chair_noble/red,/turf/open/floor/ruinedwood/darker,/area/indoors/vampire_manor)
 "lO" = (/obj/structure/flora/grass/herb/rosa,/turf/open/floor/grass/mixyel,/area/outdoors/exposed)
 "mm" = (/obj/effect/abstract/property_noop{property_id = "vampire_lair"},/turf/template_noop,/area/template_noop)
 "mI" = (/obj/machinery/light/fueled/wallfire/candle/blue,/obj/structure/bookcase/random,/turf/open/floor/churchmarble/violet,/area/indoors/vampire_manor)
+"na" = (/obj/structure/fluff/walldeco/church/line,/obj/structure/table/wood/fancy/red,/obj/item/reagent_containers/glass/cup/steel{pixel_x = -6; pixel_y = 12},/turf/open/floor/tile/diamond,/area/indoors/vampire_manor)
 "nd" = (/obj/structure/bars/cemetery,/turf/open/floor/grass/mixyel,/area/outdoors/exposed)
 "nT" = (/obj/machinery/light/fueled/wallfire/candle/blue,/turf/open/floor/ruinedwood/darker,/area/indoors/vampire_manor)
 "or" = (/obj/structure/fluff/railing/tall/stone,/obj/structure/flora/grass/herb/rosa,/turf/open/floor/grass/mixyel,/area/outdoors/exposed)
-"oK" = (/obj/structure/fluff/walldeco/church/line,/obj/structure/fluff/walldeco/church/line{dir = 8},/obj/structure/table/wood/fancy/red,/turf/open/floor/tile/diamond,/area/indoors/vampire_manor)
+"oK" = (/obj/structure/fluff/walldeco/church/line,/obj/structure/fluff/walldeco/church/line{dir = 8},/obj/structure/table/wood/fancy/red,/obj/item/reagent_containers/glass/cup/steel{pixel_x = -4; pixel_y = 10},/turf/open/floor/tile/diamond,/area/indoors/vampire_manor)
 "pb" = (/obj/structure/fluff/walldeco/painting/skull{pixel_x = 32; pixel_y = 0},/turf/open/floor/ruinedwood/darker,/area/indoors/vampire_manor)
 "pv" = (/obj/structure/bookcase/random,/turf/open/floor/churchmarble/violet,/area/indoors/vampire_manor)
 "pJ" = (/obj/effect/mapping_helpers/secret_door_creator{redstone_id = "vampescape"},/turf/closed/wall/mineral/stone,/area/indoors/vampire_manor)
@@ -85,7 +86,7 @@
 "qg" = (/obj/structure/well/fountain,/turf/open/floor/cobblerock,/area/outdoors/exposed)
 "qt" = (/obj/structure/fluff/walldeco/church/line{dir = 1},/turf/open/floor/churchmarble/violet,/area/indoors/vampire_manor)
 "qw" = (/turf/closed/wall/mineral/stone/window,/area/indoors/vampire_manor)
-"qM" = (/obj/structure/door/stone{lockids = list("mansionvampire"); name = "Baths"},/turf/closed/wall/mineral/craftstone,/area/indoors/vampire_manor)
+"qM" = (/obj/structure/door/stone{lockids = list("mansionvampire"); name = "Baths"},/turf/open/floor/ruinedwood/two,/area/indoors/vampire_manor)
 "qU" = (/obj/structure/table/wood/nice/decorated,/obj/item/statue/gold/obelisk{pixel_x = 0; pixel_y = 10},/turf/open/floor/ruinedwood/spiral,/area/indoors/vampire_manor)
 "re" = (/obj/structure/table/vtable,/obj/item/paper,/obj/item/natural/feather,/obj/structure/fluff/walldeco/bigpainting,/turf/open/floor/churchrough,/area/indoors/vampire_manor)
 "rr" = (/obj/effect/decal/cleanable/blood{pixel_x = -4; pixel_y = -11},/turf/open/floor/greenstone,/area/indoors/vampire_manor)
@@ -109,18 +110,18 @@
 "uM" = (/obj/machinery/light/fueled/wallfire/candle/blue/r,/turf/open/floor/ruinedwood/spiral,/area/indoors/vampire_manor)
 "uT" = (/obj/machinery/light/fueled/wallfire/candle/skull/l,/obj/structure/closet/crate/chest,/turf/open/floor/ruinedwood/two,/area/indoors/vampire_manor)
 "uV" = (/obj/structure/fluff/walldeco/church/line{dir = 8},/turf/open/floor/carpet/red,/area/indoors/vampire_manor)
-"uW" = (/obj/structure/table/wood/fancy/red,/obj/structure/fluff/walldeco/church/line{dir = 1},/turf/open/floor/tile/diamond,/area/indoors/vampire_manor)
+"uW" = (/obj/structure/table/wood/fancy/red,/obj/structure/fluff/walldeco/church/line{dir = 1},/obj/item/reagent_containers/glass/cup/golden{pixel_x = 7; pixel_y = 0},/turf/open/floor/tile/diamond,/area/indoors/vampire_manor)
 "uX" = (/obj/structure/door/fancy{lockids = list("mansionvampire")},/turf/open/floor/churchmarble/violet,/area/indoors/vampire_manor)
 "vl" = (/obj/structure/fluff/statue/knight/interior/r{pixel_x = 0; pixel_y = 0},/turf/open/floor/carpet/red,/area/indoors/vampire_manor)
 "vB" = (/obj/structure/fluff/walldeco/church/line{dir = 8},/obj/structure/fluff/walldeco/church/line{dir = 4},/obj/structure/fluff/walldeco/church/line{dir = 1},/turf/open/floor/carpet/red,/area/indoors/vampire_manor)
 "vF" = (/obj/machinery/light/fueled/wallfire/candle/skull/r,/obj/structure/grindwheel,/turf/open/floor/ruinedwood/two,/area/indoors/vampire_manor)
 "vH" = (/turf/open/floor/wood,/area/indoors/vampire_manor)
-"vN" = (/turf/open/floor/tile/bath,/area/indoors/vampire_manor)
+"vN" = (/turf/open/water/bath,/area/indoors/vampire_manor)
 "vU" = (/turf/open/floor/churchrough,/area/indoors/vampire_manor)
 "we" = (/obj/effect/abstract/property_noop{property_id = "vampire_lair"},/obj/structure/bars/cemetery,/turf/open/floor/grass/mixyel,/area/outdoors/exposed)
 "wf" = (/obj/machinery/light/fueled/wallfire/candle/skull/l,/obj/structure/rack,/obj/item/weapon/sword/short/iron,/obj/item/weapon/sword/short/iron,/obj/item/weapon/sword/short/iron,/turf/open/floor/churchmarble/violet,/area/indoors/vampire_manor)
 "wj" = (/obj/structure/door/stone{lockids = list("mansionvampire")},/obj/effect/mapping_helpers/access/locker,/turf/open/floor/churchrough,/area/indoors/vampire_manor)
-"wF" = (/obj/machinery/light/fueled/wallfire/candle/blue/l,/turf/open/floor/tile/bath,/area/indoors/vampire_manor)
+"wF" = (/obj/machinery/light/fueled/wallfire/candle/blue/l,/turf/open/water/bath,/area/indoors/vampire_manor)
 "wS" = (/obj/machinery/light/fueled/wallfire/candle/blue,/turf/open/floor/ruinedwood/spiral,/area/indoors/vampire_manor)
 "xn" = (/obj/structure/flora/grass/bush/wall/tall,/turf/open/floor/grass/red,/area/outdoors/exposed)
 "xF" = (/turf/open/floor/ruinedwood/darker,/area/indoors/vampire_manor)
@@ -136,7 +137,7 @@
 "zh" = (/obj/structure/fluff/walldeco/church/line,/obj/structure/fluff/walldeco/church/line{dir = 1},/turf/open/floor/carpet/red,/area/indoors/vampire_manor)
 "zq" = (/obj/structure/fluff/walldeco/church/line{dir = 1},/turf/open/floor/carpet/red,/area/indoors/vampire_manor)
 "zs" = (/obj/machinery/light/fueled/firebowl/standing/blue,/turf/open/floor/ruinedwood/darker,/area/indoors/vampire_manor)
-"zu" = (/turf/open/water/river/blood,/area/indoors/vampire_manor)
+"zu" = (/turf/open/water/blood,/area/indoors/vampire_manor)
 "zx" = (/turf/open/floor/carpet/red,/area/indoors/vampire_manor)
 "zz" = (/obj/structure/table/wood/fancy/purple,/obj/item/reagent_containers/glass/cup/glassware/wineglass{pixel_x = -1; pixel_y = 9},/turf/open/floor/ruinedwood/spiral,/area/indoors/vampire_manor)
 "zS" = (/obj/structure/table/vtable/v2,/obj/item/weapon/knife/dagger,/turf/open/floor/churchrough,/area/indoors/vampire_manor)
@@ -145,7 +146,7 @@
 "At" = (/obj/structure/closet/crate/chest,/obj/effect/spawner/guaranteed_map_spawner/listed/food/grain/expensive,/turf/open/floor/churchmarble/violet,/area/indoors/vampire_manor)
 "Au" = (/obj/structure/closet/crate/crafted_closet/dark,/obj/item/clothing/shirt/undershirt/fancy,/obj/item/clothing/shirt/undershirt/fancy,/obj/item/clothing/pants/tights,/obj/item/clothing/pants/trou/leathertights,/obj/item/clothing/pants/skirt,/obj/item/clothing/pants/skirt,/obj/item/clothing/pants/trou/leather,/obj/item/clothing/face/facemask/silverveil,/obj/item/clothing/face/skullmask,/obj/item/clothing/face/lordmask/l,/obj/item/clothing/face/shepherd/clothmask,/obj/item/clothing/shoes/nobleboot/thighboots,/obj/item/clothing/head/bardhat,/obj/item/clothing/head/wizhat/witch,/obj/item/clothing/head/fancyhat,/obj/item/clothing/shirt/robe/colored/plain,/turf/open/floor/churchmarble/violet,/area/indoors/vampire_manor)
 "AZ" = (/obj/structure/fluff/walldeco/church/line{dir = 8},/obj/structure/fluff/walldeco/church/line,/turf/open/floor/tile/diamond,/area/indoors/vampire_manor)
-"Bm" = (/obj/structure/fluff/walldeco/church/line{dir = 1},/obj/structure/table/wood/fancy/red,/obj/item/candle/scandle/lit,/obj/structure/chair/wood/alt/chair_noble/red,/turf/open/floor/tile/diamond,/area/indoors/vampire_manor)
+"Bm" = (/obj/structure/fluff/walldeco/church/line{dir = 1},/obj/structure/table/wood/fancy/red,/obj/item/candle/scandle/lit,/turf/open/floor/tile/diamond,/area/indoors/vampire_manor)
 "Bu" = (/obj/machinery/light/fueled/wallfire/candle/blue,/turf/open/floor/dirt/road,/area/outdoors/exposed)
 "BD" = (/obj/structure/fluff/wallclock/vampire,/obj/structure/lever{redstone_id = "vampescape"; pixel_y = 19; desc = "For unwanted visitors."; name = "escape lever"},/turf/open/floor/churchmarble/violet,/area/indoors/vampire_manor)
 "BL" = (/obj/structure/table/vtable,/obj/item/paper/scroll,/obj/item/paper/scroll{pixel_x = 9; pixel_y = 1},/obj/item/paper/scroll{pixel_x = 4; pixel_y = 4},/turf/open/floor/ruinedwood/darker,/area/indoors/vampire_manor)
@@ -158,6 +159,7 @@
 "De" = (/obj/structure/bars,/obj/effect/decal/cleanable/blood/splatter,/turf/open/floor/tile/diamond,/area/indoors/vampire_manor)
 "Dh" = (/obj/structure/chair/wood/alt/chair_noble/fancyplush,/turf/open/floor/churchmarble/violet,/area/indoors/vampire_manor)
 "Dt" = (/obj/structure/chair/bench/couch/left,/turf/open/floor/ruinedwood/darker,/area/indoors/vampire_manor)
+"Dy" = (/obj/structure/fluff/walldeco/church/line,/obj/structure/table/wood/fancy/red,/obj/item/reagent_containers/glass/cup/golden{pixel_x = 7; pixel_y = 6},/turf/open/floor/tile/diamond,/area/indoors/vampire_manor)
 "EN" = (/obj/structure/chair/bench/couch/right,/turf/open/floor/ruinedwood/darker,/area/indoors/vampire_manor)
 "EU" = (/obj/machinery/light/fueled/wallfire/candle/blue/r,/turf/open/floor/wood,/area/indoors/vampire_manor)
 "Fb" = (/turf/open/floor/dirt/road,/area/outdoors/exposed)
@@ -185,7 +187,7 @@
 "IA" = (/obj/structure/table/wood/crafted,/obj/item/cooking/pan,/obj/machinery/light/fueled/wallfire/candle/blue/l,/obj/item/reagent_containers/glass/bucket/pot/stone,/turf/open/floor/churchmarble/violet,/area/indoors/vampire_manor)
 "IB" = (/turf/open/floor/cobblerock,/area/outdoors/exposed)
 "IU" = (/obj/structure/door/iron/bars{lockids = list("mansionvampire")},/obj/effect/mapping_helpers/access/locker,/turf/open/floor/dirt,/area/indoors/vampire_manor)
-"IZ" = (/obj/structure/chair/wood/alt/chair_noble/red{dir = 8},/turf/open/floor/churchmarble/violet,/area/indoors/vampire_manor)
+"IZ" = (/obj/structure/chair/bench/couch/left{dir = 8; pixel_x = 2; pixel_y = 0},/turf/open/floor/carpet/red,/area/indoors/vampire_manor)
 "Jm" = (/obj/structure/dye_bin,/turf/open/floor/churchmarble/violet,/area/indoors/vampire_manor)
 "Jp" = (/obj/structure/chair/wood/alt/chair_noble/red{dir = 1},/turf/open/floor/ruinedwood/spiral,/area/indoors/vampire_manor)
 "Ju" = (/obj/machinery/light/fueled/wallfire/candle/blue/r,/obj/structure/rack/shelf/biggest,/obj/item/reagent_containers/glass/bottle/elfred{pixel_x = 6; pixel_y = 9},/obj/item/reagent_containers/glass/bottle/elfred{pixel_x = -7; pixel_y = 9},/obj/item/reagent_containers/glass/bottle/elfblue{pixel_x = 6; pixel_y = -1},/obj/item/reagent_containers/glass/bottle/elfblue{pixel_x = -7; pixel_y = -1},/turf/open/floor/churchmarble/violet,/area/indoors/vampire_manor)
@@ -214,7 +216,7 @@
 "Oq" = (/obj/structure/stairs/stone/church{dir = 4},/turf/open/floor/churchrough,/area/indoors/vampire_manor)
 "Or" = (/obj/effect/decal/carpet/kover_darkred,/turf/open/floor/ruinedwood/darker,/area/indoors/vampire_manor)
 "Ov" = (/obj/structure/sign/property_sign/claim,/turf/closed/wall/mineral/stone,/area/indoors/vampire_manor)
-"OG" = (/obj/structure/fluff/walldeco/church/line{dir = 8},/obj/structure/fluff/walldeco/church/line{dir = 4},/obj/structure/fluff/walldeco/church/line{dir = 4},/obj/structure/fluff/walldeco/church/line{dir = 8},/obj/structure/door/fancy{lockids = list("mansionvampire")},/turf/open/floor/carpet/red,/area/indoors/vampire_manor)
+"OG" = (/obj/structure/fluff/walldeco/church/line{dir = 8},/obj/structure/fluff/walldeco/church/line{dir = 4},/obj/structure/fluff/walldeco/church/line{dir = 4},/obj/structure/fluff/walldeco/church/line{dir = 8},/obj/structure/door/fancy{lockids = list("mansionvampire"); name = "Dining Hall"},/turf/open/floor/carpet/red,/area/indoors/vampire_manor)
 "OO" = (/obj/structure/door/stone{lockids = list("mansionvampire")},/turf/open/floor/dirt,/area/indoors/vampire_manor)
 "OV" = (/obj/structure/table/wood/fancy/red,/obj/item/statue/gold/bust{pixel_x = -4; pixel_y = 13},/obj/item/carvedgem/jade/wyrm{pixel_x = 1; pixel_y = 1},/turf/open/floor/ruinedwood/darker,/area/indoors/vampire_manor)
 "OY" = (/obj/machinery/light/fueled/wallfire/candle/blue/l,/turf/open/floor/churchrough,/area/indoors/vampire_manor)
@@ -232,7 +234,9 @@
 "Rg" = (/obj/machinery/light/fueled/wallfire/candle/blue/r,/obj/structure/lever/wall{pixel_x = 18; pixel_y = 0; redstone_id = "vampguestroom2"; name = "Guest Room 2"},/turf/open/floor/churchrough,/area/indoors/vampire_manor)
 "RI" = (/obj/structure/flora/grass/bush/wall/tall/tundra,/turf/open/floor/grass/mixyel,/area/outdoors/exposed)
 "RO" = (/turf/open/floor/ruinedwood/spiral,/area/indoors/vampire_manor)
-"Sy" = (/obj/structure/fluff/walldeco/church/line{dir = 4},/obj/structure/fluff/walldeco/church/line{dir = 8},/obj/structure/door/stone{lockids = list("mansionvampire")},/turf/open/floor/carpet/red,/area/indoors/vampire_manor)
+"Si" = (/obj/structure/fluff/walldeco/church/line,/obj/structure/table/wood/fancy/red,/obj/item/reagent_containers/glass/cup/steel{pixel_x = 1; pixel_y = 7},/turf/open/floor/tile/diamond,/area/indoors/vampire_manor)
+"Ss" = (/obj/structure/door/stone{lockids = list("mansionvampire"); name = "Private Baths"},/obj/effect/mapping_helpers/access/locker,/turf/open/floor/ruinedwood/two,/area/indoors/vampire_manor)
+"Sy" = (/obj/structure/fluff/walldeco/church/line{dir = 4},/obj/structure/fluff/walldeco/church/line{dir = 8},/obj/structure/door/stone{lockids = list("mansionvampire")},/obj/effect/mapping_helpers/access/locker,/turf/open/floor/carpet/red,/area/indoors/vampire_manor)
 "SD" = (/turf/closed/wall/mineral/decorstone,/area/indoors/vampire_manor)
 "SF" = (/turf/closed/wall/mineral/craftstone,/area/indoors/vampire_manor)
 "SP" = (/obj/structure/fluff/walldeco/church/line,/obj/structure/fluff/walldeco/church/line{dir = 1},/obj/structure/fluff/walldeco/painting/moon{pixel_x = 0; pixel_y = 32},/obj/effect/mapping_helpers/access/locker,/obj/structure/door/stone{lockids = list("mansionvampire"); name = "Baths"},/obj/structure/fluff/walldeco/church/line{dir = 8},/turf/open/floor/carpet/red,/area/indoors/vampire_manor)
@@ -260,6 +264,7 @@
 "VB" = (/obj/structure/chair/wood/alt/chair_noble/red{dir = 1},/turf/open/floor/churchmarble/violet,/area/indoors/vampire_manor)
 "VE" = (/obj/structure/stairs/stone/church{dir = 4},/turf/open/floor/churchmarble/violet,/area/indoors/vampire_manor)
 "VK" = (/obj/effect/decal/cleanable/blood/gibs/down,/turf/open/floor/dirt,/area/indoors/vampire_manor)
+"VM" = (/obj/structure/chair/bench/couch/right{dir = 8; pixel_x = 2; pixel_y = 0},/turf/open/floor/carpet/red,/area/indoors/vampire_manor)
 "Wm" = (/obj/structure/table/wood{dir = 1; icon_state = "longtable"},/obj/item/reagent_containers/glass/cup/glassware,/turf/open/floor/carpet/purple,/area/indoors/vampire_manor)
 "Wn" = (/turf/open/floor/churchmarble/violet,/area/indoors/vampire_manor)
 "Wq" = (/obj/structure/fluff/railing/tall/stone{dir = 1},/obj/structure/chair/bench,/turf/open/floor/grass/red,/area/outdoors/exposed)
@@ -300,7 +305,7 @@ SFSFSFSFCACACACACAuJSyuJuJuJuJuJuJKVIlCACACACAmmmmmmmmmmmmmmmm
 SFzuzuSFAteyFHTVJuuJkwWnWnDhWnWnuJuJuJuJuJuJmmmmmmmmmmmmmmmmmm
 SFlozuSFiGWnWnkBWnflkwWneZdveZWnuJGgfvrrgJuJmmmmmmmmmmmmmmmmmm
 SFFAFASFhBWnWnWnWnuJlAWneZeZeZWnfgKNGOxGgRuJmmmmmmmmmmmmmmmmmm
-SFSFqMSFSFSFkoNWTeuJkwWnVBVBVBWnuJGgKEUZbSuJmmmmmmmmmmmmmmmmmm
+SFSFSsSFSFSFkoNWTeuJkwWnVBVBVBWnuJGgKEUZbSuJmmmmmmmmmmmmmmmmmm
 SFvHvHvHvHSFuJuJuJuJSyuJuJuJuJuJuJuJuJuJuJuJmmmmmmmmmmmmmmmmmm
 SFvNvNvNvHSFuJDtXeENkwbEnTenUkpSnTQOuJmmmmmmmmmmmmmmmmmmmmmmmm
 SFwFvNvNEUSFuJxFOrxFkwxFxFaakXfbsipbuJmmmmmmmmmmmmmmmmmmmmmmmm
@@ -316,13 +321,13 @@ mmmmHhHhHhHhHhHhHhHhHhHhHhHhHhHhHhHhHhHhSDHhHhHhHhHhHhSDmmmmmm
 mmmmHhaxaxaxaxaxaxaxBNaxVEtwWuvUvUvUujvUvUvUvUvUWuvUvUBNmmmmmm
 mmmmHhaxaxaxaxaxaxaxBNaxVEtwvUvUvUvUBNkWSDHhHhHhHhSDWASDmmmmmm
 mmmmuJuJHhuJHhHhuJHhuJHhHhuJHhHhSDObSDHhSDnTSXkgzcBNvUBNmmmmmm
-mmmmBNUodryedruHrYeTrYzxzxBNHGHGsXROwSROjWxFxFNEpLkIvUBNmmmmmm
+mmmmBNUodryedruHrYeTrYzxzxBNHGHGsXROwSROuXxFxFNEpLkIvUBNmmmmmm
 mmmmuJNjdHarBmfOaruWbHIZzxuJlLhLzzROROuMSDxFlNNEOdBNvUBNmmmmmm
-mmmmBNgMoKjHjHjHjHMNgKIZQnuJqbuFKuROROROBNzsMiNENEBNvUBNmmmmmm
+mmmmBNgMoKDyjHnaSiMNgKVMQnuJqbuFKuROROROBNzsMiNENEBNvUBNmmmmmm
 mmmmBNzxVBVBVBVBVBVBVBzxzxBNJpJpJpROTzPYSDHhHhHhHhSDvUBNmmmmmm
 mmmmBNzxzxWIzxzxzxgXzxzxzxBNROROROROlDkOSDHhHhHhHhSDRgSDmmmmmm
 mmmmuJHhHhHhHhjWuJHhuJOGuJuJSDqUROROlDQKBNnTSXFCWmBNvUBNmmmmmm
-mmmmBNJvTDYbFQPsSDyayKzxvlbNSDfWROROROROjWxFxFTutGCgvUBNmmmmmm
+mmmmBNJvTDYbFQPsSDyayKzxvlbNSDfWROROROROuXxFxFTutGCgvUBNmmmmmm
 mmmmuJCmGGagcJWnjWxFzxzxdSxFuXROROROROuMSDxFlNTuAhBNvUBNmmmmmm
 mmmmBNTmAZQXlgPsSDyazxzxzxbNSDfWROROROROBNzscWTuTuBNvUBNmmmmmm
 mmmmBNIAGDGDZakBBNxFyKzxvlxFBNTdROROROdXSDHhHhHhHhHhHhSDmmmmmm
