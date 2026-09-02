@@ -502,7 +502,7 @@
 	backpack_contents = list(
 		/obj/item/scrying = 1,
 		/obj/item/chalk = 1,
-		/obj/item/frumentarii = 1
+		/obj/item/frumentarii = 1,
 	)
 	armor = /obj/item/clothing/armor/gambeson/hand
 	cloak = /obj/item/clothing/cloak/half
