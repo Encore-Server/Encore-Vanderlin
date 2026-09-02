@@ -77,12 +77,11 @@
 /turf/open/floor/blocks,
 /area/outdoors/oldfort)
 "aK" = (
-/obj/structure/fluff/road_sign{
-	dir = 1;
-	name = "WEST- To Mont Paradise"
+/obj/effect/mob_spawn/corpse/human/damaged{
+	brute_damage = 500
 	},
-/turf/open/floor/grass/red,
-/area/outdoors/woods/west)
+/turf/open/floor/dirt,
+/area/indoors/vampire_manor)
 "aL" = (
 /obj/structure/fluff/railing/border{
 	dir = 5
@@ -3119,6 +3118,12 @@
 	},
 /turf/open/floor/twig,
 /area/indoors/shelter/woods)
+"wG" = (
+/obj/effect/mapping_helpers/secret_door_creator{
+	redstone_id = "vampescape"
+	},
+/turf/closed/wall/mineral/stone,
+/area/indoors/vampire_manor)
 "wH" = (
 /obj/structure/fluff/railing/border{
 	dir = 4
@@ -3942,6 +3947,12 @@
 	},
 /turf/open/floor/dirt,
 /area/under/cave/oldtown)
+"CG" = (
+/obj/effect/mapping_helpers/secret_door_creator{
+	redstone_id = "vampkitchencellar"
+	},
+/turf/closed/wall/mineral/decostone,
+/area/indoors/vampire_manor)
 "CI" = (
 /obj/structure/fluff/railing/wood,
 /turf/open/floor/grass/yel,
@@ -20960,7 +20971,7 @@ pM
 sQ
 ie
 nV
-pt
+rO
 KQ
 KQ
 KQ
@@ -21217,7 +21228,7 @@ pM
 sQ
 ie
 ie
-ie
+rO
 zz
 EB
 EB
@@ -21474,7 +21485,7 @@ HA
 sQ
 sQ
 ie
-KE
+rO
 rO
 EB
 BT
@@ -21731,7 +21742,7 @@ Ce
 Ce
 sQ
 ie
-Ym
+rO
 rO
 EB
 BT
@@ -21988,7 +21999,7 @@ hO
 Ce
 sQ
 ie
-Qh
+rO
 rO
 EB
 BT
@@ -22245,7 +22256,7 @@ hO
 Ce
 sQ
 ie
-pt
+rO
 rO
 EB
 BT
@@ -22502,7 +22513,7 @@ sQ
 RA
 sQ
 ie
-uC
+rO
 rO
 EB
 BT
@@ -22758,9 +22769,9 @@ hO
 sQ
 sQ
 Ce
-ie
-pt
-nV
+rO
+rO
+rO
 EB
 BT
 BT
@@ -23015,8 +23026,8 @@ hO
 Ce
 sQ
 Ce
-ie
-pt
+rO
+rO
 rO
 EB
 BT
@@ -23033,7 +23044,7 @@ BT
 BT
 BT
 BT
-BT
+CG
 BT
 BT
 BT
@@ -23272,8 +23283,8 @@ sQ
 RA
 Ce
 sQ
-sQ
-KE
+rO
+rO
 rO
 EB
 BT
@@ -23529,8 +23540,8 @@ sQ
 hO
 Ce
 sQ
-KE
-KE
+rO
+rO
 rO
 EB
 BT
@@ -23786,7 +23797,7 @@ sQ
 hO
 Ce
 sQ
-KE
+rO
 rO
 rO
 EB
@@ -24043,7 +24054,7 @@ sQ
 hO
 Ce
 sQ
-KE
+rO
 rO
 rO
 EB
@@ -24300,7 +24311,7 @@ sQ
 hO
 Ce
 sQ
-KE
+rO
 rO
 rO
 EB
@@ -24557,8 +24568,8 @@ sQ
 hO
 Ce
 sQ
-sQ
-KE
+rO
+rO
 rO
 EB
 RY
@@ -24814,8 +24825,8 @@ sQ
 hO
 Ce
 sQ
-KE
-Pg
+rO
+rO
 rO
 EB
 By
@@ -25071,7 +25082,7 @@ sQ
 RA
 Ce
 sQ
-KE
+rO
 rO
 rO
 EB
@@ -25328,7 +25339,7 @@ hO
 Ce
 sQ
 sQ
-KE
+rO
 rO
 rO
 EB
@@ -28424,7 +28435,7 @@ rO
 EB
 BT
 BT
-BT
+wG
 BT
 BT
 BT
@@ -30993,7 +31004,7 @@ QZ
 zz
 zz
 zz
-ja
+aK
 zz
 NL
 zz
@@ -60034,11 +60045,11 @@ pt
 pt
 pt
 pt
-by
-by
-by
-by
-by
+pt
+pt
+pt
+pt
+pt
 KE
 KE
 pt
@@ -60539,9 +60550,9 @@ by
 by
 by
 by
+KE
 pt
 pt
-mu
 pt
 pt
 pt
@@ -60796,8 +60807,8 @@ by
 by
 by
 by
-by
-pt
+KE
+hK
 pt
 yB
 VL
@@ -61053,7 +61064,7 @@ by
 by
 by
 by
-by
+KE
 pt
 pt
 Po
@@ -61310,7 +61321,7 @@ by
 by
 by
 by
-by
+KE
 pt
 eD
 OU
@@ -61567,7 +61578,7 @@ by
 by
 by
 by
-by
+KE
 pt
 KE
 Po
@@ -61824,7 +61835,7 @@ by
 by
 by
 by
-by
+KE
 pt
 Ma
 yB
@@ -62081,7 +62092,7 @@ by
 by
 by
 by
-by
+KE
 pt
 pt
 OU
@@ -62338,7 +62349,7 @@ by
 by
 by
 by
-by
+KE
 pt
 pt
 yB
@@ -62594,9 +62605,9 @@ by
 by
 by
 by
-by
-by
-by
+KE
+pL
+KE
 pt
 Po
 BT
@@ -62851,8 +62862,8 @@ by
 by
 by
 by
-by
-by
+KE
+pL
 pt
 pt
 OU
@@ -63108,9 +63119,9 @@ by
 by
 by
 by
-by
-by
-pt
+pL
+pL
+hK
 pt
 YP
 BT
@@ -63365,8 +63376,8 @@ by
 by
 by
 by
-by
-by
+pL
+pL
 pt
 KE
 yB
@@ -63622,8 +63633,8 @@ by
 by
 by
 by
-by
-by
+KE
+KE
 pt
 Fm
 OU
@@ -63879,7 +63890,7 @@ by
 by
 by
 by
-by
+KE
 pt
 pt
 pt
@@ -64136,7 +64147,7 @@ by
 by
 by
 by
-by
+KE
 pt
 pt
 KE
@@ -64393,8 +64404,8 @@ by
 by
 by
 by
-by
-by
+KE
+KE
 pt
 pt
 VL
@@ -64650,8 +64661,8 @@ by
 by
 by
 by
-by
-by
+pL
+KE
 pt
 uR
 Po
@@ -64907,8 +64918,8 @@ by
 by
 by
 by
-by
-pt
+pL
+hK
 pt
 mu
 RD
@@ -65164,8 +65175,8 @@ by
 by
 by
 by
-by
-pt
+KE
+hK
 pt
 pt
 OU
@@ -65423,7 +65434,7 @@ by
 by
 pt
 pt
-pt
+hK
 Fm
 yB
 BT
@@ -65679,8 +65690,8 @@ by
 by
 by
 pt
-pt
-pt
+hK
+hK
 pt
 Po
 BT
@@ -69030,7 +69041,7 @@ pt
 pt
 GZ
 KE
-KE
+pL
 Jz
 Jz
 Jz
@@ -69543,7 +69554,7 @@ by
 by
 KE
 pt
-pt
+hK
 pt
 qk
 Jz
@@ -71600,7 +71611,7 @@ by
 by
 pt
 pt
-aK
+pt
 GB
 kT
 pt
