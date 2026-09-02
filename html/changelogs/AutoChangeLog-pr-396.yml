@@ -1,0 +1,4 @@
+author: "furrycactus"
+delete-after: True
+changes:
+  - bugfix: "Fixes Knights and Templars not having medium armour training."
