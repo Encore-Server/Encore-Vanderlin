@@ -3566,10 +3566,10 @@
 "cFF" = (
 /obj/item/essence_vial{
 	pixel_x = -8;
-	pixel_y = 21
+	pixel_y = 20
 	},
 /obj/item/essence_vial{
-	pixel_y = 22;
+	pixel_y = 20;
 	pixel_x = 8
 	},
 /obj/structure/table/wood/reinf_long,
@@ -13175,6 +13175,14 @@
 /obj/machinery/light/fueledstreet/orange/wall{
 	dir = 4
 	},
+/obj/item/reagent_containers/glass/bottle/vial,
+/obj/item/reagent_containers/glass/bottle/vial,
+/obj/item/reagent_containers/glass/bottle/vial,
+/obj/item/reagent_containers/glass/bottle/vial,
+/obj/item/reagent_containers/glass/bottle/vial,
+/obj/item/reagent_containers/glass/bottle/vial,
+/obj/item/reagent_containers/glass/bottle/vial,
+/obj/item/reagent_containers/glass/bottle/vial,
 /turf/open/floor/tile,
 /area/indoors/town/clinic_large)
 "jhG" = (
@@ -18753,30 +18761,31 @@
 /area/indoors/town/steward)
 "mSJ" = (
 /obj/item/essence_vial{
-	pixel_x = -5;
-	pixel_y = 15
+	pixel_y = -6;
+	pixel_x = 4
 	},
 /obj/item/essence_vial{
-	pixel_y = 6;
-	pixel_x = -1
-	},
-/obj/item/essence_vial{
-	pixel_y = 11;
-	pixel_x = 8
-	},
-/obj/item/essence_vial{
-	pixel_x = 7;
-	pixel_y = 3
-	},
-/obj/item/essence_vial{
-	pixel_x = -10;
-	pixel_y = 2
+	pixel_x = -3;
+	pixel_y = -6
 	},
 /obj/structure/table/wood/reinf_long{
 	dir = 1
 	},
 /obj/item/essence_vial{
-	pixel_y = -4
+	pixel_x = 0;
+	pixel_y = -12
+	},
+/obj/item/essence_vial/combat{
+	pixel_x = 1;
+	pixel_y = 7
+	},
+/obj/item/essence_vial/combat{
+	pixel_x = -7;
+	pixel_y = 14
+	},
+/obj/item/essence_vial/combat{
+	pixel_x = 10;
+	pixel_y = 14
 	},
 /turf/open/floor/blocks/stonered/tiny,
 /area/indoors/town/clinic_large/apothecary)
@@ -26967,6 +26976,12 @@
 /obj/effect/spawner/map_spawner/loot/potion_ingredient,
 /obj/effect/spawner/map_spawner/loot/potion_ingredient,
 /obj/effect/spawner/map_spawner/loot/potion_ingredient,
+/obj/item/alch/silverdust,
+/obj/item/alch/thaumicdust,
+/obj/item/alch/golddust,
+/obj/item/alch/irondust,
+/obj/item/alch/feaudust,
+/obj/item/alch/coaldust,
 /turf/open/floor/blocks/paving,
 /area/indoors/town/clinic_large/apothecary)
 "sLT" = (
