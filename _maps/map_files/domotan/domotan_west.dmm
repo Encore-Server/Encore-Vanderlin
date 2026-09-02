@@ -3942,9 +3942,6 @@
 	},
 /turf/open/floor/dirt,
 /area/under/cave/oldtown)
-"CG" = (
-/turf/closed/basic,
-/area/indoors/vampire_manor)
 "CI" = (
 /obj/structure/fluff/railing/wood,
 /turf/open/floor/grass/yel,
@@ -64154,7 +64151,7 @@ BT
 BT
 BT
 BT
-CG
+BT
 BT
 BT
 BT
