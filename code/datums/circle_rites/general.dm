@@ -1,7 +1,6 @@
 /datum/circle_rite/lesser_wolf
 	name = "Rite of the Lesser Wolf"
 	tradition = /datum/ritual_tradition/general
-	skill_level = 2
 	circle_path = /obj/structure/ritualcircle/dendor
 	chants = list(
 		"Beast brothers, answer my call!",

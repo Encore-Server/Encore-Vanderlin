@@ -1,7 +1,6 @@
 /datum/circle_rite/undermaiden_bargain
 	name = "Undermaiden's Bargain"
 	tradition = /datum/ritual_tradition/bog_witch
-	skill_level = 5
 	circle_path = /obj/structure/ritualcircle/death
 	chants = list(
 		"Placeholder chant!",

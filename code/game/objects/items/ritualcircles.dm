@@ -31,9 +31,6 @@
 	if(user.has_status_effect(/datum/status_effect/debuff/ritesexpended))
 		to_chat(user, span_smallred("I have performed enough rituals for the day... I must rest before communing more."))
 		return FALSE
-	if(!inscribed.can_invoke(user, src))
-		to_chat(user, span_smallred("I lack the knowledge to invoke this rite."))
-		return FALSE
 	return TRUE
 
 /obj/structure/ritualcircle/proc/finish_rite(mob/living/user)

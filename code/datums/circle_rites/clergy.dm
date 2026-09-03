@@ -1,7 +1,6 @@
 /datum/circle_rite/guiding_light
 	name = "Guiding Light"
 	tradition = /datum/ritual_tradition/clergy
-	skill_level = 3
 	circle_path = /obj/structure/ritualcircle/astrata
 	chants = list(
 		"I beseech the she-form of the Twinned God!!",
@@ -26,7 +25,6 @@
 /datum/circle_rite/moonlight_dance
 	name = "Moonlight Dance"
 	tradition = /datum/ritual_tradition/clergy
-	skill_level = 1
 	circle_path = /obj/structure/ritualcircle/noc
 	chants = list(
 		"I beseech the he-form of the Twinned God!!",
@@ -44,7 +42,6 @@
 /datum/circle_rite/flylords_triage
 	name = "Flylord's Triage"
 	tradition = /datum/ritual_tradition/clergy
-	skill_level = 3
 	circle_path = /obj/structure/ritualcircle/pestra
 	chants = list(
 		"O Queen of Blight, whose breath is plague,",
@@ -70,7 +67,6 @@
 /datum/circle_rite/rite_of_oblivion
 	name = "Rite of Oblivion"
 	tradition = /datum/ritual_tradition/clergy
-	skill_level = 5
 	circle_path = /obj/structure/ritualcircle/eora
 	chants = list(
 		"Slip through cracks where time won't tread,",
