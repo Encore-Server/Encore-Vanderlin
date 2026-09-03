@@ -20140,6 +20140,16 @@
 "nRV" = (
 /turf/open/floor/ruinedwood/alt,
 /area/outdoors/town)
+"nSo" = (
+/obj/structure/fluff/traveltile{
+	icon = 'icons/roguetown/topadd/death/vamp-lord.dmi';
+	icon_state = "portal";
+	name = "Blood Portal";
+	aportalgoesto = "vamplair";
+	aportalid = "smugglerdenvamplair"
+	},
+/turf/open/floor/greenstone/runed,
+/area/under/town/basement/smugglers_tunnels)
 "nSQ" = (
 /obj/machinery/essence/extractor{
 	pixel_y = 4
@@ -23233,16 +23243,6 @@
 	},
 /turf/open/floor/hexstone,
 /area/indoors/town/keep/archivist)
-"qbF" = (
-/obj/structure/fluff/traveltile{
-	icon = 'icons/roguetown/topadd/death/vamp-lord.dmi';
-	icon_state = "portal";
-	name = "Blood Portal";
-	aportalgoesto = "vamplair";
-	aportalid = "smugglerdenvamplair"
-	},
-/turf/open/floor/greenstone/runed,
-/area/under/town/basement/smugglers_tunnels)
 "qbL" = (
 /obj/effect/landmark/start/alchemist,
 /turf/open/floor/blocks/stonered,
@@ -26589,12 +26589,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/ruinedwood/turned/alt,
 /area/outdoors/exposed)
-"sxj" = (
-/obj/structure/lever{
-	redstone_id = "slitherwayvamp"
-	},
-/turf/open/floor/greenstone,
-/area/under/town/basement/smugglers_tunnels)
 "sxW" = (
 /obj/structure/fluff/walldeco/vinez/blue,
 /turf/closed/wall/mineral/stone/window,
@@ -27000,12 +26994,6 @@
 /obj/item/alch/coaldust,
 /turf/open/floor/blocks/paving,
 /area/indoors/town/clinic_large/apothecary)
-"sLx" = (
-/obj/structure/lever/hidden/thieves_guild{
-	redstone_id = "slitherwayvamp"
-	},
-/turf/closed/wall/mineral/stone/moss,
-/area/under/town/basement/smugglers_tunnels)
 "sLT" = (
 /turf/open/floor/blocks/green,
 /area/indoors/town/clinic_large/apothecary)
@@ -27364,12 +27352,6 @@
 /obj/effect/landmark/events/animal_migration_point,
 /turf/open/floor/dirt/road,
 /area/outdoors/town/neighborhood/east)
-"sZI" = (
-/obj/effect/mapping_helpers/secret_door_creator/thieves_guild{
-	redstone_id = "slitherwayvamp"
-	},
-/turf/closed/wall/mineral/stone/moss,
-/area/under/town/basement/smugglers_tunnels)
 "tag" = (
 /turf/open/floor/rooftop,
 /area/outdoors/exposed)
@@ -27541,6 +27523,12 @@
 /obj/structure/fluff/walldeco/vinez,
 /turf/open/floor/ruinedwood/turned/alt,
 /area/indoors/soilsons)
+"tgg" = (
+/obj/structure/lever/hidden/thieves_guild{
+	redstone_id = "slitherwayvamp"
+	},
+/turf/closed/wall/mineral/stone/moss,
+/area/under/town/basement/smugglers_tunnels)
 "tgr" = (
 /obj/item/reagent_containers/glass/cup/wooden{
 	pixel_y = 5
@@ -32197,6 +32185,12 @@
 	},
 /turf/open/floor/church,
 /area/indoors/town/keep/kitchen)
+"wra" = (
+/obj/effect/mapping_helpers/secret_door_creator/thieves_guild{
+	redstone_id = "slitherwayvamp"
+	},
+/turf/closed/wall/mineral/stone/moss,
+/area/under/town/basement/smugglers_tunnels)
 "wrA" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/ruinedwood/darker,
@@ -34041,6 +34035,12 @@
 	},
 /turf/open/floor/snow,
 /area/outdoors/town/plaza)
+"xIk" = (
+/obj/structure/lever{
+	redstone_id = "slitherwayvamp"
+	},
+/turf/open/floor/greenstone,
+/area/under/town/basement/smugglers_tunnels)
 "xIx" = (
 /obj/structure/fluff/railing/tall/retaining,
 /obj/structure/fluff/railing/tall/retaining{
@@ -36637,7 +36637,7 @@ jdz
 jdz
 mrh
 nRO
-qbF
+nSo
 mrh
 qDj
 qDj
@@ -36768,7 +36768,7 @@ idA
 jdz
 mrh
 mrh
-sxj
+xIk
 nRO
 gVN
 qss
@@ -36900,8 +36900,8 @@ idA
 jdz
 mrh
 mrh
-sLx
-sZI
+tgg
+wra
 gVN
 qXZ
 rgn
