@@ -39,7 +39,7 @@
 	)
 
 	clan_covens = list(
-		/datum/coven/auspex,
+		/datum/coven/obfuscate,
 		/datum/coven/presence,
 		/datum/coven/bloodheal,
 		/datum/coven/pomette
