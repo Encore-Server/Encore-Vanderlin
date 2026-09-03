@@ -1,0 +1,171 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/obj/effect/mob_spawn/corpse/human/dwarf/trader,
+/obj/item/weapon/pick{
+	pixel_x = 3;
+	pixel_y = 8
+	},
+/obj/effect/decal/cleanable/blood/splatter,
+/obj/effect/decal/cleanable/blood/footprints,
+/turf/open/floor/dirt/road,
+/area)
+"b" = (
+/obj/effect/decal/cleanable/debris/wood,
+/mob/living/carbon/human/species/orc/npc/footsoldier,
+/turf/open/floor/dirt/road,
+/area)
+"c" = (
+/obj/effect/decal/cleanable/debris/stone,
+/obj/effect/decal/cleanable/blood,
+/obj/structure/fluff/railing/tall/palisade{
+	dir = 8
+	},
+/turf/open/floor/dirt/road,
+/area)
+"e" = (
+/turf/closed/wall/mineral/wooddark,
+/area)
+"f" = (
+/turf/open/floor/dirt,
+/area)
+"g" = (
+/turf/closed/wall/mineral/tent{
+	dir = 1
+	},
+/area)
+"j" = (
+/obj/effect/decal/cleanable/blood/splatter,
+/obj/effect/decal/cleanable/blood/wallsplatter,
+/turf/closed/wall/mineral/tent{
+	dir = 1
+	},
+/area)
+"p" = (
+/obj/structure/lootable_structure/mining_cache,
+/turf/open/floor/dirt,
+/area)
+"x" = (
+/turf/open/floor/dirt/road,
+/area)
+"y" = (
+/obj/structure/fluff/railing/tall/palisade,
+/turf/open/floor/dirt,
+/area)
+"A" = (
+/turf/closed/wall/mineral/tent,
+/area)
+"B" = (
+/obj/effect/spawner/map_spawner/treeorstump,
+/turf/open/floor/dirt,
+/area)
+"D" = (
+/turf/closed/wall/mineral/tent{
+	dir = 4
+	},
+/area)
+"H" = (
+/obj/effect/decal/cleanable/debris/wood,
+/obj/effect/spawner/map_spawner/loot/coin/low,
+/obj/effect/spawner/map_spawner/loot/coin/low,
+/obj/structure/closet/crate/chest/old_crate,
+/turf/open/floor/dirt/road,
+/area)
+"I" = (
+/obj/structure/roguetent,
+/turf/open/floor/dirt,
+/area)
+"K" = (
+/obj/effect/decal/cleanable/debris/stone,
+/mob/living/carbon/human/species/orc/npc/footsoldier,
+/turf/open/floor/dirt,
+/area)
+"O" = (
+/turf/closed/wall/mineral/tent{
+	dir = 8
+	},
+/area)
+"U" = (
+/obj/effect/decal/cleanable/debris/wood,
+/mob/living/carbon/human/species/orc/npc/footsoldier,
+/obj/effect/decal/cleanable/blood/footprints,
+/turf/open/floor/dirt/road,
+/area)
+"W" = (
+/obj/effect/decal/cleanable/debris/wood,
+/obj/effect/decal/cleanable/blood/puddle,
+/obj/structure/fluff/railing/tall/palisade{
+	dir = 8
+	},
+/turf/open/floor/dirt,
+/area)
+"X" = (
+/turf/template_noop,
+/area)
+"Y" = (
+/obj/effect/spawner/map_spawner/treeorbush,
+/turf/open/floor/dirt,
+/area)
+
+(1,1,1) = {"
+X
+f
+Y
+f
+X
+f
+X
+"}
+(2,1,1) = {"
+B
+e
+c
+W
+O
+e
+f
+"}
+(3,1,1) = {"
+f
+j
+a
+U
+p
+A
+X
+"}
+(4,1,1) = {"
+X
+g
+H
+b
+x
+y
+B
+"}
+(5,1,1) = {"
+X
+g
+f
+x
+K
+y
+X
+"}
+(6,1,1) = {"
+B
+e
+I
+D
+D
+e
+X
+"}
+(7,1,1) = {"
+X
+X
+f
+f
+X
+Y
+X
+"}

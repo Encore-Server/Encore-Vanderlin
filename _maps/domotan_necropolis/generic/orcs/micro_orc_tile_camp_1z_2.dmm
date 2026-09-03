@@ -1,0 +1,235 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/dirt/road,
+/area/template_noop)
+"d" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/dirt,
+/area/template_noop)
+"e" = (
+/turf/closed/wall/mineral/tent,
+/area/template_noop)
+"h" = (
+/obj/structure/fluff/railing/tall/palisade{
+	dir = 1;
+	pixel_x = 0;
+	pixel_y = -3
+	},
+/turf/open/floor/dirt,
+/area/template_noop)
+"i" = (
+/obj/effect/spawner/map_spawner/loot/coin/low,
+/turf/open/floor/dirt,
+/area/template_noop)
+"j" = (
+/obj/structure/fluff/railing/tall/palisade{
+	dir = 1;
+	pixel_x = 0;
+	pixel_y = -1
+	},
+/turf/open/floor/dirt,
+/area/template_noop)
+"l" = (
+/obj/structure/fluff/railing/tall/palisade{
+	dir = 8;
+	pixel_x = 2;
+	pixel_y = 0
+	},
+/obj/effect/spawner/map_spawner/loot/weapon,
+/turf/open/floor/dirt,
+/area/template_noop)
+"o" = (
+/turf/open/floor/dirt,
+/area/template_noop)
+"r" = (
+/obj/structure/fluff/railing/tall/palisade{
+	dir = 8;
+	pixel_x = -3;
+	pixel_y = 0
+	},
+/turf/open/floor/dirt,
+/area/template_noop)
+"t" = (
+/turf/template_noop,
+/area/template_noop)
+"u" = (
+/turf/closed/wall/mineral/tent{
+	dir = 4
+	},
+/area/template_noop)
+"v" = (
+/obj/effect/decal/cleanable/dirt,
+/mob/living/carbon/human/species/orc/npc/berserker,
+/turf/open/floor/dirt,
+/area/template_noop)
+"w" = (
+/obj/structure/fluff/railing/tall/palisade{
+	pixel_x = 0;
+	pixel_y = -6
+	},
+/turf/closed/wall/mineral/tent{
+	pixel_x = 0;
+	pixel_y = 0
+	},
+/area/template_noop)
+"D" = (
+/obj/structure/fluff/railing/tall/palisade{
+	dir = 1;
+	pixel_x = 4;
+	pixel_y = -1
+	},
+/obj/structure/fluff/railing/tall/palisade{
+	dir = 8;
+	pixel_x = 3;
+	pixel_y = -5
+	},
+/turf/open/floor/dirt,
+/area/template_noop)
+"E" = (
+/obj/structure/fluff/railing/tall/palisade{
+	pixel_x = 0;
+	pixel_y = 6
+	},
+/turf/open/floor/dirt,
+/area/template_noop)
+"I" = (
+/obj/structure/fluff/railing/tall/palisade{
+	pixel_x = 0;
+	pixel_y = -3
+	},
+/turf/open/floor/dirt,
+/area/template_noop)
+"J" = (
+/obj/structure/fluff/walldeco/skullspike{
+	pixel_x = -17;
+	pixel_y = 8
+	},
+/obj/structure/fluff/walldeco/skullspike{
+	pixel_x = -9;
+	pixel_y = -1
+	},
+/obj/structure/fluff/walldeco/skullspike{
+	pixel_x = -22;
+	pixel_y = -4
+	},
+/obj/structure/fluff/walldeco/skullspike{
+	pixel_x = -2;
+	pixel_y = 11
+	},
+/turf/open/floor/dirt,
+/area/template_noop)
+"L" = (
+/obj/structure/fluff/railing/tall/palisade{
+	dir = 1;
+	pixel_x = 0;
+	pixel_y = 3
+	},
+/turf/open/floor/dirt,
+/area/template_noop)
+"M" = (
+/obj/structure/fluff/railing/tall/palisade{
+	dir = 4;
+	pixel_x = 1;
+	pixel_y = 0
+	},
+/turf/open/floor/dirt,
+/area/template_noop)
+"N" = (
+/mob/living/carbon/human/species/orc/npc/berserker,
+/turf/open/floor/dirt/road,
+/area/template_noop)
+"S" = (
+/obj/structure/fluff/railing/tall/palisade{
+	dir = 8;
+	pixel_x = 0;
+	pixel_y = 0
+	},
+/obj/effect/decal/cleanable/blood/old,
+/turf/open/floor/dirt/road,
+/area/template_noop)
+"T" = (
+/mob/living/carbon/human/species/orc/npc/berserker,
+/turf/open/floor/dirt,
+/area/template_noop)
+"V" = (
+/obj/effect/decal/cleanable/blood/old,
+/turf/open/floor/dirt,
+/area/template_noop)
+"X" = (
+/obj/structure/roguetent,
+/turf/open/floor/dirt,
+/area/template_noop)
+"Z" = (
+/obj/structure/fluff/railing/tall/palisade{
+	dir = 4;
+	pixel_x = -6;
+	pixel_y = 6
+	},
+/obj/structure/fluff/railing/tall/palisade,
+/turf/open/floor/dirt,
+/area/template_noop)
+
+(1,1,1) = {"
+t
+t
+o
+t
+t
+o
+t
+"}
+(2,1,1) = {"
+t
+D
+S
+l
+r
+e
+t
+"}
+(3,1,1) = {"
+o
+h
+N
+a
+T
+w
+o
+"}
+(4,1,1) = {"
+o
+L
+i
+v
+o
+E
+o
+"}
+(5,1,1) = {"
+t
+j
+d
+o
+V
+I
+o
+"}
+(6,1,1) = {"
+t
+u
+X
+u
+M
+Z
+o
+"}
+(7,1,1) = {"
+t
+J
+t
+t
+t
+o
+t
+"}
