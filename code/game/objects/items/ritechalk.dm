@@ -6,22 +6,42 @@
 	w_class = WEIGHT_CLASS_TINY
 	associated_skill = /datum/attribute/skill/magic/ritual
 
+/obj/item/ritechalk/proc/available_rites(tradition_path, mob/living/user)
+	var/list/out = list()
+	for(var/rite_name in rituals_for_tradition(tradition_path))
+		var/datum/circle_rite/R = rituals_for_tradition(tradition_path)[rite_name]
+		if(R.can_inscribe(user))
+			out[R.name] = R
+	return out
+
 /obj/item/ritechalk/attack_self(mob/living/user)
 	if(!HAS_TRAIT(user, TRAIT_RITUALIST))
 		to_chat(user, span_smallred("I don't know what I'm doing with this..."))
 		return
 
-	var/choose_rune = input(user, "Which rune shall I inscribe?", src) as null | anything in GLOB.all_rituals
-	if(!choose_rune)
-		return
-	var/list/rune_data = GLOB.all_rituals[choose_rune]
-	var/rune_path = rune_data["path"]
-	var/rune_level = rune_data["level"]
-	var/user_level = GET_MOB_SKILL_VALUE(user, /datum/attribute/skill/magic/ritual) || 0
-	if(rune_level > user_level)
-		to_chat(user, span_warning("I don't have the skill to inscribe [choose_rune]"))
+	var/list/traditions = list()
+	for(var/datum/ritual_tradition/path as anything in subtypesof(/datum/ritual_tradition))
+		if(IS_ABSTRACT(path))
+			continue
+		if(!length(available_rites(path, user)))
+			continue
+		var/datum/ritual_tradition/T = path
+		traditions[T::name] = path
+
+	if(!length(traditions))
+		to_chat(user, span_warning("I know no rites I can inscribe."))
 		return
 
+	var/picked_trad_name = input(user, "Which tradition?", src) as null | anything in traditions
+	if(!picked_trad_name)
+		return
+
+	var/list/available = available_rites(traditions[picked_trad_name], user)
+	var/picked_rite_name = input(user, "Which rite?", picked_trad_name) as null | anything in available
+	if(!picked_rite_name)
+		return
+
+	var/datum/circle_rite/rite = available[picked_rite_name]
 	var/turf/step_turf = get_step(get_turf(user), user.dir)
 	if(!step_turf)
 		to_chat(user, span_warning("There is nowhere to inscribe that rune."))
@@ -30,9 +50,9 @@
 		to_chat(user, span_warning("There is already a rune inscribed there!"))
 		return
 
-	to_chat(user, span_cultsmall("I begin inscribing [choose_rune]..."))
+	to_chat(user, span_cultsmall("I begin inscribing [rite.name]..."))
 	if(!do_after(user, 3 SECONDS, src))
 		return
 
 	playsound(src, 'sound/foley/scribble.ogg', 40, TRUE)
-	new rune_path(step_turf)
+	new rite.circle_path(step_turf, rite)
