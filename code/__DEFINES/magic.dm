@@ -64,11 +64,17 @@
 
 // Mana source flags
 /// Absorb from leylines
-#define MANA_ALL_LEYLINES (1 << 1)
+#define MANA_ALL_LEYLINES (1 << 0)
 /// Absorb from pylons with right click
-#define MANA_ALL_PYLONS (1 << 2)
+#define MANA_ALL_PYLONS (1 << 1)
 /// Absord from souls (if visible)
-#define MANA_SOULS (1 <<3)
+#define MANA_SOULS (1 << 2)
+
+DEFINE_BITFIELD(intrinsic_recharge_sources, list(
+	"MANA_ALL_LEYLINES" = MANA_ALL_LEYLINES,
+	"MANA_ALL_PYLONS" = MANA_ALL_PYLONS,
+	"MANA_SOULS" = MANA_SOULS,
+))
 
 #define MANA_DISPERSE_EVENLY 1
 #define MANA_SEQUENTIAL 2
@@ -223,7 +229,7 @@ DEFINE_BITFIELD(spell_requirements, list(
 #define FORM_LIGHTNING "Lightning"
 #define FORM_EARTH "Earth"
 #define FORM_ARCANE "Arcane"
-#define FORM_DEATH "Death"
+#define FORM_DEATH "Entropy"
 #define FORM_LIFE "Life"
 #define FORM_AIR "Aeromancy"
 #define FORM_WATER "Hydromancy"
@@ -281,6 +287,8 @@ GLOBAL_LIST_INIT(all_forms, list(
 	FORM_WATER,
 ))
 
+GLOBAL_LIST_INIT(all_essences, subtypesof(/datum/thaumaturgical_essence))
+
 GLOBAL_LIST_INIT(all_rituals, list(
 	RUNE_SUN = list(
 		"path" = /obj/structure/ritualcircle/astrata,
@@ -307,7 +315,6 @@ GLOBAL_LIST_INIT(all_rituals, list(
 		"level" = 5
 	),
 ))
-
 #define CHARGETIME_POKE 0.5 SECONDS // Staple poke spells
 #define CHARGETIME_MINOR 1 SECONDS // Minor utility / support spells
 #define CHARGETIME_MAJOR 1.5 SECONDS // Major projectiles

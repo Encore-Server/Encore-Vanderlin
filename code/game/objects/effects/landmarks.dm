@@ -100,6 +100,18 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 	name = JOB_STEWARD
 	jobs_to_spawn = list(JOB_STEWARD)
 
+/obj/effect/landmark/start/majordomo
+	name = JOB_MAJORDOMO
+	jobs_to_spawn = list(JOB_MAJORDOMO)
+
+/obj/effect/landmark/start/clerk
+	name = JOB_CLERK
+	jobs_to_spawn = list(JOB_CLERK)
+
+/obj/effect/landmark/start/yeoman
+	name = JOB_YEOMAN
+	jobs_to_spawn = list(JOB_YEOMAN)
+
 /obj/effect/landmark/start/magician
 	name = JOB_COURT_MAGE
 	jobs_to_spawn = list(JOB_COURT_MAGE)
@@ -401,6 +413,10 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 /obj/effect/landmark/start/late/bogwitch
 	name = "Bog Witch and Apprentice"
 	jobs_to_spawn = list(JOB_BOGWITCH, JOB_BOGWITCH_APP)
+
+/obj/effect/landmark/start/tower_magician
+	name = JOB_TOWER_MAGE
+	jobs_to_spawn = list(JOB_TOWER_MAGE)
 
 //Antagonist spawns
 

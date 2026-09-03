@@ -92,10 +92,12 @@
 #define JDO_PRINCE 1.2
 #define JDO_HAND 2
 #define JDO_STEWARD 3
+#define JDO_MAJORDOMO 3.3
 #define JDO_MINOR_NOBLE 3.5
 #define JDO_PHYSICIAN 3.7
 
 #define JDO_MAGICIAN 4
+#define JDO_TOWER_MAGE 4.1
 #define JDO_WAPP 5
 
 #define JDO_APOTHECARY 6
@@ -126,6 +128,7 @@
 #define JDO_MERCHANT 18
 #define JDO_SHOPHAND 18.1
 #define JDO_GRABBER 18.2
+#define JDO_CLERK 18.3
 
 #define JDO_TAILOR 19
 
@@ -144,6 +147,7 @@
 
 #define JDO_BUTCHER 28.1
 #define JDO_SOILSON 28.2
+#define JDO_YEOMAN 28.21
 #define JDO_FISHER 28.3
 #define JDO_HUNTER 28.4
 #define JDO_CARPENTER 28.6
@@ -195,7 +199,7 @@
 #define JOB_PRINCE_FEM "Princess"
 #define JOB_GUARD_CAPTAIN "Captain"
 #define JOB_STEWARD "Steward"
-#define JOB_COURT_MAGE "Court Magician"
+#define JOB_MAJORDOMO "Majordomo"
 #define JOB_ARCHIVIST "Archivist"
 #define JOB_COURT_PHYSICIAN "Court Physician"
 #define JOB_MINOR_NOBLE "Noble"
@@ -220,6 +224,7 @@
 
 
 #define JOB_TOWNER "Towner"
+#define JOB_TOWER_MAGE "Tower Magician"
 #define JOB_SOILSON "Soilson"
 #define JOB_MINER "Miner"
 #define JOB_COOK "Cook"
@@ -241,6 +246,7 @@
 #define JOB_CLINIC_APP "Clinic Apprentice"
 
 
+#define JOB_COURT_MAGE "Tower Archmage"
 #define JOB_INNKEEP "Innkeep"
 #define JOB_BLACKSMITH "Blacksmith"
 #define JOB_TAILOR "Tailor"
@@ -250,6 +256,8 @@
 #define JOB_APOTHECARY "Apothecary"
 #define JOB_TOMB_WARDEN "Tomb Warden"
 #define JOB_BUTLER "Butler"
+#define JOB_CLERK "Clerk"
+#define JOB_YEOMAN "Yeoman"
 
 
 #define JOB_MERCHANT "Merchant"
