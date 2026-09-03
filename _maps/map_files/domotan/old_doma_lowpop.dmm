@@ -23233,6 +23233,16 @@
 	},
 /turf/open/floor/hexstone,
 /area/indoors/town/keep/archivist)
+"qbF" = (
+/obj/structure/fluff/traveltile{
+	icon = 'icons/roguetown/topadd/death/vamp-lord.dmi';
+	icon_state = "portal";
+	name = "Blood Portal";
+	aportalgoesto = "vamplair";
+	aportalid = "smugglerdenvamplair"
+	},
+/turf/open/floor/greenstone/runed,
+/area/under/town/basement/smugglers_tunnels)
 "qbL" = (
 /obj/effect/landmark/start/alchemist,
 /turf/open/floor/blocks/stonered,
@@ -26579,6 +26589,12 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/ruinedwood/turned/alt,
 /area/outdoors/exposed)
+"sxj" = (
+/obj/structure/lever{
+	redstone_id = "slitherwayvamp"
+	},
+/turf/open/floor/greenstone,
+/area/under/town/basement/smugglers_tunnels)
 "sxW" = (
 /obj/structure/fluff/walldeco/vinez/blue,
 /turf/closed/wall/mineral/stone/window,
@@ -26984,6 +27000,12 @@
 /obj/item/alch/coaldust,
 /turf/open/floor/blocks/paving,
 /area/indoors/town/clinic_large/apothecary)
+"sLx" = (
+/obj/structure/lever/hidden/thieves_guild{
+	redstone_id = "slitherwayvamp"
+	},
+/turf/closed/wall/mineral/stone/moss,
+/area/under/town/basement/smugglers_tunnels)
 "sLT" = (
 /turf/open/floor/blocks/green,
 /area/indoors/town/clinic_large/apothecary)
@@ -27342,6 +27364,12 @@
 /obj/effect/landmark/events/animal_migration_point,
 /turf/open/floor/dirt/road,
 /area/outdoors/town/neighborhood/east)
+"sZI" = (
+/obj/effect/mapping_helpers/secret_door_creator/thieves_guild{
+	redstone_id = "slitherwayvamp"
+	},
+/turf/closed/wall/mineral/stone/moss,
+/area/under/town/basement/smugglers_tunnels)
 "tag" = (
 /turf/open/floor/rooftop,
 /area/outdoors/exposed)
@@ -36341,9 +36369,9 @@ wyv
 wyv
 wyv
 idA
-idA
-idA
-idA
+jdz
+jdz
+jdz
 jdz
 jdz
 mrh
@@ -36473,11 +36501,11 @@ fIp
 wyv
 idA
 idA
-idA
 jdz
 jdz
-jdz
-jdz
+mrh
+mrh
+mrh
 mrh
 wXA
 qss
@@ -36607,9 +36635,9 @@ idA
 idA
 jdz
 jdz
-jdz
-jdz
-jdz
+mrh
+nRO
+qbF
 mrh
 qDj
 qDj
@@ -36740,8 +36768,8 @@ idA
 jdz
 mrh
 mrh
-acJ
-lVq
+sxj
+nRO
 gVN
 qss
 qss
@@ -36872,8 +36900,8 @@ idA
 jdz
 mrh
 mrh
-lVq
-lVq
+sLx
+sZI
 gVN
 qXZ
 rgn
