@@ -289,35 +289,6 @@ GLOBAL_LIST_INIT(all_forms, list(
 
 GLOBAL_LIST_INIT(all_essences, subtypesof(/datum/thaumaturgical_essence))
 
-GLOBAL_LIST_INIT(all_rituals, list(
-	RUNE_SUN = list(
-		"path" = /obj/structure/ritualcircle/astrata,
-		"level" = 3
-	),
-	RUNE_MOON = list(
-		"path" = /obj/structure/ritualcircle/noc,
-		"level" = 1
-	),
-	RUNE_BEAST = list(
-		"path" = /obj/structure/ritualcircle/dendor,
-		"level" = 2
-	),
-	RUNE_DEATH = list(
-		"path" = /obj/structure/ritualcircle/death,
-		"level" = 5
-	),
-	RUNE_PLAGUE = list(
-		"path" = /obj/structure/ritualcircle/pestra,
-		"level" = 3
-	),
-	RUNE_LOVE = list(
-		"path" = /obj/structure/ritualcircle/eora,
-		"level" = 5
-	),
-))
-
-GLOBAL_LIST_INIT(ritual_datums, subtypesof(/datum/circle_rite))
-
 #define CHARGETIME_POKE 0.5 SECONDS // Staple poke spells
 #define CHARGETIME_MINOR 1 SECONDS // Minor utility / support spells
 #define CHARGETIME_MAJOR 1.5 SECONDS // Major projectiles

@@ -8,8 +8,9 @@
 
 /obj/item/ritechalk/proc/available_rites(tradition_path, mob/living/user)
 	var/list/out = list()
-	for(var/rite_name in rituals_for_tradition(tradition_path))
-		var/datum/circle_rite/R = rituals_for_tradition(tradition_path)[rite_name]
+	var/list/rites = rituals_for_tradition(tradition_path)
+	for(var/rite_name in rites)
+		var/datum/circle_rite/R = rites[rite_name]
 		if(R.can_inscribe(user))
 			out[R.name] = R
 	return out

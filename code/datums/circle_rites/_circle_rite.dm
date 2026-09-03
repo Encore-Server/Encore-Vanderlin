@@ -1,7 +1,17 @@
+GLOBAL_LIST_INIT(circle_rites, init_circle_rites())
+
+/proc/init_circle_rites()
+	var/list/rites = list()
+	for(var/datum/circle_rite/path as anything in subtypesof(/datum/circle_rite))
+		if(IS_ABSTRACT(path))
+			continue
+		rites[path] = new path
+	return rites
+
 /proc/rituals_for_tradition(tradition_path)
 	var/list/out = list()
-	for(var/path in GLOB.ritual_datums)
-		var/datum/circle_rite/R = GLOB.ritual_datums[path]
+	for(var/path in GLOB.circle_rites)
+		var/datum/circle_rite/R = GLOB.circle_rites[path]
 		if(R.tradition == tradition_path)
 			out[R.name] = R
 	return out
