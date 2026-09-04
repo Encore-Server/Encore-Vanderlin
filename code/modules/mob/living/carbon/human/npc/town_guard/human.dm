@@ -13,7 +13,7 @@
 	. = ..()
 	AddElement(/datum/element/ai_retaliate)
 	AddComponent(/datum/component/ai_aggro_system)
-	set_patron(/datum/patron/divine/ravox, TRUE)
+	set_patron(/datum/patron/divine/mordsol, TRUE)
 	job = "Humen Guardsman"
 	ADD_TRAIT(src, TRAIT_NOMOOD, TRAIT_GENERIC)
 	ADD_TRAIT(src, TRAIT_NOHUNGER, TRAIT_GENERIC)
