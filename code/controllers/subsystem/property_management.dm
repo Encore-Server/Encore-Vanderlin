@@ -526,7 +526,7 @@ SUBSYSTEM_DEF(housing)
 		claimed = TRUE
 		name = "Claimed Property (Slot [selected_slot])"
 		desc = "Click to save your current design to slot [selected_slot]."
-		to_chat(user, span_notice("Property claimed with design slot [selected_slot]! Click again to save changes."))
+		to_chat(user, span_notice("Property claimed with design slot [selected_slot]! Click again to save changes. Items which are inside of containers will not be saved!"))
 	else
 		to_chat(user, span_warning("Failed to claim property!"))
 

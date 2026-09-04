@@ -43,6 +43,11 @@
 		/datum/attribute/skill/combat/swords = 40
 	)
 
+/datum/attribute_holder/sheet/job/templar/patron/akan/flail
+	raw_attribute_list = list(
+		/datum/attribute/skill/combat/whipsflails = 40
+	)
+
 /datum/attribute_holder/sheet/job/templar/patron/akan/spear
 	raw_attribute_list = list(
 		/datum/attribute/skill/combat/polearms = 40
