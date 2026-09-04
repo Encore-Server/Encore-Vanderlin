@@ -26278,8 +26278,7 @@
 	save_id = "medium_workplace_one";
 	template_y = 6;
 	template_x = 11;
-	template_z = 5;
-	rent_cost = 200
+	template_z = 5
 	},
 /turf/open/floor/tile/brick,
 /area/indoors/town)
@@ -29942,8 +29941,7 @@
 	save_id = "medium_workplace_two";
 	template_y = 6;
 	template_x = 11;
-	template_z = 5;
-	rent_cost = 200
+	template_z = 5
 	},
 /turf/open/floor/tile/brick,
 /area/indoors/town)
