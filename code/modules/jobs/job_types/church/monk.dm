@@ -24,7 +24,7 @@
 		STAT_PERCEPTION = -1,
 		/datum/attribute/skill/misc/sewing = 20,
 		/datum/attribute/skill/misc/medicine = 30,
-		/datum/attribute/skill/craft/alchemy = 30
+		/datum/attribute/skill/craft/alchemy = 30,
 		/datum/attribute/skill/combat/polearms = 20,
 		/datum/attribute/skill/combat/unarmed = 10,
 		/datum/attribute/skill/combat/wrestling = 10,
