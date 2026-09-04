@@ -31,8 +31,9 @@
 	if(!recipe)
 		return list() // No recipe, accept nothing from the network
 
-	// Work out the cap per essence type based on what's already in
-	// essence_contents plus what's in our own storage (in-transit).
+	if(owner.brewing > 0 && !owner.auto_repeat)
+		return list()
+
 	var/list/allowed = list()
 	var/max_batches = owner.calculate_max_possible_batches(recipe)
 
@@ -242,43 +243,50 @@
 	brewing = 0
 	return ..()
 
+/obj/machinery/light/fueled/cauldron/proc/desired_batch_count()
+	if(!selected_recipe)
+		return 0
+	return auto_repeat ? 2 : 1
+
 // Drain from node into essence_contents, but never exceed the cap
 // for the current recipe.
 /obj/machinery/light/fueled/cauldron/proc/drain_from_node()
 	if(!essence_node || QDELETED(essence_node))
 		return
+	if(!selected_recipe)
+		return
+	if(brewing > 0 && !auto_repeat)
+		return
+
 	var/datum/essence_storage/node_storage = essence_node.storage
 	if(!node_storage || !node_storage.contents.len)
 		return
 
-	var/datum/alch_cauldron_recipe/recipe = selected_recipe
-	var/max_batches = recipe ? calculate_max_possible_batches(recipe) : 0
+	var/max_batches = calculate_max_possible_batches(selected_recipe)
 
 	for(var/essence_type in node_storage.contents.Copy())
+		if(!(essence_type in selected_recipe.required_essences))
+			continue
 		var/available = node_storage.get(essence_type)
 		if(!available)
 			continue
 		if(essence_contents.len >= max_essence_types && !essence_contents[essence_type])
 			continue
 
-		var/to_drain = available
-		// Cap to recipe needs if we have a recipe and this type is in it
-		if(recipe && max_batches > 0 && (essence_type in recipe.required_essences))
-			var/needed_total = recipe.required_essences[essence_type] * max_batches
-			var/already_have = essence_contents[essence_type] || 0
-			to_drain = min(available, max(0, needed_total - already_have))
-
+		var/needed_total = selected_recipe.required_essences[essence_type] * max_batches
+		var/already_have = essence_contents[essence_type] || 0
+		var/to_drain = min(available, max(0, needed_total - already_have))
 		if(to_drain <= 0)
 			continue
 
 		var/drained = node_storage.remove(essence_type, to_drain)
-		essence_contents[essence_type] = (essence_contents[essence_type] || 0) + drained
+		essence_contents[essence_type] = already_have + drained
 
-	// Push anything left in the node that we don't need back out
-	// (the network will route it elsewhere via push_to_linked)
 	if(node_storage.contents.len)
-		essence_node.push_to_linked(node_storage)
+		essence_node.push_surplus_to_linked(node_storage)
 
+	if(essence_node.network)
+		essence_node.network.invalidate_cache()
 	update_appearance(UPDATE_OVERLAYS)
 
 // How many batches could we theoretically make if we had infinite
@@ -286,19 +294,7 @@
 /obj/machinery/light/fueled/cauldron/proc/calculate_max_possible_batches(datum/alch_cauldron_recipe/recipe)
 	if(!recipe || !recipe.required_essences.len)
 		return 0
-
-	// Each essence slot in essence_contents can hold at most its share
-	// of the total cauldron capacity. Find the limiting type.
-	var/min_batches = INFINITY
-	for(var/essence_type in recipe.required_essences)
-		var/required_per_batch = recipe.required_essences[essence_type]
-		if(!required_per_batch)
-			continue
-		// How many of this type can the cauldron physically hold?
-		var/type_cap = essence_node.storage.max_total / recipe.required_essences.len
-		min_batches = min(min_batches, FLOOR(type_cap / required_per_batch, 1))
-
-	return (min_batches == INFINITY) ? 0 : max(min_batches, 1)
+	return desired_batch_count()
 
 /obj/machinery/light/fueled/cauldron/proc/has_required_essences()
 	if(!selected_recipe)
@@ -325,7 +321,10 @@
 	if(length(essence_contents))
 		if(brewing < 20)
 			if(src.reagents.has_reagent(/datum/reagent/water, 50))
+				var/was_idle = (brewing == 0)
 				brewing++
+				if(was_idle)
+					essence_node.network.invalidate_cache()
 				update_appearance(UPDATE_OVERLAYS)
 				if(prob(10))
 					playsound(src, "bubbles", 100, FALSE)
@@ -371,13 +370,16 @@
 				update_appearance(UPDATE_OVERLAYS)
 
 				if(auto_repeat && selected_recipe)
-					brewing = 0 // Reset immediately for next batch
+					brewing = 0
+
+				essence_node.network.invalidate_cache()
 			else
 				brewing = 0
 				essence_contents = list()
 				src.visible_message(span_info("The essences in the [src] fail to combine properly..."))
 				playsound(src, 'sound/misc/smelter_fin.ogg', 30, FALSE)
 				update_appearance(UPDATE_OVERLAYS)
+				essence_node.network.invalidate_cache()
 
 /obj/machinery/light/fueled/cauldron/proc/calculate_mixture_color()
 	if(essence_contents.len == 0)

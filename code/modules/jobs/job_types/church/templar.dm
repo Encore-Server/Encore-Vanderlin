@@ -42,6 +42,11 @@
 		/datum/attribute/skill/combat/swords = 40
 	)
 
+/datum/attribute_holder/sheet/job/templar/patron/akan/flail
+	raw_attribute_list = list(
+		/datum/attribute/skill/combat/whipsflails = 40
+	)
+
 /datum/attribute_holder/sheet/job/templar/patron/akan/spear
 	raw_attribute_list = list(
 		/datum/attribute/skill/combat/polearms = 40
@@ -71,7 +76,8 @@
 /datum/attribute_holder/sheet/job/templar/patron/valdala
 	raw_attribute_list = list(
 		/datum/attribute/skill/misc/medicine = 20,
-		/datum/attribute/skill/craft/alchemy = 20
+		/datum/attribute/skill/craft/alchemy = 20,
+		/datum/attribute/skill/craft/masonry = 20
 	)
 
 /datum/attribute_holder/sheet/job/templar/patron/valdala/flail
@@ -253,6 +259,7 @@
 
 	traits = list(
 		TRAIT_HEAVYARMOR,
+		TRAIT_MEDIUMARMOR,
 		TRAIT_STEELHEARTED,
 		TRAIT_VIRGIN,
 	)

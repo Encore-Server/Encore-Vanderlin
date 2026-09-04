@@ -6,8 +6,10 @@
 		STAT_PERCEPTION = -1,
 		STAT_FORTUNE = -1,
 		/datum/attribute/skill/misc/sewing = 20,
-		/datum/attribute/skill/misc/medicine = 20,
-		/datum/attribute/skill/combat/polearms = 20,
+		/datum/attribute/skill/misc/medicine = 40,
+		/datum/attribute/skill/craft/alchemy = 40,
+		/datum/attribute/skill/combat/polearms = 30, //For the Valdala shovel
+		/datum/attribute/skill/combat/axesmaces = 30, //For the Valdala cane
 		/datum/attribute/skill/combat/unarmed = 10,
 		/datum/attribute/skill/combat/wrestling = 20, //Wrestling the deadites
 		/datum/attribute/skill/craft/crafting = 10,
@@ -33,7 +35,7 @@
 	spawn_positions = 99
 	bypass_lastclass = TRUE
 
-	allowed_races = RACES_PLAYER_NONHERETICAL
+	allowed_races = RACES_LESS_DISCRIMINATED
 	allowed_patrons = list(/datum/patron/divine/valdala)
 
 	outfit = /datum/outfit/undertaker
