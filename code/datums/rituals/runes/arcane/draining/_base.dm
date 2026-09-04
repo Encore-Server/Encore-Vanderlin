@@ -11,7 +11,7 @@
 
 /obj/effect/decal/cleanable/ritual_rune/arcyne/mana_siphon
 	name = "arcyne mana siphon"
-	desc = "A hungry, pulsing sigil that draws power from the world. (do not use, does not provide any benefits yet)..."
+	desc = "A hungry, pulsing sigil that draws power from the world..."
 	icon = 'icons/effects/160x160.dmi'
 	icon_state = "imbuement"
 	tier = 2
