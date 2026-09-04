@@ -13,7 +13,8 @@
 		/datum/attribute/skill/misc/athletics = 20,
 		/datum/attribute/skill/misc/reading = 30,
 		/datum/attribute/skill/magic/holy = 30,
-		/datum/attribute/skill/craft/cooking = 20
+		/datum/attribute/skill/craft/cooking = 20,
+		/datum/attribute/skill/magic/arcane = 30,
 	)
 
 /datum/attribute_holder/sheet/job/acolyte/old
@@ -30,7 +31,8 @@
 		/datum/attribute/skill/misc/athletics = 20,
 		/datum/attribute/skill/misc/reading = 30,
 		/datum/attribute/skill/magic/holy = 40,
-		/datum/attribute/skill/craft/cooking = 20
+		/datum/attribute/skill/craft/cooking = 20,
+		/datum/attribute/skill/magic/arcane = 40,
 	)
 
 /datum/attribute_holder/sheet/job/acolyte/patron/pomette
@@ -213,6 +215,19 @@
 		devotion.make_acolyte()
 		devotion.grant_to(spawned)
 
+/datum/job/monk/on_roundstart(mob/living/spawned, client/player_client)
+	. = ..()
+
+	switch(spawned.patron?.type)
+		if(/datum/patron/divine/akan)
+			var/static/list/selectable_books = list(
+				"Storm-Charged Tome (Lightning)" = /obj/item/spellbook/apprentice/starter/lightning,
+				"Thrice-Warded Tome (Arcane)" = /obj/item/spellbook/apprentice/starter/arcane,
+				"Windswept Tome (Air)" = /obj/item/spellbook/apprentice/starter/air,
+			)
+
+			grant_selected_spellbooks(spawned, selectable_books, 2)
+
 /datum/outfit/monk
 	name = JOB_ACOLYTE
 	belt = /obj/item/storage/belt/leather/rope
@@ -245,6 +260,7 @@
 			wrists = /obj/item/clothing/wrists/nocwrappings
 			shoes = /obj/item/clothing/shoes/sandals
 			armor = /obj/item/clothing/shirt/robe/akan
+			backpack_contents += /obj/item/chalk
 		if(/datum/patron/divine/erdl)
 			head = /obj/item/clothing/head/padded/erdl
 			neck = /obj/item/clothing/neck/psycross/silver/divine/erdl

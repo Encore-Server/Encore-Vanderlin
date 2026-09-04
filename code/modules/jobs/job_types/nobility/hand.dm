@@ -508,8 +508,8 @@
 	cloak = /obj/item/clothing/cloak/half
 	pants = /obj/item/clothing/pants/tights/colored/black
 	shoes = /obj/item/clothing/shoes/boots
-	beltl = /obj/item/storage/magebag/apprentice
-	beltr = /obj/item/weapon/sword/rapier/caneblade/hand
+	beltr = /obj/item/storage/magebag/apprentice
+	beltl = /obj/item/weapon/sword/rapier/caneblade/hand
 	scabbards = list(/obj/item/weapon/scabbard/cane/hand)
 
 /datum/outfit/hand/magister/male //Sol

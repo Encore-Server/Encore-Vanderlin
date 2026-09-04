@@ -14,7 +14,8 @@
 		/datum/attribute/skill/misc/sewing = 30,
 		/datum/attribute/skill/misc/medicine = 30,
 		/datum/attribute/skill/craft/cooking = 10,
-		/datum/attribute/skill/labor/mathematics = 30
+		/datum/attribute/skill/labor/mathematics = 30,
+		/datum/attribute/skill/magic/arcane = 40,
 	)
 
 /datum/attribute_holder/sheet/job/priest/old
@@ -33,7 +34,8 @@
 		/datum/attribute/skill/misc/sewing = 30,
 		/datum/attribute/skill/misc/medicine = 30,
 		/datum/attribute/skill/craft/cooking = 10,
-		/datum/attribute/skill/labor/mathematics = 30
+		/datum/attribute/skill/labor/mathematics = 30,
+		/datum/attribute/skill/magic/arcane = 50,
 	)
 #define PRIEST_ADD_PENANCE "Assign Penance"
 #define PRIEST_REMOVE_PENANCE "Absolve Penance"
@@ -99,6 +101,19 @@
 		devotion.make_priest()
 		devotion.grant_to(spawned)
 
+/datum/job/priest/on_roundstart(mob/living/spawned, client/player_client)
+	. = ..()
+
+	switch(spawned.patron?.type)
+		if(/datum/patron/divine/akan)
+			var/static/list/selectable_books = list(
+				"Storm-Charged Tome (Lightning)" = /obj/item/spellbook/adept/starter/lightning,
+				"Thrice-Warded Tome (Arcane)" = /obj/item/spellbook/adept/starter/arcane,
+				"Windswept Tome (Air)" = /obj/item/spellbook/adept/starter/air,
+			)
+
+			grant_selected_spellbooks(spawned, selectable_books, 2)
+
 /datum/outfit/priest
 	name = "Priest"
 	head = /obj/item/clothing/head/priestmask
@@ -123,6 +138,7 @@
 			neck = /obj/item/clothing/neck/psycross/silver/divine/visires
 		if(/datum/patron/divine/akan)
 			neck = /obj/item/clothing/neck/psycross/silver/divine/akan
+			backpack_contents += /obj/item/chalk
 		if(/datum/patron/divine/gani)
 			neck = /obj/item/clothing/neck/psycross/silver/divine/gani
 		if(/datum/patron/divine/mjallidhorn)
