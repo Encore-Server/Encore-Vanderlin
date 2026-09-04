@@ -886,6 +886,12 @@
 /obj/structure/table/wood/treestump,
 /turf/open/floor/grass/yel,
 /area/outdoors/town/neighborhood/east)
+"aIW" = (
+/obj/structure/fluff/railing/wood{
+	dir = 8
+	},
+/turf/open/floor/rooftop,
+/area/indoors/town)
 "aJe" = (
 /obj/structure/chair/wood/alt/chair3{
 	dir = 8
@@ -1660,6 +1666,9 @@
 	},
 /turf/open/floor/blocks,
 /area/indoors/town/church/crypt)
+"biy" = (
+/turf/open/floor/ruinedwood,
+/area/indoors/town)
 "biM" = (
 /obj/machinery/light/fueled/torchholder/l,
 /obj/item/rope/chain,
@@ -4440,6 +4449,10 @@
 	},
 /turf/open/floor/blocks/stonered/tiny,
 /area/indoors/town/waterworks)
+"dmH" = (
+/obj/structure/ladder,
+/turf/open/floor/ruinedwood,
+/area/indoors/town)
 "dmP" = (
 /obj/structure/lever/hidden/thieves_guild{
 	redstone_id = "slitherway7"
@@ -8339,6 +8352,12 @@
 	},
 /turf/open/floor/blocks/bluestone,
 /area/outdoors/exposed)
+"fZS" = (
+/obj/structure/fluff/railing/wood{
+	dir = 4
+	},
+/turf/open/floor/rooftop,
+/area/indoors/town)
 "fZU" = (
 /obj/structure/fluff/railing/border{
 	dir = 6
@@ -9762,6 +9781,12 @@
 /obj/structure/fluff/walldeco/vinez,
 /turf/closed/wall/mineral/wooddark,
 /area/indoors/town/waterworks)
+"haW" = (
+/obj/structure/stairs{
+	dir = 1
+	},
+/turf/open/floor/rooftop,
+/area/indoors/town)
 "hbc" = (
 /obj/structure/door/weak/bolt{
 	dir = 1;
@@ -14604,6 +14629,14 @@
 	},
 /turf/open/floor/blocks/newstone,
 /area/outdoors/exposed)
+"kdM" = (
+/obj/structure/fluff/railing/wood{
+	dir = 1;
+	layer = 2.7;
+	pixel_y = 7
+	},
+/turf/open/floor/rooftop,
+/area/indoors/town)
 "kdQ" = (
 /obj/structure/window,
 /obj/structure/curtain/bounty/dir,
@@ -19089,6 +19122,9 @@
 	},
 /turf/open/floor/twig,
 /area/under/town/basement/smugglers_tunnels)
+"nfq" = (
+/turf/open/glass,
+/area/indoors/town)
 "nfC" = (
 /obj/effect/decal/cobbleedge{
 	dir = 8;
@@ -20882,6 +20918,9 @@
 /obj/structure/flora/ausbushes/reedbush,
 /turf/open/water/ocean,
 /area/under/town/sewer)
+"ota" = (
+/turf/open/floor/rooftop,
+/area/indoors/town)
 "otn" = (
 /turf/open/floor/blocks/stonered,
 /area/indoors/town/clinic_large/apothecary)
@@ -23455,6 +23494,13 @@
 "qhU" = (
 /turf/open/floor/ruinedwood,
 /area/under/town/basement)
+"qhZ" = (
+/obj/structure/fluff/railing/wood{
+	dir = 4
+	},
+/obj/machinery/light/fueled/torchholder/metal_torch/west,
+/turf/open/floor/rooftop,
+/area/indoors/town)
 "qid" = (
 /obj/structure/fluff/steamvent,
 /obj/machinery/light/fueled/wallfire/candle/blue/l,
@@ -25380,6 +25426,10 @@
 /obj/structure/bars/cemetery,
 /turf/open/water/blood,
 /area/indoors/town/vault)
+"rzE" = (
+/obj/structure/fluff/railing/wood,
+/turf/open/floor/rooftop,
+/area/indoors/town)
 "rzU" = (
 /turf/open/floor/ruinedwood/turned,
 /area/outdoors/town)
@@ -26285,7 +26335,7 @@
 	save_id = "medium_workplace_one";
 	template_y = 6;
 	template_x = 11;
-	template_z = 5
+	template_z = 3
 	},
 /turf/open/floor/naturalstone,
 /area/indoors/town)
@@ -29954,7 +30004,7 @@
 	save_id = "medium_workplace_two";
 	template_y = 6;
 	template_x = 11;
-	template_z = 5
+	template_z = 3
 	},
 /turf/open/floor/naturalstone,
 /area/indoors/town)
@@ -30909,6 +30959,10 @@
 	},
 /turf/open/floor/church,
 /area/indoors/town/church/inquisition)
+"vBv" = (
+/obj/structure/dryclothes,
+/turf/open/floor/ruinedwood,
+/area/indoors/town)
 "vBE" = (
 /obj/structure/fake_machine/scomm/r,
 /turf/open/floor/wood,
@@ -81498,22 +81552,22 @@ fNx
 fNx
 fNx
 fNx
-glJ
-glJ
-glJ
-glJ
-glJ
-glJ
+ota
+ota
+ota
+ota
+ota
+ota
 fNx
 fNx
 fNx
 fNx
-glJ
-glJ
-glJ
-glJ
-glJ
-glJ
+ota
+ota
+ota
+ota
+ota
+ota
 fNx
 fNx
 fNx
@@ -81630,22 +81684,22 @@ fNx
 fNx
 fNx
 fNx
-glJ
-glJ
-glJ
-glJ
-glJ
-glJ
+ota
+nfq
+nfq
+ota
+ota
+ota
 fNx
 fNx
 fNx
 fNx
-glJ
-glJ
-glJ
-glJ
-glJ
-glJ
+ota
+nfq
+nfq
+ota
+ota
+ota
 fNx
 fNx
 fNx
@@ -81762,22 +81816,22 @@ nzf
 fNx
 fNx
 fNx
-glJ
-glJ
-glJ
-glJ
-glJ
-glJ
+ota
+nfq
+nfq
+ota
+ota
+ota
 fNx
 fNx
 fNx
 fNx
-glJ
-glJ
-glJ
-glJ
-glJ
-glJ
+ota
+nfq
+nfq
+ota
+ota
+ota
 fNx
 fNx
 fNx
@@ -81894,22 +81948,22 @@ fNx
 fNx
 fNx
 fNx
-glJ
-glJ
-glJ
-glJ
-glJ
-glJ
+ota
+nfq
+nfq
+ota
+ota
+ota
 fNx
 fNx
 fNx
 fNx
-glJ
-glJ
-glJ
-glJ
-glJ
-glJ
+ota
+nfq
+nfq
+ota
+ota
+ota
 fNx
 fNx
 fNx
@@ -82026,22 +82080,22 @@ fNx
 fNx
 fNx
 fNx
-glJ
-glJ
-glJ
-glJ
-glJ
-glJ
+ota
+nfq
+nfq
+ota
+ota
+ota
 fNx
 fNx
 fNx
 fNx
-glJ
-glJ
-glJ
-glJ
-glJ
-glJ
+ota
+nfq
+nfq
+ota
+ota
+ota
 fNx
 fNx
 fNx
@@ -82158,22 +82212,22 @@ fNx
 fNx
 fNx
 fNx
-glJ
-glJ
-glJ
-glJ
-glJ
-glJ
+ota
+qhZ
+fZS
+ota
+ota
+ota
 fNx
 fNx
 fNx
 fNx
-glJ
-glJ
-glJ
-glJ
-glJ
-glJ
+ota
+qhZ
+fZS
+ota
+ota
+ota
 fNx
 fNx
 fNx
@@ -82290,22 +82344,22 @@ fNx
 fNx
 fNx
 fNx
-glJ
-glJ
-glJ
-glJ
-glJ
-glJ
+rzE
+vBv
+vBv
+kdM
+ota
+ota
 fNx
 fNx
 kla
 kla
-glJ
-glJ
-glJ
-glJ
-glJ
-glJ
+rzE
+vBv
+vBv
+kdM
+ota
+ota
 fNx
 fNx
 fNx
@@ -82422,22 +82476,22 @@ dvc
 dvc
 dvc
 kla
-glJ
-glJ
-glJ
-glJ
-glJ
-glJ
+rzE
+biy
+biy
+haW
+ota
+ota
 fNx
 vvT
 fkr
 ycc
-glJ
-glJ
-glJ
-glJ
-glJ
-glJ
+rzE
+biy
+biy
+haW
+ota
+ota
 fNx
 fNx
 uyC
@@ -82554,22 +82608,22 @@ dvc
 dvc
 dvc
 qIn
-glJ
-glJ
-glJ
-glJ
-glJ
-glJ
+rzE
+biy
+biy
+haW
+ota
+ota
 fNx
 vvT
 dlV
 qcS
-glJ
-glJ
-glJ
-glJ
-glJ
-glJ
+rzE
+biy
+biy
+haW
+ota
+ota
 fNx
 fNx
 uyC
@@ -82686,22 +82740,22 @@ dvc
 dvc
 dvc
 wlN
-glJ
-glJ
-glJ
-glJ
-glJ
-glJ
+rzE
+dmH
+biy
+kdM
+ota
+ota
 fNx
 vvT
 nTA
 lNb
-glJ
-glJ
-glJ
-glJ
-glJ
-glJ
+rzE
+dmH
+biy
+kdM
+ota
+ota
 fNx
 fNx
 uyC
@@ -82818,22 +82872,22 @@ dvc
 dvc
 dvc
 fNx
-glJ
-glJ
-glJ
-glJ
-glJ
-glJ
+ota
+aIW
+aIW
+ota
+ota
+ota
 fNx
 fNx
 wlN
 wlN
-glJ
-glJ
-glJ
-glJ
-glJ
-glJ
+ota
+aIW
+aIW
+ota
+ota
+ota
 fNx
 fNx
 uyC
