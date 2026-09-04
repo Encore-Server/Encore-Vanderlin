@@ -218,7 +218,10 @@
 /turf/closed/wall/mineral/wooddark/horizontal,
 /area/indoors/vampire_manor)
 "dI" = (
-/obj/structure/ladder/unbreakable,
+/obj/machinery/light/fueled/wallfire/candle/blue/r,
+/obj/structure/stairs{
+	dir = 1
+	},
 /turf/open/floor/churchmarble/violet,
 /area/indoors/vampire_manor)
 "dQ" = (
@@ -493,7 +496,9 @@
 /turf/open/floor/churchmarble/violet,
 /area/indoors/vampire_manor)
 "jr" = (
-/obj/structure/ladder/unbreakable,
+/obj/structure/stairs{
+	dir = 1
+	},
 /turf/open/floor/tile/diamond,
 /area/indoors/vampire_manor)
 "jt" = (
@@ -1559,6 +1564,7 @@
 /area/indoors/vampire_manor)
 "Je" = (
 /obj/effect/decal/cleanable/dirt,
+/obj/machinery/light/fueled/wallfire/candle/blue/l,
 /turf/open/floor/grass/mixyel,
 /area/outdoors/exposed)
 "Jt" = (
@@ -2137,7 +2143,6 @@
 	redstone_id = "vampguestroom2";
 	name = "Guest Room 2"
 	},
-/obj/structure/ladder/unbreakable,
 /turf/open/floor/churchrough,
 /area/indoors/vampire_manor)
 "UN" = (
@@ -2519,7 +2524,7 @@ ik
 ik
 ik
 ik
-KV
+HH
 Bu
 HC
 Qa
@@ -2575,7 +2580,7 @@ WB
 ik
 XB
 MC
-MC
+KV
 MC
 yt
 ma
@@ -2600,7 +2605,7 @@ bR
 mI
 hL
 ik
-HH
+ik
 jr
 MC
 MC
@@ -3109,7 +3114,7 @@ BS
 ik
 rL
 Mk
-dI
+Mk
 JF
 ik
 zG
@@ -3438,8 +3443,8 @@ fW
 xu
 Vb
 Mk
-Vb
 dI
+Mr
 dG
 dG
 lI
