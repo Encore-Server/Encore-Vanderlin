@@ -20137,6 +20137,16 @@
 "nRV" = (
 /turf/open/floor/ruinedwood/alt,
 /area/outdoors/town)
+"nSo" = (
+/obj/structure/fluff/traveltile{
+	icon = 'icons/roguetown/topadd/death/vamp-lord.dmi';
+	icon_state = "portal";
+	name = "Blood Portal";
+	aportalgoesto = "vamplair";
+	aportalid = "smugglerdenvamplair"
+	},
+/turf/open/floor/greenstone/runed,
+/area/under/town/basement/smugglers_tunnels)
 "nSQ" = (
 /obj/machinery/essence/extractor{
 	pixel_y = 4
@@ -27509,6 +27519,12 @@
 /obj/structure/fluff/walldeco/vinez,
 /turf/open/floor/ruinedwood/turned/alt,
 /area/indoors/soilsons)
+"tgg" = (
+/obj/structure/lever/hidden/thieves_guild{
+	redstone_id = "slitherwayvamp"
+	},
+/turf/closed/wall/mineral/stone/moss,
+/area/under/town/basement/smugglers_tunnels)
 "tgr" = (
 /obj/item/reagent_containers/glass/cup/wooden{
 	pixel_y = 5
@@ -32164,6 +32180,12 @@
 	},
 /turf/open/floor/church,
 /area/indoors/town/keep/kitchen)
+"wra" = (
+/obj/effect/mapping_helpers/secret_door_creator/thieves_guild{
+	redstone_id = "slitherwayvamp"
+	},
+/turf/closed/wall/mineral/stone/moss,
+/area/under/town/basement/smugglers_tunnels)
 "wrA" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/ruinedwood/darker,
@@ -34008,6 +34030,12 @@
 	},
 /turf/open/floor/snow,
 /area/outdoors/town/plaza)
+"xIk" = (
+/obj/structure/lever{
+	redstone_id = "slitherwayvamp"
+	},
+/turf/open/floor/greenstone,
+/area/under/town/basement/smugglers_tunnels)
 "xIx" = (
 /obj/structure/fluff/railing/tall/retaining,
 /obj/structure/fluff/railing/tall/retaining{
@@ -36336,9 +36364,9 @@ wyv
 wyv
 wyv
 idA
-idA
-idA
-idA
+jdz
+jdz
+jdz
 jdz
 jdz
 mrh
@@ -36468,11 +36496,11 @@ fIp
 wyv
 idA
 idA
-idA
 jdz
 jdz
-jdz
-jdz
+mrh
+mrh
+mrh
 mrh
 wXA
 qss
@@ -36602,9 +36630,9 @@ idA
 idA
 jdz
 jdz
-jdz
-jdz
-jdz
+mrh
+nRO
+nSo
 mrh
 qDj
 qDj
@@ -36735,8 +36763,8 @@ idA
 jdz
 mrh
 mrh
-acJ
-lVq
+xIk
+nRO
 gVN
 qss
 qss
@@ -36867,8 +36895,8 @@ idA
 jdz
 mrh
 mrh
-lVq
-lVq
+tgg
+wra
 gVN
 qXZ
 rgn
