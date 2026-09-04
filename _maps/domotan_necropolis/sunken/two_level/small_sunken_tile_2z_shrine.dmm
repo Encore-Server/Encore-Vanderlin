@@ -49,8 +49,7 @@
 /turf/open/floor/blocks,
 /area/template_noop)
 "ih" = (
-/obj/structure/hotspring,
-/turf/open/floor/tile/bath,
+/turf/open/water/hotspring,
 /area/template_noop)
 "iO" = (
 /obj/structure/flora/grass/water/reeds,
@@ -250,9 +249,8 @@
 /turf/open/floor/tile/bath,
 /area/template_noop)
 "Nd" = (
-/obj/structure/hotspring,
 /obj/structure/flora/grass/swampweed,
-/turf/open/floor/tile/bath,
+/turf/open/water/hotspring,
 /area/template_noop)
 "Oi" = (
 /obj/structure/chair/hotspring_bench/right,
@@ -316,9 +314,8 @@
 /turf/open/water/ocean,
 /area/template_noop)
 "Vh" = (
-/obj/structure/hotspring,
 /obj/structure/healing_spring,
-/turf/open/floor/tile/bath,
+/turf/open/water/hotspring,
 /area/template_noop)
 "Vr" = (
 /turf/open/water/bath,
