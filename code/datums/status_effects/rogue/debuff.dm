@@ -703,3 +703,13 @@
 /datum/status_effect/debuff/black_briar2/on_remove()
 	. = ..()
 	owner.remove_stress(/datum/stress_event/black_briar2)
+
+/datum/status_effect/debuff/ritesexpended
+	id = "ritesexpended"
+	alert_type = /atom/movable/screen/alert/status_effect/debuff/ritesexpended
+	duration = 13 MINUTES
+
+/atom/movable/screen/alert/status_effect/debuff/ritesexpended
+	name = "Rites Complete"
+	desc = "It will take time before I can next perform a rite."
+	icon_state = ""

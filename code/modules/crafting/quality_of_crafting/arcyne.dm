@@ -32,3 +32,22 @@
 	output_amount = 1
 	craft_time = 1 SECONDS
 	subtypes_allowed = TRUE
+
+/datum/repeatable_crafting_recipe/arcyne/ritechalk
+	name = "ritual chalk"
+	output = /obj/item/ritechalk
+	output_amount = 1
+	requirements = list(
+		/obj/item/reagent_containers/lux = 1,
+		/obj/item/natural/stone = 1,
+		/obj/item/fertilizer/ash = 1,
+		/obj/item/reagent_containers/powder/herbs = 1,
+	)
+	starting_atom = /obj/item/reagent_containers/lux
+	attacked_atom = /obj/item/natural/stone
+	allow_inverse_start = TRUE
+	craft_time = 4 SECONDS
+	craftdiff = 0
+	subtypes_allowed = TRUE
+	crafting_message = "mixes life with the elements"
+	skillcraft = /datum/attribute/skill/magic/ritual
