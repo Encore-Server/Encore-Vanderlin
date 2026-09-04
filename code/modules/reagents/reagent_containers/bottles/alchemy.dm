@@ -49,20 +49,6 @@
 	auto_label_name = "strong stamina potion"
 	auto_label_desc = "Rapidly regenerates stamina."
 
-/obj/item/reagent_containers/glass/bottle/bloodpot
-	list_reagents = list(/datum/reagent/medicine/bloodpot = 75)
-
-/obj/item/reagent_containers/glass/bottle/bloodpot/labelled
-	auto_label_name = "blood potion"
-	auto_label_desc = "Gradually regenerates vitae."
-
-/obj/item/reagent_containers/glass/bottle/strongbloodpot
-	list_reagents = list(/datum/reagent/medicine/strongbloodpot = 75)
-
-/obj/item/reagent_containers/glass/bottle/strongbloodpot/labelled
-	auto_label_name = "strong blood potion"
-	auto_label_desc = "Regenerates vitae."
-
 /obj/item/reagent_containers/glass/bottle/poison
 	list_reagents = list(/datum/reagent/poison/berry = 15)
 
