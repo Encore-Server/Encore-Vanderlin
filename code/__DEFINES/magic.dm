@@ -234,13 +234,6 @@ DEFINE_BITFIELD(spell_requirements, list(
 #define FORM_AIR "Aeromancy"
 #define FORM_WATER "Hydromancy"
 
-#define RUNE_SUN	"Rune of Sun"
-#define RUNE_MOON	"Rune of Moon"
-#define RUNE_BEAST	"Rune of Beasts"
-#define RUNE_DEATH	"Rune of Death"
-#define RUNE_PLAGUE	"Rune of Plague"
-#define RUNE_LOVE	"Rune of Love"
-
 #define MASTERY_RANK_NOVICE 0
 #define MASTERY_RANK_ADEPT 2
 #define MASTERY_RANK_EXPERT 4
