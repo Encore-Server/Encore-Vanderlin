@@ -12,10 +12,11 @@
 		/datum/attribute/skill/combat/axesmaces = 20,
 		/datum/attribute/skill/misc/athletics = 30,
 		/datum/attribute/skill/misc/sewing = 30,
-		/datum/attribute/skill/misc/medicine = 30,
+		/datum/attribute/skill/misc/medicine = 40,
 		/datum/attribute/skill/craft/cooking = 10,
 		/datum/attribute/skill/labor/mathematics = 30,
 		/datum/attribute/skill/magic/arcane = 40,
+		/datum/attribute/skill/craft/alchemy = 40,
 	)
 
 /datum/attribute_holder/sheet/job/priest/old
@@ -32,10 +33,11 @@
 		/datum/attribute/skill/combat/axesmaces = 20,
 		/datum/attribute/skill/misc/athletics = 30,
 		/datum/attribute/skill/misc/sewing = 30,
-		/datum/attribute/skill/misc/medicine = 30,
+		/datum/attribute/skill/misc/medicine = 40,
 		/datum/attribute/skill/craft/cooking = 10,
 		/datum/attribute/skill/labor/mathematics = 30,
 		/datum/attribute/skill/magic/arcane = 50,
+		/datum/attribute/skill/craft/alchemy = 40,
 	)
 #define PRIEST_ADD_PENANCE "Assign Penance"
 #define PRIEST_REMOVE_PENANCE "Absolve Penance"

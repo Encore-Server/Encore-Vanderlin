@@ -14,6 +14,7 @@
 		/datum/attribute/skill/misc/medicine = 10,
 		/datum/attribute/skill/misc/sewing = 20,
 		/datum/attribute/skill/magic/arcane = 30,
+		/datum/attribute/skill/craft/alchemy = 10,
 	)
 
 /datum/attribute_holder/sheet/job/templar/patron/visires
@@ -35,7 +36,8 @@
 /datum/attribute_holder/sheet/job/templar/patron/akan
 	raw_attribute_list = list(
 		/datum/attribute/skill/labor/mathematics = 20,
-		/datum/attribute/skill/misc/reading = 20
+		/datum/attribute/skill/misc/reading = 20,
+		/datum/attribute/skill/craft/alchemy = 20
 	)
 
 /datum/attribute_holder/sheet/job/templar/patron/akan/sword
@@ -56,7 +58,8 @@
 /datum/attribute_holder/sheet/job/templar/patron/gani
 	raw_attribute_list = list(
 		/datum/attribute/skill/labor/farming = 20,
-		/datum/attribute/skill/misc/medicine = 20
+		/datum/attribute/skill/misc/medicine = 20,
+		/datum/attribute/skill/craft/alchemy = 10
 	)
 
 /datum/attribute_holder/sheet/job/templar/patron/gani/polearm
@@ -159,7 +162,8 @@
 		/datum/attribute/skill/combat/whipsflails = 40,
 		/datum/attribute/skill/misc/sneaking = 30,
 		/datum/attribute/skill/misc/stealing = 30,
-		/datum/attribute/skill/misc/lockpicking = 30
+		/datum/attribute/skill/misc/lockpicking = 30,
+		/datum/attribute/skill/craft/alchemy = 20
 	)
 
 /datum/attribute_holder/sheet/job/templar/patron/iliope/whip
@@ -180,7 +184,8 @@
 /datum/attribute_holder/sheet/job/templar/patron/pomette
 	raw_attribute_list = list(
 		/datum/attribute/skill/labor/farming = 20,
-		/datum/attribute/skill/craft/cooking = 20
+		/datum/attribute/skill/craft/cooking = 20,
+		/datum/attribute/skill/craft/alchemy = 10
 	)
 
 /datum/attribute_holder/sheet/job/templar/patron/pomette/sword

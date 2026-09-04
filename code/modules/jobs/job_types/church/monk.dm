@@ -24,6 +24,7 @@
 		STAT_PERCEPTION = -1,
 		/datum/attribute/skill/misc/sewing = 20,
 		/datum/attribute/skill/misc/medicine = 30,
+		/datum/attribute/skill/craft/alchemy = 30
 		/datum/attribute/skill/combat/polearms = 20,
 		/datum/attribute/skill/combat/unarmed = 10,
 		/datum/attribute/skill/combat/wrestling = 10,
@@ -37,12 +38,14 @@
 
 /datum/attribute_holder/sheet/job/acolyte/patron/pomette
 	raw_attribute_list = list(
-		/datum/attribute/skill/misc/music = 20
+		/datum/attribute/skill/misc/music = 20,
+		/datum/attribute/skill/craft/alchemy = 10
 	)
 
 /datum/attribute_holder/sheet/job/acolyte/patron/akan
 	raw_attribute_list = list(
-		/datum/attribute/skill/labor/mathematics = 20
+		/datum/attribute/skill/labor/mathematics = 20,
+		/datum/attribute/skill/craft/alchemy = 10
 	)
 
 /datum/attribute_holder/sheet/job/acolyte/patron/erdl
@@ -55,20 +58,14 @@
 	raw_attribute_list = list(
 		/datum/attribute/skill/labor/farming = 20,
 		/datum/attribute/skill/misc/medicine = 10,
-		/datum/attribute/skill/labor/taming = 10
+		/datum/attribute/skill/labor/taming = 10,
+		/datum/attribute/skill/craft/alchemy = 10
 	)
 
 /datum/attribute_holder/sheet/job/acolyte/patron/mjallidhorn
 	raw_attribute_list = list(
 		/datum/attribute/skill/labor/fishing = 20,
 		/datum/attribute/skill/misc/swimming = 20
-	)
-/datum/attribute_holder/sheet/job/acolyte/patron/valdala
-	raw_attribute_list = list(
-		/datum/attribute/skill/craft/masonry = 20,
-		/datum/attribute/skill/misc/medicine = 10,
-		/datum/attribute/skill/craft/alchemy = 10
-
 	)
 
 /datum/attribute_holder/sheet/job/acolyte/patron/mordsol
@@ -86,15 +83,16 @@
 		/datum/attribute/skill/misc/stealing = 40,
 		/datum/attribute/skill/misc/lockpicking = 40,
 		/datum/attribute/skill/misc/sneaking = 40,
-		/datum/attribute/skill/misc/music = 30
+		/datum/attribute/skill/misc/music = 30,
+		/datum/attribute/skill/craft/alchemy = 10
 	)
 
 /datum/attribute_holder/sheet/job/acolyte/patron/golerkanh
 	raw_attribute_list = list(
 		/datum/attribute/skill/craft/blacksmithing = 20,
 		/datum/attribute/skill/craft/smelting = 20,
-		/datum/attribute/skill/craft/armorsmithing = 10,
-		/datum/attribute/skill/craft/weaponsmithing = 10,
+		/datum/attribute/skill/craft/armorsmithing = 20,
+		/datum/attribute/skill/craft/weaponsmithing = 20,
 		/datum/attribute/skill/craft/engineering = 10,
 		/datum/attribute/skill/craft/carpentry = 10,
 		/datum/attribute/skill/craft/masonry = 10,
