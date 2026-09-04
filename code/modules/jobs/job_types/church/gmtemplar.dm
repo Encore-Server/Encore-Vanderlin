@@ -15,7 +15,7 @@
 		/datum/attribute/skill/magic/holy = 20,
 		/datum/attribute/skill/misc/medicine = 10,
 		/datum/attribute/skill/misc/sewing = 20,
-		/datum/attribute/skill/magic/arcane = 20,
+		/datum/attribute/skill/magic/arcane = 30,
 	)
 
 /datum/job/gmtemplar
