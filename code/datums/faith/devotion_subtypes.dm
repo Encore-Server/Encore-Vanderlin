@@ -45,8 +45,8 @@
 /datum/devotion/divine/gani
 	miracles = list(
 		CLERIC_T0 = /datum/action/cooldown/spell/healing/greater,
-		CLERIC_T1 = list(/datum/action/cooldown/spell/undirected/bless_crops, /datum/action/cooldown/spell/undirected/beast_sense),
-		CLERIC_T2 = list(/datum/action/cooldown/spell/projectile/gravel_blast, /datum/action/cooldown/spell/undirected/blade_ward/miracle/earth, /datum/action/cooldown/spell/aoe/abrogation),
+		CLERIC_T1 = list(/datum/action/cooldown/spell/undirected/bless_crops, /datum/action/cooldown/spell/undirected/blade_ward/miracle/earth),
+		CLERIC_T2 = list(/datum/action/cooldown/spell/undirected/beast_sense, /datum/action/cooldown/spell/projectile/gravel_blast, /datum/action/cooldown/spell/aoe/abrogation),
 		CLERIC_T3 = list(/datum/action/cooldown/spell/beast_tame, /datum/action/cooldown/spell/aoe/on_turf/circle/flower_field),
 
 	)
@@ -86,8 +86,8 @@
 /datum/devotion/divine/mordsol
 	miracles = list(
 		CLERIC_T0 = /datum/action/cooldown/spell/healing,
-		CLERIC_T1 = list(/datum/action/cooldown/spell/undirected/call_to_arms, /datum/action/cooldown/spell/undirected/divine_strike),
-		CLERIC_T2 = list(/datum/action/cooldown/spell/beam/beam_of_frost, /datum/action/cooldown/spell/undirected/blade_ward/miracle/frost, /datum/action/cooldown/spell/aoe/abrogation),
+		CLERIC_T1 = list(/datum/action/cooldown/spell/undirected/call_to_arms, /datum/action/cooldown/spell/undirected/blade_ward/miracle/frost),
+		CLERIC_T2 = list(/datum/action/cooldown/spell/undirected/divine_strike, /datum/action/cooldown/spell/beam/beam_of_frost, /datum/action/cooldown/spell/aoe/abrogation),
 		CLERIC_T3 = /datum/action/cooldown/spell/ocean_embrace,
 	)
 	traits = list(TRAIT_DIVINE_SERVANT)
