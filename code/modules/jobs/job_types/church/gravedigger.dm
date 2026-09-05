@@ -17,7 +17,8 @@
 		/datum/attribute/skill/misc/reading = 30,
 		/datum/attribute/skill/magic/holy = 30,
 		/datum/attribute/skill/craft/masonry = 30, //Crafting grave decorations
-		/datum/attribute/skill/labor/mathematics = 20
+		/datum/attribute/skill/labor/mathematics = 20,
+		/datum/attribute/skill/magic/arcane = 30,
 	)
 
 /datum/job/undertaker

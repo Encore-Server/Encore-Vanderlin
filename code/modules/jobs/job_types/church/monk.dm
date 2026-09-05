@@ -13,7 +13,8 @@
 		/datum/attribute/skill/misc/athletics = 20,
 		/datum/attribute/skill/misc/reading = 30,
 		/datum/attribute/skill/magic/holy = 30,
-		/datum/attribute/skill/craft/cooking = 20
+		/datum/attribute/skill/craft/cooking = 20,
+		/datum/attribute/skill/magic/arcane = 30,
 	)
 
 /datum/attribute_holder/sheet/job/acolyte/old
@@ -23,6 +24,7 @@
 		STAT_PERCEPTION = -1,
 		/datum/attribute/skill/misc/sewing = 20,
 		/datum/attribute/skill/misc/medicine = 30,
+		/datum/attribute/skill/craft/alchemy = 30,
 		/datum/attribute/skill/combat/polearms = 20,
 		/datum/attribute/skill/combat/unarmed = 10,
 		/datum/attribute/skill/combat/wrestling = 10,
@@ -30,17 +32,20 @@
 		/datum/attribute/skill/misc/athletics = 20,
 		/datum/attribute/skill/misc/reading = 30,
 		/datum/attribute/skill/magic/holy = 40,
-		/datum/attribute/skill/craft/cooking = 20
+		/datum/attribute/skill/craft/cooking = 20,
+		/datum/attribute/skill/magic/arcane = 40,
 	)
 
 /datum/attribute_holder/sheet/job/acolyte/patron/pomette
 	raw_attribute_list = list(
-		/datum/attribute/skill/misc/music = 20
+		/datum/attribute/skill/misc/music = 20,
+		/datum/attribute/skill/craft/alchemy = 10
 	)
 
 /datum/attribute_holder/sheet/job/acolyte/patron/akan
 	raw_attribute_list = list(
-		/datum/attribute/skill/labor/mathematics = 20
+		/datum/attribute/skill/labor/mathematics = 20,
+		/datum/attribute/skill/craft/alchemy = 10
 	)
 
 /datum/attribute_holder/sheet/job/acolyte/patron/erdl
@@ -53,20 +58,14 @@
 	raw_attribute_list = list(
 		/datum/attribute/skill/labor/farming = 20,
 		/datum/attribute/skill/misc/medicine = 10,
-		/datum/attribute/skill/labor/taming = 10
+		/datum/attribute/skill/labor/taming = 10,
+		/datum/attribute/skill/craft/alchemy = 10
 	)
 
 /datum/attribute_holder/sheet/job/acolyte/patron/mjallidhorn
 	raw_attribute_list = list(
 		/datum/attribute/skill/labor/fishing = 20,
 		/datum/attribute/skill/misc/swimming = 20
-	)
-/datum/attribute_holder/sheet/job/acolyte/patron/valdala
-	raw_attribute_list = list(
-		/datum/attribute/skill/craft/masonry = 20,
-		/datum/attribute/skill/misc/medicine = 10,
-		/datum/attribute/skill/craft/alchemy = 10
-
 	)
 
 /datum/attribute_holder/sheet/job/acolyte/patron/mordsol
@@ -84,15 +83,16 @@
 		/datum/attribute/skill/misc/stealing = 40,
 		/datum/attribute/skill/misc/lockpicking = 40,
 		/datum/attribute/skill/misc/sneaking = 40,
-		/datum/attribute/skill/misc/music = 30
+		/datum/attribute/skill/misc/music = 30,
+		/datum/attribute/skill/craft/alchemy = 10
 	)
 
 /datum/attribute_holder/sheet/job/acolyte/patron/golerkanh
 	raw_attribute_list = list(
 		/datum/attribute/skill/craft/blacksmithing = 20,
 		/datum/attribute/skill/craft/smelting = 20,
-		/datum/attribute/skill/craft/armorsmithing = 10,
-		/datum/attribute/skill/craft/weaponsmithing = 10,
+		/datum/attribute/skill/craft/armorsmithing = 20,
+		/datum/attribute/skill/craft/weaponsmithing = 20,
 		/datum/attribute/skill/craft/engineering = 10,
 		/datum/attribute/skill/craft/carpentry = 10,
 		/datum/attribute/skill/craft/masonry = 10,
@@ -213,6 +213,19 @@
 		devotion.make_acolyte()
 		devotion.grant_to(spawned)
 
+/datum/job/monk/on_roundstart(mob/living/spawned, client/player_client)
+	. = ..()
+
+	switch(spawned.patron?.type)
+		if(/datum/patron/divine/akan)
+			var/static/list/selectable_books = list(
+				"Storm-Charged Tome (Lightning)" = /obj/item/spellbook/apprentice/starter/lightning,
+				"Thrice-Warded Tome (Arcane)" = /obj/item/spellbook/apprentice/starter/arcane,
+				"Windswept Tome (Air)" = /obj/item/spellbook/apprentice/starter/air,
+			)
+
+			grant_selected_spellbooks(spawned, selectable_books, 2)
+
 /datum/outfit/monk
 	name = JOB_ACOLYTE
 	belt = /obj/item/storage/belt/leather/rope
@@ -245,6 +258,7 @@
 			wrists = /obj/item/clothing/wrists/nocwrappings
 			shoes = /obj/item/clothing/shoes/sandals
 			armor = /obj/item/clothing/shirt/robe/akan
+			backpack_contents += /obj/item/chalk
 		if(/datum/patron/divine/erdl)
 			head = /obj/item/clothing/head/padded/erdl
 			neck = /obj/item/clothing/neck/psycross/silver/divine/erdl

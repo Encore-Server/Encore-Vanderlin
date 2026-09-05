@@ -1,166 +1,166 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
-"aJ" = (
-/obj/machinery/light/fueled/torchholder/c,
+"a" = (
 /turf/open/floor/tile/brick,
 /area/indoors/town/shop)
-"db" = (
-/obj/structure/window/openclose/reinforced{
-	dir = 1
-	},
-/turf/open/floor/cobble/alt,
-/area/indoors/town/shop)
-"hO" = (
-/obj/structure/window/openclose/reinforced{
-	dir = 8
-	},
-/turf/open/floor/tile/brick,
-/area/indoors/town/shop)
-"jZ" = (
-/obj/structure/window/openclose/reinforced,
-/turf/open/floor/blocks/stonered,
-/area/indoors/town/shop)
-"me" = (
-/obj/structure/rack/shelf/biggest,
-/obj/item/key/houses/workplace2,
-/turf/open/floor/tile/brick,
-/area/indoors/town/shop)
-"xl" = (
-/turf/open/floor/tile/brick,
-/area/indoors/town/shop)
-"Cq" = (
-/obj/structure/door{
-	name = "Maker's Quarter"
-	},
-/turf/open/floor/tile/brick,
-/area/indoors/town/shop)
-"GS" = (
-/obj/structure/sign/property_sign/claim,
+"b" = (
+/obj/structure/fluff/walldeco/masonflag,
 /turf/closed/wall/mineral/stone,
 /area/indoors/town/shop)
-"IA" = (
-/turf/closed/wall/mineral/stone,
-/area/indoors/town/shop)
-"Kp" = (
-/obj/structure/window/openclose/reinforced{
-	dir = 4
-	},
-/turf/open/floor/cobble/alt,
-/area/indoors/town/shop)
-"Ta" = (
-/obj/structure/rack/shelf/biggest,
-/turf/open/floor/tile/brick,
-/area/indoors/town/shop)
-"Tf" = (
+"c" = (
 /obj/machinery/light/fueled/torchholder/r,
 /turf/open/floor/tile/brick,
 /area/indoors/town/shop)
-"TY" = (
+"e" = (
 /obj/structure/door/window{
 	name = "Maker's Quarter"
 	},
 /turf/open/floor/tile/brick,
 /area/indoors/town/shop)
-"VA" = (
-/obj/structure/fluff/walldeco/masonflag,
+"f" = (
+/obj/structure/door{
+	name = "Maker's Quarter"
+	},
+/turf/open/floor/tile/brick,
+/area/indoors/town/shop)
+"h" = (
+/obj/structure/window/openclose/reinforced{
+	dir = 8
+	},
+/turf/open/floor/tile/brick,
+/area/indoors/town/shop)
+"o" = (
+/obj/structure/window/openclose/reinforced,
+/turf/open/floor/blocks/stonered,
+/area/indoors/town/shop)
+"z" = (
+/obj/machinery/light/fueled/torchholder/c,
+/turf/open/floor/tile/brick,
+/area/indoors/town/shop)
+"A" = (
+/obj/structure/sign/property_sign/claim,
 /turf/closed/wall/mineral/stone,
 /area/indoors/town/shop)
-"Wi" = (
+"B" = (
+/obj/structure/window/openclose/reinforced{
+	dir = 4
+	},
+/turf/open/floor/cobble/alt,
+/area/indoors/town/shop)
+"G" = (
+/obj/machinery/light/fueled/torchholder/l,
+/turf/open/floor/tile/brick,
+/area/indoors/town/shop)
+"I" = (
+/turf/closed/wall/mineral/stone,
+/area/indoors/town/shop)
+"N" = (
+/obj/structure/window/openclose/reinforced{
+	dir = 1
+	},
+/turf/open/floor/cobble/alt,
+/area/indoors/town/shop)
+"O" = (
+/turf/closed/wall/mineral/stone/moss,
+/area/indoors/town/shop)
+"P" = (
 /obj/structure/fake_machine/scomm/r,
 /turf/open/floor/tile/brick,
 /area/indoors/town/shop)
-"Xa" = (
-/turf/closed/wall/mineral/stone/moss,
+"Q" = (
+/obj/structure/rack/shelf/biggest,
+/turf/open/floor/tile/brick,
 /area/indoors/town/shop)
-"ZS" = (
-/obj/machinery/light/fueled/torchholder/l,
+"S" = (
+/obj/structure/rack/shelf/biggest,
+/obj/item/key/houses/workplace2,
 /turf/open/floor/tile/brick,
 /area/indoors/town/shop)
 
 (1,1,1) = {"
-VA
-Kp
-TY
-TY
-Kp
-VA
+b
+B
+e
+e
+B
+b
 "}
 (2,1,1) = {"
-Xa
-Ta
-xl
-xl
-ZS
-GS
+O
+Q
+a
+a
+G
+A
 "}
 (3,1,1) = {"
-Cq
-xl
-xl
-xl
-xl
-TY
+f
+a
+a
+a
+a
+e
 "}
 (4,1,1) = {"
-jZ
-xl
-xl
-xl
-xl
-TY
+o
+a
+a
+a
+a
+e
 "}
 (5,1,1) = {"
-IA
-aJ
-xl
-xl
-xl
-db
+I
+z
+a
+a
+a
+N
 "}
 (6,1,1) = {"
-Xa
-xl
-xl
-xl
-xl
-IA
+O
+a
+a
+a
+a
+I
 "}
 (7,1,1) = {"
-Xa
-xl
-xl
-xl
-xl
-IA
+O
+a
+a
+a
+a
+I
 "}
 (8,1,1) = {"
-IA
-aJ
-xl
-xl
-xl
-IA
+I
+z
+a
+a
+a
+I
 "}
 (9,1,1) = {"
-Cq
-xl
-xl
-xl
-xl
-Cq
+f
+a
+a
+a
+a
+f
 "}
 (10,1,1) = {"
-Xa
-Wi
-Ta
-me
-Tf
-Xa
+O
+P
+Q
+S
+c
+O
 "}
 (11,1,1) = {"
-Xa
-Xa
-hO
-hO
-hO
-Xa
+O
+O
+h
+h
+h
+O
 "}
