@@ -886,6 +886,13 @@
 /obj/structure/table/wood/treestump,
 /turf/open/floor/grass/yel,
 /area/outdoors/town/neighborhood/east)
+"aIW" = (
+/obj/structure/fluff/railing/wood{
+	dir = 4
+	},
+/obj/machinery/light/fueled/torchholder/metal_torch/west,
+/turf/open/floor/rooftop,
+/area/outdoors/town/roofs)
 "aJe" = (
 /obj/structure/chair/wood/alt/chair3{
 	dir = 8
@@ -4220,7 +4227,7 @@
 	save_id = "doma_house_nine";
 	template_y = 6;
 	template_x = 7;
-	template_z = 4
+	template_z = 3
 	},
 /turf/open/floor/naturalstone,
 /area/indoors/town)
@@ -8339,6 +8346,14 @@
 	},
 /turf/open/floor/blocks/bluestone,
 /area/outdoors/exposed)
+"fZS" = (
+/obj/structure/fluff/railing/wood{
+	dir = 1;
+	layer = 2.7;
+	pixel_y = 7
+	},
+/turf/open/floor/rooftop,
+/area/outdoors/town/roofs)
 "fZU" = (
 /obj/structure/fluff/railing/border{
 	dir = 6
@@ -26285,7 +26300,7 @@
 	save_id = "medium_workplace_one";
 	template_y = 6;
 	template_x = 11;
-	template_z = 5
+	template_z = 3
 	},
 /turf/open/floor/naturalstone,
 /area/indoors/town)
@@ -29954,7 +29969,7 @@
 	save_id = "medium_workplace_two";
 	template_y = 6;
 	template_x = 11;
-	template_z = 5
+	template_z = 3
 	},
 /turf/open/floor/naturalstone,
 /area/indoors/town)
@@ -33613,7 +33628,7 @@
 	property_id = "doma_house_four";
 	save_id = "doma_house_four";
 	template_y = 5;
-	template_x = 6;
+	template_x = 5;
 	template_z = 2
 	},
 /turf/open/floor/naturalstone,
@@ -94699,22 +94714,22 @@ fNx
 fNx
 fNx
 fNx
+dvc
+dvc
+dvc
+dvc
+dvc
+dvc
 fNx
 fNx
 fNx
 fNx
-fNx
-fNx
-fNx
-fNx
-fNx
-fNx
-fNx
-fNx
-fNx
-fNx
-fNx
-fNx
+dvc
+dvc
+dvc
+dvc
+dvc
+dvc
 fNx
 fNx
 fNx
@@ -94831,22 +94846,22 @@ fNx
 fNx
 fNx
 fNx
+dvc
+aQe
+aQe
+dvc
+dvc
+dvc
 fNx
 fNx
 fNx
 fNx
-fNx
-fNx
-fNx
-fNx
-fNx
-fNx
-fNx
-fNx
-fNx
-fNx
-fNx
-fNx
+dvc
+aQe
+aQe
+dvc
+dvc
+dvc
 fNx
 fNx
 fNx
@@ -94963,22 +94978,22 @@ fNx
 fNx
 fNx
 fNx
+dvc
+aQe
+aQe
+dvc
+dvc
+dvc
 fNx
 fNx
 fNx
 fNx
-fNx
-fNx
-fNx
-fNx
-fNx
-fNx
-fNx
-fNx
-fNx
-fNx
-fNx
-fNx
+dvc
+aQe
+aQe
+dvc
+dvc
+dvc
 fNx
 fNx
 fNx
@@ -95095,22 +95110,22 @@ fNx
 fNx
 fNx
 fNx
+dvc
+aQe
+aQe
+dvc
+dvc
+dvc
 fNx
 fNx
 fNx
 fNx
-fNx
-fNx
-fNx
-fNx
-fNx
-fNx
-fNx
-fNx
-fNx
-fNx
-fNx
-fNx
+dvc
+aQe
+aQe
+dvc
+dvc
+dvc
 fNx
 fNx
 fNx
@@ -95227,22 +95242,22 @@ fNx
 fNx
 fNx
 fNx
+dvc
+aQe
+aQe
+dvc
+dvc
+dvc
 fNx
 fNx
 fNx
 fNx
-fNx
-fNx
-fNx
-fNx
-fNx
-fNx
-fNx
-fNx
-fNx
-fNx
-fNx
-fNx
+dvc
+aQe
+aQe
+dvc
+dvc
+dvc
 fNx
 fNx
 fNx
@@ -95359,22 +95374,22 @@ fNx
 fNx
 fNx
 fNx
+dvc
+aIW
+rKX
+dvc
+dvc
+dvc
 fNx
 fNx
 fNx
 fNx
-fNx
-fNx
-fNx
-fNx
-fNx
-fNx
-fNx
-fNx
-fNx
-fNx
-fNx
-fNx
+dvc
+aIW
+rKX
+dvc
+dvc
+dvc
 fNx
 fNx
 fNx
@@ -95491,22 +95506,22 @@ fNx
 fNx
 fNx
 fNx
+hDB
+aKK
+aKK
+fZS
+dvc
+dvc
 fNx
 fNx
 fNx
 fNx
-fNx
-fNx
-fNx
-fNx
-fNx
-fNx
-fNx
-fNx
-fNx
-fNx
-fNx
-fNx
+hDB
+aKK
+aKK
+fZS
+dvc
+dvc
 fNx
 fNx
 fNx
@@ -95623,22 +95638,22 @@ fNx
 fNx
 fNx
 fNx
+hDB
+bKt
+bKt
+sgB
+dvc
+dvc
 fNx
 fNx
 fNx
 fNx
-fNx
-fNx
-fNx
-fNx
-fNx
-fNx
-fNx
-fNx
-fNx
-fNx
-fNx
-fNx
+hDB
+bKt
+bKt
+sgB
+dvc
+dvc
 fNx
 fNx
 fNx
@@ -95755,22 +95770,22 @@ fNx
 fNx
 fNx
 fNx
+hDB
+bKt
+bKt
+sgB
+dvc
+dvc
 fNx
 fNx
 fNx
 fNx
-fNx
-fNx
-fNx
-fNx
-fNx
-fNx
-fNx
-fNx
-fNx
-fNx
-fNx
-fNx
+hDB
+bKt
+bKt
+sgB
+dvc
+dvc
 fNx
 fNx
 fNx
@@ -95887,22 +95902,22 @@ fNx
 fNx
 fNx
 fNx
+hDB
+hvO
+bKt
+fZS
+dvc
+dvc
 fNx
 fNx
 fNx
 fNx
-fNx
-fNx
-fNx
-fNx
-fNx
-fNx
-fNx
-fNx
-fNx
-fNx
-fNx
-fNx
+hDB
+hvO
+bKt
+fZS
+dvc
+dvc
 fNx
 fNx
 fNx
@@ -96019,22 +96034,22 @@ fNx
 fNx
 fNx
 fNx
+dvc
+anm
+anm
+dvc
+dvc
+dvc
 fNx
 fNx
 fNx
 fNx
-fNx
-fNx
-fNx
-fNx
-fNx
-fNx
-fNx
-fNx
-fNx
-fNx
-fNx
-fNx
+dvc
+anm
+anm
+dvc
+dvc
+dvc
 fNx
 fNx
 fNx
