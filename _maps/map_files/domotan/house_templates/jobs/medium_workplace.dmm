@@ -1,575 +1,217 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
-"aJ" = (
+"bH" = (
 /obj/machinery/light/fueled/torchholder/c,
 /turf/open/floor/tile/brick,
-/area/indoors/town)
-"bH" = (
-/obj/structure/fluff/walldeco/vinez/red,
-/turf/closed/wall/mineral/stone/moss,
-/area/indoors/town)
-"ct" = (
-/obj/structure/table/wood/plain,
-/obj/item/natural/feather,
-/obj/item/paper/scroll,
-/obj/item/kitchen/fork/iron,
-/obj/item/reagent_containers/glass/cup/wooden,
-/turf/open/floor/ruinedwood/turned,
-/area/indoors/town)
-"cY" = (
-/obj/structure/window/openclose{
-	dir = 4
-	},
-/turf/open/floor/ruinedwood/darker,
-/area/indoors/town)
-"db" = (
-/obj/structure/window/openclose/reinforced{
-	dir = 1
-	},
-/turf/open/floor/cobble/alt,
-/area/indoors/town)
-"dm" = (
-/turf/closed/wall/mineral/wooddark,
-/area/indoors/town)
-"eI" = (
-/obj/structure/fluff/railing/wood,
-/obj/structure/fluff/railing/wood{
-	dir = 4
-	},
-/obj/machinery/light/fueled/wallfire/candle,
-/turf/open/openspace,
-/area/indoors/town)
-"fZ" = (
-/obj/structure/door/weak/bolt,
-/turf/open/floor/ruinedwood/spiralfade,
-/area/indoors/town)
-"gr" = (
-/obj/structure/ladder,
-/turf/open/floor/blocks/stonered,
-/area/indoors/town)
+/area/indoors/town/shop)
 "hO" = (
 /obj/structure/window/openclose/reinforced{
 	dir = 8
 	},
 /turf/open/floor/tile/brick,
-/area/indoors/town)
-"iZ" = (
-/obj/structure/rack/shelf/biggest,
-/turf/open/floor/ruinedwood/turned,
-/area/indoors/town)
-"jI" = (
-/obj/structure/window/openclose{
-	dir = 1
-	},
-/turf/open/floor/ruinedwood/darker,
-/area/indoors/town)
+/area/indoors/town/shop)
 "jL" = (
-/obj/structure/stairs/stone{
-	dir = 8
-	},
-/turf/open/openspace,
-/area/indoors/town)
-"kW" = (
-/turf/open/floor/ruinedwood/darker,
-/area/indoors/town)
-"ls" = (
-/turf/closed/wall/mineral/decowood,
-/area/indoors/town)
-"lS" = (
 /obj/structure/fake_machine/scomm,
-/obj/structure/curtain/bounty,
-/turf/open/floor/ruinedwood/turned,
-/area/indoors/town)
-"me" = (
-/obj/structure/ladder,
-/obj/machinery/light/fueled/wallfire/candle,
-/turf/open/floor/ruinedwood/turned,
-/area/indoors/town)
-"mB" = (
-/obj/structure/fluff/walldeco/vinez/red,
+/turf/open/floor/tile/brick,
+/area/indoors/town/shop)
+"ls" = (
+/obj/structure/fluff/walldeco/masonflag,
 /turf/closed/wall/mineral/stone,
-/area/indoors/town)
-"oN" = (
-/obj/machinery/light/fueled/wallfire/candle/r,
-/obj/structure/bed/wool,
-/obj/item/bedsheet/cloth,
-/turf/open/floor/ruinedwood/turned,
-/area/indoors/town)
+/area/indoors/town/shop)
+"lS" = (
+/obj/structure/fluff/walldeco/vinez/red,
+/turf/closed/wall/mineral/stone/moss,
+/area/indoors/town/shop)
+"mB" = (
+/turf/closed/wall/mineral/stone,
+/area/indoors/town/shop)
 "ph" = (
-/obj/structure/window/openclose,
-/turf/open/floor/ruinedwood/darker,
-/area/indoors/town)
-"qp" = (
-/obj/machinery/light/fueled/torchholder/l,
-/turf/open/floor/blocks/stonered,
-/area/indoors/town)
-"rs" = (
-/turf/open/floor/tile/bath,
-/area/indoors/town)
-"rM" = (
 /obj/structure/window/openclose/reinforced{
 	dir = 1
 	},
-/turf/open/floor/blocks/stonered,
-/area/indoors/town)
+/turf/open/floor/cobble/alt,
+/area/indoors/town/shop)
 "sz" = (
-/obj/machinery/light/fueled/wallfire/candle/r,
-/obj/structure/toilet,
-/turf/open/floor/tile/bath,
-/area/indoors/town)
+/obj/structure/window/openclose/reinforced,
+/turf/open/floor/blocks/stonered,
+/area/indoors/town/shop)
 "sJ" = (
-/obj/item/reagent_containers/glass/bucket/wooden,
-/turf/open/floor/ruinedwood/darker,
-/area/indoors/town)
-"th" = (
-/obj/structure/rack/shelf/biggest,
-/obj/item/soap,
-/obj/item/natural/cloth,
-/turf/open/floor/ruinedwood/darker,
-/area/indoors/town)
-"ty" = (
-/obj/structure/window/openclose/reinforced{
-	dir = 4
-	},
-/turf/open/floor/tile/brick,
-/area/indoors/town)
-"up" = (
-/obj/structure/stairs/stone{
-	dir = 8
-	},
-/obj/machinery/light/fueled/torchholder/c,
-/turf/open/floor/tile/brick,
-/area/indoors/town)
-"wk" = (
-/obj/machinery/light/fueled/torchholder/l,
-/obj/machinery/light/fueled/wallfire{
-	pixel_x = -32
-	},
-/obj/structure/carpet/red,
-/turf/open/floor/ruinedwood/turned,
-/area/indoors/town)
-"xl" = (
-/turf/open/floor/tile/brick,
-/area/indoors/town)
-"yn" = (
 /obj/structure/sign/property_sign/claim,
 /turf/closed/wall/mineral/stone/moss,
-/area/indoors/town)
-"yP" = (
-/obj/structure/door{
-	name = "Maker's Quarter"
-	},
-/turf/open/floor/ruinedwood/darker,
-/area/indoors/town)
-"zW" = (
-/obj/machinery/light/fueled/hearth,
-/obj/item/cooking/pan,
-/obj/machinery/light/fueled/wallfire/candle,
-/turf/open/floor/ruinedwood/turned,
-/area/indoors/town)
-"AC" = (
-/turf/open/floor/ruinedwood/turned,
-/area/indoors/town)
-"Bp" = (
-/obj/structure/well/fountain/sink,
-/obj/machinery/light/fueled/wallfire/candle,
-/turf/open/floor/tile/bath,
-/area/indoors/town)
+/area/indoors/town/shop)
+"wk" = (
+/obj/structure/fluff/walldeco/vinez/red,
+/turf/closed/wall/mineral/stone,
+/area/indoors/town/shop)
+"xl" = (
+/obj/item/key/houses/workplace1,
+/obj/structure/rack/shelf/biggest,
+/turf/open/floor/tile/brick,
+/area/indoors/town/shop)
 "Cq" = (
 /obj/structure/door{
 	name = "Maker's Quarter"
 	},
 /turf/open/floor/tile/brick,
-/area/indoors/town)
-"Dy" = (
-/obj/structure/rack/shelf/biggest,
-/obj/item/natural/bundle/stick{
-	amount = 10
-	},
-/obj/machinery/light/fueled/torchholder/l,
-/obj/item/key/houses/workplace1,
-/turf/open/floor/ruinedwood/darker,
-/area/indoors/town)
-"ET" = (
-/turf/open/floor/blocks/stonered,
-/area/indoors/town)
-"Gv" = (
-/obj/structure/stairs/stone{
-	dir = 8
-	},
-/obj/structure/fluff/railing/border,
-/turf/open/floor/blocks/stonered,
-/area/indoors/town)
+/area/indoors/town/shop)
 "GS" = (
-/turf/closed/wall/mineral/stonebrick,
-/area/indoors/town)
-"HI" = (
-/obj/structure/well/fountain/sink,
-/turf/open/floor/ruinedwood/turned,
-/area/indoors/town)
-"IA" = (
-/turf/closed/wall/mineral/stone,
-/area/indoors/town)
-"IO" = (
-/obj/effect/decal/carpet{
-	dir = 4
-	},
-/turf/open/floor/ruinedwood/turned,
-/area/indoors/town)
+/obj/structure/rack/shelf/biggest,
+/turf/open/floor/tile/brick,
+/area/indoors/town/shop)
 "Kp" = (
 /obj/structure/window/openclose/reinforced{
 	dir = 4
 	},
 /turf/open/floor/cobble/alt,
-/area/indoors/town)
-"Ne" = (
-/obj/structure/stairs/stone{
-	dir = 8
-	},
-/obj/machinery/light/fueled/torchholder/c,
-/turf/open/floor/blocks/stonered,
-/area/indoors/town)
-"Qk" = (
-/obj/structure/door{
-	name = "Maker's Quarter"
-	},
-/turf/open/floor/blocks,
-/area/indoors/town)
-"Qv" = (
-/turf/closed/wall/mineral/wood,
-/area/indoors/town)
+/area/indoors/town/shop)
 "QC" = (
-/obj/structure/chair/stool,
-/turf/open/floor/ruinedwood/turned,
-/area/indoors/town)
-"QJ" = (
-/obj/structure/fluff/railing/border,
-/obj/structure/fluff/railing/border{
+/obj/machinery/light/fueled/torchholder/r{
 	dir = 4
 	},
-/obj/structure/fluff/railing/border{
-	dir = 6
-	},
-/obj/machinery/light/fueled/torchholder/c,
-/turf/open/openspace,
-/area/indoors/town)
-"Ta" = (
-/obj/structure/rack/shelf/biggest,
 /turf/open/floor/tile/brick,
-/area/indoors/town)
+/area/indoors/town/shop)
+"Ta" = (
+/obj/machinery/light/fueled/torchholder/l,
+/turf/open/floor/tile/brick,
+/area/indoors/town/shop)
 "Tf" = (
 /obj/machinery/light/fueled/torchholder/r,
 /turf/open/floor/tile/brick,
-/area/indoors/town)
-"Ty" = (
-/obj/structure/window/openclose{
-	dir = 8
-	},
-/turf/open/floor/ruinedwood/darker,
-/area/indoors/town)
+/area/indoors/town/shop)
 "TY" = (
+/obj/effect/abstract/property_noop,
+/turf/template_noop,
+/area/template_noop)
+"VA" = (
 /obj/structure/door/window{
 	name = "Maker's Quarter"
 	},
 /turf/open/floor/tile/brick,
-/area/indoors/town)
-"VA" = (
-/obj/structure/fluff/walldeco/masonflag,
-/turf/closed/wall/mineral/stone,
-/area/indoors/town)
-"VW" = (
-/turf/open/water/bath,
-/area/indoors/town)
-"Wi" = (
-/obj/structure/ladder,
-/turf/open/floor/tile/brick,
-/area/indoors/town)
-"Xa" = (
-/turf/closed/wall/mineral/stone/moss,
-/area/indoors/town)
-"XY" = (
-/obj/structure/fake_machine/scomm,
-/turf/open/floor/blocks/stonered,
-/area/indoors/town)
+/area/indoors/town/shop)
 "Yu" = (
-/obj/structure/window/openclose/reinforced,
-/turf/open/floor/blocks/stonered,
-/area/indoors/town)
-"Zt" = (
-/obj/machinery/light/fueled/torchholder/r,
-/turf/open/floor/blocks/stonered,
-/area/indoors/town)
+/turf/open/floor/tile/brick,
+/area/indoors/town/shop)
 "ZL" = (
-/obj/structure/fake_machine/scomm,
-/turf/open/floor/tile/brick,
-/area/indoors/town)
-"ZS" = (
-/obj/machinery/light/fueled/torchholder/l,
-/turf/open/floor/tile/brick,
-/area/indoors/town)
+/turf/closed/wall/mineral/stone/moss,
+/area/indoors/town/shop)
 
 (1,1,1) = {"
-VA
-Kp
-TY
-TY
+ls
 Kp
 VA
+VA
+Kp
+ls
+TY
+TY
+TY
 "}
 (2,1,1) = {"
-yn
+sJ
+Yu
+Yu
+Yu
 Ta
-xl
-xl
-ZS
-db
+ph
+TY
+TY
+TY
 "}
 (3,1,1) = {"
 Cq
-xl
-xl
-xl
-xl
+Yu
+Yu
+Yu
+Yu
+VA
+TY
+TY
 TY
 "}
 (4,1,1) = {"
+sz
 Yu
-xl
-xl
-xl
-xl
+Yu
+Yu
+Yu
+VA
+TY
+TY
 TY
 "}
 (5,1,1) = {"
-mB
-aJ
-xl
-xl
-xl
-db
+wk
+bH
+Yu
+Yu
+Yu
+ph
+TY
+TY
+TY
 "}
 (6,1,1) = {"
-bH
-xl
-xl
-xl
-xl
-IA
+lS
+Yu
+Yu
+Yu
+Yu
+ZL
+TY
+TY
+TY
 "}
 (7,1,1) = {"
-Xa
-IA
 ZL
-xl
-xl
-IA
+jL
+Yu
+Yu
+Yu
+ZL
+ZL
+mB
+mB
 "}
 (8,1,1) = {"
-IA
-up
+mB
+bH
+Yu
+Yu
+Yu
+QC
+Yu
 xl
-xl
-xl
-GS
+mB
 "}
 (9,1,1) = {"
 Cq
-xl
-xl
-xl
-xl
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
 Cq
 "}
 (10,1,1) = {"
-IA
-Wi
-xl
-xl
+ZL
+GS
+GS
+Tf
+Yu
+Yu
+Yu
 Tf
 mB
 "}
 (11,1,1) = {"
-IA
-IA
+ZL
+ZL
 hO
 hO
-hO
-Xa
-"}
-
-(1,1,2) = {"
-GS
-ty
-ty
-ty
-ty
-GS
-"}
-(2,1,2) = {"
-Yu
-ET
-ET
-ET
-qp
-rM
-"}
-(3,1,2) = {"
-Yu
-Zt
-ET
-ET
-ET
-rM
-"}
-(4,1,2) = {"
-GS
-GS
-XY
-ET
-ET
-rM
-"}
-(5,1,2) = {"
-GS
-Ne
-ET
-ET
-ET
-rM
-"}
-(6,1,2) = {"
-GS
-ET
-ET
-ET
-ET
-rM
-"}
-(7,1,2) = {"
-GS
-Gv
-ET
-ET
-Zt
-rM
-"}
-(8,1,2) = {"
-GS
-QJ
-ET
-ET
-GS
-GS
-"}
-(9,1,2) = {"
-Qk
-ET
-ET
-ET
-ET
-Qk
-"}
-(10,1,2) = {"
-GS
-gr
-ET
-ET
-Zt
-GS
-"}
-(11,1,2) = {"
-GS
+mB
+ZL
 hO
 hO
-GS
-GS
-GS
-"}
-
-(1,1,3) = {"
-dm
-ls
-cY
-cY
-ls
-dm
-"}
-(2,1,3) = {"
-ls
-Dy
-th
-Qv
-VW
-jI
-"}
-(3,1,3) = {"
-ph
-kW
-sJ
-Qv
-Bp
-jI
-"}
-(4,1,3) = {"
-ls
-jL
-kW
-fZ
-rs
-jI
-"}
-(5,1,3) = {"
-Qv
-eI
-kW
-Qv
-sz
-Qv
-"}
-(6,1,3) = {"
-ls
-Qv
-lS
-Qv
-Qv
-Qv
-"}
-(7,1,3) = {"
-ls
-zW
-AC
-wk
-iZ
-Qv
-"}
-(8,1,3) = {"
-ph
-HI
-AC
-AC
-iZ
-ls
-"}
-(9,1,3) = {"
-yP
-AC
-IO
-AC
-AC
-ls
-"}
-(10,1,3) = {"
-ls
-me
-QC
-ct
-oN
-ls
-"}
-(11,1,3) = {"
-dm
-ls
-Ty
-Ty
-ls
-dm
+ZL
 "}
