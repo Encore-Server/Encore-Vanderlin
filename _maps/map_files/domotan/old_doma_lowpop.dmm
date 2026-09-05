@@ -886,13 +886,6 @@
 /obj/structure/table/wood/treestump,
 /turf/open/floor/grass/yel,
 /area/outdoors/town/neighborhood/east)
-"aIW" = (
-/obj/structure/fluff/railing/wood{
-	dir = 4
-	},
-/obj/machinery/light/fueled/torchholder/metal_torch/west,
-/turf/open/floor/rooftop,
-/area/outdoors/town/roofs)
 "aJe" = (
 /obj/structure/chair/wood/alt/chair3{
 	dir = 8
@@ -4441,11 +4434,6 @@
 	},
 /turf/open/floor/ruinedwood,
 /area/indoors/town/keep/servant)
-"dlV" = (
-/obj/structure/table/wood/plain,
-/obj/effect/spawner/guaranteed_map_spawner/single/cup,
-/turf/open/floor/ruinedwood,
-/area/outdoors/town/roofs)
 "dmC" = (
 /obj/structure/fluff/railing/border{
 	dir = 6
@@ -7260,12 +7248,6 @@
 /obj/structure/flora/ausbushes/ywflowers,
 /turf/open/floor/grass/healthy,
 /area/outdoors/town)
-"fkr" = (
-/obj/structure/chair/wood/alt/chair3{
-	dir = 4
-	},
-/turf/open/floor/ruinedwood,
-/area/outdoors/town/roofs)
 "fkE" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/blocks/stonered,
@@ -8348,14 +8330,6 @@
 	},
 /turf/open/floor/blocks/bluestone,
 /area/outdoors/exposed)
-"fZS" = (
-/obj/structure/fluff/railing/wood{
-	dir = 1;
-	layer = 2.7;
-	pixel_y = 7
-	},
-/turf/open/floor/rooftop,
-/area/outdoors/town/roofs)
 "fZU" = (
 /obj/structure/fluff/railing/border{
 	dir = 6
@@ -16955,10 +16929,6 @@
 /obj/structure/bars/cemetery,
 /turf/open/floor/grass/yel,
 /area/outdoors/town/noble_manor/yellow)
-"lNb" = (
-/obj/machinery/light/fueled/torchholder/r,
-/turf/open/floor/ruinedwood,
-/area/outdoors/town/roofs)
 "lNN" = (
 /obj/structure/fluff/walldeco/bath/wallpipes/outie,
 /obj/structure/fluff/walldeco/bath/wallpipes/innie,
@@ -20218,11 +20188,6 @@
 /obj/effect/decal/cleanable/dirt/cobweb/cobweb2,
 /turf/open/floor/hexstone,
 /area/indoors/town/keep/archivist)
-"nTA" = (
-/obj/structure/chair/wood/alt/chair3,
-/obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/ruinedwood,
-/area/outdoors/town/roofs)
 "nTR" = (
 /obj/structure/bookcase/fancy/random/thesis,
 /obj/machinery/light/fueledstreet/blue/wall,
@@ -24391,15 +24356,6 @@
 /obj/machinery/light/fueled/torchholder/r,
 /turf/open/floor/ruinedwood,
 /area/indoors/town/church/chapel)
-"qIn" = (
-/obj/structure/fluff/railing/wood{
-	dir = 1;
-	layer = 2.7;
-	pixel_y = 7
-	},
-/obj/structure/ladder,
-/turf/open/floor/ruinedwood,
-/area/outdoors/town/roofs)
 "qIC" = (
 /obj/structure/ladder,
 /turf/open/floor/ruinedwood,
@@ -34658,12 +34614,6 @@
 	},
 /turf/open/floor/ruinedwood/turned/alt,
 /area/indoors/soilsons)
-"ycc" = (
-/obj/machinery/light/fueled/torchholder/l,
-/obj/effect/decal/cleanable/dirt/dust,
-/obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/ruinedwood,
-/area/outdoors/town/roofs)
 "ycg" = (
 /turf/open/floor/ruinedwood,
 /area/indoors/town/church/chapel)
@@ -82390,8 +82340,8 @@ glJ
 glJ
 fNx
 fNx
-kla
-kla
+fNx
+fNx
 glJ
 glJ
 glJ
@@ -82513,7 +82463,7 @@ qEy
 dvc
 dvc
 dvc
-kla
+fNx
 glJ
 glJ
 glJ
@@ -82521,9 +82471,9 @@ glJ
 glJ
 glJ
 fNx
-vvT
-fkr
-ycc
+fNx
+fNx
+fNx
 glJ
 glJ
 glJ
@@ -82645,7 +82595,7 @@ fWo
 dvc
 dvc
 dvc
-qIn
+fNx
 glJ
 glJ
 glJ
@@ -82653,9 +82603,9 @@ glJ
 glJ
 glJ
 fNx
-vvT
-dlV
-qcS
+fNx
+fNx
+fNx
 glJ
 glJ
 glJ
@@ -82777,7 +82727,7 @@ fWo
 dvc
 dvc
 dvc
-wlN
+fNx
 glJ
 glJ
 glJ
@@ -82785,9 +82735,9 @@ glJ
 glJ
 glJ
 fNx
-vvT
-nTA
-lNb
+fNx
+fNx
+fNx
 glJ
 glJ
 glJ
@@ -82918,8 +82868,8 @@ glJ
 glJ
 fNx
 fNx
-wlN
-wlN
+fNx
+fNx
 glJ
 glJ
 glJ
@@ -94791,22 +94741,22 @@ fNx
 fNx
 fNx
 fNx
-dvc
-dvc
-dvc
-dvc
-dvc
-dvc
 fNx
 fNx
 fNx
 fNx
-dvc
-dvc
-dvc
-dvc
-dvc
-dvc
+fNx
+fNx
+fNx
+fNx
+fNx
+fNx
+fNx
+fNx
+fNx
+fNx
+fNx
+fNx
 fNx
 fNx
 fNx
@@ -94923,22 +94873,22 @@ fNx
 fNx
 fNx
 fNx
-dvc
-aQe
-aQe
-dvc
-dvc
-dvc
 fNx
 fNx
 fNx
 fNx
-dvc
-aQe
-aQe
-dvc
-dvc
-dvc
+fNx
+fNx
+fNx
+fNx
+fNx
+fNx
+fNx
+fNx
+fNx
+fNx
+fNx
+fNx
 fNx
 fNx
 fNx
@@ -95055,22 +95005,22 @@ fNx
 fNx
 fNx
 fNx
-dvc
-aQe
-aQe
-dvc
-dvc
-dvc
 fNx
 fNx
 fNx
 fNx
-dvc
-aQe
-aQe
-dvc
-dvc
-dvc
+fNx
+fNx
+fNx
+fNx
+fNx
+fNx
+fNx
+fNx
+fNx
+fNx
+fNx
+fNx
 fNx
 fNx
 fNx
@@ -95187,22 +95137,22 @@ fNx
 fNx
 fNx
 fNx
-dvc
-aQe
-aQe
-dvc
-dvc
-dvc
 fNx
 fNx
 fNx
 fNx
-dvc
-aQe
-aQe
-dvc
-dvc
-dvc
+fNx
+fNx
+fNx
+fNx
+fNx
+fNx
+fNx
+fNx
+fNx
+fNx
+fNx
+fNx
 fNx
 fNx
 fNx
@@ -95319,22 +95269,22 @@ fNx
 fNx
 fNx
 fNx
-dvc
-aQe
-aQe
-dvc
-dvc
-dvc
 fNx
 fNx
 fNx
 fNx
-dvc
-aQe
-aQe
-dvc
-dvc
-dvc
+fNx
+fNx
+fNx
+fNx
+fNx
+fNx
+fNx
+fNx
+fNx
+fNx
+fNx
+fNx
 fNx
 fNx
 fNx
@@ -95451,22 +95401,22 @@ fNx
 fNx
 fNx
 fNx
-dvc
-aIW
-rKX
-dvc
-dvc
-dvc
 fNx
 fNx
 fNx
 fNx
-dvc
-aIW
-rKX
-dvc
-dvc
-dvc
+fNx
+fNx
+fNx
+fNx
+fNx
+fNx
+fNx
+fNx
+fNx
+fNx
+fNx
+fNx
 fNx
 fNx
 fNx
@@ -95583,22 +95533,22 @@ fNx
 fNx
 fNx
 fNx
-hDB
-aKK
-aKK
-fZS
-dvc
-dvc
 fNx
 fNx
 fNx
 fNx
-hDB
-aKK
-aKK
-fZS
-dvc
-dvc
+fNx
+fNx
+fNx
+fNx
+fNx
+fNx
+fNx
+fNx
+fNx
+fNx
+fNx
+fNx
 fNx
 fNx
 fNx
@@ -95715,22 +95665,22 @@ fNx
 fNx
 fNx
 fNx
-hDB
-bKt
-bKt
-sgB
-dvc
-dvc
 fNx
 fNx
 fNx
 fNx
-hDB
-bKt
-bKt
-sgB
-dvc
-dvc
+fNx
+fNx
+fNx
+fNx
+fNx
+fNx
+fNx
+fNx
+fNx
+fNx
+fNx
+fNx
 fNx
 fNx
 fNx
@@ -95847,22 +95797,22 @@ fNx
 fNx
 fNx
 fNx
-hDB
-bKt
-bKt
-sgB
-dvc
-dvc
 fNx
 fNx
 fNx
 fNx
-hDB
-bKt
-bKt
-sgB
-dvc
-dvc
+fNx
+fNx
+fNx
+fNx
+fNx
+fNx
+fNx
+fNx
+fNx
+fNx
+fNx
+fNx
 fNx
 fNx
 fNx
@@ -95979,22 +95929,22 @@ fNx
 fNx
 fNx
 fNx
-hDB
-hvO
-bKt
-fZS
-dvc
-dvc
 fNx
 fNx
 fNx
 fNx
-hDB
-hvO
-bKt
-fZS
-dvc
-dvc
+fNx
+fNx
+fNx
+fNx
+fNx
+fNx
+fNx
+fNx
+fNx
+fNx
+fNx
+fNx
 fNx
 fNx
 fNx
@@ -96111,22 +96061,22 @@ fNx
 fNx
 fNx
 fNx
-dvc
-anm
-anm
-dvc
-dvc
-dvc
 fNx
 fNx
 fNx
 fNx
-dvc
-anm
-anm
-dvc
-dvc
-dvc
+fNx
+fNx
+fNx
+fNx
+fNx
+fNx
+fNx
+fNx
+fNx
+fNx
+fNx
+fNx
 fNx
 fNx
 fNx
