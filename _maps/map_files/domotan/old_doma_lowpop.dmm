@@ -1955,6 +1955,10 @@
 /obj/machinery/light/fueledstreet/blue/wall,
 /turf/open/floor/blocks/stonered,
 /area/outdoors/town/plaza)
+"bvN" = (
+/obj/machinery/light/fueled/torchholder/r,
+/turf/open/floor/ruinedwood/turned/darker,
+/area/indoors/town/shop)
 "bvQ" = (
 /turf/closed/wall/mineral/stone,
 /area/outdoors/town/roofs)
@@ -2486,6 +2490,9 @@
 /obj/structure/flora/hotspring_rocks/small,
 /turf/open/floor/dirt,
 /area/outdoors/beach)
+"bRR" = (
+/turf/closed/wall/mineral/stone/moss,
+/area/indoors/town/shop)
 "bSc" = (
 /turf/open/floor/grass/yel,
 /area/outdoors/town/neighborhood/east)
@@ -14248,13 +14255,6 @@
 /obj/machinery/light/fueledstreet/orange/wall{
 	dir = 4
 	},
-/obj/effect/landmark/house_spot{
-	default_template = /datum/map_template/makers_quarter_1;
-	property_id = "makers_quarter_1";
-	save_id = "makers_quarter_1";
-	template_y = 9;
-	template_x = 11
-	},
 /turf/open/floor/cobble/mossy,
 /area/outdoors/town/plaza)
 "jSQ" = (
@@ -15394,6 +15394,16 @@
 /obj/structure/flora/ausbushes/ywflowers,
 /turf/open/floor/grass/yel,
 /area/outdoors/town)
+"kFH" = (
+/obj/effect/landmark/house_spot{
+	default_template = /datum/map_template/makers_quarter_1;
+	property_id = "makers_quarter_1";
+	save_id = "makers_quarter_1";
+	template_y = 6;
+	template_x = 11
+	},
+/turf/open/floor/naturalstone,
+/area/indoors/town/shop)
 "kFJ" = (
 /obj/effect/decal/cobbleedge{
 	dir = 10;
@@ -16350,6 +16360,9 @@
 /obj/structure/bed/hay,
 /turf/open/floor/dirt/road,
 /area/under/town/sewer)
+"lwt" = (
+/turf/closed/wall/mineral/stone,
+/area/indoors/town/shop)
 "lwx" = (
 /obj/structure/fluff/railing/wood,
 /turf/open/openspace,
@@ -20138,6 +20151,9 @@
 "nRV" = (
 /turf/open/floor/ruinedwood/alt,
 /area/outdoors/town)
+"nSi" = (
+/turf/open/floor/ruinedwood/turned/darker,
+/area/indoors/town/shop)
 "nSo" = (
 /obj/structure/fluff/traveltile{
 	icon = 'icons/roguetown/topadd/death/vamp-lord.dmi';
@@ -27885,6 +27901,11 @@
 /obj/item/fishingrod/fisher,
 /turf/open/floor/dirt,
 /area/indoors/town/cell)
+"tsA" = (
+/obj/item/key/houses/workplace1,
+/obj/structure/rack/shelf/biggest,
+/turf/open/floor/ruinedwood,
+/area/indoors/town/shop)
 "tsL" = (
 /obj/effect/decal/shadow_floor{
 	dir = 4
@@ -29627,6 +29648,12 @@
 /obj/machinery/light/fueled/torchholder/l,
 /turf/open/floor/blocks/green,
 /area/under/town/basement)
+"uFj" = (
+/obj/structure/door{
+	name = "Maker's Quarter"
+	},
+/turf/open/floor/tile/brick,
+/area/indoors/town/shop)
 "uFn" = (
 /obj/structure/fluff/walldeco/sparrowflag{
 	pixel_y = 32
@@ -31895,6 +31922,9 @@
 	},
 /turf/open/openspace,
 /area/outdoors/beach/boat)
+"wjU" = (
+/turf/open/floor/ruinedwood,
+/area/indoors/town/shop)
 "wkl" = (
 /obj/structure/fluff/walldeco/church/line{
 	dir = 1
@@ -34819,6 +34849,12 @@
 /obj/structure/flora/grass/herb/random,
 /turf/open/floor/grass/yel,
 /area/outdoors/beach)
+"yld" = (
+/obj/structure/window/openclose/reinforced{
+	dir = 8
+	},
+/turf/open/floor/tile/brick,
+/area/indoors/town/shop)
 "ylC" = (
 /obj/structure/stairs/stone{
 	dir = 4
@@ -55107,7 +55143,7 @@ fht
 fht
 fht
 fht
-fht
+kFH
 lUi
 qpv
 jRY
@@ -55900,9 +55936,9 @@ fht
 fht
 fht
 fht
-fht
-fht
-fht
+bRR
+lwt
+lwt
 rRX
 pZy
 iCf
@@ -56032,9 +56068,9 @@ fht
 fht
 fht
 fht
-fht
-fht
-fht
+nSi
+tsA
+lwt
 uSG
 pZy
 hRe
@@ -56164,9 +56200,9 @@ fht
 fht
 fht
 fht
-fht
-fht
-fht
+nSi
+wjU
+uFj
 pZy
 pZy
 waq
@@ -56296,9 +56332,9 @@ fht
 fht
 fht
 fht
-fht
-fht
-fht
+wjU
+bvN
+lwt
 pZy
 pZy
 waq
@@ -56428,9 +56464,9 @@ fht
 fht
 fht
 fht
-fht
-fht
-fht
+yld
+yld
+bRR
 oQh
 pZy
 bZh
