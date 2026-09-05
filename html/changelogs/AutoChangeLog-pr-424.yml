@@ -1,0 +1,5 @@
+author: "kyres1"
+delete-after: True
+changes:
+  - qol: "Changed default rivals to zero so you don't have to fix this every time you make a new character."
+  - sound: "Changed SCOMM sound effects to be actual radio effects."
