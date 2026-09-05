@@ -218,9 +218,9 @@
 /turf/closed/wall/mineral/wooddark/horizontal,
 /area/indoors/vampire_manor)
 "dI" = (
-/obj/structure/ladder/unbreakable,
-/turf/open/floor/churchmarble/violet,
-/area/indoors/vampire_manor)
+/obj/machinery/light/fueled/firebowl/standing/blue,
+/turf/open/floor/dirt/road,
+/area/outdoors/exposed)
 "dQ" = (
 /obj/structure/closet/crate/chest/wicker,
 /obj/item/reagent_containers/food/snacks/produce/grain/wheat,
@@ -388,6 +388,10 @@
 	},
 /turf/open/floor/churchrough,
 /area/indoors/vampire_manor)
+"gZ" = (
+/obj/machinery/light/fueled/firebowl/standing/blue,
+/turf/open/floor/grass/mixyel,
+/area/outdoors/exposed)
 "he" = (
 /obj/structure/flora/grass/bush/wall/tall,
 /turf/open/floor/grass/mixyel,
@@ -493,7 +497,9 @@
 /turf/open/floor/churchmarble/violet,
 /area/indoors/vampire_manor)
 "jr" = (
-/obj/structure/ladder/unbreakable,
+/obj/structure/stairs{
+	dir = 1
+	},
 /turf/open/floor/tile/diamond,
 /area/indoors/vampire_manor)
 "jt" = (
@@ -855,6 +861,10 @@
 /obj/machinery/light/fueled/wallfire/candle/blue,
 /turf/open/floor/carpet/royalblack,
 /area/indoors/vampire_manor)
+"pw" = (
+/obj/machinery/light/fueled/firebowl/standing/blue,
+/turf/open/floor/cobblerock,
+/area/outdoors/exposed)
 "pM" = (
 /obj/structure/fluff/wallclock/vampire,
 /obj/structure/chair/wood,
@@ -905,6 +915,10 @@
 /obj/item/reagent_containers/glass/cup/coralfancy,
 /turf/open/floor/carpet/royalblack,
 /area/indoors/vampire_manor)
+"rk" = (
+/obj/machinery/light/fueled/firebowl/standing/blue,
+/turf/open/floor/grass/red,
+/area/outdoors/exposed)
 "rs" = (
 /obj/structure/fluff/walldeco/church/line,
 /obj/structure/table/wood/fancy/red,
@@ -916,6 +930,13 @@
 	lockids = list("mansionvampire")
 	},
 /turf/open/floor/carpet/red,
+/area/indoors/vampire_manor)
+"rD" = (
+/obj/machinery/light/fueled/wallfire/candle/blue/r,
+/obj/structure/stairs{
+	dir = 1
+	},
+/turf/open/floor/churchmarble/violet,
 /area/indoors/vampire_manor)
 "rL" = (
 /obj/machinery/light/fueled/wallfire/candle/skull/l,
@@ -2137,7 +2158,6 @@
 	redstone_id = "vampguestroom2";
 	name = "Guest Room 2"
 	},
-/obj/structure/ladder/unbreakable,
 /turf/open/floor/churchrough,
 /area/indoors/vampire_manor)
 "UN" = (
@@ -2519,7 +2539,7 @@ ik
 ik
 ik
 ik
-KV
+HH
 Bu
 HC
 Qa
@@ -2575,7 +2595,7 @@ WB
 ik
 XB
 MC
-MC
+KV
 MC
 yt
 ma
@@ -2600,7 +2620,7 @@ bR
 mI
 hL
 ik
-HH
+ik
 jr
 MC
 MC
@@ -3109,7 +3129,7 @@ BS
 ik
 rL
 Mk
-dI
+Mk
 JF
 ik
 zG
@@ -3362,7 +3382,7 @@ PM
 dG
 QU
 rb
-Pi
+gZ
 Pi
 AY
 Qg
@@ -3438,8 +3458,8 @@ fW
 xu
 Vb
 Mk
-Vb
-dI
+rD
+Mr
 dG
 dG
 lI
@@ -3448,7 +3468,7 @@ Pi
 ix
 Qg
 Qg
-xo
+rk
 Vl
 "}
 (9,1,2) = {"
@@ -3632,10 +3652,10 @@ ut
 gE
 dG
 kp
-yy
+pw
 Qg
 Qg
-Qg
+dI
 he
 rb
 ho
@@ -3767,10 +3787,10 @@ fw
 dG
 rb
 lI
+dI
 Qg
 Qg
-Qg
-yy
+pw
 kp
 Pi
 Vl
