@@ -252,13 +252,11 @@
 	armor = /obj/item/clothing/armor/gambeson/hand
 	pants = /obj/item/clothing/pants/tights/colored/black
 	shoes = /obj/item/clothing/shoes/boots/darkboots
-	beltl = /obj/item/weapon/sword/rapier/caneblade/hand
 	backpack_contents = list(
 		/obj/item/weapon/knife/dagger/steel/special = 1,
 		/obj/item/reagent_containers/glass/bottle/poison = 1,
 		/obj/item/frumentarii = 1
 	)
-	scabbards = list(/obj/item/weapon/scabbard/cane/hand)
 
 /datum/attribute_holder/sheet/job/huntsmaster
 	attribute_variance = list(
@@ -508,9 +506,7 @@
 	cloak = /obj/item/clothing/cloak/half
 	pants = /obj/item/clothing/pants/tights/colored/black
 	shoes = /obj/item/clothing/shoes/boots
-	beltr = /obj/item/storage/magebag/apprentice
-	beltl = /obj/item/weapon/sword/rapier/caneblade/hand
-	scabbards = list(/obj/item/weapon/scabbard/cane/hand)
+	beltl = /obj/item/storage/magebag/apprentice
 
 /datum/outfit/hand/magister/male //Sol
 	name = "Male Magister (Hand)"

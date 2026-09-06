@@ -227,6 +227,8 @@
 	lord_job?.add_spells(coronated)
 	SSticker.rulermob = coronated
 	GLOB.badomens -= OMEN_NOLORD
+	var/datum/secret_door_manager/keep_doors = GLOB.secret_door_managers["keep"]
+	keep_doors?.inform_spawned(coronated)
 	say("By the authority of the Aspects, I pronounce you the ruling regent of [SSmapping.config.map_name]!")
 	priority_announce("[real_name] the [mind.assigned_role.get_informed_title(src)] has named [coronated.real_name] the regent of [SSmapping.config.map_name]!", \
 	title = "Long Live [lord_job.get_informed_title(coronated)] [coronated.real_name]!", sound = 'sound/misc/bell.ogg')

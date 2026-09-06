@@ -1,9 +1,0 @@
-author: "crimsonFig"
-delete-after: True
-changes:
-  - qol: "Removes bleed need for subscribing to a ritual circle"
-  - qol: "Deactivates ritual circles if activator moves too far away and there are no mana pylons"
-  - qol: "Range check for buffs handle z level differences better"
-  - bugfix: "Fixes Flight Sigil,  flight buff is reliably applied now"
-  - qol: "Flight gives a short safety buff when it wears off so you dont become icarus'd"
-  - refactor: "Compacted the class of mana drain sigils"
