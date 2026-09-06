@@ -1,9 +1,0 @@
-author: "MisterLayne"
-delete-after: True
-changes:
-  - rscadd: "There is now a TGUI Checkboxes Input that takes multiple options and returns a list of selected options"
-  - rscadd: "More alchemy dust in chests"
-  - rscadd: "Combat flasks for essence"
-  - rscadd: "Reagent vials for potions/tonics"
-  - refactor: "Essence Reservoirs can now filter any essence regardless of whether it is present"
-  - refactor: "Cauldron only takes 1or 2x (based on auto repeat) the essence it needs now instead of ALL the essence"
