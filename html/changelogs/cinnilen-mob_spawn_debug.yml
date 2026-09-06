@@ -4,4 +4,4 @@ author: "cinnilen"
 delete-after: True
 
 changes:
-  - rscadd: "Added debug verb to spawn a mob and inhabit it quickly.""
+  - rscadd: "Added debug verb to spawn a mob and inhabit it quickly."
