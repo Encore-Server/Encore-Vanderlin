@@ -6524,9 +6524,9 @@
 "eKv" = (
 /obj/structure/door{
 	name = "LUXURY ROOM III";
-	locked = 1;
 	lockid = "luxroomiii"
 	},
+/obj/effect/mapping_helpers/access/locker,
 /turf/open/floor/ruinedwood/turned,
 /area/indoors/town/tavern/saiga)
 "eKK" = (
@@ -16141,9 +16141,9 @@
 "lls" = (
 /obj/structure/door{
 	name = "MEDIUM ROOM II";
-	lockid = "medroomii";
-	locked = 1
+	lockid = "medroomii"
 	},
+/obj/effect/mapping_helpers/access/locker,
 /turf/open/floor/wood,
 /area/indoors/town/tavern/saiga)
 "llB" = (
@@ -17771,9 +17771,9 @@
 "mji" = (
 /obj/structure/door{
 	name = "MEDIUM ROOM I";
-	lockid = "medroomi";
-	locked = 1
+	lockid = "medroomi"
 	},
+/obj/effect/mapping_helpers/access/locker,
 /turf/open/floor/wood,
 /area/indoors/town/tavern/saiga)
 "mjL" = (
@@ -20564,9 +20564,9 @@
 "oeA" = (
 /obj/structure/door{
 	name = "LUXURY ROOM I";
-	locked = 1;
 	lockid = "luxroomi"
 	},
+/obj/effect/mapping_helpers/access/locker,
 /turf/open/floor/ruinedwood/turned,
 /area/indoors/town/tavern/saiga)
 "oeD" = (
@@ -26401,9 +26401,9 @@
 "skE" = (
 /obj/structure/door{
 	name = "LUXURY ROOM II";
-	locked = 1;
 	lockid = "luxroomii"
 	},
+/obj/effect/mapping_helpers/access/locker,
 /turf/open/floor/ruinedwood/turned,
 /area/indoors/town/tavern/saiga)
 "skH" = (
@@ -33943,9 +33943,9 @@
 "xwA" = (
 /obj/structure/door{
 	name = "MEDIUM ROOM III";
-	lockid = "medroomiii";
-	locked = 1
+	lockid = "medroomiii"
 	},
+/obj/effect/mapping_helpers/access/locker,
 /turf/open/floor/wood,
 /area/indoors/town/tavern/saiga)
 "xwJ" = (
