@@ -24,6 +24,9 @@
 	linked_living = WEAKREF(user)
 
 /obj/item/phantom_ear/Destroy()
+	var/mob/living/owner = linked_living?.resolve()
+	if(owner)
+		UnregisterSignal(owner, COMSIG_MOB_SAY)
 	lose_hearing_sensitivity()
 	linked_living = null
 	return ..()
@@ -88,22 +91,13 @@
 	if(QDELETED(owner))
 		qdel(src)
 		return
-	if(speaker == owner)
-		if(findtext(raw_message, "deafen") && !muted)
-			to_chat(owner, span_notice("The voices in your head subside."))
-			muted = TRUE
-			return
-		else if(findtext(raw_message, "listen") && muted)
-			to_chat(owner, span_notice("You are bombarded again with the voices of the world."))
-			muted = FALSE
-			return
-	if(speaker == src)
+	if(speaker == src || speaker == owner)
 		return
 	if(get_dist(speaker.loc, loc) > hear_radius)
 		return
 	if(muted)
 		return
-	if(!message || !linked_living)
+	if(!message)
 		return
 	to_chat(owner, "<img src='\ref[chat_icon]?state=[chat_icon_state]'/>" + " [message]")
 	if(!isliving(speaker))
