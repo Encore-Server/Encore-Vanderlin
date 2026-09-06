@@ -1882,6 +1882,9 @@
 "brF" = (
 /obj/structure/bed/wool,
 /obj/item/bedsheet/fabric,
+/obj/effect/landmark/start/manorguardsman{
+	dir = 1
+	},
 /turf/open/floor/ruinedwood,
 /area/indoors/town/keep/knight)
 "brP" = (
@@ -17802,9 +17805,11 @@
 /turf/open/floor/blocks,
 /area/indoors/town/garrison)
 "mky" = (
+/obj/structure/bed/wool,
+/obj/item/bedsheet/fabric,
 /obj/effect/landmark/start/manorguardsman,
-/turf/open/floor/carpet/lord/left,
-/area/indoors/town/keep/throne)
+/turf/open/floor/ruinedwood,
+/area/indoors/town/keep/knight)
 "mkA" = (
 /turf/open/floor/tile/checkeralt,
 /area/indoors/town/garrison)
@@ -20135,13 +20140,6 @@
 	},
 /turf/open/floor/church/purple,
 /area/indoors/town/keep/archivist)
-"nMC" = (
-/obj/effect/landmark/start/manorguardsman,
-/obj/effect/decal/shadow_floor{
-	dir = 8
-	},
-/turf/open/floor/blocks/bluestone,
-/area/indoors/town/keep/throne)
 "nNz" = (
 /obj/item/bin/water,
 /obj/item/reagent_containers/glass/bucket/wooden{
@@ -20849,13 +20847,6 @@
 /obj/structure/closet/crate/chest,
 /turf/open/floor/cobble,
 /area/indoors/town/keep/garrison)
-"onv" = (
-/obj/effect/landmark/start/manorguardsman,
-/obj/effect/decal/shadow_floor{
-	dir = 4
-	},
-/turf/open/floor/blocks/bluestone,
-/area/indoors/town/keep/throne)
 "onJ" = (
 /obj/effect/mapping_helpers/access/locker,
 /obj/effect/mapping_helpers/access/keyset/town/mercenary,
@@ -23523,6 +23514,7 @@
 /obj/structure/bed/wool,
 /obj/item/bedsheet/fabric,
 /obj/machinery/light/fueled/wallfire/candle,
+/obj/effect/landmark/start/manorguardsman,
 /turf/open/floor/ruinedwood,
 /area/indoors/town/keep/knight)
 "qgl" = (
@@ -31107,7 +31099,6 @@
 /turf/open/floor/grass/healthy,
 /area/outdoors/exposed/magiciantower/garden)
 "vAQ" = (
-/obj/effect/landmark/start/manorguardsman,
 /obj/effect/decal/shadow_floor{
 	dir = 8
 	},
@@ -32025,10 +32016,6 @@
 	},
 /turf/open/floor/ruinedwood/chevron,
 /area/indoors/town/keep/magician)
-"wgo" = (
-/obj/effect/landmark/start/manorguardsman,
-/turf/open/floor/carpet/lord/right,
-/area/indoors/town/keep/throne)
 "wgG" = (
 /obj/structure/closet/crate/crafted_closet,
 /obj/structure/fluff/walldeco/church/line{
@@ -81289,7 +81276,7 @@ ePa
 gPI
 gPI
 vAQ
-nMC
+gPI
 gPI
 irS
 fYh
@@ -81420,8 +81407,8 @@ pCY
 pCY
 pCY
 pCY
-mky
-mky
+pCY
+pCY
 pCY
 hyI
 bla
@@ -81684,8 +81671,8 @@ iIe
 iIe
 iIe
 iIe
-wgo
-wgo
+iIe
+iIe
 iIe
 iIe
 fSc
@@ -81816,8 +81803,8 @@ hYs
 hYs
 hYs
 hYs
-onv
-onv
+hYs
+hYs
 hYs
 irS
 oKp
@@ -96358,7 +96345,7 @@ fIa
 bYr
 fIa
 kXU
-brF
+mky
 heI
 heI
 brF
