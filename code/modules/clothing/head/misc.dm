@@ -1,5 +1,6 @@
 /obj/item/clothing/head/padded	// slightly armored subtype for convenience
 	armor_type = /datum/armor/minimal
+	slot_flags = ITEM_SLOT_HEAD|ITEM_SLOT_MASK|ITEM_SLOT_NECK
 	prevent_crits = MINOR_CRITICALS
 	abstract_type = /obj/item/clothing/head/padded
 
