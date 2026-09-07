@@ -936,14 +936,6 @@
 	},
 /turf/open/openspace,
 /area/indoors/town/keep/magician)
-"aKq" = (
-/obj/effect/decal/cobbleedge{
-	dir = 10;
-	icon_state = "cobbleedge-n"
-	},
-/obj/structure/fluff/walldeco/sign/wynceslar_tavern/left,
-/turf/open/floor/ruinedwood,
-/area/outdoors/town)
 "aKt" = (
 /obj/machinery/light/fueled/wallfire/candle/r,
 /obj/structure/curtain/bounty,
@@ -1065,10 +1057,8 @@
 /turf/open/floor/ruinedwood/two,
 /area/indoors/town/keep)
 "aPa" = (
-/obj/structure/closet/crate/chest/old_crate,
-/obj/item/ore/iron,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/ruinedwood,
+/obj/effect/landmark/start/mercenary,
+/turf/open/floor/dirt/road,
 /area/outdoors/town/neighborhood/west)
 "aPb" = (
 /obj/machinery/light/fueledstreet/orange/wall,
@@ -3853,9 +3843,6 @@
 /obj/structure/fluff/railing/tall/retaining/stone{
 	dir = 4
 	},
-/obj/machinery/light/fueledstreet/orange/wall{
-	dir = 8
-	},
 /turf/open/floor/sand/sandstone,
 /area/outdoors/town/neighborhood/west)
 "cMS" = (
@@ -5848,11 +5835,8 @@
 /turf/open/floor/ruinedwood,
 /area/under/town/basement/smugglers_den)
 "eoz" = (
-/obj/structure/closet/crate/chest/shippingcrate,
-/obj/machinery/light/fueledstreet/orange/wall{
-	dir = 4
-	},
-/turf/open/floor/ruinedwood,
+/obj/effect/landmark/start/mercenary,
+/turf/open/floor/cobble,
 /area/outdoors/town/neighborhood/west)
 "eoH" = (
 /obj/effect/decal/cobbleedge{
@@ -9212,8 +9196,27 @@
 /turf/open/floor/cobble,
 /area/indoors/town/keep/kitchen)
 "gDx" = (
-/obj/effect/landmark/start/mercenary,
-/turf/open/floor/ruinedwood/turned,
+/obj/structure/closet/crate/chest/shippingcrate{
+	name = "shop setup supplies crate"
+	},
+/obj/item/natural/bundle/cloth/roll{
+	amount = 4
+	},
+/obj/item/natural/bundle/cloth/roll{
+	amount = 4
+	},
+/obj/item/natural/bundle/cloth/roll{
+	amount = 4
+	},
+/obj/item/natural/bundle/cloth/roll{
+	amount = 4
+	},
+/obj/item/natural/bundle/glass,
+/obj/item/natural/bundle/glass,
+/obj/item/natural/bundle/plank{
+	amount = 10
+	},
+/turf/open/floor/ruinedwood,
 /area/outdoors/town/neighborhood/west)
 "gDD" = (
 /obj/structure/fluff/railing/tall{
@@ -9888,7 +9891,6 @@
 	pixel_y = 4
 	},
 /obj/structure/table/wood/large_new{
-	dir = 2;
 	icon_state = "alt_largetable"
 	},
 /obj/structure/fluff/walldeco/church/line,
@@ -10270,7 +10272,6 @@
 /area/outdoors/town/neighborhood/east)
 "hne" = (
 /obj/structure/table/wood/large_new{
-	dir = 2;
 	icon_state = "alt_largetable"
 	},
 /obj/machinery/essence/reservoir{
@@ -12073,7 +12074,6 @@
 /obj/effect/decal/cobbleedge{
 	dir = 6
 	},
-/obj/structure/fluff/walldeco/sign/wynceslar_tavern/left,
 /turf/open/floor/grass/cold,
 /area/outdoors/town)
 "ivh" = (
@@ -12584,10 +12584,6 @@
 /obj/structure/well/fountain/sink,
 /turf/open/floor/tile/bath,
 /area/indoors/town/keep)
-"iKI" = (
-/obj/effect/landmark/start/mercenary,
-/turf/open/floor/ruinedwood,
-/area/outdoors/town/neighborhood/west)
 "iKM" = (
 /obj/structure/fluff/railing/tall/retaining/stone{
 	dir = 4
@@ -12970,7 +12966,6 @@
 /area/under/town/sewer)
 "iWs" = (
 /obj/structure/table/wood/large_new{
-	dir = 2;
 	icon_state = "alt_largetable"
 	},
 /obj/item/servant_bell/lord{
@@ -17929,7 +17924,26 @@
 /turf/open/floor/ruinedwood/two,
 /area/indoors/town/keep/magician)
 "moA" = (
-/obj/structure/handcart,
+/obj/item/natural/stone,
+/obj/item/natural/stone,
+/obj/item/natural/stone,
+/obj/item/natural/stone,
+/obj/item/natural/stone,
+/obj/item/natural/stone,
+/obj/item/natural/stone,
+/obj/item/natural/stone,
+/obj/item/natural/stone,
+/obj/item/natural/stone,
+/obj/item/natural/clod/dirt,
+/obj/item/natural/clod/dirt,
+/obj/item/natural/clod/dirt,
+/obj/item/natural/clod/dirt,
+/obj/item/natural/clod/dirt,
+/obj/item/natural/clod/dirt,
+/obj/structure/closet/crate/chest/shippingcrate{
+	name = "shop setup supplies crate"
+	},
+/obj/machinery/light/fueledstreet/orange/wall,
 /turf/open/floor/ruinedwood,
 /area/outdoors/town/neighborhood/west)
 "moU" = (
@@ -18028,14 +18042,12 @@
 /turf/closed/wall/mineral/stone/moss,
 /area/under/town/basement/smugglers_tunnels)
 "mrn" = (
-/obj/structure/table/wood/plain,
-/obj/effect/landmark/quest_dropoff/counter{
-	board_id = "guild_1"
+/obj/structure/door/stone{
+	lockid = "yeoman";
+	name = "shop setup warehouse"
 	},
-/obj/structure/bars/bent,
-/obj/structure/fake_machine/merchantvend/public/tavern,
-/turf/open/floor/ruinedwood/platform,
-/area/indoors/town/tavern/saiga)
+/turf/open/floor/ruinedwood,
+/area/outdoors/town/neighborhood/west)
 "mrr" = (
 /obj/structure/door/viewport{
 	name = "Trading Guild"
@@ -18919,7 +18931,6 @@
 	dir = 1
 	},
 /obj/item/essence_vial{
-	pixel_x = 0;
 	pixel_y = -12
 	},
 /obj/item/essence_vial/combat{
@@ -20305,7 +20316,6 @@
 	pixel_y = 4
 	},
 /obj/structure/table/wood/large_new{
-	dir = 2;
 	icon_state = "alt_largetable"
 	},
 /obj/structure/fluff/walldeco/church/line,
@@ -20673,10 +20683,6 @@
 "ogZ" = (
 /turf/open/water/bath,
 /area/indoors/town/church/inquisition)
-"ohc" = (
-/obj/structure/closet/crate/chest/neu_iron,
-/turf/open/floor/ruinedwood,
-/area/outdoors/town/neighborhood/west)
 "ohn" = (
 /obj/effect/landmark/start/clerk,
 /turf/open/floor/church/pale,
@@ -23087,9 +23093,12 @@
 /turf/open/floor/ruinedwood,
 /area/indoors/town/keep/magician)
 "pOM" = (
-/obj/structure/closet/crate/chest/shippingcrate,
-/turf/open/floor/ruinedwood,
-/area/outdoors/town/neighborhood/west)
+/obj/structure/fluff/railing/border{
+	dir = 4
+	},
+/obj/effect/landmark/start/mercenary,
+/turf/open/floor/blocks/stonered,
+/area/indoors/shelter/town)
 "pOS" = (
 /obj/structure/rack/shelf/biggest,
 /obj/item/clothing/shirt/undershirt/courtphysician{
@@ -23183,10 +23192,8 @@
 /turf/open/floor/ruinedwood/turned,
 /area/outdoors/town/roofs)
 "pRS" = (
-/obj/structure/closet/crate/chest/shippingcrate,
 /obj/effect/decal/cleanable/dirt,
-/obj/machinery/light/fueledstreet/orange/wall,
-/turf/open/floor/ruinedwood,
+/turf/closed/wall/mineral/stonebrick,
 /area/outdoors/town/neighborhood/west)
 "pSm" = (
 /obj/structure/fluff/railing/wood{
@@ -25711,7 +25718,6 @@
 /obj/effect/decal/cobbleedge{
 	icon_state = "cobbleedge-n"
 	},
-/obj/structure/fluff/walldeco/sign/wynceslar_tavern/left,
 /turf/open/floor/snow,
 /area/outdoors/town/plaza)
 "rGo" = (
@@ -25790,7 +25796,6 @@
 /area/outdoors/town/plaza)
 "rJQ" = (
 /obj/structure/table/wood/large_new{
-	dir = 2;
 	icon_state = "alt_largetable"
 	},
 /obj/machinery/essence/reservoir{
@@ -27234,7 +27239,10 @@
 /turf/open/floor/grass/yel,
 /area/outdoors/town)
 "sMN" = (
-/obj/structure/closet/crate/chest/crate,
+/obj/structure/minecart_rail{
+	dir = 4
+	},
+/obj/machinery/light/fueledstreet/orange/wall,
 /turf/open/floor/ruinedwood,
 /area/outdoors/town/neighborhood/west)
 "sMR" = (
@@ -29065,10 +29073,6 @@
 /obj/structure/fluff/railing/wood,
 /turf/open/floor/cobble,
 /area/outdoors/town/plaza)
-"tZv" = (
-/obj/structure/closet/crate/chest/shippingcrate,
-/turf/open/floor/ruinedwood/turned,
-/area/outdoors/town/neighborhood/west)
 "tZw" = (
 /obj/effect/decal/cobbleedge{
 	dir = 9
@@ -29642,9 +29646,54 @@
 /turf/open/openspace,
 /area/outdoors/town/roofs)
 "uyH" = (
-/obj/structure/closet/crate/chest/crate,
-/obj/item/ore/coal,
-/obj/item/ore/coal,
+/obj/structure/closet/crate/chest/shippingcrate{
+	name = "shop setup supplies crate"
+	},
+/obj/item/natural/bundle/plank{
+	amount = 10
+	},
+/obj/item/natural/bundle/plank{
+	amount = 10
+	},
+/obj/item/natural/bundle/plank{
+	amount = 10
+	},
+/obj/item/natural/bundle/stoneblock{
+	amount = 4
+	},
+/obj/item/natural/bundle/stoneblock{
+	amount = 4
+	},
+/obj/item/natural/bundle/stoneblock{
+	amount = 4
+	},
+/obj/item/natural/bundle/stoneblock{
+	amount = 4
+	},
+/obj/item/natural/bundle/stick{
+	amount = 10
+	},
+/obj/item/natural/bundle/stick{
+	amount = 10
+	},
+/obj/item/natural/bundle/brick{
+	amount = 4
+	},
+/obj/item/natural/bundle/brick{
+	amount = 4
+	},
+/obj/item/natural/bundle/plank{
+	amount = 10
+	},
+/obj/item/natural/bundle/plank{
+	amount = 10
+	},
+/obj/item/natural/bundle/plank{
+	amount = 10
+	},
+/obj/item/natural/bundle/plank{
+	amount = 10
+	},
 /turf/open/floor/ruinedwood,
 /area/outdoors/town/neighborhood/west)
 "uyN" = (
@@ -31295,7 +31344,10 @@
 /area/under/town/basement/smugglers_tunnels)
 "vFY" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/landmark/start/mercenary,
+/obj/structure/door/stone{
+	lockid = "yeoman";
+	name = "shop setup warehouse"
+	},
 /turf/open/floor/ruinedwood,
 /area/outdoors/town/neighborhood/west)
 "vGg" = (
@@ -33675,12 +33727,12 @@
 /turf/open/floor/ruinedwood/turned,
 /area/indoors/town/merc_guild)
 "xkI" = (
-/obj/structure/window/openclose{
-	dir = 8
+/obj/structure/minecart_rail{
+	dir = 4
 	},
-/obj/structure/fluff/walldeco/sign/wynceslar_tavern/left,
-/turf/open/floor/ruinedwood/two,
-/area/indoors/town/tavern/saiga)
+/obj/machinery/light/fueledstreet/orange/wall,
+/turf/open/floor/cobble,
+/area/outdoors/town/neighborhood/west)
 "xkJ" = (
 /obj/item/reagent_containers/food/snacks/crow,
 /turf/open/floor/rooftop,
@@ -53451,9 +53503,9 @@ pVf
 lCE
 aEP
 pRS
-sMN
-pOM
-pOM
+aEP
+aEP
+aEP
 xtE
 cmt
 iSo
@@ -53581,12 +53633,12 @@ sEO
 sEO
 sEO
 jPR
-eoz
+aEP
 moA
 fNl
 vtW
-pOM
-xtE
+aEP
+xkI
 nvS
 hYX
 uuS
@@ -53713,11 +53765,11 @@ grH
 qmV
 sEO
 rKp
-ohc
+aEP
+uyH
 nvS
 nvS
-iKI
-nvS
+mrn
 xtE
 nvS
 kWN
@@ -53845,7 +53897,7 @@ adq
 grH
 sEO
 rKp
-aPa
+pRS
 gDx
 nvS
 pZW
@@ -53854,7 +53906,7 @@ xtE
 bqK
 kWN
 bqK
-uuS
+aPa
 uuS
 uuS
 cuc
@@ -53977,12 +54029,12 @@ sEO
 sEO
 sEO
 woy
+aEP
+moA
 uyH
-pZW
-nvS
-tZv
-pOM
-agD
+gDx
+aEP
+sMN
 cmt
 hYX
 uuS
@@ -54109,11 +54161,11 @@ ioA
 ioA
 ioA
 nvS
-nvS
-nvS
-sMN
-ohc
-sMN
+aEP
+aEP
+aEP
+aEP
+aEP
 agD
 bqK
 hYX
@@ -54373,7 +54425,7 @@ ioA
 ioA
 mpR
 xPN
-bqK
+eoz
 fNl
 fNl
 cmt
@@ -54900,7 +54952,7 @@ jdz
 fxN
 oiC
 bFv
-rjo
+pOM
 kxz
 rjo
 cQY
@@ -66106,7 +66158,7 @@ suG
 iAs
 suG
 suG
-aKq
+pbG
 rzU
 jgF
 jzj
@@ -66758,7 +66810,7 @@ qsB
 nnP
 iAs
 cFA
-mrn
+flA
 rQy
 ump
 tyz
@@ -67940,7 +67992,7 @@ nyd
 mZO
 xci
 xfN
-xkI
+gTg
 gTg
 bRD
 dcX

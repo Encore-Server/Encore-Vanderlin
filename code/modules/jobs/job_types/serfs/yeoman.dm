@@ -47,6 +47,7 @@
 		/obj/item/recipe_book/carpentry,
 		/obj/item/recipe_book/masonry,
 		/obj/item/weapon/knife/villager,
+		/obj/item/key/yeoman,
 	)
 
 /datum/attribute_holder/sheet/job/yeoman/handmason
@@ -112,6 +113,7 @@
 		/obj/item/weapon/knife/villager,
 		/obj/item/needle,
 		/obj/item/flashlight/flare/torch/lantern,
+		/obj/item/key/yeoman,
 	)
 	ring = /obj/item/clothing/ring/silver/makers_guild
 
@@ -178,6 +180,7 @@
 		/obj/item/recipe_book/sewing_leather = 1,
 		/obj/item/weapon/knife/villager = 1,
 		/obj/item/recipe_book/sewing = 1,
+		/obj/item/key/yeoman,
 	)
 
 
@@ -235,6 +238,7 @@
 		/obj/item/recipe_book/agriculture,
 		/obj/item/recipe_book/cooking,
 		/obj/item/needle,
+		/obj/item/key/yeoman,
 	)
 
 /datum/attribute_holder/sheet/job/yeoman/homesteader
@@ -300,7 +304,9 @@
 		/obj/item/flint = 1,
 		/obj/item/bait = 1,
 		/obj/item/weapon/knife/hunting = 1,
-		/obj/item/flashlight/flare/torch/lantern = 1
+		/obj/item/flashlight/flare/torch/lantern = 1,
+		/obj/item/key/yeoman,
+		/obj/item/needle,
 	)
 
 /datum/attribute_holder/sheet/job/yeoman/woodsman
