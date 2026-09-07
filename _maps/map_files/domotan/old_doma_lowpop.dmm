@@ -5115,6 +5115,14 @@
 	},
 /turf/open/floor/church,
 /area/indoors/town/keep)
+"dLs" = (
+/obj/effect/decal/cobbleedge{
+	dir = 10;
+	icon_state = "cobbleedge-n"
+	},
+/obj/structure/fluff/walldeco/sign/wynceslar_tavern/left,
+/turf/open/floor/ruinedwood,
+/area/outdoors/town)
 "dLB" = (
 /obj/structure/bearpelt,
 /obj/structure/chair/stool,
@@ -12074,6 +12082,7 @@
 /obj/effect/decal/cobbleedge{
 	dir = 6
 	},
+/obj/structure/fluff/walldeco/sign/wynceslar_tavern/left,
 /turf/open/floor/grass/cold,
 /area/outdoors/town)
 "ivh" = (
@@ -14524,6 +14533,13 @@
 	},
 /turf/open/floor/cobble/mossy,
 /area/indoors/town/waterworks)
+"jZl" = (
+/obj/structure/window/openclose{
+	dir = 8
+	},
+/obj/structure/fluff/walldeco/sign/wynceslar_tavern/left,
+/turf/open/floor/ruinedwood/two,
+/area/indoors/town/tavern/saiga)
 "jZm" = (
 /obj/structure/fluff/railing/border,
 /obj/structure/mirror{
@@ -25718,6 +25734,7 @@
 /obj/effect/decal/cobbleedge{
 	icon_state = "cobbleedge-n"
 	},
+/obj/structure/fluff/walldeco/sign/wynceslar_tavern/left,
 /turf/open/floor/snow,
 /area/outdoors/town/plaza)
 "rGo" = (
@@ -27343,6 +27360,15 @@
 /obj/effect/decal/cleanable/dirt/cobweb,
 /turf/open/openspace,
 /area/indoors/town/keep/library)
+"sRA" = (
+/obj/structure/table/wood/plain,
+/obj/effect/landmark/quest_dropoff/counter{
+	board_id = "guild_1"
+	},
+/obj/structure/bars/bent,
+/obj/structure/fake_machine/merchantvend/public/tavern,
+/turf/open/floor/ruinedwood/platform,
+/area/indoors/town/tavern/saiga)
 "sRT" = (
 /obj/machinery/light/fueledstreet/orange/wall{
 	dir = 8
@@ -66158,7 +66184,7 @@ suG
 iAs
 suG
 suG
-pbG
+dLs
 rzU
 jgF
 jzj
@@ -66810,7 +66836,7 @@ qsB
 nnP
 iAs
 cFA
-flA
+sRA
 rQy
 ump
 tyz
@@ -67992,7 +68018,7 @@ nyd
 mZO
 xci
 xfN
-gTg
+jZl
 gTg
 bRD
 dcX
