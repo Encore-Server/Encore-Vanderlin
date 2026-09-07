@@ -139,7 +139,6 @@
 	customization_label = "Choose Fear"
 	customization_options = list(
 		/datum/species/goblin,
-		/datum/species/werewolf,
 		/datum/species/orc,
 		/datum/species/halforc,
 		/datum/species/halfling,
