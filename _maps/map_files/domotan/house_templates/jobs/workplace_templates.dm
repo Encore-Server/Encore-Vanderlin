@@ -26,6 +26,12 @@
 	width = 7
 	height = 7
 
+/datum/map_template/shop_stall_1
+	name = "Shop Stall One"
+	mappath = "_maps/map_files/domotan/house_templates/jobs/shop_stall_1.dmm"
+	width = 5
+	height = 5
+
 /datum/map_template/doma_armorsmith
 	name = "Doma Armorsmith"
 	mappath = "_maps/map_files/domotan/house_templates/jobs/doma_armorsmith.dmm"
