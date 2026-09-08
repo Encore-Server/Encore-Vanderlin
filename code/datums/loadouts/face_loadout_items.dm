@@ -63,70 +63,70 @@
 
 /datum/loadout_item/jademask
 	name = "Joapstone Mask"
-	item_path = /obj/item/clothing/face/facemask/jademask
+	item_path = /obj/item/clothing/face/jademask
 	ui_category = "Face"
 
 	triumph_cost_permanent = 16
 
 /datum/loadout_item/turqmask
 	name = "Ceruleabaster Mask"
-	item_path = /obj/item/clothing/face/facemask/turqmask
+	item_path = /obj/item/clothing/face/turqmask
 	ui_category = "Face"
 
 	triumph_cost_permanent = 16
 
 /datum/loadout_item/rosemask
 	name = "Rosellusk Mask"
-	item_path = /obj/item/clothing/face/facemask/rosemask
+	item_path = /obj/item/clothing/face/rosemask
 	ui_category = "Face"
 
 	triumph_cost_permanent = 8
 
 /datum/loadout_item/shellmask
 	name = "Shell Mask"
-	item_path = /obj/item/clothing/face/facemask/shellmask
+	item_path = /obj/item/clothing/face/shellmask
 	ui_category = "Face"
 
 	triumph_cost_permanent = 8
 
 /datum/loadout_item/coralmask
 	name = "Aoetal Mask"
-	item_path = /obj/item/clothing/face/facemask/coralmask
+	item_path = /obj/item/clothing/face/coralmask
 	ui_category = "Face"
 
 	triumph_cost_permanent = 12
 
 /datum/loadout_item/ambermask
 	name = "Petriamber Mask"
-	item_path = /obj/item/clothing/face/facemask/ambermask
+	item_path = /obj/item/clothing/face/ambermask
 	ui_category = "Face"
 
 	triumph_cost_permanent = 12
 
 /datum/loadout_item/onyxamask
 	name = "Onyxa Mask"
-	item_path = /obj/item/clothing/face/facemask/onyxamask
+	item_path = /obj/item/clothing/face/onyxamask
 	ui_category = "Face"
 
 	triumph_cost_permanent = 8
 
 /datum/loadout_item/opalmask
 	name = "Opaloise Mask"
-	item_path = /obj/item/clothing/face/facemask/opalmask
+	item_path = /obj/item/clothing/face/opalmask
 	ui_category = "Face"
 
 	triumph_cost_permanent = 8
 
 /datum/loadout_item/coppermask
 	name = "Copper Mask"
-	item_path = /obj/item/clothing/face/facemask/copper
+	item_path = /obj/item/clothing/face/copper
 	ui_category = "Face"
 
 	triumph_cost_permanent = 16
 
 /datum/loadout_item/skullmask
 	name = "Skull Mask"
-	item_path = /obj/item/clothing/face/facemask/coppeskullmaskr
+	item_path = /obj/item/clothing/face/facemask/copper
 	ui_category = "Face"
 
 	triumph_cost_permanent = 6
