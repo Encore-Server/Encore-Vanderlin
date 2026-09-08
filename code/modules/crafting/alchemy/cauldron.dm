@@ -84,7 +84,7 @@
 
 /obj/machinery/light/fueled/cauldron/Initialize()
 	. = ..()
-	create_reagents(500, DRAINABLE | AMOUNT_VISIBLE | REFILLABLE)
+	create_reagents(100, DRAINABLE | AMOUNT_VISIBLE | REFILLABLE)
 	essence_node = new /obj/machinery/essence/cauldron_node(null, src) // nullspace
 
 /obj/machinery/light/fueled/cauldron/Destroy()
@@ -108,8 +108,8 @@
 
 	if(!on)
 		. += span_warning("It is not lit. It will not boil until it is fueled and ignited.")
-	else if(!reagents?.has_reagent(/datum/reagent/water, 50))
-		. += span_warning("It needs at least 50 units of water to brew.")
+	else if(!reagents?.has_reagent(/datum/reagent/water, 100))
+		. += span_warning("It needs 100 ligulae of water to brew.")
 
 	if(brewing > 0)
 		. += span_notice("The mixture is boiling. ([brewing]/[brew_time])")
@@ -162,16 +162,34 @@
 		to_chat(user, span_warning("The vial is empty."))
 		return ITEM_INTERACT_BLOCKING
 
+	if(!selected_recipe)
+		to_chat(user, span_warning("Select a recipe before pouring essences."))
+		return ITEM_INTERACT_BLOCKING
+
 	var/essence_type = vial.contained_essence.type
+	var/essence_name = vial.contained_essence.name
+	if(!(essence_type in selected_recipe.required_essences))
+		to_chat(user, span_warning("[essence_name] is not used in [initial(selected_recipe.recipe_name)]."))
+		return ITEM_INTERACT_BLOCKING
+
+	var/room = essence_room_for(essence_type)
+	if(room <= 0)
+		to_chat(user, span_warning("The cauldron already has as much [essence_name] as the recipe needs."))
+		return ITEM_INTERACT_BLOCKING
+
 	if(essence_contents.len >= max_essence_types && !essence_contents[essence_type])
 		to_chat(user, span_warning("The cauldron cannot hold any more essence types."))
 		return ITEM_INTERACT_BLOCKING
 
-	essence_contents[essence_type] = (essence_contents[essence_type] || 0) + vial.essence_amount
-
-	to_chat(user, span_info("You pour the [vial.contained_essence.name] into the cauldron."))
-	vial.contained_essence = null
-	vial.essence_amount = 0
+	var/poured = min(vial.essence_amount, room)
+	essence_contents[essence_type] = (essence_contents[essence_type] || 0) + poured
+	vial.essence_amount -= poured
+	if(vial.essence_amount <= 0)
+		vial.contained_essence = null
+		vial.essence_amount = 0
+		to_chat(user, span_info("You pour the last of the [essence_name] into the cauldron."))
+	else
+		to_chat(user, span_info("You pour [poured] [essence_name] into the cauldron. The vial still contains [vial.essence_amount]."))
 	vial.update_appearance(UPDATE_OVERLAYS)
 
 	lastuser = WEAKREF(user)
@@ -280,7 +298,16 @@
 /obj/machinery/light/fueled/cauldron/proc/desired_batch_count()
 	if(!selected_recipe)
 		return 0
-	return auto_repeat ? 2 : 1
+	return 1
+
+/obj/machinery/light/fueled/cauldron/proc/essence_room_for(essence_type)
+	if(!selected_recipe || !(essence_type in selected_recipe.required_essences))
+		return 0
+	var/needed = selected_recipe.required_essences[essence_type] * desired_batch_count()
+	var/already = (essence_contents[essence_type] || 0)
+	if(essence_node && !QDELETED(essence_node))
+		already += essence_node.storage.get(essence_type)
+	return max(0, needed - already)
 
 /obj/machinery/light/fueled/cauldron/proc/drain_from_node()
 	if(!essence_node || QDELETED(essence_node))
@@ -340,7 +367,7 @@
 	return TRUE
 
 /obj/machinery/light/fueled/cauldron/proc/has_water()
-	return reagents?.has_reagent(/datum/reagent/water, 50)
+	return reagents?.has_reagent(/datum/reagent/water, 100)
 
 /obj/machinery/light/fueled/cauldron/process()
 	. = ..()
