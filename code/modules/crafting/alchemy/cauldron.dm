@@ -76,14 +76,17 @@
 	crossfire = FALSE
 
 	var/datum/alch_cauldron_recipe/selected_recipe = null
-	var/auto_repeat = FALSE
 	var/obj/machinery/essence/cauldron_node/essence_node = null
+	/// How many units of potion this brew is set to make (1-100). Water and essences scale from this.
+	var/brew_units = 0
 
 	/// Ticks of heat needed before a brew resolves.
 	var/brew_time = 20
 
 /obj/machinery/light/fueled/cauldron/Initialize()
 	. = ..()
+	if(reagents)
+		QDEL_NULL(reagents)
 	create_reagents(100, DRAINABLE | AMOUNT_VISIBLE | REFILLABLE)
 	essence_node = new /obj/machinery/essence/cauldron_node(null, src) // nullspace
 
@@ -98,18 +101,14 @@
 /obj/machinery/light/fueled/cauldron/examine(mob/user)
 	. = ..()
 	if(selected_recipe)
-		. += span_info("Recipe selected: [initial(selected_recipe.recipe_name)]")
-		if(auto_repeat)
-			. += span_info("Auto-repeat is enabled. The cauldron will automatically brew when essences are available.")
-		else
-			. += span_info("Auto-repeat is disabled. Alt-click to enable automatic brewing.")
+		. += span_info("Recipe selected: [initial(selected_recipe.recipe_name)] ([brew_units] units)")
 	else
-		. += span_notice("No recipe selected. Click with empty hand to select a recipe.")
+		. += span_notice("No recipe selected. Click with empty hand to choose a potion and amount.")
 
 	if(!on)
 		. += span_warning("It is not lit. It will not boil until it is fueled and ignited.")
-	else if(!reagents?.has_reagent(/datum/reagent/water, 100))
-		. += span_warning("It needs 100 ligulae of water to brew.")
+	else if(!has_water())
+		. += span_warning("It needs [water_needed()] units of water to brew. Currently [reagents?.get_reagent_amount(/datum/reagent/water) || 0].")
 
 	if(brewing > 0)
 		. += span_notice("The mixture is boiling. ([brewing]/[brew_time])")
@@ -135,24 +134,12 @@
 		return
 	show_recipe_menu(user)
 
-/obj/machinery/light/fueled/cauldron/AltClick(mob/user, list/modifiers)
-	. = ..()
-	if(!user.default_can_use_topic(src))
-		return
-
-	if(!selected_recipe)
-		to_chat(user, span_warning("You must select a recipe first."))
-		return
-
-	auto_repeat = !auto_repeat
-	if(auto_repeat)
-		to_chat(user, span_info("Auto-repeat enabled. [src] will automatically brew [initial(selected_recipe.recipe_name)] when essences are available."))
-	else
-		to_chat(user, span_info("Auto-repeat disabled."))
-
 /obj/machinery/light/fueled/cauldron/item_interaction(mob/living/user, obj/item/tool, list/modifiers)
 	if(user.cmode)
 		return NONE
+
+	if(tool.reagents && (tool.is_open_container() || (tool.reagents.flags & OPENCONTAINER) || (tool.reagents.flags & DRAINABLE)))
+		return handle_water_pour(user, tool)
 
 	if(!istype(tool, /obj/item/essence_vial))
 		return NONE
@@ -189,7 +176,7 @@
 		vial.essence_amount = 0
 		to_chat(user, span_info("You pour the last of the [essence_name] into the cauldron."))
 	else
-		to_chat(user, span_info("You pour [poured] [essence_name] into the cauldron. The vial still contains [vial.essence_amount]."))
+		to_chat(user, span_info("You pour [poured] [essence_name] into the cauldron. The vial still holds [vial.essence_amount]."))
 	vial.update_appearance(UPDATE_OVERLAYS)
 
 	lastuser = WEAKREF(user)
@@ -199,6 +186,32 @@
 	playsound(src, "bubbles", 100, TRUE)
 	if(essence_node?.network)
 		essence_node.network.invalidate_cache()
+	return ITEM_INTERACT_SUCCESS
+
+/obj/machinery/light/fueled/cauldron/proc/handle_water_pour(mob/living/user, obj/item/tool)
+	if(!tool?.reagents || !reagents)
+		return NONE
+
+	var/water_in_tool = tool.reagents.get_reagent_amount(/datum/reagent/water)
+	if(water_in_tool <= 0)
+		return NONE
+
+	sync_water_cap()
+	var/room = water_room()
+	if(room <= 0)
+		if(selected_recipe)
+			to_chat(user, span_warning("[src] already has the [water_needed()] water this brew needs."))
+		else
+			to_chat(user, span_warning("[src] cannot hold any more liquid."))
+		return ITEM_INTERACT_BLOCKING
+
+	var/transferred = tool.reagents.trans_id_to(src, /datum/reagent/water, room)
+	if(transferred <= 0)
+		return ITEM_INTERACT_BLOCKING
+
+	to_chat(user, span_info("You pour [transferred] water into [src]. ([current_water()]/[selected_recipe ? water_needed() : 100])"))
+	playsound(src, "bubbles", 50, TRUE)
+	update_appearance(UPDATE_OVERLAYS)
 	return ITEM_INTERACT_SUCCESS
 
 /obj/machinery/light/fueled/cauldron/item_interaction_secondary(mob/living/user, obj/item/tool, list/modifiers)
@@ -228,20 +241,38 @@
 	var/recipe_path = recipes[choice]
 	if(!recipe_path)
 		selected_recipe = null
-		auto_repeat = FALSE
+		brew_units = 0
 		to_chat(user, span_info("Recipe cleared."))
 		on_recipe_changed()
 		return
 
+	var/units = tgui_input_number(user, "How many units of [choice] do you want to brew? A full pot is 100.", "Brew Amount", 100, 100, 1)
+	if(!units || !user.default_can_use_topic(src))
+		return
+	units = clamp(round(units), 1, 100)
+
 	selected_recipe = new recipe_path
+	scale_recipe_to_units(selected_recipe, units)
 	on_recipe_changed()
-	to_chat(user, span_info("Recipe set to: [initial(selected_recipe.recipe_name)]"))
-	to_chat(user, span_notice("Alt-click the cauldron to enable auto-repeat mode."))
+	sync_water_cap()
+	to_chat(user, span_info("Recipe set to [initial(selected_recipe.recipe_name)] ([brew_units] units)."))
+	to_chat(user, span_notice("It will need [water_needed()] water and the listed essences. Extra liquid and essence cannot be added."))
+
+/obj/machinery/light/fueled/cauldron/proc/scale_recipe_to_units(datum/alch_cauldron_recipe/recipe, units)
+	brew_units = units
+	if(!recipe)
+		return
+	for(var/essence_type in recipe.required_essences)
+		var/base_amount = recipe.required_essences[essence_type]
+		recipe.required_essences[essence_type] = max(1, CEILING((base_amount * units) / 100, 1))
+	for(var/reagent in recipe.output_reagents)
+		recipe.output_reagents[reagent] = units
 
 /obj/machinery/light/fueled/cauldron/proc/clear_recipe()
 	selected_recipe = null
-	auto_repeat = FALSE
+	brew_units = 0
 	on_recipe_changed()
+	sync_water_cap()
 
 /obj/machinery/light/fueled/cauldron/proc/on_recipe_changed()
 	brewing = 0
@@ -252,6 +283,7 @@
 		if(essence_node.network)
 			essence_node.network.invalidate_cache()
 		essence_node.push_surplus_to_linked(essence_node.storage)
+	sync_water_cap()
 	update_appearance(UPDATE_OVERLAYS)
 
 /obj/machinery/light/fueled/cauldron/proc/return_essences_to_node()
@@ -299,6 +331,11 @@
 	if(!selected_recipe)
 		return 0
 	return 1
+
+/obj/machinery/light/fueled/cauldron/proc/water_needed()
+	if(!selected_recipe || brew_units <= 0)
+		return 0
+	return brew_units
 
 /obj/machinery/light/fueled/cauldron/proc/essence_room_for(essence_type)
 	if(!selected_recipe || !(essence_type in selected_recipe.required_essences))
@@ -367,7 +404,36 @@
 	return TRUE
 
 /obj/machinery/light/fueled/cauldron/proc/has_water()
-	return reagents?.has_reagent(/datum/reagent/water, 100)
+	var/needed = water_needed()
+	if(needed <= 0)
+		return FALSE
+	return reagents?.has_reagent(/datum/reagent/water, needed)
+
+/obj/machinery/light/fueled/cauldron/proc/current_water()
+	return reagents?.get_reagent_amount(/datum/reagent/water) || 0
+
+/obj/machinery/light/fueled/cauldron/proc/water_room()
+	if(selected_recipe)
+		return max(0, water_needed() - current_water())
+	if(!reagents)
+		return 0
+	return max(0, reagents.maximum_volume - reagents.total_volume)
+
+/obj/machinery/light/fueled/cauldron/proc/sync_water_cap()
+	if(!reagents)
+		create_reagents(100, DRAINABLE | AMOUNT_VISIBLE | REFILLABLE)
+	reagents.maximum_volume = 100
+	var/allowed_water = selected_recipe ? water_needed() : 100
+	var/extra_water = current_water() - allowed_water
+	if(extra_water > 0)
+		reagents.remove_reagent(/datum/reagent/water, extra_water)
+
+/obj/machinery/light/fueled/cauldron/proc/consume_brew_water()
+	if(!reagents)
+		return
+	var/water_in = current_water()
+	if(water_in > 0)
+		reagents.remove_reagent(/datum/reagent/water, water_in)
 
 /obj/machinery/light/fueled/cauldron/process()
 	. = ..()
@@ -424,15 +490,11 @@
 	consume_recipe_essences(found_recipe, batch_count)
 	return_essences_to_node()
 
-	if(reagents)
-		var/in_cauldron = reagents.get_reagent_amount(/datum/reagent/water)
-		reagents.remove_reagent(/datum/reagent/water, in_cauldron)
+	consume_brew_water()
 
-	if(found_recipe.output_reagents.len)
-		var/list/scaled_reagents = list()
-		for(var/reagent in found_recipe.output_reagents)
-			scaled_reagents[reagent] = found_recipe.output_reagents[reagent] * batch_count
-		reagents.add_reagent_list(scaled_reagents)
+	if(found_recipe.output_reagents.len && reagents)
+		reagents.maximum_volume = 100
+		reagents.add_reagent_list(found_recipe.output_reagents.Copy())
 
 	if(length(found_recipe.output_items))
 		for(var/itempath in found_recipe.output_items)
