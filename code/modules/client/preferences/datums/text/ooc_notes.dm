@@ -4,13 +4,17 @@
 	category = "character_ooc"
 	can_randomize = FALSE
 	maximum_value_length = 1024
+	should_strip_html = FALSE
 	should_update_preview = FALSE
 
 /datum/preference/text/ooc_notes/deserialize(input, datum/preferences/prefs)
-	return STRIP_HTML_SIMPLE(html_decode(input), maximum_value_length)
+	return copytext("[input]", 1, maximum_value_length)
 
 /datum/preference/text/ooc_notes/apply_to_human(mob/living/carbon/human/H, value, datum/preferences/prefs)
 	H.ooc_notes = value
+	var/ooc = format_flavor_html(value)
+	H.ooc_notes_display = ooc
+	prefs?.write_preference(/datum/preference/text/ooc_notes_display, ooc)
 
 /datum/preference/text/ooc_notes/handle_link(datum/preferences/prefs, mob/user)
 	to_chat(user, span_notice("["<span class='bold'>Do not put anything NSFW here. This feature is for stuff that wouldn't fit in the flavortext.</span>"]"))
@@ -23,10 +27,6 @@
 		prefs.update_menu_data(user)
 		return
 	prefs.write_preference(/datum/preference/text/ooc_notes, new_ooc_notes)
-
-	var/ooc = prefs.read_preference(/datum/preference/text/ooc_notes)
-	ooc = replacetext(parsemarkdown_basic(ooc), "\n", "<BR>")
-	ooc = html_encode(ooc)
-	prefs.write_preference(/datum/preference/text/ooc_notes_display, ooc)
+	prefs.write_preference(/datum/preference/text/ooc_notes_display, format_flavor_html(prefs.read_preference(/datum/preference/text/ooc_notes)))
 	to_chat(user, span_notice("Successfully updated OOC notes."))
 	log_game("[user] has set their OOC notes'.")

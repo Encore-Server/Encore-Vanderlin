@@ -108,6 +108,32 @@
 	if(lock?.uses_key)
 		. += span_info("There is a keyhole below the handle.")
 
+/obj/structure/door/examine_status(mob/user)
+	if(obj_broken)
+		return span_warning("It's broken.")
+	if(!uses_integrity)
+		return
+
+	var/break_at = max_integrity * integrity_failure
+	var/usable_max = max_integrity - break_at
+	if(usable_max <= 0)
+		return ..()
+
+	var/usable = atom_integrity - break_at
+	var/healthpercent = (usable / usable_max) * 100
+
+	switch(healthpercent)
+		if(80 to 99)
+			return span_notice("It looks slightly damaged.")
+		if(50 to 80)
+			return span_warning("It's damaged.")
+		if(25 to 50)
+			return span_warning("It's heavily damaged.")
+		if(2 to 25)
+			return span_warning("It's nearly broken.")
+		if(0 to 1)
+			return span_warning("It's basically splinters.")
+
 /obj/structure/door/onkick(mob/user)
 	if(obj_broken || switching_states)
 		return
