@@ -322,4 +322,7 @@ GLOBAL_LIST_INIT(all_essences, subtypesof(/datum/thaumaturgical_essence))
 #define SPELLMOD_CASTSPEED "castSpeed"
 #define SPELLMOD_MAGNITUDE "magnitude"
 
+// Blood magic apprenticeship
+#define COMSIG_BLOOD_ASCENSION "break_blood_apprenticeship"
+
 #define SPELL_KIT_MAX_PRESETS 5

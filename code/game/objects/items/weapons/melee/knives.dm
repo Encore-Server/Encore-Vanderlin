@@ -383,10 +383,53 @@
 	. = ..()
 	enchant(/datum/enchantment/silver)
 
+//................ Blacksteel Dagger ............... //
+/obj/item/weapon/knife/dagger/blacksteel
+	name = "blacksteel dagger"
+	desc = "A magnificent dagger of blacksteel. The epitome of elegance, without the woes that such weapons traditionally inherit."
+	icon_state = "bs_dagger"
+	force = DAMAGE_DAGGER + 2
+	wdefense = GOOD_PARRY
+	wbalance = VERY_HARD_TO_DODGE
+	max_blade_int = 240
+	max_integrity = INTEGRITY_STRONGEST
+	melting_material = /datum/material/blacksteel
+	melt_amount = 50
+	item_weight = 180 GRAMS
+
+/obj/item/weapon/knife/dagger/blacksteel/misericorde
+	name = "blacksteel misericorde"
+	desc = "A magnificent armor-piercing dagger of blacksteel. The curved handle is said to naturally improve one's aim, while locked in a \
+	lyfe-or-death struggle with plate-armored opponents."
+	icon_state = "bs_misericorde"
+	force = DAMAGE_DAGGER + 3
+	possible_item_intents = list(STILETTO_THRUST, STILETTO_CUT, DAGGER_CHOP)
+
+//................ Bloodsteel Dagger ............... //
+/obj/item/weapon/knife/dagger/bloodsteel
+	name = "bloodsteel dagger"
+	desc = "A dagger made of refined bloodsteel."
+	icon_state = "corruptdagger"
+	wdefense = AVERAGE_PARRY
+	wbalance = VERY_HARD_TO_DODGE
+	max_blade_int = 200
+	max_integrity = INTEGRITY_STRONGEST
+	item_weight = 200 GRAMS
+	sellprice = 0
+
+/obj/item/weapon/knife/dagger/bloodsteel/Initialize(mapload)
+	. = ..()
+	enchant(/datum/enchantment/bloodcurse)
+
+/obj/item/weapon/knife/dagger/bloodsteel/relic
+	name = "orphan's dream"
+	desc = "A blade of darkened bloodsteel, the hopes and dreams of a forgotten soul..."
+	max_integrity = INTEGRITY_STRONGEST
+
 //................ Angrosian Dagger ............... //
 /obj/item/weapon/knife/dagger/silver/angros
-	name = "katholikon dagger"
-	desc = "A silver dagger favored by close range fighters of the Inquisition."
+	name = "angrosian dagger"
+	desc = "A silver dagger favored by close range fighters of the inquisition."
 	icon = 'icons/roguetown/weapons/32/psydonite.dmi'
 	icon_state = "psydagger"
 	sellprice = 60
