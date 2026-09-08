@@ -8,17 +8,13 @@
 	var/list/required_essences = list()
 
 /datum/alch_cauldron_recipe/proc/matches_essences(list/available_essences)
+	if(!length(required_essences))
+		return FALSE
 	for(var/essence_type in required_essences)
 		var/required_amount = required_essences[essence_type]
-		var/available_amount = available_essences[essence_type]
-
+		var/available_amount = available_essences?[essence_type]
 		if(!available_amount || available_amount < required_amount)
 			return FALSE
-
-	for(var/essence_type in available_essences)
-		if(!(essence_type in required_essences))
-			return FALSE // Recipe doesn't allow this essence
-
 	return TRUE
 
 /*
