@@ -126,7 +126,7 @@
 
 /datum/loadout_item/skullmask
 	name = "Skull Mask"
-	item_path = /obj/item/clothing/face/facemask/copper
+	item_path = /obj/item/clothing/face/skullmask
 	ui_category = "Face"
 
 	triumph_cost_permanent = 6
