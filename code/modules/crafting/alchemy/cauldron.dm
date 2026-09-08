@@ -474,7 +474,6 @@
 	if(!recipe_result)
 		brewing = 0
 		if(selected_recipe && !has_required_essences())
-			// Still filling. Keep the essences, just wait for more heat.
 			update_appearance(UPDATE_OVERLAYS)
 			return
 		visible_message(span_info("The essences in [src] fail to combine properly..."))
