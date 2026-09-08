@@ -774,7 +774,9 @@ GLOBAL_LIST_INIT(fish_compatible_fluid_types, list(
 	if(HAS_TRAIT(src, TRAIT_FISH_STASIS) || status != FISH_ALIVE)
 		return
 	do_fish_process(seconds_per_tick)
-	if(loc && !HAS_TRAIT(loc, TRAIT_CATCH_AND_RELEASE))
+	if(!loc)
+		return
+	if(!HAS_TRAIT(loc, TRAIT_CATCH_AND_RELEASE))
 		time_passed_on_safe_turf = 0 SECONDS
 		return
 	time_passed_on_safe_turf += seconds_per_tick SECONDS
@@ -1190,6 +1192,25 @@ GLOBAL_LIST_INIT(fish_compatible_fluid_types, list(
 		),
 	)
 	fish_traits = list(/datum/fish_trait/vegan, /datum/fish_trait/yucky)
+
+/obj/item/reagent_containers/food/snacks/fish/swordfish
+	name = "swordfish"
+	desc = "A long-billed saltwater fish. Heavy, and a prize catch."
+	icon_state = "carp"
+	fish_id = "swordfish"
+	average_size = 120
+	average_weight = 5000
+	required_fluid_type = FISH_FLUID_SALTWATER
+	fishing_difficulty_modifier = 10
+	fish_movement_type = /datum/fish_movement/choppy
+	sellprice = 40
+	favorite_bait = list(
+		list(
+			FISH_BAIT_TYPE = FISH_BAIT_FOODTYPE,
+			FISH_BAIT_VALUE = MEAT,
+		),
+	)
+	fish_traits = list(/datum/fish_trait/predator, /datum/fish_trait/heavy)
 
 /obj/item/reagent_containers/food/snacks/fryfish
 	icon = 'icons/roguetown/misc/fish.dmi'
