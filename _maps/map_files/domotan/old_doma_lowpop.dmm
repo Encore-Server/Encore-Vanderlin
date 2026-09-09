@@ -125,7 +125,11 @@
 /area/under/town/basement)
 "adr" = (
 /obj/structure/bars,
-/turf/open/floor/blocks/stonered/tiny,
+/obj/structure/fluff/walldeco/bath/wallpipes/innie,
+/obj/structure/fluff/walldeco/bath/wallpipes/outie,
+/turf/open/water/river/sewer{
+	dir = 8
+	},
 /area/under/cavewet)
 "adu" = (
 /obj/effect/decal/cobbleedge{
@@ -1088,6 +1092,12 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/ruinedwood,
 /area/outdoors/town)
+"aQa" = (
+/obj/structure/fluff/walldeco/gear{
+	pixel_y = 2
+	},
+/turf/closed/wall/mineral/pipe,
+/area/indoors/town/church/inquisition)
 "aQe" = (
 /turf/open/glass,
 /area/outdoors/town/roofs)
@@ -2126,6 +2136,17 @@
 	},
 /turf/open/floor/tile/checkeralt,
 /area/indoors/town/keep/knight)
+"bBY" = (
+/obj/structure/fluff/walldeco/gear{
+	pixel_y = 32;
+	pixel_x = 6
+	},
+/obj/structure/fluff/walldeco/gear/small{
+	pixel_y = 10;
+	pixel_x = 27
+	},
+/turf/open/floor/churchrough/green,
+/area/indoors/town/church/inquisition)
 "bCl" = (
 /obj/structure/rack,
 /obj/machinery/light/fueled/torchholder/r,
@@ -2750,6 +2771,10 @@
 	},
 /turf/open/floor/naturalstone,
 /area/outdoors/town/neighborhood/west)
+"cbJ" = (
+/obj/structure/fluff/walldeco/churchbanner/jealousgod,
+/turf/closed/wall/mineral/pipe,
+/area/indoors/town/vault)
 "cbQ" = (
 /obj/structure/fluff/hanging_banners/church,
 /turf/open/openspace,
@@ -2783,6 +2808,13 @@
 /obj/structure/chair/bench/couchablack/r,
 /turf/open/floor/tile/bath,
 /area/indoors/town/keep)
+"cdy" = (
+/obj/structure/handcart{
+	dir = 4
+	},
+/obj/machinery/light/fueled/torchholder/l,
+/turf/open/floor/blocks/green,
+/area/under/cavewet)
 "cdS" = (
 /obj/effect/decal/carpet/square{
 	dir = 4
@@ -5116,7 +5148,9 @@
 /obj/effect/decal/borderfall{
 	dir = 1
 	},
-/obj/structure/fluff/wallclock,
+/obj/structure/fluff/wallclock{
+	desc = "A wall clock with the sickle and hourglass sigil of clan Kharzarad on its crown."s"
+	},
 /turf/open/floor/church/purple,
 /area/indoors/town/keep/magician/basement)
 "dLk" = (
@@ -9260,6 +9294,14 @@
 /obj/structure/flora/ausbushes/ppflowers,
 /turf/open/floor/grass/healthy,
 /area/outdoors/town)
+"gFg" = (
+/obj/structure/fluff/walldeco/bath/wallpipes/outie,
+/obj/structure/fluff/walldeco/bath/wallpipes/innie,
+/obj/structure/fluff/walldeco/gear{
+	pixel_y = 2
+	},
+/turf/closed/wall/mineral/pipe,
+/area/indoors/town/dwarfin/shared)
 "gFG" = (
 /obj/structure/fluff/walldeco/vinez,
 /turf/closed/wall/mineral/stone/moss,
@@ -9686,6 +9728,13 @@
 "gVU" = (
 /obj/structure/ladder,
 /obj/machinery/light/fueled/wallfire/candle/blue,
+/obj/structure/fluff/walldeco/gear/small{
+	pixel_y = 8;
+	pixel_x = 24
+	},
+/obj/structure/fluff/walldeco/gear/small{
+	pixel_x = 24
+	},
 /turf/open/floor/churchrough,
 /area/indoors/town/church)
 "gVW" = (
@@ -10433,6 +10482,17 @@
 /obj/structure/bars,
 /turf/open/floor/cobble,
 /area/indoors/town/keep/magician/basement)
+"hua" = (
+/obj/structure/closet/crate/chest/wickertrunk,
+/obj/structure/fluff/walldeco/bath/wallpipes/outie{
+	dir = 9
+	},
+/obj/item/paper,
+/obj/item/paper,
+/obj/item/reagent_containers/food/snacks/produce/swampweed_dried,
+/obj/item/reagent_containers/food/snacks/produce/swampweed_dried,
+/turf/open/floor/cobblerock,
+/area/under/cavewet)
 "huk" = (
 /obj/effect/decal/cobbleedge{
 	dir = 6
@@ -11308,6 +11368,13 @@
 "hUO" = (
 /turf/closed/wall/mineral/stone/moss/blue,
 /area/indoors/town/keep/magician)
+"hVu" = (
+/obj/structure/bars/pipe{
+	dir = 1
+	},
+/obj/structure/bars/pipe,
+/turf/open/floor/metal,
+/area/under/town/sewer)
 "hVw" = (
 /obj/item/flint,
 /obj/structure/table/wood{
@@ -11710,6 +11777,17 @@
 	},
 /turf/open/floor/ruinedwood/spiral,
 /area/indoors/town/clinic_large/apothecary)
+"iio" = (
+/obj/structure/fluff/walldeco/gear{
+	pixel_x = 30;
+	pixel_y = -8
+	},
+/obj/structure/fluff/walldeco/gear{
+	pixel_x = 30;
+	pixel_y = -16
+	},
+/turf/open/floor/churchrough/green,
+/area/indoors/town/church/inquisition)
 "iiP" = (
 /turf/closed/wall/mineral/craftstone,
 /area/under/town/sewer)
@@ -12393,6 +12471,14 @@
 /obj/machinery/light/fueled/torchholder/l,
 /turf/open/floor/dirt/road,
 /area/indoors/town/garrison)
+"iFe" = (
+/obj/structure/fluff/walldeco/bath/wallpipes/outie,
+/obj/structure/fluff/walldeco/bath/wallpipes/innie,
+/obj/structure/fluff/walldeco/gear/small{
+	pixel_y = -9
+	},
+/turf/closed/wall/mineral/pipe,
+/area/indoors/town/dwarfin/shared)
 "iFk" = (
 /obj/structure/rack,
 /obj/effect/spawner/guaranteed_map_spawner/listed/clothes,
@@ -15806,6 +15892,17 @@
 "kTN" = (
 /turf/open/floor/metal/barograte,
 /area/indoors/town/vault)
+"kTR" = (
+/obj/structure/fluff/walldeco/gear/small{
+	pixel_y = 7;
+	pixel_x = -24
+	},
+/obj/structure/fluff/walldeco/gear/small{
+	pixel_x = -24;
+	pixel_y = 1
+	},
+/turf/open/floor/churchrough/green,
+/area/indoors/town/church/inquisition)
 "kTX" = (
 /obj/structure/fluff/statue/knight/interior{
 	layer = 4.2
@@ -16574,6 +16671,10 @@
 /obj/structure/lever/hidden/inquisition{
 	redstone_id = "inq_sewer_2"
 	},
+/obj/structure/fluff/walldeco/gear/small{
+	pixel_y = -9;
+	pixel_x = -4
+	},
 /turf/closed/wall/mineral/stone/moss/blue,
 /area/indoors/town/church/inquisition)
 "lBO" = (
@@ -16850,7 +16951,9 @@
 /turf/open/openspace,
 /area/indoors/town/garrison)
 "lHj" = (
-/obj/structure/fluff/wallclock,
+/obj/structure/fluff/wallclock{
+	desc = "A wall clock with the sickle and hourglass sigil of clan Kharzarad on its crown."s"
+	},
 /obj/structure/fluff/walldeco/wantedposter/l,
 /turf/open/floor/wood,
 /area/indoors/town/steward)
@@ -16922,6 +17025,13 @@
 /area/indoors/town/keep/captain)
 "lJw" = (
 /obj/machinery/light/fueled/wallfire/candle/blue/l,
+/obj/structure/fluff/walldeco/gear/small{
+	pixel_y = 26
+	},
+/obj/structure/fluff/walldeco/gear{
+	pixel_y = 32;
+	pixel_x = -26
+	},
 /turf/open/floor/churchrough/green,
 /area/indoors/town/church/inquisition)
 "lJS" = (
@@ -17483,6 +17593,10 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/ruinedwood,
 /area/indoors/town/garrison)
+"mbT" = (
+/obj/structure/closet/crate/chest/wickertrunk,
+/turf/open/floor/cobblerock,
+/area/under/cavewet)
 "mbX" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/cobble,
@@ -19269,6 +19383,11 @@
 /obj/machinery/light/fueled/torchholder/r,
 /turf/open/floor/church/green,
 /area/indoors/town/keep/garrison)
+"ngt" = (
+/turf/open/water/river/sewer{
+	dir = 8
+	},
+/area/under/town/sewer)
 "ngD" = (
 /obj/structure/flora/grass/herb/artemisia,
 /obj/structure/flora/grass/herb/symphitum,
@@ -19287,6 +19406,17 @@
 "nhm" = (
 /turf/closed/wall/mineral/wooddark,
 /area/outdoors/beach/boat)
+"nhF" = (
+/obj/structure/fluff/walldeco/gear/small{
+	pixel_y = -8;
+	pixel_x = -39
+	},
+/obj/structure/fluff/walldeco/gear/small{
+	pixel_y = 7;
+	pixel_x = -24
+	},
+/turf/open/floor/churchrough/green,
+/area/indoors/town/church/inquisition)
 "nhU" = (
 /obj/structure/fluff/railing/wood{
 	dir = 1;
@@ -20513,7 +20643,9 @@
 /area/indoors/town/keep/library)
 "ocH" = (
 /obj/structure/fluff/railing/wood,
-/obj/structure/fluff/wallclock,
+/obj/structure/fluff/wallclock{
+	desc = "A wall clock with the sickle and hourglass sigil of clan Kharzarad on its crown."s"
+	},
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/ruinedwood/chevron,
 /area/indoors/town/keep/magician)
@@ -21493,6 +21625,13 @@
 "oJH" = (
 /turf/open/water/bath,
 /area/indoors/town/keep)
+"oJP" = (
+/obj/structure/closet/crate/chest/wickertrunk,
+/obj/structure/fluff/walldeco/bath/wallpipes/outie{
+	dir = 10
+	},
+/turf/open/floor/greenstone,
+/area/under/cavewet)
 "oJQ" = (
 /obj/machinery/light/fueledstreet/orange/wall{
 	dir = 4
@@ -23042,6 +23181,12 @@
 "pMV" = (
 /turf/closed/wall/mineral/stonebrick,
 /area/indoors/town/keep/hand)
+"pNg" = (
+/obj/structure/door{
+	name = "Spare Storehouse"
+	},
+/turf/open/floor/blocks/green,
+/area/under/cavewet)
 "pNn" = (
 /obj/effect/mapping_helpers/access/keyset/manor/general,
 /obj/effect/mapping_helpers/access/locker,
@@ -25642,6 +25787,7 @@
 	mailtag = "Inquisition Meeting Hall";
 	pixel_y = 9
 	},
+/obj/structure/fluff/clock,
 /turf/open/floor/churchmarble,
 /area/indoors/town/church/inquisition)
 "rCf" = (
@@ -25874,6 +26020,12 @@
 	},
 /turf/open/floor/rooftop,
 /area/outdoors/town/roofs)
+"rLt" = (
+/obj/structure/fluff/walldeco/churchbanner/jealousgod{
+	pixel_x = 32
+	},
+/turf/open/openspace,
+/area/indoors/town/keep/library)
 "rLu" = (
 /obj/structure/flora/grass,
 /turf/open/floor/grass/yel,
@@ -25951,6 +26103,17 @@
 /obj/structure/fake_machine/headeater,
 /turf/open/floor/wood,
 /area/indoors/town/steward)
+"rPp" = (
+/obj/structure/fluff/walldeco/bath/wallpipes/outie{
+	dir = 4;
+	name = "leaky pipe";
+	desc = "It constantly leaks a single drop of water onto the straw bed below at infrequent intervals."
+	},
+/obj/structure/bed/shit{
+	desc = "Slightly better than a patch of grass. A little damp, due to the pipe above infrequently leaking."
+	},
+/turf/open/floor/cobblerock,
+/area/under/cavewet)
 "rPB" = (
 /obj/structure/window/solid,
 /obj/structure/bars/grille,
@@ -26186,7 +26349,9 @@
 /turf/closed/wall/mineral/craftstone,
 /area/indoors/town/keep/magician/basement)
 "sbQ" = (
-/obj/structure/fluff/wallclock,
+/obj/structure/fluff/wallclock{
+	desc = "A wall clock with the sickle and hourglass sigil of clan Kharzarad on its crown."s"
+	},
 /obj/structure/closet/crate/chest/neu,
 /turf/open/floor/ruinedwood,
 /area/indoors/town/keep/archivist)
@@ -26964,6 +27129,12 @@
 /obj/structure/fake_machine/scomm/r,
 /turf/open/floor/blocks,
 /area/indoors/town/church)
+"sDM" = (
+/obj/structure/fluff/walldeco/gear{
+	pixel_x = 8
+	},
+/turf/closed/wall/mineral/stonebrick,
+/area/indoors/town/church/inquisition)
 "sDW" = (
 /obj/structure/fluff/steamvent,
 /turf/open/floor/ruinedwood,
@@ -31148,6 +31319,12 @@
 	},
 /turf/open/openspace,
 /area/indoors/town/keep)
+"vzl" = (
+/obj/structure/fluff/walldeco/gear/small{
+	pixel_y = 7
+	},
+/turf/closed/wall/mineral/pipe,
+/area/indoors/town/church/inquisition)
 "vzH" = (
 /obj/structure/chair/wood/alt{
 	dir = 4
@@ -32532,6 +32709,15 @@
 "wtF" = (
 /obj/structure/lever/hidden/keep{
 	redstone_id = "divine_gourd"
+	},
+/obj/structure/fluff/walldeco/gear{
+	pixel_y = 20
+	},
+/obj/structure/fluff/walldeco/gear/small{
+	pixel_y = 14
+	},
+/obj/structure/fluff/walldeco/gear/small{
+	pixel_y = 8
 	},
 /turf/closed/wall/mineral/pipe,
 /area/indoors/town/vault)
@@ -41537,7 +41723,7 @@ fAx
 epL
 ijw
 kyH
-kyH
+nhF
 icE
 icE
 icE
@@ -41692,8 +41878,8 @@ hae
 icE
 ijw
 qOl
-bBv
-bBv
+dwC
+dwC
 jdz
 cLk
 ggp
@@ -41826,7 +42012,7 @@ ijw
 qOl
 dwC
 dwC
-bBv
+dwC
 jdz
 jdz
 ggp
@@ -41958,7 +42144,7 @@ ijw
 qOl
 dwC
 dwC
-bBv
+dwC
 jdz
 jdz
 cLk
@@ -42351,7 +42537,7 @@ iRj
 kyH
 kyH
 qid
-kyH
+kTR
 kyH
 ijw
 jdz
@@ -43105,7 +43291,7 @@ fAx
 gNa
 gNa
 gNa
-gNa
+aaf
 sMR
 sMR
 sMR
@@ -43237,7 +43423,7 @@ fAx
 fAx
 gNa
 gNa
-gNa
+hVu
 sMR
 vaZ
 aFp
@@ -43368,8 +43554,8 @@ iMB
 iMB
 iMB
 gNa
-gNa
-lPI
+epL
+ngt
 sMR
 qgS
 gTN
@@ -43500,8 +43686,8 @@ iMB
 iMB
 iMB
 iMB
-lPI
-lPI
+epL
+ngt
 sMR
 rnn
 iPF
@@ -43632,8 +43818,8 @@ gNa
 iMB
 iMB
 iMB
-lPI
-cPa
+fAx
+hVu
 sMR
 bjg
 cjK
@@ -43646,7 +43832,7 @@ apV
 apV
 apV
 hKf
-seF
+iFe
 uRg
 uFx
 kyH
@@ -43668,7 +43854,7 @@ icE
 icE
 ijw
 kyH
-kyH
+iio
 ijw
 bxh
 nZl
@@ -43765,7 +43951,7 @@ uqH
 qIS
 fAx
 fAx
-gNa
+aaf
 sMR
 sMR
 sMR
@@ -43778,7 +43964,7 @@ apV
 apV
 apV
 niV
-seF
+gFg
 uRg
 uFx
 kyH
@@ -43917,7 +44103,7 @@ kyH
 kyH
 cOw
 mnA
-kBs
+aQa
 ogZ
 khP
 fbK
@@ -44049,7 +44235,7 @@ bYD
 kyH
 cOw
 gVO
-kBs
+vzl
 ogZ
 khP
 fbK
@@ -44164,7 +44350,7 @@ xhI
 hTg
 iMB
 ixH
-kyH
+bBY
 jCd
 kyH
 wdx
@@ -44311,7 +44497,7 @@ kyH
 kyH
 kyH
 dTj
-icE
+sDM
 icE
 icE
 icE
@@ -44434,8 +44620,8 @@ jVD
 lEH
 kyH
 dTj
-ijw
-ijw
+kBs
+kBs
 ijw
 ijw
 ijw
@@ -44564,9 +44750,9 @@ icE
 icE
 icE
 icE
-ijw
-ijw
-xYT
+kBs
+kBs
+aaf
 gNa
 gNa
 gNa
@@ -44986,8 +45172,8 @@ cLk
 ova
 jdz
 ggp
-qBw
 bZh
+qBw
 ggp
 bBv
 bBv
@@ -54894,9 +55080,9 @@ jdz
 tXn
 tYQ
 tYQ
-tXn
-tXn
-jdz
+fxN
+fxN
+fxN
 fxN
 oiC
 bFv
@@ -55027,9 +55213,9 @@ jdz
 jdz
 jdz
 jdz
-jdz
-jdz
-fxN
+cdy
+dZX
+pNg
 iSN
 oRC
 gtQ
@@ -55158,9 +55344,9 @@ jdz
 jdz
 jdz
 jdz
-jdz
-jdz
-jdz
+mbT
+dZX
+hFs
 fxN
 vCl
 eEr
@@ -55290,9 +55476,9 @@ fxN
 fxN
 jdz
 jdz
-jdz
-jdz
-jdz
+hua
+rPp
+oJP
 fxN
 rLH
 hDu
@@ -55422,9 +55608,9 @@ byq
 fxN
 jdz
 jdz
-jdz
+eTv
 fxN
-fxN
+eTv
 fxN
 nLI
 hgD
@@ -55820,7 +56006,7 @@ jdz
 jdz
 jdz
 fxN
-fxN
+eTv
 fxN
 jcU
 jlz
@@ -56945,7 +57131,7 @@ tMC
 gOs
 tMC
 rpm
-alA
+cbJ
 tMC
 vOK
 rpQ
@@ -58159,8 +58345,8 @@ diq
 iyu
 hye
 hye
-cwz
 uNV
+cwz
 hye
 sSS
 sSS
@@ -69356,12 +69542,12 @@ kvK
 cBk
 ajX
 fmV
+kvK
+kvK
 nbp
-kvK
-kvK
 xkK
 xkK
-kvK
+nbp
 kvK
 kvK
 nFu
@@ -69622,10 +69808,10 @@ hKW
 fmV
 yej
 gRG
+rLt
 xkK
 xkK
-xkK
-xkK
+rLt
 fgx
 yej
 igD
@@ -69754,12 +69940,12 @@ kvK
 kvK
 kvK
 kvK
-nbp
 kvK
 kvK
 kvK
 kvK
-nbp
+kvK
+kvK
 igD
 bou
 oxX
