@@ -155,7 +155,7 @@
 	if(!self_inspect)
 		//Old Party
 		if(HAS_TRAIT(src, TRAIT_OLDPARTY) && HAS_TRAIT(user, TRAIT_OLDPARTY))
-			. += span_nicegreen("Ahh... my old friend!")
+			. += span_nicegreen("I know them to be an old friend, either directly or among mutual peers.")
 			user.add_stress(/datum/stress_event/saw_old_party)
 		// Intolerant
 		else if(!HAS_TRAIT(user, TRAIT_TOLERANT)) // friendship is kinda like tolerance after all
@@ -168,13 +168,13 @@
 
 		// Excommunications
 		if(real_name in GLOB.excommunicated_players)
-			. += span_redtextbig("EXCOMMUNICATED!")
+			. += span_boldred("I know them to be excommunicated by the church.")
 		if(real_name in GLOB.heretical_players)
-			. += span_redtextbig("HERETIC! SHAME!")
+			. += span_boldred("Somehow, I know they're a heretic.")//Best we allow this to be defined by the antag themselves
 
 		// Outlaws
 		if(HAS_MIND_TRAIT(user, TRAIT_KNOWBANDITS) && (real_name in GLOB.outlawed_players))
-			. += span_boldred(mind?.special_role == ROLE_BANDIT ? "BANDIT!" : "OUTLAW!")
+			. += span_boldred(mind?.special_role == ROLE_BANDIT ? "They're a known bandit!" : "They're a known outlaw!")
 
 		// Court Agents
 		if(HAS_MIND_TRAIT(user, TRAIT_KNOWCOURTAGENTS) && (real_name in GLOB.court_agents))
@@ -182,13 +182,16 @@
 		else if(HAS_MIND_TRAIT(user, TRAIT_KNOWCOURTAGENTS) && (real_name in GLOB.ex_court_agents))
 			. += span_redtextsmall ("An Ex-Agent of the Court.")
 
+		// Thauma removed
+		if(HAS_TRAIT(src, TRAIT_DEMON))
+			. += span_userdanger("A demon! No soul resides 'neath that wicked flesh!")
+
 		// Faceless
 		if(HAS_TRAIT(src, TRAIT_FACELESS))
 			. += span_userdanger("NO FACE!!")
 		// Foreigner
 		if(HAS_TRAIT(src, TRAIT_FOREIGNER) && !HAS_TRAIT(user, TRAIT_FOREIGNER))
-			. += span_tinywarning("A foreigner.")
-			user.add_stress(/datum/stress_event/foreigner)
+			. += span_smallnotice("They're a foreigner.")
 		// Thuild
 		if(HAS_TRAIT(src, TRAIT_THIEVESGUILD) && HAS_TRAIT(user, TRAIT_THIEVESGUILD))
 			. += span_smallgreen("A member of the Thieves' Guild.")

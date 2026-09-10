@@ -2,8 +2,8 @@
 	name = "Extract Humors"
 	desc = "Extract humors from an animals organs for augmentation."
 
-	category = "Pestran"
-	heretical = TRUE
+	category = "Erdite"
+	heretical = FALSE
 
 	implements = list(
 		TOOL_SCALPEL = 1,
