@@ -2805,17 +2805,6 @@
 "bWh" = (
 /turf/closed/wall/mineral/pipe,
 /area/indoors/town/keep/magician/greenhouse)
-"bWq" = (
-/obj/structure/window,
-/obj/structure/curtain/bounty/dir{
-	dir = 1
-	},
-/obj/structure/bars/passage/shutter/open{
-	name = "Etgard Lockdown Shutter";
-	redstone_id = "keep_lockdown"
-	},
-/turf/open/floor/blocks,
-/area/indoors/town/clinic_large)
 "bWy" = (
 /obj/structure/table/wood{
 	dir = 6;
@@ -4290,10 +4279,12 @@
 /turf/open/floor/ruinedwood/two,
 /area/indoors/soilsons)
 "cTa" = (
-/obj/structure/window,
 /obj/structure/bars/passage/shutter/open{
 	name = "Etgard Lockdown Shutter";
 	redstone_id = "keep_lockdown"
+	},
+/obj/structure/bars/grille{
+	density = 1
 	},
 /turf/open/floor/blocks,
 /area/indoors/town/garrison)
@@ -4410,10 +4401,15 @@
 /turf/closed/mineral,
 /area/indoors/town/keep/magician/basement)
 "cXk" = (
-/obj/structure/window,
-/obj/structure/curtain/bounty/dir,
-/turf/open/floor/ruinedwood/turned/alt,
-/area/indoors/town/keep/magician)
+/obj/effect/decal/cobbleedge{
+	dir = 9
+	},
+/obj/effect/decal/cobbleedge{
+	dir = 10;
+	icon_state = "cobbleedge-w"
+	},
+/turf/open/floor/ruinedwood,
+/area/outdoors/town/plaza)
 "cXV" = (
 /obj/structure/fluff/railing/wood{
 	dir = 4;
@@ -7668,10 +7664,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/ruinedwood,
 /area/outdoors/exposed)
-"fjg" = (
-/obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/ruinedwood/spiral,
-/area/indoors/town/clinic_large)
 "fjn" = (
 /obj/structure/rack/shelf/biggest,
 /obj/item/clothing/head/courtierhat{
@@ -8277,16 +8269,32 @@
 	pixel_y = 15
 	},
 /obj/item/reagent_containers/glass/bottle{
+	pixel_x = -5;
+	pixel_y = 15
+	},
+/obj/item/reagent_containers/glass/bottle{
+	pixel_x = -5;
+	pixel_y = 15
+	},
+/obj/item/reagent_containers/glass/bottle{
+	pixel_x = -5;
+	pixel_y = 15
+	},
+/obj/item/reagent_containers/glass/bottle{
 	pixel_x = 6;
 	pixel_y = 15
 	},
 /obj/item/reagent_containers/glass/bottle{
 	pixel_x = 6;
-	pixel_y = 6
+	pixel_y = 15
 	},
 /obj/item/reagent_containers/glass/bottle{
 	pixel_x = 6;
-	pixel_y = -3
+	pixel_y = 15
+	},
+/obj/item/reagent_containers/glass/bottle{
+	pixel_x = 6;
+	pixel_y = 15
 	},
 /obj/item/reagent_containers/glass/bottle{
 	pixel_x = -5;
@@ -8294,6 +8302,50 @@
 	},
 /obj/item/reagent_containers/glass/bottle{
 	pixel_x = -5;
+	pixel_y = 7
+	},
+/obj/item/reagent_containers/glass/bottle{
+	pixel_x = -5;
+	pixel_y = 7
+	},
+/obj/item/reagent_containers/glass/bottle{
+	pixel_x = -5;
+	pixel_y = 7
+	},
+/obj/item/reagent_containers/glass/bottle{
+	pixel_x = 6;
+	pixel_y = 7
+	},
+/obj/item/reagent_containers/glass/bottle{
+	pixel_x = -5;
+	pixel_y = -3
+	},
+/obj/item/reagent_containers/glass/bottle{
+	pixel_x = -5;
+	pixel_y = -3
+	},
+/obj/item/reagent_containers/glass/bottle{
+	pixel_x = -5;
+	pixel_y = -3
+	},
+/obj/item/reagent_containers/glass/bottle{
+	pixel_x = -5;
+	pixel_y = -3
+	},
+/obj/item/reagent_containers/glass/bottle{
+	pixel_x = 6;
+	pixel_y = -3
+	},
+/obj/item/reagent_containers/glass/bottle{
+	pixel_x = 6;
+	pixel_y = -3
+	},
+/obj/item/reagent_containers/glass/bottle{
+	pixel_x = 6;
+	pixel_y = -3
+	},
+/obj/item/reagent_containers/glass/bottle{
+	pixel_x = 6;
 	pixel_y = -3
 	},
 /turf/open/floor/tile/brownbrick,
@@ -10730,6 +10782,9 @@
 /obj/item/recipe_book/alchemy{
 	pixel_y = 6
 	},
+/obj/item/paper/apothecary{
+	name = "apothecary guild notice"
+	},
 /turf/open/floor/ruinedwood/spiral,
 /area/indoors/town/clinic_large)
 "hhC" = (
@@ -11979,10 +12034,6 @@
 	},
 /turf/open/floor/ruinedwood/two,
 /area/indoors/soilsons)
-"hTe" = (
-/obj/machinery/light/fueled/wallfire/candle/lamp,
-/turf/open/floor/wood,
-/area/outdoors/town)
 "hTf" = (
 /obj/structure/fluff/walldeco/bath/wallpipes/innie{
 	dir = 8;
@@ -12737,15 +12788,8 @@
 /turf/closed/wall/mineral/decostone,
 /area/indoors/town/keep/throne)
 "irT" = (
-/obj/effect/decal/cobbleedge{
-	dir = 10;
-	icon_state = "cobbleedge-w"
-	},
 /obj/structure/chair/bench{
 	pixel_y = 16
-	},
-/obj/effect/decal/cobbleedge{
-	icon_state = "cobbleedge-n"
 	},
 /obj/effect/decal/cobbleedge{
 	dir = 5
@@ -14293,13 +14337,11 @@
 /turf/open/floor/ruinedwood/two,
 /area/indoors/town/keep)
 "jnE" = (
-/obj/structure/curtain/bounty,
-/obj/structure/fluid_drain,
-/turf/open/floor/ruinedwood/spiralfade,
+/turf/open/floor/cobble,
 /area/indoors/town/clinic_large)
 "jnN" = (
-/obj/machinery/light/fueled/torchholder/r,
 /obj/effect/decal/cleanable/dirt/dust,
+/obj/machinery/light/fueled/torchholder/c,
 /turf/open/floor/cobble,
 /area/indoors/town/garrison)
 "jnU" = (
@@ -15099,7 +15141,9 @@
 /area/outdoors/town/roofs)
 "jPE" = (
 /obj/structure/fluff/walldeco/feldshersign{
-	layer = 4.21
+	layer = 4.21;
+	desc = "A sign denoting this building as the Clinic of the town of Old Doma. Run by the independent and enterprising Medicine Guild, Feldshers and Apothecaries work in tandem to provide medical care through the arts of science. However, the Medicine Guild only caters to those who bring coin through their doors; do not expect a cheap consultation, and expect to be turned away if you come empty handed.";
+	name = "clinic sign"
 	},
 /turf/open/floor/cobble,
 /area/outdoors/town/plaza)
@@ -20316,8 +20360,9 @@
 /area/outdoors/exposed)
 "ncc" = (
 /obj/machinery/essence/combiner{
-	pixel_y = -4
+	pixel_y = -2
 	},
+/obj/structure/table/wood/plain_alt,
 /turf/open/floor/twig,
 /area/indoors/town/clinic_large/apothecary)
 "nco" = (
@@ -21697,13 +21742,6 @@
 /obj/structure/fermentation_keg/whitewine,
 /turf/open/floor/blocks/green,
 /area/indoors/town/keep/kitchen/cellar)
-"oah" = (
-/obj/structure/table/wood/reinf_long{
-	dir = 4
-	},
-/obj/machinery/light/fueled/torchholder/l,
-/turf/open/floor/ruinedwood/spiralfade,
-/area/indoors/town/clinic_large)
 "oar" = (
 /obj/structure/flora/ausbushes/brflowers,
 /turf/open/floor/snow,
@@ -22156,6 +22194,9 @@
 	},
 /obj/item/recipe_book/medical{
 	pixel_y = 6
+	},
+/obj/item/paper/feldsher{
+	name = "feldsher guild notice"
 	},
 /turf/open/floor/ruinedwood/spiral,
 /area/indoors/town/clinic_large)
@@ -22974,7 +23015,8 @@
 "oRM" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/structure/fluff/walldeco/feldshersign{
-	layer = 4.21
+	layer = 4.21;
+	desc = ss
 	},
 /turf/open/floor/ruinedwood/chevron,
 /area/indoors/town/clinic_large)
@@ -24978,20 +25020,7 @@
 /turf/open/water/ocean,
 /area/under/cavewet)
 "qfr" = (
-/obj/structure/rack/shelf/biggest,
-/obj/item/candle/yellow{
-	pixel_x = 6
-	},
-/obj/item/candle/yellow{
-	pixel_x = 8;
-	pixel_y = -1
-	},
-/obj/item/flint{
-	pixel_x = -2;
-	pixel_y = 3
-	},
-/obj/item/soap/bath,
-/turf/open/floor/ruinedwood/spiral,
+/turf/open/floor/blocks,
 /area/indoors/town/clinic_large)
 "qfs" = (
 /obj/structure/closet/crate/chest/shippingcrate{
@@ -25510,9 +25539,14 @@
 /turf/open/floor/ruinedwood/platform,
 /area/indoors/town/tavern/saiga)
 "qsC" = (
-/obj/effect/decal/cleanable/dirt/dust,
-/obj/structure/carpet/blue,
-/turf/open/floor/cobble,
+/obj/structure/bars/grille{
+	density = 1
+	},
+/obj/structure/bars/passage/shutter/open{
+	name = "Etgard Lockdown Shutter";
+	redstone_id = "keep_lockdown"
+	},
+/turf/open/floor/blocks,
 /area/indoors/town/clinic_large)
 "qte" = (
 /turf/open/floor/carpet/royalblack,
@@ -25566,11 +25600,7 @@
 /area/outdoors/exposed)
 "qua" = (
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/structure/table/wood/reinf_long{
-	dir = 4
-	},
-/obj/item/reagent_containers/glass/cup,
-/turf/open/floor/ruinedwood,
+/turf/open/floor/blocks,
 /area/indoors/town/clinic_large)
 "qum" = (
 /obj/structure/table/wood{
@@ -26391,7 +26421,11 @@
 /turf/open/floor/sand/sandstone,
 /area/under/cavewet)
 "qUE" = (
-/turf/open/floor/ruinedwood,
+/obj/structure/door/violet{
+	name = "Gatehouse"
+	},
+/obj/effect/mapping_helpers/access/keyset/manor/general,
+/turf/open/floor/cobble,
 /area/indoors/town/clinic_large)
 "qUZ" = (
 /turf/open/floor/ruinedwood,
@@ -27514,6 +27548,11 @@
 /obj/structure/door/stone{
 	name = "Church Infirmary"
 	},
+/obj/structure/fluff/walldeco/bath/wallrope{
+	dir = 6;
+	name = "infirmary wallrope";
+	desc = "Braided red thread, hung over the threshold to the Temple Infirmary. Representing the lifeblood that flows within us all; across the Goblet, these braids signify to the masses that healing may be found within to all who seek it, one must merely have faith. The Church will tend the wounds of all for no cost, save the vilest of known heretics that endanger their fellow man."
+	},
 /obj/effect/mapping_helpers/access/keyset/church/general,
 /turf/open/floor/ruinedwood,
 /area/indoors/town/church)
@@ -27805,14 +27844,6 @@
 /obj/structure/door/weak/bolt,
 /turf/open/floor/dirt,
 /area/under/cavewet)
-"rZE" = (
-/obj/structure/curtain/bounty,
-/obj/structure/bars/passage/shutter/open{
-	name = "Institute Access Shutter";
-	redstone_id = "institute_shared"
-	},
-/turf/open/floor/ruinedwood/turned/alt,
-/area/indoors/town/keep/magician)
 "sah" = (
 /obj/effect/decal/cobbleedge{
 	icon_state = "cobbleedge-n"
@@ -28164,10 +28195,10 @@
 /turf/open/floor/ruinedwood/two,
 /area/indoors/town/keep)
 "snf" = (
-/obj/machinery/light/fueledstreet/orange/wall{
-	dir = 1
+/obj/effect/decal/cobbleedge{
+	dir = 4
 	},
-/turf/open/floor/ruinedwood/spiral,
+/turf/open/floor/cobble,
 /area/indoors/town/clinic_large)
 "snj" = (
 /obj/structure/door/violet{
@@ -33247,6 +33278,7 @@
 /obj/machinery/light/fueled/wallfire/candle/lamp{
 	pixel_y = -32
 	},
+/obj/item/reagent_containers/glass/bucket/wooden/alter,
 /turf/open/floor/twig,
 /area/indoors/town/clinic_large/apothecary)
 "vHO" = (
@@ -35800,9 +35832,8 @@
 /turf/open/floor/concrete,
 /area/indoors/town/church)
 "xnp" = (
-/obj/structure/table/optable,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/ruinedwood/spiralfade,
+/turf/open/floor/cobble,
 /area/indoors/town/clinic_large)
 "xnx" = (
 /obj/item/rope,
@@ -67987,8 +68018,8 @@ xDX
 tEy
 wjq
 oOc
-gVB
-gVB
+qfr
+qfr
 woR
 lQA
 itp
@@ -68120,8 +68151,8 @@ yeS
 tEy
 veQ
 qua
-qsC
-cXk
+lzw
+woR
 itp
 dFa
 njr
@@ -68252,8 +68283,8 @@ tpQ
 tEy
 ebg
 lzw
-qUE
-rZE
+qfr
+woR
 itp
 dFa
 tIW
@@ -68383,8 +68414,8 @@ nNI
 tpQ
 tEy
 oOc
-oOc
-oOc
+snf
+jnE
 woR
 axz
 itp
@@ -68516,7 +68547,7 @@ oOc
 qmJ
 oOc
 xnp
-oah
+snf
 cQA
 tYM
 itp
@@ -68648,7 +68679,7 @@ lWk
 nCF
 oOc
 jnE
-jnE
+qfr
 cQA
 bFU
 itp
@@ -68779,8 +68810,8 @@ nCF
 nCF
 nCF
 pmP
-nCF
-nCF
+jnE
+qfr
 bpI
 ogh
 ogh
@@ -68911,9 +68942,9 @@ vkd
 nCF
 nCF
 nCF
-nCF
+qfr
 snf
-bWq
+oOc
 xyj
 jgF
 wSV
@@ -69043,9 +69074,9 @@ nCF
 nqU
 tDS
 qLa
-nCF
-fjg
-hJw
+qfr
+lzw
+qsC
 xyj
 aFv
 jgF
@@ -69175,9 +69206,9 @@ hJw
 oOc
 tDS
 nCF
-nCF
-fjg
-hJw
+snf
+lzw
+oOc
 xyj
 jgF
 aFv
@@ -69307,10 +69338,10 @@ dRA
 cfC
 tDS
 nCF
-nCF
-tDS
-veQ
-hTe
+snf
+jnE
+qsC
+xyj
 xyj
 jgF
 fSl
@@ -69439,9 +69470,9 @@ osy
 cfC
 gLL
 cfP
-qLa
+jnE
 qfr
-veQ
+oOc
 bim
 dun
 xyj
@@ -69571,7 +69602,7 @@ hQH
 oOc
 oOc
 oOc
-oOc
+qUE
 oOc
 oOc
 aRH
@@ -69702,8 +69733,8 @@ xGh
 osy
 xqA
 cAv
-gVW
 jta
+gVW
 gVW
 uli
 xqA
@@ -72499,7 +72530,7 @@ kxu
 jDA
 jDA
 rLh
-xGk
+cXk
 mTe
 xSm
 swy
