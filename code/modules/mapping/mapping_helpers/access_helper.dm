@@ -60,6 +60,9 @@
 /obj/effect/mapping_helpers/access/keyset/town/clinic
 	accesses = list(ACCESS_CLINIC)
 
+/obj/effect/mapping_helpers/access/keyset/town/clinic/shared
+	accesses = list(ACCESS_CLINIC, ACCESS_MAGE)
+
 /obj/effect/mapping_helpers/access/keyset/town/merchant
 	accesses = list(ACCESS_MERCHANT)
 	difficulty = LOCK_EXPERT
