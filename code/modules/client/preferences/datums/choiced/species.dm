@@ -47,7 +47,7 @@
 
 		selectable[species.name] = species.type
 
-	var/result = browser_input_list(user, "SELECT YOUR HERO'S PEOPLE:", "VANDERLIN FAUNA", selectable, prefs.pref_species)
+	var/result = browser_input_list(user, "SELECT YOUR HERO'S PEOPLE:", "FAUNA OF GAIA", selectable, prefs.pref_species)
 
 	if(result)
 		var/species_type = selectable[result]

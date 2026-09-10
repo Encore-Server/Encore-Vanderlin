@@ -1396,6 +1396,13 @@
 /obj/effect/spawner/guaranteed_map_spawner/listed/clothes,
 /turf/open/floor/cobble,
 /area/indoors/town/keep/garrison)
+"aZD" = (
+/obj/effect/decal/cobbleedge{
+	dir = 4
+	},
+/obj/item/rope,
+/turf/open/floor/blocks/newstone,
+/area/outdoors/exposed)
 "aZW" = (
 /obj/structure/stairs/stone{
 	dir = 1
@@ -5480,6 +5487,15 @@
 	},
 /turf/open/floor/twig,
 /area/indoors/soilsons)
+"dNG" = (
+/obj/effect/decal/cobbleedge{
+	dir = 4
+	},
+/obj/structure/fluff/railing/border{
+	dir = 8
+	},
+/turf/open/floor/grass/yel,
+/area/outdoors/exposed)
 "dNJ" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/twig,
@@ -6665,12 +6681,21 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/ruinedwood/two,
 /area/indoors/town)
+"eCf" = (
+/obj/structure/fluff/railing/border{
+	dir = 9
+	},
+/turf/open/floor/cobble,
+/area/outdoors/exposed)
 "eCF" = (
 /obj/effect/decal/cobbleedge{
 	dir = 10;
 	icon_state = "cobbleedge-e"
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/handcart/enclosed{
+	dir = 8
+	},
 /turf/open/floor/snow,
 /area/outdoors/exposed)
 "eCK" = (
@@ -6910,6 +6935,12 @@
 	},
 /turf/open/floor/ruinedwood/turned,
 /area/indoors/town/tavern)
+"eJP" = (
+/obj/structure/handcart/enclosed/shirleigh{
+	dir = 8
+	},
+/turf/open/floor/cobble,
+/area/outdoors/exposed)
 "eKs" = (
 /obj/effect/decal/cobbleedge{
 	dir = 10;
@@ -12581,6 +12612,9 @@
 	dir = 6;
 	pixel_y = 1
 	},
+/obj/structure/fluff/railing/border{
+	dir = 8
+	},
 /turf/open/floor/snow,
 /area/outdoors/exposed)
 "ilR" = (
@@ -16195,13 +16229,13 @@
 /turf/open/floor/grass/cold,
 /area/outdoors/town/plaza)
 "kyh" = (
-/obj/machinery/light/fueledstreet/orange,
 /obj/effect/decal/cobbleedge{
 	dir = 6;
 	pixel_y = 1
 	},
+/obj/structure/closet/crate/chest/shippingcrate,
 /turf/open/floor/blocks/newstone,
-/area/indoors/town/keep)
+/area/outdoors/exposed)
 "kyi" = (
 /obj/effect/decal/borderfall{
 	dir = 1
@@ -20063,6 +20097,9 @@
 	dir = 10;
 	icon_state = "cobbleedge-w"
 	},
+/obj/structure/fluff/railing/border{
+	dir = 8
+	},
 /turf/open/floor/snow,
 /area/outdoors/exposed)
 "mQt" = (
@@ -21735,6 +21772,8 @@
 	pixel_y = 1
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/item/rope,
+/obj/structure/closet/crate/chest/shippingcrate,
 /turf/open/floor/snow,
 /area/outdoors/exposed)
 "nZl" = (
@@ -23292,10 +23331,12 @@
 /turf/open/floor/ruinedwood/turned/alt,
 /area/outdoors/exposed)
 "oZI" = (
-/obj/machinery/light/fueledstreet/orange,
 /obj/effect/decal/cobbleedge{
 	dir = 10;
 	icon_state = "cobbleedge-e"
+	},
+/obj/machinery/light/fueledstreet/orange/wall{
+	dir = 4
 	},
 /turf/open/floor/blocks/newstone/alt,
 /area/outdoors/exposed)
@@ -24187,9 +24228,7 @@
 /turf/open/openspace,
 /area/indoors/town/tavern/saiga)
 "pBj" = (
-/obj/effect/decal/cobbleedge{
-	icon_state = "cobbleedge-n"
-	},
+/obj/structure/fluff/steamvent,
 /turf/open/floor/blocks/newstone/alt,
 /area/outdoors/exposed)
 "pBy" = (
@@ -26730,6 +26769,12 @@
 "rgY" = (
 /turf/open/floor/hexstone,
 /area/indoors/town/vault)
+"rhh" = (
+/obj/structure/fluff/railing/border{
+	dir = 8
+	},
+/turf/open/floor/cobble,
+/area/outdoors/exposed)
 "rhz" = (
 /obj/structure/door/stone{
 	name = "Retinue Quarters"
@@ -27770,6 +27815,9 @@
 /obj/effect/decal/cobbleedge{
 	dir = 10;
 	icon_state = "cobbleedge-w"
+	},
+/obj/machinery/light/fueledstreet/orange/wall{
+	dir = 4
 	},
 /turf/open/floor/blocks/newstone,
 /area/outdoors/exposed)
@@ -29401,6 +29449,7 @@
 	dir = 6
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/item/rope/chain,
 /turf/open/floor/snow,
 /area/outdoors/exposed)
 "teo" = (
@@ -33000,6 +33049,12 @@
 	},
 /turf/open/floor/carpet/royalblack,
 /area/indoors/town/keep/guest/meeting)
+"vxB" = (
+/obj/structure/fluff/railing/border{
+	dir = 5
+	},
+/turf/open/floor/snow,
+/area/outdoors/exposed)
 "vxL" = (
 /obj/structure/fluff/railing/wood{
 	dir = 1;
@@ -36080,8 +36135,11 @@
 /obj/effect/decal/cobbleedge{
 	dir = 4
 	},
+/obj/structure/handcart{
+	dir = 4
+	},
 /turf/open/floor/blocks/newstone,
-/area/indoors/town/keep)
+/area/outdoors/exposed)
 "xxT" = (
 /obj/structure/window/openclose{
 	dir = 8
@@ -84644,7 +84702,7 @@ fdx
 miA
 kyh
 xxv
-xkM
+aZD
 oZI
 nPx
 gQy
@@ -84774,7 +84832,7 @@ pUh
 efa
 kpK
 rWC
-sMd
+czc
 sMd
 hly
 roX
@@ -85169,10 +85227,10 @@ sTH
 nGg
 yfd
 qZu
-nPx
+eJP
 nZb
 eCF
-nLF
+vxB
 sjb
 ffp
 nPx
@@ -85300,11 +85358,11 @@ fNx
 vvT
 wtv
 qEy
-dQS
+dNG
 mQq
 ilN
-nPx
-nPx
+rhh
+eCf
 emh
 roX
 roX

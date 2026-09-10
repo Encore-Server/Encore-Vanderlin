@@ -279,21 +279,21 @@
 	cooked_smell = /datum/pollutant/food/fried_messenger
 
 /datum/container_craft/pan/sunreed_grilled
-	category = "Tiefling Cuisine"
+	category = "Sunnite Cuisine"
 	name = "Grilled Sunreed"
 	requirements = list(/obj/item/natural/chaff/sunreed = 1)
 	output = /obj/item/reagent_containers/food/snacks/produce/vegetable/sunreed_cooked
 	cooked_smell = /datum/pollutant/food/sunreed_grilled
 
 /datum/container_craft/pan/plato
-	category = "Tiefling Cuisine"
+	category = "Sunnite Cuisine"
 	name = "Sunreed Plato"
 	requirements = list(/obj/item/reagent_containers/food/snacks/masa_flat = 1)
 	output = /obj/item/reagent_containers/food/snacks/tostada
 	cooked_smell = /datum/pollutant/food/sunreed_dough
 
 /datum/container_craft/pan/saigaita
-	category = "Tiefling Cuisine"
+	category = "Sunnite Cuisine"
 	name = "Fried Saigaita"
 	wildcard_requirements = list(/obj/item/reagent_containers/food/snacks/foodbase/saigaita = 1)
 	output = /obj/item/reagent_containers/food/snacks/saigaita_cooked
