@@ -8,6 +8,7 @@
 	anchored = FALSE
 	climbable = TRUE
 	pixel_x = -8
+	layer = ABOVE_ALL_MOB_LAYER
 
 	var/list/stuff_shit = list()
 
