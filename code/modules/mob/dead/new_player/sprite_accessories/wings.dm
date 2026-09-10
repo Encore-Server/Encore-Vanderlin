@@ -68,6 +68,18 @@
 	name = "Dragon"
 	icon_state = "dragon"
 
+/datum/sprite_accessory/wings/huge/megamoth
+	name = "Megamoth"
+	icon_state = "megamoth"
+
+/datum/sprite_accessory/wings/huge/mothra
+	name = "Mothra"
+	icon_state = "mothra"
+
+/datum/sprite_accessory/wings/huge/skele
+	name = "Skeletal"
+	icon_state = "skele"
+
 /datum/sprite_accessory/wings/large
 	abstract_type = /datum/sprite_accessory/wings/large
 	icon = 'icons/mob/sprite_accessory/wings/wings_64x32.dmi'

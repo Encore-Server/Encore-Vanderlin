@@ -236,6 +236,7 @@
 	name = "harpy wings"
 	accessory_type = /datum/sprite_accessory/wings/large/harpyswept
 	flight_for_species = list(SPEC_ID_HARPY)
+	can_open = TRUE
 
 /obj/item/organ/wings/flight/kobold
 	name = "kobold wings"
