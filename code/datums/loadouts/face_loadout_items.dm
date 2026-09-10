@@ -119,7 +119,7 @@
 
 /datum/loadout_item/coppermask
 	name = "Copper Mask"
-	item_path = /obj/item/clothing/face/copper
+	item_path = /obj/item/clothing/face/facemask/copper
 	ui_category = "Face"
 
 	triumph_cost_permanent = 16
