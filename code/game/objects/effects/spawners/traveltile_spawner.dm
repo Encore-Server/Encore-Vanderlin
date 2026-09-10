@@ -142,7 +142,7 @@
 	check_other_side = TRUE
 
 /obj/structure/fluff/traveltile/inquisition
-	name = "To the Vanderlin Basin"
+	name = "To the Town Basin"
 	aportalid = "inq_exit"
 	aportalgoesto = "inq_enter"
 	required_trait = TRAIT_INQUISITION

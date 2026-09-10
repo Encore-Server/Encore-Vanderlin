@@ -215,7 +215,7 @@
 
 /datum/reagent/consumable/ollie_oil
 	name = "Ollie Oil"
-	description = "Vanderlin's preferred way to consume its ollies."
+	description = "Geramor's preferred way to consume its ollies."
 	color = "#555f41"
 	taste_description = "peppery oil"
 

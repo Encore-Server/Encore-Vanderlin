@@ -299,7 +299,7 @@
 
 /datum/stock/stockpile/blackberry
 	name = "Blackberries"
-	desc = "A variety of earthy berry formerly common in Vanderlin."
+	desc = "A variety of earthy berry formerly common in the east."
 	item_type = /obj/item/reagent_containers/food/snacks/produce/fruit/blackberry
 	held_items = 2
 	payout_price = 2
