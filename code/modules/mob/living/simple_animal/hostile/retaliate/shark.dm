@@ -10,15 +10,15 @@
 	butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/mince/fish = 2, /obj/item/alch/sinew = 2, /obj/item/alch/bone = 1)
 	botched_butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/mince/fish = 1, /obj/item/alch/bone = 1)
 
-	health = 150
-	maxHealth = 150
+	health = SHARK_HEALTH
+	maxHealth = SHARK_HEALTH
 
 	move_to_delay = 11
 	dodgetime = 3 SECONDS
 
 	base_intents = list(/datum/intent/simple/bite)
-	melee_damage_lower = 18
-	melee_damage_upper = 24
+	melee_damage_lower = 45
+	melee_damage_upper = 85
 
 	ai_controller = /datum/ai_controller/volf // Laziness
 

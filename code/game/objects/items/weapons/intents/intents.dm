@@ -589,3 +589,35 @@
 	miss_text = "bites the air!"
 	miss_sound = PUNCHWOOSH
 	item_damage_type = "stab"
+
+/datum/intent/unarmed/droidclaw
+	name = "claw"
+	icon_state = "inclaw"
+	attack_verb = list("claws", "slashes", "eviscerates")
+	animname = "claw"
+	blade_class = BCLASS_CHOP
+	hitsound = "genslash"
+	penfactor = 131
+	damfactor = 50
+	candodge = TRUE
+	canparry = TRUE
+	miss_text = "slashes the air!"
+	miss_sound = "bluntwooshlarge"
+	item_damage_type = "slash"
+
+/datum/intent/unarmed/droidpunch
+	name = "pummel"
+	icon_state = "instrike"
+	attack_verb = list("clobbers", "pummels")
+	animname = "smash"
+	blade_class = BCLASS_BLUNT
+	hitsound = "punch_hard"
+	chargetime = 0
+	penfactor = 131
+	damfactor = 50
+	swingdelay = 0
+	candodge = TRUE
+	canparry = TRUE
+	item_damage_type = "blunt"
+	miss_text = "thrusts their fist at nothing!"
+	miss_sound = PUNCHWOOSH
