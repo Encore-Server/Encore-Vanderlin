@@ -1466,7 +1466,7 @@
 /obj/item/weapon/sword/long/exe
 	name = "executioner's sword"
 	icon_state = "exe"
-	desc = "An ancient blade of ginormous stature, with a round ended tip. The pride and joy of Vanderlin's greatest pastime, executions."
+	desc = "An ancient blade of ginormous stature, with a round ended tip. The pride and joy of the south's greatest pastime, executions."
 	force_wielded = DAMAGE_GREATSWORD_WIELD + 4
 	possible_item_intents = list(SWORD_STRIKE, SWORD_CUT)
 	gripped_intents = list(SWORD_CUT, SWDLONG_CHOP, SWORD_STRIKE, SWORD_CLEAVE)

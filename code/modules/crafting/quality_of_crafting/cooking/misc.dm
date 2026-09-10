@@ -92,7 +92,7 @@
 	extra_chance = 100
 
 /datum/repeatable_crafting_recipe/cooking/salsa
-	category = "Tiefling Cuisine"
+	category = "Sunnite Cuisine"
 	name = "Drowsbane Jam"
 
 	requirements = list(
@@ -190,7 +190,7 @@
 	extra_chance = 100
 
 /datum/repeatable_crafting_recipe/cooking/comelette_base
-	category = "Tiefling Cuisine"
+	category = "Sunnite Cuisine"
 	name = "Caravaneer's Omelette Base"
 
 	requirements = list(
@@ -205,7 +205,7 @@
 	extra_chance = 100
 
 /datum/repeatable_crafting_recipe/cooking/comelette
-	category = "Tiefling Cuisine"
+	category = "Sunnite Cuisine"
 	name = "Uncooked Caravaneer's Omelette"
 
 	requirements = list(
@@ -222,7 +222,7 @@
 	extra_chance = 100
 
 /datum/repeatable_crafting_recipe/cooking/comelette_veggie
-	category = "Tiefling Cuisine"
+	category = "Sunnite Cuisine"
 	name = "Uncooked Veggie Caravaneer's Omelette"
 
 	requirements = list(
@@ -239,7 +239,7 @@
 	extra_chance = 100
 
 /datum/repeatable_crafting_recipe/cooking/comelette_meat
-	category = "Tiefling Cuisine"
+	category = "Sunnite Cuisine"
 	name = "Uncooked Meat Caravaneer's Omelette"
 
 	requirements = list(

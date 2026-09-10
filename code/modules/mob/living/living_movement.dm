@@ -19,11 +19,12 @@
 			return TRUE
 		if(isliving(mover))
 			var/mob/living/M = mover
+			if(buckled && M.buckled == buckled)
+				return TRUE
 			if(M.wallpressed)
 				return !wallpressed
 			// check src density instead of mover to prevent prone people from crawling under others
 			return (!density || wallpressed || body_position == LYING_DOWN)
-	return !mover.density || wallpressed || body_position == LYING_DOWN
 
 /mob/living/toggle_move_intent()
 	. = ..()

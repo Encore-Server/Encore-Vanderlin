@@ -73,7 +73,7 @@
 		SEND_SIGNAL(crafter, COMSIG_CONTAINER_CRAFT_COMPLETE, created_output)
 
 /datum/container_craft/oven/huskbun
-	category = "Tiefling Cuisine"
+	category = "Sunnite Cuisine"
 	name = "Baked Huskbun"
 	wildcard_requirements = list(/obj/item/reagent_containers/food/snacks/foodbase/huskbunraw = 1)
 	output = /obj/item/reagent_containers/food/snacks/huskbun
@@ -388,7 +388,7 @@
 
 /datum/container_craft/oven/honey_cake
 	category = "Cakes"
-	name = "Baked Qadirid Cake"
+	name = "Baked Pearcake"
 	requirements = list(/obj/item/reagent_containers/food/snacks/zybcake_ready= 1)
 	output = /obj/item/reagent_containers/food/snacks/zybcake_cooked
 	cooked_smell = /datum/pollutant/food/honey_cake
@@ -402,21 +402,21 @@
 	cooked_smell = /datum/pollutant/food/tamto_cake
 
 /datum/container_craft/oven/eighthscake
-	category = "Tiefling Cuisine"
+	category = "Sunnite Cuisine"
 	name = "Baked Eighthscake"
 	requirements = list(/obj/item/reagent_containers/food/snacks/eighthscake_unbaked = 1)
 	output = /obj/item/reagent_containers/food/snacks/eighthscake
 	cooked_smell = /datum/pollutant/food/sunreed_dough
 
 /datum/container_craft/oven/eighthscake_lemon
-	category = "Tiefling Cuisine"
+	category = "Sunnite Cuisine"
 	name = "Baked Lemon Eighthscake"
 	requirements = list(/obj/item/reagent_containers/food/snacks/eighthscake_unbaked/lemon = 1)
 	output = /obj/item/reagent_containers/food/snacks/eighthscake/lemon
 	cooked_smell = /datum/pollutant/food/sunreed_dough
 
 /datum/container_craft/oven/eighthscake_lime
-	category = "Tiefling Cuisine"
+	category = "Sunnite Cuisine"
 	name = "Baked Lime Eighthscake"
 	requirements = list(/obj/item/reagent_containers/food/snacks/eighthscake_unbaked/lime = 1)
 	output = /obj/item/reagent_containers/food/snacks/eighthscake/lime
@@ -535,7 +535,7 @@
 	cooked_smell = /datum/pollutant/food/pastry
 
 /datum/container_craft/oven/sunreed_bread
-	category = "Tiefling Cuisine"
+	category = "Sunnite Cuisine"
 	name = "Sunbread"
 	requirements = list(/obj/item/reagent_containers/food/snacks/masa = 1)
 	output = /obj/item/reagent_containers/food/snacks/sunreed_bread
@@ -543,7 +543,7 @@
 	used_skill = /datum/attribute/skill/craft/cooking/baking
 
 /datum/container_craft/oven/honey_sunreed_bread
-	category = "Tiefling Cuisine"
+	category = "Sunnite Cuisine"
 	name = "Honeyed Sunbread"
 	requirements = list(/obj/item/reagent_containers/food/snacks/masa_honey = 1)
 	output = /obj/item/reagent_containers/food/snacks/sunreed_bread/honey
@@ -551,7 +551,7 @@
 	used_skill = /datum/attribute/skill/craft/cooking/baking
 
 /datum/container_craft/oven/estrella
-	category = "Tiefling Cuisine"
+	category = "Sunnite Cuisine"
 	name = "Estrella"
 	requirements = list(/obj/item/reagent_containers/food/snacks/masa_slice = 1)
 	output = /obj/item/reagent_containers/food/snacks/estrella
@@ -559,21 +559,21 @@
 	used_skill = /datum/attribute/skill/craft/cooking/baking
 
 /datum/container_craft/oven/comelette
-	category = "Tiefling Cuisine"
+	category = "Sunnite Cuisine"
 	name = "Caravaneer's Omelette"
 	requirements = list(/obj/item/reagent_containers/food/snacks/comelette_uncooked = 1)
 	output = /obj/item/reagent_containers/food/snacks/cooked/comelette
 	cooked_smell = /datum/pollutant/food/fried_eggs
 
 /datum/container_craft/oven/comelette_veggie
-	category = "Tiefling Cuisine"
+	category = "Sunnite Cuisine"
 	name = "Veggie Caravaneer's Omelette"
 	requirements = list(/obj/item/reagent_containers/food/snacks/comelette_uncooked/veggie = 1)
 	output = /obj/item/reagent_containers/food/snacks/cooked/comelette/veggie
 	cooked_smell = /datum/pollutant/food/fried_eggs
 
 /datum/container_craft/oven/comelette_meat
-	category = "Tiefling Cuisine"
+	category = "Sunnite Cuisine"
 	name = "Meat Caravaneer's Omelette"
 	requirements = list(/obj/item/reagent_containers/food/snacks/comelette_uncooked/meat = 1)
 	output = /obj/item/reagent_containers/food/snacks/cooked/comelette/meat

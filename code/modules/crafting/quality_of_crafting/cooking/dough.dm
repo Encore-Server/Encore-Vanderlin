@@ -48,7 +48,7 @@
 	skillcraft = /datum/attribute/skill/craft/cooking/baking
 
 /datum/repeatable_crafting_recipe/cooking/masa
-	category = "Tiefling Cuisine"
+	category = "Sunnite Cuisine"
 	name = "Sunreed Dough"
 	requirements = list(
 		/obj/item/reagent_containers/powder/sunreed_flour = 1,

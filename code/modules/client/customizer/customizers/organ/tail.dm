@@ -18,7 +18,7 @@
 /datum/customizer_choice/organ/tail/tiefling
 	name = "Tail"
 	organ_type = /obj/item/organ/tail/tiefling
-	allows_accessory_color_customization = FALSE
+	allows_accessory_color_customization = TRUE
 	sprite_accessories = list(
 		/datum/sprite_accessory/tail/tiefling,
 		)
@@ -86,14 +86,14 @@
 		)
 
 /datum/customizer/organ/tail/harpy
-	customizer_choices = list(/datum/customizer_choice/organ/tail/harpy)
+	customizer_choices = list(/datum/customizer_choice/organ/tail/harpy, /datum/customizer_choice/organ/tail/medicator)
 	allows_disabling = TRUE
 
 /datum/customizer_choice/organ/tail/harpy
 	name = "Harpy Plumage"
 	organ_type = /obj/item/organ/tail
 	generic_random_pick = TRUE
-	allows_accessory_color_customization = FALSE
+	allows_accessory_color_customization = TRUE
 	sprite_accessories = list(
 		/datum/sprite_accessory/tail/hawk,
 	)
@@ -105,7 +105,7 @@
 /datum/customizer_choice/organ/tail/triton
 	name = "Triton Bell"
 	organ_type = /obj/item/organ/tail/triton
-	allows_accessory_color_customization = FALSE
+	allows_accessory_color_customization = TRUE
 	sprite_accessories = list(
 		/datum/sprite_accessory/tail/triton,
 	)
@@ -117,20 +117,20 @@
 /datum/customizer_choice/organ/tail/kobold
 	name = "Kobold Tail"
 	organ_type = /obj/item/organ/tail/kobold
-	allows_accessory_color_customization = FALSE
+	allows_accessory_color_customization = TRUE
 	sprite_accessories = list(
 		/datum/sprite_accessory/tail/kobold,
 		/datum/sprite_accessory/tail/kobold/alt,
 	)
 
 /datum/customizer/organ/tail/medicator
-	customizer_choices = list(/datum/customizer_choice/organ/tail/medicator)
+	customizer_choices = list(/datum/customizer_choice/organ/tail/medicator, /datum/customizer_choice/organ/tail/harpy)
 	allows_disabling = FALSE
 
 /datum/customizer_choice/organ/tail/medicator
 	name = "Medicator Plumage"
 	organ_type = /obj/item/organ/tail/medicator
-	allows_accessory_color_customization = FALSE
+	allows_accessory_color_customization = TRUE
 	sprite_accessories = list(
 		/datum/sprite_accessory/tail/medicator
 	)
