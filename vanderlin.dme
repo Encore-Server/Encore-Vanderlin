@@ -2829,6 +2829,7 @@
 #include "code\modules\client\preferences\datums\list\culinary_preference.dm"
 #include "code\modules\client\preferences\datums\list\gossip.dm"
 #include "code\modules\client\preferences\datums\list\rumors.dm"
+#include "code\modules\client\preferences\datums\list\saved_spell_kit.dm"
 #include "code\modules\client\preferences\datums\list\role_preferences\_base.dm"
 #include "code\modules\client\preferences\datums\list\role_preferences\_family_menu.dm"
 #include "code\modules\client\preferences\datums\list\role_preferences\_ui_menu.dm"

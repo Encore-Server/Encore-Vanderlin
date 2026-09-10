@@ -48,6 +48,7 @@ type SpellBookData = {
   techniqueLevels: Track[];
   formLevels: Track[];
   spells: SpellEntry[];
+  hasSavedKit: boolean;
 };
 
 type SpellBookStatic = {
@@ -63,7 +64,7 @@ const formatModifierPart = (label: string, multiplier: number) => {
 
 const formatModifierWhole = (label: string, multiplier: number) => {
   if (multiplier === 0) return null;
-  const pct = ((multiplier));
+  const pct = multiplier;
   return `${pct > 0 ? '+' : ''}${pct} ${label}`;
 };
 
@@ -132,9 +133,11 @@ const SpellCard = (props: {
         </Stack.Item>
         <Stack.Item grow>
           {spell.heretical ? (
-          <Box bold color="red">{spell.name} {spell.heretical && "(FORBIDDEN)"}</Box>
-          ) :
-          (<Box bold>{spell.name}</Box>
+            <Box bold color="red">
+              {spell.name} (FORBIDDEN)
+            </Box>
+          ) : (
+            <Box bold>{spell.name}</Box>
           )}
           <Box color="label" fontSize="0.9em">
             {spell.desc}
@@ -237,7 +240,8 @@ const StatsPage = (props: {
           scrollable
           buttons={
             <Box color={unspentTechniquePoints > 0 ? 'good' : 'label'}>
-              {unspentTechniquePoints} pt{unspentTechniquePoints === 1 ? '' : 's'}
+              {unspentTechniquePoints} pt
+              {unspentTechniquePoints === 1 ? '' : 's'}
             </Box>
           }
         >
@@ -300,10 +304,8 @@ const LearnPage = (props: {
 
   const formTrack = formLevels.find((f) => f.id === activeForm);
   const spellsInForm = spells.filter((spell) => spell.form === activeForm);
-
   const techniqueSpells = spellsInForm.filter((spell) => spell.technique);
   const techniquelessSpells = spellsInForm.filter((spell) => !spell.technique);
-
   const relevantTechniques = techniques.filter((technique) =>
     techniqueSpells.some((spell) => spell.technique === technique),
   );
@@ -311,9 +313,7 @@ const LearnPage = (props: {
     activeTechnique && relevantTechniques.includes(activeTechnique)
       ? activeTechnique
       : relevantTechniques[0];
-  const techniqueTrack = techniqueLevels.find(
-    (t) => t.id === currentTechnique,
-  );
+  const techniqueTrack = techniqueLevels.find((t) => t.id === currentTechnique);
   const visibleTechniqueSpells = techniqueSpells.filter(
     (spell) => spell.technique === currentTechnique,
   );
@@ -324,51 +324,47 @@ const LearnPage = (props: {
   return (
     <Stack vertical fill>
       <Stack.Item>
-        <Stack align="center">
-          <Stack.Item grow>
-            <Tabs>
-              {forms.map((form) => {
-                const track = formLevels.find((f) => f.id === form);
-                return (
-                  <Tabs.Tab
-                    key={form}
-                    selected={activeForm === form}
-                    onClick={() => {
-                      setActiveForm(form);
-                      setActiveTechnique(null);
-                    }}
-                  >
-                    {form}
-                    {track ? ` (${track.level})` : ''}
-                  </Tabs.Tab>
-                );
-              })}
-            </Tabs>
-          </Stack.Item>
-        </Stack>
+        <Tabs>
+          {forms.map((form) => {
+            const track = formLevels.find((f) => f.id === form);
+            return (
+              <Tabs.Tab
+                key={form}
+                selected={activeForm === form}
+                onClick={() => {
+                  setActiveForm(form);
+                  setActiveTechnique(null);
+                }}
+              >
+                {form}
+                {track ? ` (${track.level})` : ''}
+              </Tabs.Tab>
+            );
+          })}
+        </Tabs>
       </Stack.Item>
-
       <Stack.Item grow style={{ minHeight: 0 }}>
-        {activeForm === "Death" && (
-        <Collapsible title="Warning">
-          The use of Death Magic is frowned upon by the Katholikos, you should expect great scrutiny when wielding it. <br></br>
-          Certain spells within this form are heretical under the Elementals and if recognised may lead to excommunication or execution. <br></br>
-        </Collapsible>
+        {activeForm === 'Death' && (
+          <Collapsible title="Warning">
+            The use of Death Magic is frowned upon by the Katholikos, you
+            should expect great scrutiny when wielding it. <br />
+            Certain spells within this form are heretical under the Elementals
+            and if recognised may lead to excommunication or execution. <br />
+          </Collapsible>
         )}
-        {activeForm === "Hemomancy" && (
-        <Collapsible title="Warning">
-          The use of Hemomancy is considered heresy by the Elementals. <br></br>
-          Attempting to use Hemomancy without the proper instruction will be inefficient and potentially dangerous.
-        </Collapsible>
+        {activeForm === 'Hemomancy' && (
+          <Collapsible title="Warning">
+            The use of Hemomancy is considered heresy by the Elementals. <br />
+            Attempting to use Hemomancy without the proper instruction will be
+            inefficient and potentially dangerous.
+          </Collapsible>
         )}
         <Stack fill>
           <Stack.Item grow={3} style={{ minHeight: 0 }}>
             <Section title="Techniques" fill>
               <Stack vertical fill>
-
                 <Stack.Item>
                   <TrackSummary track={formTrack} label={activeForm} />
-
                   {relevantTechniques.length > 0 && (
                     <Tabs mb={1}>
                       {relevantTechniques.map((technique) => (
@@ -382,10 +378,11 @@ const LearnPage = (props: {
                       ))}
                     </Tabs>
                   )}
-
-                  <TrackSummary track={techniqueTrack} label={currentTechnique || ''} />
+                  <TrackSummary
+                    track={techniqueTrack}
+                    label={currentTechnique || ''}
+                  />
                 </Stack.Item>
-
                 <Stack.Item grow style={{ minHeight: 0, overflowY: 'auto' }}>
                   {visibleTechniqueSpells.length === 0 && (
                     <Box color="label" italic>
@@ -402,11 +399,9 @@ const LearnPage = (props: {
                     />
                   ))}
                 </Stack.Item>
-
               </Stack>
             </Section>
           </Stack.Item>
-
           <Stack.Item grow={2} style={{ minHeight: 0 }}>
             <Section title={`Techniqueless ${activeForm}`} fill scrollable>
               {techniquelessSpells.length === 0 && (
@@ -442,6 +437,7 @@ export const SpellBook = () => {
     techniqueLevels = [],
     formLevels = [],
     spells = [],
+    hasSavedKit,
   } = data;
 
   const [page, setPage] = useState<'learn' | 'stats'>('learn');
@@ -454,33 +450,74 @@ export const SpellBook = () => {
             <Section
               title="Spellcraft"
               buttons={
-                <Stack>
-                  <Stack.Item>
-                    <Box bold color={unspentFormPoints > 0 ? 'good' : 'label'}>
-                      Form: {unspentFormPoints}
-                    </Box>
-                  </Stack.Item>
-                  <Stack.Item>
-                    <Box bold color={unspentTechniquePoints > 0 ? 'good' : 'label'}>
-                      Technique: {unspentTechniquePoints}
-                    </Box>
-                  </Stack.Item>
-                </Stack>
+                <Box nowrap>
+                  <Box
+                    inline
+                    bold
+                    mr={2}
+                    color={unspentFormPoints > 0 ? 'good' : 'label'}
+                  >
+                    Form: {unspentFormPoints}
+                  </Box>
+                  <Box
+                    inline
+                    bold
+                    color={unspentTechniquePoints > 0 ? 'good' : 'label'}
+                  >
+                    Technique: {unspentTechniquePoints}
+                  </Box>
+                </Box>
               }
             >
+              <Stack mb={1}>
+                <Stack.Item>
+                  <Button
+                    color="bad"
+                    icon="floppy-disk"
+                    onClick={() => act('save_kit')}
+                  >
+                    Save
+                  </Button>
+                </Stack.Item>
+                <Stack.Item>
+                  <Button
+                    color="bad"
+                    icon="folder-open"
+                    disabled={!hasSavedKit}
+                    onClick={() => act('load_kit')}
+                  >
+                    Load
+                  </Button>
+                </Stack.Item>
+                <Stack.Item>
+                  <Button
+                    color="bad"
+                    icon="trash"
+                    disabled={!hasSavedKit}
+                    onClick={() => act('delete_kit')}
+                  >
+                    Delete
+                  </Button>
+                </Stack.Item>
+              </Stack>
               <Tabs m="0px">
-                <Tabs.Tab selected={page === 'learn'} onClick={() => setPage('learn')}>
+                <Tabs.Tab
+                  selected={page === 'learn'}
+                  onClick={() => setPage('learn')}
+                >
                   <Icon name="book-open" mr={1} />
                   Learn
                 </Tabs.Tab>
-                <Tabs.Tab selected={page === 'stats'} onClick={() => setPage('stats')}>
+                <Tabs.Tab
+                  selected={page === 'stats'}
+                  onClick={() => setPage('stats')}
+                >
                   <Icon name="chart-simple" mr={1} />
                   Stats
                 </Tabs.Tab>
               </Tabs>
             </Section>
           </Stack.Item>
-
           <Stack.Item grow style={{ minHeight: 0 }}>
             {page === 'learn' ? (
               <LearnPage

@@ -315,3 +315,6 @@ GLOBAL_LIST_INIT(all_essences, subtypesof(/datum/thaumaturgical_essence))
 #define SPELLMOD_COST "cost"
 #define SPELLMOD_CASTSPEED "castSpeed"
 #define SPELLMOD_MAGNITUDE "magnitude"
+
+#define SPELL_KIT_LAST_KEY "_last"
+#define SPELL_KIT_MAX_PRESETS 5
