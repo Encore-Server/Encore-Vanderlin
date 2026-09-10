@@ -1,8 +1,8 @@
 /datum/surgery_operation/basic/revival
 	name = "Revive"
-	desc = "Bring someone back to the world of the living through a dosage of Lux."
+	desc = "Bring someone back to the world of the living through a dosage of Thauma."
 
-	category = "Pestran"
+	category = "Erdite"
 
 	implements = list(
 		/obj/item/reagent_containers/lux = 1,
@@ -20,7 +20,7 @@
 	all_surgery_states_required = SURGERY_SKIN_OPEN|SURGERY_BONE_SAWED|SURGERY_VESSELS_CLAMPED
 
 /datum/surgery_operation/basic/revival/get_recommended_tool()
-	return "Fragment of Lux"
+	return "Fragment of Thauma"
 
 /datum/surgery_operation/basic/revival/get_default_radial_image()
 	return image(/obj/item/reagent_containers/lux)

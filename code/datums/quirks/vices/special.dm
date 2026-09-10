@@ -52,7 +52,7 @@
 // 		return
 // 	var/mob/living/carbon/human/H = owner
 // 	H.apply_status_effect(/datum/status_effect/debuff/flaw_lux_taken)
-	return ..()
+//	return ..()
 
 /datum/quirk/vice/pacifist
 	name = "Pacifist"

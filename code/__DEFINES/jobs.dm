@@ -63,6 +63,7 @@
 #define FACTION_DECEIVERS	"Deceivers"
 #define FACTION_VIKINGS     "Vikings"
 #define FACTION_INQUISITION	"Inquisition"
+#define FACTION_INFERNAL	"Infernal"
 
 #define NOBLEMEN		(1<<0)
 #define GARRISON		(1<<1)

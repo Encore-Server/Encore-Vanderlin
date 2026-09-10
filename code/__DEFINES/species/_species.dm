@@ -230,9 +230,9 @@
 	SPEC_ID_RAKSHARI,\
 )
 
-/// Species that lack lux. Any who have no ties to divinity anymore, whether it be their creation story or otherwise.
-// Encore edit- still need to hit Lux with the change to Thauma
-#define RACES_PLAYER_LUXLESS list(\
+///Species that will smell unfamiliar or alien to those with keen noses.
+//Greenskins or hell-touched generally speaking
+#define RACES_PLAYER_UNFAMILIAR list(\
 	SPEC_ID_KOBOLD_FORMIKRAG,\
 	SPEC_ID_HUMAN_SPACE,\
 	SPEC_ID_ROUSMAN,\
