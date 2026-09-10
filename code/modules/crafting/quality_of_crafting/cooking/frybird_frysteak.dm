@@ -80,7 +80,7 @@
 	crafting_message = "rub some herbs into frysteak"
 
 /datum/repeatable_crafting_recipe/cooking/frysteak/drowsbane
-	category = "Tiefling Cuisine"
+	category = "Sunnite Cuisine"
 	subtypes_allowed = TRUE
 	name = "Frysteak and Drowsbane"
 
@@ -151,7 +151,7 @@
 	crafting_message = "combine some sausage and onion"
 
 /datum/repeatable_crafting_recipe/cooking/wiener/cocaumole
-	category = "Tiefling Cuisine"
+	category = "Sunnite Cuisine"
 	name = "Wiener with Cocaumole"
 	subtypes_allowed = TRUE
 	requirements = list(
