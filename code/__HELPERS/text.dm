@@ -973,3 +973,13 @@ GLOBAL_LIST_INIT(binary, list("0","1"))
 			if("~") i_char = "`"
 		new_text += i_char
 	return new_text
+
+/proc/format_flavor_html(raw)
+	if(!length(raw))
+		return ""
+
+	var/t = html_encode(raw)
+	var/static/regex/keep_tags = regex(@"&lt;(/?)(br|i|b|u|em|strong|center|hr|p) ?/?&gt;", "ig")
+	t = keep_tags.Replace(t, "<$1$2>")
+	t = replacetext(t, "\n", "<br>")
+	return parsemarkdown_basic(t, limited = TRUE)
