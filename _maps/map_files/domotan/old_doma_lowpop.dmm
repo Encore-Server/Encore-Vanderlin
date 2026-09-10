@@ -10020,6 +10020,13 @@
 /obj/structure/ladder,
 /turf/open/floor/wood,
 /area/outdoors/beach/boat)
+"gJG" = (
+/obj/structure/stairs{
+	dir = 8
+	},
+/obj/structure/fake_machine/scomm,
+/turf/open/floor/ruinedwood/chevron,
+/area/indoors/town/clinic_large)
 "gKd" = (
 /obj/structure/table/wood,
 /obj/item/natural/feather,
@@ -27551,7 +27558,8 @@
 /obj/structure/fluff/walldeco/bath/wallrope{
 	dir = 6;
 	name = "infirmary wallrope";
-	desc = "Braided red thread, hung over the threshold to the Temple Infirmary. Representing the lifeblood that flows within us all; across the Goblet, these braids signify to the masses that healing may be found within to all who seek it, one must merely have faith. The Church will tend the wounds of all for no cost, save the vilest of known heretics that endanger their fellow man."
+	desc = "Braided red thread, hung over the threshold to the Temple Infirmary. Representing the lifeblood that flows within us all; across the Goblet, these braids signify to the masses that healing may be found within to all who seek it, one must merely have faith. The Church will tend the wounds of all for no cost, save the vilest of known heretics that endanger their fellow man.";
+	alpha = 255
 	},
 /obj/effect/mapping_helpers/access/keyset/church/general,
 /turf/open/floor/ruinedwood,
@@ -35542,10 +35550,17 @@
 /area/indoors/town/church/inquisition)
 "xdn" = (
 /obj/machinery/light/fueled/wallfire/candle/lamp,
-/obj/structure/fake_machine/scomm/r,
-/obj/structure/fluff/clutter/shrub/tundra{
-	pixel_y = 15;
-	density = 0
+/obj/structure/table/wood/plain_alt,
+/obj/item/reagent_containers/glass/carafe/teapot/jade{
+	pixel_y = 14
+	},
+/obj/item/reagent_containers/glass/cup/jade{
+	pixel_x = -6;
+	pixel_y = -4
+	},
+/obj/item/reagent_containers/glass/cup/jade{
+	pixel_x = 6;
+	pixel_y = -2
 	},
 /turf/open/floor/ruinedwood/chevron,
 /area/indoors/town/clinic_large)
@@ -84008,7 +84023,7 @@ vTq
 hrd
 hrd
 eKK
-hot
+gJG
 hcs
 tPH
 fiQ
