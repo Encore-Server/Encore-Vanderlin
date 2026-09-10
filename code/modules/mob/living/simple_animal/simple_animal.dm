@@ -1014,6 +1014,30 @@ GLOBAL_VAR_INIT(farm_animals, FALSE)
 
 /mob/living/simple_animal/buckle_mob(mob/living/buckled_mob, force = 0, check_loc = 1)
 	. = ..()
+	if(. && buckled_mob && buckled_mob.loc != loc)
+		buckled_mob.abstract_move(loc)
+		buckled_mob.set_glide_size(glide_size)
+
+/mob/living/simple_animal/handle_buckled_mob_movement(newloc, direction, glide_size_override)
+	if(max_buckled_mobs <= 1 || length(buckled_mobs) <= 1)
+		return ..()
+
+	var/first = TRUE
+	for(var/mob/living/buckled_mob as anything in buckled_mobs)
+		if(first)
+			first = FALSE
+			if(!buckled_mob.Move(newloc, direction, glide_size_override))
+				Move(buckled_mob.loc, direction)
+				last_move = buckled_mob.last_move
+				return FALSE
+			continue
+		if(buckled_mob.loc != newloc)
+			buckled_mob.abstract_move(newloc)
+		if(glide_size_override)
+			buckled_mob.set_glide_size(glide_size_override)
+		if(direction)
+			buckled_mob.setDir(direction)
+	return TRUE
 
 /mob/living/simple_animal/Life()
 	. = ..()
