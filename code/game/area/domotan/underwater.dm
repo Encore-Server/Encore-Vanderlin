@@ -5,14 +5,17 @@
 	droning_index = AMBIENCE_UNDERWATER
 	ambient_index = AMBIENCE_UNDERWATER
 	ambient_index_night = AMBIENCE_UNDERWATER
-	ambush_times = list("night")
+	ambush_times = list(NIGHT,DAWN,DUSK,DAY)
 	ambush_types = list(
-				/turf/open/water)
+				/turf/open/water/ocean,
+				/turf/open/water/ocean/abyss,
+				/turf/open/water/ocean/abyss/under,)
 	ambush_mobs = list(
-				/mob/living/simple_animal/hostile/retaliate/wolf = 15,
-				/mob/living/carbon/human/species/goblin/npc/ambush = 15,
-				/mob/living/simple_animal/hostile/deepone/arm = 25,
-				/mob/living/simple_animal/hostile/deepone/spit = 25)
+				/mob/living/simple_animal/hostile/retaliate/shark = 25,
+				/mob/living/simple_animal/hostile/retaliate/fish = 35,
+				/mob/living/simple_animal/hostile/retaliate/hydra = 25,
+				/mob/living/simple_animal/hostile/retaliate/crab = 20,
+				/mob/living/simple_animal/hostile/retaliate/crab/cannon/shotgun = 5,)
 
 /area/under/underwater/Entered(atom/movable/arrived)
 	..()

@@ -493,13 +493,25 @@
 /datum/status_effect/debuff/lux_drained
 	id = "lux_drained"
 	alert_type = /atom/movable/screen/alert/status_effect/debuff/lux_drained
-	effectedstats = list(STAT_FORTUNE = -3, STAT_CONSTITUTION = -1, STAT_ENDURANCE = -1, STAT_INTELLIGENCE = -1, STAT_PERCEPTION = -1, STAT_SPEED = -1, STAT_STRENGTH = -1)
+	effectedstats = list(STAT_FORTUNE = 3, STAT_CONSTITUTION = 1, STAT_ENDURANCE = 1, STAT_INTELLIGENCE = 1, STAT_PERCEPTION = 1, STAT_SPEED = 1, STAT_STRENGTH = 1)//Since this is basically an antag for free card, these all become buffs.
 	duration = -1
 	tick_interval = STATUS_EFFECT_NO_TICK
 
 /atom/movable/screen/alert/status_effect/debuff/lux_drained
 	name = "Thauma Drained"
 	desc = span_danger("My flesh! It's free! THE ASPECTS BE SCORNED!\n")
+
+/datum/status_effect/debuff/lux_drained/on_apply()
+	. = ..()
+	to_chat(owner, span_danger("My flesh! It's free! The thought of those with souls repulses me! In my clarity, I see them for the monsters they truly are!"))
+	owner.set_faction(list(FACTION_INFERNAL))
+	ADD_TRAIT(owner, TRAIT_DEMON, TRAIT_GENERIC)
+
+/datum/status_effect/debuff/lux_drained/on_remove()
+	. = ..()
+	to_chat(owner, span_greentextbig("The fury of my flesh is silenced as I control my body again... it's soothing."))
+	owner.set_faction(list(FACTION_NEUTRAL))//simmer down now
+	REMOVE_TRAIT(owner, TRAIT_DEMON, TRAIT_GENERIC)
 
 //charflaw variant of lux_drained, used when the flaw is selected
 /datum/status_effect/debuff/flaw_lux_taken

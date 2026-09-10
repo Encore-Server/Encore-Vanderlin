@@ -50,7 +50,21 @@
 
 	if(SSatoms.initialized)
 		SSmapping.reg_in_areas_in_z(areas)
-	SSatoms.InitializeAtoms(atoms)
+		SSatoms.InitializeAtoms(atoms)
+
+		for(var/turf/turf as anything in turfs)
+			if(turf.smoothing_flags & USES_SMOOTHING)
+				QUEUE_SMOOTH(turf)
+				QUEUE_SMOOTH_NEIGHBORS(turf)
+			for(var/atom/movable/thing as anything in turf)
+				if(thing.smoothing_flags & USES_SMOOTHING)
+					QUEUE_SMOOTH(thing)
+					QUEUE_SMOOTH_NEIGHBORS(thing)
+
+		for(var/turf/border_turf as anything in border)
+			if(border_turf.smoothing_flags & USES_SMOOTHING)
+				QUEUE_SMOOTH(border_turf)
+				QUEUE_SMOOTH_NEIGHBORS(border_turf)
 
 /datum/map_template/proc/load_new_z()
 	var/x = round((world.maxx - width)/2)

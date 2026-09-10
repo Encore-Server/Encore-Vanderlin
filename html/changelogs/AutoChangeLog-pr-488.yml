@@ -1,0 +1,7 @@
+author: "kyres1"
+delete-after: True
+changes:
+  - rscadd: "Losing your thauma now aligns you with Hell and mildly buffs you to incentivize going crazy."
+  - rscadd: "Seeing someone without Thauma repulses normal people."
+  - qol: "Heretic, bandit and outlaw notifications are now significantly less overt in examine text."
+  - bugfix: "Keen smell no longer detects a variety of playable species as animals, but rather as alien and unfamiliar."

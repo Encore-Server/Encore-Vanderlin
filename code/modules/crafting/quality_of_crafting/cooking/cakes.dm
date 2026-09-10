@@ -58,7 +58,7 @@
 
 /datum/repeatable_crafting_recipe/cooking/cake_pear
 	category = "Cakes"
-	name = "Qadirid Cake Base"
+	name = "Pearcake Base"
 
 	requirements = list(
 		/obj/item/reagent_containers/food/snacks/produce/fruit/pear = 1,
@@ -165,7 +165,7 @@
 
 /datum/repeatable_crafting_recipe/cooking/unbaked_zybcake
 	category = "Cakes"
-	name = "Unbaked Qadirid Cake"
+	name = "Unbaked Pearcake"
 
 	requirements = list(
 		/obj/item/reagent_containers/food/snacks/spiderhoney = 1,

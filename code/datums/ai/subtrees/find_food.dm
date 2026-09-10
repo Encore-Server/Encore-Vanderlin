@@ -51,6 +51,9 @@
 /datum/ai_planning_subtree/find_food/troll
 	vision_range = 7
 
+/datum/ai_planning_subtree/find_food/cyclops
+	vision_range = 9
+
 /datum/ai_planning_subtree/find_food/gator
 	vision_range = 9
 

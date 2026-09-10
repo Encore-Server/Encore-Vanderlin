@@ -1,0 +1,8 @@
+author: "kyres1"
+delete-after: True
+changes:
+  - rscadd: "Allowed both harpies and medicators to select both of their tail options."
+  - bugfix: "Allows most species tails to be colored independently."
+  - rscadd: "Added the giant moth wings to the otherkin customization."
+  - rscadd: "Added skeleton wings to otherkin customization."
+  - rscadd: "Allowed harpies to pick huge wings for the purpose of opening them."
