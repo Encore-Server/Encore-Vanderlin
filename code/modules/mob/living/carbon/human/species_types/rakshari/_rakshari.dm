@@ -199,8 +199,8 @@
 			return "Euuugh! You smell something rotten"
 		if(istype(target_species, /datum/species/rakshari) && istype(user_species, /datum/species/rakshari))
 			return "You smell [H.name], the rakshari"
-		if(target_species.id in RACES_PLAYER_LUXLESS)
-			return "You smell an animal"
+		if(target_species.id in RACES_PLAYER_UNFAMILIAR)
+			return "You smell something alien and unfamiliar"
 		if(target_species.id in RACES_PLAYER_NONDISCRIMINATED)
 			return "You smell something humen"
 		if((target_species.id in RACES_PLAYER_HERETICAL_RACE) || (istype(target_species, /datum/species/goblin) || istype(target_species, /datum/species/orc)))

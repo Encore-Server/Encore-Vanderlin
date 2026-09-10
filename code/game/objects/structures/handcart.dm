@@ -1,12 +1,14 @@
 /obj/structure/handcart
 	name = "cart"
 	desc = "A wooden cart that will help you carry many things."
-	icon = 'icons/roguetown/misc/structure.dmi'
+	icon = 'icons/roguetown/misc/carriages_small.dmi'
 	icon_state = "cart-empty"
 	density = TRUE
 	max_integrity = 600
 	anchored = FALSE
 	climbable = TRUE
+	pixel_x = -8
+	layer = ABOVE_ALL_MOB_LAYER
 
 	var/list/stuff_shit = list()
 
@@ -278,3 +280,30 @@
 	. = ..()
 	if (. && pulledby && dir != pulledby.dir)
 		setDir(pulledby.dir)
+
+/obj/structure/handcart/enclosed
+	name = "enclosed carriage"
+	desc = "A large enclosed carriage for carrying many large things, such as you."
+	icon = 'icons/roguetown/misc/carriages_small.dmi'
+	icon_state = "enclosed-empty"
+	climbable = FALSE//lil big
+	maximum_capacity = 800 KILOGRAMS
+
+/obj/structure/handcart/enclosed/update_icon_state()
+	. = ..()
+	if(length(stuff_shit))
+		icon_state = "enclosed-full"
+	else
+		icon_state = "enclosed-empty"
+
+/obj/structure/handcart/enclosed/shirleigh
+	name = "shirleighan carriage"
+	desc = "An enclosed carriage proudly waving the Shirleigh flag."
+	icon_state = "enclosed_shirleigh-empty"
+
+/obj/structure/handcart/enclosed/shirleigh/update_icon_state()
+	. = ..()
+	if(length(stuff_shit))
+		icon_state = "enclosed_shirleigh-full"
+	else
+		icon_state = "enclosed_shirleigh-empty"

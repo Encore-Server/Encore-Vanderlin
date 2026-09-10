@@ -87,3 +87,10 @@
 /mob/living/simple_animal/hostile/retaliate/bogbug/simple_limb_hit(zone)
 	return ..()
 
+/mob/living/simple_animal/hostile/retaliate/bogbug/scarab
+	icon = 'icons/roguetown/mob/monster/scarab.dmi'
+	name = "dark scarab"
+	desc = "A giant beetle with a dark carapace and razor-sharp limbs readily twitching at its fore."
+	icon_state = "scarab"
+	icon_living = "scarab"
+	icon_dead = "scarab_dead"

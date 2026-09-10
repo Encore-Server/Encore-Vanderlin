@@ -1604,7 +1604,7 @@
 
 /obj/item/reagent_containers/food/snacks/grenzelbun
 	name = "sweetbun"
-	desc = "The classic wiener in a bun, a staple food of Aelondan cuisine."
+	desc = "The classic wiener in a bun. Your favorite."
 	icon_state = "grenzbun"
 	base_icon_state = "grenzbun"
 	bitesize = 5
@@ -1861,7 +1861,7 @@
 	item_weight = 400 GRAMS
 
 /obj/item/reagent_containers/food/snacks/zybcake
-	name = "qadirid cake base"
+	name = "pearcake base"
 	desc = "With this sweet thing, you shall make them sing. Lacking spider-honey glazing."
 	icon_state = "cake_filled"
 	dropshrink = 0.8
@@ -1874,7 +1874,7 @@
 
 // -------------- SPIDER-HONEY CAKE (Qadirid) -----------------
 /obj/item/reagent_containers/food/snacks/zybcake_ready
-	name = "unbaked qadirid cake"
+	name = "unbaked pearcake"
 	icon_state = "honeycakeuncook"
 	dropshrink = 0.8
 	slices_num = 0
@@ -1888,7 +1888,7 @@
 	item_weight = 400 GRAMS
 
 /obj/item/reagent_containers/food/snacks/zybcake_cooked
-	name = "qadirid cake"
+	name = "pearcake"
 	desc = "Cake glazed with honey, in the famous Qadirid fashion, a delicious sweet treat. Said to be very hard to poison, perhaps the honey counteracting such malicious concotions."
 	icon_state = "honeycake"
 	dropshrink = 0.8
@@ -1907,7 +1907,7 @@
 	item_weight = 600 GRAMS
 
 /obj/item/reagent_containers/food/snacks/zybcake_slice
-	name = "qadirid cake slice"
+	name = "pearcake slice"
 	icon_state = "hcake_slice"
 	base_icon_state = "hcake_slice"
 	dropshrink = 0.8

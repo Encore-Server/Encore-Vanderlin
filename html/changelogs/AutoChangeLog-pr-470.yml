@@ -1,0 +1,7 @@
+author: "MisterLayne"
+delete-after: True
+changes:
+  - bugfix: "Prince/Princess now don't always spawn as Regent family."
+  - bugfix: "Doors now display damage."
+  - bugfix: "Flavor Text etc. is reformatted."
+  - bugfix: "Icon smoothing fixed in map templates."

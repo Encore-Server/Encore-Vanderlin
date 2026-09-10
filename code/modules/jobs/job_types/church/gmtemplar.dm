@@ -1,21 +1,22 @@
 /datum/attribute_holder/sheet/job/gmtemplar
 	raw_attribute_list = list(
 		STAT_STRENGTH = 2,
-		STAT_CONSTITUTION = 4,
+		STAT_CONSTITUTION = 2,
 		STAT_ENDURANCE = 2,
 		STAT_SPEED = -1,
 		/datum/attribute/skill/combat/swords = 40, // Its easier just to give them all three, it'd be a pain to try and manage this in the ult component
 		/datum/attribute/skill/combat/polearms = 40,
 		/datum/attribute/skill/combat/axesmaces = 40,
-		/datum/attribute/skill/combat/wrestling = 40,
-		/datum/attribute/skill/combat/unarmed = 30,
+		/datum/attribute/skill/combat/wrestling = 30,
+		/datum/attribute/skill/combat/unarmed = 20,
 		/datum/attribute/skill/misc/climbing = 10,
-		/datum/attribute/skill/misc/athletics = 40,
+		/datum/attribute/skill/misc/athletics = 30,
 		/datum/attribute/skill/misc/reading = 20,
-		/datum/attribute/skill/magic/holy = 20,
+		/datum/attribute/skill/magic/holy = 30,
 		/datum/attribute/skill/misc/medicine = 10,
 		/datum/attribute/skill/misc/sewing = 20,
 		/datum/attribute/skill/magic/arcane = 30,
+		/datum/attribute/skill/craft/alchemy = 10,
 	)
 
 /datum/job/gmtemplar
@@ -28,8 +29,8 @@
 	job_flags = (JOB_ANNOUNCE_ARRIVAL | JOB_SHOW_IN_CREDITS | JOB_EQUIP_RANK | JOB_NEW_PLAYER_JOINABLE)
 	display_order = JDO_GMTEMPLAR
 	factions = list(FACTION_TOWN)
-	total_positions = 2
-	spawn_positions = 2
+	total_positions = 1
+	spawn_positions = 1
 	bypass_lastclass = TRUE
 	cmode_music = 'sound/music/cmode/church/CombatRavox.ogg'
 
@@ -40,6 +41,7 @@
 	give_bank_account = 0
 	knows_the_town = TRUE
 	known_by_the_town = TRUE
+	job_reopens_slots_on_death = FALSE
 
 	job_bitflag = BITFLAG_CHURCH
 
@@ -54,6 +56,7 @@
 	attribute_sheet = /datum/attribute_holder/sheet/job/gmtemplar
 
 	traits = list(
+		TRAIT_MEDIUMARMOR,
 		TRAIT_HEAVYARMOR,
 		TRAIT_STEELHEARTED,
 	)

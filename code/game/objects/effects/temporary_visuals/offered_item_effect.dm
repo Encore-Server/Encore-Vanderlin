@@ -2,7 +2,7 @@
 #define STOP_OFFER_TIME 0.7 SECONDS
 
 /obj/effect/temp_visual/offered_item_effect
-	duration = 11 SECONDS
+	duration = 25 SECONDS
 	fade_time = 0.5 SECONDS
 	var/datum/weakref/offerer_weak_ref
 	var/datum/weakref/offered_to_weak_ref

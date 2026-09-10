@@ -52,6 +52,7 @@
 	base_constitution = 8
 	base_strength = 9
 	can_buckle = TRUE
+	max_buckled_mobs = 2
 	buckle_lying = FALSE
 	can_saddle = TRUE
 	can_hitch = TRUE

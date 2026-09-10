@@ -1,7 +1,7 @@
 
 /obj/item/clothing/cloak/martyr
 	name = "martyr cloak"
-	desc = "An elegant cloak in the colors of Visires. Looks like it can only fit Humen-sized people."
+	desc = "An elegant cloak in the colors of Angros. Looks like it can only fit Humen-sized people."
 	color = null
 	icon_state = "martyrcloak"
 	item_state = "martyrcloak"
@@ -61,7 +61,7 @@
 
 /obj/item/clothing/cloak/holysee
 	name = "holy silver vestments"
-	desc = "A set of vestments worn by the grandmaster, silver embroidery and seals of light ordain it as a bastion against evil."
+	desc = "A set of vestments worn by the Martyr, silver embroidery and seals of light ordain it as a bastion against evil."
 	icon = 'icons/roguetown/clothing/special/martyr.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/special/onmob/martyr.dmi'
 	icon_state = "silvertabard"
