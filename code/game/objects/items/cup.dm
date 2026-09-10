@@ -71,6 +71,10 @@
 	sellprice = 300 //It's a priceless religious relic. Steal it and anticipate any person of the faith gunning for your demise.
 	item_weight = 220 GRAMS
 
+/obj/item/reagent_containers/glass/cup/church/Initialize(mapload, vol)
+	. = ..()
+	enchant(/datum/enchantment/silver)
+
 /obj/item/reagent_containers/glass/cup/skull
 	name = "skull goblet"
 	desc = "The hollow eye sockets tell you of forgotten, dark rituals."

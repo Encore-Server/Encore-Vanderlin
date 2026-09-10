@@ -148,7 +148,7 @@
 
 /obj/effect/particle_effect/smoke/poison/smoke_mob(mob/living/carbon/M)
 	if(..())
-		if(!istype(M.wear_mask, /obj/item/clothing/face/phys/plaguebearer))
+		if(!istype(M.wear_mask, /obj/item/clothing/face/apothecary/plaguebearer))
 			M.adjustToxLoss(5)
 			M.add_nausea(5)
 			M.reagents.add_reagent(/datum/reagent/miasmagas, 1)

@@ -62,7 +62,7 @@ GLOBAL_LIST_INIT(phobia_objs, list(
 	"doctors" = typecacheof(list(
 		/obj/item/weapon/surgery,
 		/obj/item/clothing/face/feld,
-		/obj/item/clothing/face/phys,
+		/obj/item/clothing/face/apothecary,
 		/obj/item/clothing/face/courtphysician,
 		/obj/structure/table/optable,
 	)),
