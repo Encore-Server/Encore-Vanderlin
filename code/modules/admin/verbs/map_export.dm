@@ -282,7 +282,13 @@ GLOBAL_LIST_EMPTY(save_whitelist)
 	list += typesof(/obj/item/paper)
 	list += typesof(/obj/item/dice)
 	list += typesof(/obj/item/toy)
-
+	list += typesof(/obj/item/ammo_holder)
+	list += typesof(/obj/item/gun/ballistic/blowgun)
+	list += typesof(/obj/item/gun/ballistic/bow)
+	list += typesof(/obj/projectile/bullet/reusable)
+	list += typesof(/obj/item/sleepingbag)
+	list += typesof(/obj/item/folding_table_stored)
+	list += typesof(/obj/item/mobilestove)
 	return list
 
 /**

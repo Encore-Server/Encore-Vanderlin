@@ -37,3 +37,15 @@
 	mappath = "_maps/map_files/domotan/house_templates/jobs/doma_armorsmith.dmm"
 	width = 6
 	height = 10
+
+/datum/map_template/misc_shop_1
+	name = "Miscellaneous Shop One"
+	mappath = "_maps/map_files/domotan/house_templates/jobs/misc_shop_1.dmm"
+	width = 9
+	height = 6
+
+/datum/map_template/misc_shop_2
+	name = "Miscellaneous Shop Two"
+	mappath = "_maps/map_files/domotan/house_templates/jobs/misc_shop_2.dmm"
+	width = 12
+	height = 12
