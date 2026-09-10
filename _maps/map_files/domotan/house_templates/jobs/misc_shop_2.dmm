@@ -4,6 +4,7 @@
 /area/template_noop)
 "c" = (
 /obj/structure/ladder,
+/obj/machinery/light/fueled/wallfire/candle,
 /turf/open/floor/ruinedwood/chevron,
 /area/indoors)
 "e" = (
@@ -19,6 +20,13 @@
 "i" = (
 /turf/open/floor/ruinedwood/chevron,
 /area/indoors)
+"j" = (
+/obj/machinery/light/fueled/wallfire/candle/r,
+/obj/machinery/light/fueled/wallfire/candle{
+	pixel_y = -32
+	},
+/turf/open/floor/ruinedwood/chevron,
+/area/indoors)
 "l" = (
 /turf/closed/wall/mineral/stone,
 /area/indoors)
@@ -26,6 +34,10 @@
 /obj/structure/window/openclose{
 	dir = 8
 	},
+/turf/open/floor/ruinedwood/chevron,
+/area/indoors)
+"p" = (
+/obj/machinery/light/fueled/wallfire/candle,
 /turf/open/floor/ruinedwood/chevron,
 /area/indoors)
 "q" = (
@@ -51,6 +63,11 @@
 	},
 /turf/open/floor/ruinedwood/two,
 /area/template_noop)
+"x" = (
+/obj/machinery/light/fueled/wallfire/candle/l,
+/obj/machinery/light/fueled/wallfire/candle,
+/turf/open/floor/ruinedwood/chevron,
+/area/indoors)
 "y" = (
 /obj/structure/fluff/railing/wood{
 	dir = 4
@@ -77,6 +94,21 @@
 	},
 /turf/open/floor/ruinedwood/two,
 /area/template_noop)
+"H" = (
+/obj/structure/fluff/railing/wood{
+	dir = 8
+	},
+/obj/structure/table/wood/crafted,
+/obj/machinery/light/fueled/torchholder/metal_torch/north,
+/turf/open/floor/ruinedwood/two,
+/area/template_noop)
+"I" = (
+/obj/machinery/light/fueled/wallfire/candle/l,
+/obj/machinery/light/fueled/wallfire/candle{
+	pixel_y = -32
+	},
+/turf/open/floor/ruinedwood/chevron,
+/area/indoors)
 "J" = (
 /obj/structure/table/wood/crafted,
 /turf/open/floor/ruinedwood/two,
@@ -88,15 +120,23 @@
 /turf/open/floor/ruinedwood/chevron,
 /area/indoors)
 "N" = (
-/obj/structure/fluff/railing/wood{
-	dir = 8
-	},
-/turf/template_noop,
+/obj/structure/sign/property_sign/claim,
+/turf/closed/wall/mineral/wooddark,
 /area/template_noop)
 "O" = (
 /obj/structure/window/openclose{
 	dir = 4
 	},
+/turf/open/floor/ruinedwood/chevron,
+/area/indoors)
+"Q" = (
+/obj/machinery/light/fueled/wallfire/candle{
+	pixel_y = -32
+	},
+/turf/open/floor/ruinedwood/chevron,
+/area/indoors)
+"R" = (
+/obj/machinery/light/fueled/wallfire/candle/r,
 /turf/open/floor/ruinedwood/chevron,
 /area/indoors)
 "S" = (
@@ -117,13 +157,22 @@
 "W" = (
 /turf/open/floor/ruinedwood/turned,
 /area/template_noop)
+"Y" = (
+/obj/structure/table/wood/crafted,
+/obj/machinery/light/fueled/torchholder/metal_torch/west,
+/turf/open/floor/ruinedwood/two,
+/area/template_noop)
+"Z" = (
+/obj/machinery/light/fueled/wallfire/candle/l,
+/turf/open/floor/ruinedwood/chevron,
+/area/indoors)
 
 (1,1,1) = {"
 f
 V
 u
 q
-q
+H
 l
 l
 O
@@ -139,11 +188,11 @@ e
 v
 v
 l
+p
 i
 i
 i
-i
-i
+I
 l
 "}
 (3,1,1) = {"
@@ -163,8 +212,8 @@ K
 (4,1,1) = {"
 W
 W
-J
-G
+e
+e
 e
 S
 i
@@ -191,8 +240,8 @@ K
 (6,1,1) = {"
 f
 V
-e
-e
+Y
+G
 e
 l
 i
@@ -209,7 +258,7 @@ l
 O
 l
 l
-i
+p
 i
 i
 i
@@ -218,10 +267,10 @@ K
 "}
 (8,1,1) = {"
 l
+p
+Z
 i
-i
-i
-i
+Z
 l
 i
 i
@@ -251,25 +300,25 @@ i
 i
 i
 l
+p
 i
 i
 i
 i
-i
-l
+K
 "}
 (11,1,1) = {"
 l
 c
+R
 i
-i
-i
+R
 r
 i
 i
 i
 i
-i
+j
 l
 "}
 (12,1,1) = {"
@@ -308,11 +357,11 @@ f
 f
 f
 l
+x
 i
 i
 i
-i
-i
+Z
 K
 "}
 (3,1,2) = {"
@@ -326,7 +375,7 @@ i
 i
 i
 i
-i
+Q
 l
 "}
 (4,1,2) = {"
@@ -354,7 +403,7 @@ i
 i
 i
 i
-i
+Q
 l
 "}
 (6,1,2) = {"
@@ -369,7 +418,7 @@ i
 i
 i
 i
-l
+K
 "}
 (7,1,2) = {"
 l
@@ -378,7 +427,7 @@ l
 O
 l
 l
-i
+p
 i
 i
 i
@@ -387,16 +436,16 @@ K
 "}
 (8,1,2) = {"
 l
+p
+Z
 i
-i
-i
-i
+Z
 l
-l
 i
 i
 i
 i
+Q
 l
 "}
 (9,1,2) = {"
@@ -405,7 +454,7 @@ i
 i
 i
 i
-l
+A
 i
 i
 i
@@ -420,25 +469,25 @@ i
 i
 i
 l
+p
 i
 i
 i
-i
-i
+Q
 l
 "}
 (11,1,2) = {"
 l
 c
+R
 i
-i
-i
+R
 r
+R
 i
 i
 i
-i
-i
+R
 K
 "}
 (12,1,2) = {"
