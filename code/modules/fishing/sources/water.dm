@@ -61,12 +61,14 @@
 		/obj/item/reagent_containers/food/snacks/fish/shrimp = 1,
 		/obj/item/reagent_containers/food/snacks/fish/angler = 3,
 		/obj/item/reagent_containers/food/snacks/fish/eel = 5,
+		/obj/item/reagent_containers/food/snacks/fish/swordfish = 2,
 	)
 	fish_count_regen = list(
 		/obj/item/reagent_containers/food/snacks/fish/eel = 3 MINUTES,
 		/obj/item/reagent_containers/food/snacks/fish/carp = 3 MINUTES,
 		/obj/item/reagent_containers/food/snacks/fish/shrimp = 6 MINUTES,
 		/obj/item/reagent_containers/food/snacks/fish/angler = 5 MINUTES,
+		/obj/item/reagent_containers/food/snacks/fish/swordfish = 20 MINUTES,
 	)
 	fish_source_flags = FISH_SOURCE_FLAG_EXPLOSIVE_MALUS
 	associated_safe_turfs = list(/turf/open/water/ocean/abyss)
@@ -178,7 +180,6 @@
 		/obj/item/natural/fibers = 2,
 		/obj/item/clothing/shoes/boots/leather = 1,
 		/obj/item/reagent_containers/food/snacks/fish/eel = 1,
-		/obj/item/reagent_containers/food/snacks/
 	)
 	fish_counts = list(
 		/obj/item/coin/copper = 5,
