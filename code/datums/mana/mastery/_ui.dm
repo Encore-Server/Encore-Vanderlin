@@ -267,7 +267,6 @@
 		"technique_levels" = mastery.technique_levels.Copy(),
 		"unlocked_spells" = saved_spells,
 	)
-	theme_presets[SPELL_KIT_LAST_KEY] = preset_name
 	all_kits[theme_key()] = theme_presets
 
 	if(!write_kits(all_kits))
@@ -299,10 +298,6 @@
 	if(!apply_preset(theme_presets[preset_name]))
 		return FALSE
 
-	var/list/all_kits = get_saved_kits()
-	theme_presets[SPELL_KIT_LAST_KEY] = preset_name
-	all_kits[theme_key()] = theme_presets
-	write_kits(all_kits)
 	return TRUE
 
 /datum/spellbook/proc/delete_spell_kit()
@@ -321,8 +316,6 @@
 		return FALSE
 
 	theme_presets -= preset_name
-	if(theme_presets[SPELL_KIT_LAST_KEY] == preset_name)
-		theme_presets -= SPELL_KIT_LAST_KEY
 
 	var/list/all_kits = get_saved_kits()
 	all_kits[theme_key()] = theme_presets
