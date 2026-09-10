@@ -314,6 +314,13 @@
 	C.cycle_rmb_intent()
 	return TRUE
 
+/datum/keybinding/carbon/give_intent
+	hotkey_keys = list("G")
+	name = "Give_Item"
+	full_name = "Give Item"
+	description = "Give the item you're currently holding. You can also use CtrlShiftClick."
+	category = CATEGORY_CARBON
+
 /*
 
 /datum/keybinding/carbon/select_help_intent
