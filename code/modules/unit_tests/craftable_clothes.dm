@@ -19,7 +19,7 @@ abstract types are automatically excluded.
 		/obj/item/clothing/face/facemask/prisoner,
 		/obj/item/clothing/head/priestmask, // unattainable
 		/obj/item/clothing/head/leather/inqhat/vigilante, //Renegade Bullshit
-		/obj/item/clothing/face/phys/plaguebearer, //Plague Only
+		/obj/item/clothing/face/apothecary/plaguebearer, //Plague Only
 		/obj/item/clothing/ring/feldsher_ring, // uncraftable
 		/obj/item/clothing/ring/apothecary_ring, // uncraftable
 		/obj/item/clothing/head/maniac,

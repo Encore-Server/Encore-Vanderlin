@@ -42,8 +42,8 @@
 	category = "Mask"
 
 /datum/repeatable_crafting_recipe/sewing/weaving/phys_mask
-	name = "physicker mask"
-	output = /obj/item/clothing/face/phys
+	name = "apothecary mask"
+	output = /obj/item/clothing/face/apothecary
 	requirements = list(/obj/item/natural/cloth = 2,
 				/obj/item/natural/silk = 1)
 	craftdiff = 1
