@@ -111,7 +111,7 @@
 
 
 /datum/repeatable_crafting_recipe/cooking/grenzelbun_cocaumole
-	category = "Tiefling Cuisine"
+	category = "Sunnite Cuisine"
 	name = "Sweetbun With Cocaumole"
 	subtypes_allowed = TRUE
 

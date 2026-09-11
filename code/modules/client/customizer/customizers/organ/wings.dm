@@ -25,6 +25,8 @@
 	allows_accessory_color_customization = TRUE
 	sprite_accessories = list(
 		/datum/sprite_accessory/wings/large/harpyswept,
+		/datum/sprite_accessory/wings/huge/angel,
+		/datum/sprite_accessory/wings/bat,
 	)
 
 /datum/customizer/organ/wings/dracon
@@ -55,6 +57,9 @@
 		/datum/sprite_accessory/wings/wide/dragon_alt1,
 		/datum/sprite_accessory/wings/wide/dragon_alt2,
 		/datum/sprite_accessory/wings/huge/dragon,
+		/datum/sprite_accessory/wings/huge/megamoth,
+		/datum/sprite_accessory/wings/huge/mothra,
+		/datum/sprite_accessory/wings/huge/skele,
 		/datum/sprite_accessory/wings/large/harpyswept,
 		/datum/sprite_accessory/wings/large/gargoyle,
 	)

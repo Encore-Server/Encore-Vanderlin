@@ -276,7 +276,7 @@ SUBSYSTEM_DEF(vote)
 				if(rng > 200) // 80%
 					initiator_key = pick("Visires", "Akan", "Gani", "Mjallidhorn", "Valdala", "Mordsol", "Iliope", "Erdl", "Goler Kanh", "Pomette")
 				else if(rng > 50) // 15%
-					initiator_key = pick("One Envy", "Archdevil", "Deceivers", "Hertannea")
+					initiator_key = pick("the One Envy", "the Archdevils", "the Deceivers", "Hertannea")
 				else
 					initiator_key = "Angros"
 				choices.Add("Continue Playing","End Round")
@@ -290,6 +290,7 @@ SUBSYSTEM_DEF(vote)
 		initiator = initiator_key
 		started_time = world.time
 		var/text = "[capitalize(mode)] vote started by [initiator]."
+		var/sound/vote_sound = 'sound/effects/vote_alert.ogg'
 		if(mode == "storyteller")
 			text = initiator
 		if(mode == "custom")
@@ -297,6 +298,7 @@ SUBSYSTEM_DEF(vote)
 		log_vote(text)
 		var/vp = CONFIG_GET(number/vote_period)
 		to_chat(world, "\n<font color='purple'><b>[text]</b>\nClick <a href='byond://?src=[REF(src)]'>here</a> to place your vote.\nYou have [DisplayTimeText(vp)] to vote.</font>")
+		SEND_SOUND(world, vote_sound)
 		time_remaining = round(vp/10)
 //		for(var/c in GLOB.clients)
 //			var/client/C = c

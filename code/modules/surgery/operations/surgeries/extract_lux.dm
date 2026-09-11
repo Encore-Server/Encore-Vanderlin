@@ -1,8 +1,9 @@
 /datum/surgery_operation/basic/extract_lux
-	name = "Lux Extraction"
-	desc = "Sever ones divine link by extracting the lux from their heart."
+	name = "Thauma Extraction"
+	desc = "Sever ones divine link by extracting the Thauma from their heart. Their flesh shall be unbound, and it will become a demon."
 
-	category = "Pestran"
+	category = "Erdite"
+	heretical = TRUE
 
 	implements = list(
 		TOOL_SCALPEL = 1,
@@ -26,7 +27,7 @@
 /datum/surgery_operation/basic/extract_lux/all_required_strings()
 	. = ..()
 	. += "the patient must be alive"
-	. += "the patient must have lux"
+	. += "the patient must have Thauma"
 	. += "the patient must have a heart"
 
 /datum/surgery_operation/basic/extract_lux/state_check(mob/living/patient)
@@ -42,16 +43,16 @@
 	. = ..()
 
 	if(patient.get_lux_status() != LUX_HAS_LUX)
-		patient.balloon_alert(surgeon, "luxless!")
+		patient.balloon_alert(surgeon, "soulless!")
 		return FALSE
 
 /datum/surgery_operation/basic/extract_lux/on_preop(mob/living/patient, mob/living/surgeon, tool, list/operation_args)
 	display_results(
 		surgeon,
 		patient,
-		span_notice("I begin to scrape lux from [patient]'s heart..."),
-		span_notice("[surgeon] begins to scrape lux from [patient]'s heart."),
-		span_notice("[surgeon] begins to scrape lux from [patient]'s heart."),
+		span_notice("I begin to scrape Thauma from [patient]'s heart..."),
+		span_notice("[surgeon] begins to scrape Thauma from [patient]'s heart."),
+		span_notice("[surgeon] begins to scrape Thauma from [patient]'s heart."),
 	)
 
 /datum/surgery_operation/basic/extract_lux/on_success(mob/living/patient, mob/living/surgeon, tool, list/operation_args)
@@ -59,8 +60,8 @@
 		display_results(
 			surgeon,
 			patient,
-			span_notice("You extract a single dose of tainted lux from [patient]'s heart."),
-			span_notice("[surgeon] extracts tainted lux from [patient]'s innards."),
+			span_notice("You extract a single dose of tainted Thauma from [patient]'s heart."),
+			span_notice("[surgeon] extracts tainted Thauma from [patient]'s innards."),
 			span_notice("[surgeon] extracts something from [patient]'s innards."),
 		)
 		new /obj/item/reagent_containers/lux_tainted(get_turf(patient))
@@ -68,8 +69,8 @@
 		display_results(
 			surgeon,
 			patient,
-			span_notice("You extract a single dose of lux from [patient]'s heart."),
-			span_notice("[surgeon] extracts lux from [patient]'s innards."),
+			span_notice("You extract a single dose of Thauma from [patient]'s heart."),
+			span_notice("[surgeon] extracts Thauma from [patient]'s innards."),
 			span_notice("[surgeon] extracts something from [patient]'s innards."),
 		)
 		new /obj/item/reagent_containers/lux(get_turf(patient))

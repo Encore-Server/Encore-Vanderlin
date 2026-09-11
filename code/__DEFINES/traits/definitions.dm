@@ -568,6 +568,7 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 #define TRAIT_ARCHDEVILS_CURSE "Archdevils' Curse"
 #define TRAIT_DECEIVERS_CURSE "Deceivers' Curse"
 #define TRAIT_HERTANNEA_CURSE "Hertannea's Curse"
+#define TRAIT_DEMON "Demon"//This goes to anything without thauma, including those who lose it.
 
 // HIDDEN DOOR TRAITS
 #define TRAIT_KNOW_KEEP_DOORS "know_keep_doors"

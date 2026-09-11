@@ -1,0 +1,6 @@
+author: "furrycactus"
+delete-after: True
+changes:
+  - balance: "Brings the Martyr's stats and skills in line with Templars."
+  - balance: "Reduces the Martyr job slots from 2 to 1."
+  - balance: "Ensures the job slot for Martyr does not re-open on the Martyr's death."
