@@ -125,8 +125,12 @@
 /area/under/town/basement)
 "adr" = (
 /obj/structure/bars,
-/turf/open/floor/blocks/stonered/tiny,
-/area/under/cavewet)
+/obj/structure/fluff/walldeco/bath/wallpipes/outie,
+/obj/structure/fluff/walldeco/bath/wallpipes/innie,
+/turf/open/water/river/sewer{
+	dir = 8
+	},
+/area/under/town/basement)
 "adu" = (
 /obj/effect/decal/cobbleedge{
 	dir = 4
@@ -1585,6 +1589,18 @@
 	},
 /turf/open/floor/church/green,
 /area/indoors/town/keep/library)
+"bgx" = (
+/obj/structure/bed/shit{
+	name = "slightly damp makeshift bed";
+	desc = "Slightly better than a patch of grass. This one is slightly damp, on account of the infrequently dipping pipe above it."
+	},
+/obj/structure/fluff/walldeco/bath/wallpipes/outie{
+	dir = 4;
+	desc = "This pipe has degraded slightly, leading to infrequent and unpredictable drops of water to drip down onto the straw mattress below.";
+	name = "leaking pipe"
+	},
+/turf/open/floor/cobblerock,
+/area/under/town/basement)
 "bgz" = (
 /obj/structure/table/wood{
 	icon_state = "longtable_mid";
@@ -1949,6 +1965,11 @@
 	},
 /turf/open/water/clean,
 /area/outdoors/town/neighborhood/west)
+"bvg" = (
+/obj/structure/bars,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/cobble/mossy,
+/area/under/cavewet)
 "bvv" = (
 /obj/structure/stairs{
 	dir = 1
@@ -4827,6 +4848,10 @@
 	},
 /turf/open/floor/ruinedwood/two,
 /area/indoors/town/keep)
+"dBk" = (
+/obj/machinery/light/fueled/wallfire/candle/l,
+/turf/open/floor/dirt,
+/area/under/town/sewer)
 "dBn" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/ruinedwood/two,
@@ -5159,6 +5184,13 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/cobble,
 /area/indoors/town/garrison)
+"dLH" = (
+/obj/machinery/light/fueled/torchholder/l,
+/obj/structure/handcart{
+	dir = 4
+	},
+/turf/open/floor/blocks/green,
+/area/under/town/basement)
 "dLV" = (
 /obj/structure/chair/bench/couchablack,
 /turf/open/floor/tile/bath,
@@ -6542,6 +6574,14 @@
 /obj/structure/flora/grass/water,
 /turf/open/water/ocean/abyss,
 /area/indoors/town/keep/magician/basement)
+"eJA" = (
+/obj/structure/door{
+	name = "Spare Storehouse"
+	},
+/obj/effect/mapping_helpers/access/locker,
+/obj/effect/mapping_helpers/access/keyset/town/miner,
+/turf/open/floor/blocks/stonered/tiny,
+/area/under/town/basement)
 "eJD" = (
 /obj/structure/stairs/stone{
 	dir = 1
@@ -9721,6 +9761,14 @@
 "gVU" = (
 /obj/structure/ladder,
 /obj/machinery/light/fueled/wallfire/candle/blue,
+/obj/structure/fluff/walldeco/gear/small{
+	pixel_x = 25;
+	pixel_y = 4
+	},
+/obj/structure/fluff/walldeco/gear/small{
+	pixel_x = 25;
+	pixel_y = -2
+	},
 /turf/open/floor/churchrough,
 /area/indoors/town/church)
 "gVW" = (
@@ -12337,6 +12385,15 @@
 /obj/structure/flora/grass,
 /turf/open/floor/dirt/road,
 /area/outdoors/town)
+"iCE" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/bars{
+	name = "rusty bars";
+	max_integrity = 150;
+	desc = "Iron bars made to keep things in or out. These ones seem rather rusted and poorly maintained, it wouldn't take much to break them."
+	},
+/turf/open/floor/cobble/mossy,
+/area/under/cavewet)
 "iCL" = (
 /obj/structure/fluff/walldeco/church/line{
 	dir = 4
@@ -14005,7 +14062,7 @@
 "jFV" = (
 /obj/structure/fluff/railing/border,
 /turf/open/openspace,
-/area/under/cavewet)
+/area/under/town/basement)
 "jFX" = (
 /obj/structure/stairs,
 /turf/open/openspace,
@@ -15415,6 +15472,17 @@
 	},
 /turf/open/floor/naturalstone,
 /area/under/town/basement/smugglers_den)
+"kBh" = (
+/obj/structure/fluff/walldeco/gear/small{
+	pixel_x = -25;
+	pixel_y = 4
+	},
+/obj/structure/fluff/walldeco/gear/small{
+	pixel_x = -25;
+	pixel_y = -2
+	},
+/turf/open/floor/churchrough/green,
+/area/indoors/town/church/inquisition)
 "kBi" = (
 /obj/structure/train/carriage/not_train/far_travel,
 /obj/structure/stairs,
@@ -16079,6 +16147,13 @@
 	},
 /turf/open/floor/blocks/paving,
 /area/indoors/town/keep/library)
+"leC" = (
+/obj/structure/closet/crate/chest/shippingcrate,
+/obj/structure/fluff/walldeco/bath/wallpipes/outie{
+	dir = 10
+	},
+/turf/open/floor/greenstone,
+/area/under/town/basement)
 "lfg" = (
 /turf/open/floor/churchmarble,
 /area/indoors/town/church/chapel)
@@ -17191,6 +17266,12 @@
 	},
 /turf/open/floor/cobble,
 /area/indoors/town/keep/gate)
+"lSq" = (
+/obj/structure/door{
+	name = "Spare Storehouse"
+	},
+/turf/open/floor/blocks/green,
+/area/under/town/basement)
 "lSC" = (
 /obj/item/bedsheet/cloth,
 /obj/effect/decal/cobbleedge{
@@ -21417,9 +21498,15 @@
 /turf/open/floor/metal,
 /area/under/cavewet)
 "oEI" = (
-/obj/machinery/light/fueled/wallfire/candle/l,
-/turf/closed/mineral,
-/area/under/town/sewer)
+/obj/structure/fluff/walldeco/gear{
+	pixel_x = 30
+	},
+/obj/structure/fluff/walldeco/gear{
+	pixel_x = 30;
+	pixel_y = -9
+	},
+/turf/open/floor/churchrough/green,
+/area/indoors/town/church/inquisition)
 "oEQ" = (
 /obj/structure/fluid_drain,
 /turf/open/floor/church,
@@ -28031,6 +28118,20 @@
 /obj/structure/toilet/filled,
 /turf/open/floor/blocks/green,
 /area/under/town/basement)
+"tnS" = (
+/obj/structure/closet/crate/chest/shippingcrate,
+/obj/item/reagent_containers/powder/ozium,
+/obj/item/paper,
+/obj/item/paper,
+/obj/item/paper,
+/obj/item/reagent_containers/food/snacks/produce/swampweed_dried,
+/obj/item/reagent_containers/food/snacks/produce/swampweed_dried,
+/obj/item/reagent_containers/food/snacks/produce/swampweed_dried,
+/obj/structure/fluff/walldeco/bath/wallpipes/outie{
+	dir = 9
+	},
+/turf/open/floor/cobblerock,
+/area/under/town/basement)
 "tob" = (
 /obj/structure/bars,
 /turf/open/floor/ruinedwood/darker,
@@ -30106,6 +30207,10 @@
 "uMd" = (
 /turf/open/floor/dirt/road,
 /area/under/town/sewer)
+"uMq" = (
+/obj/structure/closet/crate/chest/shippingcrate,
+/turf/open/floor/cobblerock,
+/area/under/town/basement)
 "uME" = (
 /turf/open/floor/metal/alt,
 /area/indoors/town)
@@ -30318,6 +30423,9 @@
 	},
 /turf/open/floor/snow/patchy,
 /area/outdoors/town)
+"uUc" = (
+/turf/open/floor/greenstone,
+/area/under/town/basement)
 "uUn" = (
 /obj/machinery/light/fueled/wallfire/candle/blue/l,
 /obj/structure/closet/crate/coffin,
@@ -42413,7 +42521,7 @@ iRj
 kyH
 kyH
 qid
-kyH
+kBh
 kyH
 ijw
 jdz
@@ -42942,8 +43050,8 @@ kea
 gJe
 cZN
 icE
-oEI
-pAr
+gNa
+dBk
 pAr
 fAx
 cPa
@@ -43730,7 +43838,7 @@ icE
 icE
 ijw
 kyH
-kyH
+oEI
 ijw
 bxh
 nZl
@@ -54429,7 +54537,7 @@ jij
 mwU
 erT
 jij
-vmM
+eJA
 mpR
 ioA
 ioA
@@ -54694,7 +54802,7 @@ fxN
 atB
 fxN
 fxN
-atB
+bvg
 fxN
 vXO
 xPN
@@ -54958,7 +55066,7 @@ tYQ
 tYQ
 tXn
 tXn
-jdz
+iCE
 fxN
 oiC
 bFv
@@ -55089,9 +55197,9 @@ jdz
 jdz
 jdz
 jdz
-jdz
-jdz
-fxN
+dLH
+ijv
+lSq
 iSN
 oRC
 gtQ
@@ -55220,10 +55328,10 @@ jdz
 jdz
 jdz
 jdz
-jdz
-jdz
-jdz
-fxN
+uMq
+ijv
+uUc
+xYr
 vCl
 eEr
 vCh
@@ -55352,10 +55460,10 @@ fxN
 fxN
 jdz
 jdz
-jdz
-jdz
-jdz
-fxN
+tnS
+bgx
+leC
+xYr
 rLH
 hDu
 pfi
@@ -55484,9 +55592,9 @@ byq
 fxN
 jdz
 jdz
-jdz
+eTv
 fxN
-fxN
+eTv
 fxN
 nLI
 hgD
