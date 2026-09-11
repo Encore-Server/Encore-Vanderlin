@@ -13987,6 +13987,17 @@
 /obj/item/reagent_containers/glass/cup/glassware,
 /turf/open/floor/ruinedwood/two,
 /area/indoors/town/keep)
+"jBV" = (
+/obj/structure/fluff/walldeco/gear/small{
+	pixel_x = -39;
+	pixel_y = -8
+	},
+/obj/structure/fluff/walldeco/gear/small{
+	pixel_x = -24;
+	pixel_y = 7
+	},
+/turf/open/floor/churchrough/green,
+/area/indoors/town/church/inquisition)
 "jCd" = (
 /obj/machinery/light/fueled/wallfire/candle/blue/r,
 /turf/open/floor/churchrough/green,
@@ -16047,6 +16058,17 @@
 	},
 /turf/open/floor/blocks/stonered/tiny,
 /area/outdoors/town/neighborhood)
+"laS" = (
+/obj/structure/fluff/walldeco/gear{
+	pixel_y = 28;
+	pixel_x = 6
+	},
+/obj/structure/fluff/walldeco/gear/small{
+	pixel_x = 26;
+	pixel_y = 8
+	},
+/turf/open/floor/churchrough/green,
+/area/indoors/town/church/inquisition)
 "lbl" = (
 /obj/structure/window/openclose{
 	dir = 8
@@ -17035,6 +17057,14 @@
 /area/indoors/town/keep/captain)
 "lJw" = (
 /obj/machinery/light/fueled/wallfire/candle/blue/l,
+/obj/structure/fluff/walldeco/gear{
+	pixel_y = 28;
+	pixel_x = -22
+	},
+/obj/structure/fluff/walldeco/gear/small{
+	pixel_x = -3;
+	pixel_y = 26
+	},
 /turf/open/floor/churchrough/green,
 /area/indoors/town/church/inquisition)
 "lJS" = (
@@ -22965,6 +22995,12 @@
 	},
 /turf/open/floor/carpet/lord/left,
 /area/indoors/town/keep/throne)
+"pGj" = (
+/obj/structure/fluff/walldeco/maidensigil{
+	pixel_y = -32
+	},
+/turf/open/floor/tile/checkeralt,
+/area/indoors/town/vault)
 "pGs" = (
 /obj/effect/decal/shadow_floor{
 	dir = 4
@@ -25193,6 +25229,18 @@
 	},
 /turf/open/floor/carpet/royalblack,
 /area/indoors/town/keep/phys)
+"rfM" = (
+/obj/structure/fluff/steamvent,
+/obj/structure/fluff/walldeco/gear{
+	pixel_x = 20;
+	pixel_y = -32
+	},
+/obj/structure/fluff/walldeco/gear/small{
+	pixel_x = 24;
+	pixel_y = -10
+	},
+/turf/open/floor/churchrough/green,
+/area/indoors/town/church/inquisition)
 "rfT" = (
 /obj/structure/closet/crate/crafted_closet,
 /obj/item/clothing/shirt/robe/newmage/sorcerer,
@@ -32699,6 +32747,15 @@
 "wtF" = (
 /obj/structure/lever/hidden/keep{
 	redstone_id = "divine_gourd"
+	},
+/obj/structure/fluff/walldeco/gear{
+	pixel_y = 8
+	},
+/obj/structure/fluff/walldeco/gear/small{
+	pixel_y = 1
+	},
+/obj/structure/fluff/walldeco/gear/small{
+	pixel_y = -5
 	},
 /turf/closed/wall/mineral/pipe,
 /area/indoors/town/vault)
@@ -41707,7 +41764,7 @@ fAx
 epL
 ijw
 kyH
-kyH
+jBV
 icE
 icE
 icE
@@ -41955,7 +42012,7 @@ vKh
 vKh
 vKh
 tqF
-ijw
+xYT
 vKh
 vKh
 vKh
@@ -42087,7 +42144,7 @@ xhI
 vKh
 tqF
 tqF
-hUe
+xhI
 vKh
 vKh
 vKh
@@ -42219,7 +42276,7 @@ xhI
 tqF
 tqF
 tqF
-hUe
+xhI
 vKh
 vKh
 vKh
@@ -44334,7 +44391,7 @@ xhI
 hTg
 iMB
 ixH
-kyH
+laS
 jCd
 kyH
 wdx
@@ -44480,7 +44537,7 @@ kyH
 kyH
 kyH
 kyH
-dTj
+rfM
 icE
 icE
 icE
@@ -57122,7 +57179,7 @@ rpQ
 tGT
 kVN
 kVN
-tGT
+pGj
 kcW
 rpm
 tda
@@ -58329,8 +58386,8 @@ diq
 iyu
 hye
 hye
-cwz
 uNV
+cwz
 hye
 sSS
 sSS
