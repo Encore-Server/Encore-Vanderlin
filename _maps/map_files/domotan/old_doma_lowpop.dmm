@@ -2195,6 +2195,12 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/tile/checkeralt,
 /area/indoors/town/keep/squire)
+"bDg" = (
+/obj/structure/fluff/walldeco/gear/small{
+	pixel_y = 4
+	},
+/turf/closed/wall/mineral/pipe,
+/area/indoors/town/church/inquisition)
 "bDP" = (
 /turf/open/floor/ruinedwood,
 /area/indoors/town/waterworks)
@@ -28921,6 +28927,10 @@
 "tMC" = (
 /turf/open/openspace,
 /area/indoors/town/vault)
+"tMD" = (
+/obj/structure/fluff/walldeco/gear,
+/turf/closed/wall/mineral/pipe,
+/area/indoors/town/church/inquisition)
 "tMJ" = (
 /obj/structure/flora/ausbushes/ppflowers,
 /turf/open/floor/dirt/road,
@@ -29358,6 +29368,12 @@
 /obj/structure/carpet/red,
 /turf/open/floor/church,
 /area/indoors/town/church/chapel)
+"ucR" = (
+/obj/structure/fluff/walldeco/bath/wallpipes/outie,
+/obj/structure/fluff/walldeco/bath/wallpipes/innie,
+/obj/structure/fluff/walldeco/gear,
+/turf/closed/wall/mineral/pipe,
+/area/indoors/town/dwarfin/shared)
 "udi" = (
 /obj/item/paper,
 /obj/item/paper,
@@ -32036,6 +32052,14 @@
 "vXP" = (
 /turf/open/water/ocean/abyss/under,
 /area/under/cavewet)
+"vYh" = (
+/obj/structure/fluff/walldeco/bath/wallpipes/outie,
+/obj/structure/fluff/walldeco/bath/wallpipes/innie,
+/obj/structure/fluff/walldeco/gear/small{
+	pixel_y = -8
+	},
+/turf/closed/wall/mineral/pipe,
+/area/indoors/town/dwarfin/shared)
 "vYo" = (
 /obj/machinery/light/fueled/wallfire/candle/blue/r,
 /turf/open/floor/ruinedwood/turned/darker,
@@ -43873,7 +43897,7 @@ apV
 apV
 apV
 hKf
-seF
+vYh
 uRg
 uFx
 kyH
@@ -44005,7 +44029,7 @@ apV
 apV
 apV
 niV
-seF
+ucR
 uRg
 uFx
 kyH
@@ -44144,7 +44168,7 @@ kyH
 kyH
 cOw
 mnA
-kBs
+tMD
 ogZ
 khP
 fbK
@@ -44276,7 +44300,7 @@ bYD
 kyH
 cOw
 gVO
-kBs
+bDg
 ogZ
 khP
 fbK
