@@ -1,5 +1,0 @@
-author: "MisterLayne"
-delete-after: True
-changes:
-  - rscadd: "Keybind for giving items. (default is CtrlShiftClick)"
-  - refactor: "Longer duration to give people items. Upped to 25 seconds from 11."
