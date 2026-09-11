@@ -489,7 +489,7 @@
 	gas_transfer_coefficient = 0.3
 	item_weight = 356 GRAMS
 
-/obj/item/clothing/face/apothecary
+/obj/item/clothing/face/phys
 	name = "apothecary's mask"
 	desc = "Packed with herbs to conceal the rot."
 	icon_state = "surgmask"
@@ -519,7 +519,7 @@
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/courtphys.dmi'
 	item_weight = 275 GRAMS
 
-/obj/item/clothing/face/apothecary/plaguebearer
+/obj/item/clothing/face/phys/plaguebearer
 	name = "plague's mask"
 	desc = "Packed with herbs and obfuscated enough."
 	clothing_flags = BLOCK_GAS_SMOKE_EFFECT

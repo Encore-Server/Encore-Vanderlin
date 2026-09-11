@@ -45,7 +45,7 @@
 
 /datum/outfit/wretch/plaguebearer
 	name = "Plaguebearer (Wretch)"
-	mask = /obj/item/clothing/face/apothecary/plaguebearer
+	mask = /obj/item/clothing/face/phys/plaguebearer
 	head = /obj/item/clothing/head/roguehood/phys
 	shoes = /obj/item/clothing/shoes/boots/leather
 	shirt = /obj/item/clothing/shirt/undershirt/colored/black

@@ -33,7 +33,7 @@
 
 /datum/outfit/pilgrim/physicker
 	name = "Physicker (Pilgrim)"
-	mask = /obj/item/clothing/face/apothecary
+	mask = /obj/item/clothing/face/phys
 	head = /obj/item/clothing/head/roguehood/phys
 	shoes = /obj/item/clothing/shoes/boots/leather
 	shirt = /obj/item/clothing/shirt/undershirt/colored/black

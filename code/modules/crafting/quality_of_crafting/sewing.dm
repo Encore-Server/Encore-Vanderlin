@@ -1898,7 +1898,7 @@
 	output = /obj/item/clothing/face/sack/surgsack
 	requirements = list(
 		/obj/item/natural/cloth = 3,
-		/obj/item/clothing/face/apothecary = 1,
+		/obj/item/clothing/face/phys = 1,
 	)
 	craftdiff = 1
 	category = "Mask"
