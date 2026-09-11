@@ -159,6 +159,8 @@
 		to_chat(user, span_warning("[essence_name] is not used in [initial(selected_recipe.recipe_name)]."))
 		return ITEM_INTERACT_BLOCKING
 
+	drain_from_node()
+
 	var/room = essence_room_for(essence_type)
 	if(room <= 0)
 		to_chat(user, span_warning("The cauldron already has as much [essence_name] as the recipe needs."))
@@ -280,6 +282,7 @@
 	// so the network can redistribute what the new recipe doesn't need
 	if(essence_node && !QDELETED(essence_node))
 		return_essences_to_node()
+		drain_from_node()
 		if(essence_node.network)
 			essence_node.network.invalidate_cache()
 		essence_node.push_surplus_to_linked(essence_node.storage)
@@ -341,9 +344,7 @@
 	if(!selected_recipe || !(essence_type in selected_recipe.required_essences))
 		return 0
 	var/needed = selected_recipe.required_essences[essence_type] * desired_batch_count()
-	var/already = (essence_contents[essence_type] || 0)
-	if(essence_node && !QDELETED(essence_node))
-		already += essence_node.storage.get(essence_type)
+	var/already = essence_contents[essence_type] || 0
 	return max(0, needed - already)
 
 /obj/machinery/light/fueled/cauldron/proc/drain_from_node()
