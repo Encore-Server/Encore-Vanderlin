@@ -923,6 +923,7 @@
 	construct_tool = /obj/item/needle
 	skillcraft = /datum/attribute/skill/misc/sewing
 	craftdiff = 2
+	supports_directions = TRUE
 
 /datum/blueprint_recipe/structure/decalcarpetblack
 	name = "big black carpet"
@@ -934,6 +935,7 @@
 	construct_tool = /obj/item/needle
 	skillcraft = /datum/attribute/skill/misc/sewing
 	craftdiff = 2
+	supports_directions = TRUE
 
 /datum/blueprint_recipe/structure/decalcarpetdarkred
 	name = "big dark red carpet"
@@ -945,6 +947,7 @@
 	construct_tool = /obj/item/needle
 	skillcraft = /datum/attribute/skill/misc/sewing
 	craftdiff = 2
+	supports_directions = TRUE
 
 /datum/blueprint_recipe/structure/decalcarpetpurple
 	name = "big purple carpet"
@@ -956,7 +959,7 @@
 	construct_tool = /obj/item/needle
 	skillcraft = /datum/attribute/skill/misc/sewing
 	craftdiff = 2
-
+	supports_directions = TRUE
 /datum/blueprint_recipe/structure/decalcarpetsquare
 	name = "big square carpet"
 	desc = "A soft carpet for the floor."
@@ -967,6 +970,7 @@
 	construct_tool = /obj/item/needle
 	skillcraft = /datum/attribute/skill/misc/sewing
 	craftdiff = 2
+	supports_directions = TRUE
 
 /datum/blueprint_recipe/structure/decalcarpetsquareblack
 	name = "bigblack square carpet"
@@ -978,6 +982,7 @@
 	construct_tool = /obj/item/needle
 	skillcraft = /datum/attribute/skill/misc/sewing
 	craftdiff = 2
+	supports_directions = TRUE
 
 /datum/blueprint_recipe/structure/mirror
 	name = "mirror"
