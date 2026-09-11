@@ -12833,6 +12833,10 @@
 /obj/effect/landmark/start/wapprentice,
 /turf/open/floor/wood,
 /area/indoors/town/keep/magician)
+"iuY" = (
+/obj/item/rope/chain,
+/turf/open/floor/blocks/newstone,
+/area/outdoors/exposed)
 "iuZ" = (
 /obj/structure/fluff/walldeco/church/line{
 	dir = 8
@@ -84624,7 +84628,7 @@ pUh
 efa
 kpK
 rWC
-sMd
+iuY
 sMd
 hly
 roX
