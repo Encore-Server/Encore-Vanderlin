@@ -694,7 +694,7 @@
 		/obj/item/natural/wood/plank = 2,
 	)
 	craftdiff = 1
-	/datum/attribute/skill/craft/carpentry
+	skillcraft =/datum/attribute/skill/craft/carpentry
 
 /datum/blueprint_recipe/carpentry/wallshelf
 	name = "wall shelf"
@@ -704,7 +704,7 @@
 		/obj/item/natural/wood/plank = 1,
 	)
 	craftdiff = 1
-	/datum/attribute/skill/craft/carpentry
+	skillcraft =/datum/attribute/skill/craft/carpentry
 	supports_directions = TRUE
 	category = "Wall Fixtures"
 
@@ -716,7 +716,7 @@
 		/obj/item/natural/wood/plank = 2,
 	)
 	craftdiff = 1
-	/datum/attribute/skill/craft/carpentry
+	skillcraft =/datum/attribute/skill/craft/carpentry
 
 /datum/blueprint_recipe/carpentry/shelfbiggest
 	name = "shelf"
@@ -726,7 +726,7 @@
 		/obj/item/natural/wood/plank = 3,
 	)
 	craftdiff = 1
-	/datum/attribute/skill/craft/carpentry
+	skillcraft =/datum/attribute/skill/craft/carpentry
 
 /datum/blueprint_recipe/carpentry/clock
 	name = "clock"
@@ -748,7 +748,7 @@
 		/obj/item/gear/metal = 1,
 	)
 	craftdiff = 1
-	/datum/attribute/skill/craft/carpentry
+	skillcraft =/datum/attribute/skill/craft/carpentry
 	supports_directions = TRUE
 	category = "Wall Fixtures"
 
