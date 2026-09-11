@@ -5646,7 +5646,7 @@
 /area/under/cavewet)
 "dSt" = (
 /obj/structure/door/window{
-	name = "Etgard Infirmary"
+	name = "Etgard Royal Infirmary"
 	},
 /obj/effect/mapping_helpers/access/keyset/manor/physician/butler,
 /obj/effect/mapping_helpers/access/locker,
@@ -14305,12 +14305,6 @@
 /obj/item/natural/feather,
 /turf/open/floor/ruinedwood/two,
 /area/indoors/town/keep)
-"jnE" = (
-/obj/effect/decal/cobbleedge{
-	dir = 4
-	},
-/turf/open/floor/cobble,
-/area/indoors/town/keep)
 "jnN" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/cobble,
@@ -17499,6 +17493,13 @@
 /obj/item/reagent_containers/glass/carafe,
 /turf/open/floor/blocks/green,
 /area/indoors/town/church)
+"lzw" = (
+/obj/effect/decal/cobbleedge{
+	dir = 4
+	},
+/obj/machinery/light/fueled/torchholder/c,
+/turf/open/floor/cobble,
+/area/indoors/town/keep)
 "lzC" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/carpet,
@@ -18405,11 +18406,11 @@
 /turf/open/floor/ruinedwood,
 /area/outdoors/town)
 "lYt" = (
-/obj/structure/door/stone{
-	name = "Etgard Infirmary"
-	},
 /obj/effect/mapping_helpers/access/locker,
 /obj/effect/mapping_helpers/access/keyset/manor/physician,
+/obj/structure/door/stone{
+	name = "Etgard Royal Infirmary"
+	},
 /turf/open/floor/ruinedwood/turned/alt,
 /area/indoors/town/keep/magician/greenhouse)
 "lYF" = (
@@ -19187,11 +19188,11 @@
 /turf/open/floor/cobble,
 /area/indoors/town/keep)
 "msJ" = (
-/obj/structure/door/stone{
-	name = "Etgard Infirmary"
-	},
 /obj/effect/mapping_helpers/access/locker,
 /obj/effect/mapping_helpers/access/keyset/manor/physician,
+/obj/structure/door/stone{
+	name = "Etgard Royal Infirmary"
+	},
 /turf/open/floor/ruinedwood/spiral,
 /area/indoors/town/keep/phys)
 "mte" = (
@@ -28893,7 +28894,6 @@
 /obj/effect/decal/cobbleedge{
 	dir = 4
 	},
-/obj/machinery/light/fueled/torchholder/c,
 /turf/open/floor/cobble,
 /area/indoors/town/keep)
 "sOq" = (
@@ -31685,10 +31685,10 @@
 /area/outdoors/town/roofs)
 "uIA" = (
 /obj/effect/mapping_helpers/access/locker,
-/obj/structure/door/stone{
-	name = "Etgard Infirmary"
-	},
 /obj/effect/mapping_helpers/access/keyset/manor/physician,
+/obj/structure/door/stone{
+	name = "Etgard Royal Infirmary"
+	},
 /turf/open/floor/ruinedwood/chevron,
 /area/indoors/town/keep/phys)
 "uIF" = (
@@ -31758,7 +31758,7 @@
 /area/indoors/town)
 "uMU" = (
 /obj/structure/door/stone{
-	name = "Clinic"
+	name = "Etgard Royal Infirmary"
 	},
 /obj/effect/mapping_helpers/access/locker,
 /obj/effect/mapping_helpers/access/keyset/manor/physician/butler,
@@ -31770,10 +31770,10 @@
 /area/outdoors/town/neighborhood)
 "uNj" = (
 /obj/effect/mapping_helpers/access/locker,
-/obj/structure/door/window{
-	name = "Etgard Infirmary"
-	},
 /obj/effect/mapping_helpers/access/keyset/manor/physician,
+/obj/structure/door/window{
+	name = "Etgard Royal Infirmary"
+	},
 /turf/open/floor/blocks/stonered,
 /area/indoors/town/keep/phys)
 "uNt" = (
@@ -34374,8 +34374,8 @@
 /obj/item/clothing/armor/gambeson/apothecary,
 /obj/item/clothing/head/roguehood/colored/uncolored,
 /obj/item/clothing/head/roguehood/colored/uncolored,
-/obj/item/clothing/face/apothecary,
-/obj/item/clothing/face/apothecary,
+/obj/item/clothing/face/phys,
+/obj/item/clothing/face/phys,
 /obj/item/perfume/random,
 /obj/item/perfume/random,
 /turf/open/floor/ruinedwood/spiral,
@@ -68536,8 +68536,8 @@ dDe
 hKB
 tMQ
 ufH
-jnE
-jnE
+sOk
+sOk
 xnp
 kyZ
 oQk
@@ -68669,7 +68669,7 @@ hQH
 kKV
 ufH
 vbq
-jnE
+sOk
 cvD
 oQk
 fzn
@@ -69068,7 +69068,7 @@ jRX
 nyf
 nJp
 eWp
-sOk
+lzw
 pnb
 aRH
 pLc
