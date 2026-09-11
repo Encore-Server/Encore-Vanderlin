@@ -3099,8 +3099,6 @@
 	},
 /turf/open/openspace,
 /area/outdoors/town/plaza)
-"chW" = (
-)
 "chZ" = (
 /obj/machinery/light/fueled/torchholder/r,
 /obj/structure/table/wood{
@@ -84626,7 +84624,7 @@ pUh
 efa
 kpK
 rWC
-chW
+sMd
 sMd
 hly
 roX
