@@ -64,6 +64,7 @@
 // ---- HUMOUR TRANSFORMATION RECIPES ----
 // humours can be found at code\datums\chimeric_organs
 /datum/infusion_recipe/humour
+	abstract_type = /datum/infusion_recipe/humour
 	target_type = /obj/item/chimeric_node
 	result_type = /obj/item/chimeric_node
 	var/datum/chimeric_node/node_type // support specifying the humour type for humour transformation

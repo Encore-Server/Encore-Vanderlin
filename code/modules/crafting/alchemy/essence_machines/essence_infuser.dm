@@ -107,6 +107,9 @@
 		var/obj/item/chimeric_node/old_humour = infusion_target
 		var/obj/item/chimeric_node/new_humour = new_atom
 		var/datum/infusion_recipe/humour/new_humour_recipe = current_recipe
+		new_humour.node_tier = old_humour.node_tier
+		new_humour.node_purity = old_humour.node_purity
+		new_humour.table_type = old_humour.table_type
 		new_humour.setup_node(
 			new_humour_recipe.node_type,
 			old_humour.stored_node.compatible_blood_types?.Copy(),
@@ -167,8 +170,8 @@
 	var/list/mapping = list()
 	for(var/rpath in subtypesof(/datum/infusion_recipe))
 		var/datum/infusion_recipe/r = new rpath
-		// only add recipes to selection list that actually works for the thing
-		if(istype(infusion_target, r.target_type))
+		// only add recipes to selection list that actually works for the thing, skip over any abtract types
+		if(istype(infusion_target, r.target_type) && (initial(r.abstract_type) != r.type))
 			opts[r.name] = rpath
 			mapping[rpath] = r
 			continue
