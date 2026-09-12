@@ -416,6 +416,11 @@
 	. = ..()
 	ADD_TRAIT(src, TRAIT_HARD_TO_STEAL, TRAIT_GENERIC)
 
+/obj/item/clothing/neck/gorget/chainbreaker
+	name = "chainbreaker collar"
+	desc = "A old reminder."
+	icon_state = "chainbreaker_collar"
+
 /obj/item/clothing/neck/gorget/kazengun
 	name = "blackmeadow gorget"
 	desc = "A series of interlocking rings of metal set around the throat. Used by the kouken of Blackmeadow for precisely the same reason as the knights of Psydonia."
