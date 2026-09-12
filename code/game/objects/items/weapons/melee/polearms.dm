@@ -173,7 +173,7 @@
 	wbalance = GREAT_PARRY
 	max_integrity = INTEGRITY_STRONGEST
 	max_blade_int = 200
-	smeltresult = /obj/item/rogueore/coal
+	smeltresult = /obj/item/ore/coal/charcoal
 	item_weight = 2.4 KILOGRAMS
 
 /obj/item/weapon/polearm/spear/steel

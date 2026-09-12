@@ -86,9 +86,15 @@
 	shoes = /obj/item/clothing/shoes/boots/leather/advanced
 	gloves = /obj/item/clothing/gloves/leather/advanced
 	belt = /obj/item/storage/belt/leather/mercenary
-	shirt = /obj/item/clothing/armor/gambeson/heavy
+	shirt = /obj/item/clothing/armor/gambeson/arming
 	head = /obj/item/clothing/head/helmet/heavy/volfplate
 	armor = /obj/item/clothing/armor/brigandine/light
+	backr = /obj/item/storage/backpack/satchel
+	backpack_contents = list(
+		/obj/item/storage/belt/pouch/coins/poor = 1,
+		/obj/item/weapon/knife/hunting = 1,
+		/obj/item/weapon/scabbard/knife = 1,
+	)
 
 /datum/job/advclass/mercenary/chainbreaker/on_roundstart(mob/living/carbon/human/spawned, client/player_client)
 	. = ..()
