@@ -88,7 +88,12 @@
 	if(reagents)
 		QDEL_NULL(reagents)
 	create_reagents(100, DRAINABLE | AMOUNT_VISIBLE | REFILLABLE)
+	RegisterSignal(reagents, COMSIG_REAGENTS_HOLDER_UPDATED, PROC_REF(on_reagent_change))
 	essence_node = new /obj/machinery/essence/cauldron_node(null, src) // nullspace
+
+/obj/machinery/light/fueled/cauldron/proc/on_reagent_change()
+	SIGNAL_HANDLER
+	update_appearance(UPDATE_OVERLAYS)
 
 /obj/machinery/light/fueled/cauldron/Destroy()
 	if(essence_node && !QDELETED(essence_node))
@@ -129,6 +134,10 @@
 	if(essence_node && essence_node.links.len)
 		. += span_notice("Essence links: [essence_node.links.len] connected.")
 
+/obj/machinery/light/fueled/cauldron/fire_act(added, maxstacks)
+	. = ..()
+	START_PROCESSING(SSmachines, src)
+
 /obj/machinery/light/fueled/cauldron/attack_hand(mob/user)
 	if(!user.default_can_use_topic(src))
 		return
@@ -158,6 +167,8 @@
 	if(!(essence_type in selected_recipe.required_essences))
 		to_chat(user, span_warning("[essence_name] is not used in [initial(selected_recipe.recipe_name)]."))
 		return ITEM_INTERACT_BLOCKING
+
+	drain_from_node()
 
 	var/room = essence_room_for(essence_type)
 	if(room <= 0)
@@ -280,6 +291,7 @@
 	// so the network can redistribute what the new recipe doesn't need
 	if(essence_node && !QDELETED(essence_node))
 		return_essences_to_node()
+		drain_from_node()
 		if(essence_node.network)
 			essence_node.network.invalidate_cache()
 		essence_node.push_surplus_to_linked(essence_node.storage)
@@ -341,9 +353,7 @@
 	if(!selected_recipe || !(essence_type in selected_recipe.required_essences))
 		return 0
 	var/needed = selected_recipe.required_essences[essence_type] * desired_batch_count()
-	var/already = (essence_contents[essence_type] || 0)
-	if(essence_node && !QDELETED(essence_node))
-		already += essence_node.storage.get(essence_type)
+	var/already = essence_contents[essence_type] || 0
 	return max(0, needed - already)
 
 /obj/machinery/light/fueled/cauldron/proc/drain_from_node()
@@ -435,8 +445,13 @@
 	if(water_in > 0)
 		reagents.remove_reagent(/datum/reagent/water, water_in)
 
-/obj/machinery/light/fueled/cauldron/process()
-	. = ..()
+/obj/machinery/light/fueled/cauldron/process(delta_time)
+	if(on)
+		if(initial(fueluse) > 0)
+			if(fueluse > 0)
+				fueluse = max(fueluse - 1 SECONDS * delta_time, 0)
+			if(fueluse == 0)
+				burn_out()
 
 	if(essence_node && !QDELETED(essence_node))
 		essence_node.pull_from_linked(essence_node.storage)
