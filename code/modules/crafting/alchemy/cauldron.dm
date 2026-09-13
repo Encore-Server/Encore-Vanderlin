@@ -88,7 +88,12 @@
 	if(reagents)
 		QDEL_NULL(reagents)
 	create_reagents(100, DRAINABLE | AMOUNT_VISIBLE | REFILLABLE)
+	RegisterSignal(reagents, COMSIG_REAGENTS_HOLDER_UPDATED, PROC_REF(on_reagent_change))
 	essence_node = new /obj/machinery/essence/cauldron_node(null, src) // nullspace
+
+/obj/machinery/light/fueled/cauldron/proc/on_reagent_change()
+	SIGNAL_HANDLER
+	update_appearance(UPDATE_OVERLAYS)
 
 /obj/machinery/light/fueled/cauldron/Destroy()
 	if(essence_node && !QDELETED(essence_node))
@@ -128,6 +133,10 @@
 
 	if(essence_node && essence_node.links.len)
 		. += span_notice("Essence links: [essence_node.links.len] connected.")
+
+/obj/machinery/light/fueled/cauldron/fire_act(added, maxstacks)
+	. = ..()
+	START_PROCESSING(SSmachines, src)
 
 /obj/machinery/light/fueled/cauldron/attack_hand(mob/user)
 	if(!user.default_can_use_topic(src))
@@ -436,8 +445,13 @@
 	if(water_in > 0)
 		reagents.remove_reagent(/datum/reagent/water, water_in)
 
-/obj/machinery/light/fueled/cauldron/process()
-	. = ..()
+/obj/machinery/light/fueled/cauldron/process(delta_time)
+	if(on)
+		if(initial(fueluse) > 0)
+			if(fueluse > 0)
+				fueluse = max(fueluse - 1 SECONDS * delta_time, 0)
+			if(fueluse == 0)
+				burn_out()
 
 	if(essence_node && !QDELETED(essence_node))
 		essence_node.pull_from_linked(essence_node.storage)
