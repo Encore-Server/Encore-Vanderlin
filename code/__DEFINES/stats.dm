@@ -21,6 +21,7 @@
 #define STATMOD_PACK "Pack"
 #define STATMOD_QUIRK "Quirk"
 #define STATMOD_ORPHANAGE "Orphanage"
+#define STATMOD_ADJUSTEDATTRIBUTES "Adjusted Attributes"
 
 // For misc things.
 #define STATMOD_ABOM "Abomination"

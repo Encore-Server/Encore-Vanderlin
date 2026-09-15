@@ -289,6 +289,7 @@
 
 	// Tab navigation
 	dat += "<div class='quirk-tabs'>"
+	dat += "<button class='tab-button active' data-tab='attributepoints'>Attributes</button>"
 	dat += "<button class='tab-button active' data-tab='boons'>Boons</button>"
 	dat += "<button class='tab-button' data-tab='vices'>Vices</button>"
 	dat += "<button class='tab-button' data-tab='peculiarities'>Peculiarities</button>"
@@ -296,6 +297,11 @@
 
 	// Tab content
 	dat += "<div class='tab-panels'>"
+
+	// Attribute Points tab
+	dat += "<div class='tab-panel active' id='tab-attributepoints'>"
+	dat += get_quirk_category_content(QUIRK_ATTRIBUTEPOINT, "attributepoint")
+	dat += "</div>"
 
 	// Boons tab
 	dat += "<div class='tab-panel active' id='tab-boons'>"
@@ -371,6 +377,8 @@
 		var/category_class = ""
 
 		switch(category)
+			if(QUIRK_ATTRIBUTEPOINT)
+				category_class = "attributepoint"
 			if(QUIRK_BOON)
 				category_class = "boon"
 			if(QUIRK_VICE)
