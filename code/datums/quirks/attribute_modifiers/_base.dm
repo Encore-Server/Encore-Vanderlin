@@ -2,7 +2,6 @@
 	abstract_type = /datum/quirk/attribute_adjuster
 	quirk_category = QUIRK_ATTRIBUTEADJUSTER
 	/// Attribute point value, reducing an attribute increases this. Lowering decreases
-	var/attribute_point_value = 0
 	var/adjusted_attribute = 0
 
 /datum/quirk/attribute_adjuster/on_spawn()
@@ -35,9 +34,9 @@
 	desc = "Adds strength at the cost of points."
 	customization_label = "Adjust Strength"
 	customization_options = list(
-		"1",
-		"2",
-		"3",
+		1,
+		2,
+		3,
 	)
 	incompatible_quirks = list(/datum/quirk/attribute_adjuster/strength_remove)
 
@@ -47,11 +46,10 @@
 		return
 
 	var/mob/living/carbon/human/H = owner
-	var/str_adjustment = [customization_value]
-
+	attribute_point_value = "-[customization_value]"
 	H.set_stat_modifier(STATMOD_ADJUSTEDATTRIBUTES, list(
-		str_adjustment = "[adjusted_str]"
-		attribute_point_value = "-[adjusted_str]"
+		STAT_STRENGTH = "[customization_value]"
+	))
 
 //Remove strength, add point
 /datum/quirk/attribute_adjuster/strength_remove
@@ -59,9 +57,9 @@
 	desc = "Removes strength and grants points."
 	customization_label = "Adjust Strength"
 	customization_options = list(
-		"1",
-		"2",
-		"3",
+		1,
+		2,
+		3,
 	)
 	incompatible_quirks = list(/datum/quirk/attribute_adjuster/strength)
 
@@ -71,14 +69,13 @@
 		return
 
 	var/mob/living/carbon/human/H = owner
-	var/str_adjustment = [customization_value]
-
+	attribute_point_value = "[customization_value]"
 	H.set_stat_modifier(STATMOD_ADJUSTEDATTRIBUTES, list(
-		str_adjustment = "-[adjusted_str]"
-		attribute_point_value = "[adjusted_str]"
+		STAT_STRENGTH = "-[customization_value]"
+	))
 
-/mob/living/carbon/human/proc/calculate_attribute_balance()
+/datum/preferences/proc/calculate_attribute_balance()
 	var/attributebalance = STARTING_ATTRIBUTEPOINTS
-	for(var/datum/quirk/attribute_adjuster/A in quirks)
-		balance += A.attribute_point_value
+	for(var/datum/quirk/attribute_adjuster/adjustedattribute in quirks)
+		attributebalance += initial(adjustedattribute.attribute_point_value)
 	return attributebalance

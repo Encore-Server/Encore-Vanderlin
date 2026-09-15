@@ -7,7 +7,8 @@ GLOBAL_LIST_INIT(quirk_registry, init_quirk_registry())
 	GLOB.quirk_points_by_type = list(
 		QUIRK_BOON = list(),
 		QUIRK_VICE = list(),
-		QUIRK_PECULIARITY = list()
+		QUIRK_PECULIARITY = list(),
+		QUIRK_ATTRIBUTEADJUSTER = list()
 	)
 
 	for(var/datum/quirk/quirk_type as anything in subtypesof(/datum/quirk))
@@ -60,6 +61,8 @@ GLOBAL_LIST_INIT(quirk_registry, init_quirk_registry())
 	var/quirk_category = QUIRK_PECULIARITY
 	/// Point value (negative = costs points, positive = gives points)
 	var/point_value = 0
+	/// Attribute point value, same as above except exclusively for the attributes tab
+	var/attribute_point_value = 0
 	/// List of quirk types incompatible with this one
 	var/list/incompatible_quirks = list()
 	/// The mob this quirk is attached to

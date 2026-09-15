@@ -264,6 +264,7 @@
 
 /datum/preferences/proc/get_quirk_menu_content()
 	var/balance = calculate_quirk_balance()
+	var/attribute_balance = calculate_attribute_balance()
 	var/boon_count = count_boons_in_list()
 
 	var/dat = ""
@@ -271,9 +272,11 @@
 	// Header with point balance
 	dat += "<div class='quirk-header'>"
 	dat += "<div class='quirk-stats'>"
-	dat += "<span class='stat-label'>Point Balance:</span> <span class='stat-value [balance < 0 ? "negative" : ""]'>[balance]</span>"
+	dat += "<span class='stat-label'>Quirk Point Balance:</span> <span class='stat-value [balance < 0 ? "negative" : ""]'>[balance]</span>"
 	dat += "<span class='stat-separator'>|</span>"
 	dat += "<span class='stat-label'>Boons:</span> <span class='stat-value [boon_count >= MAX_BOONS ? "at-limit" : ""]'>[boon_count]/[MAX_BOONS]</span>"
+	dat += "<span class='stat-separator'>|</span>"
+	dat += "<span class='stat-label'>Attribute Point Balance:</span> <span class='stat-value [attribute_balance < 0 ? "negative" : ""]'>[attribute_balance]</span>"
 	dat += "</div>"
 	dat += "<div class='quirk-actions'>"
 	dat += "<a href='byond://?src=\ref[src];quirk_clear=1' class='action-button clear-button'>Clear All</a>"
@@ -300,7 +303,7 @@
 
 	// Attribute Points tab
 	dat += "<div class='tab-panel active' id='tab-attributepoints'>"
-	dat += get_quirk_category_content(QUIRK_ATTRIBUTEPOINT, "attributepoint")
+	dat += get_quirk_category_content(QUIRK_ATTRIBUTEADJUSTER, "attributepoint")
 	dat += "</div>"
 
 	// Boons tab
@@ -377,7 +380,7 @@
 		var/category_class = ""
 
 		switch(category)
-			if(QUIRK_ATTRIBUTEPOINT)
+			if(QUIRK_ATTRIBUTEADJUSTER)
 				category_class = "attributepoint"
 			if(QUIRK_BOON)
 				category_class = "boon"
