@@ -22,10 +22,12 @@
 	is_foreigner = TRUE
 	is_recognized = TRUE
 
-	exp_type = list(EXP_TYPE_LIVING)
+	exp_type = list(EXP_TYPE_LIVING, EXP_TYPE_ADVENTURER, EXP_TYPE_COMBAT)
 	exp_types_granted = list(EXP_TYPE_ADVENTURER, EXP_TYPE_COMBAT)
 	exp_requirements = list(
-		EXP_TYPE_LIVING = 600
+		EXP_TYPE_LIVING = 240,
+		EXP_TYPE_ADVENTURER = 120,
+		EXP_TYPE_COMBAT = 60,
 	)
 	forced_flaw = /datum/quirk/boon/folk_hero
 

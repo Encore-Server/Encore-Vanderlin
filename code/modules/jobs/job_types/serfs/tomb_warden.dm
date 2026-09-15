@@ -61,9 +61,9 @@
 	exp_type = list(EXP_TYPE_LIVING, EXP_TYPE_ADVENTURER, EXP_TYPE_MERCENARY, EXP_TYPE_LEADERSHIP)
 	exp_types_granted = list(EXP_TYPE_ADVENTURER, EXP_TYPE_MERCENARY, EXP_TYPE_LEADERSHIP)
 	exp_requirements = list(
-		EXP_TYPE_LIVING = 1200,
-		EXP_TYPE_ADVENTURER = 360,
-		EXP_TYPE_MERCENARY = 420,
+		EXP_TYPE_LIVING = 240,
+		EXP_TYPE_ADVENTURER = 120,
+		EXP_TYPE_MERCENARY = 120,
 	)
 
 	attribute_sheet = /datum/attribute_holder/sheet/job/tomb_warden

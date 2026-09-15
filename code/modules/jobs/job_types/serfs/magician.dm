@@ -79,9 +79,9 @@
 	exp_type = list(EXP_TYPE_ADVENTURER, EXP_TYPE_LIVING, EXP_TYPE_MAGICK)
 	exp_types_granted = list(EXP_TYPE_MAGICK, EXP_TYPE_ADVENTURER)
 	exp_requirements = list(
-		EXP_TYPE_LIVING = 1200,
-		EXP_TYPE_ADVENTURER = 300,
-		EXP_TYPE_MAGICK = 300
+		EXP_TYPE_LIVING = 240,
+		EXP_TYPE_ADVENTURER = 120,
+		EXP_TYPE_MAGICK = 240
 	)
 
 	attribute_sheet = /datum/attribute_holder/sheet/job/magician
@@ -131,7 +131,6 @@
 		"Storm-Charged Tome (Lightning)" = /obj/item/spellbook/legendary/starter/lightning,
 		"Stoneveined Tome (Earth)" = /obj/item/spellbook/legendary/starter/earth,
 		"Thrice-Warded Tome (Arcane)" = /obj/item/spellbook/legendary/starter/arcane,
-		"Decay-Touched Tome (Entropy)" = /obj/item/spellbook/legendary/starter/death,
 		"Verdant Tome (Life)" = /obj/item/spellbook/legendary/starter/life,
 		"Windswept Tome (Air)" = /obj/item/spellbook/legendary/starter/air,
 		"Tidebound Tome (Water)" = /obj/item/spellbook/legendary/starter/water,

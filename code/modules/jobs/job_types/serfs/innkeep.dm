@@ -43,11 +43,6 @@
 		TRAIT_CAREFUL_CHAIRS
 	)
 
-	exp_type = list(EXP_TYPE_LIVING)
-
-	exp_requirements = list(
-		EXP_TYPE_LIVING = 300
-	)
 	book_type = /obj/item/recipe_book/cooking
 
 /datum/outfit/innkeep

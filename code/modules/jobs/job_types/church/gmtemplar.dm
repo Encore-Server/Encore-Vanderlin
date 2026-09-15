@@ -48,8 +48,8 @@
 	exp_type = list(EXP_TYPE_CHURCH, EXP_TYPE_COMBAT)
 	exp_types_granted = list(EXP_TYPE_CHURCH, EXP_TYPE_COMBAT, EXP_TYPE_CLERIC, EXP_TYPE_LEADERSHIP)
 	exp_requirements = list(
-		EXP_TYPE_CHURCH = 900,
-		EXP_TYPE_COMBAT = 900
+		EXP_TYPE_CHURCH = 120,
+		EXP_TYPE_COMBAT = 120
 	)
 	honorary = "Martyr"
 

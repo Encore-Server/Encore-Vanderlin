@@ -67,7 +67,7 @@
 	exp_type = list(EXP_TYPE_INQUISITION)
 	exp_types_granted = list(EXP_TYPE_INQUISITION)
 	exp_requirements = list(
-		EXP_TYPE_INQUISITION = 600
+		EXP_TYPE_INQUISITION = 120
 	)
 
 

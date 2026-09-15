@@ -28,8 +28,8 @@
 	exp_type = list(EXP_TYPE_NOBLE, EXP_TYPE_LIVING)
 	exp_types_granted = list(EXP_TYPE_NOBLE)
 	exp_requirements = list(
-		EXP_TYPE_LIVING = 600,
-		EXP_TYPE_NOBLE = 300,
+		EXP_TYPE_LIVING = 240,
+		EXP_TYPE_NOBLE = 120,
 	)
 
 	honorary = "Lord"

@@ -80,7 +80,6 @@
 		"Storm-Charged Tome (Lightning)" = /obj/item/spellbook/apprentice/starter/lightning,
 		"Stoneveined Tome (Earth)" = /obj/item/spellbook/apprentice/starter/earth,
 		"Thrice-Warded Tome (Arcane)" = /obj/item/spellbook/apprentice/starter/arcane,
-		"Decay-Touched Tome (Entropy)" = /obj/item/spellbook/apprentice/starter/death,
 		"Verdant Tome (Life)" = /obj/item/spellbook/apprentice/starter/life,
 		"Windswept Tome (Air)" = /obj/item/spellbook/apprentice/starter/air,
 		"Tidebound Tome (Water)" = /obj/item/spellbook/apprentice/starter/water,
