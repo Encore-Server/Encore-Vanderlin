@@ -485,9 +485,9 @@
 			switch(choice)
 				if("Discipline - Unarmed")
 					spawned.clamped_adjust_skill_level(/datum/attribute/skill/combat/unarmed, 10, 40)
+					spawned.add_spell(/datum/action/innate/clench_fists, TRUE)
 					ADD_TRAIT(spawned, TRAIT_CRITICAL_RESISTANCE, JOB_TRAIT)
 					ADD_TRAIT(spawned, TRAIT_IGNOREDAMAGESLOWDOWN, JOB_TRAIT)
-					spawned.add_spell(/datum/action/innate/clench_fists, TRUE)
 					ADD_TRAIT(spawned, TRAIT_CLOSECOMBAT, JOB_TRAIT)
 				if("Katar")
 					spawned.clamped_adjust_skill_level(/datum/attribute/skill/combat/unarmed, 10, 40)
@@ -499,15 +499,14 @@
 					spawned.attributes?.add_sheet(/datum/attribute_holder/sheet/job/templar/pugilist/patron/iliope/quarterstaff)
 
 /datum/outfit/templar/pugilist
-	name = JOB_TEMPLAR
-	head = /obj/item/clothing/head/helmet/heavy/necked
+	name = "Monk (Templar)"
+	head = /obj/item/clothing/head/headband/monk
 	cloak = /obj/item/clothing/cloak/tabard/crusader/tief
 	armor = /obj/item/clothing/armor/brigandine
-	shirt = /obj/item/clothing/armor/chainmail
-	pants = /obj/item/clothing/pants/chainlegs
-	shoes = /obj/item/clothing/shoes/boots/armor/light
-	gloves = /obj/item/clothing/gloves/chain
-	l_hand = /obj/item/weapon/shield/tower/metal
+	shirt = /obj/item/clothing/shirt/tunic/colored/black
+	pants = /obj/item/clothing/pants/tights/colored/black
+	shoes = /obj/item/clothing/shoes/gladiator
+	gloves = /obj/item/clothing/gloves/bandages/weighted
 
 /datum/outfit/templar/pugilist/pre_equip(mob/living/carbon/human/equipped_human, visuals_only)
 	. = ..()
