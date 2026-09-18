@@ -69,9 +69,9 @@
 	exp_type = list(EXP_TYPE_ADVENTURER, EXP_TYPE_LIVING, EXP_TYPE_MAGICK)
 	exp_types_granted = list(EXP_TYPE_MAGICK, EXP_TYPE_ADVENTURER)
 	exp_requirements = list(
-		EXP_TYPE_LIVING = 900,
-		EXP_TYPE_ADVENTURER = 300,
-		EXP_TYPE_MAGICK = 300
+		EXP_TYPE_LIVING = 60,
+		EXP_TYPE_ADVENTURER = 120,
+		EXP_TYPE_MAGICK = 240
 	)
 
 	attribute_sheet = /datum/attribute_holder/sheet/job/tower_mage
@@ -103,7 +103,7 @@
 	backpack_contents = list(
 		/obj/item/chalk = 1,
 		/obj/item/weapon/knife/dagger/silver/arcyne = 1,
-		/obj/item/storage/keyring/mageapprentice = 1,
+		/obj/item/storage/keyring/mage = 1,
 		/obj/item/key/tower,
 	)
 
@@ -132,7 +132,6 @@
 		"Storm-Charged Tome (Lightning)" = /obj/item/spellbook/expert/starter/lightning,
 		"Stoneveined Tome (Earth)" = /obj/item/spellbook/expert/starter/earth,
 		"Thrice-Warded Tome (Arcane)" = /obj/item/spellbook/expert/starter/arcane,
-		"Decay-Touched Tome (Entropy)" = /obj/item/spellbook/expert/starter/death,
 		"Verdant Tome (Life)" = /obj/item/spellbook/expert/starter/life,
 		"Windswept Tome (Air)" = /obj/item/spellbook/expert/starter/air,
 		"Tidebound Tome (Water)" = /obj/item/spellbook/expert/starter/water,

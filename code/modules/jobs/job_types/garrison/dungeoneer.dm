@@ -51,9 +51,6 @@
 
 	exp_type = list(EXP_TYPE_GARRISON)
 	exp_types_granted = list(EXP_TYPE_GARRISON, EXP_TYPE_COMBAT)
-	exp_requirements = list(
-		EXP_TYPE_GARRISON = 300
-	)
 
 	attribute_sheet = /datum/attribute_holder/sheet/job/dungeoneer
 

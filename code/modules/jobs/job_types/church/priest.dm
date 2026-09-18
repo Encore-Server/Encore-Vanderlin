@@ -83,7 +83,7 @@
 	exp_type = list(EXP_TYPE_CHURCH)
 	exp_types_granted = list(EXP_TYPE_CHURCH, EXP_TYPE_CLERIC, EXP_TYPE_LEADERSHIP)
 	exp_requirements = list(
-		EXP_TYPE_CHURCH = 900,
+		EXP_TYPE_CHURCH = 120,
 	)
 
 	attribute_sheet = /datum/attribute_holder/sheet/job/priest

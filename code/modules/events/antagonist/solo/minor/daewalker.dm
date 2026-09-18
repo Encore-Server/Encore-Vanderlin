@@ -33,10 +33,9 @@ GLOBAL_VAR_INIT(vamp_detection, FALSE)
 	weight = 10
 	typepath = /datum/round_event/antagonist/solo/ghost/daewalker
 	var/exp_requirements = list(
-		EXP_TYPE_LIVING = 1440, // General experience
-		EXP_TYPE_CHURCH = 720, // Understanding religious stuff
-		EXP_TYPE_INQUISITION = 480, // Heavily involves them
-		EXP_TYPE_COMBAT = 720, // Insane stats
+		EXP_TYPE_LIVING = 120, // General experience
+		EXP_TYPE_CHURCH = 60, // Understanding religious stuff
+		EXP_TYPE_COMBAT = 120, // Insane stats
 	)
 
 

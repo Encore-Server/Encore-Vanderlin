@@ -44,13 +44,13 @@
 	alt_honorary_female = list("Dame")
 	tutorial = "Law and Order, your divine reason for existence. \
 	You have been given command over the town and keep garrison to help ensure order and peace within the city, \
-	and defend it against the many dangers of the peninsula."
+	and defend it against the many dangers of the isle."
 	department_flag = NOBLEMEN
 	display_order = JDO_CAPTAIN
 	job_flags = (JOB_ANNOUNCE_ARRIVAL | JOB_SHOW_IN_CREDITS | JOB_EQUIP_RANK | JOB_NEW_PLAYER_JOINABLE)
 	factions = list(FACTION_TOWN, SUB_FACTION_KEEP)
-	total_positions = 99
-	spawn_positions = 99
+	total_positions = 2
+	spawn_positions = 2
 	bypass_lastclass = TRUE
 	honorary = JOB_GUARD_CAPTAIN
 
@@ -71,7 +71,7 @@
 	exp_type = list(EXP_TYPE_GARRISON)
 	exp_types_granted = list(EXP_TYPE_GARRISON, EXP_TYPE_NOBLE, EXP_TYPE_LEADERSHIP)
 	exp_requirements = list(
-		EXP_TYPE_GARRISON = 1500
+		EXP_TYPE_GARRISON = 240
 	)
 
 	job_bitflag = BITFLAG_ROYALTY | BITFLAG_GARRISON

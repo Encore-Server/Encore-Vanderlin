@@ -29,8 +29,8 @@
 	exp_type = list(EXP_TYPE_GARRISON, EXP_TYPE_COMBAT)
 	exp_types_granted = list(EXP_TYPE_GARRISON, EXP_TYPE_COMBAT)
 	exp_requirements = list(
-		EXP_TYPE_GARRISON = 900,
-		EXP_TYPE_COMBAT = 1200
+		EXP_TYPE_GARRISON = 120,
+		EXP_TYPE_COMBAT = 120
 	)
 
 	honorary = "Sir"
