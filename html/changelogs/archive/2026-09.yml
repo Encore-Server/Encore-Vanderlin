@@ -484,3 +484,53 @@
   - bugfix: Fixed improper area placement in Old Doma causing goblin ambushes
   - bugfix: Fixed incorrect threat region labels
   - bugfix: Removes mentions of Vanderlin lore from racoons and bobcat descs
+2026-09-11:
+  MisterLayne:
+  - rscadd: Now have the ability to save/load/delete presets for individual tomes.
+  - rscadd: Saigas can now hold two people!
+  - refactor: Cauldrons now take a recipe and a total potion amount.
+  - rscadd: Keybind for giving items. (default is CtrlShiftClick)
+  - refactor: Longer duration to give people items. Upped to 25 seconds from 11.
+  - bugfix: Fishing is fixed.
+  - bugfix: Prince/Princess now don't always spawn as Regent family.
+  - bugfix: Doors now display damage.
+  - bugfix: Flavor Text etc. is reformatted.
+  - bugfix: Icon smoothing fixed in map templates.
+  Roostercat12:
+  - bugfix: Fixes multi-z persistent properties for real. Hopefully.
+  furrycactus:
+  - balance: Adjusted traits again.
+  - balance: Brings the Martyr's stats and skills in line with Templars.
+  - balance: Reduces the Martyr job slots from 2 to 1.
+  - balance: Ensures the job slot for Martyr does not re-open on the Martyr's death.
+  kyres1:
+  - rscadd: Adds manclops, schnozclops, beholders, and a variant of cyclops with teeth.
+  - rscadd: Adds hydras to the shallows that will eat you. Probably.
+  - rscadd: Adds big mob fish to Domotan's seas.
+  - rscadd: Adds dark scarabs, a new freaky insect mob.
+  - rscadd: Adds a giant crab and a variant with some rather funny armament.
+  - balance: Added sharks to ambush generators and massively increased their HP and
+      damage.
+  - map: Lowered the overall size of centcomm for performance reasons.
+  - rscadd: Added text to the headshot image background so it's easier to tell that
+      it's actually a button.
+  - rscadd: Added vote SFX for roundend.
+  - bugfix: Corrects some lore inconsistencies and changes Tiefling cuisine to Sunnite
+      cuisine.
+  - rscadd: Added Domotan laws to be the default.
+  - rscadd: Added new enclosed carriages. Two spawn in the keep; one Shirleigh flagged,
+      the other generic for trade.
+  - rscadd: Added new sprites for handcarts.
+  - rscadd: Added a lot of new mask options to the loadout
+  - rscadd: Allowed both harpies and medicators to select both of their tail options.
+  - bugfix: Allows most species tails to be colored independently.
+  - rscadd: Added the giant moth wings to the otherkin customization.
+  - rscadd: Added skeleton wings to otherkin customization.
+  - rscadd: Allowed harpies to pick huge wings for the purpose of opening them.
+  - rscadd: Losing your thauma now aligns you with Hell and mildly buffs you to incentivize
+      going crazy.
+  - rscadd: Seeing someone without Thauma repulses normal people.
+  - qol: Heretic, bandit and outlaw notifications are now significantly less overt
+      in examine text.
+  - bugfix: Keen smell no longer detects a variety of playable species as animals,
+      but rather as alien and unfamiliar.

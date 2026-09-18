@@ -60,7 +60,7 @@
 		TRAIT_LEGENDARY_ALCHEMIST,
 	)
 
-	allowed_races = RACES_PLAYER_ALL
+	allowed_races = RACES_NON_ANTAG
 
 	attribute_sheet_old = /datum/attribute_holder/sheet/job/apothecary/old
 	attribute_sheet = /datum/attribute_holder/sheet/job/apothecary
@@ -86,6 +86,8 @@
 
 /datum/outfit/apothecary
 	name = JOB_APOTHECARY
+	mask = /obj/item/clothing/face/phys
+	neck = /obj/item/clothing/head/roguehood/colored/uncolored
 	armor = /obj/item/clothing/armor/gambeson/apothecary
 	shoes = /obj/item/clothing/shoes/apothboots
 	shirt = /obj/item/clothing/shirt/apothshirt

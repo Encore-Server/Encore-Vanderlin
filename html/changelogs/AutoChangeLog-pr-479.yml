@@ -1,9 +1,0 @@
-author: "kyres1"
-delete-after: True
-changes:
-  - rscadd: "Adds manclops, schnozclops, beholders, and a variant of cyclops with teeth."
-  - rscadd: "Adds hydras to the shallows that will eat you. Probably."
-  - rscadd: "Adds big mob fish to Domotan's seas."
-  - rscadd: "Adds dark scarabs, a new freaky insect mob."
-  - rscadd: "Adds a giant crab and a variant with some rather funny armament."
-  - balance: "Added sharks to ambush generators and massively increased their HP and damage."
