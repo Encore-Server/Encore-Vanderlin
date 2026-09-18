@@ -179,11 +179,12 @@
 		/datum/attribute/skill/combat/polearms = list(30, 30)
 	)
 
-/datum/job/templar/pugilist
+/datum/job/advclass/templar/pugilist
 	title = "Monk"
 	tutorial = "Less common than Paladins - though not less formidable - Monks are disciplined warriors part of the Templar Order \
 	who fight unarmoured and with hand-to-hand combat. Let your faith be your strength and your shield, child of the Aspects."
 	outfit = /datum/outfit/templar/pugilist
+	category_tags = list(CTAG_TEMPLAR)
 
 	attribute_sheet = /datum/attribute_holder/sheet/job/templar/pugilist
 
@@ -192,7 +193,7 @@
 		TRAIT_VIRGIN,
 	)
 
-/datum/job/templar/pugilist/on_roundstart(mob/living/carbon/human/spawned, client/player_client)
+/datum/job/advclass/templar/pugilist/on_roundstart(mob/living/carbon/human/spawned, client/player_client)
 	. = ..()
 
 	switch(spawned.patron?.type)
@@ -504,7 +505,7 @@
 	name = "Monk (Templar)"
 	head = /obj/item/clothing/head/headband/monk
 	cloak = /obj/item/clothing/cloak/tabard/crusader/tief
-	armor = /obj/item/clothing/armor/brigandine
+	armor = /obj/item/clothing/shirt/robe/monk
 	shirt = /obj/item/clothing/shirt/tunic/colored/black
 	pants = /obj/item/clothing/pants/tights/colored/black
 	shoes = /obj/item/clothing/shoes/gladiator

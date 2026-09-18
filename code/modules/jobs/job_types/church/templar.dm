@@ -18,6 +18,7 @@
 	allowed_patrons = ALL_TEMPLAR_PATRONS
 
 	outfit = /datum/outfit/templar
+	advclass_cat_rolls = list(CTAG_TEMPLAR = 20)
 	give_bank_account = 15
 	knows_the_town = TRUE
 	known_by_the_town = TRUE
@@ -65,7 +66,7 @@
 		if(/datum/patron/divine/iliope)
 			cloak = /obj/item/clothing/cloak/stabard/templar/iliope
 
-/datum/job/templar/after_spawn(mob/living/carbon/human/spawned, client/player_client)
+/datum/job/advclass/templar/after_spawn(mob/living/carbon/human/spawned, client/player_client)
 	. = ..()
 
 	var/holder = spawned.patron?.devotion_holder
@@ -76,3 +77,7 @@
 
 	if(spawned.dna?.species?.id == SPEC_ID_HUMEN && spawned.gender == MALE)
 		spawned.dna.species.soundpack_m = new /datum/voicepack/male/knight()
+
+/datum/job/advclass/templar
+	exp_types_granted = list(EXP_TYPE_CHURCH, EXP_TYPE_COMBAT, EXP_TYPE_CLERIC)
+	factions = list(FACTION_TOWN)

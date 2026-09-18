@@ -218,12 +218,13 @@
 		/datum/attribute/skill/combat/swords = 40
 	)
 
-/datum/job/templar/holyknight
+/datum/job/advclass/templar/holyknight
 	title = "Templar"
 	tutorial = "The classic picture that most imagine in their mind's eye when thinking of a Templar - a Paladin. \
 	Clad in armour and with blade and shield aloft, you protect the faithful with both your strength of arm and strength of conviction. \
 	Hold fast, child of the Aspects, for the enemies without are without end, and you must not see the world undone."
 	outfit = /datum/outfit/templar/holyknight
+	category_tags = list(CTAG_TEMPLAR)
 
 	attribute_sheet = /datum/attribute_holder/sheet/job/templar/holyknight
 
@@ -235,7 +236,7 @@
 	)
 	mind_traits = list(TRAIT_KNOWBANDITS)
 
-/datum/job/templar/holyknight/on_roundstart(mob/living/carbon/human/spawned, client/player_client)
+/datum/job/advclass/templar/holyknight/on_roundstart(mob/living/carbon/human/spawned, client/player_client)
 	. = ..()
 
 	switch(spawned.patron?.type)
