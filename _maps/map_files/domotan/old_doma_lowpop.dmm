@@ -7782,9 +7782,9 @@
 /turf/open/openspace,
 /area/outdoors/town)
 "fbV" = (
-/obj/structure/fluff/railing/wood,
-/turf/open/floor/ruinedwood/darker,
-/area/under/town/sewer)
+/mob/living/simple_animal/hostile/retaliate/droid_warden,
+/turf/open/floor/churchmarble,
+/area/indoors/town/vault)
 "fca" = (
 /obj/structure/fluff/psycross/visires{
 	pixel_y = 18
@@ -20292,10 +20292,8 @@
 /turf/open/floor/blocks,
 /area/indoors/town/steward)
 "mAJ" = (
-/obj/effect/decal/cleanable/dirt/dust,
-/mob/living/simple_animal/hostile/retaliate/droid_warden,
-/turf/open/floor/churchmarble,
-/area/indoors/town/vault)
+/turf/closed/mineral/bedrock,
+/area/under/town/sewer)
 "mAM" = (
 /obj/structure/fake_machine/atm{
 	pixel_x = 4;
@@ -23537,6 +23535,9 @@
 /obj/machinery/light/fueled/wallfire/candle/l,
 /turf/open/floor/carpet/royalblack,
 /area/indoors/town/tavern/saiga)
+"oBV" = (
+/turf/open/water/sewer,
+/area/under/town/basement/smugglers_tunnels)
 "oCc" = (
 /obj/effect/decal/cobbleedge{
 	pixel_y = 1
@@ -46071,10 +46072,10 @@ jdz
 cBm
 cBm
 qss
-qss
-qss
-qss
-qss
+oBV
+oBV
+oBV
+oBV
 qss
 jdz
 jdz
@@ -46203,8 +46204,8 @@ jdz
 cBm
 qss
 cBm
-cBm
-cBm
+oBV
+oBV
 cBm
 cBm
 cBm
@@ -46340,9 +46341,9 @@ qss
 qss
 cBm
 qss
-jdz
-jdz
-xhI
+qss
+qss
+fLs
 cPa
 cPa
 iMB
@@ -46466,20 +46467,20 @@ jdz
 jdz
 jdz
 jdz
-jdz
-jdz
-jdz
-jdz
-jdz
-qss
-jdz
-xYT
-xhI
-cPa
-gNa
+wyv
+wyv
+wyv
+wyv
+wyv
+eAi
+wyv
+mAJ
+mAJ
+mAJ
+mAJ
+mAJ
+mAJ
 nsB
-iMB
-bxh
 bxh
 fAx
 fAx
@@ -46610,8 +46611,8 @@ xhW
 xhW
 xhW
 xhW
-fbV
-bxh
+xhW
+nsB
 bxh
 bxh
 iMB
@@ -46742,8 +46743,8 @@ oix
 gjg
 eTw
 xhW
-fbV
-bxh
+xhW
+nsB
 bxh
 bxh
 iMB
@@ -46874,8 +46875,8 @@ djH
 fQC
 elt
 xhW
-fbV
-bxh
+xhW
+iMB
 bxh
 bxh
 iMB
@@ -47006,8 +47007,8 @@ xAd
 pyZ
 xAd
 xhW
-fbV
-bxh
+xhW
+iMB
 bxh
 bxh
 iMB
@@ -47138,8 +47139,8 @@ lvb
 fQC
 aaf
 xhW
-fbV
-bxh
+xhW
+iMB
 bxh
 bxh
 gNa
@@ -47267,11 +47268,11 @@ jUW
 aaf
 aaf
 sdZ
-aaf
-mAJ
+fbV
+fQC
 xhW
-jdz
-jdz
+xhW
+iMB
 jdz
 jdz
 jdz
@@ -47402,8 +47403,8 @@ fEP
 fQC
 aaf
 jBe
-jdz
-jdz
+jBe
+iMB
 jdz
 jdz
 jdz
@@ -47534,8 +47535,8 @@ rKg
 rKg
 hEk
 jBe
-jdz
-jdz
+jBe
+iMB
 jdz
 jdz
 jdz
@@ -47666,8 +47667,8 @@ kcW
 vzY
 neQ
 xhW
-ggp
-jdz
+xhW
+iMB
 jdz
 jdz
 jdz
@@ -47798,7 +47799,7 @@ sTo
 uyr
 gjg
 xhW
-iMB
+xhW
 iMB
 iMB
 iMB
@@ -47930,7 +47931,7 @@ rIw
 dmg
 xhW
 xhW
-jdz
+xhW
 jdz
 iMB
 iMB
