@@ -216,7 +216,7 @@
 
 /datum/repeatable_crafting_recipe/sewing/headband_naledi
 	name = "headband"
-	output = /obj/item/clothing/head/headband/naledi
+	output = /obj/item/clothing/head/headband/monk/naledi
 	requirements = list(/obj/item/natural/cloth = 2,
 				/obj/item/natural/fibers = 1)
 	category = "Hat"
