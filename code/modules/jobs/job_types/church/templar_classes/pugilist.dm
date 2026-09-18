@@ -383,7 +383,8 @@
 				if("Quarterstaff")
 					spawned.attributes?.add_sheet(/datum/attribute_holder/sheet/job/templar/pugilist/patron/pomette/quarterstaff)
 				if("Close Caress (Knuckles)")
-					spawned.attributes?.add_sheet(/datum/attribute_holder/sheet/job/templar/pugilist/patron/pomette/knuckles)
+					spawned.clamped_adjust_skill_level(/datum/attribute/skill/combat/unarmed, 10, 40)
+					ADD_TRAIT(spawned, TRAIT_CRITICAL_RESISTANCE, JOB_TRAIT)
 		if(/datum/patron/divine/mordsol)
 			spawned.attributes?.add_sheet(/datum/attribute_holder/sheet/job/templar/pugilist/patron/mordsol)
 			spawned.cmode_music = 'sound/music/cmode/church/CombatRavox.ogg'
@@ -469,7 +470,8 @@
 				if("Quarterstaff")
 					spawned.attributes?.add_sheet(/datum/attribute_holder/sheet/job/templar/pugilist/patron/mjallidhorn/quarterstaff)
 				if("Barotrauma (Katars)")
-					spawned.attributes?.add_sheet(/datum/attribute_holder/sheet/job/templar/pugilist/patron/mjallidhorn/katars)
+					spawned.clamped_adjust_skill_level(/datum/attribute/skill/combat/unarmed, 10, 40)
+					ADD_TRAIT(spawned, TRAIT_CRITICAL_RESISTANCE, JOB_TRAIT)
 		if(/datum/patron/divine/iliope)
 			spawned.attributes?.add_sheet(/datum/attribute_holder/sheet/job/templar/pugilist/patron/iliope)
 			spawned.cmode_music = 'sound/music/cmode/church/CombatXylix.ogg'
