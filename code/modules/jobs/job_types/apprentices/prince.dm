@@ -120,7 +120,6 @@
 		STAT_INTELLIGENCE = 2,
 		STAT_CONSTITUTION = 1,
 		STAT_ENDURANCE = 2,
-		STAT_SPEED = 1,
 		
 		/datum/attribute/skill/combat/axesmaces = 10,
 		/datum/attribute/skill/combat/bows = 20,
