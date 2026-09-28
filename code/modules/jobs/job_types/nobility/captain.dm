@@ -49,8 +49,8 @@
 	display_order = JDO_CAPTAIN
 	job_flags = (JOB_ANNOUNCE_ARRIVAL | JOB_SHOW_IN_CREDITS | JOB_EQUIP_RANK | JOB_NEW_PLAYER_JOINABLE)
 	factions = list(FACTION_TOWN, SUB_FACTION_KEEP, SUB_FACTION_VAULT)
-	total_positions = 99
-	spawn_positions = 99
+	total_positions = 1
+	spawn_positions = 1
 	bypass_lastclass = TRUE
 	honorary = JOB_GUARD_CAPTAIN
 

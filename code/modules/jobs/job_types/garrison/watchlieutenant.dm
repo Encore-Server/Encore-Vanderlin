@@ -59,8 +59,8 @@
 	job_flags = (JOB_ANNOUNCE_ARRIVAL | JOB_SHOW_IN_CREDITS | JOB_EQUIP_RANK | JOB_NEW_PLAYER_JOINABLE)
 	display_order = JDO_CITYWATCHMEN
 	factions = list(FACTION_TOWN)
-	total_positions = 99
-	spawn_positions = 99
+	total_positions = 1
+	spawn_positions = 1
 	bypass_lastclass = TRUE
 	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED, AGE_OLD, AGE_IMMORTAL)
 	allowed_races = RACES_PLAYER_NONDISCRIMINATED

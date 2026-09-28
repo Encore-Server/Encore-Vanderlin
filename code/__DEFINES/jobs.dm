@@ -112,7 +112,7 @@
 #define JDO_CAPTAIN 7
 #define JDO_ROYALKNIGHT 7.2
 #define JDO_MENATARMS 8
-#define JDO_CITYWATCHMEN 8.1
+//#define JDO_CITYWATCHMEN 8.1
 #define JDO_GATEMASTER 8.2
 #define JDO_DUNGEONEER 9
 #define JDO_JAILOR 9.1
@@ -212,9 +212,9 @@
 
 
 #define JOB_ROYAL_KNIGHT "Royal Knight"
-#define JOB_CITY_WATCH "City Watchmen"
+//#define JOB_CITY_WATCH "City Watchmen"
 #define JOB_CITY_WATCH_LIEUTENANT "City Watch Lieutenant"
-#define JOB_MAN_AT_ARMS "Man-at-arms"
+#define JOB_MAN_AT_ARMS "Man-at-Arms"
 #define JOB_GATEMASTER "Gatemaster"
 #define JOB_DUNGEONEER "Dungeoneer"
 #define JOB_TOWN_ELDER "Town Elder"
