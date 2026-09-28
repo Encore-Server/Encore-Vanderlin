@@ -63,18 +63,19 @@
 		STAT_PERCEPTION = 1,
 		STAT_CONSTITUTION = 1,
 		STAT_SPEED = 1,
-		STAT_FORTUNE = 1,
+		STAT_FORTUNE = 2,
+		STAT_ENDURANCE = 1, 
 
 		/datum/attribute/skill/combat/axesmaces = 10,
 		/datum/attribute/skill/combat/bows = 20,
 		/datum/attribute/skill/combat/crossbows = 20,
-		/datum/attribute/skill/combat/swords = 20,
+		/datum/attribute/skill/combat/swords = 30,
 		/datum/attribute/skill/combat/wrestling = 20,
 		/datum/attribute/skill/combat/unarmed = 20,
 		/datum/attribute/skill/combat/knives = 10,
 		/datum/attribute/skill/misc/swimming = 20,
 		/datum/attribute/skill/misc/climbing = 20,
-		/datum/attribute/skill/misc/athletics = 10,
+		/datum/attribute/skill/misc/athletics = 20,
 		/datum/attribute/skill/misc/riding = 30,
 		/datum/attribute/skill/misc/reading = 20,
 		/datum/attribute/skill/labor/mathematics = 30
@@ -114,15 +115,20 @@
 
 /datum/attribute_holder/sheet/job/heir/aristocrat
 	raw_attribute_list = list(
-		STAT_PERCEPTION = 2,
-		STAT_STRENGTH = -1,
+		STAT_PERCEPTION = 1,
+		STAT_STRENGTH = 2,
 		STAT_INTELLIGENCE = 2,
-		STAT_FORTUNE = 1,
+		STAT_CONSTITUTION = 1,
+		STAT_ENDURANCE = 2,
 		STAT_SPEED = 1,
-
+		
+		/datum/attribute/skill/combat/axesmaces = 10,
+		/datum/attribute/skill/combat/bows = 20,
+		/datum/attribute/skill/combat/crossbows = 20,
 		/datum/attribute/skill/combat/bows = 10,
-		/datum/attribute/skill/combat/wrestling = 10,
-		/datum/attribute/skill/combat/unarmed = 10,
+		/datum/attribute/skill/combat/swords = 30,
+		/datum/attribute/skill/combat/wrestling = 20,
+		/datum/attribute/skill/combat/unarmed = 20,
 		/datum/attribute/skill/combat/knives = 10,
 		/datum/attribute/skill/misc/swimming = 20,
 		/datum/attribute/skill/misc/climbing = 10,
@@ -131,16 +137,12 @@
 		/datum/attribute/skill/craft/cooking = 10,
 		/datum/attribute/skill/misc/sewing = 10,
 		/datum/attribute/skill/labor/mathematics = 30
-	)
-
-	attribute_variance = list(
-		/datum/attribute/skill/combat/crossbows = list(0, 10),
-		/datum/attribute/skill/misc/athletics = list(0, 10)
+		/datum/attribute/skill/misc/athletics = 30
 	)
 
 /datum/job/advclass/heir/aristocrat
 	title = "Unawakened Blood"
-	tutorial = "The One Envy's power in your blood is mostly dormant. Life has been kind to you; you've an entire keep at your disposal, servants to wait on you, and a whole retinue of guards to guard you. You've nothing to prove; just live the good life and you'll be a lord someday, too. A lack of ambition translates into a lacking skillset beyond schooling, though, and your breaks from boredom consist of being a damsel or court gossip."
+	tutorial = "The One Envy's power in your blood is mostly dormant. Life has been kind to you; you've an entire keep at your disposal, servants to wait on you, and a whole retinue of guards to guard you. You've nothing to prove; just live the good life and you'll be a lord someday, too."
 	outfit = /datum/outfit/heir/aristocrat
 	category_tags = list(CTAG_HEIR)
 	attribute_sheet = /datum/attribute_holder/sheet/job/heir/aristocrat
