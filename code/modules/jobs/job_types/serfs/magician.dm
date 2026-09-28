@@ -80,7 +80,6 @@
 	exp_types_granted = list(EXP_TYPE_MAGICK, EXP_TYPE_ADVENTURER)
 	exp_requirements = list(
 		EXP_TYPE_LIVING = 240,
-		EXP_TYPE_ADVENTURER = 120,
 		EXP_TYPE_MAGICK = 240
 	)
 

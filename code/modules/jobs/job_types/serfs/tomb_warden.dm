@@ -62,7 +62,6 @@
 	exp_types_granted = list(EXP_TYPE_ADVENTURER, EXP_TYPE_MERCENARY, EXP_TYPE_LEADERSHIP)
 	exp_requirements = list(
 		EXP_TYPE_LIVING = 240,
-		EXP_TYPE_ADVENTURER = 120,
 		EXP_TYPE_MERCENARY = 120,
 	)
 
