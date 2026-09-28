@@ -115,7 +115,6 @@
 
 /datum/attribute_holder/sheet/job/heir/aristocrat
 	raw_attribute_list = list(
-		STAT_PERCEPTION = 1,
 		STAT_STRENGTH = 2,
 		STAT_INTELLIGENCE = 1,
 		STAT_CONSTITUTION = 1,
