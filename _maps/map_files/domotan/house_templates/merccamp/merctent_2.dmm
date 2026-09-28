@@ -1,0 +1,177 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/turf/open/floor/twig,
+/area/template_noop)
+"b" = (
+/obj/structure/roguetent,
+/turf/open/floor/twig,
+/area/template_noop)
+"d" = (
+/obj/structure/sign/property_sign/claim,
+/turf/closed/wall/mineral/tent,
+/area/template_noop)
+"u" = (
+/obj/machinery/light/fueled/torchholder/metal_torch/west,
+/turf/open/floor/twig,
+/area/template_noop)
+"v" = (
+/obj/machinery/light/fueled/torchholder/metal_torch/east,
+/turf/open/floor/twig,
+/area/template_noop)
+"B" = (
+/turf/closed/wall/mineral/tent,
+/area/template_noop)
+"G" = (
+/obj/machinery/light/fueled/torchholder/c,
+/turf/open/floor/twig,
+/area/template_noop)
+"Y" = (
+/obj/structure/ladder,
+/turf/open/floor/twig,
+/area/template_noop)
+
+(1,1,1) = {"
+B
+B
+B
+B
+B
+B
+B
+"}
+(2,1,1) = {"
+B
+G
+a
+a
+a
+v
+B
+"}
+(3,1,1) = {"
+d
+a
+a
+a
+a
+a
+B
+"}
+(4,1,1) = {"
+b
+a
+a
+a
+a
+a
+B
+"}
+(5,1,1) = {"
+b
+a
+a
+a
+a
+a
+B
+"}
+(6,1,1) = {"
+B
+a
+a
+a
+Y
+a
+B
+"}
+(7,1,1) = {"
+B
+G
+a
+a
+a
+u
+B
+"}
+(8,1,1) = {"
+B
+B
+B
+B
+B
+B
+B
+"}
+
+(1,1,2) = {"
+B
+B
+B
+B
+B
+B
+B
+"}
+(2,1,2) = {"
+B
+B
+B
+B
+B
+B
+B
+"}
+(3,1,2) = {"
+B
+B
+a
+a
+a
+B
+B
+"}
+(4,1,2) = {"
+B
+B
+a
+a
+a
+B
+B
+"}
+(5,1,2) = {"
+B
+B
+a
+a
+a
+B
+B
+"}
+(6,1,2) = {"
+B
+B
+a
+a
+Y
+B
+B
+"}
+(7,1,2) = {"
+B
+B
+B
+B
+B
+B
+B
+"}
+(8,1,2) = {"
+B
+B
+B
+B
+B
+B
+B
+"}
