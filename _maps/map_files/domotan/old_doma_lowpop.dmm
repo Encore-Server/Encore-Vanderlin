@@ -179,8 +179,13 @@
 /turf/open/floor/ruinedwood/turned,
 /area/indoors/town/tavern/saiga)
 "afe" = (
-/obj/item/reagent_containers/glass/bottle/healthpot,
 /obj/structure/closet/crate/crafted_closet/inn,
+/obj/item/reagent_containers/food/snacks/hardtack,
+/obj/item/reagent_containers/food/snacks/hardtack,
+/obj/item/reagent_containers/food/snacks/hardtack,
+/obj/item/reagent_containers/food/snacks/hardtack,
+/obj/item/reagent_containers/food/snacks/hardtack,
+/obj/item/reagent_containers/food/snacks/hardtack,
 /turf/open/floor/cobble,
 /area/indoors/town/keep/garrison)
 "afk" = (
@@ -3613,8 +3618,8 @@
 /turf/open/floor/dirt/road,
 /area/indoors/town/church/crypt)
 "csd" = (
-/obj/structure/closet/crate/chest,
 /obj/effect/spawner/guaranteed_map_spawner/listed/weapons/ranged,
+/obj/structure/closet/crate/chest/neu_iron,
 /turf/open/floor/cobble,
 /area/indoors/town/keep/garrison)
 "csl" = (
@@ -4935,8 +4940,25 @@
 /turf/open/floor/ruinedwood,
 /area/outdoors/town)
 "dhc" = (
-/obj/structure/closet/crate/chest,
-/obj/machinery/light/fueled/torchholder/l,
+/obj/structure/closet/crate/crafted_closet/inn,
+/obj/item/clothing/cloak/cape/guard,
+/obj/item/clothing/cloak/cape/guard,
+/obj/item/clothing/cloak/cape/guard,
+/obj/item/clothing/cloak/cape/guard,
+/obj/item/clothing/cloak/cape/guard,
+/obj/item/clothing/cloak/cape/guard,
+/obj/item/clothing/cloak/half/guard,
+/obj/item/clothing/cloak/half/guard,
+/obj/item/clothing/cloak/half/guard,
+/obj/item/clothing/cloak/half/guard,
+/obj/item/clothing/cloak/half/guard,
+/obj/item/clothing/cloak/half/guard,
+/obj/item/clothing/cloak/half/guardsecond,
+/obj/item/clothing/cloak/half/guardsecond,
+/obj/item/clothing/cloak/half/guardsecond,
+/obj/item/clothing/cloak/half/guardsecond,
+/obj/item/clothing/cloak/half/guardsecond,
+/obj/item/clothing/cloak/half/guardsecond,
 /turf/open/floor/cobble,
 /area/indoors/town/keep/garrison)
 "dhp" = (
@@ -9528,9 +9550,6 @@
 /turf/open/floor/blocks,
 /area/outdoors/town)
 "gbC" = (
-/obj/structure/closet/crate/chest/old_crate,
-/obj/item/rope/chain,
-/obj/item/rope/chain,
 /obj/machinery/light/fueled/torchholder/r,
 /turf/open/floor/church/rust,
 /area/indoors/town/keep/garrison)
@@ -14218,8 +14237,25 @@
 /turf/open/floor/ruinedwood/two,
 /area/indoors/town/keep/magician)
 "iQq" = (
-/obj/structure/closet/crate/chest/old_crate,
-/obj/item/rope,
+/obj/structure/closet/crate/crafted_closet/inn,
+/obj/item/clothing/cloak/stabard/jupon/guard,
+/obj/item/clothing/cloak/stabard/jupon/guard,
+/obj/item/clothing/cloak/stabard/jupon/guard,
+/obj/item/clothing/cloak/stabard/jupon/guard,
+/obj/item/clothing/cloak/stabard/jupon/guard,
+/obj/item/clothing/cloak/stabard/jupon/guard,
+/obj/item/clothing/cloak/stabard/guard,
+/obj/item/clothing/cloak/stabard/guard,
+/obj/item/clothing/cloak/stabard/guard,
+/obj/item/clothing/cloak/stabard/guard,
+/obj/item/clothing/cloak/stabard/guard,
+/obj/item/clothing/cloak/stabard/guard,
+/obj/item/clothing/cloak/tabard/knight/guard,
+/obj/item/clothing/cloak/tabard/knight/guard,
+/obj/item/clothing/cloak/tabard/knight/guard,
+/obj/item/clothing/cloak/tabard/knight/guard,
+/obj/item/clothing/cloak/tabard/knight/guard,
+/obj/item/clothing/cloak/tabard/knight/guard,
 /turf/open/floor/blocks,
 /area/indoors/town/keep/garrison)
 "iQt" = (
@@ -15808,15 +15844,23 @@
 /turf/open/floor/ruinedwood/alt,
 /area/outdoors/town)
 "jNs" = (
-/obj/item/clothing/cloak/stabard,
-/obj/item/clothing/cloak/stabard,
-/obj/item/clothing/cloak/stabard,
-/obj/item/clothing/cloak/stabard,
-/obj/item/clothing/cloak/tabard,
-/obj/item/clothing/cloak/tabard,
-/obj/item/clothing/cloak/tabard,
-/obj/item/clothing/cloak/tabard,
 /obj/structure/rack,
+/obj/item/clothing/head/roguehood/colored/guard,
+/obj/item/clothing/head/roguehood/colored/guard,
+/obj/item/clothing/head/roguehood/colored/guard,
+/obj/item/clothing/head/roguehood/colored/guard,
+/obj/item/clothing/head/roguehood/colored/guard,
+/obj/item/clothing/head/roguehood/colored/guard,
+/obj/item/clothing/head/roguehood/colored/guard,
+/obj/item/clothing/head/roguehood/colored/guard,
+/obj/item/clothing/head/roguehood/colored/guardsecond,
+/obj/item/clothing/head/roguehood/colored/guardsecond,
+/obj/item/clothing/head/roguehood/colored/guardsecond,
+/obj/item/clothing/head/roguehood/colored/guardsecond,
+/obj/item/clothing/head/roguehood/colored/guardsecond,
+/obj/item/clothing/head/roguehood/colored/guardsecond,
+/obj/item/clothing/head/roguehood/colored/guardsecond,
+/obj/item/clothing/head/roguehood/colored/guardsecond,
 /turf/open/floor/church/rust,
 /area/indoors/town/keep/garrison)
 "jNI" = (
@@ -18497,6 +18541,8 @@
 /obj/structure/closet/crate/chest/old_crate,
 /obj/item/rope/chain,
 /obj/item/rope/chain,
+/obj/item/rope/chain,
+/obj/item/rope/chain,
 /turf/open/floor/blocks,
 /area/indoors/town/keep/garrison)
 "lBd" = (
@@ -20205,28 +20251,6 @@
 /turf/open/floor/metal/barograte,
 /area/under/town/sewer)
 "mse" = (
-/obj/structure/closet/crate/chest/old_crate,
-/obj/item/needle/thorn,
-/obj/item/needle/thorn,
-/obj/item/needle/thorn,
-/obj/item/needle/thorn,
-/obj/item/needle/thorn,
-/obj/item/needle/thorn,
-/obj/item/natural/bundle/cloth{
-	amount = 8
-	},
-/obj/item/natural/bundle/cloth{
-	amount = 8
-	},
-/obj/item/natural/bundle/cloth{
-	amount = 8
-	},
-/obj/item/natural/bundle/cloth{
-	amount = 8
-	},
-/obj/item/natural/bundle/cloth{
-	amount = 8
-	},
 /obj/effect/decal/cobbleedge{
 	dir = 10;
 	icon_state = "cobbleedge-e"
@@ -20235,6 +20259,19 @@
 	dir = 10;
 	icon_state = "cobbleedge-w"
 	},
+/obj/structure/closet/crate/crafted_closet/inn,
+/obj/item/clothing/pants/tights/colored/guard,
+/obj/item/clothing/pants/tights/colored/guard,
+/obj/item/clothing/pants/tights/colored/guard,
+/obj/item/clothing/pants/tights/colored/guard,
+/obj/item/clothing/pants/tights/colored/guard,
+/obj/item/clothing/pants/tights/colored/guard,
+/obj/item/clothing/pants/tights/colored/guardsecond,
+/obj/item/clothing/pants/tights/colored/guardsecond,
+/obj/item/clothing/pants/tights/colored/guardsecond,
+/obj/item/clothing/pants/tights/colored/guardsecond,
+/obj/item/clothing/pants/tights/colored/guardsecond,
+/obj/item/clothing/pants/tights/colored/guardsecond,
 /turf/open/floor/cobble,
 /area/indoors/town/keep/garrison)
 "msp" = (
@@ -23345,14 +23382,31 @@
 /turf/open/floor/churchrough/purple,
 /area/under/cavewet)
 "ono" = (
-/obj/item/clothing/cloak/stabard/guard,
-/obj/item/clothing/cloak/stabard/guard,
-/obj/item/clothing/cloak/stabard/guard,
-/obj/item/clothing/cloak/stabard/guard,
-/obj/item/clothing/cloak/stabard/guard,
-/obj/item/clothing/cloak/stabard/guard,
-/obj/machinery/light/fueled/torchholder/r,
-/obj/structure/closet/crate/chest,
+/obj/structure/closet/crate/chest/old_crate,
+/obj/item/natural/bundle/cloth{
+	amount = 8
+	},
+/obj/item/natural/bundle/cloth{
+	amount = 8
+	},
+/obj/item/natural/bundle/cloth{
+	amount = 8
+	},
+/obj/item/natural/bundle/cloth{
+	amount = 8
+	},
+/obj/item/natural/bundle/cloth{
+	amount = 8
+	},
+/obj/item/natural/bundle/cloth{
+	amount = 8
+	},
+/obj/item/needle/thorn,
+/obj/item/needle/thorn,
+/obj/item/needle/thorn,
+/obj/item/needle/thorn,
+/obj/item/needle/thorn,
+/obj/item/needle/thorn,
 /turf/open/floor/cobble,
 /area/indoors/town/keep/garrison)
 "ont" = (
@@ -24714,6 +24768,18 @@
 	dir = 10;
 	icon_state = "cobbleedge-n"
 	},
+/obj/machinery/light/fueled/torchholder/l,
+/obj/structure/closet/crate/chest/old_crate,
+/obj/item/rope/chain,
+/obj/item/rope/chain,
+/obj/item/rope/chain,
+/obj/item/rope/chain,
+/obj/item/rope,
+/obj/item/rope,
+/obj/item/rope,
+/obj/item/rope,
+/obj/item/rope,
+/obj/item/rope,
 /turf/open/floor/blocks,
 /area/indoors/town/keep/garrison)
 "pgI" = (
@@ -27926,6 +27992,9 @@
 /obj/item/instrument/drum{
 	pixel_x = -18
 	},
+/obj/item/flashlight/flare/torch/lantern,
+/obj/item/flashlight/flare/torch/lantern,
+/obj/item/flashlight/flare/torch/lantern,
 /turf/open/floor/church/rust,
 /area/indoors/town/keep/garrison)
 "rdw" = (
@@ -29746,13 +29815,13 @@
 /area/indoors/town/keep)
 "sqj" = (
 /obj/structure/closet/crate/chest/neu_iron,
-/obj/item/reagent_containers/glass/bottle/healthpot,
-/obj/item/reagent_containers/glass/bottle/healthpot,
-/obj/item/reagent_containers/glass/bottle/healthpot,
-/obj/item/reagent_containers/glass/bottle/healthpot,
-/obj/item/reagent_containers/glass/bottle/healthpot,
-/obj/item/reagent_containers/glass/bottle/healthpot,
-/obj/item/reagent_containers/glass/bottle/healthpot,
+/obj/item/reagent_containers/glass/bottle/healthpot/labelled,
+/obj/item/reagent_containers/glass/bottle/healthpot/labelled,
+/obj/item/reagent_containers/glass/bottle/healthpot/labelled,
+/obj/item/reagent_containers/glass/bottle/healthpot/labelled,
+/obj/item/reagent_containers/glass/bottle/healthpot/labelled,
+/obj/item/reagent_containers/glass/bottle/healthpot/labelled,
+/obj/item/reagent_containers/glass/bottle/healthpot/labelled,
 /turf/open/floor/cobble,
 /area/indoors/town/keep/garrison)
 "sqO" = (
@@ -36762,8 +36831,12 @@
 /turf/open/floor/blocks,
 /area/outdoors/town)
 "wOh" = (
-/obj/item/needle/thorn,
 /obj/structure/closet/crate/chest/neu,
+/obj/item/needle/thorn,
+/obj/item/needle/thorn,
+/obj/item/needle/thorn,
+/obj/item/needle/thorn,
+/obj/item/needle/thorn,
 /turf/open/floor/cobble,
 /area/indoors/town/keep/garrison)
 "wOw" = (
