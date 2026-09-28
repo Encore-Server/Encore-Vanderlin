@@ -149,7 +149,6 @@
 	traits = list(
 		TRAIT_MEDIUMARMOR,
 		TRAIT_BEAUTIFUL,
-		TRAIT_VIRGIN,
 	)
 
 /datum/job/advclass/heir/aristocrat/after_spawn(mob/living/carbon/human/spawned, client/player_client)
