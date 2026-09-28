@@ -117,6 +117,7 @@
 	raw_attribute_list = list(
 		STAT_STRENGTH = 2,
 		STAT_INTELLIGENCE = 1,
+		STAT_FORTUNE = 1,
 		STAT_CONSTITUTION = 1,
 		STAT_ENDURANCE = 2,
 		
