@@ -119,21 +119,23 @@
 		STAT_INTELLIGENCE = 2,
 		STAT_FORTUNE = 1,
 		STAT_SPEED = 1,
-		
-		/datum/attribute/skill/combat/crossbows = 20,
+
 		/datum/attribute/skill/combat/bows = 10,
-		/datum/attribute/skill/combat/swords = 10,
-		/datum/attribute/skill/combat/wrestling = 20,
-		/datum/attribute/skill/combat/unarmed = 20,
-		/datum/attribute/skill/combat/knives = 20,
+		/datum/attribute/skill/combat/wrestling = 10,
+		/datum/attribute/skill/combat/unarmed = 10,
+		/datum/attribute/skill/combat/knives = 10,
 		/datum/attribute/skill/misc/swimming = 20,
-		/datum/attribute/skill/misc/climbing = 20,
+		/datum/attribute/skill/misc/climbing = 10,
 		/datum/attribute/skill/misc/riding = 20,
 		/datum/attribute/skill/misc/reading = 30,
 		/datum/attribute/skill/craft/cooking = 10,
 		/datum/attribute/skill/misc/sewing = 10,
 		/datum/attribute/skill/labor/mathematics = 30
-		/datum/attribute/skill/misc/athletics = 10
+	)
+
+	attribute_variance = list(
+		/datum/attribute/skill/combat/crossbows = list(0, 10),
+		/datum/attribute/skill/misc/athletics = list(0, 10)
 	)
 
 /datum/job/advclass/heir/aristocrat
