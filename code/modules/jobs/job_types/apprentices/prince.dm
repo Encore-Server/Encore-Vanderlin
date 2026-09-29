@@ -64,12 +64,11 @@
 		STAT_CONSTITUTION = 1,
 		STAT_SPEED = 1,
 		STAT_FORTUNE = 2,
-		STAT_ENDURANCE = 1, 
 
-		/datum/attribute/skill/combat/axesmaces = 10,
+		/datum/attribute/skill/combat/axesmaces = 20,
 		/datum/attribute/skill/combat/bows = 20,
 		/datum/attribute/skill/combat/crossbows = 20,
-		/datum/attribute/skill/combat/swords = 30,
+		/datum/attribute/skill/combat/swords = 20,
 		/datum/attribute/skill/combat/wrestling = 20,
 		/datum/attribute/skill/combat/unarmed = 20,
 		/datum/attribute/skill/combat/knives = 10,
@@ -115,15 +114,15 @@
 
 /datum/attribute_holder/sheet/job/heir/aristocrat
 	raw_attribute_list = list(
-		STAT_STRENGTH = 2,
-		STAT_INTELLIGENCE = 1,
+		STAT_PERCEPTION = 2,
+		STAT_STRENGTH = -1,
+		STAT_INTELLIGENCE = 2,
 		STAT_FORTUNE = 1,
-		STAT_CONSTITUTION = 1,
-		STAT_ENDURANCE = 2,
+		STAT_SPEED = 1,
 		
-		/datum/attribute/skill/combat/crossbows = 10,
+		/datum/attribute/skill/combat/crossbows = 20,
 		/datum/attribute/skill/combat/bows = 10,
-		/datum/attribute/skill/combat/swords = 30,
+		/datum/attribute/skill/combat/swords = 10,
 		/datum/attribute/skill/combat/wrestling = 20,
 		/datum/attribute/skill/combat/unarmed = 20,
 		/datum/attribute/skill/combat/knives = 20,
@@ -134,7 +133,7 @@
 		/datum/attribute/skill/craft/cooking = 10,
 		/datum/attribute/skill/misc/sewing = 10,
 		/datum/attribute/skill/labor/mathematics = 30
-		/datum/attribute/skill/misc/athletics = 30
+		/datum/attribute/skill/misc/athletics = 10
 	)
 
 /datum/job/advclass/heir/aristocrat
@@ -176,3 +175,74 @@
 		shirt = /obj/item/clothing/shirt/dress/royal/princess
 		shoes = /obj/item/clothing/shoes/shortboots
 		pants = /obj/item/clothing/pants/tights/colored/random
+
+/datum/attribute_holder/sheet/job/heir/forgotten
+	raw_attribute_list = list(
+		STAT_STRENGTH = 2,
+		STAT_FORTUNE = 1,
+		STAT_CONSTITUTION = 1,
+		STAT_ENDURANCE = 2,
+		
+		/datum/attribute/skill/combat/crossbows = 10,
+		/datum/attribute/skill/combat/bows = 10,
+		/datum/attribute/skill/combat/swords = 30,
+		/datum/attribute/skill/combat/polearms = 30
+		/datum/attribute/skill/combat/wrestling = 25,
+		/datum/attribute/skill/combat/unarmed = 25,
+		/datum/attribute/skill/combat/knives = 10,
+		/datum/attribute/skill/combat/shields = 30,
+		/datum/attribute/skill/misc/swimming = 20,
+		/datum/attribute/skill/misc/climbing = 20,
+		/datum/attribute/skill/misc/riding = 20,
+		/datum/attribute/skill/misc/reading = 30,
+		/datum/attribute/skill/craft/cooking = 10,
+		/datum/attribute/skill/misc/sewing = 10,
+		/datum/attribute/skill/labor/mathematics = 30
+		/datum/attribute/skill/misc/athletics = 30
+	)
+
+/datum/job/advclass/heir/bastard
+	title = "Forgotten Child."
+	tutorial = "You are a unimportant child of the shirleigh, It only makes sense that you studied the blade, to gain your own glory, so that your family may see how great you really are."
+	outfit = /datum/outfit/heir/aristocrat
+	category_tags = list(CTAG_HEIR)
+	attribute_sheet = /datum/attribute_holder/sheet/job/heir/forgotten
+
+	traits = list(
+		TRAIT_MEDIUMARMOR,
+	)
+
+/datum/job/advclass/heir/aristocrat/after_spawn(mob/living/carbon/human/spawned, client/player_client)
+	. = ..()
+	var/holder = spawned.patron?.devotion_holder
+	if(holder)
+		var/datum/devotion/devotion = new holder()
+		devotion.make_shirleigh_weak()
+		devotion.grant_to(spawned)
+
+/datum/outfit/heir/bastard
+	name = "Unawakened Bastard (Prince)"
+	belt = /obj/item/storage/belt/leather
+	beltl = /obj/item/storage/keyring/heir
+	beltr = /obj/item/storage/belt/pouch/coins/rich
+
+/datum/outfit/heir/aristocrat/pre_equip(mob/living/carbon/human/equipped_human, visuals_only)
+	. = ..()
+	if(equipped_human.gender == MALE)
+		pants = /obj/item/clothing/pants/tights
+		shirt = /obj/item/clothing/armor/gambeson/arming
+		armor = /obj/item/clothing/armor/brigandine/light
+		gloves = /obj/item/clothing/gloves/fingerless
+		beltr = /obj/item/weapon/knife/dagger/steel/special
+		beltl = /obj/item/weapon/sword/rapier/ironestoc
+		belt = /obj/item/storage/belt/leather
+		shoes = /obj/item/clothing/shoes/nobleboot
+	else
+		pants = /obj/item/clothing/pants/tights
+		shirt = /obj/item/clothing/armor/gambeson/arming
+		armor = /obj/item/clothing/armor/brigandine/light
+		gloves = /obj/item/clothing/gloves/fingerless
+		beltr = /obj/item/weapon/knife/dagger/steel/special
+		beltl = /obj/item/weapon/sword/rapier/ironestoc
+		belt = /obj/item/storage/belt/leather
+		shoes = /obj/item/clothing/shoes/nobleboot
