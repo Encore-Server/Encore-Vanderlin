@@ -189,7 +189,6 @@
 		/datum/attribute/skill/combat/crossbows = 10,
 		/datum/attribute/skill/combat/bows = 10,
 		/datum/attribute/skill/combat/swords = 30,
-		/datum/attribute/skill/combat/polearms = 30
 		/datum/attribute/skill/combat/wrestling = 25,
 		/datum/attribute/skill/combat/unarmed = 25,
 		/datum/attribute/skill/combat/knives = 10,
