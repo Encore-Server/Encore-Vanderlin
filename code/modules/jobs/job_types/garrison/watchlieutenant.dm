@@ -52,8 +52,8 @@
 	thus a "lieutenant" is a placeholder for a superior, during their absence.
 	*/
 	title = JOB_CITY_WATCH_LIEUTENANT
-	tutorial = "You are a lieutenant of the City Watch. \
-	You have been chosen by the Captain to lead the Watch in his absence; \
+	tutorial = "You are a Lieutenant of the Garrison. \
+	You have been chosen by the Captain to lead the Men-at-Arms in their absence; \
 	Failure is not an option."
 	department_flag = GARRISON
 	job_flags = (JOB_ANNOUNCE_ARRIVAL | JOB_SHOW_IN_CREDITS | JOB_EQUIP_RANK | JOB_NEW_PLAYER_JOINABLE)
@@ -63,7 +63,7 @@
 	spawn_positions = 1
 	bypass_lastclass = TRUE
 	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED, AGE_OLD, AGE_IMMORTAL)
-	allowed_races = RACES_PLAYER_NONDISCRIMINATED
+	allowed_races = RACES_LESS_DISCRIMINATED
 	blacklisted_species = list(SPEC_ID_HALFLING)
 	outfit = /datum/outfit/lieutenant
 	give_bank_account = 50

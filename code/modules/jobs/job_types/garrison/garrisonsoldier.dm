@@ -63,7 +63,8 @@
 	raw_attribute_list = list(
 		STAT_STRENGTH = 2,
 		STAT_ENDURANCE = 1,
-		STAT_CONSTITUTION = 2,
+		STAT_CONSTITUTION = 1,
+		STAT_SPEED = -1,
 		/datum/attribute/skill/combat/shields = 30,
 		/datum/attribute/skill/combat/wrestling = 30,
 		/datum/attribute/skill/combat/axesmaces = 20,
@@ -133,13 +134,14 @@
 		STAT_PERCEPTION = 2,
 		STAT_ENDURANCE = 1,
 		STAT_SPEED = 2,
+		STAT_STRENGTH = -1,
 		/datum/attribute/skill/combat/bows = 30,
-		/datum/attribute/skill/combat/crossbows = 20,
-		/datum/attribute/skill/combat/axesmaces = 30,
-		/datum/attribute/skill/combat/knives = 20,
-		/datum/attribute/skill/combat/swords = 10,
-		/datum/attribute/skill/combat/wrestling = 20,
+		/datum/attribute/skill/combat/crossbows = 30, // Because why not? If they somehow will get a crossbow, let them use it to the fullest.
+		/datum/attribute/skill/combat/knives = 30,
+		/datum/attribute/skill/combat/wrestling = 30,
+		/datum/attribute/skill/combat/axesmaces = 20, // Just to be able to non-lethaly detain someone using a cugel
 		/datum/attribute/skill/combat/unarmed = 20,
+		/datum/attribute/skill/combat/swords = 10,
 		/datum/attribute/skill/misc/swimming = 20,
 		/datum/attribute/skill/misc/climbing = 40,
 		/datum/attribute/skill/misc/athletics = 20,
@@ -160,26 +162,6 @@
 		TRAIT_DODGEEXPERT,
 	)
 	mind_traits = list(TRAIT_KNOWBANDITS)
-
-/datum/attribute_holder/sheet/job/garrison/archer
-	raw_attribute_list = list(
-		STAT_PERCEPTION = 2,
-		STAT_ENDURANCE = 1,
-		STAT_SPEED = 2,
-		/datum/attribute/skill/combat/bows = 30,
-		/datum/attribute/skill/combat/crossbows = 30, // Because why not? If they somehow will get a crossbow, let them use it to the fullest.
-		/datum/attribute/skill/combat/knives = 30,
-		/datum/attribute/skill/combat/wrestling = 30,
-		/datum/attribute/skill/combat/axesmaces = 20, // Just to be able to non-lethaly detain someone using a cugel
-		/datum/attribute/skill/combat/unarmed = 20,
-		/datum/attribute/skill/combat/swords = 10,
-		/datum/attribute/skill/misc/swimming = 20,
-		/datum/attribute/skill/misc/climbing = 40,
-		/datum/attribute/skill/misc/athletics = 20,
-		/datum/attribute/skill/misc/sneaking = 20,
-		/datum/attribute/skill/craft/crafting = 10,
-		/datum/attribute/skill/misc/reading = 10
-	)
 
 /datum/outfit/garrisonsoldier/archer
 	name = "Man-at-Arms Archer"
