@@ -63,9 +63,9 @@
 		STAT_PERCEPTION = 1,
 		STAT_CONSTITUTION = 1,
 		STAT_SPEED = 1,
-		STAT_FORTUNE = 2,
+		STAT_FORTUNE = 1,
 
-		/datum/attribute/skill/combat/axesmaces = 20,
+		/datum/attribute/skill/combat/axesmaces = 10,
 		/datum/attribute/skill/combat/bows = 20,
 		/datum/attribute/skill/combat/crossbows = 20,
 		/datum/attribute/skill/combat/swords = 20,
@@ -74,7 +74,7 @@
 		/datum/attribute/skill/combat/knives = 10,
 		/datum/attribute/skill/misc/swimming = 20,
 		/datum/attribute/skill/misc/climbing = 20,
-		/datum/attribute/skill/misc/athletics = 20,
+		/datum/attribute/skill/misc/athletics = 10,
 		/datum/attribute/skill/misc/riding = 30,
 		/datum/attribute/skill/misc/reading = 20,
 		/datum/attribute/skill/labor/mathematics = 30
