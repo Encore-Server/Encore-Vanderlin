@@ -223,10 +223,15 @@
 		devotion.grant_to(spawned)
 
 /datum/outfit/heir/bastard
-	name = "Unawakened Bastard (Prince)"
+	name = "Forgotten child (Prince)"
+	pants = /obj/item/clothing/pants/tights
+	shirt = /obj/item/clothing/armor/gambeson/arming
+	armor = /obj/item/clothing/armor/brigandine/light
+	gloves = /obj/item/clothing/gloves/fingerless
+	beltr = /obj/item/weapon/knife/dagger/steel/special
+	beltl = /obj/item/weapon/sword/rapier/ironestoc
 	belt = /obj/item/storage/belt/leather
-	beltl = /obj/item/storage/keyring/heir
-	beltr = /obj/item/storage/belt/pouch/coins/rich
+	shoes = /obj/item/clothing/shoes/nobleboot
 
 /datum/outfit/heir/aristocrat/pre_equip(mob/living/carbon/human/equipped_human, visuals_only)
 	. = ..()
