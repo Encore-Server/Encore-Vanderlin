@@ -140,7 +140,7 @@
 
 /datum/job/advclass/heir/aristocrat
 	title = "Unawakened Blood"
-	tutorial = "The One Envy's power in your blood is mostly dormant. Life has been kind to you; you've an entire keep at your disposal, servants to wait on you, and a whole retinue of guards to guard you. You've nothing to prove; just live the good life and you'll be a lord someday, too. A lack of ambition translates into a lacking skillset beyond schooling, though, and your breaks from boredom consist of being a damsel or court gossip"
+	tutorial = "The One Envy's power in your blood is mostly dormant. Life has been kind to you; you've an entire keep at your disposal, servants to wait on you, and a whole retinue of guards to guard you. You've nothing to prove; just live the good life and you'll be a lord someday, too. A lack of ambition translates into a lacking skillset beyond schooling, though, and your breaks from boredom consist of being a damsel or court gossip."
 	outfit = /datum/outfit/heir/aristocrat
 	category_tags = list(CTAG_HEIR)
 	attribute_sheet = /datum/attribute_holder/sheet/job/heir/aristocrat
@@ -148,7 +148,7 @@
 	traits = list(
 		TRAIT_MEDIUMARMOR,
 		TRAIT_BEAUTIFUL,
-		TRAIT_VIRGIN
+		TRAIT_VIRGIN,
 	)
 
 /datum/job/advclass/heir/aristocrat/after_spawn(mob/living/carbon/human/spawned, client/player_client)
