@@ -205,7 +205,7 @@
 
 /datum/job/advclass/heir/bastard
 	title = "Forgotten Child."
-	tutorial = "You are a unimportant child of the shirleigh, It only makes sense that you studied the blade, to gain your own glory, so that your family may see how great you really are."
+	tutorial = "You are a unawakened child of the shirleigh, It only makes sense that you studied the blade, to gain your own glory and prove yourself worthy of your name, so that others may see how great you really are."
 	outfit = /datum/outfit/heir/aristocrat
 	category_tags = list(CTAG_HEIR)
 	attribute_sheet = /datum/attribute_holder/sheet/job/heir/forgotten
