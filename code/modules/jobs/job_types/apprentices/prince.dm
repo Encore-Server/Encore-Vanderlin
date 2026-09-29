@@ -199,8 +199,8 @@
 		/datum/attribute/skill/misc/reading = 30,
 		/datum/attribute/skill/craft/cooking = 10,
 		/datum/attribute/skill/misc/sewing = 10,
-		/datum/attribute/skill/labor/mathematics = 30
-		/datum/attribute/skill/misc/athletics = 30
+		/datum/attribute/skill/labor/mathematics = 30,
+		/datum/attribute/skill/misc/athletics = 30,
 	)
 
 /datum/job/advclass/heir/bastard
