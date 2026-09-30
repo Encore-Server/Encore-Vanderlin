@@ -191,7 +191,7 @@
 		/datum/attribute/skill/combat/swords = 30,
 		/datum/attribute/skill/combat/wrestling = 25,
 		/datum/attribute/skill/combat/unarmed = 25,
-		/datum/attribute/skill/combat/knives = 10,
+		/datum/attribute/skill/combat/knives = 25,
 		/datum/attribute/skill/combat/shields = 30,
 		/datum/attribute/skill/misc/swimming = 20,
 		/datum/attribute/skill/misc/climbing = 20,
