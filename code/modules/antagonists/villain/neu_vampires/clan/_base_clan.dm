@@ -1,7 +1,7 @@
 GLOBAL_LIST_EMPTY_TYPED(vampire_clans, /datum/clan)	//>:3
 
 /datum/attribute_holder/sheet/job/clan
-
+	clamped_adjustment = list(
 		/datum/attribute/skill/misc/athletics = list(50, 50),
 		/datum/attribute/skill/combat/unarmed = list(40, 40)
 	)
