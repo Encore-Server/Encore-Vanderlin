@@ -1,7 +1,6 @@
-#define VAMPCOST_ONE 3000
-#define VAMPCOST_TWO VAMPCOST_ONE * 1.5
-#define VAMPCOST_THREE VAMPCOST_TWO * 1.5
-#define VAMPCOST_FOUR VAMPCOST_THREE * 1.5
+#define VAMPCOST_ONE 4000
+#define VAMPCOST_TWO 5000
+#define VAMPCOST_THREE 6000
 
 /obj/structure/vampire/bloodpool
 	name = "Crimson Crucible"
@@ -252,9 +251,10 @@
 		to_chat(contributor, span_notice("Received [refund_amount] vitae refund from cancelled project: [display_name]"))
 
 // Specific project types
+
 /datum/vampire_project/power_growth
-	display_name = "Rite of Stirring"
-	description = "The ancient blood stirs once more. Forgotten whispers echo through the marrow of the land."
+	display_name = "Rite of Reclamation"
+	description = "Strength long sealed returns. The soil, the stone, and the shadows bend again to their rightful master."
 	total_cost = VAMPCOST_ONE
 	completion_sound = 'sound/misc/batsound.ogg'
 	var/ascension_requirement = 0
@@ -288,23 +288,16 @@
 		bloodpool.available_project_types += next_phase
 
 /datum/vampire_project/power_growth/second
-	display_name = "Rite of Reclamation"
-	description = "Strength long sealed returns. The soil, the stone, and the shadows bend again to their rightful master."
+	display_name = "Rite of Dominion"
+	description = "The veil of time shreds. The Elder's will pours forth, binding trespassers within the grasp of the Land."
 	total_cost = VAMPCOST_TWO
-	ascension_requirement = 1
+	ascension_requirement = 2
 	next_phase = /datum/vampire_project/power_growth/third
 
 /datum/vampire_project/power_growth/third
-	display_name = "Rite of Dominion"
-	description = "The veil of time shreds. The Elder's will pours forth, binding trespassers within the grasp of the Land."
-	total_cost = VAMPCOST_THREE
-	ascension_requirement = 2
-	next_phase = /datum/vampire_project/power_growth/fourth
-
-/datum/vampire_project/power_growth/fourth
 	display_name = "Rite of Sovereignty"
 	description = "The Lord is whole. Ancient power saturates every stone and vein, for the Land and its master are one."
-	total_cost = VAMPCOST_FOUR
+	total_cost = VAMPCOST_THREE
 	ascension_requirement = 3
 	next_phase = null
 
