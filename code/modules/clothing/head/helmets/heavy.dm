@@ -32,7 +32,6 @@
 
 /obj/item/clothing/head/helmet/heavy/undivided
 	name = "templar silver sallet"
-	desc = PLACEHOLDER_PATRON_REBRANDING
 	icon_state = "silversallet"
 	item_state = "silversallet"
 
@@ -121,6 +120,12 @@
 	max_integrity = INTEGRITY_STANDARD
 	item_weight = 2.4 KILOGRAMS
 
+/obj/item/clothing/head/helmet/heavy/rust/bandit
+	name = "rusted alloy barbute"
+	desc = "A rusted barbute. Might turn your hair brown, but offers good protection. This one seems made of a strange alloy... "
+	armor_type = /datum/armor/head/plate
+	max_integrity = INTEGRITY_STRONG
+
 /obj/item/clothing/head/helmet/heavy/kabuto
 	name = "kabuto"
 	desc = "A Blackmeadow helmet of steel plates, gilded in blacksteel and gold trim alike to evoke feelings of nobility and strength. Commonly worn with a mask or mouthguard."
@@ -199,7 +204,6 @@
 
 /obj/item/clothing/head/helmet/heavy/envy
 	name = "darksteel frog helmet"
-	desc = PLACEHOLDER_PATRON_REBRANDING
 	adjustable = CAN_CADJUST
 	icon_state = "zizofrogmouth"
 	icon = 'icons/roguetown/clothing/special/evilarmor.dmi'
@@ -248,7 +252,6 @@
 
 /obj/item/clothing/head/helmet/heavy/hertannea
 	name = "willful helmet"
-	desc = PLACEHOLDER_PATRON_REBRANDING
 	icon_state = "baothahelm"
 	icon = 'icons/roguetown/clothing/special/baothanknight.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/special/onmob/evilarmor64x64.dmi'
@@ -286,14 +289,14 @@
 //............... Visires Helmet ............... //
 /obj/item/clothing/head/helmet/heavy/necked/visires
 	name = "flame helm"
-	desc = PLACEHOLDER_PATRON_REBRANDING
+	desc = null
 	icon_state = "astratahelm"
 	item_weight = 5.5 KILOGRAMS
 
 //............... Akan Helmet ............... //
 /obj/item/clothing/head/helmet/heavy/necked/akan
 	name = "air helm"
-	desc = PLACEHOLDER_PATRON_REBRANDING
+	desc = null
 	icon_state = "nochelm"
 	item_weight = 6 KILOGRAMS
 	flags_inv = HIDEEARS

@@ -222,7 +222,7 @@
 	keys = list(/obj/item/key/dungeon, /obj/item/key/atarms, /obj/item/key/gatehouse, /obj/item/key/archivist, /obj/item/key/consort)
 
 /obj/item/storage/keyring/heir
-	keys = list(/obj/item/key/dungeon, /obj/item/key/garrison, /obj/item/key/forrestgarrison, /obj/item/key/atarms, /obj/item/key/manor, /obj/item/key/guest, /obj/item/key/vault)
+	keys = list(/obj/item/key/dungeon, /obj/item/key/garrison, /obj/item/key/forrestgarrison, /obj/item/key/atarms, /obj/item/key/manor, /obj/item/key/guest, /obj/item/key/vault, /obj/item/key/archive)
 
 /obj/item/storage/keyring/guard
 	keys = list(/obj/item/key/garrison, /obj/item/key/gatehouse)
@@ -240,7 +240,7 @@
 	keys = list(/obj/item/key/merchant, /obj/item/key/mercenary, /obj/item/key/warehouse)
 
 /obj/item/storage/keyring/mage
-	keys = list(/obj/item/key/gatehouse, /obj/item/key/tower, /obj/item/key/mage)
+	keys = list(/obj/item/key/gatehouse, /obj/item/key/tower, /obj/item/key/mage, /obj/item/key/archive)
 
 /obj/item/storage/keyring/mageapprentice
 	keys = list(/obj/item/key/gatehouse, /obj/item/key/tower)
@@ -290,7 +290,7 @@
 	keys = list(/obj/item/key/manor, /obj/item/key/atarms, /obj/item/key/gatehouse)
 
 /obj/item/storage/keyring/physician
-	keys = list(/obj/item/key/manor, /obj/item/key/atarms, /obj/item/key/dungeon, /obj/item/key/courtphys, /obj/item/key/clinic, /obj/item/key/apothecary, /obj/item/key/feldsher)
+	keys = list(/obj/item/key/manor, /obj/item/key/atarms, /obj/item/key/dungeon, /obj/item/key/courtphys)
 
 /obj/item/storage/keyring/elder
 	keys = list(/obj/item/key/gatehouse, /obj/item/key/elder, /obj/item/key/butcher, /obj/item/key/soilson, /obj/item/key/manor)

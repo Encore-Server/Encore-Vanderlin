@@ -26,7 +26,7 @@
 /datum/job/butler
 	title = JOB_BUTLER
 	f_title = "Housekeeper"
-	alt_titles = list("Majordomo", "Master of Staff")
+	alt_titles = list("Head Butler", "Master of Staff")
 	tutorial = "You are elevated to near nobility, as you hold the distinguished position of master of the royal household staff. \
 	Your blade is a charcuterie of artisanal cheeses and meat, your armor wit and classical training. \
 	By your word the meals are served, the chambers kept, and the floors polished clean. \
@@ -35,7 +35,7 @@
 	department_flag = SERFS
 	display_order = JDO_BUTLER
 	job_flags = (JOB_ANNOUNCE_ARRIVAL | JOB_SHOW_IN_CREDITS | JOB_EQUIP_RANK | JOB_NEW_PLAYER_JOINABLE)
-	factions = list(FACTION_TOWN, SUB_FACTION_KEEP)
+	factions = list(FACTION_TOWN, SUB_FACTION_KEEP, SUB_FACTION_VAULT)
 	total_positions = 99
 	spawn_positions = 99
 	bypass_lastclass = TRUE
