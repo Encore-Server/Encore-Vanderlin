@@ -53,7 +53,7 @@
 	*/
 	title = "Garrison Lieutenant"
 	tutorial = "You are a Lieutenant of the Garrison. \
-	You have been chosen by the Captain to lead the Men-at-Arms in their absence; \
+	You have been chosen by the Captain to lead the Men-at-Arms and Watchmen in their absence; \
 	Failure is not an option."
 	department_flag = GARRISON
 	job_flags = (JOB_ANNOUNCE_ARRIVAL | JOB_SHOW_IN_CREDITS | JOB_EQUIP_RANK | JOB_NEW_PLAYER_JOINABLE)
