@@ -32,9 +32,6 @@
 
 	exp_type = list(EXP_TYPE_GARRISON)
 	exp_types_granted = list(EXP_TYPE_GARRISON, EXP_TYPE_COMBAT)
-	exp_requirements = list(
-		EXP_TYPE_GARRISON = 600
-	)
 
 /datum/job/forestguard/after_spawn(mob/living/carbon/human/spawned, client/player_client)
 	. = ..()

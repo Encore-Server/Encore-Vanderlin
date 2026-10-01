@@ -71,7 +71,7 @@
 	exp_type = list(EXP_TYPE_GARRISON)
 	exp_types_granted = list(EXP_TYPE_GARRISON, EXP_TYPE_NOBLE, EXP_TYPE_LEADERSHIP)
 	exp_requirements = list(
-		EXP_TYPE_GARRISON = 1500
+		EXP_TYPE_GARRISON = 240
 	)
 
 	job_bitflag = BITFLAG_ROYALTY | BITFLAG_GARRISON

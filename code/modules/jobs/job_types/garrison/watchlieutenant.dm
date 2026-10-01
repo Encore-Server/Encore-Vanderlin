@@ -72,7 +72,7 @@
 	cmode_music = 'sound/music/cmode/garrison/CombatGarrison.ogg'
 	exp_type = list(EXP_TYPE_GARRISON)
 	exp_types_granted  = list(EXP_TYPE_COMBAT, EXP_TYPE_GARRISON, EXP_TYPE_LEADERSHIP)
-	exp_requirements = list(EXP_TYPE_GARRISON = 900)
+	exp_requirements = list(EXP_TYPE_GARRISON = 120)
 	honorary = "Lieutenant"
 	job_bitflag = BITFLAG_GARRISON
 	starting_wage = 35

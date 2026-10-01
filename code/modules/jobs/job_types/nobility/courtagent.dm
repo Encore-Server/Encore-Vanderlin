@@ -28,7 +28,7 @@
 	exp_type = list(EXP_TYPE_LIVING)
 	exp_types_granted = list(EXP_TYPE_NOBLE, EXP_TYPE_COMBAT) //noble EXP as new Court Agents may want to transition to playing Hand with enough hours played
 	exp_requirements = list(
-		EXP_TYPE_LIVING = 300,
+		EXP_TYPE_LIVING = 120,
 	)
 
 	mind_traits = list(

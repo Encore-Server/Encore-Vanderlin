@@ -31,7 +31,7 @@
 	)
 
 	exp_type = list(EXP_TYPE_LIVING)
-	exp_requirements = list(EXP_TYPE_LIVING = 600)
+	exp_requirements = list(EXP_TYPE_LIVING = 30)
 
 
 /datum/job/advclass/mercenary/blackoak/after_spawn(mob/living/carbon/human/spawned, client/player_client)

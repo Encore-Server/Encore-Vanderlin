@@ -36,9 +36,7 @@
 	exp_type = list(EXP_TYPE_LIVING, EXP_TYPE_ADVENTURER, EXP_TYPE_MEDICAL)
 	exp_types_granted = list(EXP_TYPE_ADVENTURER, EXP_TYPE_MEDICAL)
 	exp_requirements = list(
-		EXP_TYPE_LIVING = 1200,
-		EXP_TYPE_ADVENTURER = 300,
-		EXP_TYPE_MEDICAL = 300
+		EXP_TYPE_LIVING = 120,
 	)
 
 	attribute_sheet = /datum/attribute_holder/sheet/job/bogapprentice

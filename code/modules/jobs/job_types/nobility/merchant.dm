@@ -33,12 +33,7 @@
 	give_bank_account = 200
 	knows_the_town = TRUE
 	known_by_the_town = TRUE
-	exp_type = list(EXP_TYPE_LIVING, EXP_TYPE_MERCHANT_COMPANY)
 	exp_types_granted = list(EXP_TYPE_MERCHANT_COMPANY)
-	exp_requirements = list(
-		EXP_TYPE_LIVING = 600,
-		EXP_TYPE_MERCHANT_COMPANY = 300,
-	)
 	max_apprentices = 2
 
 	attribute_sheet = /datum/attribute_holder/sheet/job/merchant
