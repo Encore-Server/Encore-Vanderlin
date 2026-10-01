@@ -2940,6 +2940,7 @@
 #include "code\modules\clothing\face\eyepatch.dm"
 #include "code\modules\clothing\face\goggles.dm"
 #include "code\modules\clothing\face\masks.dm"
+#include "code\modules\clothing\face\nighteyegoggles.dm"
 #include "code\modules\clothing\face\spectacle.dm"
 #include "code\modules\clothing\gloves\_gloves.dm"
 #include "code\modules\clothing\gloves\angle.dm"
