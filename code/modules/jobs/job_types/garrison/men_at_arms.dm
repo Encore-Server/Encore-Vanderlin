@@ -1,4 +1,4 @@
-/
+/*
 /datum/job/men_at_arms
 	title = JOB_MAN_AT_ARMS
 	tutorial = "Chosen by the Captain and King, you're not like those stinking City Watchmen. \
