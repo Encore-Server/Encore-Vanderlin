@@ -43,8 +43,8 @@
 	alt_honorary = list("Sir")
 	alt_honorary_female = list("Dame")
 	tutorial = "Law and Order, your divine reason for existence. \
-	You have been given command over the town and keep garrison to help ensure order and peace within the city, \
-	and defend it against the many dangers of the peninsula."
+	You have been given command over the town and keep garrison to help ensure order and peace, \
+	and defend it against the many dangers of the island."
 	department_flag = NOBLEMEN
 	display_order = JDO_CAPTAIN
 	job_flags = (JOB_ANNOUNCE_ARRIVAL | JOB_SHOW_IN_CREDITS | JOB_EQUIP_RANK | JOB_NEW_PLAYER_JOINABLE)
