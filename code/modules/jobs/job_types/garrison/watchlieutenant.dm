@@ -51,7 +51,7 @@
 	and tenant meaning "holding" as in "holding a position";
 	thus a "lieutenant" is a placeholder for a superior, during their absence.
 	*/
-	title = JOB_CITY_WATCH_LIEUTENANT
+	title = "Garrison Lieutenant"
 	tutorial = "You are a Lieutenant of the Garrison. \
 	You have been chosen by the Captain to lead the Men-at-Arms in their absence; \
 	Failure is not an option."
@@ -123,11 +123,12 @@
 	gloves = /obj/item/clothing/gloves/chain/iron
 	neck = /obj/item/clothing/neck/gorget
 	backl = /obj/item/storage/backpack/satchel
-	beltr = /obj/item/flashlight/flare/torch/lantern
+	beltr = /obj/item/weapon/mace/cudgel
 	backpack_contents = list(
 		/obj/item/rope/chain = 1,
 		/obj/item/book/law/small = 1,
-		/obj/item/weapon/mace/cudgel = 1
+		/obj/item/weapon/knife/dagger = 1,
+		/obj/item/weapon/scabbard/knife = 1,
 	)
 
 /datum/outfit/lieutenant/pre_equip(mob/living/carbon/human/equipped_human, visuals_only)

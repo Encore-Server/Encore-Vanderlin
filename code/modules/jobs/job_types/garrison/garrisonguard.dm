@@ -1,4 +1,4 @@
-/
+/*
 /datum/job/guardsman
 	title = JOB_CITY_WATCH
 	tutorial = "You are a member of the City Watch. \

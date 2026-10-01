@@ -36,17 +36,14 @@
 
 /datum/outfit/garrisonsoldier
 	name = "Man-at-Arms Base"
-	cloak = /obj/item/clothing/cloak/half/guard
+	cloak = /obj/item/clothing/cloak/stabard/guard
 	pants = /obj/item/clothing/pants/trou/leather/splint
-	wrists = /obj/item/clothing/wrists/bracers/ironjackchain
-	shoes = /obj/item/clothing/shoes/boots/armor/ironmaille
+	wrists = /obj/item/clothing/wrists/bracers/leather
 	belt = /obj/item/storage/belt/leather/townguard
 	gloves = /obj/item/clothing/gloves/leather
 
 /datum/outfit/garrisonsoldier/pre_equip(mob/living/carbon/human/equipped_human, visuals_only)
 	. = ..()
-	cloak = pick(/obj/item/clothing/cloak/half/guard, /obj/item/clothing/cloak/half/guardsecond)
-
 	if(equipped_human.dna && !(equipped_human.dna.species.id in RACES_PLAYER_NONDISCRIMINATED))
 		mask = /obj/item/clothing/face/shepherd/clothmask
 
@@ -117,16 +114,17 @@
 /datum/outfit/garrisonsoldier/footman
 	name = "Man-at-Arms Footman"
 	head = /obj/item/clothing/head/helmet/townbarbute
-	neck = /obj/item/clothing/neck/gorget
-	armor = /obj/item/clothing/armor/cuirass/iron
+	neck = /obj/item/clothing/neck/chaincoif/iron
+	armor = /obj/item/clothing/armor/chainmail/hauberk/iron
 	shirt = /obj/item/clothing/armor/gambeson
+	shoes = /obj/item/clothing/shoes/boots/armor/ironmaille
 	backr = /obj/item/weapon/shield/heater
 	backl = /obj/item/storage/backpack/satchel
-	beltr = /obj/item/weapon/sword/short/iron
 	beltl = /obj/item/weapon/mace/cudgel
-	scabbards = list(/obj/item/weapon/scabbard/sword)
 	backpack_contents = list(
-		/obj/item/rope/chain = 1
+		/obj/item/rope/chain = 1,
+		/obj/item/weapon/knife/dagger = 1,
+		/obj/item/weapon/scabbard/knife = 1,
 	)
 
 /datum/attribute_holder/sheet/job/garrison/archer
@@ -166,14 +164,17 @@
 /datum/outfit/garrisonsoldier/archer
 	name = "Man-at-Arms Archer"
 	head = /obj/item/clothing/head/helmet/townbarbute
-	neck = /obj/item/clothing/neck/chaincoif
-	armor = /obj/item/clothing/armor/gambeson/heavy
+	neck = /obj/item/clothing/neck/chaincoif/iron
+	armor = /obj/item/clothing/armor/leather/splint
+	shoes = /obj/item/clothing/shoes/boots/leather
 	backr = /obj/item/gun/ballistic/bow
 	backl = /obj/item/storage/backpack/satchel
 	beltr = /obj/item/ammo_holder/quiver/arrows
 	beltl = /obj/item/weapon/mace/cudgel
 	backpack_contents = list(
-		/obj/item/rope/chain = 1
+		/obj/item/rope/chain = 1,
+		/obj/item/weapon/knife/dagger = 1,
+		/obj/item/weapon/scabbard/knife = 1,
 	)
 
 /datum/outfit/garrisonsoldier/archer/pre_equip(mob/living/carbon/human/equipped_human, visuals_only)
@@ -215,16 +216,17 @@
 /datum/outfit/garrisonsoldier/pikeman
 	name = "Man-at-Arms Pikeman"
 	head = /obj/item/clothing/head/helmet/townbarbute
-	armor = /obj/item/clothing/armor/cuirass/iron
-	shirt = /obj/item/clothing/armor/gambeson
-	neck = /obj/item/clothing/neck/gorget
+	armor = /obj/item/clothing/armor/chainmail/iron
+	shirt = /obj/item/clothing/armor/gambeson/light
+	neck = /obj/item/clothing/neck/chaincoif/iron
+	shoes = /obj/item/clothing/shoes/boots/leather
 	backl = /obj/item/storage/backpack/satchel
 	backr = /obj/item/weapon/polearm/spear
-	beltl = /obj/item/weapon/sword/short/iron
 	beltr = /obj/item/weapon/mace/cudgel
-	scabbards = list(/obj/item/weapon/scabbard/sword)
 	backpack_contents = list(
-		/obj/item/rope/chain = 1
+		/obj/item/rope/chain = 1,
+		/obj/item/weapon/knife/dagger = 1,
+		/obj/item/weapon/scabbard/knife = 1,
 	)
 
 /mob/proc/haltyell()
