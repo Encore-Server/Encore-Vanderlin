@@ -94,7 +94,7 @@
 		/obj/item/rope = 1,
 	)
 	output = /obj/item/storage/backpack/satchel
-	craftdiff = 1
+	craftdiff = 2
 
 /datum/repeatable_crafting_recipe/leather/storage/satchel/create_blacklisted_paths()
 	blacklisted_paths = subtypesof(/obj/item/rope)
@@ -130,7 +130,7 @@
 		/obj/item/natural/hide/cured = 1,
 		/obj/item/grown/log/tree/stick = 2,
 	)
-	craftdiff = 1
+	craftdiff = 2
 
 /datum/repeatable_crafting_recipe/leather/storage/sword_scabbard
 	name = "scabbard"
@@ -140,7 +140,7 @@
 		/obj/item/grown/log/tree/small = 1,
 		/obj/item/rope = 1,
 	)
-	craftdiff = 1
+	craftdiff = 2
 
 /// Misc Leatherworking
 /datum/repeatable_crafting_recipe/leather/bedsheetpelt
