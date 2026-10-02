@@ -203,7 +203,7 @@
 		/datum/attribute/skill/misc/athletics = 30,
 	)
 
-/datum/job/advclass/heir/bastard
+/datum/job/advclass/heir/forgotten
 	title = "Forgotten Child."
 	tutorial = "You are a unawakened child of the shirleigh, It only makes sense that you studied the blade, to gain your own glory and prove yourself worthy of your name, so that others may see how great you really are."
 	outfit = /datum/outfit/heir/aristocrat
