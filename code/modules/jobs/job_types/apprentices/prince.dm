@@ -232,24 +232,3 @@
 	beltl = /obj/item/weapon/sword/rapier/ironestoc
 	belt = /obj/item/storage/belt/leather
 	shoes = /obj/item/clothing/shoes/nobleboot
-
-/datum/outfit/heir/aristocrat/pre_equip(mob/living/carbon/human/equipped_human, visuals_only)
-	. = ..()
-	if(equipped_human.gender == MALE)
-		pants = /obj/item/clothing/pants/tights
-		shirt = /obj/item/clothing/armor/gambeson/arming
-		armor = /obj/item/clothing/armor/brigandine/light
-		gloves = /obj/item/clothing/gloves/fingerless
-		beltr = /obj/item/weapon/knife/dagger/steel/special
-		beltl = /obj/item/weapon/sword/rapier/ironestoc
-		belt = /obj/item/storage/belt/leather
-		shoes = /obj/item/clothing/shoes/nobleboot
-	else
-		pants = /obj/item/clothing/pants/tights
-		shirt = /obj/item/clothing/armor/gambeson/arming
-		armor = /obj/item/clothing/armor/brigandine/light
-		gloves = /obj/item/clothing/gloves/fingerless
-		beltr = /obj/item/weapon/knife/dagger/steel/special
-		beltl = /obj/item/weapon/sword/rapier/ironestoc
-		belt = /obj/item/storage/belt/leather
-		shoes = /obj/item/clothing/shoes/nobleboot
