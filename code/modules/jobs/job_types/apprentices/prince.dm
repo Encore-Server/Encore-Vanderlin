@@ -151,7 +151,7 @@
 		TRAIT_VIRGIN,
 	)
 
-/datum/job/advclass/heir/forgotten/after_spawn(mob/living/carbon/human/spawned, client/player_client)
+/datum/job/advclass/heir/aristocrat/after_spawn(mob/living/carbon/human/spawned, client/player_client)
 	. = ..()
 	var/holder = spawned.patron?.devotion_holder
 	if(holder)
@@ -214,7 +214,7 @@
 		TRAIT_MEDIUMARMOR,
 	)
 
-/datum/job/advclass/heir/aristocrat/after_spawn(mob/living/carbon/human/spawned, client/player_client)
+/datum/job/advclass/heir/forgotten/after_spawn(mob/living/carbon/human/spawned, client/player_client)
 	. = ..()
 	var/holder = spawned.patron?.devotion_holder
 	if(holder)
