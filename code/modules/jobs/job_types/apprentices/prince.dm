@@ -206,7 +206,7 @@
 /datum/job/advclass/heir/forgotten
 	title = "Forgotten Child."
 	tutorial = "You are an unawakened child of the Shirleighs. Rather than be deterred, it only made sense that you studied the blade, to gain your own glory and prove yourself worthy of your name. Through martial prowess alone, perhaps your kin may see how great you really are."
-	outfit = /datum/outfit/heir/aristocrat
+	outfit = /datum/outfit/heir/forgotten
 	category_tags = list(CTAG_HEIR)
 	attribute_sheet = /datum/attribute_holder/sheet/job/heir/forgotten
 
