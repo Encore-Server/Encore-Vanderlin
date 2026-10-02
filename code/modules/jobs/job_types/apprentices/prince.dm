@@ -222,7 +222,7 @@
 		devotion.make_shirleigh_weak()
 		devotion.grant_to(spawned)
 
-/datum/outfit/heir/bastard
+/datum/outfit/heir/forgotten
 	name = "Forgotten child (Prince)"
 	pants = /obj/item/clothing/pants/tights
 	shirt = /obj/item/clothing/armor/gambeson/arming
