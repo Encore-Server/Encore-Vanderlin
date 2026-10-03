@@ -31,7 +31,7 @@
 
 	log_game("The round has ended.")
 
-	to_chat(world, "<BR><BR><BR><span class='reallybig'>So ends this tale of [SSmapping.config?.map_name || "Vanderlin"].</span>")
+	to_chat(world, "<BR><BR><BR><span class='reallybig'>The Envy Stirs. A heroic tale has concluded upon [SSmapping.config?.map_name || "Vanderlin"].</span>")
 	get_end_reason()
 
 	var/list/key_list = list()
