@@ -55,6 +55,7 @@
 		TRAIT_FORAGER,
 		TRAIT_LEGENDARY_ALCHEMIST,
 		TRAIT_STEELHEARTED
+		ANIMAL_PROTECTION
 	)
 	selection_color = "#a33096"
 	languages = list(/datum/language/lifesong)
