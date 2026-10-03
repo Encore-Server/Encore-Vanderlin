@@ -64,6 +64,7 @@
 #define FACTION_BUMS		"Bums"
 #define FACTION_DECEIVERS	"Deceivers"
 #define FACTION_VIKINGS     "Vikings"
+#define FACTION_CHURCH		"Katholikos"//Church vault access without the guardians killing you
 #define FACTION_INQUISITION	"Inquisition"
 #define FACTION_INFERNAL	"Infernal"
 
