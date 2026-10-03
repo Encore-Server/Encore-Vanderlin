@@ -193,6 +193,9 @@
 /obj/structure/window/openclose{
 	dir = 4
 	},
+/obj/structure/curtain/browncurtain/dir{
+	dir = 4
+	},
 /turf/open/floor/ruinedwood/turned,
 /area/indoors/town/tavern/saiga)
 "afe" = (
@@ -3281,7 +3284,7 @@
 /area/indoors/town/keep/phys)
 "ceM" = (
 /obj/structure/bed/inn/double,
-/obj/item/bedsheet/double_pelt,
+/obj/item/bedsheet/fabric_double,
 /turf/open/floor/ruinedwood/turned,
 /area/indoors/town/tavern/saiga)
 "ceU" = (
@@ -3302,6 +3305,9 @@
 /area/indoors/town/keep/guest/meeting)
 "cfd" = (
 /obj/structure/window/openclose{
+	dir = 4
+	},
+/obj/structure/curtain/purplecurtain/dir{
 	dir = 4
 	},
 /turf/open/floor/blocks,
@@ -4926,6 +4932,9 @@
 /area/indoors/town)
 "dcX" = (
 /mob/living/simple_animal/pet/cat/inn,
+/obj/structure/fake_machine/hailerboard{
+	desc = "A notice board that shows all the notices the Adventurer's Guild has put up. Want to post your own? Look for the HAILER in the town square!"
+	},
 /turf/open/floor/ruinedwood/two,
 /area/indoors/town/tavern/saiga)
 "ddc" = (
@@ -5336,9 +5345,6 @@
 	pixel_y = 15
 	},
 /obj/structure/chair/stool/bar,
-/obj/structure/fake_machine/hailerboard{
-	desc = "A notice board that shows all the notices the Adventurer's Guild has put up. Want to post your own? Look for the HAILER in the town square!"
-	},
 /turf/open/floor/ruinedwood/two,
 /area/indoors/town/tavern/saiga)
 "dsB" = (
@@ -8445,6 +8451,9 @@
 	},
 /turf/open/openspace,
 /area/outdoors/beach)
+"fmz" = (
+/turf/open/floor/wood,
+/area/outdoors/town/neighborhood/east)
 "fmV" = (
 /turf/open/floor/church,
 /area/indoors/town/keep/library)
@@ -11670,6 +11679,15 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/closed/wall/mineral/pipe,
 /area/indoors/town/keep/magician/greenhouse)
+"hjI" = (
+/obj/structure/window/openclose{
+	dir = 4
+	},
+/obj/structure/curtain/redcurtain/dir{
+	dir = 4
+	},
+/turf/open/floor/blocks,
+/area/indoors/town/tavern/saiga)
 "hks" = (
 /obj/effect/decal/cobbleedge{
 	dir = 9
@@ -12865,6 +12883,9 @@
 /area/outdoors/town/neighborhood/east)
 "hQZ" = (
 /obj/structure/window/openclose{
+	dir = 8
+	},
+/obj/structure/curtain/browncurtain/dir{
 	dir = 8
 	},
 /turf/open/floor/ruinedwood/turned,
@@ -18410,8 +18431,8 @@
 /area/outdoors/town)
 "lls" = (
 /obj/structure/door{
-	name = "MEDIUM ROOM II";
-	lockid = "medroomii"
+	name = "ROOM II";
+	lockid = "roomii"
 	},
 /obj/effect/mapping_helpers/access/locker,
 /turf/open/floor/wood,
@@ -20115,6 +20136,9 @@
 /obj/structure/window/openclose{
 	dir = 1
 	},
+/obj/structure/curtain/browncurtain/dir{
+	dir = 1
+	},
 /turf/open/floor/blocks,
 /area/indoors/town/tavern/saiga)
 "mfR" = (
@@ -20261,8 +20285,8 @@
 /area/outdoors/town/neighborhood/west)
 "mji" = (
 /obj/structure/door{
-	name = "MEDIUM ROOM I";
-	lockid = "medroomi"
+	name = "ROOM I";
+	lockid = "roomi"
 	},
 /obj/effect/mapping_helpers/access/locker,
 /turf/open/floor/wood,
@@ -20611,6 +20635,17 @@
 /obj/machinery/light/fueled/torchholder/l,
 /turf/open/floor/churchrough,
 /area/indoors/town/church)
+"mry" = (
+/obj/structure/fluff/railing/tall/retaining{
+	dir = 4
+	},
+/obj/structure/fluff/railing/tall/retaining{
+	dir = 8
+	},
+/obj/structure/fluff/railing/tall/retaining,
+/obj/structure/fluff/railing/wood,
+/turf/open/water/river,
+/area/outdoors/town/neighborhood/east)
 "mrM" = (
 /obj/effect/decal/shadow_floor,
 /turf/open/floor/blocks/stonered,
@@ -22228,6 +22263,7 @@
 /area/under/town/sewer)
 "noo" = (
 /obj/structure/window/openclose,
+/obj/structure/curtain/redcurtain/dir,
 /turf/open/floor/ruinedwood/turned,
 /area/indoors/town/tavern/saiga)
 "nov" = (
@@ -23314,10 +23350,7 @@
 /turf/open/floor/churchbrick,
 /area/indoors/town/keep/magician/basement)
 "nYy" = (
-/obj/structure/fluff/clutter/shrub/tundra{
-	pixel_y = 15;
-	density = 0
-	},
+/obj/structure/fake_machine/scomm,
 /turf/open/floor/ruinedwood/spiral,
 /area/indoors/town/clinic_large)
 "nYD" = (
@@ -27303,8 +27336,8 @@
 /turf/open/floor/churchrough,
 /area/indoors/town/church)
 "qqt" = (
-/obj/item/bedsheet/cloth,
 /obj/structure/bed/inn,
+/obj/item/bedsheet/pelt,
 /turf/open/floor/wood,
 /area/indoors/town/tavern/saiga)
 "qqv" = (
@@ -29010,6 +29043,11 @@
 /obj/structure/fluff/steamvent,
 /turf/open/floor/blocks,
 /area/outdoors/exposed)
+"ruq" = (
+/obj/structure/window/openclose,
+/obj/structure/curtain/bluecurtain/dir,
+/turf/open/floor/ruinedwood/turned,
+/area/indoors/town/tavern/saiga)
 "rve" = (
 /obj/structure/bookcase/random,
 /obj/effect/decal/cleanable/dirt/cobweb/cobweb2,
@@ -29339,7 +29377,6 @@
 /turf/open/floor/wood,
 /area/indoors/town/steward)
 "rIk" = (
-/obj/item/bin/water,
 /obj/structure/fake_machine/atm,
 /obj/machinery/light/fueled/wallfire/candle/r,
 /turf/open/floor/ruinedwood/spiral,
@@ -29377,11 +29414,9 @@
 /turf/open/openspace,
 /area/indoors/town/vault)
 "rJO" = (
-/obj/structure/closet/crate/chest/crate,
-/obj/structure/fake_machine/hailerboard{
-	desc = "A notice board that shows all the notices the Adventurer's Guild has put up. Want to post your own? Look for the HAILER in the town square!"
-	},
-/turf/open/floor/ruinedwood,
+/obj/structure/bed/inn,
+/obj/item/bedsheet/fabric,
+/turf/open/floor/ruinedwood/turned,
 /area/indoors/town/tavern/saiga)
 "rJQ" = (
 /obj/effect/decal/shadow_floor{
@@ -34307,7 +34342,9 @@
 /turf/open/floor/grass/yel,
 /area/outdoors/town/noble_manor/yellow)
 "uQg" = (
-/turf/open/floor/ruinedwood,
+/obj/structure/window/openclose,
+/obj/structure/curtain/purplecurtain/dir,
+/turf/open/floor/ruinedwood/turned,
 /area/indoors/town/tavern/saiga)
 "uQE" = (
 /obj/effect/decal/cobbleedge{
@@ -38500,8 +38537,8 @@
 /area/indoors/town/keep/hand)
 "xwA" = (
 /obj/structure/door{
-	name = "MEDIUM ROOM III";
-	lockid = "medroomiii"
+	name = "ROOM III";
+	lockid = "roomiii"
 	},
 /obj/effect/mapping_helpers/access/locker,
 /turf/open/floor/wood,
@@ -38609,6 +38646,15 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/metal/alt,
 /area/indoors/town/steward)
+"xAO" = (
+/obj/structure/window/openclose{
+	dir = 4
+	},
+/obj/structure/curtain/bluecurtain/dir{
+	dir = 4
+	},
+/turf/open/floor/blocks,
+/area/indoors/town/tavern/saiga)
 "xAR" = (
 /obj/structure/table/wood/plain,
 /obj/item/recipe_book/cooking{
@@ -62146,13 +62192,13 @@ gwE
 lLR
 tFO
 jof
-azW
+fmz
 dCV
 tFO
 tFO
-tFO
-tFO
-tFO
+mry
+fmz
+xkO
 tIO
 bSc
 bSc
@@ -63719,7 +63765,7 @@ bLD
 bLD
 vGz
 jHc
-azW
+fmz
 wne
 iwm
 tFO
@@ -70701,9 +70747,9 @@ aJX
 aJX
 suG
 suG
-iAs
+mlU
 suG
-iAs
+mlU
 sju
 suG
 uev
@@ -84026,10 +84072,10 @@ fNx
 dvc
 xfN
 xfN
-cfd
+hjI
 xfN
 xfN
-cfd
+xAO
 xfN
 xfN
 cfd
@@ -84694,7 +84740,7 @@ uZu
 xnA
 mgH
 xnA
-rJO
+xnA
 xnA
 wms
 wms
@@ -84826,7 +84872,7 @@ xnA
 xnA
 gQK
 xnA
-uQg
+xnA
 xnA
 hCE
 ifj
@@ -96301,10 +96347,10 @@ fNx
 fNx
 fNx
 dvc
-alJ
+kJY
 dvc
 dvc
-alJ
+kJY
 dvc
 fNx
 fNx
@@ -96433,10 +96479,10 @@ dvc
 fNx
 fNx
 dvc
-alJ
+kJY
 dvc
 dvc
-alJ
+kJY
 dvc
 fNx
 fNx
@@ -96565,10 +96611,10 @@ dvc
 fNx
 fNx
 dvc
-alJ
+kJY
 dvc
 dvc
-alJ
+kJY
 dvc
 fNx
 fNx
@@ -96697,10 +96743,10 @@ dvc
 fNx
 fNx
 dvc
-alJ
+kJY
 dvc
 dvc
-alJ
+kJY
 dvc
 fNx
 fNx
@@ -97625,7 +97671,7 @@ dvc
 noo
 ceM
 pry
-ceM
+rJO
 xfN
 hhL
 hhL
@@ -97886,7 +97932,7 @@ fNx
 dvc
 dvc
 dvc
-noo
+uQg
 saw
 qiv
 dJL
@@ -98150,10 +98196,10 @@ fNx
 fNx
 dvc
 dvc
-noo
+uQg
 ceM
 pry
-ceM
+rJO
 xfN
 hhL
 hhL
@@ -98414,7 +98460,7 @@ fNx
 fNx
 dvc
 dvc
-noo
+ruq
 saw
 qiv
 dJL
@@ -98678,10 +98724,10 @@ fNx
 fNx
 fNx
 dvc
-noo
+ruq
 ceM
 pry
-ceM
+rJO
 xfN
 krL
 hhL
@@ -109879,10 +109925,10 @@ dvc
 uIy
 kmA
 cEG
-kJY
-kJY
-kJY
-kJY
+alJ
+alJ
+alJ
+alJ
 vbt
 kmA
 aSt
@@ -111067,10 +111113,10 @@ dvc
 hTs
 kmA
 aTt
-kJY
-kJY
-kJY
-kJY
+alJ
+alJ
+alJ
+alJ
 aTt
 kmA
 hdZ
