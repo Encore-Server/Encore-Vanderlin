@@ -9697,9 +9697,7 @@
 /turf/open/water/ocean,
 /area/outdoors/beach)
 "fYO" = (
-/obj/structure/boiler{
-	dir = 1
-	},
+/obj/structure/boiler,
 /obj/structure/fluff/railing/border{
 	dir = 4
 	},
