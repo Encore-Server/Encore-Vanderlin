@@ -19,7 +19,7 @@
 
 /datum/job/bogwitch
 	title = JOB_BOGWITCH
-	tutorial = "Your ancestor came to Domotan Island as a healer. Eventually, they drifted apart from civilisation to the cauldron of life that is the Weeping Wood, drawn by the strange herbs and magics present in the mud. While some seek you out for your obscure knowledge and wisdom, others may yet fear you for your obscurity and wild ways. Mender, potionmaker, miracle-worker, doomed to seclusion- but maybe your apprentice will carry on the old ways."
+	tutorial = "Your ancestor came to Domotan Island as a healer. Eventually, they drifted apart from civilisation to the cauldron of life that is the Weeping Wood, drawn by the strange herbs and magics [...]
 	department_flag = OUTSIDERS
 	job_flags = (JOB_SHOW_IN_CREDITS | JOB_EQUIP_RANK | JOB_NEW_PLAYER_JOINABLE)
 	display_order = JDO_BOGWITCH
@@ -61,6 +61,8 @@
 
 /datum/job/bogwitch/after_spawn(mob/living/carbon/human/spawned, client/player_client)
 	. = ..()
+
+	spawned.add_faction("bogwitch_protected")
 
 	spawned.apply_status_effect(/datum/status_effect/buff/bone_ward)
 
