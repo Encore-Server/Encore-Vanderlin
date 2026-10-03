@@ -1,4 +1,3 @@
-///Datum for basic mobs to define what they can attack.
 /datum/targetting_datum
 
 ///Returns true or false depending on if the target can be attacked by the mob
@@ -38,6 +37,8 @@
 
 	if(isliving(the_target)) //Targetting vs living mobs
 		var/mob/living/L = the_target
+		if(L.has_faction("bogwitch_protected"))
+			return FALSE
 		if(faction_check(living_mob, L) || L.stat >= DEAD) //basic targetting doesn't target dead people
 			return FALSE
 		return TRUE
