@@ -80,4 +80,4 @@
 
 /datum/job/advclass/templar
 	exp_types_granted = list(EXP_TYPE_CHURCH, EXP_TYPE_COMBAT, EXP_TYPE_CLERIC)
-	factions = list(FACTION_TOWN)
+	factions = list(FACTION_TOWN, FACTION_CHURCH)
