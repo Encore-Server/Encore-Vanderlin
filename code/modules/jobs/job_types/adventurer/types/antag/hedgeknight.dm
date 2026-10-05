@@ -31,10 +31,6 @@
 	raw_attribute_list = list(
 		/datum/attribute/skill/combat/axesmaces = 10,
 	)
-/datum/attribute_holder/sheet/job/hedgeknight/warflail
-	raw_attribute_list = list(
-		/datum/attribute/skill/combat/whipsflails = 30,
-	)
 /datum/attribute_holder/sheet/job/brigand/spear
 	raw_attribute_list = list(
 		/datum/attribute/skill/combat/polearms = 10,
@@ -62,11 +58,8 @@
 	. = ..()
 	var/static/list/weapons = list(
 		"Greataxe" = list(/obj/item/weapon/axe/greataxe),
-		"Flail & Shield" = list(/obj/item/weapon/shield/wood, /obj/item/weapon/flail),
 		"Glaive" = list(/obj/item/weapon/polearm/halberd/bardiche/glaive),
 		"Warhammer & Shield" = list(/obj/item/weapon/shield/heater, /obj/item/weapon/mace/warhammer),
-		"Maul" = list(/obj/item/weapon/mace/goden/maul),
-		"Claws" = list(/obj/item/weapon/handclaw)
 		"Greatsword" = list(/obj/item/weapon/sword/long/greatsword)
 
 	)
@@ -75,10 +68,6 @@
 		if("Greataxe")
 			spawned.put_in_hands(new /obj/item/weapon/axe/greataxe)
 			spawned.attributes?.add_sheet(/datum/attribute_holder/sheet/job/brigand/axe)
-		if("Flail & Shield")
-			spawned.put_in_hands(new /obj/item/weapon/shield/wood)
-			spawned.put_in_hands(new /obj/item/weapon/flail)
-			spawned.attributes?.add_sheet(/datum/attribute_holder/sheet/job/brigand/warflail)
 		if("Glaive")
 			spawned.put_in_hands(new /obj/item/weapon/polearm/halberd/bardiche/glaive)
 			spawned.attributes?.add_sheet(/datum/attribute_holder/sheet/job/hedgeknight/polearms)
