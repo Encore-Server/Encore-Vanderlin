@@ -29,6 +29,10 @@
 	raw_attribute_list = list(
 		/datum/attribute/skill/combat/unarmed = 10,
 	)
+/datum/attribute_holder/sheet/job/brigand/greatsword
+	raw_attribute_list = list(
+		/datum/attribute/skill/combat/swords = 20,
+	)
 
 /datum/job/advclass/bandit/brigand //Strength class, starts with axe or flails and medium armor training
 	title = "Brigand"
@@ -85,8 +89,7 @@
 			spawned.put_in_hands(new /obj/item/weapon/polearm/halberd/bardiche/woodcutter/steel)
 		if("Greatsword")
 			spawned.put_in_hands(new /obj/item/weapon/sword/long/greatsword)
-		
-	spawned.select_equippable(player_client, weapons, message = "Choose your weapon.", title = "TAKE UP ARMS.")
+			spawned.attributes?.add_sheet(/datum/attribute_holder/sheet/job/brigand/greatsword)
 
 /datum/outfit/bandit/brigand
 	name = "Brigand (Bandit)"
