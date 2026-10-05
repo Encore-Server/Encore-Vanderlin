@@ -49,6 +49,7 @@
 	var/static/list/weapons = list(
 		"Spear & Crossbow" = list(/obj/item/weapon/polearm/spear/billhook, /obj/item/gun/ballistic/bow/cross),
 		"Sword & Buckler" = list(/obj/item/weapon/sword, /obj/item/weapon/shield/tower/buckleriron)
+		"Footman War Axe" = list(/obj/item/weapon/polearm/halberd/bardiche/warcutter),
 	)
 	var/weapon_choice = spawned.select_equippable(player_client, weapons, message = "Choose your weapon.", title = "TAKE UP ARMS.")
 	switch(weapon_choice)
@@ -56,6 +57,8 @@
 			spawned.equip_to_slot_or_del(new /obj/item/ammo_holder/quiver/bolts, ITEM_SLOT_BELT_R, TRUE)
 			spawned.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/kettle, ITEM_SLOT_HEAD, TRUE)
 		if("Sword & Buckler")
+			spawned.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/sallet, ITEM_SLOT_HEAD, TRUE)
+		if(Footman War Axe)
 			spawned.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/sallet, ITEM_SLOT_HEAD, TRUE)
 
 
