@@ -78,8 +78,6 @@
 		if("Greatsword")
 			spawned.put_in_hands(new /obj/item/weapon/sword/long/greatsword)
 		
-	spawned.select_equippable(player_client, weapons, message = "Choose your weapon.", title = "TAKE UP ARMS.")
-
 /datum/outfit/bandit/hedgeknight
 	name = "Hedge Knight (Bandit)"
 	head = /obj/item/clothing/head/helmet/heavy/rust/bandit
