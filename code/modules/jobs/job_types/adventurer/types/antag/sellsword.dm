@@ -61,7 +61,6 @@
 		if(Footman War Axe)
 			spawned.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/sallet, ITEM_SLOT_HEAD, TRUE)
 
-
 /datum/outfit/bandit/sellsword
 	name = "Sellsword (Bandit)"
 	belt = /obj/item/storage/belt/leather
