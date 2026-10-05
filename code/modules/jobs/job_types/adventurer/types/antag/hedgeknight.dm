@@ -23,7 +23,22 @@
 		/datum/attribute/skill/craft/weapon_repair = 20,
 		/datum/attribute/skill/craft/armor_repair = 20,
 	)
-
+/datum/attribute_holder/sheet/job/hedgeknight/polearms
+	raw_attribute_list = list(
+		/datum/attribute/skill/combat/polearms  = 10,
+	)
+/datum/attribute_holder/sheet/job/hedgeknight/axe
+	raw_attribute_list = list(
+		/datum/attribute/skill/combat/axesmaces = 10,
+	)
+/datum/attribute_holder/sheet/job/hedgeknight/warflail
+	raw_attribute_list = list(
+		/datum/attribute/skill/combat/whipsflails = 30,
+	)
+/datum/attribute_holder/sheet/job/brigand/spear
+	raw_attribute_list = list(
+		/datum/attribute/skill/combat/polearms = 10,
+	)
 /datum/job/advclass/bandit/hedgeknight //heavy knight class - just like black knight adventurer class. starts with heavy armor training and plate, but less weapon skills than brigand, sellsword and knave
 	title = "Hedge Knight"
 	tutorial = "A noble fallen from grace, your tarnished armor sits upon your shoulders as a heavy reminder of the life you've lost. Take back what is rightfully yours."
@@ -41,6 +56,49 @@
 		TRAIT_STEELHEARTED,
 		TRAIT_DEADNOSE,
 	)
+
+
+/datum/job/advclass/bandit/brigand/on_roundstart(mob/living/carbon/human/spawned, client/player_client)
+	. = ..()
+	var/static/list/weapons = list(
+		"Battleaxe & Cudgel" = list(/obj/item/weapon/axe/battle, /obj/item/weapon/mace/cudgel),
+		"Flail & Shield" = list(/obj/item/weapon/shield/wood, /obj/item/weapon/flail),
+		"Glaive" = list(/obj/item/weapon/polearm/halberd/bardiche/glaive),
+		"Warhammer & Shield" = list(/obj/item/weapon/shield/heater, /obj/item/weapon/mace/warhammer),
+		"Maul" = list(/obj/item/weapon/mace/goden/maul),
+		"Claws" = list(/obj/item/weapon/handclaw)
+		"Knuckledusters" = list(/obj/item/weapon/knuckles)
+		"Felling Axe" = list(/obj/item/weapon/polearm/halberd/bardiche/woodcutter/steel)
+		"Greatsword" = list(/obj/item/weapon/sword/long/greatsword)
+
+	)
+	var/weapon_choice = tgui_input_list(player_client,"CHOOSE YOUR WEAPON.", "ARMS TO SLAY THE OPPRESSORS", weapons)
+	switch(weapon_choice)
+		if("Battleaxe & Cudgel")
+			spawned.put_in_hands(new /obj/item/weapon/axe/battle)
+			spawned.put_in_hands(new /obj/item/weapon/mace/cudgel)
+			spawned.attributes?.add_sheet(/datum/attribute_holder/sheet/job/brigand/axe)
+		if("Flail & Shield")
+			spawned.put_in_hands(new /obj/item/weapon/shield/wood)
+			spawned.put_in_hands(new /obj/item/weapon/flail)
+			spawned.attributes?.add_sheet(/datum/attribute_holder/sheet/job/brigand/warflail)
+		if("Glaive")
+			spawned.put_in_hands(new /obj/item/weapon/polearm/halberd/bardiche/glaive)
+			spawned.attributes?.add_sheet(/datum/attribute_holder/sheet/job/hedgeknight/polearms)
+		if("Warhammer & Shield")
+			spawned.put_in_hands(new /obj/item/weapon/shield/heater)
+			spawned.put_in_hands(new /obj/item/weapon/mace/warhammer)
+			spawned.attributes?.add_sheet(/datum/attribute_holder/sheet/job/hedgeknight/axe)
+		if("Maul")
+			spawned.put_in_hands(new /obj/item/weapon/mace/goden/maul)
+			spawned.attributes?.add_sheet(/datum/attribute_holder/sheet/job/hedgeknight/axe)
+		if("Felling Axe")
+			spawned.put_in_hands(new /obj/item/weapon/polearm/halberd/bardiche/woodcutter/steel)
+			spawned.attributes?.add_sheet(/datum/attribute_holder/sheet/job/hedgeknight/axe)
+		if("Greatsword")
+			spawned.put_in_hands(new /obj/item/weapon/sword/long/greatsword)
+		
+	spawned.select_equippable(player_client, weapons, message = "Choose your weapon.", title = "TAKE UP ARMS.")
 
 /datum/outfit/bandit/hedgeknight
 	name = "Hedge Knight (Bandit)"
