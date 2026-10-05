@@ -25,6 +25,12 @@
 		/datum/attribute/skill/craft/armor_repair = 20,
 	)
 
+/datum/attribute_holder/sheet/job/brigand/unarmed
+	raw_attribute_list = list(
+		/datum/attribute/skill/combat/unarmed = 10,
+		/datum/attribute/skill/combat/wrestling = 10,
+	)
+
 /datum/job/advclass/bandit/brigand //Strength class, starts with axe or flails and medium armor training
 	title = "Brigand"
 	tutorial = "Cast from society, you use your powerful physical might and endurance to take from those who are weaker from you."
@@ -48,6 +54,9 @@
 		"Battleaxe & Cudgel" = list(/obj/item/weapon/axe/battle, /obj/item/weapon/mace/cudgel),
 		"Flail & Shield" = list(/obj/item/weapon/shield/wood, /obj/item/weapon/flail),
 		"Glaive" = list(/obj/item/weapon/polearm/halberd/bardiche/glaive),
+		"Warhammer & Shield" = /obj/item/weapon/shield/heater, /obj/item/weapon/mace/warhammer),
+		"Maul" = /obj/item/weapon/mace/goden/maul
+		"Claws" = /obj/item/weapon/handclaw
 	)
 
 	spawned.select_equippable(player_client, weapons, message = "Choose your weapon.", title = "TAKE UP ARMS.")
