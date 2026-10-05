@@ -61,22 +61,19 @@
 /datum/job/advclass/bandit/brigand/on_roundstart(mob/living/carbon/human/spawned, client/player_client)
 	. = ..()
 	var/static/list/weapons = list(
-		"Battleaxe & Cudgel" = list(/obj/item/weapon/axe/battle, /obj/item/weapon/mace/cudgel),
+		"Greataxe" = list(/obj/item/weapon/axe/greataxe),
 		"Flail & Shield" = list(/obj/item/weapon/shield/wood, /obj/item/weapon/flail),
 		"Glaive" = list(/obj/item/weapon/polearm/halberd/bardiche/glaive),
 		"Warhammer & Shield" = list(/obj/item/weapon/shield/heater, /obj/item/weapon/mace/warhammer),
 		"Maul" = list(/obj/item/weapon/mace/goden/maul),
 		"Claws" = list(/obj/item/weapon/handclaw)
-		"Knuckledusters" = list(/obj/item/weapon/knuckles)
-		"Felling Axe" = list(/obj/item/weapon/polearm/halberd/bardiche/woodcutter/steel)
 		"Greatsword" = list(/obj/item/weapon/sword/long/greatsword)
 
 	)
 	var/weapon_choice = tgui_input_list(player_client,"CHOOSE YOUR WEAPON.", "ARMS TO SLAY THE OPPRESSORS", weapons)
 	switch(weapon_choice)
-		if("Battleaxe & Cudgel")
-			spawned.put_in_hands(new /obj/item/weapon/axe/battle)
-			spawned.put_in_hands(new /obj/item/weapon/mace/cudgel)
+		if("Greataxe")
+			spawned.put_in_hands(new /obj/item/weapon/axe/greataxe)
 			spawned.attributes?.add_sheet(/datum/attribute_holder/sheet/job/brigand/axe)
 		if("Flail & Shield")
 			spawned.put_in_hands(new /obj/item/weapon/shield/wood)
@@ -88,12 +85,6 @@
 		if("Warhammer & Shield")
 			spawned.put_in_hands(new /obj/item/weapon/shield/heater)
 			spawned.put_in_hands(new /obj/item/weapon/mace/warhammer)
-			spawned.attributes?.add_sheet(/datum/attribute_holder/sheet/job/hedgeknight/axe)
-		if("Maul")
-			spawned.put_in_hands(new /obj/item/weapon/mace/goden/maul)
-			spawned.attributes?.add_sheet(/datum/attribute_holder/sheet/job/hedgeknight/axe)
-		if("Felling Axe")
-			spawned.put_in_hands(new /obj/item/weapon/polearm/halberd/bardiche/woodcutter/steel)
 			spawned.attributes?.add_sheet(/datum/attribute_holder/sheet/job/hedgeknight/axe)
 		if("Greatsword")
 			spawned.put_in_hands(new /obj/item/weapon/sword/long/greatsword)
