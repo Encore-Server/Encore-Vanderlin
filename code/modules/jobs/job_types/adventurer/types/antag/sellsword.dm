@@ -58,7 +58,7 @@
 			spawned.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/kettle, ITEM_SLOT_HEAD, TRUE)
 		if("Sword & Buckler")
 			spawned.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/sallet, ITEM_SLOT_HEAD, TRUE)
-		if(Footman War Axe)
+		if("Footman War Axe")
 			spawned.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/sallet, ITEM_SLOT_HEAD, TRUE)
 
 /datum/outfit/bandit/sellsword
