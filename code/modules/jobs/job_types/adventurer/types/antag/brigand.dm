@@ -1,3 +1,51 @@
+/datum/attribute_holder/sheet/job/brigand
+	raw_attribute_list = list(
+		STAT_STRENGTH = 4,
+		STAT_ENDURANCE = 3,
+		STAT_CONSTITUTION = 4,
+		/datum/attribute/skill/combat/polearms = 40,
+		/datum/attribute/skill/combat/axesmaces = 40,
+		/datum/attribute/skill/combat/shields = 40,
+		/datum/attribute/skill/combat/wrestling = 30,
+		/datum/attribute/skill/combat/unarmed = 30,
+		/datum/attribute/skill/combat/swords = 20,
+		/datum/attribute/skill/combat/whipsflails = 40,
+		/datum/attribute/skill/combat/knives = 20,
+		/datum/attribute/skill/combat/bows = 20,
+		/datum/attribute/skill/combat/crossbows = 40,
+		/datum/attribute/skill/craft/crafting = 20,
+		/datum/attribute/skill/craft/carpentry = 10,
+		/datum/attribute/skill/misc/reading = 10,
+		/datum/attribute/skill/misc/climbing = 30,
+		/datum/attribute/skill/misc/athletics = 30,
+		/datum/attribute/skill/misc/swimming = 30,
+		/datum/attribute/skill/misc/sewing = 20,
+		/datum/attribute/skill/misc/medicine = 30,
+		/datum/attribute/skill/craft/weapon_repair = 20,
+		/datum/attribute/skill/craft/armor_repair = 20,
+	)
+
+/datum/attribute_holder/sheet/job/brigand/unarmed
+	raw_attribute_list = list(
+		/datum/attribute/skill/combat/unarmed = 10,
+	)
+
+/datum/job/advclass/bandit/brigand //Strength class, starts with axe or flails and medium armor training
+	title = "Brigand"
+	tutorial = "Cast from society, you use your powerful physical might and endurance to take from those who are weaker from you."
+	outfit = /datum/outfit/bandit/brigand
+	category_tags = list(CTAG_BANDIT)
+	cmode_music = 'sound/music/cmode/antag/combat_bandit_brigand.ogg'
+
+	attribute_sheet = /datum/attribute_holder/sheet/job/brigand
+
+	traits = list(
+		TRAIT_MEDIUMARMOR,
+		TRAIT_CLOSECOMBAT,
+		TRAIT_STEELHEARTED,
+		TRAIT_DEADNOSE,
+	)
+
 /datum/job/advclass/bandit/brigand/on_roundstart(mob/living/carbon/human/spawned, client/player_client)
 	. = ..()
 	var/static/list/weapons = list(
@@ -7,6 +55,10 @@
 		"Warhammer & Shield" = list(/obj/item/weapon/shield/heater, /obj/item/weapon/mace/warhammer),
 		"Maul" = list(/obj/item/weapon/mace/goden/maul),
 		"Claws" = list(/obj/item/weapon/handclaw)
+		"Knuckledusters" = list(/obj/item/weapon/knuckles)
+		"Felling Axe" = list(/obj/item/weapon/polearm/halberd/bardiche/woodcutter/steel)
+		"Greatsword" = list(/obj/item/weapon/sword/long/greatsword)
+
 	)
 	var/weapon_choice = tgui_input_list(player_client,"CHOOSE YOUR WEAPON.", "ARMS TO SLAY THE OPPRESSORS", weapons)
 	switch(weapon_choice)
@@ -26,5 +78,25 @@
 		if("Claws")
 			spawned.put_in_hands(new /obj/item/weapon/handclaw)
 			spawned.attributes?.add_sheet(/datum/attribute_holder/sheet/job/brigand/unarmed)
-
+		if("Knuckledusters")
+			spawned.put_in_hands(new /obj/item/weapon/handclaw)
+			spawned.attributes?.add_sheet(/datum/attribute_holder/sheet/job/brigand/unarmed)
+		if("Felling Axe")
+			spawned.put_in_hands(new /obj/item/weapon/polearm/halberd/bardiche/woodcutter/steel)
+		if("Greatsword")
+			spawned.put_in_hands(new /obj/item/weapon/sword/long/greatsword)
+		
 	spawned.select_equippable(player_client, weapons, message = "Choose your weapon.", title = "TAKE UP ARMS.")
+
+/datum/outfit/bandit/brigand
+	name = "Brigand (Bandit)"
+	belt = /obj/item/storage/belt/leather
+	pants = /obj/item/clothing/pants/trou/leather
+	shirt = /obj/item/clothing/shirt/shortshirt/colored/random
+	shoes = /obj/item/clothing/shoes/boots/darkboots
+	backr = /obj/item/storage/backpack/satchel
+	backpack_contents = list(/obj/item/needle/thorn = 1, /obj/item/natural/cloth = 1, /obj/item/clothing/face/shepherd/rag = 1)
+	mask = /obj/item/clothing/face/facemask/steel
+	neck = /obj/item/clothing/neck/chaincoif/iron
+	head = /obj/item/clothing/head/helmet/leather/volfhelm
+	armor = /obj/item/clothing/armor/cuirass/iron
