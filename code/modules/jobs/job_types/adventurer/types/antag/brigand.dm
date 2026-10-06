@@ -85,11 +85,8 @@
 		if("Knuckledusters")
 			spawned.put_in_hands(new /obj/item/weapon/handclaw)
 			spawned.attributes?.add_sheet(/datum/attribute_holder/sheet/job/brigand/unarmed)
-		if("Felling Axe")
-			spawned.put_in_hands(new /obj/item/weapon/polearm/halberd/bardiche/woodcutter/steel)
-		if("Greatsword")
-			spawned.put_in_hands(new /obj/item/weapon/sword/long/greatsword)
-			spawned.attributes?.add_sheet(/datum/attribute_holder/sheet/job/brigand/greatsword)
+		if("Woodcutters Axe")
+			spawned.put_in_hands(new /obj/item/weapon/polearm/halberd/bardiche/woodcutter)
 
 /datum/outfit/bandit/brigand
 	name = "Brigand (Bandit)"
