@@ -60,6 +60,7 @@
 		"Greataxe" = list(/obj/item/weapon/axe/greataxe),
 		"Warhammer & Shield" = list(/obj/item/weapon/shield/heater, /obj/item/weapon/mace/warhammer),
 		"Greatsword" = list(/obj/item/weapon/sword/long/greatsword)
+		"Longsword" = list(/obj/item/weapon/sword/long)
 	)
 	var/weapon_choice = tgui_input_list(player_client,"CHOOSE YOUR WEAPON.", "ARMS TO SLAY THE OPPRESSORS", weapons)
 	switch(weapon_choice)
@@ -72,6 +73,8 @@
 			spawned.attributes?.add_sheet(/datum/attribute_holder/sheet/job/hedgeknight/axe)
 		if("Greatsword")
 			spawned.put_in_hands(new /obj/item/weapon/sword/long/greatsword)
+		if("Longsword")
+			spawned.put_in_hands(new /obj/item/weapon/sword/long)
 		
 /datum/outfit/bandit/hedgeknight
 	name = "Hedge Knight (Bandit)"
