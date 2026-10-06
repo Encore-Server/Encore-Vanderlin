@@ -615,12 +615,10 @@
 	additional_items = list(/obj/item/natural/cloth)
 	created_item = (/obj/item/clothing/head/helmet/heavy/bucket/keeper)
 
-/*
 /datum/anvil_recipe/armor/steel/sinistar
 	name = "Sinistar Helmet (+Steel Bar)"
 	created_item = /obj/item/clothing/head/helmet/heavy/sinistar
 	additional_items = list(/obj/item/ingot/steel)
-*/
 
 /datum/anvil_recipe/armor/iron/shadow_plate_gauntlets
 	name = "Shadow Plate Gauntlets"
@@ -1179,7 +1177,6 @@
 	created_item = /obj/item/clothing/armor/plate/blkknight
 	craftdiff = 5
 
-/*
 /datum/anvil_recipe/armor/blacksteel/envy_plate_chest
 	name = "Darksteel Plate Armor (+Bar x3)"
 	additional_items = list(/obj/item/ingot/blacksteel, /obj/item/ingot/blacksteel, /obj/item/ingot/blacksteel)
@@ -1298,7 +1295,6 @@
 	created_item = /obj/item/clothing/shoes/anklets
 	craftdiff = 2
 
-
 /datum/anvil_recipe/armor/holysee_plate
 	name = "holy silver plate"
 	required_material = /obj/item/ingot/silverblessed
@@ -1332,7 +1328,6 @@
 	additional_items = list(/obj/item/ingot/gold)
 	created_item = /obj/item/clothing/face/lordmask/naledi/sojourner
 	craftdiff = 4
-
 
 /datum/anvil_recipe/armor/iliopehelm
 	name = "iliopeian helmet"
