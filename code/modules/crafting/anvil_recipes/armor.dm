@@ -1188,7 +1188,7 @@
 
 /datum/anvil_recipe/armor/blacksteel/elven_plate_chest
 	name = "Elven Plate Armor (+Bar x3)"
-	additional_items = list(/obj/item/ingot/steel, /obj/item/ingot/steel, /obj/item/ingot/steel)
+	additional_items = list(/obj/item/ingot/blacksteel, /obj/item/ingot/blacksteel, /obj/item/ingot/blacksteel)
 	created_item = /obj/item/clothing/armor/rare/elfplate
 	craftdiff = 5
 
@@ -1197,7 +1197,6 @@
 	additional_items = list(/obj/item/ingot/blacksteel, /obj/item/ingot/blacksteel, /obj/item/ingot/blacksteel)
 	created_item = /obj/item/clothing/armor/rare/elfplate/welfplate
 	craftdiff = 5
-*/
 
 /datum/anvil_recipe/armor/blacksteel/platelegs
 	name = "Blacksteel Plate Chausses (+Bar)"
@@ -1205,13 +1204,11 @@
 	created_item = /obj/item/clothing/pants/platelegs/blk
 	craftdiff = 5
 
-/*
 /datum/anvil_recipe/armor/blacksteel/envy_plate_pants
 	name = "Darksteel Plate Chausses (+Bar)"
 	additional_items = list(/obj/item/ingot/blacksteel)
 	created_item = /obj/item/clothing/pants/platelegs/zizo
 	craftdiff = 5
-*/
 
 /datum/anvil_recipe/armor/blacksteel/bucket
 	name = "Blacksteel Great Helm (+Bar)"
@@ -1224,35 +1221,32 @@
 	created_item = /obj/item/clothing/gloves/plate/blk
 	craftdiff = 5
 
-/*
 /datum/anvil_recipe/armor/blacksteel/envy_plate_gloves
 	name = "Darksteel Plate Gauntlets"
 	created_item = /obj/item/clothing/gloves/plate/zizo
 	craftdiff = 5
 
-/datum/anvil_recipe/armor/steel/elven_plate_gloves
+/datum/anvil_recipe/armor/blacksteel/elven_plate_gloves
 	name = "Elven Plate Gauntlets"
 	created_item = /obj/item/clothing/gloves/rare/elfplate
 	craftdiff = 5
 
-/datum/anvil_recipe/armor/steel/dark_elven_plate_gloves
+/datum/anvil_recipe/armor/blacksteel/dark_elven_plate_gloves
 	name = "Dark Elven Plate Gauntlets"
 	created_item = /obj/item/clothing/gloves/rare/elfplate/welfplate
 	craftdiff = 5
-*/
 
 /datum/anvil_recipe/armor/blacksteel/plateboots
 	name = "Blacksteel Plate Boots"
 	created_item = /obj/item/clothing/shoes/boots/armor/blkknight
 	craftdiff = 5
 
-/*
-/datum/anvil_recipe/armor/steel/elven_plate_boots
+/datum/anvil_recipe/armor/blacksteel/elven_plate_boots
 	name = "Elven Plate Boots"
 	created_item = /obj/item/clothing/shoes/boots/rare/elfplate
 	craftdiff = 5
 
-/datum/anvil_recipe/armor/steel/dark_elven_plate_boots
+/datum/anvil_recipe/armor/blacksteel/dark_elven_plate_boots
 	name = "Dark Elven Plate Boots"
 	created_item = /obj/item/clothing/shoes/boots/rare/elfplate/welfplate
 	craftdiff = 5
@@ -1286,18 +1280,17 @@
 	created_item = /obj/item/clothing/head/helmet/heavy/archdevils
 	craftdiff = 5
 
-/datum/anvil_recipe/armor/steel/elven_helm
+/datum/anvil_recipe/armor/blacksteel/elven_helm
 	name = "Elven Plate Helmet (+Bar)"
-	additional_items = list(/obj/item/ingot/steel)
+	additional_items = list(/obj/item/ingot/blacksteel)
 	created_item = /obj/item/clothing/head/rare/elfplate
 	craftdiff = 5
 
-/datum/anvil_recipe/armor/steel/dark_elven_helm
+/datum/anvil_recipe/armor/blacksteel/dark_elven_helm
 	name = "Dark Elven Plate Helmet (+Bar)"
-	additional_items = list(/obj/item/ingot/steel)
+	additional_items = list(/obj/item/ingot/blacksteel)
 	created_item = /obj/item/clothing/head/rare/elfplate/welfplate
 	craftdiff = 5
-*/
 
 /datum/anvil_recipe/armor/anklets
 	name = "golden anklets"
