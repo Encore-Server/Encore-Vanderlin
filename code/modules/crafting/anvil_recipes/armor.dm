@@ -1188,7 +1188,7 @@
 
 /datum/anvil_recipe/armor/blacksteel/elven_plate_chest
 	name = "Elven Plate Armor (+Bar x3)"
-	additional_items = list(/obj/item/ingot/blacksteel, /obj/item/ingot/blacksteel, /obj/item/ingot/blacksteel)
+	additional_items = list(/obj/item/ingot/steel, /obj/item/ingot/steel, /obj/item/ingot/steel)
 	created_item = /obj/item/clothing/armor/rare/elfplate
 	craftdiff = 5
 
@@ -1230,12 +1230,12 @@
 	created_item = /obj/item/clothing/gloves/plate/zizo
 	craftdiff = 5
 
-/datum/anvil_recipe/armor/blacksteel/elven_plate_gloves
+/datum/anvil_recipe/armor/steel/elven_plate_gloves
 	name = "Elven Plate Gauntlets"
 	created_item = /obj/item/clothing/gloves/rare/elfplate
 	craftdiff = 5
 
-/datum/anvil_recipe/armor/blacksteel/dark_elven_plate_gloves
+/datum/anvil_recipe/armor/steel/dark_elven_plate_gloves
 	name = "Dark Elven Plate Gauntlets"
 	created_item = /obj/item/clothing/gloves/rare/elfplate/welfplate
 	craftdiff = 5
@@ -1247,12 +1247,12 @@
 	craftdiff = 5
 
 /*
-/datum/anvil_recipe/armor/blacksteel/elven_plate_boots
+/datum/anvil_recipe/armor/steel/elven_plate_boots
 	name = "Elven Plate Boots"
 	created_item = /obj/item/clothing/shoes/boots/rare/elfplate
 	craftdiff = 5
 
-/datum/anvil_recipe/armor/blacksteel/dark_elven_plate_boots
+/datum/anvil_recipe/armor/steel/dark_elven_plate_boots
 	name = "Dark Elven Plate Boots"
 	created_item = /obj/item/clothing/shoes/boots/rare/elfplate/welfplate
 	craftdiff = 5
@@ -1286,15 +1286,15 @@
 	created_item = /obj/item/clothing/head/helmet/heavy/archdevils
 	craftdiff = 5
 
-/datum/anvil_recipe/armor/blacksteel/elven_helm
+/datum/anvil_recipe/armor/steel/elven_helm
 	name = "Elven Plate Helmet (+Bar)"
-	additional_items = list(/obj/item/ingot/blacksteel)
+	additional_items = list(/obj/item/ingot/steel)
 	created_item = /obj/item/clothing/head/rare/elfplate
 	craftdiff = 5
 
-/datum/anvil_recipe/armor/blacksteel/dark_elven_helm
+/datum/anvil_recipe/armor/steel/dark_elven_helm
 	name = "Dark Elven Plate Helmet (+Bar)"
-	additional_items = list(/obj/item/ingot/blacksteel)
+	additional_items = list(/obj/item/ingot/steel)
 	created_item = /obj/item/clothing/head/rare/elfplate/welfplate
 	craftdiff = 5
 */
