@@ -94,12 +94,15 @@
 /datum/outfit/bandit/brigand
 	name = "Brigand (Bandit)"
 	belt = /obj/item/storage/belt/leather
-	pants = /obj/item/clothing/pants/trou/leather
-	shirt = /obj/item/clothing/shirt/shortshirt/colored/random
+	pants = /obj/item/clothing/pants/platelegs/ancient/bandit
+	shirt = /obj/item/clothing/armor/chainmail/ancient/bandit
 	shoes = /obj/item/clothing/shoes/boots/darkboots
 	backr = /obj/item/storage/backpack/satchel
-	backpack_contents = list(/obj/item/needle/thorn = 1, /obj/item/natural/cloth = 1, /obj/item/clothing/face/shepherd/rag = 1)
-	mask = /obj/item/clothing/face/facemask/steel
-	neck = /obj/item/clothing/neck/chaincoif/iron
+	backpack_contents = list(/obj/item/needle = 1, /obj/item/natural/bundle/cloth/bandage/full = 1, /obj/item/clothing/face/shepherd/rag = 1, /obj/item/weapon/hammer/iron = 1)
+	mask = /obj/item/clothing/face/facemask/steel/ancient/bandit
+	neck = /obj/item/clothing/neck/chaincoif/ancient/bandit
 	head = /obj/item/clothing/head/helmet/leather/volfhelm
-	armor = /obj/item/clothing/armor/cuirass/iron
+	armor = /obj/item/clothing/armor/cuirass/ancient/bandit
+	wrists = /obj/item/clothing/wrists/bracers/splintarms
+	gloves = /obj/item/clothing/gloves/chain/ancient/bandit
+	cloak = /obj/item/clothing/cloak/raincloak/furcloak/colored/black
