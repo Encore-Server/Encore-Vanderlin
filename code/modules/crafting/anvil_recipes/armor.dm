@@ -485,6 +485,25 @@
 	additional_items = list(/obj/item/natural/cloth)
 	created_item = /obj/item/clothing/armor/brigandine/light
 
+/datum/anvil_recipe/armor/iron/gronnplatefull
+	name = "Gronnic Plate Armor (+Bar x3)"
+	required_material = /obj/item/ingot/iron
+	additional_items = list(/obj/item/ingot/iron,/obj/item/ingot/iron,/obj/item/ingot/iron)
+	created_item = /obj/item/clothing/armor/plate/iron/gronn
+	craftdiff = 2
+
+
+/datum/anvil_recipe/armor/iron/gronnplatehelmet
+	name = "Gronnic Iron Plate Helmet (+Bar)"
+	additional_items = list(/obj/item/ingot/iron)
+	created_item = /obj/item/clothing/head/helmet/heavy/ironplate/gronn
+	craftdiff = 2
+
+/datum/anvil_recipe/armor/iron/gronnchausses
+	name = "Gronnic Iron Plate Chausses"
+	created_item = /obj/item/clothing/pants/platelegs/iron/gronn
+
+
 ///////////////////////////////////////////////
 // --------- STEEL -----------
 /datum/anvil_recipe/armor/steel
