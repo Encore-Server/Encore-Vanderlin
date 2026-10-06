@@ -58,10 +58,8 @@
 	. = ..()
 	var/static/list/weapons = list(
 		"Greataxe" = list(/obj/item/weapon/axe/greataxe),
-		"Glaive" = list(/obj/item/weapon/polearm/halberd/bardiche/glaive),
 		"Warhammer & Shield" = list(/obj/item/weapon/shield/heater, /obj/item/weapon/mace/warhammer),
 		"Greatsword" = list(/obj/item/weapon/sword/long/greatsword)
-
 	)
 	var/weapon_choice = tgui_input_list(player_client,"CHOOSE YOUR WEAPON.", "ARMS TO SLAY THE OPPRESSORS", weapons)
 	switch(weapon_choice)
