@@ -31,6 +31,5 @@
 	bleed_rate = 0.45
 	clotting_rate = 0.02
 	clotting_threshold = 0.3
-	can_cauterize = TRUE
 	sew_threshold = 75
 	woundpain = 25
