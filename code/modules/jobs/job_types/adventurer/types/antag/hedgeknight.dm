@@ -23,11 +23,11 @@
 		/datum/attribute/skill/craft/weapon_repair = 20,
 		/datum/attribute/skill/craft/armor_repair = 20,
 	)
-/datum/attribute_holder/sheet/job/hedgeknight/polearms
+/datum/attribute_holder/sheet/job/brigand/polearms
 	raw_attribute_list = list(
 		/datum/attribute/skill/combat/polearms  = 10,
 	)
-/datum/attribute_holder/sheet/job/hedgeknight/axe
+/datum/attribute_holder/sheet/job/brigand/axe
 	raw_attribute_list = list(
 		/datum/attribute/skill/combat/axesmaces = 10,
 	)
