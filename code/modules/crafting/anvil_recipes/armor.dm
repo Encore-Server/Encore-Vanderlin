@@ -485,7 +485,6 @@
 	additional_items = list(/obj/item/natural/cloth)
 	created_item = /obj/item/clothing/armor/brigandine/light
 
-
 ///////////////////////////////////////////////
 // --------- STEEL -----------
 /datum/anvil_recipe/armor/steel
