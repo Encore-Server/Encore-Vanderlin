@@ -291,17 +291,17 @@
 	display_name = "Rite of Dominion"
 	description = "The veil of time shreds. The Elder's will pours forth, binding trespassers within the grasp of the Land."
 	total_cost = VAMPCOST_TWO
-	ascension_requirement = 2
+	ascension_requirement = 1
 	next_phase = /datum/vampire_project/power_growth/third
 
 /datum/vampire_project/power_growth/third
 	display_name = "Rite of Sovereignty"
 	description = "The Lord is whole. Ancient power saturates every stone and vein, for the Land and its master are one."
 	total_cost = VAMPCOST_THREE
-	ascension_requirement = 3
+	ascension_requirement = 2
 	next_phase = null
 
-/datum/vampire_project/power_growth/fourth/on_complete()
+/datum/vampire_project/power_growth/third/on_complete()
 	var/mob/living/target = initiator.resolve()
 	var/datum/antagonist/vampire/lord/lord = target?.mind?.has_antag_datum(/datum/antagonist/vampire/lord)
 	if(!lord || lord.ascension_level == ascension_requirement)
