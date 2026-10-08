@@ -1256,13 +1256,13 @@
 /datum/anvil_recipe/armor/blacksteel/envy_helm_visor
 	name = "Darksteel Barbute (+Bar)"
 	additional_items = list(/obj/item/ingot/blacksteel)
-	created_item = /obj/item/clothing/head/helmet/visored/evil
+	created_item = /obj/item/clothing/head/helmet/visored/envy
 	craftdiff = 5
 
 /datum/anvil_recipe/armor/blacksteel/envy_helm
 	name = "Darksteel Frog Helm (+Bar)"
 	additional_items = list(/obj/item/ingot/blacksteel)
-	created_item = /obj/item/clothing/head/helmet/heavy/evil
+	created_item = /obj/item/clothing/head/helmet/heavy/envy
 	craftdiff = 5
 
 /datum/anvil_recipe/armor/blacksteel/deceivers_helm
