@@ -485,49 +485,6 @@
 	additional_items = list(/obj/item/natural/cloth)
 	created_item = /obj/item/clothing/armor/brigandine/light
 
-/datum/anvil_recipe/armor/iron/gronnplatefull
-	name = "Gronnic Plate Armor (+Bar x3)"
-	required_material = /obj/item/ingot/iron
-	additional_items = list(/obj/item/ingot/iron,/obj/item/ingot/iron,/obj/item/ingot/iron)
-	created_item = /obj/item/clothing/armor/plate/iron/gronn
-	craftdiff = 2
-
-/datum/anvil_recipe/armor/iron/gronnplatehelmet
-	name = "Gronnic Iron Plate Helmet (+Bar)"
-	additional_items = list(/obj/item/ingot/iron)
-	created_item = /obj/item/clothing/head/helmet/heavy/ironplate/gronn
-	craftdiff = 2
-
-/datum/anvil_recipe/armor/iron/gronnchausses
-	name = "Gronnic Iron Plate Chausses"
-	created_item = /obj/item/clothing/pants/platelegs/iron/gronn
-
-/datum/anvil_recipe/armor/iron/gronn_gloves_plate
-	name = "Nortic Iron Gauntlets"
-	created_item = /obj/item/clothing/gloves/plate/iron/gronn
-	required_material = /obj/item/ingot/iron
-	craftdiff = 1
-
-/datum/anvil_recipe/armor/iron/gronn_gloves_chain
-	name = "Nortic Chain Gloves"
-	created_item = /obj/item/clothing/gloves/chain/gronn
-	required_material = /obj/item/ingot/iron
-	craftdiff = 1
-
-/datum/anvil_recipe/armor/iron/gronn_boots
-	name = "Nortic Iron Boots"
-	created_item = /obj/item/clothing/shoes/boots/armor/gronn
-	required_material = /obj/item/ingot/iron
-	craftdiff = 1
-
-/datum/anvil_recipe/armor/iron/gronn_trou_splint
-	name = "Nortic Chain Chausses"
-	created_item = /obj/item/clothing/pants/trou/leather/splint/gronn
-	required_material = /obj/item/ingot/iron
-	additional_items = list(/obj/item/natural/hide/cured)
-	craftdiff = 1
-
-
 
 ///////////////////////////////////////////////
 // --------- STEEL -----------
