@@ -58,10 +58,9 @@
 		"Glaive" = list(/obj/item/weapon/polearm/halberd/bardiche/glaive),
 		"Warhammer & Shield" = list(/obj/item/weapon/shield/heater, /obj/item/weapon/mace/warhammer),
 		"Maul" = list(/obj/item/weapon/mace/goden/maul),
-		"Claws" = list(/obj/item/weapon/handclaw)
-		"Knuckledusters" = list(/obj/item/weapon/knuckles)
+		"Claws" = list(/obj/item/weapon/handclaw),
+		"Knuckledusters" = list(/obj/item/weapon/knuckles),
 		"Woodcutters Axe" = list(/obj/item/weapon/polearm/halberd/bardiche/woodcutter)
-
 	)
 	var/weapon_choice = tgui_input_list(player_client,"CHOOSE YOUR WEAPON.", "ARMS TO SLAY THE OPPRESSORS", weapons)
 	switch(weapon_choice)
