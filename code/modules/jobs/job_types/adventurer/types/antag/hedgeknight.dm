@@ -23,15 +23,15 @@
 		/datum/attribute/skill/craft/weapon_repair = 20,
 		/datum/attribute/skill/craft/armor_repair = 20,
 	)
-/datum/attribute_holder/sheet/job/brigand/polearms
+/datum/attribute_holder/sheet/job/hedgeknight/polearms
 	raw_attribute_list = list(
 		/datum/attribute/skill/combat/polearms  = 10,
 	)
-/datum/attribute_holder/sheet/job/brigand/axe
+/datum/attribute_holder/sheet/job/hedgeknight/axe
 	raw_attribute_list = list(
 		/datum/attribute/skill/combat/axesmaces = 10,
 	)
-/datum/attribute_holder/sheet/job/brigand/spear
+/datum/attribute_holder/sheet/job/hedgeknight/spear
 	raw_attribute_list = list(
 		/datum/attribute/skill/combat/polearms = 10,
 	)
@@ -65,7 +65,7 @@
 	switch(weapon_choice)
 		if("Greataxe")
 			spawned.put_in_hands(new /obj/item/weapon/greataxe)
-			spawned.attributes?.add_sheet(/datum/attribute_holder/sheet/job/brigand/axe)
+			spawned.attributes?.add_sheet(/datum/attribute_holder/sheet/job/hedgeknight/axe)
 		if("Warhammer & Shield")
 			spawned.put_in_hands(new /obj/item/weapon/shield/heater)
 			spawned.put_in_hands(new /obj/item/weapon/mace/warhammer)
