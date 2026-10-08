@@ -56,7 +56,7 @@
 /datum/job/advclass/bandit/brigand/on_roundstart(mob/living/carbon/human/spawned, client/player_client)
 	. = ..()
 	var/static/list/weapons = list(
-		"Greataxe" = list(/obj/item/weapon/axe/greataxe),
+		"Greataxe" = list(/obj/item/weapon/greataxe),
 		"Warhammer & Shield" = list(/obj/item/weapon/shield/heater, /obj/item/weapon/mace/warhammer),
 		"Greatsword" = list(/obj/item/weapon/sword/long/greatsword),
 		"Longsword" = list(/obj/item/weapon/sword/long)
@@ -64,7 +64,7 @@
 	var/weapon_choice = tgui_input_list(player_client,"CHOOSE YOUR WEAPON.", "ARMS TO SLAY THE OPPRESSORS", weapons)
 	switch(weapon_choice)
 		if("Greataxe")
-			spawned.put_in_hands(new /obj/item/weapon/axe/greataxe)
+			spawned.put_in_hands(new /obj/item/weapon/greataxe)
 			spawned.attributes?.add_sheet(/datum/attribute_holder/sheet/job/brigand/axe)
 		if("Warhammer & Shield")
 			spawned.put_in_hands(new /obj/item/weapon/shield/heater)
