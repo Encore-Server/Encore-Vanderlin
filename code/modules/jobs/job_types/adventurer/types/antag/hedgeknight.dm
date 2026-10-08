@@ -53,13 +53,12 @@
 		TRAIT_DEADNOSE,
 	)
 
-
 /datum/job/advclass/bandit/brigand/on_roundstart(mob/living/carbon/human/spawned, client/player_client)
 	. = ..()
 	var/static/list/weapons = list(
 		"Greataxe" = list(/obj/item/weapon/axe/greataxe),
 		"Warhammer & Shield" = list(/obj/item/weapon/shield/heater, /obj/item/weapon/mace/warhammer),
-		"Greatsword" = list(/obj/item/weapon/sword/long/greatsword)
+		"Greatsword" = list(/obj/item/weapon/sword/long/greatsword),
 		"Longsword" = list(/obj/item/weapon/sword/long)
 	)
 	var/weapon_choice = tgui_input_list(player_client,"CHOOSE YOUR WEAPON.", "ARMS TO SLAY THE OPPRESSORS", weapons)
