@@ -10,15 +10,24 @@
 /obj/structure/flora/ausbushes/sparsegrass,
 /turf/open/floor/snow,
 /area/template_noop)
+"n" = (
+/turf/closed/wall/mineral/stonebrick,
+/area/template_noop)
+"x" = (
+/turf/closed/wall/mineral/stonebrick/reddish,
+/area/template_noop)
 "D" = (
 /turf/closed/wall/mineral/decorstone,
 /area/template_noop)
 "E" = (
-/obj/structure/sign/property_sign/claim,
+/obj/structure/sign/property_sign/claim/outsider,
 /turf/closed/wall/mineral/decorstone,
 /area/template_noop)
 "N" = (
 /turf/open/floor/snow,
+/area/template_noop)
+"P" = (
+/turf/open/floor/cobble,
 /area/template_noop)
 "W" = (
 /obj/structure/flora/grass/bush,
@@ -26,23 +35,6 @@
 /area/template_noop)
 
 (1,1,1) = {"
-N
-N
-N
-N
-N
-N
-N
-N
-N
-N
-N
-N
-N
-N
-N
-"}
-(2,1,1) = {"
 N
 N
 W
@@ -55,17 +47,32 @@ N
 N
 N
 N
-N
-N
-N
+n
+x
+x
 "}
-(3,1,1) = {"
+(2,1,1) = {"
+n
+n
+f
+n
+n
+N
+N
+N
 N
 N
 f
 N
 N
 N
+x
+"}
+(3,1,1) = {"
+n
+N
+N
+P
 N
 N
 N
@@ -75,30 +82,32 @@ N
 N
 N
 N
+N
+P
 "}
 (4,1,1) = {"
 N
 N
 N
 N
-N
-N
-N
-f
-f
-N
-N
 d
 N
 N
+f
 N
+f
+N
+N
+N
+N
+n
 "}
 (5,1,1) = {"
 N
 N
+f
 N
 N
-d
 N
 N
 N
@@ -115,14 +124,14 @@ N
 N
 N
 N
+f
+N
+N
+P
 N
 N
 N
-N
-N
-N
-N
-N
+f
 N
 N
 N
@@ -135,7 +144,7 @@ N
 f
 N
 N
-N
+P
 N
 N
 N
@@ -153,8 +162,8 @@ N
 N
 N
 N
-N
-N
+P
+P
 N
 N
 N
@@ -170,7 +179,7 @@ N
 N
 N
 N
-N
+P
 N
 N
 N
@@ -179,8 +188,8 @@ f
 N
 "}
 (10,1,1) = {"
-N
-N
+n
+P
 N
 N
 N
@@ -191,11 +200,13 @@ N
 N
 N
 W
-N
+n
 N
 N
 "}
 (11,1,1) = {"
+n
+P
 N
 N
 N
@@ -206,9 +217,7 @@ N
 N
 N
 N
-N
-N
-N
+n
 N
 N
 "}
@@ -270,7 +279,7 @@ N
 N
 d
 N
-N
+P
 N
 N
 N
@@ -292,7 +301,7 @@ N
 f
 N
 N
-N
+P
 N
 N
 N
@@ -303,16 +312,16 @@ N
 N
 N
 N
+P
 N
 N
 N
 N
 N
-N
-N
-N
-N
-N
+P
+P
+P
+n
 "}
 (18,1,1) = {"
 E
@@ -320,16 +329,16 @@ D
 N
 N
 N
+n
+n
 N
 N
 N
 N
-N
-N
-N
-N
-N
-N
+n
+n
+n
+n
 "}
 
 (1,1,2) = {"
@@ -367,23 +376,24 @@ a
 a
 "}
 (3,1,2) = {"
+n
+n
+a
+n
+n
 a
 a
 a
 a
 a
-a
-a
-a
-a
-a
-a
-a
-a
+n
+n
+n
 a
 a
 "}
 (4,1,2) = {"
+n
 a
 a
 a
@@ -395,8 +405,7 @@ a
 a
 a
 a
-a
-a
+n
 a
 a
 "}
@@ -430,7 +439,7 @@ a
 a
 a
 a
-a
+n
 a
 a
 "}
@@ -486,6 +495,7 @@ a
 a
 "}
 (10,1,2) = {"
+n
 a
 a
 a
@@ -497,12 +507,12 @@ a
 a
 a
 a
-a
-a
+n
 a
 a
 "}
 (11,1,2) = {"
+n
 a
 a
 a
@@ -514,8 +524,7 @@ a
 a
 a
 a
-a
-a
+n
 a
 a
 "}
@@ -605,6 +614,7 @@ a
 a
 "}
 (17,1,2) = {"
+n
 a
 a
 a
@@ -616,25 +626,24 @@ a
 a
 a
 a
-a
-a
+n
 a
 a
 "}
 (18,1,2) = {"
+n
+n
+a
+a
+a
+n
+n
 a
 a
 a
 a
-a
-a
-a
-a
-a
-a
-a
-a
-a
+n
+n
 a
 a
 "}

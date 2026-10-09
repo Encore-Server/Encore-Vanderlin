@@ -2,6 +2,10 @@
 "a" = (
 /turf/open/floor/twig,
 /area/template_noop)
+"h" = (
+/obj/structure/fluff/walldeco/vinez/blue,
+/turf/closed/wall/mineral/tent/green,
+/area/template_noop)
 "i" = (
 /obj/machinery/light/fueled/torchholder/c,
 /turf/open/floor/twig,
@@ -11,23 +15,58 @@
 /turf/open/floor/twig,
 /area/template_noop)
 "l" = (
-/obj/structure/roguetent,
+/obj/structure/barricade/wooden/crude,
+/obj/structure/tentdoor/green,
+/turf/open/floor/twig,
+/area/template_noop)
+"p" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/twig,
+/area/template_noop)
+"x" = (
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/twig,
 /area/template_noop)
 "A" = (
-/turf/closed/wall/mineral/tent,
+/turf/closed/wall/mineral/tent/green,
+/area/template_noop)
+"E" = (
+/obj/structure/tentdoor/green,
+/obj/structure/barricade/wooden/crude,
+/turf/open/floor/twig,
 /area/template_noop)
 "I" = (
 /obj/machinery/light/fueled/torchholder/metal_torch/north,
 /turf/open/floor/twig,
 /area/template_noop)
+"K" = (
+/turf/closed/wall/mineral/stonebrick,
+/area/template_noop)
 "M" = (
-/obj/structure/sign/property_sign/claim,
-/turf/closed/wall/mineral/tent,
+/obj/structure/sign/property_sign/claim/outsider,
+/turf/closed/wall/mineral/tent/green,
+/area/template_noop)
+"N" = (
+/obj/effect/decal/cleanable/dirt/cobweb,
+/turf/open/floor/twig,
+/area/template_noop)
+"P" = (
+/obj/structure/spider/stickyweb/mirespider,
+/turf/open/floor/twig,
+/area/template_noop)
+"S" = (
+/obj/structure/spider/stickyweb/solo,
+/turf/open/floor/twig,
+/area/template_noop)
+"X" = (
+/obj/effect/decal/cleanable/dirt/cobweb,
+/obj/structure/spider/stickyweb/mirespider,
+/turf/open/floor/twig,
 /area/template_noop)
 
 (1,1,1) = {"
-A
+h
 M
 l
 A
@@ -35,35 +74,35 @@ A
 "}
 (2,1,1) = {"
 A
-a
-a
+X
+p
 a
 A
 "}
 (3,1,1) = {"
 A
 i
-a
+x
 I
 A
 "}
 (4,1,1) = {"
 A
 a
-a
+x
 a
 A
 "}
 (5,1,1) = {"
 A
 a
-a
-a
+x
+P
 A
 "}
 (6,1,1) = {"
-A
-a
+l
+x
 a
 a
 A
@@ -77,42 +116,42 @@ A
 "}
 (8,1,1) = {"
 A
-a
 j
-a
-A
+S
+x
+K
 "}
 (9,1,1) = {"
+h
 A
 A
-A
-A
-A
+K
+K
 "}
 
 (1,1,2) = {"
 A
 A
 A
-A
+E
 A
 "}
 (2,1,2) = {"
 A
-A
-A
-A
+N
+a
+S
 A
 "}
 (3,1,2) = {"
-A
-A
-A
-A
+E
+a
+a
+a
 A
 "}
 (4,1,2) = {"
-A
+E
 a
 a
 a
@@ -128,28 +167,28 @@ A
 (6,1,2) = {"
 A
 a
+S
 a
-a
-A
+E
 "}
 (7,1,2) = {"
 A
-A
 a
-A
-A
+a
+a
+E
 "}
 (8,1,2) = {"
 A
-A
 j
-A
-A
+a
+a
+K
 "}
 (9,1,2) = {"
 A
 A
 A
-A
-A
+K
+K
 "}

@@ -1,6 +1,7 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "a" = (
-/turf/closed/wall/mineral/tent,
+/obj/structure/tentdoor/cyan,
+/turf/open/floor/twig,
 /area/template_noop)
 "c" = (
 /obj/machinery/light/fueled/torchholder/c,
@@ -13,13 +14,39 @@
 "l" = (
 /turf/open/floor/twig,
 /area/template_noop)
-"P" = (
-/obj/structure/roguetent,
+"m" = (
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/twig,
 /area/template_noop)
+"n" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/spider/stickyweb/solo,
+/turf/open/floor/twig,
+/area/template_noop)
+"u" = (
+/obj/machinery/light/fueled/torchholder/c,
+/obj/effect/decal/cleanable/dirt/cobweb/cobweb2,
+/turf/open/floor/twig,
+/area/template_noop)
+"E" = (
+/obj/effect/decal/cleanable/dirt/cobweb,
+/turf/open/floor/twig,
+/area/template_noop)
+"M" = (
+/obj/structure/fluff/walldeco/vinez/blue,
+/turf/closed/wall/mineral/tent/cyan,
+/area/template_noop)
+"P" = (
+/obj/structure/tentdoor/cyan,
+/obj/structure/barricade/wooden/crude,
+/turf/open/floor/twig,
+/area/template_noop)
+"V" = (
+/turf/closed/wall/mineral/tent/cyan,
+/area/template_noop)
 "W" = (
-/obj/structure/sign/property_sign/claim,
-/turf/closed/wall/mineral/tent,
+/obj/structure/sign/property_sign/claim/outsider,
+/turf/closed/wall/mineral/tent/cyan,
 /area/template_noop)
 "X" = (
 /obj/structure/ladder,
@@ -27,115 +54,115 @@
 /area/template_noop)
 
 (1,1,1) = {"
-a
-a
-a
-a
-a
-a
+M
+M
+V
+V
+V
+V
 "}
 (2,1,1) = {"
-a
+V
 c
-l
-l
+m
+m
 k
-a
+V
 "}
 (3,1,1) = {"
 W
-l
-l
+n
+m
 X
 l
-a
+V
 "}
 (4,1,1) = {"
 P
 l
+m
 l
-l
-l
-a
+m
+V
 "}
 (5,1,1) = {"
-a
+V
 l
-l
-l
-l
-a
+m
+m
+n
+V
 "}
 (6,1,1) = {"
-a
-c
+V
+u
 l
-l
+m
 k
-a
+V
 "}
 (7,1,1) = {"
-a
-a
-a
-a
-a
-a
+V
+V
+M
+M
+V
+V
 "}
 
 (1,1,2) = {"
-a
-a
-a
-a
-a
-a
+V
+V
+V
+V
+V
+V
 "}
 (2,1,2) = {"
-a
-a
-a
-a
-a
-a
+V
+E
+l
+l
+l
+V
 "}
 (3,1,2) = {"
 a
-a
 l
+m
 X
-a
-a
+l
+V
 "}
 (4,1,2) = {"
 a
-a
 l
+m
 l
-a
-a
+m
+V
 "}
 (5,1,2) = {"
-a
-a
+V
 l
+m
 l
-a
+m
 a
 "}
 (6,1,2) = {"
-a
-a
-a
-a
-a
+V
+l
+m
+m
+m
 a
 "}
 (7,1,2) = {"
-a
-a
-a
-a
-a
-a
+V
+V
+V
+V
+V
+V
 "}

@@ -10,12 +10,18 @@
 /turf/open/openspace,
 /area/template_noop)
 "h" = (
-/obj/structure/sign/property_sign/claim,
+/obj/structure/sign/property_sign/claim/outsider,
 /turf/closed/wall/mineral/decorstone,
+/area/template_noop)
+"q" = (
+/turf/open/floor/cobble,
 /area/template_noop)
 "s" = (
 /obj/item/natural/rock,
 /turf/open/floor/snow,
+/area/template_noop)
+"I" = (
+/turf/closed/wall/mineral/stonebrick,
 /area/template_noop)
 "J" = (
 /obj/structure/flora/grass/bush,
@@ -34,8 +40,8 @@ b
 a
 a
 a
-a
-a
+I
+I
 "}
 (2,1,1) = {"
 Y
@@ -47,7 +53,7 @@ a
 J
 a
 a
-a
+I
 "}
 (3,1,1) = {"
 a
@@ -134,8 +140,8 @@ a
 a
 "}
 (10,1,1) = {"
-a
-a
+I
+q
 s
 a
 b
@@ -146,8 +152,8 @@ a
 a
 "}
 (11,1,1) = {"
-a
-a
+I
+q
 a
 a
 a
@@ -155,34 +161,35 @@ a
 b
 a
 a
-b
+I
 "}
 (12,1,1) = {"
+I
+I
 a
 a
 a
+I
 a
 a
-a
-a
-a
-a
-a
+I
+I
 "}
 
 (1,1,2) = {"
+I
+I
 f
 f
 f
 f
 f
 f
-f
-f
-f
-f
+I
+I
 "}
 (2,1,2) = {"
+I
 f
 f
 f
@@ -191,8 +198,7 @@ f
 f
 f
 f
-f
-f
+I
 "}
 (3,1,2) = {"
 f
@@ -279,7 +285,7 @@ f
 f
 "}
 (10,1,2) = {"
-f
+I
 f
 f
 f
@@ -291,6 +297,7 @@ f
 f
 "}
 (11,1,2) = {"
+I
 f
 f
 f
@@ -299,18 +306,17 @@ f
 f
 f
 f
-f
-f
+I
 "}
 (12,1,2) = {"
+I
+I
 f
 f
 f
+I
 f
 f
-f
-f
-f
-f
-f
+I
+I
 "}

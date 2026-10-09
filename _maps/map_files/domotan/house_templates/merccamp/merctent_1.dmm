@@ -2,12 +2,25 @@
 "a" = (
 /turf/open/floor/twig,
 /area/template_noop)
+"n" = (
+/obj/structure/ladder,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/twig,
+/area/template_noop)
 "p" = (
 /obj/machinery/light/fueled/torchholder/metal_torch/north,
 /turf/open/floor/twig,
 /area/template_noop)
 "r" = (
-/turf/closed/wall/mineral/tent,
+/turf/closed/wall/mineral/tent/red,
+/area/template_noop)
+"D" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/twig,
+/area/template_noop)
+"H" = (
+/obj/structure/spider/stickyweb,
+/turf/open/floor/twig,
 /area/template_noop)
 "O" = (
 /obj/structure/ladder,
@@ -15,15 +28,26 @@
 /area/template_noop)
 "P" = (
 /obj/machinery/light/fueled/torchholder/c,
+/obj/structure/spider/stickyweb,
 /turf/open/floor/twig,
 /area/template_noop)
 "R" = (
-/obj/structure/roguetent,
+/obj/structure/tentdoor/red,
+/obj/structure/barricade/wooden/crude,
+/turf/open/floor/twig,
+/area/template_noop)
+"S" = (
+/obj/machinery/light/fueled/torchholder/c,
+/obj/effect/decal/cleanable/dirt/cobweb/cobweb2,
+/turf/open/floor/twig,
+/area/template_noop)
+"V" = (
+/obj/structure/tentdoor/red,
 /turf/open/floor/twig,
 /area/template_noop)
 "X" = (
-/obj/structure/sign/property_sign/claim,
-/turf/closed/wall/mineral/tent,
+/obj/structure/sign/property_sign/claim/outsider,
+/turf/closed/wall/mineral/tent/red,
 /area/template_noop)
 
 (1,1,1) = {"
@@ -63,12 +87,12 @@ r
 a
 a
 a
-a
+H
 r
 "}
 (6,1,1) = {"
 r
-P
+S
 a
 a
 p
@@ -93,42 +117,42 @@ r
 "}
 (2,1,2) = {"
 r
-r
-r
-r
-r
-r
+a
+D
+a
+a
+V
 "}
 (3,1,2) = {"
 r
-r
-O
 a
-r
-r
+n
+a
+a
+R
 "}
 (4,1,2) = {"
 r
-r
+a
+D
 a
 a
-r
 r
 "}
 (5,1,2) = {"
-r
-r
+R
 a
+D
+D
 a
-r
 r
 "}
 (6,1,2) = {"
-r
-r
-r
-r
-r
+V
+H
+a
+a
+a
 r
 "}
 (7,1,2) = {"
