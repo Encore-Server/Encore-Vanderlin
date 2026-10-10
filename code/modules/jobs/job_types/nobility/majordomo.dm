@@ -71,9 +71,9 @@
 	backr = /obj/item/storage/backpack/satchel
 	backpack_contents = list(
 		/obj/item/storage/belt/pouch/coins/rich = 1,
-		/obj/item/lockpickring/mundane = 1
-		/obj/item/storage/keyring/steward
-	)
+		/obj/item/lockpickring/mundane = 1,
+		/obj/item/storage/keyring/steward = 1,
+		)
 
 /datum/outfit/majordomo/pre_equip(mob/living/carbon/human/equipped_human, visuals_only)
 	. = ..()
