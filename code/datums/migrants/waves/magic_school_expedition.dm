@@ -111,7 +111,6 @@
 		"Storm-Charged Tome (Lightning)" = /obj/item/spellbook/adept/starter/lightning,
 		"Stoneveined Tome (Earth)" = /obj/item/spellbook/adept/starter/earth,
 		"Thrice-Warded Tome (Arcane)" = /obj/item/spellbook/adept/starter/arcane,
-		"Grave-Touched Tome (Death)" = /obj/item/spellbook/adept/starter/death,
 		"Verdant Tome (Life)" = /obj/item/spellbook/adept/starter/life,
 		"Windswept Tome (Air)" = /obj/item/spellbook/adept/starter/air,
 		"Tidebound Tome (Water)" = /obj/item/spellbook/adept/starter/water,

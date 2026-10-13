@@ -67,11 +67,6 @@
 
 	job_bitflag = BITFLAG_CONSTRUCTOR
 
-	exp_type = list(EXP_TYPE_LIVING)
-	exp_requirements = list(
-		EXP_TYPE_LIVING = 600
-	)
-
 	attribute_sheet = /datum/attribute_holder/sheet/job/artificer
 	attribute_sheet_old = /datum/attribute_holder/sheet/job/artificer/old
 	book_type = /obj/item/recipe_book/engineering

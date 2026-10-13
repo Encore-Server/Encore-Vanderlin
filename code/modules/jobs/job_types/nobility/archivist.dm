@@ -13,6 +13,9 @@
 	spawn_positions = 2
 	bypass_lastclass = TRUE
 
+	form_points = 8
+	technique_points = 8
+
 	allowed_races = RACES_PLAYER_NONDISCRIMINATED
 	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED, AGE_OLD, AGE_IMMORTAL)
 	blacklisted_species = list(SPEC_ID_HALFLING)
@@ -27,7 +30,7 @@
 	exp_type = list(EXP_TYPE_LIVING)
 	exp_types_granted = list(EXP_TYPE_MAGICK, EXP_TYPE_NOBLE)
 	exp_requirements = list(
-		EXP_TYPE_LIVING = 300
+		EXP_TYPE_LIVING = 120
 	)
 	max_apprentices = 3
 
@@ -86,7 +89,7 @@
 
 /datum/job/advclass/archivist/chronicler
 	title = "Chronicler"
-	tutorial = "With endless papers and dripping ink, you record the tales of both the mundane and magickal. Simple magicks at your means as a tool to aid your true talent. Let us write the books of the next generation."
+	tutorial = "You hold the heretical truths within the Shirleighan archive close, and they have bestowed to you many arcane mysteries. With endless papers and dripping ink, you record the tales of both the mundane and magickal. Simple magicks at your means as a tool to aid your true talent. Let us write the books of the next generation."
 	outfit = /datum/outfit/archivist/chronicler
 	category_tags = list(CTAG_ARCHIVIST)
 	magic_user = TRUE

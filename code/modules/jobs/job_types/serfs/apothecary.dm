@@ -75,7 +75,7 @@
 
 	exp_type = list(EXP_TYPE_LIVING)
 	exp_requirements = list(
-		EXP_TYPE_LIVING = 600
+		EXP_TYPE_LIVING = 120
 	)
 	book_type = /obj/item/recipe_book/alchemy
 

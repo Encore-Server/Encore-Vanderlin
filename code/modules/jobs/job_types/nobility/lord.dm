@@ -78,9 +78,9 @@ GLOBAL_LIST_EMPTY(lord_titles)
 	exp_type = list(EXP_TYPE_NOBLE, EXP_TYPE_LIVING, EXP_TYPE_LEADERSHIP)
 	exp_types_granted = list(EXP_TYPE_NOBLE, EXP_TYPE_LEADERSHIP)
 	exp_requirements = list(
-		EXP_TYPE_LIVING = 1200,
-		EXP_TYPE_NOBLE = 900,
-		EXP_TYPE_LEADERSHIP = 300
+		EXP_TYPE_LIVING = 240,
+		EXP_TYPE_NOBLE = 240,
+		EXP_TYPE_LEADERSHIP = 240
 	)
 
 	attribute_sheet = /datum/attribute_holder/sheet/job/lord
