@@ -78,6 +78,8 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 #define TRAIT_MONKEYLIKE "monkeylike" //sets IsAdvancedToolUser to FALSE
 /// Cannot directly bring harm to other mobs
 #define TRAIT_PACIFISM	"pacifism"
+/// Prevents hostile animals and summoned creatures from targeting this mob.
+#define TRAIT_ANIMAL_PROTECTION "animal_protection"
 /// Ignore movement speed slow mods
 #define TRAIT_IGNORESLOWDOWN "ignoreslow"
 /// Ignore slowdown from damage
