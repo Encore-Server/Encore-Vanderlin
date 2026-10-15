@@ -18536,7 +18536,7 @@
 	dir = 9;
 	icon_state = "largetable"
 	},
-/obj/machinery/essence/reservoir,
+/obj/machinery/essence/reservoir/filled/basics,
 /turf/open/floor/blocks/stonered/tiny,
 /area/indoors/town/keep/phys)
 "lnW" = (
@@ -32367,6 +32367,17 @@
 /obj/structure/fluff/walldeco/vinez,
 /turf/open/floor/ruinedwood/alt,
 /area/indoors/town/clinic_large)
+"tDr" = (
+/obj/structure/table/wood{
+	dir = 1;
+	icon_state = "largetable"
+	},
+/obj/machinery/essence/reservoir/filled/basics,
+/obj/machinery/light/fueled/wallfire/candle/blue{
+	pixel_y = -32
+	},
+/turf/open/floor/blocks/stonered,
+/area/indoors/town/keep/phys)
 "tDA" = (
 /obj/machinery/light/fueled/firebowl/standing/blue,
 /turf/open/floor/cobble,
@@ -35965,6 +35976,16 @@
 "vLU" = (
 /turf/closed/wall/mineral/stonebrick,
 /area/indoors/town/keep/magician/basement)
+"vMb" = (
+/obj/structure/table/wood/large_new{
+	dir = 2;
+	icon_state = "alt_largetable"
+	},
+/obj/machinery/essence/reservoir/filled/basics{
+	pixel_y = 8
+	},
+/turf/open/floor/twig,
+/area/indoors/town/clinic_large/apothecary)
 "vMf" = (
 /obj/structure/fluff/ship_hull{
 	icon_state = "9,0"
@@ -58428,7 +58449,7 @@ vpC
 qbL
 qbL
 oFf
-raf
+tDr
 nbs
 afs
 dwC
@@ -87216,7 +87237,7 @@ fNx
 fNx
 fNx
 eMK
-bgl
+vMb
 pGt
 pGt
 pGt
