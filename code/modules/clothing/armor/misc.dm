@@ -159,7 +159,7 @@
 
 /obj/item/clothing/armor/plate/bronze
 	name = "bronze cuirass"
-	desc = "A chiseled breastplate of bronze, further padded with hide to comfort its championing bod. The plates have been carefully forged to mimic the statuesque physiques of Psydonia's ancient heroes. Wearing it bolsters you with determination."
+	desc = "A chiseled breastplate of bronze, further padded with hide to comfort its championing bod. The plates have been carefully forged to mimic the statuesque physiques of the world's ancient heroes. Wearing it bolsters you with determination."
 	body_parts_covered = CHEST | VITALS | LEGS
 	icon_state = "bronzecuirass"
 	armor_type = /datum/armor/brigandine
