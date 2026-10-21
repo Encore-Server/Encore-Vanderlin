@@ -1,0 +1,9 @@
+{
+    "map_name": "Northern Domotan Northeast",
+    "map_path": "map_files/domotan/north",
+    "map_file": "northeast.dmm",
+    "traits": [
+		{"Up": true, "Turf Weather Effects": true, "Leylines": true},
+		{"Up": false, "Down": true, "Turf Weather Effects": true, "Leylines": true}
+	]
+}
