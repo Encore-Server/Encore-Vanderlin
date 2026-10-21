@@ -2965,6 +2965,7 @@
 #include "code\modules\clothing\head\race.dm"
 #include "code\modules\clothing\head\rare.dm"
 #include "code\modules\clothing\head\helmets\_helmet.dm"
+#include "code\modules\clothing\head\helmets\factions.dm"
 #include "code\modules\clothing\head\helmets\heavy.dm"
 #include "code\modules\clothing\head\helmets\leather.dm"
 #include "code\modules\clothing\head\helmets\misc.dm"
