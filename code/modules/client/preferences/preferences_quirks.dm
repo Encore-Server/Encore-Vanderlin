@@ -72,6 +72,7 @@
 
 	// Check point balance
 	var/balance = calculate_quirk_balance()
+	var/attribute_balance = calculate_attribute_balance()
 	if(balance < 0)
 		// Can't afford all boons, remove some
 		while(balance < 0 && length(quirks))
@@ -79,6 +80,16 @@
 			if(most_expensive)
 				quirks -= most_expensive
 				balance = calculate_quirk_balance()
+			else
+				break
+
+	if(attribute_balance < 0)
+		// Can't afford all attributes, remove some
+		while(balance < 0 && length(quirks))
+			var/datum/quirk/most_expensive_attribute = find_most_expensive_attribute()
+			if(most_expensive_attribute)
+				quirks -= most_expensive_attribute
+				balance = calculate_attribute_balance()
 			else
 				break
 
@@ -98,6 +109,12 @@
 		balance += initial(quirk.point_value)
 	return balance
 
+/datum/preferences/proc/calculate_attribute_balance()
+	var/attributebalance = STARTING_ATTRIBUTE_POINTS
+	for(var/datum/quirk/quirk as anything in quirks)
+		attributebalance += initial(quirk.attribute_point_value)
+	return attributebalance
+
 /datum/preferences/proc/count_boons_in_list()
 	var/count = 0
 	for(var/datum/quirk/quirk as anything in quirks)
@@ -114,6 +131,16 @@
 				lowest_value = initial(quirk.point_value)
 				most_expensive = quirk
 	return most_expensive
+
+/datum/preferences/proc/find_most_expensive_attribute()
+	var/most_expensive_attribute = null
+	var/lowest_value_attribute = 0
+	for(var/datum/quirk/quirk as anything in quirks)
+		if(initial(quirk.quirk_category) == QUIRK_ATTRIBUTEADJUSTER)
+			if(initial(quirk.attribute_point_value) < lowest_value_attribute)
+				lowest_value_attribute = initial(quirk.attribute_point_value)
+				most_expensive_attribute = quirk
+	return most_expensive_attribute
 
 /datum/preferences/proc/find_first_boon()
 	for(var/datum/quirk/quirk in quirks)
@@ -147,6 +174,12 @@
 	var/balance = calculate_quirk_balance()
 	if(initial(new_quirk.point_value) < 0) // Costs points
 		if(balance + initial(new_quirk.point_value) < 0)
+			return FALSE
+
+	// Check point balance
+	var/attributebalance = calculate_attribute_balance()
+	if(initial(new_quirk.attribute_point_value) < 0)
+		if(attributebalance + initial(new_quirk.attribute_point_value) < 0)
 			return FALSE
 
 	// Check incompatibilities
@@ -355,7 +388,8 @@
 		dat += "<div class='[card_classes]' data-quirk='\ref[quirk_type]'>"
 		dat += "<div class='quirk-card-header'>"
 		dat += "<span class='quirk-name'>[quirk_data["name"]]</span>"
-		dat += "<span class='quirk-points'>[quirk_data["value"]] pts</span>"
+		dat += "<span class='quirk-points'>[quirk_data["value"]] QrkPts</span>"
+		dat += "<span class='quirk-points'>[quirk_data["attribute_point_value"]] AttPts</span>"
 		dat += "</div>"
 		dat += "<div class='quirk-desc'>[quirk_data["desc"]]</div>"
 
@@ -392,7 +426,8 @@
 		dat += "<div class='quirk-card [category_class] selected' data-quirk='\ref[quirk_type]'>"
 		dat += "<div class='quirk-card-header'>"
 		dat += "<span class='quirk-name'>[quirk.name]</span>"
-		dat += "<span class='quirk-points'>[quirk.point_value] pts</span>"
+		dat += "<span class='quirk-points'>[quirk.point_value] QrkPts</span>"
+		dat += "<span class='quirk-points'>[quirk.attribute_point_value] AttPts</span>"
 		dat += "</div>"
 		dat += "<div class='quirk-desc'>[quirk.get_desc(src)]</div>"
 
