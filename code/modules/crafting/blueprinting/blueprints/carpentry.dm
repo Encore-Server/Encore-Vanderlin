@@ -867,3 +867,75 @@
 		/obj/item/natural/wood/plank = 1
 	)
 	craftdiff = 2
+
+/datum/blueprint_recipe/carpentry/banner_aelondan
+	name = "aelonda standard"
+	desc = "The purple standard of the good kingdom, Aelonda, without much decorum."
+	result_type = /obj/structure/fluff/banner
+	required_materials = list(
+		/obj/item/grown/log/tree/small = 1,
+		/obj/item/natural/silk = 2,
+		/obj/item/natural/cloth = 1,
+	)
+	supports_directions = TRUE
+	craftdiff = 2
+
+/datum/blueprint_recipe/carpentry/banner_cudao
+	name = "cudao standard"
+	desc = "The cloud-white standard of the eastern nation of Cudao, without much decorum."
+	result_type = /obj/structure/fluff/banner/cudao
+	required_materials = list(
+		/obj/item/grown/log/tree/small = 1,
+		/obj/item/natural/silk = 2,
+		/obj/item/natural/cloth = 1,
+	)
+	supports_directions = TRUE
+	craftdiff = 2
+
+/datum/blueprint_recipe/carpentry/banner_geramor
+	name = "geramor standard"
+	desc = "The standard of the nation of Geramor, without much decorum."
+	result_type = /obj/structure/fluff/banner/geramor
+	required_materials = list(
+		/obj/item/grown/log/tree/small = 1,
+		/obj/item/natural/silk = 2,
+		/obj/item/natural/cloth = 1,
+	)
+	supports_directions = TRUE
+	craftdiff = 2
+
+/datum/blueprint_recipe/carpentry/banner_noma
+	name = "noma standard"
+	desc = "The standard of the nation of Noma, without much decorum."
+	result_type = /obj/structure/fluff/banner/noma
+	required_materials = list(
+		/obj/item/grown/log/tree/small = 1,
+		/obj/item/natural/silk = 2,
+		/obj/item/natural/cloth = 1,
+	)
+	supports_directions = TRUE
+	craftdiff = 2
+
+/datum/blueprint_recipe/carpentry/banner_qadirid
+	name = "qadirid standard"
+	desc = "The standard of the nation of Qadirid, without much decorum."
+	result_type = /obj/structure/fluff/banner/qadirid
+	required_materials = list(
+		/obj/item/grown/log/tree/small = 1,
+		/obj/item/natural/silk = 2,
+		/obj/item/natural/cloth = 1,
+	)
+	supports_directions = TRUE
+	craftdiff = 2
+
+/datum/blueprint_recipe/carpentry/banner_nortmidst
+	name = "nortmidst standard"
+	desc = "The standard of the nation of Nortmidst, without much decorum."
+	result_type = /obj/structure/fluff/banner/nortmidst
+	required_materials = list(
+		/obj/item/grown/log/tree/small = 1,
+		/obj/item/natural/silk = 2,
+		/obj/item/natural/cloth = 1,
+	)
+	supports_directions = TRUE
+	craftdiff = 2
