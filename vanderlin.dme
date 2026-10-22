@@ -1600,6 +1600,7 @@
 #include "code\datums\quality\metallurgy.dm"
 #include "code\datums\quirks\_base.dm"
 #include "code\datums\quirks\misc.dm"
+#include "code\datums\quirks\attribute_modifiers\_base.dm"
 #include "code\datums\quirks\boon\_boon.dm"
 #include "code\datums\quirks\boon\backstory.dm"
 #include "code\datums\quirks\peculiarity\_peculiarity.dm"

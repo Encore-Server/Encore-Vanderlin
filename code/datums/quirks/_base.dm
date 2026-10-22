@@ -7,7 +7,8 @@ GLOBAL_LIST_INIT(quirk_registry, init_quirk_registry())
 	GLOB.quirk_points_by_type = list(
 		QUIRK_BOON = list(),
 		QUIRK_VICE = list(),
-		QUIRK_PECULIARITY = list()
+		QUIRK_PECULIARITY = list(),
+		QUIRK_ATTRIBUTEADJUSTER = list()
 	)
 
 	for(var/datum/quirk/quirk_type as anything in subtypesof(/datum/quirk))
@@ -20,7 +21,8 @@ GLOBAL_LIST_INIT(quirk_registry, init_quirk_registry())
 			"name" = initial(quirk_type.name),
 			"type" = quirk_type,
 			"desc" = initial(quirk_type.desc),
-			"value" = initial(quirk_type.point_value)
+			"value" = initial(quirk_type.point_value),
+			"attribute_point_value" = initial(quirk_type.attribute_point_value),
 		))
 		LAZYADDASSOC(GLOB.quirk_singletons, quirk_type, new quirk_type)
 
@@ -60,6 +62,8 @@ GLOBAL_LIST_INIT(quirk_registry, init_quirk_registry())
 	var/quirk_category = QUIRK_PECULIARITY
 	/// Point value (negative = costs points, positive = gives points)
 	var/point_value = 0
+	/// Attribute point value, same as above except exclusively for the attributes tab
+	var/attribute_point_value = 0
 	/// List of quirk types incompatible with this one
 	var/list/incompatible_quirks = list()
 	/// The mob this quirk is attached to
@@ -233,6 +237,13 @@ GLOBAL_LIST_INIT(quirk_registry, init_quirk_registry())
 		balance += Q.point_value
 	return balance
 
+// Calculate total point balance from attribute modifiers
+/mob/living/carbon/human/proc/get_attribute_balance()
+	var/attributebalance = STARTING_ATTRIBUTE_POINTS
+	for(var/datum/quirk/Q in quirks)
+		attributebalance += Q.attribute_point_value
+	return attributebalance
+
 // Count boons (negative point quirks)
 /mob/living/carbon/human/proc/count_boons()
 	var/count = 0
@@ -257,6 +268,12 @@ GLOBAL_LIST_INIT(quirk_registry, init_quirk_registry())
 	var/balance = get_quirk_balance()
 	if(initial(temp_quirk.point_value) < 0) // Costs points
 		if(balance + initial(temp_quirk.point_value) < 0)
+			return FALSE
+
+	// Check attribute point balance
+	var/attributebalance = get_attribute_balance()
+	if(initial(temp_quirk.attribute_point_value) < 0) // Costs attribute points
+		if(attributebalance + initial(temp_quirk.attribute_point_value) < 0)
 			return FALSE
 
 	// Check compatibility

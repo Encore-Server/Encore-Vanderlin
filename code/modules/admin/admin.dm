@@ -213,7 +213,8 @@
 		if(length(H.quirks))
 			body += "<h4>Current Quirks:</h4><ul>"
 			for(var/datum/quirk/Q in H.quirks)
-				body += "<li>[initial(Q.name)] ([Q.point_value] pts) "
+				body += "<li>[initial(Q.name)] ([Q.point_value] QrkPts) "
+				body += "<li>[initial(Q.name)] ([Q.point_value] AttPts) "
 				body += "<a class='skill-btn' href='byond://?_src_=holder;[HrefToken()];remove_quirk=[REF(M)];quirk=[Q.type]'>Remove</a></li>"
 			body += "</ul>"
 		else
