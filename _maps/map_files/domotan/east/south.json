@@ -1,0 +1,10 @@
+{
+    "map_name": "Eastern Domotan South",
+    "map_path": "map_files/domotan/east",
+    "map_file": "south.dmm",
+	"traits": [
+		{"Up": true, "Turf Weather Effects": true, "Leylines": true},
+		{"Up": true, "Down": true, "Turf Weather Effects": true, "Leylines": true},
+		{"Up": false, "Down": true, "Turf Weather Effects": true, "Leylines": true}
+	]
+}

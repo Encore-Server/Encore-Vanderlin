@@ -14,10 +14,18 @@
 		{"Down": true, "Turf Weather Effects": true}
 	],
 	"other_z": [
-		"map_files/domotan/domotan_north",
-		"map_files/domotan/domotan_south",
-		"map_files/domotan/domotan_east",
-		"map_files/domotan/domotan_west"
+		"map_files/domotan/north/northeast",
+		"map_files/domotan/north/northwest",
+		"map_files/domotan/north/southeast",
+		"map_files/domotan/north/southwest",
+		"map_files/domotan/south/northeast",
+		"map_files/domotan/south/northwest",
+		"map_files/domotan/south/southeast",
+		"map_files/domotan/south/southwest",
+		"map_files/domotan/east/north",
+		"map_files/domotan/east/south",
+		"map_files/domotan/west/north",
+		"map_files/domotan/west/south"
 	],
 	"minetype": null,
 	"space_empty_levels": 0,
