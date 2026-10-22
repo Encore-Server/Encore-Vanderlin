@@ -54,6 +54,12 @@
 	armor_type = /datum/armor/gloves/plate/bad
 	max_integrity = INTEGRITY_STANDARD
 
+/obj/item/clothing/gloves/plate/rust/bandit
+	name = "rusted riveted alloy gauntlets"
+	desc = "Riveted gauntlets made out of iron. They're covered in rust.. at least the glove liner is good still. This one seems made of a strange alloy..."
+	armor_type = /datum/armor/gloves/plate
+	max_integrity = INTEGRITY_STRONG
+
 /obj/item/clothing/gloves/plate/blk
 	name = "blacksteel gauntlets"
 	desc = "Gauntlets of blacksteel, offering unmatched protection for the hands."
@@ -83,9 +89,9 @@
 
 	//............... Evil Gloves ............... //
 
-/obj/item/clothing/gloves/plate/envy
+/obj/item/clothing/gloves/plate/evil
 	name = "darksteel gauntlets"
-	desc = "darksteel plate gauntlets. Called forth from the edge of what should be known. In Her name."
+	desc = "darksteel plate gauntlets. Called forth from the edge of what should be known."
 	icon_state = "zizogauntlets"
 	icon = 'icons/roguetown/clothing/special/evilarmor.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/special/onmob/evilarmor.dmi'

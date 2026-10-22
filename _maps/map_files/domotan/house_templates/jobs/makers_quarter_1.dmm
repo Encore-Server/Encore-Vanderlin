@@ -7,7 +7,11 @@
 /turf/open/floor/tile/brick,
 /area/indoors/town/shop)
 "e" = (
-/obj/structure/window/openclose/reinforced{
+/obj/structure/window/openclose{
+	dir = 8
+	},
+/obj/structure/curtain/bounty/dir{
+	opacity = 1;
 	dir = 8
 	},
 /turf/open/floor/tile/brick,
@@ -24,19 +28,37 @@
 /obj/machinery/light/fueled/torchholder/c,
 /turf/open/floor/tile/brick,
 /area/indoors/town/shop)
+"n" = (
+/obj/structure/door/window{
+	name = "Maker's Quarter"
+	},
+/obj/effect/mapping_helpers/access/locker,
+/obj/structure/curtain/bounty/dir{
+	opacity = 1;
+	dir = 4
+	},
+/turf/open/floor/tile/brick,
+/area/indoors/town/shop)
 "p" = (
 /turf/closed/wall/mineral/stone,
 /area/indoors/town/shop)
 "r" = (
-/obj/structure/window/openclose/reinforced,
+/obj/structure/curtain/bounty/dir{
+	opacity = 1
+	},
+/obj/structure/window/openclose,
 /turf/open/floor/blocks/stonered,
 /area/indoors/town/shop)
 "t" = (
-/obj/structure/sign/property_sign/claim,
+/obj/structure/sign/property_sign/claim/yeoman,
 /turf/closed/wall/mineral/stone/moss,
 /area/indoors/town/shop)
 "w" = (
-/obj/structure/window/openclose/reinforced{
+/obj/structure/curtain/bounty/dir{
+	opacity = 1;
+	dir = 1
+	},
+/obj/structure/window/openclose{
 	dir = 1
 	},
 /turf/open/floor/cobble/alt,
@@ -49,8 +71,16 @@
 /obj/structure/fluff/walldeco/masonflag,
 /turf/closed/wall/mineral/stone,
 /area/indoors/town/shop)
+"C" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/tile/brick,
+/area/indoors/town/shop)
 "G" = (
-/obj/structure/window/openclose/reinforced{
+/obj/structure/curtain/bounty/dir{
+	opacity = 1;
+	dir = 4
+	},
+/obj/structure/window/openclose{
 	dir = 4
 	},
 /turf/open/floor/cobble/alt,
@@ -66,12 +96,23 @@
 /obj/structure/door/window{
 	name = "Maker's Quarter"
 	},
+/obj/effect/mapping_helpers/access/locker,
+/obj/structure/curtain/bounty/dir{
+	opacity = 1;
+	dir = 1
+	},
 /turf/open/floor/tile/brick,
 /area/indoors/town/shop)
 "P" = (
 /obj/structure/door{
 	name = "Maker's Quarter"
 	},
+/obj/effect/mapping_helpers/access/locker,
+/turf/open/floor/tile/brick,
+/area/indoors/town/shop)
+"Q" = (
+/obj/machinery/light/fueled/torchholder/c,
+/obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/tile/brick,
 /area/indoors/town/shop)
 "U" = (
@@ -82,22 +123,23 @@
 /obj/machinery/light/fueled/torchholder/r{
 	dir = 4
 	},
+/obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/tile/brick,
 /area/indoors/town/shop)
 
 (1,1,1) = {"
 y
 G
-L
-L
+n
+n
 G
 y
 "}
 (2,1,1) = {"
 t
+C
 J
-J
-J
+C
 c
 w
 "}
@@ -105,14 +147,14 @@ w
 P
 J
 J
-J
+C
 J
 L
 "}
 (4,1,1) = {"
 r
 J
-J
+C
 J
 J
 L
@@ -120,7 +162,7 @@ L
 (5,1,1) = {"
 l
 m
-J
+C
 J
 J
 w
@@ -129,32 +171,32 @@ w
 H
 J
 J
-J
+C
 J
 a
 "}
 (7,1,1) = {"
 a
 U
-J
-J
+C
+C
 J
 a
 "}
 (8,1,1) = {"
 p
-m
+Q
 J
-J
+C
 J
 X
 "}
 (9,1,1) = {"
 P
+C
 J
-J
-J
-J
+C
+C
 J
 "}
 (10,1,1) = {"
@@ -162,7 +204,7 @@ a
 x
 x
 j
-J
+C
 J
 "}
 (11,1,1) = {"

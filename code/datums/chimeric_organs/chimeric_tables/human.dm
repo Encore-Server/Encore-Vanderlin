@@ -125,7 +125,7 @@
 	node_purity_max = 45
 
 /datum/chimeric_table/medicator
-	name = "Medicator"
+	name = "Vultura"
 	compatible_blood_types = list(
 		/datum/blood_type/human/medicator,
 	)
@@ -285,7 +285,7 @@
 	var/input_blacklist = list()
 	var/max_inputs = 5
 
-	var/output_blacklist = list()
+	var/output_blacklist = list(/datum/chimeric_node/output/speed/test)
 	var/max_outputs = 6
 
 /datum/chimeric_table/random/New()

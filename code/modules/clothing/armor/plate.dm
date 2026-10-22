@@ -128,6 +128,12 @@
 	max_integrity = INTEGRITY_STANDARD
 	item_weight = 8.75 KILOGRAMS
 
+/obj/item/clothing/armor/plate/rust/bandit
+	name = "rusted alloy half-plate"
+	desc = "Old glory, old defeats, most of the rust comes from damp and not the blood of previous wearers, one would hope. This one seems made of a strange alloy..."
+	armor_type = /datum/armor/plate
+	max_integrity = INTEGRITY_STRONG
+
 /obj/item/clothing/armor/plate/silver
 	name = "templar's half-plate"
 	desc = "Akan's holy silver, one fifth. Steel, three fifths. Chosen Material, one fifth. The armor of the Templar, protector and warrior of the Aspect's Faithful."
@@ -223,9 +229,9 @@
 
 //................ One Envy Armor ...............//
 
-/obj/item/clothing/armor/plate/full/envy
+/obj/item/clothing/armor/plate/full/evil
 	name = "darksteel fullplate"
-	desc = "Full plate. Called forth from the edge of what should be known. In Her name."
+	desc = "Full plate. Called forth from the edge of what should be known."
 	icon_state = "zizoplate"
 	icon = 'icons/roguetown/clothing/special/evilarmor.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/special/onmob/evilarmor.dmi'

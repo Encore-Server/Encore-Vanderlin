@@ -14,37 +14,73 @@
 /obj/structure/door/window{
 	name = "Maker's Quarter"
 	},
+/obj/effect/mapping_helpers/access/locker,
+/obj/structure/curtain/bounty/dir{
+	opacity = 1;
+	dir = 4
+	},
 /turf/open/floor/tile/brick,
 /area/indoors/town/shop)
 "f" = (
 /obj/structure/door{
 	name = "Maker's Quarter"
 	},
+/obj/effect/mapping_helpers/access/locker,
 /turf/open/floor/tile/brick,
 /area/indoors/town/shop)
 "h" = (
-/obj/structure/window/openclose/reinforced{
+/obj/structure/curtain/bounty/dir{
+	dir = 8
+	},
+/obj/structure/window/openclose{
 	dir = 8
 	},
 /turf/open/floor/tile/brick,
 /area/indoors/town/shop)
 "o" = (
-/obj/structure/window/openclose/reinforced,
+/obj/structure/curtain/bounty/dir{
+	opacity = 1
+	},
+/obj/structure/window/openclose,
 /turf/open/floor/blocks/stonered,
+/area/indoors/town/shop)
+"r" = (
+/obj/structure/rack/shelf/biggest,
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/tile/brick,
+/area/indoors/town/shop)
+"w" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/tile/brick,
 /area/indoors/town/shop)
 "z" = (
 /obj/machinery/light/fueled/torchholder/c,
 /turf/open/floor/tile/brick,
 /area/indoors/town/shop)
 "A" = (
-/obj/structure/sign/property_sign/claim,
+/obj/structure/sign/property_sign/claim/yeoman,
 /turf/closed/wall/mineral/stone,
 /area/indoors/town/shop)
 "B" = (
-/obj/structure/window/openclose/reinforced{
+/obj/structure/curtain/bounty/dir{
+	opacity = 1;
+	dir = 4
+	},
+/obj/structure/window/openclose{
 	dir = 4
 	},
 /turf/open/floor/cobble/alt,
+/area/indoors/town/shop)
+"E" = (
+/obj/structure/door/window{
+	name = "Maker's Quarter"
+	},
+/obj/effect/mapping_helpers/access/locker,
+/obj/structure/curtain/bounty/dir{
+	opacity = 1;
+	dir = 1
+	},
+/turf/open/floor/tile/brick,
 /area/indoors/town/shop)
 "G" = (
 /obj/machinery/light/fueled/torchholder/l,
@@ -54,7 +90,11 @@
 /turf/closed/wall/mineral/stone,
 /area/indoors/town/shop)
 "N" = (
-/obj/structure/window/openclose/reinforced{
+/obj/structure/window/openclose{
+	dir = 1
+	},
+/obj/structure/curtain/bounty/dir{
+	opacity = 1;
 	dir = 1
 	},
 /turf/open/floor/cobble/alt,
@@ -73,6 +113,7 @@
 "S" = (
 /obj/structure/rack/shelf/biggest,
 /obj/item/key/houses/workplace2,
+/obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/tile/brick,
 /area/indoors/town/shop)
 
@@ -94,25 +135,25 @@ A
 "}
 (3,1,1) = {"
 f
+w
 a
+w
 a
-a
-a
-e
+E
 "}
 (4,1,1) = {"
 o
 a
+w
 a
 a
-a
-e
+E
 "}
 (5,1,1) = {"
 I
 z
-a
-a
+w
+w
 a
 N
 "}
@@ -120,38 +161,38 @@ N
 O
 a
 a
-a
+w
 a
 I
 "}
 (7,1,1) = {"
 O
 a
-a
-a
+w
+w
 a
 I
 "}
 (8,1,1) = {"
 I
 z
+w
 a
-a
-a
+w
 I
 "}
 (9,1,1) = {"
 f
 a
-a
-a
+w
+w
 a
 f
 "}
 (10,1,1) = {"
 O
 P
-Q
+r
 S
 c
 O

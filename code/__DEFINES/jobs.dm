@@ -51,6 +51,8 @@
 #define FACTION_HOSTILE		"Hostile"
 #define FACTION_TOWN		"Town"
 #define SUB_FACTION_KEEP 	"Keep"
+#define SUB_FACTION_VAULT 	"Treasury"//Vault access without the guardians killing you
+#define FACTION_SHIRLEIGH 	"Shirleigh"//Princess, prince and lord only
 #define FACTION_FOREIGNERS  "Foreigners"
 #define FACTION_MIGRANTS  	"Migrants"
 #define FACTION_UNDEAD		"Undead"
@@ -62,6 +64,7 @@
 #define FACTION_BUMS		"Bums"
 #define FACTION_DECEIVERS	"Deceivers"
 #define FACTION_VIKINGS     "Vikings"
+#define FACTION_CHURCH		"Katholikos"//Church vault access without the guardians killing you
 #define FACTION_INQUISITION	"Inquisition"
 #define FACTION_INFERNAL	"Infernal"
 
@@ -109,7 +112,7 @@
 
 #define JDO_CAPTAIN 7
 #define JDO_ROYALKNIGHT 7.2
-#define JDO_MENATARMS 8
+//#define JDO_MENATARMS 8
 #define JDO_CITYWATCHMEN 8.1
 #define JDO_GATEMASTER 8.2
 #define JDO_DUNGEONEER 9
@@ -184,6 +187,9 @@
 #define JDO_SUNLORD 0.1
 #define JDO_SUNDWELLER 40
 
+#define JDO_SHIRLEIGHQUEEN 0.2
+#define JDO_SHIRLEIGHLACKEY 0.3
+
 
 #define JDO_PURITAN 40
 #define JDO_ORTHODOXIST	40.1
@@ -210,9 +216,9 @@
 
 
 #define JOB_ROYAL_KNIGHT "Royal Knight"
-#define JOB_CITY_WATCH "City Watchmen"
+//#define JOB_CITY_WATCH "City Watchmen"
 #define JOB_CITY_WATCH_LIEUTENANT "City Watch Lieutenant"
-#define JOB_MAN_AT_ARMS "Man-at-arms"
+#define JOB_MAN_AT_ARMS "Man-at-Arms"
 #define JOB_GATEMASTER "Gatemaster"
 #define JOB_DUNGEONEER "Dungeoneer"
 #define JOB_TOWN_ELDER "Town Elder"
@@ -302,3 +308,7 @@
 #define JOB_ADMIN_LUNAR_SENTINEL "Lunar Order Sentinel"
 #define JOB_ADMIN_LUNAR_CHAMPION "Lunar Order Champion"
 #define JOB_ADMIN_DARKSPAWN "Darkspawn"
+
+#define JOB_ADMIN_SHIRLEIGH_QUEEN "Queen of Etgard"
+#define JOB_ADMIN_SHIRLEIGH_KING "King of Etgard"
+#define JOB_ADMIN_SHIRLEIGH_LACKEY "Eternal Hand"

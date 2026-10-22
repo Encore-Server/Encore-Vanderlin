@@ -416,6 +416,11 @@
 	. = ..()
 	ADD_TRAIT(src, TRAIT_HARD_TO_STEAL, TRAIT_GENERIC)
 
+/obj/item/clothing/neck/gorget/chainbreaker
+	name = "chainbreaker collar"
+	desc = "A old reminder. Chainbreakers company wears these to remind themselves what they fight for, and to proudly announce their fight to those that behold them."
+	icon_state = "chainbreaker_collar"
+
 /obj/item/clothing/neck/gorget/kazengun
 	name = "blackmeadow gorget"
 	desc = "A series of interlocking rings of metal set around the throat. Used by the kouken of Blackmeadow for precisely the same reason as the knights of Psydonia."
@@ -589,7 +594,7 @@
 	adjustable = CAN_CADJUST
 	toggle_icon_state = TRUE
 	blocksound = CHAINHIT
-	smeltresult = null
+	smeltresult = /obj/item/ingot/steel
 	clothing_flags = CANT_SLEEP_IN
 	max_integrity = INTEGRITY_STRONGEST
 	prevent_crits = ALL_EXCEPT_BLUNT
@@ -628,6 +633,7 @@
 	icon_state = "ihigh_collier"
 	body_parts_covered = NECK|MOUTH
 	armor_type = /datum/armor/neck/maille/iron
+	smeltresult = /obj/item/ingot/iron
 	max_integrity = INTEGRITY_STRONG
 	smeltresult = /obj/item/ingot/iron
 	melt_amount = 100

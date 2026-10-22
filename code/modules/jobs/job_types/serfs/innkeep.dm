@@ -14,7 +14,7 @@
 
 /datum/job/innkeep
 	title = JOB_INNKEEP
-	alt_titles = list("Taverner")
+	alt_titles = list("Taverner", "Guildmaster")
 	tutorial = "Liquor, lodging, and lavish meals... your business is the beating heart of Old Doma. \
 		You're the one who provides the hardworking townsfolk with a place to eat and drink their sorrows away, \
 		and accommodations for weary travelers passing through."
@@ -26,7 +26,7 @@
 	spawn_positions = 2
 	bypass_lastclass = TRUE
 
-	allowed_races = RACES_PLAYER_ALL
+	allowed_races = RACES_NON_ANTAG
 
 	outfit = /datum/outfit/innkeep
 	give_bank_account = 60

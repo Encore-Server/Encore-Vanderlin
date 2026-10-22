@@ -26,7 +26,7 @@
 	color = CLOTHING_SOOT_BLACK
 
 /obj/item/clothing/shirt/dress/gen/colored/blue
-	color = CLOTHING_SKY_BLUE
+	color = CLOTHING_MIDNIGHT_BLUE
 
 /obj/item/clothing/shirt/dress/gen/colored/green
 	color = CLOTHING_BOG_GREEN
@@ -169,7 +169,7 @@
 	color = "#a90707"
 
 /obj/item/clothing/shirt/dress/gen/sexy/Initialize()
-	color = pick(CLOTHING_WINESTAIN_RED, CLOTHING_SKY_BLUE, CLOTHING_SALMON	, CLOTHING_SOOT_BLACK)
+	color = pick(CLOTHING_WINESTAIN_RED, CLOTHING_MIDNIGHT_BLUE, CLOTHING_SALMON	, CLOTHING_SOOT_BLACK)
 	return ..()
 
 /obj/item/clothing/shirt/dress/silkydress
@@ -219,3 +219,32 @@
 	icon_state = "fallgown"
 	slot_flags = ITEM_SLOT_SHIRT|ITEM_SLOT_ARMOR
 	detail_color = "#8b3f00"
+
+/obj/item/clothing/shirt/dress/rosa
+	name = "ivory dress"
+	desc = "A finely crafted dress from the west, typically worn by their nobility."
+	icon_state = "rosadress1"
+	icon = 'icons/roguetown/clothing/special/rosewood.dmi'
+	mob_overlay_icon = 'icons/roguetown/clothing/special/onmob/rosewood.dmi'
+	sleeved = 'icons/roguetown/clothing/special/onmob/rosewood.dmi'
+	boobed = FALSE
+
+/obj/item/clothing/shirt/dress/rosa/two
+	name = "scarlet dress"
+	icon_state = "rosadress2"
+
+/obj/item/clothing/shirt/dress/rosa/three
+	name = "velvet dress"
+	icon_state = "rosadress3"
+
+/obj/item/clothing/shirt/dress/rosa/four
+	name = "obsidian dress"
+	icon_state = "rosadress4"
+
+/obj/item/clothing/shirt/dress/rosa/five
+	name = "sable dress"
+	icon_state = "rosadress5"
+
+/obj/item/clothing/shirt/dress/rosa/six
+	name = "maroon dress"
+	icon_state = "rosadress6"

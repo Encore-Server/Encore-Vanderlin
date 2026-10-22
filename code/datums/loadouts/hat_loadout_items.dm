@@ -1,3 +1,10 @@
+/datum/loadout_item/basichood
+	name = "Hood"
+	item_path = /obj/item/clothing/head/roguehood/colored
+	ui_category = "Hats"
+
+	triumph_cost_permanent = 1
+
 /datum/loadout_item/zalad
 	name = "Keffiyeh"
 	item_path = /obj/item/clothing/neck/keffiyeh
@@ -53,6 +60,13 @@
 	ui_category = "Hats"
 
 	triumph_cost_permanent = 3
+
+/datum/loadout_item/bonnet
+	name = "Bonnet"
+	item_path = /obj/item/clothing/head/bonnet
+	ui_category = "Hats"
+
+	triumph_cost_permanent = 2
 
 /datum/loadout_item/rosa_flower_crown
 	name = "Rosa Flower Crown"
