@@ -217,6 +217,11 @@
 		/datum/attribute/skill/combat/whipsflails = 40
 	)
 
+/datum/attribute_holder/sheet/job/templar/holyknight/patron/golerkanh/axe
+	raw_attribute_list = list(
+		/datum/attribute/skill/combat/axesmaces = 40
+	)
+
 /datum/attribute_holder/sheet/job/templar/holyknight/patron/iliope
 	raw_attribute_list = list(
 		/datum/attribute/skill/combat/whipsflails = 40,
