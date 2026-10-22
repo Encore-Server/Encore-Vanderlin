@@ -1,6 +1,6 @@
 /datum/attribute_holder/sheet/job/templar/pugilist
 	raw_attribute_list = list(
-		STAT_STRENGTH = 2,
+		STAT_ENDURANCE = 2,
 		STAT_CONSTITUTION = 2,
 		STAT_SPEED = 2,
 		STAT_INTELLIGENCE = -1,
