@@ -33,6 +33,16 @@
 		/datum/attribute/skill/combat/polearms = 40
 	)
 
+/datum/attribute_holder/sheet/job/templar/holyknight/patron/visires/axe
+	raw_attribute_list = list(
+		/datum/attribute/skill/combat/axesmaces = 40
+	)
+
+/datum/attribute_holder/sheet/job/templar/holyknight/patron/visires/flail
+	raw_attribute_list = list(
+		/datum/attribute/skill/combat/whipsflails = 40
+	)
+
 /datum/attribute_holder/sheet/job/templar/holyknight/patron/akan
 	raw_attribute_list = list(
 		/datum/attribute/skill/labor/mathematics = 20,
@@ -53,6 +63,16 @@
 /datum/attribute_holder/sheet/job/templar/holyknight/patron/akan/spear
 	raw_attribute_list = list(
 		/datum/attribute/skill/combat/polearms = 40
+	)
+
+/datum/attribute_holder/sheet/job/templar/holyknight/patron/akan/axe
+	raw_attribute_list = list(
+		/datum/attribute/skill/combat/axesmaces = 40
+	)
+
+/datum/attribute_holder/sheet/job/templar/holyknight/patron/akan/flail
+	raw_attribute_list = list(
+		/datum/attribute/skill/combat/whipsflails = 40
 	)
 
 /datum/attribute_holder/sheet/job/templar/holyknight/patron/gani
@@ -77,6 +97,16 @@
 		/datum/attribute/skill/combat/polearms = 40
 	)
 
+/datum/attribute_holder/sheet/job/templar/holyknight/patron/gani/axe
+	raw_attribute_list = list(
+		/datum/attribute/skill/combat/axesmaces = 40
+	)
+
+/datum/attribute_holder/sheet/job/templar/holyknight/patron/gani/flail
+	raw_attribute_list = list(
+		/datum/attribute/skill/combat/whipsflails = 40
+	)
+
 /datum/attribute_holder/sheet/job/templar/holyknight/patron/valdala
 	raw_attribute_list = list(
 		/datum/attribute/skill/misc/medicine = 20,
@@ -97,6 +127,11 @@
 /datum/attribute_holder/sheet/job/templar/holyknight/patron/valdala/spear
 	raw_attribute_list = list(
 		/datum/attribute/skill/combat/polearms = 40
+	)
+
+/datum/attribute_holder/sheet/job/templar/holyknight/patron/valdala/axe
+	raw_attribute_list = list(
+		/datum/attribute/skill/combat/axesmaces = 40
 	)
 
 /datum/attribute_holder/sheet/job/templar/holyknight/patron/erdl
@@ -120,6 +155,16 @@
 		/datum/attribute/skill/combat/polearms = 40
 	)
 
+/datum/attribute_holder/sheet/job/templar/holyknight/patron/erdl/axe
+	raw_attribute_list = list(
+		/datum/attribute/skill/combat/axesmaces = 40
+	)
+
+/datum/attribute_holder/sheet/job/templar/holyknight/patron/erdl/flail
+	raw_attribute_list = list(
+		/datum/attribute/skill/combat/whipsflails = 40
+	)
+
 /datum/attribute_holder/sheet/job/templar/holyknight/patron/mordsol
 	raw_attribute_list = list(
 		/datum/attribute/skill/labor/fishing = 30,
@@ -134,6 +179,16 @@
 /datum/attribute_holder/sheet/job/templar/holyknight/patron/mordsol/spear
 	raw_attribute_list = list(
 		/datum/attribute/skill/combat/polearms = 40
+	)
+
+/datum/attribute_holder/sheet/job/templar/holyknight/patron/mordsol/axe
+	raw_attribute_list = list(
+		/datum/attribute/skill/combat/axesmaces = 40
+	)
+
+/datum/attribute_holder/sheet/job/templar/holyknight/patron/mordsol/flail
+	raw_attribute_list = list(
+		/datum/attribute/skill/combat/whipsflails = 40
 	)
 
 /datum/attribute_holder/sheet/job/templar/holyknight/patron/golerkanh
@@ -155,6 +210,11 @@
 /datum/attribute_holder/sheet/job/templar/holyknight/patron/golerkanh/spear
 	raw_attribute_list = list(
 		/datum/attribute/skill/combat/polearms = 40
+	)
+
+/datum/attribute_holder/sheet/job/templar/holyknight/patron/golerkanh/flail
+	raw_attribute_list = list(
+		/datum/attribute/skill/combat/whipsflails = 40
 	)
 
 /datum/attribute_holder/sheet/job/templar/holyknight/patron/iliope
@@ -181,6 +241,11 @@
 		/datum/attribute/skill/combat/polearms = 40
 	)
 
+/datum/attribute_holder/sheet/job/templar/holyknight/patron/iliope/axe
+	raw_attribute_list = list(
+		/datum/attribute/skill/combat/axesmaces = 40
+	)
+
 /datum/attribute_holder/sheet/job/templar/holyknight/patron/pomette
 	raw_attribute_list = list(
 		/datum/attribute/skill/labor/farming = 20,
@@ -196,6 +261,16 @@
 /datum/attribute_holder/sheet/job/templar/holyknight/patron/pomette/spear
 	raw_attribute_list = list(
 		/datum/attribute/skill/combat/polearms = 40
+	)
+
+/datum/attribute_holder/sheet/job/templar/holyknight/patron/pomette/axe
+	raw_attribute_list = list(
+		/datum/attribute/skill/combat/axesmaces = 40
+	)
+
+/datum/attribute_holder/sheet/job/templar/holyknight/patron/pomette/flail
+	raw_attribute_list = list(
+		/datum/attribute/skill/combat/whipsflails = 40
 	)
 
 /datum/attribute_holder/sheet/job/templar/holyknight/patron/mjallidhorn
@@ -216,6 +291,11 @@
 /datum/attribute_holder/sheet/job/templar/holyknight/patron/mjallidhorn/sword
 	raw_attribute_list = list(
 		/datum/attribute/skill/combat/swords = 40
+	)
+
+/datum/attribute_holder/sheet/job/templar/holyknight/patron/mjallidhorn/flail
+	raw_attribute_list = list(
+		/datum/attribute/skill/combat/whipsflails = 40
 	)
 
 /datum/job/advclass/templar/holyknight
@@ -246,6 +326,9 @@
 			var/static/list/selectable = list(
 				"Holy See Longsword" = /obj/item/weapon/sword/long/holysee,
 				"Holy See Spear" = /obj/item/weapon/polearm/spear/holysee,
+				"Silver Axe" = /obj/item/weapon/axe/silver,
+				"Silver Warhammer" = /obj/item/weapon/mace/warhammer/silver,
+				"Silver Flail" = /obj/item/weapon/flail/silver,
 				"Flame's Hunger (Longsword)" = /obj/item/weapon/sword/long/exe/visires
 
 			)
@@ -257,6 +340,12 @@
 					spawned.attributes?.add_sheet(/datum/attribute_holder/sheet/job/templar/holyknight/patron/visires/sword)
 				if("Holy See Spear")
 					spawned.attributes?.add_sheet(/datum/attribute_holder/sheet/job/templar/holyknight/patron/visires/spear)
+				if("Silver Axe")
+					spawned.attributes?.add_sheet(/datum/attribute_holder/sheet/job/templar/holyknight/patron/visires/axe)
+				if("Silver Warhammer")
+					spawned.attributes?.add_sheet(/datum/attribute_holder/sheet/job/templar/holyknight/patron/visires/axe)
+				if("Silver Flail")
+					spawned.attributes?.add_sheet(/datum/attribute_holder/sheet/job/templar/holyknight/patron/visires/flail)
 				if("Flame's Hunger (Longsword)")
 					spawned.attributes?.add_sheet(/datum/attribute_holder/sheet/job/templar/holyknight/patron/visires/sword)
 		if(/datum/patron/divine/akan)
@@ -266,6 +355,9 @@
 			var/static/list/selectable = list(
 				"Holy See Longsword" = /obj/item/weapon/sword/long/holysee,
 				"Holy See Spear" = /obj/item/weapon/polearm/spear/holysee,
+				"Silver Axe" = /obj/item/weapon/axe/silver,
+				"Silver Warhammer" = /obj/item/weapon/mace/warhammer/silver,
+				"Silver Flail" = /obj/item/weapon/flail/silver,
 				"Moonlight Khopesh (Swords)" = list(/obj/item/weapon/sword/sabre/akan, /obj/item/weapon/sword/sabre/akan)
 
 			)
@@ -277,6 +369,12 @@
 					spawned.attributes?.add_sheet(/datum/attribute_holder/sheet/job/templar/holyknight/patron/akan/sword)
 				if("Holy See Spear")
 					spawned.attributes?.add_sheet(/datum/attribute_holder/sheet/job/templar/holyknight/patron/akan/spear)
+				if("Silver Axe")
+					spawned.attributes?.add_sheet(/datum/attribute_holder/sheet/job/templar/holyknight/patron/akan/axe)
+				if("Silver Warhammer")
+					spawned.attributes?.add_sheet(/datum/attribute_holder/sheet/job/templar/holyknight/patron/akan/axe)
+				if("Silver Flail")
+					spawned.attributes?.add_sheet(/datum/attribute_holder/sheet/job/templar/holyknight/patron/akan/flail)
 				if("Moonlight Khopesh (Swords)")
 					spawned.attributes?.add_sheet(/datum/attribute_holder/sheet/job/templar/holyknight/patron/akan/sword)
 
@@ -301,6 +399,9 @@
 			var/static/list/selectable = list(
 				"Holy See Longsword" = /obj/item/weapon/sword/long/holysee,
 				"Holy See Spear" = /obj/item/weapon/polearm/spear/holysee,
+				"Silver Axe" = /obj/item/weapon/axe/silver,
+				"Silver Warhammer" = /obj/item/weapon/mace/warhammer/silver,
+				"Silver Flail" = /obj/item/weapon/flail/silver,
 				"Summer Scythe (Polearm)" = /obj/item/weapon/polearm/halberd/bardiche/gani,
 
 			)
@@ -312,6 +413,12 @@
 					spawned.attributes?.add_sheet(/datum/attribute_holder/sheet/job/templar/holyknight/patron/gani/sword)
 				if("Holy See Spear")
 					spawned.attributes?.add_sheet(/datum/attribute_holder/sheet/job/templar/holyknight/patron/gani/spear)
+				if("Silver Axe")
+					spawned.attributes?.add_sheet(/datum/attribute_holder/sheet/job/templar/holyknight/patron/gani/axe)
+				if("Silver Warhammer")
+					spawned.attributes?.add_sheet(/datum/attribute_holder/sheet/job/templar/holyknight/patron/gani/axe)
+				if("Silver Flail")
+					spawned.attributes?.add_sheet(/datum/attribute_holder/sheet/job/templar/holyknight/patron/gani/flail)
 				if("Summer Scythe (Polearm)")
 					spawned.attributes?.add_sheet(/datum/attribute_holder/sheet/job/templar/holyknight/patron/gani/polearm)
 		if(/datum/patron/divine/valdala)
@@ -322,6 +429,9 @@
 			var/static/list/selectable = list(
 				"Holy See Longsword" = /obj/item/weapon/sword/long/holysee,
 				"Holy See Spear" = /obj/item/weapon/polearm/spear/holysee,
+				"Silver Axe" = /obj/item/weapon/axe/silver,
+				"Silver Warhammer" = /obj/item/weapon/mace/warhammer/silver,
+				"Silver Flail" = /obj/item/weapon/flail/silver,
 				"Swift Journey (Flail)" = /obj/item/weapon/flail/sflail/valdalaflail,
 
 			)
@@ -333,6 +443,12 @@
 					spawned.attributes?.add_sheet(/datum/attribute_holder/sheet/job/templar/holyknight/patron/valdala/sword)
 				if("Holy See Spear")
 					spawned.attributes?.add_sheet(/datum/attribute_holder/sheet/job/templar/holyknight/patron/valdala/spear)
+				if("Silver Axe")
+					spawned.attributes?.add_sheet(/datum/attribute_holder/sheet/job/templar/holyknight/patron/valdala/axe)
+				if("Silver Warhammer")
+					spawned.attributes?.add_sheet(/datum/attribute_holder/sheet/job/templar/holyknight/patron/valdala/axe)
+				if("Silver Flail")
+					spawned.attributes?.add_sheet(/datum/attribute_holder/sheet/job/templar/holyknight/patron/valdala/flail)
 				if("Swift Journey (Flail)")
 					spawned.attributes?.add_sheet(/datum/attribute_holder/sheet/job/templar/holyknight/patron/valdala/flail)
 		if(/datum/patron/divine/erdl)
@@ -342,6 +458,9 @@
 			var/static/list/selectable = list(
 				"Holy See Longsword" = /obj/item/weapon/sword/long/holysee,
 				"Holy See Spear" = /obj/item/weapon/polearm/spear/holysee,
+				"Silver Axe" = /obj/item/weapon/axe/silver,
+				"Silver Warhammer" = /obj/item/weapon/mace/warhammer/silver,
+				"Silver Flail" = /obj/item/weapon/flail/silver,
 				"Plaguebearer Sickles (Knives)" = list(/obj/item/weapon/knife/dagger/steel/erdlsickle, /obj/item/weapon/knife/dagger/steel/erdlsickle)
 
 			)
@@ -353,6 +472,12 @@
 					spawned.attributes?.add_sheet(/datum/attribute_holder/sheet/job/templar/holyknight/patron/erdl/sword)
 				if("Holy See Spear")
 					spawned.attributes?.add_sheet(/datum/attribute_holder/sheet/job/templar/holyknight/patron/erdl/spear)
+				if("Silver Axe")
+					spawned.attributes?.add_sheet(/datum/attribute_holder/sheet/job/templar/holyknight/patron/erdl/axe)
+				if("Silver Warhammer")
+					spawned.attributes?.add_sheet(/datum/attribute_holder/sheet/job/templar/holyknight/patron/erdl/axe)
+				if("Silver Flail")
+					spawned.attributes?.add_sheet(/datum/attribute_holder/sheet/job/templar/holyknight/patron/erdl/flail)
 				if("Plaguebearer Sickles (Knives)")
 					spawned.attributes?.add_sheet(/datum/attribute_holder/sheet/job/templar/holyknight/patron/erdl/knives)
 		if(/datum/patron/divine/pomette)
@@ -361,6 +486,9 @@
 			var/static/list/selectable = list(
 				"Holy See Longsword" = /obj/item/weapon/sword/long/holysee,
 				"Holy See Spear" = /obj/item/weapon/polearm/spear/holysee,
+				"Silver Axe" = /obj/item/weapon/axe/silver,
+				"Silver Warhammer" = /obj/item/weapon/mace/warhammer/silver,
+				"Silver Flail" = /obj/item/weapon/flail/silver,
 				"Heartstring (Rapier)" = /obj/item/weapon/sword/rapier/pomette,
 			)
 			var/choice = spawned.select_equippable(player_client, selectable, message = "Choose Your Specialisation", title = "TEMPLAR")
@@ -371,6 +499,12 @@
 					spawned.attributes?.add_sheet(/datum/attribute_holder/sheet/job/templar/holyknight/patron/pomette/sword)
 				if("Holy See Spear")
 					spawned.attributes?.add_sheet(/datum/attribute_holder/sheet/job/templar/holyknight/patron/pomette/spear)
+				if("Silver Axe")
+					spawned.attributes?.add_sheet(/datum/attribute_holder/sheet/job/templar/holyknight/patron/pomette/axe)
+				if("Silver Warhammer")
+					spawned.attributes?.add_sheet(/datum/attribute_holder/sheet/job/templar/holyknight/patron/pomette/axe)
+				if("Silver Flail")
+					spawned.attributes?.add_sheet(/datum/attribute_holder/sheet/job/templar/holyknight/patron/pomette/flail)
 				if("Heartstring (Rapier)")
 					spawned.attributes?.add_sheet(/datum/attribute_holder/sheet/job/templar/holyknight/patron/pomette/sword)
 		if(/datum/patron/divine/mordsol)
@@ -379,6 +513,9 @@
 			var/static/list/selectable = list(
 				"Holy See Longsword" = /obj/item/weapon/sword/long/holysee,
 				"Holy See Spear" = /obj/item/weapon/polearm/spear/holysee,
+				"Silver Axe" = /obj/item/weapon/axe/silver,
+				"Silver Warhammer" = /obj/item/weapon/mace/warhammer/silver,
+				"Silver Flail" = /obj/item/weapon/flail/silver,
 				"Duel Settler (Longsword)" = /obj/item/weapon/sword/long/mordsol,
 
 			)
@@ -390,6 +527,12 @@
 					spawned.attributes?.add_sheet(/datum/attribute_holder/sheet/job/templar/holyknight/patron/mordsol/sword)
 				if("Holy See Spear")
 					spawned.attributes?.add_sheet(/datum/attribute_holder/sheet/job/templar/holyknight/patron/mordsol/spear)
+				if("Silver Axe")
+					spawned.attributes?.add_sheet(/datum/attribute_holder/sheet/job/templar/holyknight/patron/mordsol/axe)
+				if("Silver Warhammer")
+					spawned.attributes?.add_sheet(/datum/attribute_holder/sheet/job/templar/holyknight/patron/mordsol/axe)
+				if("Silver Flail")
+					spawned.attributes?.add_sheet(/datum/attribute_holder/sheet/job/templar/holyknight/patron/mordsol/flail)
 				if("Duel Settler (Longsword)")
 					spawned.attributes?.add_sheet(/datum/attribute_holder/sheet/job/templar/holyknight/patron/mordsol/sword)
 		if(/datum/patron/divine/golerkanh)
@@ -398,6 +541,9 @@
 			var/static/list/selectable = list(
 				"Holy See Longsword" = /obj/item/weapon/sword/long/holysee,
 				"Holy See Spear" = /obj/item/weapon/polearm/spear/holysee,
+				"Silver Axe" = /obj/item/weapon/axe/silver,
+				"Silver Warhammer" = /obj/item/weapon/mace/warhammer/silver,
+				"Silver Flail" = /obj/item/weapon/flail/silver,
 				"Forgefiend (Warhammer)" = /obj/item/weapon/hammer/sledgehammer/war/golerkanh,
 
 			)
@@ -409,6 +555,12 @@
 					spawned.attributes?.add_sheet(/datum/attribute_holder/sheet/job/templar/holyknight/patron/golerkanh/sword)
 				if("Holy See Spear")
 					spawned.attributes?.add_sheet(/datum/attribute_holder/sheet/job/templar/holyknight/patron/golerkanh/spear)
+				if("Silver Axe")
+					spawned.attributes?.add_sheet(/datum/attribute_holder/sheet/job/templar/holyknight/patron/golerkanh/axe)
+				if("Silver Warhammer")
+					spawned.attributes?.add_sheet(/datum/attribute_holder/sheet/job/templar/holyknight/patron/golerkanh/axe)
+				if("Silver Flail")
+					spawned.attributes?.add_sheet(/datum/attribute_holder/sheet/job/templar/holyknight/patron/golerkanh/flail)
 				if("Forgefiend (Warhammer)")
 					spawned.attributes?.add_sheet(/datum/attribute_holder/sheet/job/templar/holyknight/patron/golerkanh/hammer)
 		if(/datum/patron/divine/mjallidhorn)
@@ -417,6 +569,9 @@
 			var/static/list/selectable = list(
 				"Holy See Longsword" = /obj/item/weapon/sword/long/holysee,
 				"Holy See Spear" = /obj/item/weapon/polearm/spear/holysee,
+				"Silver Axe" = /obj/item/weapon/axe/silver,
+				"Silver Warhammer" = /obj/item/weapon/mace/warhammer/silver,
+				"Silver Flail" = /obj/item/weapon/flail/silver,
 				"Depthseeker (Spear)" = /obj/item/weapon/polearm/spear/mjallidhorn,
 				"Frostcleaver (Axe)" = /obj/item/weapon/axe/steel/mjallidhorn,
 			)
@@ -428,6 +583,12 @@
 					spawned.attributes?.add_sheet(/datum/attribute_holder/sheet/job/templar/holyknight/patron/mjallidhorn/sword)
 				if("Holy See Spear")
 					spawned.attributes?.add_sheet(/datum/attribute_holder/sheet/job/templar/holyknight/patron/mjallidhorn/spear)
+				if("Silver Axe")
+					spawned.attributes?.add_sheet(/datum/attribute_holder/sheet/job/templar/holyknight/patron/mjallidhorn/axe)
+				if("Silver Warhammer")
+					spawned.attributes?.add_sheet(/datum/attribute_holder/sheet/job/templar/holyknight/patron/mjallidhorn/axe)
+				if("Silver Flail")
+					spawned.attributes?.add_sheet(/datum/attribute_holder/sheet/job/templar/holyknight/patron/mjallidhorn/flail)
 				if("Depthseeker (Spear)")
 					spawned.attributes?.add_sheet(/datum/attribute_holder/sheet/job/templar/holyknight/patron/mjallidhorn/spear)
 				if("Frostcleaver (Axe)")
@@ -438,6 +599,9 @@
 			var/static/list/selectable = list(
 				"Holy See Longsword" = /obj/item/weapon/sword/long/holysee,
 				"Holy See Spear" = /obj/item/weapon/polearm/spear/holysee,
+				"Silver Axe" = /obj/item/weapon/axe/silver,
+				"Silver Warhammer" = /obj/item/weapon/mace/warhammer/silver,
+				"Silver Flail" = /obj/item/weapon/flail/silver,
 				"Cackle Lash (Whip)" = /obj/item/weapon/whip/iliope,
 
 			)
@@ -449,6 +613,12 @@
 					spawned.attributes?.add_sheet(/datum/attribute_holder/sheet/job/templar/holyknight/patron/iliope/sword)
 				if("Holy See Spear")
 					spawned.attributes?.add_sheet(/datum/attribute_holder/sheet/job/templar/holyknight/patron/iliope/spear)
+				if("Silver Axe")
+					spawned.attributes?.add_sheet(/datum/attribute_holder/sheet/job/templar/holyknight/patron/iliope/axe)
+				if("Silver Warhammer")
+					spawned.attributes?.add_sheet(/datum/attribute_holder/sheet/job/templar/holyknight/patron/iliope/axe)
+				if("Silver Flail")
+					spawned.attributes?.add_sheet(/datum/attribute_holder/sheet/job/templar/holyknight/patron/iliope/whip)
 				if("Cackle Lash (Whip)")
 					spawned.attributes?.add_sheet(/datum/attribute_holder/sheet/job/templar/holyknight/patron/iliope/whip)
 
