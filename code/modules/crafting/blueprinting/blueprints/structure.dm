@@ -1007,3 +1007,98 @@
 	construct_tool = /obj/item/weapon/hammer
 	craftdiff = 2
 
+/datum/blueprint_recipe/structure/large_pillow
+	name = "large floor pillow"
+	desc = "A large floor pillow stuffed with feathers."
+	result_type = /obj/structure/bed/wool/pillow
+	required_materials = list(
+		/obj/item/natural/feather = 2,
+		/obj/item/natural/cloth = 2
+	)
+	construct_tool = /obj/item/needle
+	skillcraft = /datum/attribute/skill/misc/sewing
+	craftdiff = 2
+
+/datum/blueprint_recipe/structure/large_pillow/red
+	name = "large floor pillow (red)"
+	result_type = /obj/structure/bed/wool/pillow/red
+
+/datum/blueprint_recipe/structure/large_pillow/red/regal
+	name = "large floor pillow (regal red)"
+	required_materials = list(
+		/obj/item/natural/feather = 3,
+		/obj/item/natural/cloth = 2,
+		/obj/item/ore/dust/gold = 2
+	)
+	craftdiff = 3
+	result_type = /obj/structure/bed/wool/pillow/red/regal
+
+/datum/blueprint_recipe/structure/large_pillow/blue
+	name = "large floor pillow (blue)"
+	result_type = /obj/structure/bed/wool/pillow/blue
+
+/datum/blueprint_recipe/structure/large_pillow/blue/regal
+	name = "large floor pillow (regal blue)"
+	required_materials = list(
+		/obj/item/natural/feather = 3,
+		/obj/item/natural/cloth = 2,
+		/obj/item/ore/dust/gold = 2
+	)
+	craftdiff = 3
+	result_type = /obj/structure/bed/wool/pillow/blue/regal
+
+/datum/blueprint_recipe/structure/large_pillow/orange
+	name = "large floor pillow (orange)"
+	result_type = /obj/structure/bed/wool/pillow/orange
+
+/datum/blueprint_recipe/structure/large_pillow/orange/regal
+	name = "large floor pillow (regal orange)"
+	required_materials = list(
+		/obj/item/natural/feather = 3,
+		/obj/item/natural/cloth = 2,
+		/obj/item/ore/dust/gold = 2
+	)
+	craftdiff = 3
+	result_type = /obj/structure/bed/wool/pillow/orange/regal
+
+/datum/blueprint_recipe/structure/large_pillow/cyan
+	name = "large floor pillow (cyan)"
+	result_type = /obj/structure/bed/wool/pillow/cyan
+
+/datum/blueprint_recipe/structure/large_pillow/cyan/regal
+	name = "large floor pillow (regal cyan)"
+	required_materials = list(
+		/obj/item/natural/feather = 3,
+		/obj/item/natural/cloth = 2,
+		/obj/item/ore/dust/gold = 2
+	)
+	craftdiff = 3
+	result_type = /obj/structure/bed/wool/pillow/cyan/regal
+
+/datum/blueprint_recipe/structure/large_pillow/purple
+	name = "large floor pillow (purple)"
+	result_type = /obj/structure/bed/wool/pillow/purple
+
+/datum/blueprint_recipe/structure/large_pillow/purple/regal
+	name = "large floor pillow (regal purple)"
+	required_materials = list(
+		/obj/item/natural/feather = 3,
+		/obj/item/natural/cloth = 2,
+		/obj/item/ore/dust/gold = 2
+	)
+	craftdiff = 3
+	result_type = /obj/structure/bed/wool/pillow/purple/regal
+
+/datum/blueprint_recipe/structure/large_pillow/navy
+	name = "large floor pillow (navy)"
+	result_type = /obj/structure/bed/wool/pillow/navy
+
+/datum/blueprint_recipe/structure/large_pillow/navy/regal
+	name = "large floor pillow (regal navy)"
+	required_materials = list(
+		/obj/item/natural/feather = 3,
+		/obj/item/natural/cloth = 2,
+		/obj/item/ore/dust/gold = 2
+	)
+	craftdiff = 3
+	result_type = /obj/structure/bed/wool/pillow/navy/regal
