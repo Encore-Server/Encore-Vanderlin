@@ -1047,20 +1047,6 @@
 	craftdiff = 3
 	result_type = /obj/structure/bed/wool/pillow/blue/regal
 
-/datum/blueprint_recipe/structure/large_pillow/green
-	name = "large floor pillow (green)"
-	result_type = /obj/structure/bed/wool/pillow/green
-
-/datum/blueprint_recipe/structure/large_pillow/green/regal
-	name = "large floor pillow (regal green)"
-	required_materials = list(
-		/obj/item/natural/feather = 3,
-		/obj/item/natural/cloth = 2,
-		/obj/item/ore/dust/gold = 2
-	)
-	craftdiff = 3
-	result_type = /obj/structure/bed/wool/pillow/green/regal
-
 /datum/blueprint_recipe/structure/large_pillow/orange
 	name = "large floor pillow (orange)"
 	result_type = /obj/structure/bed/wool/pillow/orange
