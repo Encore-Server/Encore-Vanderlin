@@ -68,9 +68,9 @@
 	. = ..()
 	AddComponent(/datum/component/item_equipped_movement_rustle, custom_sounds = SFX_PLATE_COAT_STEP)
 
-/obj/item/clothing/armor/brigandine/haraate
-	name = "hansimhae cuirass"
-	desc = "A more common form of Blackmeadow armor, consisting of several interlocking plates of blacksteel-coated steel. Much cheaper than a full set of armor, these are commonly seen on militia forces and standing armies alike."
+/obj/item/clothing/armor/brigandine/cudese
+	name = "cudese half-scaleplate"
+	desc = "A medium-weight set of Cudese armor, this armor is popular amongst soldiers that travel between the misty lowlands and the breathtaking-heights of Yinshi."
 	icon_state = "kazengunmedium"
 	boobed = FALSE
 	item_state = "kazengunmedium"
@@ -78,9 +78,8 @@
 	color = "#FFFFFF"
 	detail_color = "#FFFFFF"
 	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_armor.dmi'
-	detail_tag = "_detail"
 
-/obj/item/clothing/armor/brigandine/haraate/attack_hand_secondary(mob/user, list/modifiers)
+/obj/item/clothing/armor/brigandine/cudese/attack_hand_secondary(mob/user, list/modifiers)
 	. = ..()
 	var/choice = tgui_input_list(user, "Choose a color.", "Uniform colors", GLOB.noble_dyes)
 	if(!choice)

@@ -349,17 +349,20 @@
 	icon_state = "steppemask_snout"
 	desc = "A steel mask shaped like a beast's face, worn by steppe riders to intimidate their enemies."
 
-/obj/item/clothing/face/facemask/steel/kazengun
-	name = "soldier's half-mask"
-	desc = "\"The first lesson of war is that it would be better to live in peace.\""
+/obj/item/clothing/face/facemask/steel/cudese
+	name = "cudese half-mask"
+	desc = "A light mask worn by Cudese soldiers to protect the mouth and nose."
 	block2add = null
-	armor_type = /datum/armor/mask/metal // because it's only half
+	body_parts_covered = MOUTH|NOSE
+	armor_type = /datum/armor/mask/metal/steel
 	icon_state = "kazengunmouthguard"
 	item_state = "kazengunmouthguard"
 
-/obj/item/clothing/face/facemask/steel/kazengun/full
-	name = "ogre mask"
-	desc = "\"The second lesson: Rich men have dreams. Poor men die to make them come true.\""
+/obj/item/clothing/face/facemask/steel/cudese/ogre
+	name = "cudese ogre mask"
+	desc = "A heavier mask worn by Cudese warriors, favored by enforcers for its intimidating visage."
+	armor_type = /datum/armor/mask/metal/steel
+	body_parts_covered = FACE
 	icon_state = "kazengunfaceguard"
 	item_state = "kazengunfaceguard"
 

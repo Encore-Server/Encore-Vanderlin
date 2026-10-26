@@ -475,6 +475,14 @@
 	craftdiff = 1
 	category = "Armor"
 
+/datum/repeatable_crafting_recipe/sewing/cudese_trousers
+	name = "Cudese Trousers"
+	output = /obj/item/clothing/pants/trou/leather/cudese
+	requirements = list(/obj/item/natural/cloth = 2,
+				/obj/item/natural/fibers = 1)
+	craftdiff = 1
+	category = "Pants"
+
 /datum/repeatable_crafting_recipe/sewing/stepperobe
 	name = "steppe robes"
 	output = /obj/item/clothing/armor/gambeson/light/steppe

@@ -126,9 +126,9 @@
 	armor_type = /datum/armor/head/plate
 	max_integrity = INTEGRITY_STRONG
 
-/obj/item/clothing/head/helmet/heavy/kabuto
-	name = "kabuto"
-	desc = "A Blackmeadow helmet of steel plates, gilded in blacksteel and gold trim alike to evoke feelings of nobility and strength. Commonly worn with a mask or mouthguard."
+/obj/item/clothing/head/helmet/heavy/cudese
+	name = "cudese kabuto"
+	desc = "A Cudese helmet of steel plates, commonly worn with a mask or mouthguard."
 	flags_inv = HIDEEARS|HIDEHAIR
 	flags_cover = null
 	icon_state = "kazengunheavyhelm"
