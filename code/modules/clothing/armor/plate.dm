@@ -91,6 +91,8 @@
 	detail_color = CLOTHING_WHITE
 	max_integrity = ARMOR_INT_CHEST_PLATE_STEEL - 50 //slightly worse
 	item_weight = 14 KILOGRAMS
+	melt_amount = 75
+	melting_material = /datum/material/blacksteel
 
 /obj/item/clothing/armor/plate/full/cudese/attack_hand_secondary(mob/user, list/modifiers)
 	. = ..()

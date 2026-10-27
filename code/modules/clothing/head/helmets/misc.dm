@@ -126,6 +126,8 @@
 	flags_inv = HIDEEARS|HIDEHAIR
 	worn_x_dimension = 32
 	worn_y_dimension = 32
+	melt_amount = 75
+	melting_material = /datum/material/blacksteel
 
 /obj/item/clothing/head/helmet/kettle/iron
 	name = "iron kettle helmet"

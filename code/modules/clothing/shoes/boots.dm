@@ -364,6 +364,8 @@
 	item_state = "kazengunboots"
 	detail_tag = "_detail"
 	detail_color = CLOTHING_WHITE
+	melt_amount = 75
+	melting_material = /datum/material/blacksteel
 
 /obj/item/clothing/shoes/boots/leather/cudese/attack_hand_secondary(mob/user, list/modifiers)
 	. = ..()

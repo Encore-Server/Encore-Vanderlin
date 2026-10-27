@@ -78,6 +78,8 @@
 	color = "#FFFFFF"
 	detail_color = "#FFFFFF"
 	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_armor.dmi'
+	melting_material = /datum/material/blacksteel
+	melt_amount = 75
 
 /obj/item/clothing/armor/brigandine/cudese/attack_hand_secondary(mob/user, list/modifiers)
 	. = ..()

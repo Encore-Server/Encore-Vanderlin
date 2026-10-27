@@ -1128,11 +1128,11 @@
 
 /datum/anvil_recipe/armor/blacksteel/cudese_halfmask
 	name = "Cudese Half-Mask"
-	created_item = /obj/item/clothing/face/facemask/steel/cudese
+	created_item = /obj/item/clothing/face/facemask/blacksteel/cudese
 
 /datum/anvil_recipe/armor/blacksteel/cudese_ogremask
 	name = "Cudese Ogre-Mask"
-	created_item = /obj/item/clothing/face/facemask/steel/cudese/ogre
+	created_item = /obj/item/clothing/face/facemask/blacksteel/cudese/ogre
 
 /datum/anvil_recipe/armor/blacksteel/cudese_gorget
 	name = "Cudese Gorget"

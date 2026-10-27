@@ -132,6 +132,8 @@
 	flags_inv = HIDEEARS|HIDEHAIR
 	flags_cover = null
 	icon_state = "kazengunheavyhelm"
+	melt_amount = 75
+	melting_material = /datum/material/blacksteel
 
 /obj/item/clothing/head/helmet/heavy/aalloy
 	name = "decrepit barbute"

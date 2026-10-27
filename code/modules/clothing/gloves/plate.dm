@@ -141,6 +141,8 @@
 	body_parts_covered = HANDS|ARMS
 	detail_tag = "_detail"
 	detail_color = CLOTHING_ASH_GREY
+	melt_amount = 75
+	melting_material = /datum/material/blacksteel
 
 /obj/item/clothing/gloves/plate/cudese/attack_hand_secondary(mob/user, list/modifiers)
 	. = ..()
