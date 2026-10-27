@@ -156,7 +156,7 @@ abstract types are automatically excluded.
 		/obj/item/clothing/head/helmet/heavy/cudese,
 		/obj/item/clothing/armor/plate/full/cudese,
 		/obj/item/clothing/gloves/plate/cudese,
-		/obj/item/clothing/head/helmet/kettle/jingasa,
+		/obj/item/clothing/head/helmet/kettle/cudese,
 		/obj/item/clothing/armor/brigandine/cudese,
 
 		/obj/item/clothing/wrists/bracers/naledi, //Inqstuff
