@@ -438,3 +438,23 @@
 /obj/item/clothing/cloak/rosa/two
 	name = "courtly cloak"
 	icon_state = "rosacloak8"
+
+/obj/item/clothing/cloak/cudese/sashimono
+	name = "sashimono"
+	desc = "A Cudese-style warbanner worn on the back."
+	icon = 'icons/roguetown/clothing/cloaks.dmi'
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/back_l.dmi'
+	icon_state = "sashimono"
+	item_state = "sashimono"
+	detail_tag = "_detail"
+	slot_flags = ITEM_SLOT_BACK_L
+	color = "#FFFFFF"
+	detail_color = "#FFFFFF"
+
+/obj/item/clothing/cloak/cudese/sashimono/attack_hand_secondary(mob/user, list/modifiers)
+	. = ..()
+	var/choice = tgui_input_list(user, "Choose a color.", "Uniform colors", GLOB.noble_dyes)
+	if(!choice)
+		return
+	detail_color = GLOB.noble_dyes[choice]
+	update_appearance(UPDATE_ICON)

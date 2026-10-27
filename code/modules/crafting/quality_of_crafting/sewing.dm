@@ -483,6 +483,14 @@
 	craftdiff = 1
 	category = "Pants"
 
+/datum/repeatable_crafting_recipe/sewing/cudese_sashimono
+	name = "Cudese Sashimono"
+	output = /obj/item/clothing/cloak/cudese/sashimono
+	requirements = list(/obj/item/natural/cloth = 2,
+				/obj/item/natural/fibers = 1, /obj/item/grown/log/tree/stick = 1,)
+	craftdiff = 1
+	category = "Cloak"
+
 /datum/repeatable_crafting_recipe/sewing/stepperobe
 	name = "steppe robes"
 	output = /obj/item/clothing/armor/gambeson/light/steppe
