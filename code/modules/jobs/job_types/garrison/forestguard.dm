@@ -48,6 +48,7 @@
 	gloves = /obj/item/clothing/gloves/leather
 	belt = /obj/item/storage/belt/leather/fgarrison
 	backl = /obj/item/storage/backpack/satchel
+	ring = /obj/item/scomstone/bad
 
 /datum/outfit/forestguard/pre_equip(mob/living/carbon/human/equipped_human, visuals_only)
 	. = ..()

@@ -98,7 +98,7 @@
 	backpack_contents = list(
 		/obj/item/storage/keyring/inquisitor = 1,
 		/obj/item/paper/inqslip/arrival/ortho = 1,
-		/obj/item/collar_detonator = 1,
+		/obj/item/scomstone/bad = 1,
 	)
 
 /datum/outfit/angrosiantemplar/pre_equip(mob/living/carbon/human/equipped_human, visuals_only)
