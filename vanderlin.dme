@@ -4032,6 +4032,7 @@
 #include "code\modules\mob\living\simple_animal\hostile\gnome.dm"
 #include "code\modules\mob\living\simple_animal\hostile\haunt.dm"
 #include "code\modules\mob\living\simple_animal\hostile\hostile.dm"
+#include "code\modules\mob\living\simple_animal\hostile\seagull.dm"
 #include "code\modules\mob\living\simple_animal\hostile\smallrat.dm"
 #include "code\modules\mob\living\simple_animal\hostile\vengeful_spirit.dm"
 #include "code\modules\mob\living\simple_animal\hostile\bosses\boss.dm"

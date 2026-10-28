@@ -1,6 +1,6 @@
 /obj/item/reagent_containers/food/snacks/crow
-	name = "zad"
-	desc = "A pesky bird, beloved by Necrites. They cluster around graveyards and are said to carry the souls of the dead on their wings."
+	name = "crow"
+	desc = "A pesky bird, beloved by Valdalans. They cluster around graveyards and are said to carry the souls of the dead on their wings."
 	icon_state = "crow"
 	icon = 'icons/roguetown/mob/monster/crow.dmi'
 	nutrition = MINCE_NUTRITION
