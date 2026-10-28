@@ -1,7 +1,7 @@
 {
-    "map_name": "Eastern Domotan",
+    "map_name": "Eastern Domotan North",
     "map_path": "map_files/domotan",
-    "map_file": "domotan_east.dmm",
+    "map_file": "east_north.dmm",
 	"traits": [
 		{"Up": true, "Turf Weather Effects": true, "Leylines": true},
 		{"Up": true, "Down": true, "Turf Weather Effects": true, "Leylines": true},

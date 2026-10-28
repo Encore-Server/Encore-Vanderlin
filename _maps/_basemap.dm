@@ -7,13 +7,18 @@
 #ifndef LOWMEMORYMODE
 	#ifdef ALL_MAPS // I cry
 		#include "map_files/domotan/old_doma_lowpop.dmm"
-		#include "map_files/domotan/domotan_north.dmm"
-		#include "map_files/domotan/domotan_east.dmm"
-		#include "map_files/domotan/domotan_west.dmm"
-		#include "map_files/domotan/domotan_south.dmm"
-		#include "map_files/debug/roguetest.dmm"
-		#include "map_files/domotan/necropolis_l1_dermus.dmm"
-		#include "map_files/domotan/necropolis_l2_capillary.dmm"
+		#include "map_files/domotan/north_northeast.dmm"
+		#include "map_files/domotan/north_northwest.dmm"
+		#include "map_files/domotan/north_southeast.dmm"
+		#include "map_files/domotan/north_southwest.dmm"
+		#include "map_files/domotan/south_northeast.dmm"
+		#include "map_files/domotan/south_northwest.dmm"
+		#include "map_files/domotan/south_southeast.dmm"
+		#include "map_files/domotan/south_southwest.dmm"
+		#include "map_files/domotan/east_north.dmm"
+		#include "map_files/domotan/east_south.dmm"
+		#include "map_files/domotan/west_north.dmm"
+		#include "map_files/domotan/west_south.dmm"
 	#endif
 	#ifdef ALL_TEMPLATES
 		#include "templates.dm"
