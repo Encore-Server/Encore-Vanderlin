@@ -200,10 +200,6 @@
 /obj/item/reagent_containers/food/snacks/fat/salo,
 /turf/open/floor/twig/platform,
 /area/under/cave)
-"gY" = (
-/obj/effect/landmark/map_load_mark/generic_tile,
-/turf/open/floor/grass/cold,
-/area/outdoors/woods/etgard)
 "gZ" = (
 /obj/effect/decal/cleanable/blood,
 /turf/open/floor/naturalstone,
@@ -791,10 +787,6 @@
 /obj/effect/landmark/map_load_mark/generic_tile,
 /turf/open/floor/naturalstone,
 /area/under/cavewet)
-"Jm" = (
-/obj/effect/landmark/quest_spawner/easy,
-/turf/open/floor/grass/cold,
-/area/outdoors/woods/etgard)
 "Jn" = (
 /obj/structure/door/weak/bolt{
 	dir = 8
@@ -15203,7 +15195,7 @@ uB
 uB
 uB
 uB
-gY
+uB
 uB
 uB
 AJ
@@ -15584,7 +15576,7 @@ tk
 "}
 (112,1,1) = {"
 tk
-Jm
+uB
 uB
 uB
 uB
@@ -15850,7 +15842,7 @@ uB
 uB
 uB
 uB
-AJ
+RR
 uB
 uB
 uB

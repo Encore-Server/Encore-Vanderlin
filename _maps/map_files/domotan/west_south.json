@@ -1,8 +1,8 @@
 {
-    "map_name": "Southern Domotan Northwest",
-    "map_path": "map_files/domotan/south",
-    "map_file": "northwest.dmm",
-    "traits": [
+    "map_name": "Western Domotan South",
+    "map_path": "map_files/domotan",
+    "map_file": "west_south.dmm",
+	"traits": [
 		{"Up": true, "Turf Weather Effects": true, "Leylines": true},
 		{"Up": false, "Down": true, "Turf Weather Effects": true, "Leylines": true}
 	]
