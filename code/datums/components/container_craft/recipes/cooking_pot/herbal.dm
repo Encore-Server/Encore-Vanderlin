@@ -315,7 +315,7 @@
 	name = "Purification Draught"
 	created_reagent = /datum/reagent/medicine/herbal/purification_draught
 	requirements = list(
-		/obj/item/alch/herb/rosa = 1,
+		/obj/item/alch/herb/matricaria = 1,
 		/obj/item/alch/herb/calendula = 1,
 		/obj/item/alch/herb/hypericum = 1
 	)
