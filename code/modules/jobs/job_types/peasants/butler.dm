@@ -71,6 +71,7 @@
 	beltl = /obj/item/storage/belt/pouch/coins/mid
 	beltr = /obj/item/weapon/whip/butler
 	backr = /obj/item/storage/backpack/satchel
+	ring =  /obj/item/scomstone
 
 	backpack_contents = list(
 		/obj/item/weapon/knife/villager = 1,
