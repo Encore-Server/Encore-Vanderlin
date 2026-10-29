@@ -129,6 +129,10 @@
 	neck = /obj/item/storage/belt/pouch/coins/rich
 	backr = /obj/item/storage/backpack/satchel
 
+	backpack_contents = list(
+		/obj/item/servant_bell/lord = 1,
+	)
+
 /datum/attribute_holder/sheet/job/heir/aristocrat
 	raw_attribute_list = list(
 		STAT_PERCEPTION = 2,
@@ -182,6 +186,10 @@
 	beltl = /obj/item/storage/keyring/heir
 	beltr = /obj/item/storage/belt/pouch/coins/rich
 
+	backpack_contents = list(
+		/obj/item/servant_bell/lord = 1,
+	)
+
 /datum/outfit/heir/aristocrat/pre_equip(mob/living/carbon/human/equipped_human, visuals_only)
 	. = ..()
 	if(equipped_human.gender == MALE)
@@ -202,7 +210,7 @@
 		STAT_FORTUNE = 1,
 		STAT_CONSTITUTION = 1,
 		STAT_ENDURANCE = 2,
-		
+
 		/datum/attribute/skill/combat/crossbows = 10,
 		/datum/attribute/skill/combat/bows = 10,
 		/datum/attribute/skill/combat/swords = 30,
@@ -249,3 +257,7 @@
 	beltl = /obj/item/weapon/sword/rapier/ironestoc
 	belt = /obj/item/storage/belt/leather
 	shoes = /obj/item/clothing/shoes/nobleboot
+
+	backpack_contents = list(
+		/obj/item/servant_bell/lord = 1,
+	)
