@@ -315,7 +315,6 @@
 
 /datum/reagent/medicine/pale_serum/on_mob_life(mob/living/carbon/M, efficiency)
 	if(volume > 0.99)
-		for ()
 		M.adjustOrganLoss(ORGAN_SLOT_BRAIN, -3 * REM * efficiency, 150)
 		M.adjustOrganLoss(ORGAN_SLOT_HEART, -3 * REM * efficiency, 150)
 		M.adjustOrganLoss(ORGAN_SLOT_SPLEEN, -3 * REM * efficiency, 150)
