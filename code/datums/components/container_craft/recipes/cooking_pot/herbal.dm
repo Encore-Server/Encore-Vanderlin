@@ -328,7 +328,7 @@
 	finished_smell = /datum/pollutant/food/flower
 	complete_message = "The draught radiates purity and cleansing!"
 
-/datum/container_craft/cooking/herbal_tea/purification_draught
+/datum/container_craft/cooking/herbal_tea/gender_potion
 	name = "Transis Potion"
 	created_reagent = /datum/reagent/medicine/gender_potion
 	water_conversion = 0.5
