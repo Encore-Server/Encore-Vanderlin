@@ -82,7 +82,6 @@
 	name = JOB_SERVANT
 	neck = /obj/item/key/servant
 	backl = /obj/item/storage/backpack/satchel
-	ring = /obj/item/scomstone/bad
 	backpack_contents = list(
 		/obj/item/recipe_book/cooking = 1,
 		/obj/item/storage/belt/pouch/coins/poor = 1
