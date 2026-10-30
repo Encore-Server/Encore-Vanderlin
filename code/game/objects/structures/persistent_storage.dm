@@ -4,6 +4,11 @@ GLOBAL_LIST_INIT(persistent_storage_blacklist, list(
 	/obj/item/weapon/sword/long/angros/relic,
 	/obj/item/weapon/sword/long/holysee,
 	/obj/item/clothing/head/crown/serpcrown,
+	/obj/item/weapon/polearm/halberd/angros/relic,
+	/obj/item/weapon/sword/long/greatsword/angros,
+	/obj/item/flashlight/flare/torch/lantern/psycenser,
+	/obj/item/weapon/whip/angros/relic,
+	/obj/item/angrosmusicbox,
 ))
 //This is persistent storage that allows us to save singular objects
 //In practice, this will allow players to store heirlooms and stuff like armor sets in limited quantities
