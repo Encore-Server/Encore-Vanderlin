@@ -423,7 +423,7 @@
 
 /obj/item/clothing/neck/gorget/kazengun
 	name = "blackmeadow gorget"
-	desc = "A series of interlocking rings of metal set around the throat. Used by the kouken of Blackmeadow for precisely the same reason as the knights of Psydonia."
+	desc = "A series of interlocking rings of metal set around the throat. Used by the kouken of Blackmeadow for precisely the same reason as the knights of the old world."
 	icon_state = "kazengunneckguard"
 
 /obj/item/clothing/neck/gorget/explosive
