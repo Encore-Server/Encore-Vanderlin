@@ -988,7 +988,7 @@
 
 /obj/item/weapon/sword/long/rider
 	icon_state = "tabi"
-	name = "kilij scimitar"
+	name = "qadirid scimitar"
 	desc = "A curved blade of Qadirid origin meaning 'curved one'. The standard sword that saw the conquest of the Qadirid continent and peoples."
 	possible_item_intents = list(SWORD_CUT, SWORD_STRIKE)
 	gripped_intents = list(SWORD_CUT, SWORD_STRIKE, SWDLONG_CHOP)
