@@ -270,7 +270,7 @@
 		"Decorated Sabre" = list(/obj/item/weapon/sword/sabre/dec, /obj/item/weapon/scabbard/sword/royal),
 		"Qadirid Scimitar" = list(/obj/item/weapon/sword/long/rider, /obj/item/weapon/scabbard/sword/royal),
 		"Steppe Sabre" = list(/obj/item/weapon/sword/long/rider/steppe, /obj/item/weapon/scabbard/sword/royal),
-		"Katana" = list(/obj/item/weapon/sword/katana, /obj/item/weapon/scabbard/kazengun/gold),
+		"Katana" = list(/obj/item/weapon/sword/katana, /obj/item/weapon/scabbard/cudese/gold),
 		"Shortbow + Shortsword" = list(/obj/item/gun/ballistic/bow/short, /obj/item/ammo_holder/quiver/arrows, /obj/item/weapon/sword/short, /obj/item/weapon/scabbard/sword/royal),
 	)
 	var/choice = spawned.select_equippable(player_client, selectable, message = "Choose Your Blade", title = "HEIR")
