@@ -358,7 +358,7 @@
 	body_parts_covered = MOUTH|NOSE
 	flags_inv = HIDEFACE
 
-/obj/item/clothing/face/facemask/blacksteel/cudese
+/obj/item/clothing/face/facemask/cudese
 	name = "cudese half-mask"
 	desc = "A light mask worn by Cudese soldiers to protect the mouth and nose."
 	block2add = null
@@ -371,7 +371,7 @@
 	melting_material = /datum/material/blacksteel
 	melt_amount = 75
 
-/obj/item/clothing/face/facemask/blacksteel/cudese/ogre
+/obj/item/clothing/face/facemask/cudese/ogre
 	name = "cudese ogre mask"
 	desc = "A heavier mask worn by Cudese warriors, favored by enforcers for its intimidating visage."
 	armor_type = /datum/armor/mask/metal/steel
