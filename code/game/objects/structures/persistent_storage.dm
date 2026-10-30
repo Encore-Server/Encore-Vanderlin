@@ -15,7 +15,7 @@ GLOBAL_LIST_INIT(persistent_storage_blacklist, list(
 	icon = 'icons/roguetown/misc/domotan/instancer_vessel.dmi'
 	icon_state = "empty"
 	anchored = TRUE
-	density = FALSE
+	density = TRUE
 	armor_type = /datum/armor/displaycase
 	max_integrity = 500
 	integrity_failure = 0
