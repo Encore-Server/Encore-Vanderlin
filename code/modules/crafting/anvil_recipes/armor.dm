@@ -330,6 +330,17 @@
 	created_item = /obj/item/clothing/head/helmet/pegasusknight
 	craftdiff = 2
 
+/datum/anvil_recipe/armor/steel/aelondanhelm
+	name = "Aelondan Corsair Helmet (+Cloth)"
+	additional_items = list(/obj/item/natural/cloth)
+	created_item = /obj/item/clothing/head/helmet/heavy/necked/aelondan
+	craftdiff = 3
+
+/datum/anvil_recipe/armor/steel/phoenixhelm
+	name = "Phoenix Helmet"
+	created_item = /obj/item/clothing/head/helmet/phoenix
+	craftdiff = 3
+
 /datum/anvil_recipe/armor/steel/crusader_helm
 	name = "Crusader helm (+Bar X2)"
 	additional_items = list(/obj/item/ingot/steel, /obj/item/ingot/steel)
