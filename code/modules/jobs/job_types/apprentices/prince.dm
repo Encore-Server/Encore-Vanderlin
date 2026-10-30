@@ -129,6 +129,10 @@
 	neck = /obj/item/storage/belt/pouch/coins/rich
 	backr = /obj/item/storage/backpack/satchel
 
+	backpack_contents = list(
+		/obj/item/servant_bell/lord = 1,
+	)
+
 /datum/attribute_holder/sheet/job/heir/aristocrat
 	raw_attribute_list = list(
 		STAT_PERCEPTION = 2,
@@ -181,6 +185,10 @@
 	belt = /obj/item/storage/belt/leather
 	beltl = /obj/item/storage/keyring/heir
 	beltr = /obj/item/storage/belt/pouch/coins/rich
+
+	backpack_contents = list(
+		/obj/item/servant_bell/lord = 1,
+	)
 
 /datum/outfit/heir/aristocrat/pre_equip(mob/living/carbon/human/equipped_human, visuals_only)
 	. = ..()
@@ -259,8 +267,9 @@
 	beltl = /obj/item/storage/keyring/heir
 	belt = /obj/item/storage/belt/leather
 	shoes = /obj/item/clothing/shoes/nobleboot
+
 	backr = /obj/item/storage/backpack/satchel
-	backpack_contents = list(/obj/item/weapon/knife/dagger/steel/special = 1, /obj/item/weapon/scabbard/knife/royal = 1)
+	backpack_contents = list(/obj/item/weapon/knife/dagger/steel/special = 1, /obj/item/weapon/scabbard/knife/royal = 1, /obj/item/servant_bell/lord = 1,)
 
 /datum/job/advclass/heir/forgotten/on_roundstart(mob/living/carbon/human/spawned, client/player_client)
 	. = ..()
