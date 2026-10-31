@@ -3949,16 +3949,6 @@
 	},
 /turf/open/water/ocean,
 /area/outdoors/beach)
-"cAa" = (
-/obj/structure/closet/crate/chest/neu_fancy{
-	name = "sacred reliquary";
-	desc = "A locked chest, designed to store the Temple's sacred Goblet."
-	},
-/obj/effect/mapping_helpers/access/locker,
-/obj/item/reagent_containers/glass/cup/church,
-/obj/effect/mapping_helpers/access/keyset/church/priest/reliquary,
-/turf/open/floor/ruinedwood/chevron,
-/area/indoors/town/church)
 "cAh" = (
 /obj/structure/fluff/psycross/hugecrystal/unsafe{
 	layer = 4.2
@@ -19452,6 +19442,7 @@
 /area/indoors/town/keep/gate)
 "lJt" = (
 /obj/structure/closet/crate/drawer,
+/obj/item/scomstone,
 /turf/open/floor/carpet/red,
 /area/indoors/town/keep/captain)
 "lJw" = (
@@ -23619,6 +23610,7 @@
 "oeu" = (
 /obj/structure/table/wood/plain_alt,
 /obj/machinery/light/fueled/wallfire/candle/r,
+/obj/item/scomstone,
 /turf/open/floor/ruinedwood/chevron,
 /area/indoors/town/church)
 "oeA" = (
@@ -32248,6 +32240,7 @@
 /obj/structure/closet/crate/drawer,
 /obj/item/paper/scroll,
 /obj/item/natural/feather,
+/obj/item/scomstone,
 /turf/open/floor/carpet/red,
 /area/indoors/town/keep/hand)
 "tym" = (
@@ -33949,6 +33942,7 @@
 /obj/item/clothing/gloves/chain/angros,
 /obj/item/clothing/gloves/leather/otavan/inqgloves,
 /obj/item/clothing/face/sack/psy,
+/obj/item/scomstone,
 /turf/open/floor/church,
 /area/indoors/town/church/inquisition)
 "uzB" = (
@@ -90757,7 +90751,7 @@ tRZ
 hye
 epm
 pqh
-cAa
+rTR
 oeu
 tRZ
 ewc
