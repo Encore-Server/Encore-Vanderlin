@@ -136,7 +136,7 @@
 		/obj/item/inqarticles/garrote = 1,
 		/obj/item/grapplinghook = 1,
 		/obj/item/paper/inqslip/arrival/ortho = 1,
-		/obj/item/collar_detonator = 1,
+		/obj/item/scomstone/bad = 1,
 	)
 
 /datum/outfit/confessor/pre_equip(mob/living/carbon/human/equipped_human, visuals_only)
