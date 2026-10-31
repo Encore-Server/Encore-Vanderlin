@@ -824,12 +824,6 @@
 	restraint_check = TRUE
 	only_forced_audio = TRUE
 
-/datum/emote/living/look
-	key = "look"
-	key_third_person = "looks"
-	message = "stares blankly."
-	message_param = "looks at %t."
-
 /datum/emote/living/lower	// the emote that signals an animal is tamed. Previously smile was used. The chicken smiles. The pig smiles. Wut.
 	key = "lower_head"
 	key_third_person = "lowers_head"
@@ -865,16 +859,6 @@
 		user.schizohelp(msg)
 
 // ............... N ..................
-/datum/emote/living/nod
-	key = "nod"
-	key_third_person = "nods"
-	message = "nods."
-	message_param = "nods at %t."
-	emote_type = EMOTE_VISIBLE
-/mob/living/carbon/human/verb/emote_nod()
-	set name = "Nod"
-	set category = "Emotes.Actions"
-	emote("nod", intentional = TRUE)
 
 // ............... O ..................
 
@@ -1149,35 +1133,12 @@
 	if(user.mind)
 		record_featured_stat(FEATURED_STATS_SCREAMERS, user)
 
-/datum/emote/living/strain
-	key = "strain"
-	message = "strains themself!"
-	emote_type = EMOTE_AUDIBLE
-	only_forced_audio = TRUE
-	show_runechat = FALSE
-
-/datum/emote/living/scowl
-	key = "scowl"
-	key_third_person = "scowls"
-	message = "scowls."
-	emote_type = EMOTE_AUDIBLE
-
-/datum/emote/living/shakehead
-	key = "shakehead"
-	key_third_person = "shakeshead"
-	message = "shakes their head."
-	emote_type = EMOTE_VISIBLE
-
-/mob/living/carbon/human/verb/emote_shakehead()
-	set name = "Shakehead"
-	set category = "Emotes.Actions"
-	emote("shakehead", intentional = TRUE)
-
 /datum/emote/living/shiver
 	key = "shiver"
 	key_third_person = "shiver"
 	message = "shivers."
 	emote_type = EMOTE_VISIBLE
+
 /mob/living/carbon/human/verb/emote_shiver()
 	set name = "Shiver"
 	set category = "Emotes.Actions"
@@ -1193,18 +1154,6 @@
 		animate(pixel_w = 2, time = 0.1 SECONDS, flags = ANIMATION_RELATIVE|ANIMATION_CONTINUE)
 	animate(pixel_w = -1, time = 0.1 SECONDS, flags = ANIMATION_RELATIVE)
 #undef SHIVER_LOOP_DURATION
-
-/datum/emote/living/sigh
-	key = "sigh"
-	key_third_person = "sighs"
-	message = "sighs."
-	message_muffled = "makes a muffled sigh."
-	emote_type = EMOTE_AUDIBLE
-
-/mob/living/carbon/human/verb/emote_sigh()
-	set name = "Sigh"
-	set category = "Emotes.Noises"
-	emote("sigh", intentional = TRUE)
 
 /datum/emote/living/snore
 	key = "snore"
@@ -1254,27 +1203,6 @@
 	set category = "Emotes.Noises"
 	emote("snapthrice", intentional = TRUE)
 
-/datum/emote/living/stare
-	key = "stare"
-	key_third_person = "stares"
-	message = "stares."
-	message_param = "stares at %t."
-
-/datum/emote/living/strech
-	key = "stretch"
-	key_third_person = "stretches"
-	message = "stretches their arms."
-
-/datum/emote/living/sulk
-	key = "sulk"
-	key_third_person = "sulks"
-	message = "sulks down sadly."
-
-/datum/emote/living/sway
-	key = "sway"
-	key_third_person = "sways"
-	message = "sways around dizzily."
-
 /datum/emote/living/shh
 	key = "shh"
 	key_third_person = "shhs"
@@ -1286,27 +1214,6 @@
 	set name = "Shh"
 	set category = "Emotes.Noises"
 	emote("shh", intentional = TRUE)
-
-/datum/emote/living/smug
-	key = "smug"
-	key_third_person = "smugs"
-	message = "grins smugly."
-
-/datum/emote/living/sniff
-	key = "sniff"
-	key_third_person = "sniffs"
-	message = "sniffs."
-	emote_type = EMOTE_AUDIBLE
-
-/datum/emote/living/smile
-	key = "smile"
-	key_third_person = "smiles"
-	message = "smiles."
-	emote_type = EMOTE_VISIBLE
-/mob/living/carbon/human/verb/emote_smile()
-	set name = "Smile"
-	set category = "Emotes.Actions"
-	emote("smile", intentional = TRUE)
 
 /datum/emote/living/sneeze
 	key = "sneeze"
@@ -1337,10 +1244,6 @@
 
 
 // ............... W ..................
-/datum/emote/living/wave
-	key = "wave"
-	key_third_person = "waves"
-	message = "waves."
 
 /datum/emote/living/whisper
 	key = "whisper"
