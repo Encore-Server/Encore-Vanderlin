@@ -57,7 +57,7 @@
 				break
 
 
-	if(cast_on.has_status_effect(/datum/status_effect/debuff/revive_bloodmagic) || cast_on.has_status_effect(/datum/status_effect/debuff/blood_mark))
+	if(cast_on.has_status_effect(/datum/status_effect/debuff/revive_bloodmagic) || cast_on.has_status_effect(/datum/status_effect/debuff/blood_mark/curse))
 		if(!prob(33))
 			cast_on.visible_message(
 				span_warning("Divine Light struggles to burn through the Blood Curse upon [cast_on]!"),
@@ -65,7 +65,7 @@
 			)
 			return FALSE
 		cast_on.remove_status_effect(/datum/status_effect/debuff/revive_bloodmagic)
-		cast_on.remove_status_effect(/datum/status_effect/debuff/blood_mark)
+		cast_on.remove_status_effect(/datum/status_effect/debuff/blood_mark/curse)
 		cast_on.visible_message(
 			span_warning("Divine Light burns through the Blood Curse upon [cast_on]!"),
 			span_bloody("The Blood Curse has been dispelled!"),

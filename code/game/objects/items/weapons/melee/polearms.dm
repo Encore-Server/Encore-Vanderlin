@@ -130,6 +130,7 @@
 /obj/item/weapon/polearm/woodstaff/quarterstaff/bloodsteel/relic
 	name = "\proper remorse"
 	desc = "An ancient bloodsteel staff once wielded by the first mortal Blood Mage. You will learn remorse, and it will hurt."
+	max_integrity = INTEGRITY_STRONGEST
 
 /obj/item/weapon/polearm/woodstaff/seer
 	name = "staff of the rous seer"
@@ -621,6 +622,14 @@
 	item_weight = 3.5 KILOGRAMS
 
 /obj/item/weapon/polearm/halberd/bardiche/warcutter/getonmobprop(tag)
+	enchant(/datum/enchantment/bloodcurse)
+
+/obj/item/weapon/polearm/halberd/bloodsteel/relic
+	name = "\proper vanguard"
+	desc = "The forefront of fallen power and knowledge. The dark vanguard is coming..."
+	max_integrity = INTEGRITY_STRONGEST
+
+/obj/item/weapon/polearm/halberd/getonmobprop(tag)
 	. = ..()
 	if(tag)
 		switch(tag)
