@@ -119,6 +119,28 @@
 	required_level = 10
 	spell_flags = SPELL_UNETCHABLE
 
+	required_items = list()
+
+	sound = 'sound/magic/marked.ogg'
+	charge_sound = 'sound/magic/chargingold.ogg'
+
+	cast_range = 2
+	charge_time = 2 SECONDS
+	charge_slowdown = 0.8
+	cooldown_time = 2 MINUTES
+	spell_cost = 200
+
+/datum/action/cooldown/spell/cure_rot/bloodmagic
+	name = "Purge Rot"
+	desc = "Purge a body of rot, deadites will perish."
+
+	associated_skill = /datum/attribute/skill/magic/blood
+	spell_type = SPELL_BLOOD
+	required_form = FORM_BLOOD
+	required_technique = TECHNIQUE_RESTORATION
+	required_level = 10
+	spell_flags = SPELL_UNETCHABLE
+
 	antimagic_flags = MAGIC_RESISTANCE_BLOOD
 
 	required_items = list()

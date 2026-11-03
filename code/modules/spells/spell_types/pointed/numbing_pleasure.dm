@@ -36,4 +36,5 @@
 	invocation = "Through the arcyne, you shall have peace."
 	spell_type = SPELL_MANA
 	spell_cost = 20
-	required_form = FORM_AIR
+	required_form = FORM_LIFE
+	associated_skill = /datum/attribute/skill/magic/arcane/life

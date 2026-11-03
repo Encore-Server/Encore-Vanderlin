@@ -404,6 +404,19 @@
 	desc = "<span class='warning'>I have returned from oblivion... but the fatigue of death still affects me.</span>\n"
 	icon_state = "muscles"
 
+/datum/status_effect/debuff/silenced
+	id = "silenced"
+	alert_type = /atom/movable/screen/alert/status_effect/debuff/silenced
+	duration = 15 SECONDS
+
+/datum/status_effect/debuff/silenced/permanent
+	duration = STATUS_EFFECT_PERMANENT
+	tick_interval = STATUS_EFFECT_NO_TICK
+
+/atom/movable/screen/alert/status_effect/debuff/silenced
+	name = "Silenced"
+	desc = "I have been silenced! I am unable to speak."
+
 /datum/status_effect/debuff/revive_bloodmagic
 	id = "blood_revive"
 	alert_type = /atom/movable/screen/alert/status_effect/debuff/revive_bloodmagic

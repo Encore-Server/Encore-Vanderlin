@@ -25,6 +25,7 @@
 	antimagic_flags = MAGIC_RESISTANCE_MIND
 
 	required_form = FORM_DEATH
+	associated_skill = /datum/attribute/skill/magic/arcane/death
 	required_technique = TECHNIQUE_DESTRUCTION
 
 /datum/action/cooldown/spell/projectile/profane/before_cast(mob/living/cast_on)

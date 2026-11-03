@@ -1410,6 +1410,8 @@
 			return FALSE
 	if(istype(loc, /turf/open/water) && body_position == LYING_DOWN)
 		return FALSE
+	if(has_status_effect(/datum/status_effect/debuff/silenced))
+		return FALSE
 	if(has_status_effect(/datum/status_effect/debuff/blood_choke))
 		return FALSE
 

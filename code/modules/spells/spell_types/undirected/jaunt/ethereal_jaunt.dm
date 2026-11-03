@@ -30,6 +30,7 @@
 	name = "Lesser Ethereal Jaunt"
 	cooldown_time = 95 SECONDS
 	required_form = FORM_ARCANE
+	associated_skill = /datum/attribute/skill/magic/arcane/arcyne
 	required_technique = TECHNIQUE_ALTERATION
 	required_items = list(/obj/item/spellbook)
 	required_level = 8 //lol

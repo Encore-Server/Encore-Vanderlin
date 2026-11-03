@@ -32,6 +32,18 @@
 	invocation = "Blood Bolt!!"
 	spell_type = SPELL_MANA
 	required_form = FORM_WATER
+	associated_skill = /datum/attribute/skill/magic/arcane/water
+	spell_flags = SPELL_RITUOS
+	projectile_type = /obj/projectile/magic/bloodlightning
+
+/datum/action/cooldown/spell/projectile/blood_bolt/arcyne
+	name = "Arcyne Blood Bolt"
+	desc = "A weaker mimicry of a darker spell, launch a bolt of blood infused with lightning."
+	required_level = 4
+
+	invocation = "Blood Bolt!!"
+	spell_type = SPELL_MANA
+	required_form = FORM_WATER
 	spell_flags = SPELL_RITUOS
 	projectile_type = /obj/projectile/magic/bloodlightning/lesser
 

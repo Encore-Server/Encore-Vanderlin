@@ -161,7 +161,7 @@
 	spell_type = SPELL_BLOOD
 	required_form = FORM_BLOOD
 	required_technique = TECHNIQUE_RESTORATION
-
+	spell_flags = NONE
 	required_level = 3
 	required_items = list()
 
@@ -169,3 +169,4 @@
 	charge_time = 2 SECONDS
 	cooldown_time = 30 SECONDS
 	spell_cost = 125
+	initial_charges = 5
