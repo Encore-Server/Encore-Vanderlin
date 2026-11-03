@@ -106,13 +106,17 @@ DEFINE_BITFIELD(intrinsic_recharge_sources, list(
 #define MAGIC_RESISTANCE_MIND (1 << 1)
 /// Holy magic resistance that blocks miracles
 #define MAGIC_RESISTANCE_HOLY (1 << 2)
-/// Holy magic resistance that blocks unholy magic (revenant, cult, vampire, voice of god)
+/// Holy magic resistance that blocks unholy magic (revenant, cult, voice of god)
 #define MAGIC_RESISTANCE_UNHOLY (1 << 3)
+/// Magic resistance that blocks vampiric magic and blood spells.
+#define MAGIC_RESISTANCE_BLOOD (1 << 4)
 
 DEFINE_BITFIELD(antimagic_flags, list(
 	"MAGIC_RESISTANCE" = MAGIC_RESISTANCE,
 	"MAGIC_RESISTANCE_HOLY" = MAGIC_RESISTANCE_HOLY,
 	"MAGIC_RESISTANCE_MIND" = MAGIC_RESISTANCE_MIND,
+	"MAGIC_RESISTANCE_UNHOLY" = MAGIC_RESISTANCE_UNHOLY,
+	"MAGIC_RESISTANCE_BLOOD" = MAGIC_RESISTANCE_BLOOD,
 ))
 
 // Spell types
@@ -122,10 +126,9 @@ DEFINE_BITFIELD(antimagic_flags, list(
 #define SPELL_STAMINA 2
 /// Miracle, uses devotion and thus requires a devotion holder
 #define SPELL_MIRACLE 3
-
-/// Casted with the essence gauntlet, using essence vials
+/// Cast with the essence gauntlet, using essence vials
 #define SPELL_ESSENCE 4
-/// Casted using your bloodpool
+/// Cast using your bloodpool
 #define SPELL_BLOOD 5
 ///this is a "miracle" granted by "angros's" inquisition
 #define SPELL_ANGROSIC_MIRACLE 6
@@ -224,15 +227,16 @@ DEFINE_BITFIELD(spell_requirements, list(
 #define TECHNIQUE_ILLUSION "Illusion"
 #define TECHNIQUE_IMBUE "Imbue"
 
-#define FORM_FIRE "Fire"
-#define FORM_ICE "Ice"
-#define FORM_LIGHTNING "Lightning"
-#define FORM_EARTH "Earth"
 #define FORM_ARCANE "Arcane"
-#define FORM_DEATH "Entropy"
-#define FORM_LIFE "Life"
-#define FORM_AIR "Aeromancy"
+#define FORM_FIRE "Pyromancy"
 #define FORM_WATER "Hydromancy"
+#define FORM_ICE "Cryomancy"
+#define FORM_EARTH "Geomancy"
+#define FORM_AIR "Aeromancy"
+#define FORM_LIGHTNING "Astrapomancy"
+#define FORM_LIFE "Vitamancy"
+#define FORM_DEATH "Necromancy"
+#define FORM_BLOOD "Hemomancy"
 
 #define MASTERY_RANK_NOVICE 0
 #define MASTERY_RANK_ADEPT 2
@@ -255,7 +259,8 @@ GLOBAL_LIST_INIT(form_colors, list(
 	FORM_DEATH = "#800080",
 	FORM_EARTH = "#8B4513",
 	FORM_AIR = "#C0C0C0",
-	FORM_ARCANE = "#9932CC"
+	FORM_ARCANE = "#9932CC",
+	FORM_BLOOD = COLOR_BLOOD_MAGIC
 ))
 
 GLOBAL_LIST_INIT(all_techniques, list(
@@ -269,15 +274,18 @@ GLOBAL_LIST_INIT(all_techniques, list(
 ))
 
 GLOBAL_LIST_INIT(all_forms, list(
-	FORM_FIRE,
-	FORM_ICE,
-	FORM_LIGHTNING,
-	FORM_EARTH,
 	FORM_ARCANE,
+	FORM_FIRE,
+	FORM_WATER,
+	FORM_ICE,
+	FORM_EARTH,
+	FORM_AIR,
+	FORM_LIGHTNING,
 	FORM_LIFE,
 	FORM_DEATH,
 	FORM_AIR,
 	FORM_WATER,
+	FORM_BLOOD,
 ))
 
 GLOBAL_LIST_INIT(all_essences, subtypesof(/datum/thaumaturgical_essence))
@@ -315,5 +323,8 @@ GLOBAL_LIST_INIT(all_essences, subtypesof(/datum/thaumaturgical_essence))
 #define SPELLMOD_COST "cost"
 #define SPELLMOD_CASTSPEED "castSpeed"
 #define SPELLMOD_MAGNITUDE "magnitude"
+
+// Blood magic apprenticeship
+#define COMSIG_BLOOD_ASCENSION "break_blood_apprenticeship"
 
 #define SPELL_KIT_MAX_PRESETS 5

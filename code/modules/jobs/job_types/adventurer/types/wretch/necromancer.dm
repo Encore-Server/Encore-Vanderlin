@@ -10,7 +10,8 @@
 		/datum/attribute/skill/combat/unarmed = 30,
 		/datum/attribute/skill/misc/reading = 50,
 		/datum/attribute/skill/craft/alchemy = 40,
-		/datum/attribute/skill/magic/arcane = 40,
+		/datum/attribute/skill/magic/arcane = 35,
+		/datum/attribute/skill/magic/arcane/death = 50,
 	)
 
 /datum/job/advclass/wretch/necromancer
@@ -44,6 +45,7 @@
 		/datum/action/cooldown/spell/gravemark,
 		/datum/action/cooldown/spell/control_undead
 	)
+	book_type = /obj/item/recipe_book/arcyne
 
 /datum/job/advclass/wretch/necromancer/after_spawn(mob/living/carbon/human/spawned, client/player_client)
 	. = ..()

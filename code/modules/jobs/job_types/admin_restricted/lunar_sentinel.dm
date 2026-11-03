@@ -28,7 +28,7 @@
 	blacklisted_species = list(SPEC_ID_HALFLING)
 	allowed_patrons = list(/datum/patron/divine/akan)
 
-	outfit = /datum/outfit/lunar_sentinel
+	outfit = /datum/outfit/admin/lunar_sentinel
 
 	give_bank_account = 30
 	knows_the_town = TRUE
@@ -84,7 +84,7 @@
 		if("Lunar Flail")
 			spawned.attributes?.add_sheet(/datum/attribute_holder/sheet/job/templar/holyknight/patron/akan/flail)
 
-/datum/outfit/lunar_sentinel
+/datum/outfit/admin/lunar_sentinel
 	name = JOB_ADMIN_LUNAR_SENTINEL
 	head = /obj/item/clothing/head/helmet/visored/knight/owl
 	neck = /obj/item/clothing/neck/gorget/gold

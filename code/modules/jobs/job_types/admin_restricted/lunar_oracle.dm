@@ -7,8 +7,8 @@
 		STAT_SPEED = -1,
 		/datum/attribute/skill/misc/reading = 60,
 		/datum/attribute/skill/misc/riding = 20,
-		/datum/attribute/skill/magic/arcane = 40,
-		/datum/attribute/skill/magic/holy = 40,
+		/datum/attribute/skill/magic/arcane = 50,
+		/datum/attribute/skill/magic/holy = 50,
 		/datum/attribute/skill/combat/wrestling = 10,
 		/datum/attribute/skill/combat/unarmed = 30,
 		/datum/attribute/skill/misc/athletics = 30,
@@ -29,8 +29,8 @@
 		STAT_SPEED = -2,
 		/datum/attribute/skill/misc/reading = 60,
 		/datum/attribute/skill/misc/riding = 20,
-		/datum/attribute/skill/magic/arcane = 50,
-		/datum/attribute/skill/magic/holy = 50,
+		/datum/attribute/skill/magic/arcane = 60,
+		/datum/attribute/skill/magic/holy = 60,
 		/datum/attribute/skill/combat/wrestling = 10,
 		/datum/attribute/skill/combat/unarmed = 30,
 		/datum/attribute/skill/misc/athletics = 30,
@@ -39,7 +39,7 @@
 		/datum/attribute/skill/misc/sewing = 30,
 		/datum/attribute/skill/misc/medicine = 30,
 		/datum/attribute/skill/craft/cooking = 10,
-		/datum/attribute/skill/labor/mathematics = 40
+		/datum/attribute/skill/labor/mathematics = 50
 	)
 
 /datum/job/admin/oracle
@@ -56,7 +56,7 @@
 	blacklisted_species = list(SPEC_ID_HALFLING)
 	allowed_patrons = list(/datum/patron/divine/akan)
 
-	outfit = /datum/outfit/oracle
+	outfit = /datum/outfit/admin/oracle
 	honorary = "Oracle"
 
 	magic_user = TRUE
@@ -109,12 +109,13 @@
 		var/datum/devotion/devotion = new holder()
 		devotion.grant_to(spawned)
 	spawned.apply_status_effect(/datum/status_effect/buff/nocblessed)
+	spawned.add_quirk(/datum/quirk/boon/folk_hero)
 
 	spawned.adjust_technique_mastery_points(12)
 	spawned.adjust_form_mastery_points(20)
 	spawned.mana_pool.set_intrinsic_recharge(MANA_ALL_LEYLINES)
 
-/datum/outfit/oracle
+/datum/outfit/admin/oracle
 	name = JOB_ADMIN_ORACLE
 	neck = /obj/item/clothing/neck/psycross/silver/divine/akan
 	pants = /obj/item/clothing/pants/tights/colored/black
@@ -126,7 +127,7 @@
 	backl = /obj/item/storage/backpack/satchel
 	cloak = /obj/item/clothing/cloak/raincloak/colored/chalk
 	backpack_contents = list(
-		/obj/item/needle = 1,
+		/obj/item/needle/blessed = 1,
 		/obj/item/storage/belt/pouch/coins/rich = 1
 	)
 

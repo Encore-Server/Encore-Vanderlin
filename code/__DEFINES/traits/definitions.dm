@@ -241,6 +241,7 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 #define TRAIT_BLOODLOSS_IMMUNE "bloodloss_immune"
 /// regardless of organs the blood requirements will be default
 #define TRAIT_NORMALIZED_BLOOD "blood_normalized"
+#define TRAIT_SUSPENDED_BLEED "suspended_bleed"
 /// you are a rotman and need occasional maintenance
 #define TRAIT_ROTMAN "rotman"
 /// immune to zombie infection
@@ -357,9 +358,6 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 
 /// Given to a mob that can throw to make them not able to throw
 #define TRAIT_NO_THROWING "no_throwing"
-
-/// Hides the SSD indicator. Used with scrying.
-#define TRAIT_NOSSDINDICATOR "nossdindicator"
 /// Instant grabs on someone else.
 #define TRAIT_NOSTRUGGLE "nostruggle"
 /// Black-bagged. More snowflaking.
@@ -477,7 +475,7 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 #define TRAIT_VAMP_DREAMS "vamp_dreams"
 #define TRAIT_INHUMENCAMP "inhumencamp"
 #define TRAIT_INTRAINING "intraining" //allows certain roles to bypass the average skill limitation of training dummies
-#define TRAIT_STEELHEARTED "steelhearted" //no bad mood from dismembering or seeing this
+#define TRAIT_STEELHEARTED "Steel Hearted" //no bad mood from dismembering or seeing this
 #define TRAIT_IWASREVIVED "iwasrevived" //prevents PQ gain from reviving the same person twice
 #define TRAIT_IWASUNZOMBIFIED "iwasunzombified" //prevents PQ gain from curing a zombie twice
 #define TRAIT_HELL_HUNTED "hellhunted" // Used to signal character has been marked by death by the hell cult
@@ -504,10 +502,18 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 // This is for UNARMED FIGHTERS. LIMIT ITS USE TO THEM
 #define TRAIT_CLOSECOMBAT "Close Combat"
 
+// Mob uses vitae for one purpose or another.
+#define TRAIT_VITAE_USER "Vitae User"
+
 #define TRAIT_CONJURED_SUMMON "conjured_summon"
 #define TRAIT_CONJURE_BACKLASH "conjure_backlash"
 
-#define TRAIT_SORCERER "Unattuned"
+#define TRAIT_SORCERER "Sorcerer"
+#define TRAIT_BLOOD_MAGE "Blood Mage"
+#define TRAIT_BLOOD_SORCERER "Blood Sorcerer"
+#define TRAIT_BLOOD_STUDENT "Blood Student"
+#define TRAIT_BLOOD_MAGIC_BLOCKED "Sanguine Block"
+#define TRAIT_BLOOD_SENSE "Blood Sense"
 
 /// This mob's surgical operations ignore ALL speed modifiers (even positive ones!) besides tool quality.
 /// The mob can also no longer fail their operations, unless the operation says otherwise

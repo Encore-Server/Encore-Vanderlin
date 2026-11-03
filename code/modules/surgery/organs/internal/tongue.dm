@@ -38,6 +38,7 @@
 		/datum/language/nortic,
 		/datum/language/noman,
 		/datum/language/draconic,
+		/datum/language/sanguine,
 	))
 
 /obj/item/organ/tongue/Initialize(mapload)

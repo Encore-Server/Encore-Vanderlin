@@ -62,6 +62,11 @@
 	smeltresult = /obj/item/ingot/steel_slag
 	item_weight = 900 GRAMS
 
+/obj/item/weapon/handclaw/steel/bloodsteel/relic
+	name = "\proper regret"
+	desc = "The claws of regret sink into all who are unprepared for dark ventures..."
+	max_integrity = INTEGRITY_STRONGEST
+
 /obj/item/weapon/handclaw/gronn
 	name = "Nortic Beast Claws"
 	desc = "A pair of uniquely reinforced iron claws forged with the addition of bone by the cleric-priests of Nortmidst. \

@@ -220,6 +220,12 @@ GLOBAL_LIST_INIT(traits_by_type, list(
 		"Close Combatant" = TRAIT_CLOSECOMBAT,
 		"Steel Hearted" = TRAIT_STEELHEARTED,
 		"Sorcerer" = TRAIT_SORCERER,
+		"Blood Mage" = TRAIT_BLOOD_MAGE,
+		"Blood Sorcerer" = TRAIT_BLOOD_SORCERER,
+		"Blood Student" = TRAIT_BLOOD_STUDENT,
+		"Blood Sense" = TRAIT_BLOOD_SENSE,
+		"Vitae User" = TRAIT_VITAE_USER,
+		"Sanguine Block" = TRAIT_BLOOD_MAGIC_BLOCKED,
 		"Chest Bust Overridden" = TRAIT_TOGGLEBUST,
 	),
 	/obj/item/bodypart = list(
@@ -369,6 +375,10 @@ GLOBAL_LIST_INIT(roguetraits, list(
 	TRAIT_CLOSECOMBAT = span_info("I am trained in unarmed combat, and am able to kick with precision."),
 	TRAIT_STEELHEARTED = span_bloody("I am steel hearted. The horrors of life do not affect me."),
 	TRAIT_SORCERER = SPAN_GOD_AKAN("I am a sorcerer, unable to wield magickal tomes but gifted with innate power."),
+	TRAIT_BLOOD_MAGE = span_bloody("I am a skilled blood mage, wielding the unholy power of blood magic. Woe unto those who oppose me."),
+	TRAIT_BLOOD_SORCERER = span_bloody("I am a gifted blood sorcerer, wielding innate power over blood magic. Woe unto those who oppose me. I cannot use magickal tomes."),
+	TRAIT_BLOOD_STUDENT = span_bloody("I am a student of blood magic."),
+	TRAIT_BLOOD_MAGIC_BLOCKED = span_bloody("I am permanently blocked from using blood magic!"),
 ))
 
 /// value -> trait name, generated on use from trait_by_type global

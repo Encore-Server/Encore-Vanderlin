@@ -22,6 +22,7 @@ type Track = {
     castSpeed: number;
     magnitude: number;
   } | null;
+  unspent_points: number;
 };
 
 type SpellEntry = {
@@ -133,11 +134,9 @@ const SpellCard = (props: {
         </Stack.Item>
         <Stack.Item grow>
           {spell.heretical ? (
-            <Box bold color="red">
-              {spell.name} (FORBIDDEN)
-            </Box>
-          ) : (
-            <Box bold>{spell.name}</Box>
+          <Box bold color="red">{spell.name} {spell.heretical && "(HERESY)"}</Box>
+          ) :
+          (<Box bold>{spell.name}</Box>
           )}
           <Box color="label" fontSize="0.9em">
             {spell.desc}
@@ -196,9 +195,18 @@ const InvestRow = (props: {
     <Stack align="center" mb={0.5} className="SpellBook__invest-row">
       <Stack.Item grow>
         <Box bold>{track.name}</Box>
-        <Box color="label" fontSize="0.9em">
-          {track.rank} - Level {track.level}
-        </Box>
+
+        {!!track.unspent_points && (
+          <Box color="label" fontSize="0.9em">
+            {track.rank} - Level {track.level} <br></br>
+            Unspent Points - {track.unspent_points}
+          </Box>
+        )}
+        {!track.unspent_points && (
+          <Box color="label" fontSize="0.9em">
+            {track.rank} - Level {track.level}
+          </Box>
+        )}
         {modifierText && (
           <Box color="average" fontSize="0.85em">
             {modifierText}
@@ -443,7 +451,7 @@ export const SpellBook = () => {
   const [page, setPage] = useState<'learn' | 'stats'>('learn');
 
   return (
-    <Window width={900} height={800} title="Spellcraft">
+    <Window width={1160} height={800} title="Spellcraft">
       <Window.Content scrollable={false}>
         <Stack vertical fill>
           <Stack.Item>
