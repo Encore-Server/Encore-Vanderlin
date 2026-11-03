@@ -56,7 +56,7 @@
 	blacklisted_species = list(SPEC_ID_HALFLING)
 	allowed_patrons = list(/datum/patron/divine/akan)
 
-	outfit = /datum/outfit/oracle
+	outfit = /datum/outfit/admin/oracle
 	honorary = "Oracle"
 
 	magic_user = TRUE
@@ -114,7 +114,7 @@
 	spawned.adjust_form_mastery_points(20)
 	spawned.mana_pool.set_intrinsic_recharge(MANA_ALL_LEYLINES)
 
-/datum/outfit/oracle
+/datum/outfit/admin/oracle
 	name = JOB_ADMIN_ORACLE
 	neck = /obj/item/clothing/neck/psycross/silver/divine/akan
 	pants = /obj/item/clothing/pants/tights/colored/black
@@ -126,7 +126,7 @@
 	backl = /obj/item/storage/backpack/satchel
 	cloak = /obj/item/clothing/cloak/raincloak/colored/chalk
 	backpack_contents = list(
-		/obj/item/needle = 1,
+		/obj/item/needle/blessed = 1,
 		/obj/item/storage/belt/pouch/coins/rich = 1
 	)
 

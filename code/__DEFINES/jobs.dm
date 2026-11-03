@@ -66,6 +66,16 @@
 #define FACTION_VIKINGS     "Vikings"
 #define FACTION_CHURCH		"Katholikos"//Church vault access without the guardians killing you
 #define FACTION_INQUISITION	"Inquisition"
+#define FACTION_MEAT "Meat"
+#define FACTION_DEEP "Deep"
+#define FACTION_FAE "Fae"
+#define FACTION_SPIDERS "Spiders"
+#define FACTION_ELEMENTAL "Elemental"
+#define FACTION_ABERRANT "Aberrant"
+#define FACTION_INFERNAL "Infernal"
+#define FACTION_LEYLINE "Leyline"
+#define FACTION_OVERLORD "Overlord"
+#define FACTION_BLOOD_MAGIC	"Blood Magic"
 #define FACTION_INFERNAL	"Infernal"
 
 #define NOBLEMEN		(1<<0)
@@ -312,3 +322,4 @@
 #define JOB_ADMIN_SHIRLEIGH_QUEEN "Queen of Etgard"
 #define JOB_ADMIN_SHIRLEIGH_KING "King of Etgard"
 #define JOB_ADMIN_SHIRLEIGH_LACKEY "Eternal Hand"
+#define JOB_ADMIN_BLOOD_SORCERER "Blood Sorcerer"

@@ -33,7 +33,7 @@
 	cmode_music = 'sound/music/cmode/antag/combat_cult.ogg'
 	allowed_patrons = list(/datum/patron/inhumen/envy)
 
-	outfit = /datum/outfit/darkspawn
+	outfit = /datum/outfit/admin/darkspawn
 	honorary = "Lord"
 	honorary_f = "Lady"
 
@@ -78,7 +78,7 @@
 		TRAIT_LIMBATTACHMENT,
 		TRAIT_DEADNOSE,
 		TRAIT_STEELHEARTED,
-		TRAIT_SORCERER,
+		TRAIT_BLOOD_SORCERER,
 		TRAIT_NOPAIN,
 	)
 
@@ -122,7 +122,7 @@
 	LE.Insert(spawned)
 	RE.Insert(spawned)
 
-/datum/outfit/darkspawn
+/datum/outfit/admin/darkspawn
 	name = JOB_ADMIN_DARKSPAWN
 	pants = /obj/item/clothing/pants/trou/formal/shorts
 	shoes = /obj/item/clothing/shoes/courtphysician/female

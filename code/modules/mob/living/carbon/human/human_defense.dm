@@ -679,6 +679,13 @@
 	if(additional)
 		examination += span_info(span_green("[getToxLoss()] TOXIN"))
 		examination += span_info(span_blue("[getOxyLoss()] OXYGEN"))
+	if(deep_examination)
+		if(has_status_effect(/datum/status_effect/debuff/revive_bloodmagic))
+			examination += "ø ------------ ø"
+			examination += "[span_bloody("BLOOD CURSED")]"
+		else if(has_status_effect(/datum/status_effect/debuff/blood_mark))
+			examination += "ø ------------ ø"
+			examination += "[span_bloody("BLOOD MARKED")]"
 	examination += "ø ------------ ø</span>"
 	if(!silent)
 		to_chat(user, examination.Join("\n"))
