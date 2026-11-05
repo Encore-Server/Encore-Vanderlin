@@ -258,7 +258,7 @@
 		return
 	//sound played for other players, by fem_tanyl !!!1!!
 	//parent type agnostic grab so the component can be added to literally anything so long as it has "ring_sound", not as performant but very flexible.
-	var/bell_sound = parent.vars["ring_sound"] || "sound/items/servant_bell.ogg"
+	var/bell_sound = parent.vars["ring_sound"] ? parent.vars["ring_sound"] : "sound/items/servant_bell.ogg"
 	player.playsound_local(get_turf(player), bell_sound, 35, FALSE, pressure_affected = FALSE)
 
 /datum/component/dingaling_summon/Topic(href, href_list)
