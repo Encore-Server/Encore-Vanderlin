@@ -2498,6 +2498,16 @@
 	},
 /turf/open/floor/churchmarble,
 /area/latejoin_area)
+"mg" = (
+/obj/structure/fluff/walldeco/church/line{
+	dir = 8
+	},
+/obj/structure/stairs/stone{
+	dir = 1;
+	icon_state = "stonestairs"
+	},
+/turf/open/floor/churchmarble/violet,
+/area/latejoin_area)
 "mi" = (
 /obj/structure/winch{
 	dir = 4;
@@ -3679,6 +3689,16 @@
 /obj/effect/landmark/admin,
 /turf/open/floor/wood,
 /area/indoors)
+"sy" = (
+/obj/structure/fluff/walldeco/church/line{
+	dir = 4
+	},
+/obj/structure/stairs/stone{
+	dir = 1;
+	icon_state = "stonestairs"
+	},
+/turf/open/floor/churchmarble/violet,
+/area/latejoin_area)
 "sz" = (
 /obj/structure/rack/shelf/biggest,
 /obj/item/scomstone,
@@ -3823,15 +3843,23 @@
 /turf/open/floor/dirt,
 /area/outdoors/bog/inhumen_camp)
 "tm" = (
-/obj/effect/decal/borderfall{
-	dir = 1
-	},
 /obj/structure/fluff/walldeco/church/line{
 	dir = 4
 	},
 /obj/structure/fluff/wallclock,
-/obj/structure/chair/wood,
-/turf/open/floor/churchmarble/violet,
+/obj/structure/fluff/traveltile{
+	aallmig = "very_dead_end_again";
+	aportalgoesto = "bypass_ooc_vamp";
+	aportalid = "very_dead_end_again";
+	name = "To Mont Paradise";
+	dir = 1;
+	icon_state = "event";
+	desc = "A passageway that will skip you directly to the event content, Count Dragowyla's manor at Mont Paradise. You should probably read the event information before jumping into this."
+	},
+/obj/structure/fluff/railing/wood{
+	dir = 4
+	},
+/turf/open/floor/metal/red/alt,
 /area/latejoin_area)
 "tn" = (
 /obj/structure/mannequin/male,
@@ -7612,13 +7640,13 @@
 	dir = 1
 	},
 /obj/structure/fluff/traveltile{
-	aallmig = "very_dead_end";
-	aportalgoesto = "bypass_ooc";
-	aportalid = "very_dead_end";
-	name = "To Seculton Gate";
+	aallmig = "very_dead_end_again";
+	aportalgoesto = "bypass_ooc_vamp";
+	aportalid = "very_dead_end_again";
+	name = "To Mont Paradise";
 	dir = 4;
 	icon_state = "event";
-	desc = "A passageway to Fort Hellwatch directly, allowing fast entry to the Necropolis."
+	desc = "A passageway that will skip you directly to the event content, Count Dragowyla's manor at Mont Paradise. You should probably read the event information before jumping into this."
 	},
 /turf/open/floor/metal,
 /area/latejoin_area)
@@ -7742,17 +7770,16 @@
 /turf/open/floor/blocks/green,
 /area/outdoors/woods/tutorial)
 "Ps" = (
-/obj/effect/decal/borderfall{
-	dir = 1
+/obj/structure/fluff/traveltile{
+	aallmig = "very_dead_end_again";
+	aportalgoesto = "bypass_ooc_vamp";
+	aportalid = "very_dead_end_again";
+	name = "To Mont Paradise";
+	dir = 1;
+	icon_state = "event";
+	desc = "A passageway that will skip you directly to the event content, Count Dragowyla's manor at Mont Paradise. You should probably read the event information before jumping into this."
 	},
-/obj/structure/table/wood,
-/obj/item/paper,
-/obj/item/paper,
-/obj/item/paper,
-/obj/item/paper,
-/obj/item/natural/feather,
-/obj/item/natural/feather,
-/turf/open/floor/churchmarble/violet,
+/turf/open/floor/metal/red/alt,
 /area/latejoin_area)
 "PJ" = (
 /obj/item/natural/rock,
@@ -8311,24 +8338,22 @@
 /turf/open/floor/wood,
 /area/indoors)
 "Sk" = (
-/obj/effect/decal/borderfall{
-	dir = 1
-	},
 /obj/structure/fluff/walldeco/church/line{
 	dir = 8
 	},
-/obj/structure/rack,
-/obj/item/clothing/pants/tights/colored/black,
-/obj/item/clothing/pants/tights,
-/obj/item/clothing/pants/tights/colored/guardsecond,
-/obj/item/clothing/shoes/boots/leather,
-/obj/item/clothing/shoes/boots/leather,
-/obj/item/clothing/shirt/dress/gen,
-/obj/item/clothing/shirt/dress/gen/colored/black,
-/obj/item/clothing/shirt/undershirt,
-/obj/item/clothing/shirt/undershirt,
-/obj/item/clothing/face/eyepatch,
-/turf/open/floor/churchmarble/violet,
+/obj/structure/fluff/traveltile{
+	aallmig = "very_dead_end_again";
+	aportalgoesto = "bypass_ooc_vamp";
+	aportalid = "very_dead_end_again";
+	name = "To Mont Paradise";
+	dir = 1;
+	icon_state = "event";
+	desc = "A passageway that will skip you directly to the event content, Count Dragowyla's manor at Mont Paradise. You should probably read the event information before jumping into this."
+	},
+/obj/structure/fluff/railing/wood{
+	dir = 8
+	},
+/turf/open/floor/metal/red/alt,
 /area/latejoin_area)
 "Sl" = (
 /turf/open/floor/carpet/lord/right,
@@ -8730,13 +8755,13 @@
 /area/indoors/bandit_lair)
 "Uo" = (
 /obj/structure/fluff/traveltile{
-	aallmig = "very_dead_end";
-	aportalgoesto = "bypass_ooc";
-	aportalid = "very_dead_end";
-	name = "To Seculton Gate";
+	aallmig = "very_dead_end_again";
+	aportalgoesto = "bypass_ooc_vamp";
+	aportalid = "very_dead_end_again";
+	name = "To Mont Paradise";
 	dir = 4;
 	icon_state = "event";
-	desc = "A passageway to Fort Hellwatch directly, allowing fast entry to the Necropolis."
+	desc = "A passageway that will skip you directly to the event content, Count Dragowyla's manor at Mont Paradise. You should probably read the event information before jumping into this."
 	},
 /turf/open/floor/metal,
 /area/latejoin_area)
@@ -11412,7 +11437,7 @@ PL
 ZN
 Pm
 Sk
-yc
+mg
 yc
 yc
 yc
@@ -11514,7 +11539,7 @@ vm
 Wp
 UQ
 Ps
-TG
+iF
 TG
 TG
 TG
@@ -11616,7 +11641,7 @@ vo
 zG
 zG
 tm
-Wu
+sy
 Wu
 Wu
 Wu

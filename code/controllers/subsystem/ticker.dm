@@ -381,7 +381,7 @@ SUBSYSTEM_DEF(ticker)
 		if(!C?.mob)
 			continue
 		if(C.mob == SSticker.rulermob)
-			C.mob.playsound_local(C.mob, 'sound/misc/royal_roundstart.ogg', 100, FALSE)
+			C.mob.playsound_local(C.mob, 'sound/misc/roundstart.ogg', 100, FALSE)
 		else
 			C.mob.playsound_local(C.mob, 'sound/misc/roundstart.ogg', 100, FALSE)
 

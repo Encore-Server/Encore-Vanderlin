@@ -16,7 +16,6 @@
 	"other_z": [
 		"map_files/domotan/domotan_north",
 		"map_files/domotan/domotan_south",
-		"map_files/domotan/domotan_east",
 		"map_files/domotan/domotan_west"
 	],
 	"minetype": null,

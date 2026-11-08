@@ -1,16 +1,71 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aa" = (
+/obj/machinery/light/fueled/firebowl/stumpg,
+/turf/open/floor/dirt,
+/area/outdoors/woods/west)
 "ab" = (
 /turf/open/floor/blocks/green,
 /area/outdoors/woods/west)
+"ac" = (
+/obj/machinery/light/fueled/firebowl/stumpb,
+/turf/open/floor/dirt,
+/area/outdoors/woods_safe)
+"ad" = (
+/obj/structure/table/wood/treestump/burnt,
+/obj/structure/fluff/railing/tall{
+	dir = 4
+	},
+/obj/machinery/light/fueled/firebowl/stumpg,
+/turf/open/floor/grass/red,
+/area/outdoors/woods_safe)
 "ae" = (
 /obj/effect/decal/remains/human,
 /turf/open/floor/tile,
 /area/under/cave/lostkeep)
+"af" = (
+/obj/machinery/light/fueled/firebowl/stumpb,
+/turf/open/floor/grass/red,
+/area/outdoors/woods_safe)
+"ag" = (
+/obj/machinery/light/fueled/firebowl/stumpg,
+/turf/open/floor/dirt,
+/area/outdoors/woods_safe)
+"ah" = (
+/obj/structure/fluff/railing/tall{
+	dir = 4
+	},
+/obj/machinery/light/fueled/firebowl/stumpg,
+/turf/open/floor/grass/mixyel,
+/area/outdoors/woods_safe)
+"ai" = (
+/obj/structure/fluff/railing/tall{
+	dir = 1
+	},
+/obj/structure/flora/grass/bush_meagre,
+/obj/structure/fluff/walldeco/vinez,
+/obj/machinery/light/fueled/firebowl/stumpb,
+/turf/open/floor/grass/mixyel,
+/area/outdoors/woods_safe)
+"aj" = (
+/obj/machinery/light/fueled/firebowl/firebowlb,
+/turf/open/floor/grass/red,
+/area/outdoors/woods/west)
 "ak" = (
 /obj/structure/flora/grass/water/reeds,
 /obj/structure/flora/grass/water,
 /turf/open/water/ocean/abyss,
 /area/outdoors/woods/west/crags)
+"al" = (
+/obj/machinery/light/fueled/firebowl/firebowlb,
+/turf/open/floor/grass/mixyel,
+/area/outdoors/woods_safe)
+"am" = (
+/obj/structure/flora/tree/burnt{
+	icon_state = "t3"
+	},
+/obj/machinery/light/fueled/firebowl/firebowlb,
+/turf/open/floor/grass/red,
+/area/outdoors/woods/west)
 "an" = (
 /obj/structure/fluff/railing/wood,
 /obj/structure/fluff/railing/wood{
@@ -20,6 +75,14 @@
 	},
 /turf/open/floor/blocks,
 /area/outdoors/woods/west)
+"ao" = (
+/obj/machinery/light/fueled/firebowl/firebowlb,
+/turf/open/floor/dirt/road,
+/area/outdoors/woods_safe)
+"ap" = (
+/obj/machinery/light/fueled/firebowl/firebowlb,
+/turf/open/floor/grass/red,
+/area/outdoors/woods_safe)
 "aq" = (
 /turf/open/floor/cobble/mossy,
 /area/outdoors/lighthouse)
@@ -47,6 +110,11 @@
 	},
 /turf/open/floor/cobble/mossy,
 /area/outdoors/lostkeep)
+"au" = (
+/obj/structure/flora/grass/herb/rosa,
+/obj/machinery/light/fueled/firebowl/firebowlb,
+/turf/open/floor/grass/red,
+/area/outdoors/woods_safe)
 "ay" = (
 /obj/structure/fluff/railing/border{
 	dir = 9
@@ -59,6 +127,10 @@
 	},
 /turf/open/floor/dirt,
 /area/outdoors/woods/west)
+"aC" = (
+/obj/structure/flora/grass/bush/wall/tall/tundra,
+/turf/open/floor/grass/mixyel,
+/area/outdoors/woods_safe)
 "aF" = (
 /obj/effect/decal/cleanable/blood/footprints,
 /turf/open/floor/grass/yel,
@@ -143,7 +215,7 @@
 	dir = 8
 	},
 /turf/open/floor/dirt,
-/area/outdoors/woods/west)
+/area/outdoors/woods_safe)
 "aU" = (
 /obj/structure/door/stone,
 /turf/open/floor/cobble/mossy,
@@ -152,6 +224,17 @@
 /obj/item/storage/bag,
 /turf/open/floor/carpet/royalblack,
 /area/under/cave/oldfort)
+"aW" = (
+/obj/structure/fluff/traveltile{
+	aallmig = "very_dead_end_again2";
+	aportalgoesto = "very_dead_end_again2";
+	aportalid = "bypass_ooc_vamp";
+	name = "travel bypassage";
+	icon_state = "event";
+	desc = "A spawn location for event joiners."
+	},
+/turf/open/floor/grass/mixyel,
+/area/outdoors/woods_safe)
 "aX" = (
 /obj/structure/flora/grass/bush/wall/tall,
 /turf/open/floor/grass/mixyel,
@@ -261,6 +344,14 @@
 	},
 /turf/open/floor/church/purple,
 /area/indoors/vampire_manor)
+"bL" = (
+/obj/structure/flora/grass/bush/wall/tall/tundra,
+/turf/open/floor/grass/red,
+/area/outdoors/woods_safe)
+"bM" = (
+/obj/structure/fluff/walldeco/vinez,
+/turf/closed/mineral/moss,
+/area/under/cavewet)
 "bO" = (
 /obj/structure/closet/crate/chest/wicker,
 /obj/item/weapon/hoe,
@@ -319,6 +410,12 @@
 /obj/effect/decal/cleanable/blood/old,
 /turf/open/floor/churchrough,
 /area/indoors/lostkeep)
+"cj" = (
+/obj/structure/flora/tree/burnt{
+	icon_state = "t3"
+	},
+/turf/open/floor/grass/red,
+/area/outdoors/woods_safe)
 "cn" = (
 /obj/structure/fluff/railing/border{
 	dir = 1
@@ -383,6 +480,10 @@
 	},
 /turf/open/floor/carpet/red,
 /area/indoors/vampire_manor)
+"cE" = (
+/obj/structure/flora/ausbushes/ppflowers,
+/turf/open/floor/dirt,
+/area/outdoors/woods_safe)
 "cG" = (
 /obj/effect/landmark/quest_spawner/easy,
 /turf/open/floor/dirt,
@@ -763,6 +864,16 @@
 /obj/structure/bars,
 /turf/open/floor/cobble/mossy,
 /area/under/cave/oldtown)
+"fH" = (
+/obj/structure/fluff/railing/tall{
+	dir = 8
+	},
+/obj/structure/fluff/railing/tall{
+	dir = 1
+	},
+/obj/structure/flora/ausbushes/sparsegrass,
+/turf/open/floor/grass/red,
+/area/outdoors/woods_safe)
 "fI" = (
 /obj/machinery/light/fueled/torchholder/l,
 /obj/item/reagent_containers/glass/bowl{
@@ -895,11 +1006,9 @@
 /turf/open/floor/naturalstone,
 /area/under/cave/oldtown)
 "gs" = (
-/obj/structure/flora/tree/burnt{
-	icon_state = "t4"
-	},
+/obj/structure/flora/ausbushes/ywflowers,
 /turf/open/floor/grass/mixyel,
-/area/outdoors/woods/west)
+/area/outdoors/woods_safe)
 "gu" = (
 /obj/structure/closet/dirthole/grave,
 /turf/open/floor/dirt/road,
@@ -1022,12 +1131,26 @@
 /obj/item/storage/bag,
 /turf/open/floor/cobble/mossy,
 /area/under/cave/oldfort)
+"hj" = (
+/obj/structure/flora/tree/burnt{
+	icon_state = "t2"
+	},
+/obj/structure/fluff/railing/tall,
+/obj/structure/fluff/walldeco/vinez,
+/turf/open/floor/grass/mixyel,
+/area/outdoors/woods_safe)
 "hk" = (
 /obj/item/weapon/shield/tower{
 	name = "fool's peace"
 	},
 /turf/open/floor/blocks,
 /area/under/cave/oldfort)
+"hl" = (
+/obj/structure/flora/tree/burnt{
+	icon_state = "t3"
+	},
+/turf/open/floor/grass/yel,
+/area/outdoors/woods_safe)
 "hm" = (
 /obj/structure/door/stone{
 	lockids = list("mansionvampire");
@@ -1044,9 +1167,9 @@
 /turf/open/floor/churchmarble/violet,
 /area/indoors/vampire_manor)
 "hq" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/open/openspace,
-/area/outdoors/woods/west)
+/obj/structure/fluff/walldeco/vinez,
+/turf/closed/mineral/moss,
+/area/indoors/vampire_manor)
 "hu" = (
 /obj/item/flashlight/flare/torch/lantern/bronzelamptern,
 /obj/item/flashlight/flare/torch/lantern/bronzelamptern,
@@ -1120,6 +1243,10 @@
 /obj/effect/decal/cleanable/blood,
 /turf/open/floor/cobble/mossy,
 /area/under/cave/oldfort)
+"hV" = (
+/obj/structure/flora/grass/bush_meagre,
+/turf/open/floor/dirt,
+/area/outdoors/woods_safe)
 "hW" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/blocks,
@@ -1143,6 +1270,15 @@
 /obj/item/natural/clod/dirt,
 /turf/open/floor/dirt,
 /area/under/cave/oldfort)
+"id" = (
+/obj/structure/fluff/railing/tall{
+	dir = 1
+	},
+/obj/structure/flora/tree/burnt{
+	icon_state = "t4"
+	},
+/turf/open/floor/grass/mixyel,
+/area/outdoors/woods_safe)
 "ie" = (
 /turf/open/water/ocean,
 /area/outdoors/woods/west)
@@ -1162,7 +1298,7 @@
 "ij" = (
 /obj/structure/fluff/railing/tall/retaining/stone,
 /turf/open/floor/grass/red,
-/area/outdoors/woods/west)
+/area/outdoors/woods_safe)
 "im" = (
 /obj/item/bin/water/gross,
 /turf/open/floor/sand,
@@ -1337,6 +1473,10 @@
 	},
 /turf/open/floor/concrete,
 /area/under/cave/lostkeep)
+"jv" = (
+/obj/structure/flora/grass/bush/wall/tall,
+/turf/open/floor/grass/red,
+/area/outdoors/woods_safe)
 "jw" = (
 /obj/structure/fluff/railing/wood,
 /turf/open/openspace,
@@ -1572,7 +1712,10 @@
 	dir = 4
 	},
 /turf/open/floor/dirt/road,
-/area/outdoors/woods/west)
+/area/outdoors/woods_safe)
+"kU" = (
+/turf/open/floor/dirt,
+/area/outdoors/woods_safe)
 "kV" = (
 /obj/structure/table/church,
 /obj/item/natural/feather{
@@ -1592,6 +1735,11 @@
 "le" = (
 /turf/closed/wall/mineral/stone,
 /area/indoors/lostkeep)
+"li" = (
+/obj/item/reagent_containers/food/snacks/crow,
+/obj/structure/fluff/nest,
+/turf/open/floor/dirt,
+/area/outdoors/woods/west)
 "lj" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/structure/fluff/walldeco/painting{
@@ -1625,6 +1773,12 @@
 /obj/effect/landmark/stall,
 /turf/open/floor/ruinedwood/darker,
 /area/outdoors/lighthouse)
+"ls" = (
+/obj/machinery/light/fueled/campfire/longlived{
+	density = 1
+	},
+/turf/open/floor/grass/red,
+/area/outdoors/woods_safe)
 "lt" = (
 /obj/structure/stairs/stone{
 	dir = 1
@@ -1779,6 +1933,10 @@
 	},
 /turf/open/openspace,
 /area/outdoors/lighthouse)
+"mC" = (
+/obj/structure/flora/tree/burnt,
+/turf/open/floor/grass/mixyel,
+/area/outdoors/woods_safe)
 "mE" = (
 /obj/structure/flora/grass/water,
 /turf/open/water/ocean,
@@ -1812,7 +1970,7 @@
 "mY" = (
 /obj/structure/fluff/railing/tall/retaining/stone,
 /turf/open/floor/grass/mixyel,
-/area/outdoors/woods/west)
+/area/outdoors/woods_safe)
 "na" = (
 /obj/structure/fluff/railing/border,
 /turf/open/floor/twig,
@@ -1935,6 +2093,10 @@
 /obj/structure/flora/newtree,
 /turf/open/floor/grass/yel,
 /area/outdoors/woods/west)
+"nX" = (
+/obj/structure/flora/grass/herb/rosa,
+/turf/open/floor/grass/mixyel,
+/area/outdoors/woods_safe)
 "nZ" = (
 /obj/structure/fluff/walldeco/church/line{
 	dir = 1
@@ -2086,6 +2248,18 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/ruinedwood/alt,
 /area/outdoors/lighthouse)
+"oV" = (
+/obj/structure/fluff/railing/tall{
+	dir = 8
+	},
+/obj/structure/fluff/railing/tall{
+	dir = 1
+	},
+/obj/structure/chair/bench/church/smallbench{
+	dir = 4
+	},
+/turf/open/floor/grass/red,
+/area/outdoors/woods_safe)
 "oX" = (
 /obj/item/natural/thorn,
 /obj/structure/fluff/railing/border{
@@ -2250,6 +2424,17 @@
 /obj/structure/flora/tree/burnt,
 /turf/open/floor/sand,
 /area/outdoors/woods/west/crags)
+"qg" = (
+/obj/structure/fluff/traveltile{
+	aallmig = "very_dead_end_again2";
+	aportalgoesto = "very_dead_end_again2";
+	aportalid = "bypass_ooc_vamp";
+	name = "travel bypassage";
+	icon_state = "event";
+	desc = "A spawn location for event joiners."
+	},
+/turf/open/floor/grass/red,
+/area/outdoors/woods_safe)
 "qj" = (
 /obj/item/natural/stone,
 /turf/open/floor/twig,
@@ -2384,6 +2569,13 @@
 "rc" = (
 /turf/open/floor/church/purple,
 /area/indoors/vampire_manor)
+"re" = (
+/obj/structure/flora/tree/burnt{
+	icon_state = "t3"
+	},
+/obj/structure/flora/ausbushes/brflowers,
+/turf/open/floor/grass/mixyel,
+/area/outdoors/woods_safe)
 "rf" = (
 /obj/structure/bars/passage/shutter{
 	redstone_id = "lighthouse_storage"
@@ -2415,6 +2607,7 @@
 "rr" = (
 /obj/effect/decal/cleanable/blood/footprints,
 /obj/structure/door/weak,
+/obj/structure/barricade/wooden,
 /turf/open/floor/dirt,
 /area/indoors/vampire_manor)
 "rt" = (
@@ -2519,6 +2712,9 @@
 /obj/item/clothing/head/helmet/bascinet,
 /turf/open/floor/blocks,
 /area/outdoors/oldfort)
+"sf" = (
+/turf/open/floor/grass/red,
+/area/outdoors/woods_safe)
 "sg" = (
 /obj/structure/bars/pipe{
 	pixel_y = 16
@@ -2528,6 +2724,10 @@
 	},
 /turf/open/lava/acid,
 /area/under/cave/lostkeep)
+"si" = (
+/obj/structure/flora/newtree,
+/turf/open/floor/grass/red,
+/area/outdoors/woods_safe)
 "sj" = (
 /turf/open/floor/cobble/mossy,
 /area/under/cavewet)
@@ -2945,6 +3145,10 @@
 /obj/structure/window,
 /turf/open/floor/ruinedwood,
 /area/indoors/oldtown)
+"vy" = (
+/obj/structure/fluff/walldeco/skullspike,
+/turf/open/floor/grass/mixyel,
+/area/outdoors/woods/west)
 "vC" = (
 /obj/structure/stairs/stone{
 	dir = 1
@@ -3015,6 +3219,12 @@
 /obj/machinery/light/fueled/lanternpost,
 /turf/open/floor/dirt/road,
 /area/outdoors/woods/berkleigh)
+"vZ" = (
+/obj/structure/flora/tree/burnt{
+	icon_state = "t3"
+	},
+/turf/open/floor/grass/mixyel,
+/area/outdoors/woods_safe)
 "wb" = (
 /obj/effect/mapping_helpers/secret_door_creator{
 	redstone_id = "vampguestroom2"
@@ -3319,6 +3529,13 @@
 	},
 /turf/open/floor/ruinedwood,
 /area/outdoors/lighthouse)
+"ym" = (
+/obj/structure/handcart/enclosed{
+	dir = 4;
+	anchored = 1
+	},
+/turf/open/floor/grass/red,
+/area/outdoors/woods_safe)
 "yn" = (
 /obj/structure/fluff/railing/wood{
 	dir = 4
@@ -3674,6 +3891,10 @@
 /obj/structure/fluff/walldeco/customflag/regent,
 /turf/closed/mineral/moss,
 /area/outdoors/woods/west)
+"AU" = (
+/obj/structure/chair/stool,
+/turf/open/floor/dirt,
+/area/outdoors/woods_safe)
 "AV" = (
 /mob/living/simple_animal/hostile/skeleton/guard,
 /turf/open/floor/blocks,
@@ -3706,6 +3927,13 @@
 /obj/structure/rack/shelf,
 /turf/open/floor/dirt/road,
 /area/under/cavewet)
+"Bl" = (
+/obj/structure/fluff/railing/tall{
+	dir = 8
+	},
+/obj/structure/fermentation_keg/water,
+/turf/open/floor/grass/red,
+/area/outdoors/woods_safe)
 "Bn" = (
 /obj/structure/spider/stickyweb,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -3961,7 +4189,7 @@
 "CQ" = (
 /obj/structure/flora/grass/herb/rosa,
 /turf/open/floor/dirt/road,
-/area/outdoors/woods/west)
+/area/outdoors/woods_safe)
 "CR" = (
 /obj/structure/fluff/railing/wood,
 /turf/open/floor/ruinedwood/darker,
@@ -4073,6 +4301,12 @@
 "Du" = (
 /turf/open/floor/sand,
 /area/outdoors/woods/west/thornbed)
+"Dv" = (
+/obj/structure/rack,
+/obj/item/ammo_holder/quiver/arrows,
+/obj/item/gun/ballistic/bow,
+/turf/open/floor/grass/red,
+/area/outdoors/woods_safe)
 "Dw" = (
 /obj/structure/chair/bench/church/mid{
 	dir = 1
@@ -4186,6 +4420,15 @@
 /obj/machinery/light/fueled/torchholder/r,
 /turf/open/floor/cobble/mossy,
 /area/outdoors/lighthouse)
+"Eo" = (
+/obj/structure/fluff/railing/tall{
+	dir = 1
+	},
+/obj/structure/fluff/railing/tall{
+	dir = 4
+	},
+/turf/open/floor/dirt,
+/area/outdoors/woods/west)
 "Ep" = (
 /obj/structure/flora/grass/water/reeds,
 /obj/structure/flora/grass/water,
@@ -4195,10 +4438,17 @@
 /obj/structure/spider/stickyweb,
 /turf/open/floor/cobble/mossy,
 /area/under/cave/oldfort)
+"Ev" = (
+/obj/structure/fluff/railing/tall{
+	dir = 1
+	},
+/turf/open/floor/grass/mixyel,
+/area/outdoors/woods_safe)
 "Ew" = (
 /obj/structure/inert_bonepile,
+/obj/structure/flora/grass/thorn_bush,
 /turf/open/floor/grass/mixyel,
-/area/outdoors/woods/west)
+/area/outdoors/woods_safe)
 "Ey" = (
 /obj/structure/fluff/railing/wood,
 /obj/structure/fluff/railing/wood{
@@ -4271,6 +4521,10 @@
 /obj/effect/spawner/map_spawner/loot/weapon,
 /turf/open/floor/naturalstone,
 /area/under/cavewet)
+"EZ" = (
+/obj/effect/decal/remains/honse,
+/turf/open/floor/dirt,
+/area/outdoors/woods/west)
 "Fa" = (
 /obj/structure/fluff/railing/wood{
 	dir = 8
@@ -4482,6 +4736,10 @@
 	},
 /turf/open/floor/churchmarble,
 /area/indoors/lostkeep)
+"Gr" = (
+/obj/structure/chair/stool,
+/turf/open/floor/grass/red,
+/area/outdoors/woods_safe)
 "Gs" = (
 /obj/item/natural/stone,
 /turf/open/floor/blocks,
@@ -4533,7 +4791,7 @@
 	dir = 4
 	},
 /turf/open/floor/cobblerock,
-/area/outdoors/woods/west)
+/area/outdoors/woods_safe)
 "GD" = (
 /obj/structure/fluff/railing/wood{
 	pixel_x = 0;
@@ -4547,11 +4805,20 @@
 /obj/item/natural/stone,
 /turf/open/floor/dirt,
 /area/under/cave/oldfort)
+"GF" = (
+/obj/structure/chair/bench/ancientlog,
+/obj/item/clothing/head/helmet/skullcap,
+/turf/open/floor/dirt,
+/area/outdoors/woods_safe)
 "GI" = (
 /obj/structure/flora/grass/water/reeds,
 /obj/structure/flora/grass/water,
 /turf/open/floor/sand,
 /area/outdoors/woods/west/crescent)
+"GJ" = (
+/obj/structure/flora/grass/bush/wall/tall,
+/turf/open/floor/grass/yel,
+/area/outdoors/woods_safe)
 "GK" = (
 /obj/effect/decal/cleanable/blood,
 /obj/structure/fluff/railing/wood,
@@ -4611,6 +4878,10 @@
 	},
 /turf/open/floor/grass/red,
 /area/outdoors/woods/west)
+"Ha" = (
+/obj/structure/flora/grass/herb/rosa,
+/turf/open/floor/grass/red,
+/area/outdoors/woods_safe)
 "Hb" = (
 /turf/open/floor/cobble,
 /area/under/cave/oldfort)
@@ -4770,6 +5041,16 @@
 	},
 /turf/open/floor/cobble,
 /area/outdoors/woods/west)
+"Il" = (
+/obj/structure/fluff/railing/tall{
+	dir = 1
+	},
+/obj/structure/fluff/railing/tall{
+	dir = 8
+	},
+/obj/structure/flora/tree/dying_bush,
+/turf/open/floor/dirt,
+/area/outdoors/woods_safe)
 "Im" = (
 /turf/open/openspace,
 /area/indoors/lostkeep)
@@ -4802,6 +5083,13 @@
 "Iy" = (
 /turf/closed/mineral/moss,
 /area/outdoors/woods/west/crescent)
+"IA" = (
+/obj/structure/handcart/enclosed{
+	dir = 4;
+	anchored = 1
+	},
+/turf/open/floor/dirt,
+/area/outdoors/woods_safe)
 "IB" = (
 /turf/open/water/swamp,
 /area/outdoors/woods/west)
@@ -4935,6 +5223,10 @@
 /mob/living/simple_animal/hostile/skeleton/bow,
 /turf/open/floor/cobble/mossy,
 /area/under/cave/oldfort)
+"Ji" = (
+/obj/structure/flora/grass/bush/wall,
+/turf/open/floor/grass/mixyel,
+/area/outdoors/woods_safe)
 "Jk" = (
 /obj/structure/fluff/railing/border,
 /turf/open/floor/blocks,
@@ -4987,7 +5279,10 @@
 /area/under/cavewet)
 "Jz" = (
 /turf/open/floor/cobblerock,
-/area/outdoors/woods/west)
+/area/outdoors/woods_safe)
+"JC" = (
+/turf/open/floor/grass/yel,
+/area/outdoors/woods_safe)
 "JD" = (
 /obj/structure/fluff/railing/border{
 	dir = 6
@@ -5074,6 +5369,9 @@
 /obj/item/gem/blue,
 /turf/open/floor/carpet/red,
 /area/under/cave/oldfort)
+"Kr" = (
+/turf/open/floor/grass/mixyel,
+/area/outdoors/woods_safe)
 "Ks" = (
 /obj/item/grown/log/tree/small,
 /turf/open/floor/blocks/green,
@@ -5153,6 +5451,9 @@
 /obj/effect/decal/cleanable/blood/splatter,
 /turf/open/floor/dirt,
 /area/outdoors/woods/west)
+"KV" = (
+/turf/open/openspace,
+/area/outdoors/woods_safe)
 "KW" = (
 /obj/structure/flora/grass,
 /obj/effect/landmark/quest_spawner/hard,
@@ -5338,6 +5639,15 @@
 	},
 /turf/open/floor/grass/mixyel,
 /area/outdoors/woods/west)
+"Mb" = (
+/obj/structure/fluff/railing/tall{
+	dir = 8
+	},
+/obj/structure/chair/bench/church/smallbench{
+	dir = 4
+	},
+/turf/open/floor/grass/red,
+/area/outdoors/woods_safe)
 "Mc" = (
 /obj/effect/decal/cleanable/blood/footprints,
 /turf/open/floor/dirt,
@@ -5355,6 +5665,10 @@
 /obj/structure/ladder,
 /turf/open/floor/metal,
 /area/under/cave/lighthouse)
+"Mh" = (
+/obj/structure/fluff/walldeco/skullspike,
+/turf/open/floor/dirt,
+/area/outdoors/woods/west)
 "Mm" = (
 /obj/item/restraints/legcuffs/beartrap/armed/camouflage,
 /turf/open/floor/sand,
@@ -5587,6 +5901,10 @@
 /obj/structure/inert_bonepile,
 /turf/open/floor/dirt,
 /area/indoors/vampire_manor)
+"NN" = (
+/obj/structure/flora/ausbushes/ppflowers,
+/turf/open/floor/grass/mixyel,
+/area/outdoors/woods_safe)
 "NQ" = (
 /obj/structure/fluff/railing/border{
 	dir = 8
@@ -5611,6 +5929,10 @@
 /obj/effect/decal/remains/wolf,
 /turf/open/floor/naturalstone,
 /area/under/cave/oldtown)
+"Ob" = (
+/obj/structure/flora/tree/burnt,
+/turf/open/floor/grass/red,
+/area/outdoors/woods_safe)
 "Og" = (
 /obj/effect/decal/cleanable/blood/tracks,
 /obj/effect/decal/cleanable/blood/tracks{
@@ -5893,6 +6215,10 @@
 	},
 /turf/open/floor/dirt/road,
 /area/outdoors/woods/west)
+"PV" = (
+/obj/structure/door/swing,
+/turf/open/floor/dirt,
+/area/outdoors/woods_safe)
 "PY" = (
 /obj/item/weapon/shovel,
 /obj/structure/fluff/railing/border{
@@ -5982,6 +6308,10 @@
 "Qs" = (
 /turf/open/water/swamp,
 /area/outdoors/woods/west/lonelyeerie)
+"Qt" = (
+/obj/structure/closet/crate/chest/shippingcrate,
+/turf/open/floor/grass/mixyel,
+/area/outdoors/woods_safe)
 "Qu" = (
 /obj/item/toy/cards/deck/syndicate,
 /turf/open/floor/metal/barograte,
@@ -6073,6 +6403,10 @@
 	},
 /turf/open/floor/twig,
 /area/indoors/shelter/woods)
+"Rf" = (
+/obj/machinery/light/fueled/firebowl/stumpg,
+/turf/open/floor/grass/mixyel,
+/area/outdoors/woods/west)
 "Rg" = (
 /obj/item/storage/bag,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -6112,6 +6446,10 @@
 /obj/structure/bed/shit,
 /turf/open/floor/ruinedwood,
 /area/indoors/oldtown)
+"Ru" = (
+/obj/structure/flora/tree/dead_bush,
+/turf/open/floor/grass/red,
+/area/outdoors/woods_safe)
 "Rv" = (
 /obj/effect/mapping_helpers/secret_door_creator{
 	redstone_id = "vampguestroom1"
@@ -6207,7 +6545,7 @@
 	dir = 8
 	},
 /turf/open/floor/grass/yel,
-/area/outdoors/woods/west)
+/area/outdoors/woods_safe)
 "Sd" = (
 /obj/item/natural/fibers,
 /turf/open/openspace,
@@ -6218,6 +6556,10 @@
 /area/under/cave/oldfort)
 "Sh" = (
 /turf/open/water/clean,
+/area/outdoors/woods/west)
+"Si" = (
+/obj/structure/door/swing,
+/turf/open/floor/dirt,
 /area/outdoors/woods/west)
 "Sj" = (
 /turf/open/floor/carpet/royalblack,
@@ -6458,6 +6800,10 @@
 /mob/living/carbon/human/species/goblin/npc/cave,
 /turf/open/floor/dirt/road,
 /area/under/cavewet)
+"TL" = (
+/obj/structure/flora/newtree,
+/turf/open/floor/grass/mixyel,
+/area/outdoors/woods_safe)
 "TM" = (
 /obj/structure/bars/pipe{
 	dir = 8
@@ -6611,6 +6957,13 @@
 /obj/structure/spider/stickyweb,
 /turf/open/floor/wood/nosmooth,
 /area/under/cave/oldfort)
+"UT" = (
+/obj/structure/fluff/railing/tall{
+	dir = 1
+	},
+/obj/structure/fluff/walldeco/vinez,
+/turf/open/floor/grass/red,
+/area/outdoors/woods_safe)
 "UU" = (
 /obj/structure/flora/grass/swampweed,
 /turf/open/floor/grass/yel,
@@ -6706,6 +7059,9 @@
 	},
 /turf/closed/mineral/moss,
 /area/under/cavewet)
+"VY" = (
+/turf/open/floor/dirt/road,
+/area/outdoors/woods_safe)
 "VZ" = (
 /obj/structure/fluff/railing/wood,
 /turf/open/floor/wood/nosmooth,
@@ -6727,6 +7083,11 @@
 "Wk" = (
 /turf/open/floor/dirt,
 /area/under/cave/oldtown)
+"Wn" = (
+/obj/structure/fluff/walldeco/skullspike,
+/obj/structure/flora/grass/bush/wall/tall,
+/turf/open/floor/dirt,
+/area/outdoors/woods/west)
 "Wq" = (
 /obj/item/restraints/legcuffs/beartrap/armed/camouflage,
 /turf/open/floor/dirt,
@@ -6872,6 +7233,10 @@
 	},
 /turf/open/floor/dirt/road,
 /area/outdoors/woods/berkleigh)
+"Xb" = (
+/obj/machinery/light/fueled/firebowl/stumpg,
+/turf/open/floor/grass/red,
+/area/outdoors/woods/west)
 "Xc" = (
 /obj/effect/spawner/trap,
 /turf/open/floor/cobble/mossy,
@@ -6883,6 +7248,13 @@
 /obj/machinery/anvil,
 /turf/open/floor/blocks,
 /area/indoors/shelter/woods)
+"Xg" = (
+/obj/structure/flora/tree/dead_bush,
+/obj/structure/fluff/railing/tall{
+	dir = 1
+	},
+/turf/open/floor/grass/mixyel,
+/area/outdoors/woods/west)
 "Xl" = (
 /obj/structure/inert_bonepile,
 /turf/open/floor/grass/red,
@@ -6896,10 +7268,23 @@
 /obj/structure/flora/grass/water/reeds,
 /turf/open/water/ocean,
 /area/outdoors/woods/west/crescent)
+"Xs" = (
+/obj/item/reagent_containers/food/snacks/crow,
+/turf/open/floor/grass/mixyel,
+/area/outdoors/woods_safe)
+"Xt" = (
+/obj/structure/fluff/walldeco/vinez,
+/obj/structure/fluff/walldeco/vinez,
+/turf/closed/mineral/moss,
+/area/under/cavewet)
 "Xx" = (
 /obj/item/natural/rock/salt,
 /turf/open/floor/sand,
 /area/outdoors/woods/west/crags)
+"Xz" = (
+/obj/structure/fluff/walldeco/vinez,
+/turf/closed/mineral/random/med_valuable,
+/area/under/cavewet)
 "XD" = (
 /turf/closed/wall/mineral/pipe,
 /area/under/cave/lostkeep)
@@ -7022,6 +7407,10 @@
 /obj/item/natural/fibers,
 /turf/open/floor/church,
 /area/indoors/lostkeep)
+"Yv" = (
+/obj/machinery/light/fueled/firebowl/stumpg,
+/turf/open/floor/grass/mixyel,
+/area/outdoors/woods_safe)
 "Yy" = (
 /obj/effect/decal/cleanable/blood/tracks{
 	dir = 8
@@ -7035,6 +7424,10 @@
 /obj/structure/door/weak,
 /turf/open/floor/cobble/mossy,
 /area/under/cave/oldfort)
+"YD" = (
+/obj/structure/flora/ausbushes/ywflowers,
+/turf/open/floor/grass/red,
+/area/outdoors/woods_safe)
 "YK" = (
 /obj/item/natural/stone,
 /turf/open/floor/cobble/mossy,
@@ -7134,7 +7527,7 @@
 	},
 /obj/structure/fluff/railing/tall/retaining/stone,
 /turf/open/floor/grass/yel,
-/area/outdoors/woods/west)
+/area/outdoors/woods_safe)
 "Zv" = (
 /obj/structure/spider/stickyweb,
 /turf/open/floor/blocks/green,
@@ -7155,6 +7548,16 @@
 	},
 /turf/open/floor/churchbrick,
 /area/indoors/lostkeep)
+"Zy" = (
+/obj/structure/fluff/railing/tall{
+	dir = 1
+	},
+/obj/structure/fluff/railing/tall{
+	dir = 8
+	},
+/obj/effect/decal/remains/human,
+/turf/open/floor/grass/red,
+/area/outdoors/woods/west)
 "Zz" = (
 /obj/structure/table/wood{
 	icon_state = "largetable";
@@ -7184,6 +7587,10 @@
 /obj/structure/flora/grass/water/reeds,
 /turf/open/water/ocean,
 /area/outdoors/beach)
+"ZK" = (
+/obj/effect/decal/remains/human,
+/turf/open/floor/dirt,
+/area/outdoors/woods/west)
 "ZL" = (
 /obj/structure/fluff/statue/gargoyle,
 /obj/structure/fluff/railing/wood{
@@ -7213,6 +7620,15 @@
 	dir = 4
 	},
 /area/under/cavewet)
+"ZR" = (
+/obj/item/reagent_containers/food/snacks/crow,
+/obj/structure/fluff/nest,
+/turf/open/floor/grass/mixyel,
+/area/outdoors/woods/west)
+"ZS" = (
+/obj/structure/flora/grass/thorn_bush,
+/turf/open/floor/grass/mixyel,
+/area/outdoors/woods_safe)
 "ZT" = (
 /obj/structure/fluff/railing/border{
 	dir = 6
@@ -31608,18 +32024,18 @@ ie
 ie
 KE
 KE
-lL
-lL
+ZK
+Wn
+Rf
+hq
+zz
+zz
+zz
+zz
+zz
+zz
 KE
-zz
-zz
-zz
-zz
-zz
-zz
-zz
-KE
-lL
+aa
 lL
 Ym
 KE
@@ -31863,19 +32279,19 @@ sQ
 ie
 ie
 ie
-pt
+Xb
 lL
 Ma
 KE
 uC
-KE
+Xs
+hq
+hq
 zz
 zz
 zz
-zz
-zz
-KE
-co
+Yv
+Xg
 lL
 KE
 KE
@@ -32120,19 +32536,19 @@ sQ
 ie
 ie
 ie
-pt
-lL
+GZ
+li
 KE
 Qh
-pt
-QZ
-KE
+GZ
+af
+id
 mY
 aT
 Zq
-Ma
-KE
-lL
+Ji
+Kr
+Eo
 lL
 KE
 pt
@@ -32377,19 +32793,19 @@ sQ
 ie
 ie
 pt
-lL
-lL
-KE
-KQ
-KQ
-KQ
-KE
+EZ
+Mh
+pt
+fH
+Mb
+Bl
+Kr
 gs
-lL
-lL
-lL
-lL
-lL
+kU
+kU
+kU
+kU
+Si
 KE
 pt
 QZ
@@ -32634,19 +33050,19 @@ sQ
 ie
 ie
 Pg
-lL
-co
-KQ
-dV
-dV
-KQ
-KQ
-lL
-lL
-Ma
+aB
 KE
-pt
-pt
+oV
+Gr
+sf
+YD
+kU
+kU
+kU
+re
+ZS
+sf
+Zy
 lL
 lL
 pt
@@ -32890,21 +33306,21 @@ sQ
 ie
 ie
 ie
-pt
+Xb
 lL
-lL
-KE
-KQ
-dV
-dV
-KQ
-lL
-KE
-KQ
+Il
+NN
+sf
+ls
+Gr
+kU
+kU
+Yv
+bM
 KQ
 KQ
 Qh
-KE
+Rf
 lL
 KE
 pt
@@ -33147,16 +33563,16 @@ sQ
 ie
 ie
 KE
-KE
-Ma
-KE
-lL
-lL
-Ma
-pt
-KE
-lL
-KQ
+ZR
+vy
+Ev
+GF
+sf
+sf
+sf
+Kr
+kU
+Xt
 KQ
 KQ
 KQ
@@ -33404,16 +33820,16 @@ sQ
 ie
 ie
 Qa
-pt
+GZ
 KE
-KE
-pt
-lL
-lL
-KE
-lL
-lL
-KQ
+ai
+Dv
+AU
+kU
+Kr
+kU
+ac
+bM
 KQ
 KQ
 KQ
@@ -33660,16 +34076,16 @@ sQ
 sQ
 ie
 KE
-KE
+Rf
 Qh
 KQ
 KQ
 Ew
-Qa
-lL
-pt
-lL
-eb
+ZS
+ag
+sf
+kU
+hV
 KQ
 KQ
 zG
@@ -33921,12 +34337,12 @@ KQ
 KQ
 KQ
 KQ
-zG
-zG
-lL
-lL
-lL
-KE
+KQ
+bM
+IA
+kU
+kU
+Qt
 KQ
 KQ
 zG
@@ -34180,10 +34596,10 @@ KQ
 zG
 KQ
 KQ
-KE
-lL
-lL
-KQ
+aW
+kU
+cE
+Qt
 KQ
 zG
 zG
@@ -34436,11 +34852,11 @@ KQ
 zG
 zG
 KQ
-KQ
-pt
-lL
-KE
-dV
+bM
+qg
+kU
+Kr
+bM
 dV
 MD
 zG
@@ -34694,10 +35110,10 @@ zG
 zG
 KQ
 KQ
-pt
-lL
-MA
-KQ
+ym
+kU
+Kr
+bM
 dV
 MD
 zG
@@ -34950,10 +35366,10 @@ zG
 zG
 zG
 zG
-dV
-KE
-lL
-uC
+Xz
+ah
+kU
+ad
 KQ
 dV
 MD
@@ -35208,9 +35624,9 @@ zG
 zG
 MD
 dV
-KE
-lL
-pt
+hj
+PV
+UT
 KQ
 KQ
 zG
@@ -35979,10 +36395,10 @@ zG
 KQ
 KQ
 KQ
-pt
+Xb
 lL
 KE
-KE
+Rf
 KQ
 KQ
 KQ
@@ -60416,7 +60832,7 @@ hK
 KE
 KE
 hK
-pt
+aj
 pt
 hK
 KE
@@ -61445,7 +61861,7 @@ Va
 Va
 Va
 hK
-pt
+aj
 KE
 KE
 pt
@@ -62475,7 +62891,7 @@ Va
 KE
 pt
 pt
-pt
+aj
 KE
 by
 by
@@ -63501,7 +63917,7 @@ Va
 Va
 Va
 pt
-GZ
+am
 pt
 KE
 KE
@@ -63757,7 +64173,7 @@ Va
 Va
 Va
 Va
-KE
+Kr
 pt
 KE
 KE
@@ -64014,7 +64430,7 @@ Va
 Va
 Va
 Va
-KE
+Kr
 pt
 KE
 KE
@@ -64271,8 +64687,8 @@ Va
 Va
 Va
 Va
-KE
-pt
+Kr
+sf
 co
 KE
 by
@@ -64528,8 +64944,8 @@ Va
 Va
 Va
 Va
-KE
-pt
+Kr
+sf
 KE
 KE
 by
@@ -64785,9 +65201,9 @@ Va
 Va
 Va
 Va
-pt
-hK
-KE
+sf
+Ha
+Kr
 KE
 by
 by
@@ -65042,9 +65458,9 @@ Va
 Va
 Va
 Va
-hK
-pt
-KE
+Ha
+sf
+al
 pL
 by
 by
@@ -65299,10 +65715,10 @@ Va
 Va
 Va
 Va
-pt
-pt
-KE
-pt
+sf
+sf
+Kr
+sf
 by
 by
 by
@@ -65556,10 +65972,10 @@ Va
 Va
 Va
 Va
-pt
-KE
-pt
-pt
+sf
+Kr
+sf
+sf
 by
 by
 by
@@ -65803,21 +66219,21 @@ BT
 BT
 BT
 BT
-OD
-qk
+JC
+ao
 Jz
 Jz
-qk
-qk
+VY
+VY
 Jz
 Jz
-pt
-pt
-pt
-pt
-pt
-pt
-by
+sf
+sf
+sf
+sf
+sf
+sf
+KV
 by
 by
 by
@@ -66060,21 +66476,21 @@ BT
 BT
 BT
 BT
-qk
+VY
 Jz
 Jz
 Jz
-qk
+VY
 Jz
 Jz
 Jz
-pt
-pt
-pt
-pt
-pt
-pt
-by
+sf
+sf
+sf
+sf
+sf
+sf
+KV
 by
 by
 by
@@ -66317,21 +66733,21 @@ BT
 BT
 BT
 BT
-qk
-qk
-qk
+VY
+VY
+VY
 Jz
 Jz
 Jz
-qk
-qk
-pt
-pt
-pt
-KE
-KE
-KE
-by
+VY
+ao
+sf
+sf
+sf
+Kr
+Kr
+Kr
+KV
 by
 by
 by
@@ -66574,21 +66990,21 @@ BT
 BT
 BT
 BT
-qk
-qk
+VY
+VY
 Jz
-qk
+VY
 Jz
-qk
-eb
-KE
-KE
-pt
-GZ
-KE
-KE
-by
-by
+VY
+Ru
+Kr
+Kr
+sf
+cj
+Kr
+Kr
+KV
+KV
 by
 by
 by
@@ -66835,17 +67251,17 @@ Jz
 Jz
 Jz
 CQ
-pt
-KE
-KE
-KE
-pt
-pt
-pt
-KE
-pt
-by
-by
+sf
+Kr
+Kr
+Kr
+sf
+sf
+sf
+Kr
+sf
+KV
+KV
 by
 by
 by
@@ -67088,21 +67504,21 @@ BT
 BT
 BT
 BT
-qk
+VY
 Jz
 Jz
-qk
-KE
-KE
-pt
-KE
-pt
-KE
-pt
-pt
-KE
-by
-by
+VY
+Kr
+Kr
+sf
+Kr
+sf
+Kr
+sf
+sf
+Kr
+KV
+KV
 by
 by
 by
@@ -67345,21 +67761,21 @@ BT
 BT
 BT
 BT
-qk
-qk
+VY
+VY
 Jz
-qk
-KE
-KE
-hK
-KE
-hK
-pt
-pt
-pt
-pt
-by
-by
+VY
+Kr
+Kr
+Ha
+Kr
+Ha
+sf
+sf
+sf
+sf
+KV
+KV
 by
 by
 by
@@ -67588,35 +68004,35 @@ by
 by
 pt
 Po
-RD
-VL
-yB
-Po
-OU
-YP
-yB
-OU
-qk
+GJ
+mC
+jv
+bL
+Ob
+aC
+jv
+Ob
+VY
 Jz
-hK
+Ha
 CQ
-qk
+VY
 Jz
-qk
+VY
 Jz
-qk
-pt
-KE
-KE
-pt
-KE
-pt
-pt
-KE
-pt
-pt
-by
-by
+VY
+ap
+Kr
+Kr
+sf
+Kr
+sf
+sf
+Kr
+sf
+sf
+KV
+KV
 by
 by
 by
@@ -67845,35 +68261,35 @@ by
 by
 pt
 pt
-KE
-KE
-pt
-KE
-pt
-KE
-pt
-qk
+Kr
+Kr
+sf
+Kr
+sf
+Kr
+sf
+VY
 Jz
 Jz
-qk
-qk
+VY
+VY
 Jz
 Jz
-qk
+VY
 CQ
-qk
-pt
-pt
-pt
-KE
-GZ
-pt
-pt
-pt
-pt
-by
-by
-by
+VY
+sf
+sf
+sf
+Kr
+cj
+sf
+sf
+sf
+sf
+KV
+KV
+KV
 by
 by
 by
@@ -68102,33 +68518,33 @@ by
 by
 by
 KE
-pt
-KE
-KE
-pt
-pt
-KE
-pt
-qk
+sf
+Kr
+al
+sf
+sf
+Kr
+sf
+VY
 Jz
 Jz
-qk
+VY
 CQ
-qk
+VY
 CQ
-qk
-qk
-hK
-pt
-KE
-pt
-pt
-pt
-pt
-KE
-pt
-pt
-by
+VY
+VY
+Ha
+sf
+Kr
+sf
+sf
+sf
+sf
+Kr
+sf
+sf
+KV
 by
 by
 by
@@ -68359,32 +68775,32 @@ by
 by
 by
 KE
-KE
-pt
-Ma
-KE
-pt
-pt
-pt
-qk
+Kr
+sf
+vZ
+Kr
+sf
+sf
+ap
+VY
 Jz
 Jz
 Jz
-qk
-pL
-pt
-Ym
-KE
-pt
-KE
-pt
-pt
-KE
-pt
-hK
-pt
-pt
-pt
+VY
+nX
+ap
+TL
+Kr
+sf
+Kr
+sf
+sf
+Kr
+sf
+Ha
+sf
+sf
+sf
 by
 by
 by
@@ -68616,31 +69032,31 @@ by
 by
 by
 KE
-pt
-KE
-KE
-KE
-pt
-KE
-KE
-qk
+sf
+Kr
+Kr
+Kr
+sf
+Kr
+Kr
+VY
 Jz
 Jz
-qk
-pt
-KE
-KE
-pt
-pt
-pt
-KE
-pt
-pt
-pt
-pt
-pt
-KE
-KE
+VY
+sf
+Kr
+Kr
+sf
+sf
+sf
+Kr
+sf
+sf
+sf
+sf
+sf
+Kr
+Kr
 by
 by
 by
@@ -68873,31 +69289,31 @@ by
 by
 by
 by
-KE
-KE
-pt
-pt
-GZ
-KE
-pL
+Kr
+Kr
+sf
+sf
+cj
+Kr
+nX
 Jz
 Jz
 Jz
 Jz
-pt
-GZ
-pt
-pL
-KE
-pt
-pt
-pt
-pt
-pt
-pt
-KE
-KE
-by
+sf
+cj
+sf
+nX
+Kr
+sf
+sf
+sf
+sf
+sf
+sf
+Kr
+Kr
+KV
 by
 by
 by
@@ -69130,25 +69546,25 @@ by
 by
 by
 by
-by
-by
-KE
-pt
-pt
-pt
-KE
+KV
+KV
+Kr
+sf
+sf
+sf
+Kr
 Jz
 Jz
 Jz
 Jz
-pt
-pt
-pL
-eb
-eb
-pt
-by
-by
+sf
+sf
+nX
+Ru
+Ru
+sf
+KV
+KV
 by
 by
 by
@@ -69387,25 +69803,25 @@ by
 by
 by
 by
-by
-by
-by
-KE
-pt
-hK
-pt
-qk
+KV
+KV
+KV
+Kr
+ap
+Ha
+sf
+VY
 Jz
 Jz
-qk
-CN
-pt
-pt
-pt
-by
-by
-by
-by
+VY
+si
+sf
+sf
+sf
+KV
+KV
+KV
+KV
 by
 by
 by
@@ -69644,25 +70060,25 @@ by
 by
 by
 by
-by
-by
-KE
-pt
-pt
-KE
-pt
-qk
-qk
+KV
+KV
+Kr
+sf
+sf
+Kr
+sf
+ao
+VY
 Jz
-qk
-pt
-KE
-KE
-by
-by
-by
-by
-by
+VY
+sf
+Kr
+Kr
+KV
+KV
+KV
+KV
+KV
 by
 by
 by
@@ -69901,25 +70317,25 @@ by
 by
 by
 by
-by
-by
-pt
-pt
-pt
-KE
+KV
+KV
+sf
+sf
+sf
+Kr
 Jz
 Jz
 Jz
-qk
-hK
-KE
-by
-by
-by
-by
-by
-by
-by
+VY
+Ha
+Kr
+KV
+KV
+KV
+KV
+KV
+KV
+KV
 by
 by
 by
@@ -70158,18 +70574,18 @@ by
 by
 by
 by
-by
-by
-pt
-KE
-Ma
-pt
-pL
-qk
-qk
-hK
-hK
-pt
+KV
+KV
+sf
+Kr
+vZ
+sf
+nX
+VY
+VY
+Ha
+au
+sf
 by
 by
 by
@@ -70415,18 +70831,18 @@ by
 by
 by
 by
-by
-by
-by
-pt
-pt
-pt
-pt
+KV
+KV
+KV
+sf
+sf
+sf
+sf
 Jz
-qk
-hK
-hK
-pt
+VY
+Ha
+Ha
+sf
 by
 by
 by
@@ -70672,18 +71088,18 @@ by
 by
 by
 by
-by
-by
-by
-pt
-pt
-sz
-hK
+KV
+KV
+KV
+sf
+sf
+hl
+au
 Jz
 Jz
-hK
-CN
-GZ
+Ha
+si
+cj
 by
 by
 by
@@ -70929,18 +71345,18 @@ by
 by
 by
 by
-by
-by
-by
-by
-pt
-hK
-hK
+KV
+KV
+KV
+KV
+sf
+Ha
+Ha
 Jz
-qk
-hK
-hK
-pt
+VY
+Ha
+Ha
+sf
 by
 by
 by
@@ -71188,16 +71604,16 @@ by
 by
 by
 by
-by
-by
-hK
-pt
-hK
-qk
+KV
+KV
+Ha
+sf
+Ha
+VY
 Jz
-hK
-hK
-pt
+Ha
+Ha
+sf
 by
 by
 by
@@ -71445,15 +71861,15 @@ by
 by
 by
 by
-by
-by
-pt
-pt
-pt
+KV
+KV
+sf
+ap
+sf
 GB
 kT
-pt
-pt
+sf
+sf
 by
 by
 by
@@ -71705,11 +72121,11 @@ by
 by
 by
 by
-pt
+sf
 ij
 Sb
 Zq
-pt
+sf
 by
 by
 by
@@ -72216,9 +72632,9 @@ by
 by
 by
 by
-KE
-KE
-KE
+by
+by
+by
 by
 by
 by
@@ -72472,11 +72888,11 @@ by
 by
 by
 by
-KE
-KE
-KE
-KE
-KE
+by
+by
+by
+by
+by
 by
 by
 by
@@ -72730,10 +73146,10 @@ by
 by
 by
 by
-KE
-KE
-KE
-KE
+by
+by
+by
+by
 by
 by
 KE
@@ -72990,7 +73406,7 @@ by
 by
 by
 by
-hq
+by
 by
 KE
 KE
@@ -74019,7 +74435,7 @@ KE
 by
 by
 by
-KE
+by
 KE
 pt
 pt

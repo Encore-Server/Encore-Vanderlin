@@ -21,17 +21,17 @@
 /datum/time_of_day/sunset
 	name = "Sunset"
 	color = "#ff8a63"
-	start = 18 HOURS //6:00:00 PM
+	start = 12 HOURS //6:00:00 PM
 
 /datum/time_of_day/dusk
 	name = DUSK
 	color = list("#c26f56", "#c05271", "#b84933")
-	start = 19 HOURS //7:00:00 PM
+	start = 13 HOURS //7:00:00 PM
 
 /datum/time_of_day/midnight
 	name = "Midnight"
 	color = list("#100a18", "#0c0412", "#0f0012")
-	start = 20 HOURS //8:00:00 PM
+	start = 14 HOURS //8:00:00 PM
 
 GLOBAL_LIST_EMPTY(SUNLIGHT_QUEUE_WORK)   /* turfs to be stateChecked */
 GLOBAL_LIST_EMPTY(SUNLIGHT_QUEUE_UPDATE) /* turfs to have their colors updated via corners (filter out the unroofed dudes) */
