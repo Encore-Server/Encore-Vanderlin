@@ -226,7 +226,7 @@
 /// Helper proc to safely format and send the directional message to a specific mob
 /datum/component/dingaling_summon/proc/send_alert(mob/living/player, mob/living/ringer)
 	var/turf/origin_turf = get_turf(parent)
-	if(!player.client)
+	if(!player || !player.client)
 		return
 	if(player.stat >= DEAD)
 		return
@@ -252,14 +252,16 @@
 			else
 				dirText += " far"
 		dirText += z_dist > 0 ? " above me" : " below me"
-	var/mute_link = "<a href='byond://?src=[REF(src)];mute=1'>\[Mute Ringing\]</a>"
-	to_chat(player, span_warning("I hear \the [parent] being rung[dirText]. The bell tells me their name is [ringer.name ? ringer.name : "unknown"]. [mute_link]"))
-	if(distance <= 7)
+	to_chat(player, span_warning("I hear \the [parent] being rung[dirText]. The bell tells me their name is [ringer?.name ? ringer.name : "unknown"]. <a href='byond://?src=[REF(src)];mute=1'>\[Mute Ringing\]</a>"))
+	// in the same room, so return before we play sound in players mind
+	if(distance <= 7 && z_dist == 0)
 		return
 	//sound played for other players, by fem_tanyl !!!1!!
 	//parent type agnostic grab so the component can be added to literally anything so long as it has "ring_sound", not as performant but very flexible.
-	var/bell_sound = parent.vars["ring_sound"] ? parent.vars["ring_sound"] : "sound/items/servant_bell.ogg"
-	player.playsound_local(get_turf(player), bell_sound, 35, FALSE, pressure_affected = FALSE)
+	var/bell_sound = parent.vars["ring_sound"]
+	if (!bell_sound)
+		bell_sound = "sound/items/servant_bell.ogg"
+	player.playsound_local(get_turf(player), bell_sound, 50, FALSE, pressure_affected = FALSE)
 
 /datum/component/dingaling_summon/Topic(href, href_list)
 	. = ..()
@@ -272,7 +274,7 @@
 
 // ---- YEOMAN BELL STRUCTURES AND ITEMS ----
 /obj/structure/yeoman_bell
-	name = "yeoman bell"
+	name = "abstract yeoman bell base"
 	desc = "You should not see this and this should not be craftable. When they touch my dingdingdong... my bingaling..."
 	max_integrity = 80
 	icon = 'icons/obj/dingdingding.dmi'
@@ -280,9 +282,9 @@
 	resistance_flags = FIRE_PROOF
 	var/flick_state = "stand_dingaling"
 	var/ring_sound = "sound/items/servant_bell.ogg"
-	COOLDOWN_DECLARE(ring_bell)
+	COOLDOWN_DECLARE(ring_bell_cd)
 	var/cooldown = 1 MINUTES
-	COOLDOWN_DECLARE(nearby_ring_bell)
+	COOLDOWN_DECLARE(nearby_ring_bell_cd)
 	var/nearby_cooldown = 5 SECONDS
 
 /obj/structure/yeoman_bell/get_mechanics_examine(mob/user)
@@ -295,14 +297,13 @@
 	qdel(GetComponent(/datum/component/dingaling_summon))
 	return ..()
 
-/obj/structure/yeoman_bell/proc/ring_bell()
+/obj/structure/yeoman_bell/proc/ring_bell(mob/living/ringer)
 	flick(flick_state, src)
 	playsound(src, ring_sound, 100, TRUE)
-	COOLDOWN_START(src, nearby_ring_bell, nearby_cooldown)
-	if(!COOLDOWN_FINISHED(src, ring_bell)) // anti spam for mental bings
+	if(!COOLDOWN_FINISHED(src, ring_bell_cd)) // anti spam for mental bings
 		return
-	COOLDOWN_START(src, ring_bell, cooldown)
-	SEND_SIGNAL(src, "yeoman_bell_rung")
+	COOLDOWN_START(src, ring_bell_cd, cooldown)
+	SEND_SIGNAL(src, "yeoman_bell_rung", ringer)
 
 /obj/structure/yeoman_bell/attack_hand(mob/living/user)
 	. = ..()
@@ -317,10 +318,11 @@
 		return
 
 	// Otherwise, attempt to ring the bell normally
-	if(!COOLDOWN_FINISHED(src, nearby_ring_bell)) // anti nearby spam
+	if(!COOLDOWN_FINISHED(src, nearby_ring_bell_cd)) // anti nearby spam
 		return
+	COOLDOWN_START(src, nearby_ring_bell_cd, nearby_cooldown)
 	user.visible_message("[user] rings the [src].")
-	ring_bell()
+	ring_bell(user) // include user to notify who rang
 
 /obj/structure/yeoman_bell/attack_hand_secondary(mob/user, list/modifiers)
 	. = ..()
@@ -380,9 +382,9 @@
 	var/ring_sound = "sound/items/servant_bell.ogg"
 	// reference to a /datum/mind
 	var/datum/weakref/owner_mind_ref
-	COOLDOWN_DECLARE(ring_bell)
+	COOLDOWN_DECLARE(ring_bell_cd)
 	var/cooldown = 1 MINUTES
-	COOLDOWN_DECLARE(nearby_ring_bell)
+	COOLDOWN_DECLARE(nearby_ring_bell_cd)
 	var/nearby_cooldown = 5 SECONDS
 
 /obj/item/yeoman_bell/desk_bell/get_mechanics_examine(mob/user)
@@ -397,14 +399,13 @@
 	qdel(GetComponent(/datum/component/dingaling_summon))
 	return ..()
 
-/obj/item/yeoman_bell/desk_bell/proc/ring_bell()
+/obj/item/yeoman_bell/desk_bell/proc/ring_bell(mob/living/ringer)
 	flick(flick_state, src)
 	playsound(src, ring_sound, 100, TRUE)
-	COOLDOWN_START(src, nearby_ring_bell, nearby_cooldown)
-	if(!COOLDOWN_FINISHED(src, ring_bell)) // anti spam for mental bings
+	if(!COOLDOWN_FINISHED(src, ring_bell_cd)) // anti spam for mental bings
 		return
-	COOLDOWN_START(src, ring_bell, cooldown)
-	SEND_SIGNAL(src, "yeoman_bell_rung")
+	COOLDOWN_START(src, ring_bell_cd, cooldown)
+	SEND_SIGNAL(src, "yeoman_bell_rung", ringer)
 
 /obj/item/yeoman_bell/desk_bell/attack_hand(mob/living/user)
 	. = ..()
@@ -420,10 +421,11 @@
 			return
 
 		// Otherwise, attempt to ring the bell normally
-		if(!COOLDOWN_FINISHED(src, nearby_ring_bell)) // anti nearby spam
+		if(!COOLDOWN_FINISHED(src, nearby_ring_bell_cd)) // anti nearby spam
 			return
+		COOLDOWN_START(src, nearby_ring_bell_cd, nearby_cooldown)
 		user.visible_message("[user] rings the [src].")
-		ring_bell()
+		ring_bell(user) // include user to notify who rang
 
 /obj/item/yeoman_bell/desk_bell/attack_hand_secondary(mob/user, list/modifiers)
 	. = ..()
