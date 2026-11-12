@@ -75,10 +75,8 @@
 /turf/open/floor/cobble,
 /area/outdoors/town/plaza)
 "aao" = (
-/obj/structure/fluff/railing/wood{
-	dir = 8
-	},
 /obj/structure/fluff/hanging_banners,
+/obj/structure/bars/grille,
 /turf/open/openspace,
 /area/outdoors/town)
 "aap" = (
@@ -176,12 +174,12 @@
 /turf/open/floor/ruinedwood/turned/alt,
 /area/indoors/soilsons)
 "aaE" = (
-/obj/structure/fluff/railing/tall/retaining{
-	dir = 1
+/obj/structure/fluff/railing/wood{
+	dir = 8
 	},
-/obj/effect/waterfall,
-/turf/open/water/ocean,
-/area/indoors/town/waterworks)
+/obj/structure/fluff/railing/wood,
+/turf/open/openspace,
+/area/outdoors/town)
 "aaF" = (
 /obj/structure/ladder,
 /turf/open/floor/ruinedwood,
@@ -315,7 +313,6 @@
 /obj/machinery/light/fueledstreet/orange/wall{
 	dir = 4
 	},
-/obj/structure/bars/grille,
 /turf/open/openspace,
 /area/indoors/town/tavern/saiga)
 "aaZ" = (
@@ -344,6 +341,10 @@
 /area/outdoors/town/plaza)
 "abe" = (
 /obj/effect/decal/shadow_floor,
+/obj/structure/stairs/stone,
+/obj/structure/fluff/railing/wood{
+	dir = 4
+	},
 /turf/open/floor/cobble,
 /area/indoors/town/tavern/saiga)
 "abf" = (
@@ -505,10 +506,11 @@
 /turf/open/floor/ruinedwood,
 /area/outdoors/town/plaza)
 "abC" = (
-/obj/structure/stairs/stone,
 /obj/structure/fluff/walldeco/church/line{
 	dir = 4
 	},
+/obj/effect/decal/cleanable/generic,
+/obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/cobble,
 /area/outdoors/town/plaza)
 "abD" = (
@@ -516,8 +518,13 @@
 /turf/open/floor/grass/cold,
 /area/outdoors/town/plaza)
 "abE" = (
-/obj/structure/fluff/railing/border,
-/turf/closed/wall/mineral/stonebrick,
+/obj/structure/stairs/stone{
+	dir = 1
+	},
+/obj/structure/fluff/railing/tall/retaining{
+	dir = 4
+	},
+/turf/open/water/ocean,
 /area/indoors/town/waterworks)
 "abF" = (
 /obj/effect/decal/cleanable/dirt/dust,
@@ -5602,11 +5609,12 @@
 /turf/open/floor/rooftop,
 /area/outdoors/town/roofs)
 "ciF" = (
-/obj/structure/fluff/railing/border{
+/obj/structure/flora/grass/water/reeds,
+/obj/structure/fluff/railing/tall/retaining,
+/obj/structure/fluff/railing/tall/retaining{
 	dir = 4
 	},
-/obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/ruinedwood/turned,
+/turf/open/water/ocean,
 /area/indoors/town/waterworks)
 "cjr" = (
 /obj/structure/fluff/railing/border{
@@ -7228,9 +7236,6 @@
 /turf/open/floor/cobble,
 /area/indoors/town/keep/garrison)
 "dhF" = (
-/obj/structure/fluff/railing/border{
-	dir = 10
-	},
 /obj/effect/landmark/start/villager{
 	dir = 4
 	},
@@ -7526,6 +7531,9 @@
 /turf/open/floor/grass/healthy,
 /area/outdoors/town)
 "dtW" = (
+/obj/effect/decal/cleanable/dirt/cobweb{
+	dir = 1
+	},
 /turf/open/floor/churchrough/green,
 /area/under/town/sewer)
 "dun" = (
@@ -9870,9 +9878,6 @@
 /turf/open/floor/grass/cold,
 /area/outdoors/town/noble_manor/yellow)
 "eWV" = (
-/obj/structure/fluff/railing/border{
-	dir = 1
-	},
 /obj/structure/fluff/steamvent,
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/blocks/stonered,
@@ -10084,10 +10089,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/tile/diamond,
 /area/indoors/town/keep)
-"feg" = (
-/obj/structure/fluff/railing/border,
-/turf/open/floor/blocks/stonered,
-/area/indoors/town/waterworks)
 "feq" = (
 /obj/structure/window,
 /turf/open/floor/ruinedwood/two,
@@ -11078,12 +11079,6 @@
 	},
 /turf/open/floor/ruinedwood,
 /area/indoors/town)
-"fGw" = (
-/obj/structure/fluff/railing/border{
-	dir = 6
-	},
-/turf/open/floor/blocks/stonered,
-/area/indoors/town/waterworks)
 "fGx" = (
 /obj/structure/chair/bench/church/r{
 	dir = 1
@@ -11781,12 +11776,6 @@
 /obj/structure/chair/bench/church/smallbench,
 /turf/open/floor/grass/cold,
 /area/outdoors/town/neighborhood/east)
-"ggj" = (
-/obj/structure/fluff/railing/border{
-	dir = 8
-	},
-/turf/open/floor/blocks/stonered/tiny,
-/area/outdoors/town/plaza)
 "ggp" = (
 /turf/open/floor/naturalstone,
 /area/under/cavewet)
@@ -12125,9 +12114,14 @@
 /turf/open/floor/cobble,
 /area/outdoors/exposed)
 "gsN" = (
-/obj/structure/fluff/railing/border,
-/obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/blocks/stonered,
+/obj/structure/flora/ausbushes/reedbush,
+/obj/structure/fluff/railing/tall/retaining{
+	dir = 1
+	},
+/obj/structure/fluff/railing/tall/retaining{
+	dir = 8
+	},
+/turf/open/water/ocean,
 /area/indoors/town/waterworks)
 "gsQ" = (
 /obj/machinery/light/fueledstreet/orange,
@@ -12732,6 +12726,9 @@
 "gNJ" = (
 /obj/structure/flora/grass/water,
 /obj/structure/fluff/railing/tall/retaining,
+/obj/structure/fluff/railing/tall/retaining{
+	dir = 8
+	},
 /turf/open/water/ocean,
 /area/indoors/town/waterworks)
 "gNK" = (
@@ -16112,12 +16109,9 @@
 /turf/open/floor/metal/barograte,
 /area/indoors/town/vault)
 "iMd" = (
-/obj/structure/fluff/railing/border{
-	dir = 9
-	},
-/obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/blocks/stonered,
-/area/indoors/town/waterworks)
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/church/violet,
+/area/indoors/town/dwarfin/shared)
 "iMB" = (
 /turf/open/floor/naturalstone,
 /area/under/town/sewer)
@@ -17151,11 +17145,10 @@
 /turf/open/floor/cobblerock,
 /area/under/town/sewer)
 "jrl" = (
-/obj/structure/fluff/railing/border{
-	dir = 10
-	},
-/turf/open/floor/blocks/stonered/tiny,
-/area/indoors/town/waterworks)
+/obj/effect/decal/cleanable/generic,
+/obj/effect/decal/cleanable/dirt/cobweb,
+/turf/open/floor/twig,
+/area/under/town/sewer)
 "jrw" = (
 /obj/structure/fluff/hanging_banners,
 /turf/open/floor/metal/alt,
@@ -17503,9 +17496,6 @@
 /turf/open/water/ocean,
 /area/outdoors/beach)
 "jDj" = (
-/obj/structure/fluff/railing/border{
-	dir = 8
-	},
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/ruinedwood/turned,
 /area/indoors/town/waterworks)
@@ -18600,13 +18590,6 @@
 /obj/machinery/light/fueled/lanternpost,
 /turf/open/floor/grass/cold,
 /area/outdoors/town/neighborhood/east)
-"kkl" = (
-/obj/structure/fluff/railing/border{
-	dir = 4
-	},
-/obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/blocks/stonered,
-/area/indoors/town/waterworks)
 "kkx" = (
 /obj/structure/closet/crate/coffin,
 /obj/effect/decal/cleanable/dirt/cobweb{
@@ -19395,8 +19378,11 @@
 /turf/open/floor/cobble,
 /area/indoors/town/keep/kitchen/cellar)
 "kLf" = (
-/obj/structure/stairs/stone,
-/turf/open/floor/cobble,
+/obj/effect/decal/cobbleedge{
+	dir = 10;
+	icon_state = "cobbleedge-e"
+	},
+/turf/open/floor/ruinedwood/turned,
 /area/outdoors/town/plaza)
 "kLg" = (
 /obj/structure/fluff/walldeco/bath/wallpipes/outie{
@@ -20641,8 +20627,8 @@
 /area/indoors/town/keep/throne)
 "lEF" = (
 /obj/effect/landmark/house_spot{
-	default_template = /datum/map_template/makers_quarter_2;
-	property_id = "makers_quarter_2";
+	default_template = /datum/map_template/makers_quarter_1;
+	property_id = "makers_quarter_1";
 	save_id = "makers_quarter";
 	template_y = 6;
 	template_x = 11;
@@ -21886,10 +21872,11 @@
 /turf/open/floor/naturalstone,
 /area/under/cavewet)
 "mlT" = (
-/obj/structure/fluff/railing/border{
+/obj/structure/fluff/railing/tall/retaining,
+/obj/structure/fluff/railing/tall/retaining{
 	dir = 4
 	},
-/turf/open/floor/blocks/stonered/tiny,
+/turf/open/water/ocean,
 /area/indoors/town/waterworks)
 "mlU" = (
 /obj/structure/window,
@@ -24486,10 +24473,6 @@
 /obj/structure/curtain/bounty,
 /turf/open/floor/tile/checkeralt,
 /area/indoors/town/keep/squire)
-"nPb" = (
-/obj/structure/stairs/stone,
-/turf/open/floor/blocks/stonered/tiny,
-/area/outdoors/town/plaza)
 "nPk" = (
 /obj/structure/fluff/railing/wood{
 	dir = 1;
@@ -25317,13 +25300,10 @@
 "opr" = (
 /obj/structure/flora/grass/water/reeds,
 /obj/structure/fluff/railing/tall/retaining,
-/turf/open/water/ocean,
-/area/indoors/town/waterworks)
-"opw" = (
-/obj/structure/fluff/railing/border{
-	dir = 4
+/obj/structure/fluff/railing/tall/retaining{
+	dir = 8
 	},
-/turf/open/floor/ruinedwood/turned,
+/turf/open/water/ocean,
 /area/indoors/town/waterworks)
 "opR" = (
 /obj/structure/spider/cocoon,
@@ -26399,13 +26379,6 @@
 	},
 /turf/open/floor/church,
 /area/indoors/town/church/crypt)
-"oZc" = (
-/obj/structure/fluff/railing/border{
-	dir = 1
-	},
-/obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/blocks/stonered,
-/area/indoors/town/waterworks)
 "oZs" = (
 /obj/effect/decal/cleanable/generic,
 /turf/open/floor/ruinedwood,
@@ -27514,10 +27487,13 @@
 /turf/open/floor/twig,
 /area/under/town/basement/smugglers_den)
 "pFS" = (
-/obj/structure/fluff/railing/border{
-	dir = 5
+/obj/structure/fluff/railing/tall/retaining{
+	dir = 1
 	},
-/turf/open/floor/blocks/stonered/tiny,
+/obj/structure/fluff/railing/tall/retaining{
+	dir = 4
+	},
+/turf/open/water/ocean,
 /area/indoors/town/waterworks)
 "pGi" = (
 /obj/structure/stairs/fancy/l{
@@ -27710,9 +27686,6 @@
 /turf/open/floor/twig,
 /area/indoors/town/clinic_large/apothecary)
 "pLN" = (
-/obj/structure/fluff/railing/border{
-	dir = 8
-	},
 /turf/open/floor/ruinedwood/turned,
 /area/indoors/town/waterworks)
 "pMc" = (
@@ -29419,6 +29392,7 @@
 /obj/effect/decal/shadow_floor{
 	dir = 1
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/church/green,
 /area/indoors/town/dwarfin/shared)
 "qMX" = (
@@ -31927,12 +31901,6 @@
 /obj/structure/fluff/walldeco/moon,
 /turf/closed/wall/mineral/stone,
 /area/indoors/town/keep/magician)
-"sAx" = (
-/obj/structure/fluff/railing/border{
-	dir = 4
-	},
-/turf/open/floor/blocks/stonered,
-/area/outdoors/town/plaza)
 "sAL" = (
 /obj/machinery/light/fueled/hearth,
 /obj/item/cooking/pan,
@@ -32639,12 +32607,6 @@
 /obj/item/rope,
 /turf/open/floor/ruinedwood/darker,
 /area/indoors/town/church/crypt)
-"sXC" = (
-/obj/structure/fluff/railing/border{
-	dir = 1
-	},
-/turf/open/floor/blocks/stonered,
-/area/indoors/town/waterworks)
 "sYr" = (
 /obj/structure/fluff/walldeco/bath/wallpipes/outie,
 /turf/closed/wall/mineral/pipe,
@@ -32944,13 +32906,6 @@
 "thO" = (
 /turf/closed/wall/mineral/stonebrick,
 /area/indoors/town/keep/captain)
-"tiv" = (
-/obj/structure/fluff/railing/border{
-	dir = 6
-	},
-/obj/effect/decal/cleanable/generic,
-/turf/open/floor/blocks/stonered,
-/area/indoors/town/waterworks)
 "tiw" = (
 /turf/open/floor/wood,
 /area/indoors/town/keep/throne)
@@ -33858,9 +33813,6 @@
 /turf/open/floor/dirt,
 /area/indoors/town/cell)
 "tMp" = (
-/obj/structure/fluff/railing/border{
-	dir = 1
-	},
 /obj/structure/fluff/steamvent,
 /turf/open/floor/blocks/stonered/tiny,
 /area/indoors/town/waterworks)
@@ -35830,11 +35782,12 @@
 /turf/open/floor/churchmarble,
 /area/indoors/town/church)
 "uYM" = (
-/obj/structure/fluff/railing/border{
+/obj/structure/fluff/hanging_banners,
+/obj/structure/fluff/railing/wood{
 	dir = 8
 	},
-/turf/open/floor/blocks/stonered/tiny,
-/area/indoors/town/waterworks)
+/turf/open/openspace,
+/area/outdoors/town)
 "uZu" = (
 /obj/machinery/light/fueled/wallfire/candle/l,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -37136,11 +37089,16 @@
 /turf/open/floor/churchmarble/violet,
 /area/indoors/town/church/inquisition)
 "vPW" = (
-/obj/structure/fluff/railing/border{
-	dir = 5
+/obj/effect/landmark/house_spot{
+	default_template = /datum/map_template/makers_quarter_1;
+	property_id = "makers_quarter_2";
+	save_id = "makers_quarter";
+	template_y = 6;
+	template_x = 11;
+	template_z = 2
 	},
-/turf/open/floor/blocks/stonered,
-/area/indoors/town/waterworks)
+/turf/open/floor/naturalstone,
+/area/indoors/town/shop)
 "vQl" = (
 /obj/structure/fluff/railing/border{
 	dir = 9
@@ -37623,11 +37581,12 @@
 /turf/open/floor/dirt,
 /area/outdoors/farm)
 "whE" = (
-/obj/structure/fluff/railing/border{
-	dir = 1
+/obj/structure/fluff/railing/wood{
+	dir = 4
 	},
-/turf/open/floor/blocks/stonered/tiny,
-/area/indoors/town/waterworks)
+/obj/structure/fluff/railing/wood,
+/turf/open/openspace,
+/area/outdoors/town/plaza)
 "whO" = (
 /obj/structure/table/wood{
 	icon_state = "longtable"
@@ -47502,8 +47461,8 @@ gqI
 oCB
 pwr
 cPE
-fLs
-fLs
+jrl
+hyA
 fht
 fht
 fht
@@ -47626,7 +47585,7 @@ qOA
 vEz
 qOA
 wDd
-hms
+iMd
 hms
 hms
 eHx
@@ -47634,7 +47593,7 @@ qAV
 qAV
 bjg
 kMz
-fLs
+hyA
 fLs
 fht
 fht
@@ -47887,7 +47846,7 @@ fht
 fht
 fht
 fht
-lEF
+vPW
 boJ
 pVX
 hms
@@ -59393,10 +59352,10 @@ lFV
 pKb
 lwQ
 jtb
-fGw
-kkl
-mlT
-pFS
+pZy
+pPz
+jtb
+jtb
 nLE
 nue
 nue
@@ -59525,10 +59484,10 @@ pKb
 fTU
 gao
 pZy
-feg
-jXV
+pZy
+gsN
 opr
-oZc
+pPz
 pZy
 nue
 nue
@@ -59657,7 +59616,7 @@ eup
 eup
 eup
 mML
-feg
+pZy
 vOa
 isS
 eWV
@@ -59789,10 +59748,10 @@ fht
 fht
 fht
 fht
-feg
+pZy
 nEi
 isS
-sXC
+pZy
 nLE
 nLE
 jZa
@@ -59924,7 +59883,7 @@ fht
 pZy
 aod
 pwR
-whE
+jtb
 xgw
 nLE
 nLE
@@ -60053,10 +60012,10 @@ fht
 fht
 fht
 fht
-feg
+pZy
 jJT
 isS
-whE
+jtb
 kEj
 pZy
 pZy
@@ -60185,7 +60144,7 @@ fht
 fht
 fht
 fht
-feg
+pZy
 hBY
 mqt
 tMp
@@ -60317,10 +60276,10 @@ fht
 fht
 fht
 fht
-feg
-nEi
-isS
-sXC
+pZy
+pFS
+mlT
+pZy
 cuD
 gtf
 nLE
@@ -60452,7 +60411,7 @@ fht
 dhF
 pLN
 jDj
-iMd
+pPz
 wBB
 jtb
 nLE
@@ -60571,8 +60530,8 @@ gxz
 cCq
 xoq
 aIc
-uwh
-sAx
+qpv
+aMa
 fht
 fht
 fht
@@ -60581,10 +60540,10 @@ fht
 fht
 fht
 fht
-tiv
-ciF
-opw
-vPW
+nkV
+jDj
+pLN
+pZy
 jtb
 ikD
 dDj
@@ -60704,7 +60663,7 @@ niG
 gVT
 xoq
 uwh
-aMa
+qpv
 fht
 fht
 fht
@@ -60713,8 +60672,8 @@ fht
 fht
 fht
 fht
+pPz
 gsN
-jXV
 gNJ
 nue
 nue
@@ -60836,7 +60795,7 @@ mrM
 aaN
 uwh
 oFL
-nPb
+oFL
 fht
 fht
 fht
@@ -60845,8 +60804,8 @@ fht
 fht
 fht
 fht
-abE
-aaE
+jtb
+nEi
 aax
 nue
 nue
@@ -60968,7 +60927,7 @@ niG
 niG
 oFL
 oFL
-ggj
+oFL
 fht
 fht
 fht
@@ -60978,8 +60937,8 @@ fht
 fht
 fht
 jtb
-aod
-opr
+abE
+ciF
 nue
 nue
 nue
@@ -61109,9 +61068,9 @@ eyw
 jtb
 gtf
 jtb
-jrl
-uYM
-uYM
+jtb
+jtb
+jtb
 nue
 nue
 nue
@@ -73772,10 +73731,10 @@ sYW
 abk
 abb
 aaW
-aaW
+bKC
 aaY
 abe
-eZf
+hhC
 aaB
 hLS
 sDG
@@ -73902,10 +73861,10 @@ gTY
 aJX
 aJX
 lqe
-lqe
+aaE
 aao
-lqe
-aaZ
+cxT
+whE
 kLf
 xGk
 xUL
@@ -74034,10 +73993,10 @@ gTY
 aJX
 aJX
 aJX
-aJX
-gTY
-aJX
-wVF
+qWy
+aao
+aaW
+aaR
 abC
 abA
 abx
@@ -74167,9 +74126,9 @@ aJX
 aJX
 aJX
 aJX
-gTY
-wVF
-wVF
+uYM
+aaZ
+aaZ
 abl
 aad
 aby
