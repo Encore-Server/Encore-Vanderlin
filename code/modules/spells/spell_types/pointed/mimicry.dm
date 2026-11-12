@@ -1,6 +1,6 @@
 /datum/action/cooldown/spell/mimicry
 	name = "Mimicry"
-	desc = "Take on the appearance of your target."
+	desc = "Take on the appearance of your target. Recast on self to dispel."
 	button_icon_state = "invisibility"
 	sound = 'sound/misc/stings/generic.ogg'
 
