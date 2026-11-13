@@ -24,10 +24,28 @@
 /obj/structure/stairs/stone,
 /turf/open/floor/dirt/road,
 /area/under/cave)
+"ak" = (
+/obj/effect/decal/cobbleedge{
+	dir = 5;
+	icon_state = "cobbleedge-s"
+	},
+/turf/open/floor/twig,
+/area/outdoors/woods/lakeside)
 "an" = (
 /obj/item/bin/water,
 /turf/open/floor/church/rust,
 /area/indoors/shelter)
+"aq" = (
+/obj/structure/fluff/railing/wood{
+	dir = 1;
+	layer = 4.2;
+	pixel_y = 7
+	},
+/obj/structure/fluff/railing/wood{
+	dir = 8
+	},
+/turf/open/floor/twig,
+/area/outdoors/woods/lakeside)
 "au" = (
 /obj/structure/flora/grass/water,
 /turf/open/water/clean,
@@ -48,6 +66,11 @@
 	icon_state = "largetable"
 	},
 /turf/open/floor/twig,
+/area/indoors/shelter)
+"aQ" = (
+/obj/structure/window/openclose,
+/obj/structure/curtain/bounty/dir,
+/turf/open/floor/ruinedwood/two,
 /area/indoors/shelter)
 "aR" = (
 /turf/open/floor/naturalstone,
@@ -99,6 +122,9 @@
 	},
 /turf/open/floor/snow,
 /area/indoors/wilderness)
+"bl" = (
+/turf/open/floor/woodturned,
+/area/outdoors/woods/lakeside)
 "bo" = (
 /obj/structure/bed/shit{
 	name = "makeshift bed"
@@ -135,6 +161,12 @@
 	},
 /turf/open/floor/sand,
 /area/outdoors/beach)
+"cd" = (
+/obj/structure/fluff/railing/tall/retaining/rock{
+	dir = 1
+	},
+/turf/open/lava,
+/area/indoors/shelter)
 "cp" = (
 /obj/machinery/light/fueled/lanternpost/fixed,
 /turf/open/floor/snow,
@@ -164,6 +196,9 @@
 	},
 /turf/open/floor/snow,
 /area/outdoors/woods/etgard)
+"cN" = (
+/turf/open/water/river,
+/area/under/cave)
 "cR" = (
 /obj/structure/flora/grass/water,
 /turf/open/floor/dirt,
@@ -185,6 +220,15 @@
 "da" = (
 /turf/closed/mineral/salt,
 /area/under/cavewet)
+"dd" = (
+/obj/structure/fluff/railing/tall/retaining{
+	dir = 1
+	},
+/obj/structure/fluff/railing/tall/retaining{
+	dir = 8
+	},
+/turf/open/water/clean,
+/area/outdoors/woods/lakeside)
 "di" = (
 /obj/structure/fluff/traveltile{
 	aportalgoesto = "z1-townsouth2-in";
@@ -200,12 +244,24 @@
 	},
 /turf/open/floor/twig,
 /area/outdoors/beach)
+"dk" = (
+/obj/structure/fluff/railing/tall/retaining/stone{
+	dir = 5
+	},
+/turf/open/water/clean,
+/area/outdoors/woods/lakeside)
 "dl" = (
 /obj/structure/table/wood{
 	icon_state = "tablewood1"
 	},
 /turf/open/floor/dirt,
 /area/under/cavewet)
+"dr" = (
+/obj/structure/fluff/railing/tall/retaining/stone{
+	dir = 10
+	},
+/turf/open/water/clean,
+/area/outdoors/woods/lakeside)
 "dt" = (
 /obj/structure/fluff/railing/wood,
 /obj/structure/stairs{
@@ -217,6 +273,22 @@
 /obj/item/ore/coal,
 /turf/open/floor/naturalstone,
 /area/under/cave)
+"dC" = (
+/obj/structure/fluff/railing/tall/retaining/rock,
+/obj/structure/fluff/railing/tall/retaining/rock{
+	dir = 8
+	},
+/obj/structure/fluff/railing/tall/retaining/rock{
+	dir = 4
+	},
+/obj/structure/fluff/railing/tall/retaining/rock{
+	dir = 10
+	},
+/obj/structure/fluff/railing/tall/retaining/rock{
+	dir = 6
+	},
+/turf/open/lava,
+/area/indoors/shelter)
 "dD" = (
 /turf/open/floor/naturalstone,
 /area/indoors/shelter)
@@ -225,6 +297,10 @@
 	dir = 4
 	},
 /area/under/cave)
+"dO" = (
+/obj/structure/door/red,
+/turf/open/floor/ruinedwood/two,
+/area/indoors/shelter)
 "dU" = (
 /obj/structure/door/weak/bolt{
 	dir = 8
@@ -283,11 +359,8 @@
 /turf/open/floor/snow,
 /area/outdoors/woods/etgard)
 "eD" = (
-/obj/structure/table/wood{
-	icon_state = "longtable"
-	},
-/obj/item/reagent_containers/glass/bottle/wine,
-/turf/open/floor/twig,
+/obj/structure/chair/stool,
+/turf/open/floor/ruinedwood/two,
 /area/indoors/shelter)
 "eF" = (
 /obj/structure/fluff/signage{
@@ -328,17 +401,32 @@
 /turf/closed/wall/mineral/wooddark,
 /area/outdoors/woods/etgard)
 "fA" = (
-/obj/structure/closet/crate/chest/lootbox,
-/turf/open/floor/twig,
+/obj/structure/closet/crate/chest/shippingcrate,
+/obj/item/flint,
+/obj/item/weapon/hammer/iron,
+/obj/item/weapon/tongs,
+/turf/open/floor/ruinedwood/two,
 /area/indoors/shelter)
 "fD" = (
-/obj/item/flint,
-/obj/item/weapon/tongs,
+/obj/structure/stairs{
+	dir = 1
+	},
 /turf/open/floor/twig,
 /area/indoors/shelter)
 "fE" = (
 /turf/open/floor/sand,
 /area/outdoors/woods/etgard)
+"fF" = (
+/obj/structure/fluff/railing/tall/retaining{
+	dir = 4
+	},
+/obj/structure/fluff/railing/tall/retaining{
+	dir = 8
+	},
+/turf/open/water/river{
+	dir = 1
+	},
+/area/outdoors/woods/lakeside)
 "fG" = (
 /obj/machinery/light/fueled/lanternpost/fixed{
 	dir = 1;
@@ -347,17 +435,23 @@
 	},
 /turf/open/floor/grass/cold,
 /area/outdoors/woods/etgard)
+"fJ" = (
+/obj/effect/decal/cobbleedge{
+	dir = 5;
+	icon_state = "cobblestonealt_edges"
+	},
+/turf/open/floor/cobblerock,
+/area/outdoors/woods/lakeside)
 "fO" = (
 /obj/structure/fluff/railing/tall/palisade,
 /turf/open/floor/grass/cold,
 /area/outdoors/woods/etgard)
 "fU" = (
-/obj/structure/table/wood{
-	icon_state = "longtable";
-	dir = 1
+/obj/effect/decal/cobbleedge{
+	dir = 4
 	},
-/obj/item/weapon/hammer,
-/turf/open/floor/twig,
+/obj/structure/table/wood/counter/end,
+/turf/open/floor/ruinedwood/two,
 /area/indoors/shelter)
 "fX" = (
 /turf/open/floor/rooftop,
@@ -366,6 +460,18 @@
 /obj/machinery/light/fueled/firebowl/stump,
 /turf/open/floor/snow,
 /area/outdoors/wilderness/merccamp)
+"gm" = (
+/obj/structure/fluff/railing/tall/retaining/rock{
+	dir = 1
+	},
+/obj/structure/fluff/railing/tall/retaining/rock{
+	dir = 8
+	},
+/obj/structure/fluff/railing/tall/retaining/rock{
+	dir = 9
+	},
+/turf/open/lava,
+/area/indoors/shelter)
 "gr" = (
 /obj/structure/flora/grass/water,
 /turf/open/water/marsh,
@@ -437,6 +543,12 @@
 /obj/structure/flora/grass,
 /turf/open/floor/snow,
 /area/outdoors/woods/etgard)
+"he" = (
+/obj/structure/fluff/railing/tall/retaining{
+	dir = 1
+	},
+/turf/open/water/clean,
+/area/outdoors/woods/lakeside)
 "hk" = (
 /obj/structure/fluff/traveltile{
 	aportalgoesto = "z2-townsouth1-in";
@@ -449,6 +561,24 @@
 "hn" = (
 /turf/open/floor/rooftop,
 /area/indoors/town)
+"hq" = (
+/obj/structure/fluff/railing/tall/retaining/rock{
+	dir = 1
+	},
+/obj/structure/fluff/railing/tall/retaining/rock{
+	dir = 4
+	},
+/obj/structure/fluff/railing/tall/retaining/rock{
+	dir = 8
+	},
+/obj/structure/fluff/railing/tall/retaining/rock{
+	dir = 9
+	},
+/obj/structure/fluff/railing/tall/retaining/rock{
+	dir = 5
+	},
+/turf/open/lava,
+/area/indoors/shelter)
 "hr" = (
 /obj/structure/bed/hay,
 /obj/structure/bed/hay{
@@ -471,6 +601,16 @@
 	},
 /turf/open/floor/dirt/road,
 /area/outdoors/woods/etgard)
+"hM" = (
+/obj/effect/decal/cobbleedge{
+	dir = 5;
+	icon_state = "cobbleedgealt-n"
+	},
+/obj/effect/decal/cobbleedge{
+	dir = 6
+	},
+/turf/open/floor/cobblerock,
+/area/outdoors/woods/lakeside)
 "hQ" = (
 /obj/structure/table/wood/crafted,
 /obj/item/gun/ballistic/bow,
@@ -481,6 +621,17 @@
 /obj/structure/rack/shelf/biggest,
 /turf/open/floor/twig,
 /area/indoors/shelter)
+"ie" = (
+/obj/structure/fluff/railing/wood{
+	dir = 1;
+	layer = 4.2;
+	pixel_y = 7
+	},
+/obj/structure/fluff/railing/wood{
+	dir = 4
+	},
+/turf/open/floor/twig,
+/area/outdoors/woods/lakeside)
 "ig" = (
 /obj/structure/fluff/road_sign{
 	dir = 4;
@@ -532,6 +683,18 @@
 "iF" = (
 /turf/open/water/ocean,
 /area/outdoors/beach)
+"iG" = (
+/obj/structure/fluff/railing/tall/retaining{
+	dir = 4
+	},
+/obj/structure/fluff/railing/tall/retaining,
+/obj/structure/fluff/railing/tall/retaining{
+	dir = 9
+	},
+/turf/open/water/river{
+	dir = 8
+	},
+/area/outdoors/woods/lakeside)
 "iJ" = (
 /obj/structure/fluff/traveltile{
 	aallmig = "z2-northsouth1";
@@ -541,8 +704,22 @@
 	},
 /turf/open/floor/dirt/road,
 /area/outdoors/woods/etgard)
+"iK" = (
+/obj/structure/fluff/railing/tall/retaining{
+	dir = 10
+	},
+/turf/open/water/clean,
+/area/outdoors/woods/lakeside)
 "iN" = (
-/obj/structure/bars,
+/obj/structure/fluff/railing/tall/retaining/rock{
+	dir = 1
+	},
+/obj/structure/fluff/railing/tall/retaining/rock{
+	dir = 4
+	},
+/obj/structure/fluff/railing/tall/retaining/rock{
+	dir = 5
+	},
 /turf/open/lava,
 /area/indoors/shelter)
 "iY" = (
@@ -550,6 +727,10 @@
 /obj/structure/flora/grass/water,
 /turf/open/water/ocean/abyss,
 /area/outdoors/beach)
+"ja" = (
+/obj/structure/closet/crate/drawer,
+/turf/open/floor/ruinedwood/two,
+/area/indoors/shelter)
 "jc" = (
 /obj/effect/decal/remains/human,
 /turf/open/floor/dirt,
@@ -573,8 +754,26 @@
 	},
 /turf/open/floor/snow,
 /area/outdoors/woods/etgard)
+"jq" = (
+/obj/structure/fluff/railing/wood{
+	dir = 1;
+	layer = 4.2;
+	pixel_y = 7
+	},
+/obj/machinery/light/fueled/torchholder/l,
+/turf/open/floor/twig,
+/area/outdoors/woods/lakeside)
 "jr" = (
 /turf/closed/mineral/random/cold,
+/area/indoors/shelter)
+"js" = (
+/obj/structure/fluff/railing/tall/retaining/rock{
+	dir = 5
+	},
+/obj/structure/fluff/railing/tall/retaining/rock{
+	dir = 9
+	},
+/turf/open/lava,
 /area/indoors/shelter)
 "jx" = (
 /obj/effect/landmark/map_load_mark/generic_tile,
@@ -609,6 +808,10 @@
 /obj/effect/landmark/mapGenerator/domotan/cave,
 /turf/closed/mineral/bedrock,
 /area/outdoors/woods/etgard)
+"jO" = (
+/obj/structure/fluff/railing/wood,
+/turf/open/floor/twig,
+/area/outdoors/woods/lakeside)
 "jP" = (
 /obj/structure/fluff/railing/wood,
 /turf/open/floor/ruinedwood,
@@ -623,8 +826,8 @@
 /turf/open/floor/dirt,
 /area/indoors/shelter)
 "kc" = (
-/obj/structure/door/weak/bolt,
-/turf/open/floor/twig,
+/obj/structure/door/red/bolt,
+/turf/open/floor/ruinedwood/two,
 /area/indoors/shelter)
 "ke" = (
 /obj/structure/flora/grass/water,
@@ -660,9 +863,18 @@
 /turf/open/floor/snow,
 /area/outdoors/wilderness/merccamp)
 "kI" = (
-/obj/structure/bed,
-/turf/open/floor/twig,
-/area/indoors/shelter)
+/obj/structure/fluff/railing/tall/retaining/rock{
+	dir = 1
+	},
+/obj/effect/waterfall{
+	pixel_y = 22
+	},
+/turf/open/water/clean,
+/area/outdoors/woods/lakeside)
+"kK" = (
+/obj/structure/fluff/railing/tall/retaining/stone,
+/turf/open/water/clean,
+/area/outdoors/woods/lakeside)
 "kL" = (
 /obj/structure/flora/grass/water/reeds,
 /turf/open/water/ocean,
@@ -683,6 +895,11 @@
 	},
 /turf/open/floor/sand,
 /area/outdoors/woods/etgard)
+"kW" = (
+/obj/structure/rack,
+/obj/item/reagent_containers/glass/bucket/wooden/alter,
+/turf/open/floor/snow,
+/area/outdoors/woods/lakeside)
 "kY" = (
 /obj/structure/fluff/railing/wood,
 /turf/open/floor/sand,
@@ -693,6 +910,23 @@
 	},
 /turf/open/water/ocean/abyss,
 /area/outdoors/beach)
+"lf" = (
+/obj/structure/fluff/railing/tall/retaining{
+	dir = 1
+	},
+/obj/structure/fluff/railing/tall/retaining{
+	dir = 4
+	},
+/obj/structure/fluff/railing/tall/retaining{
+	dir = 10
+	},
+/obj/structure/fluff/railing/wood{
+	pixel_y = -6
+	},
+/turf/open/water/river{
+	dir = 8
+	},
+/area/outdoors/woods/lakeside)
 "lj" = (
 /turf/closed/wall/mineral/wooddark,
 /area/indoors/shelter)
@@ -700,6 +934,19 @@
 /obj/structure/flora/tree/dead_bush,
 /turf/open/floor/snow,
 /area/outdoors/wilderness/merccamp)
+"ll" = (
+/obj/structure/fluff/railing/tall/retaining{
+	dir = 1
+	},
+/obj/structure/fluff/railing/tall/retaining,
+/obj/structure/fluff/railing/wood{
+	dir = 4;
+	pixel_x = 5
+	},
+/turf/open/water/river{
+	dir = 8
+	},
+/area/outdoors/woods/lakeside)
 "ls" = (
 /turf/open/floor/cobble/alt,
 /area/outdoors/woods/etgard)
@@ -713,6 +960,29 @@
 	},
 /turf/closed/mineral/random/cold,
 /area/under/town/basement)
+"ly" = (
+/obj/structure/fluff/railing/tall/retaining/rock{
+	dir = 5
+	},
+/turf/open/water/clean,
+/area/outdoors/woods/lakeside)
+"lB" = (
+/obj/structure/ladder,
+/turf/open/floor/ruinedwood/turned/darker,
+/area/outdoors/woods/lakeside)
+"lC" = (
+/obj/structure/fluff/railing/tall/retaining{
+	dir = 1
+	},
+/obj/structure/fluff/railing/tall/retaining,
+/obj/structure/fluff/railing/wood{
+	dir = 8;
+	pixel_x = -6
+	},
+/turf/open/water/river{
+	dir = 8
+	},
+/area/outdoors/woods/lakeside)
 "lF" = (
 /obj/structure/fluff/railing/wood,
 /turf/open/water/ocean,
@@ -727,9 +997,10 @@
 /turf/open/floor/dirt/road,
 /area/under/cavewet)
 "lK" = (
-/obj/machinery/light/fueled/hearth,
-/obj/machinery/light/fueled/oven/south,
-/turf/open/floor/twig,
+/obj/effect/decal/cobbleedge{
+	dir = 8
+	},
+/turf/open/floor/ruinedwood/two,
 /area/indoors/shelter)
 "lQ" = (
 /turf/open/openspace,
@@ -756,6 +1027,12 @@
 	},
 /turf/open/floor/dirt/road,
 /area/outdoors/woods/etgard)
+"lX" = (
+/obj/structure/fluff/railing/tall/retaining{
+	dir = 8
+	},
+/turf/open/water/clean,
+/area/outdoors/woods/lakeside)
 "lY" = (
 /obj/structure/closet/crate/chest/crate{
 	name = "produce crate"
@@ -780,12 +1057,25 @@
 	},
 /turf/open/floor/twig,
 /area/indoors/shelter)
+"mg" = (
+/obj/structure/fluff/railing/tall/retaining/rock{
+	dir = 1
+	},
+/obj/structure/fluff/railing/tall/retaining{
+	dir = 8
+	},
+/turf/open/water/clean,
+/area/outdoors/woods/lakeside)
 "mh" = (
 /obj/structure/rack,
 /obj/effect/decal/cleanable/dirt,
 /obj/item/tent_kit,
 /turf/open/floor/twig,
 /area/indoors/wilderness)
+"mo" = (
+/obj/structure/door/swing,
+/turf/open/floor/snow,
+/area/outdoors/woods/lakeside)
 "mt" = (
 /obj/item/natural/rock,
 /turf/open/floor/naturalstone,
@@ -794,6 +1084,12 @@
 /obj/item/natural/stone,
 /turf/open/floor/naturalstone,
 /area/under/cavewet)
+"mx" = (
+/obj/structure/fluff/railing/wood{
+	dir = 8
+	},
+/turf/open/floor/twig,
+/area/outdoors/woods/lakeside)
 "mA" = (
 /obj/item/natural/stone,
 /obj/machinery/light/fueled/torchholder/l,
@@ -808,23 +1104,67 @@
 	},
 /turf/open/floor/dirt/road,
 /area/outdoors/woods/etgard)
+"mL" = (
+/obj/structure/table/wood/plain_alt,
+/turf/open/floor/twig,
+/area/indoors/shelter)
 "mN" = (
 /turf/open/floor/grass/cold,
 /area/outdoors/beach)
 "mP" = (
 /turf/closed/mineral/coal,
 /area/under/cavewet)
+"mU" = (
+/obj/structure/fluff/railing/wood{
+	dir = 1;
+	layer = 4.2;
+	pixel_y = 7
+	},
+/obj/machinery/light/fueled/torchholder/r,
+/turf/open/floor/twig,
+/area/outdoors/woods/lakeside)
 "mV" = (
 /obj/structure/wild_plant/nospread/manabloom,
 /turf/open/floor/grass/cold,
+/area/outdoors/woods/lakeside)
+"mW" = (
+/obj/structure/fluff/railing/wood,
+/obj/machinery/light/fueled/torchholder/l,
+/obj/structure/rack,
+/obj/item/ammo_holder/quiver/arrows,
+/obj/item/ammo_holder/quiver/arrows,
+/obj/item/ammo_holder/quiver/arrows,
+/turf/open/floor/twig,
 /area/outdoors/woods/lakeside)
 "mZ" = (
 /obj/machinery/light/fueled/torchholder/r,
 /turf/open/floor/snow,
 /area/outdoors/woods/etgard)
+"ng" = (
+/obj/structure/fluff/railing/wood{
+	dir = 1;
+	layer = 4.2;
+	pixel_y = 7
+	},
+/obj/structure/rack,
+/obj/item/ammo_holder/quiver/arrows,
+/obj/item/ammo_holder/quiver/arrows,
+/obj/item/ammo_holder/quiver/arrows,
+/obj/machinery/light/fueled/torchholder/l,
+/turf/open/floor/twig,
+/area/outdoors/woods/lakeside)
 "nm" = (
 /obj/structure/door/weak/bolt,
 /turf/open/floor/cobble/mossy,
+/area/indoors/shelter)
+"np" = (
+/obj/structure/curtain/bounty/dir{
+	dir = 1
+	},
+/obj/structure/window/openclose{
+	dir = 1
+	},
+/turf/open/floor/ruinedwood/two,
 /area/indoors/shelter)
 "nt" = (
 /obj/structure/stairs{
@@ -832,6 +1172,12 @@
 	},
 /turf/open/floor/ruinedwood,
 /area/outdoors/beach)
+"nv" = (
+/obj/effect/decal/cobbleedge{
+	dir = 9
+	},
+/turf/open/floor/twig,
+/area/outdoors/woods/lakeside)
 "ny" = (
 /turf/open/floor/twig/platform,
 /area/under/cave)
@@ -848,6 +1194,9 @@
 "nF" = (
 /turf/open/floor/twig,
 /area/outdoors/beach)
+"nH" = (
+/turf/open/floor/grass/healthy,
+/area/outdoors/woods/lakeside)
 "nL" = (
 /turf/open/floor/snow,
 /area/outdoors/beach)
@@ -858,6 +1207,16 @@
 	},
 /turf/open/floor/ruinedwood,
 /area/outdoors/woods/etgard)
+"nU" = (
+/obj/structure/gearbox,
+/turf/open/floor/metal/alt,
+/area/outdoors/woods/lakeside)
+"nX" = (
+/obj/structure/fluff/railing/border{
+	dir = 1
+	},
+/turf/open/floor/cobblerock,
+/area/outdoors/woods/lakeside)
 "ob" = (
 /obj/structure/fluff/traveltile{
 	aallmig = "z1-northsouth3";
@@ -875,6 +1234,12 @@
 "oh" = (
 /turf/open/floor/dirt,
 /area/outdoors/wilderness/merccamp)
+"oj" = (
+/obj/structure/fluff/railing/tall/retaining/stone{
+	dir = 8
+	},
+/turf/open/water/clean,
+/area/outdoors/woods/lakeside)
 "ol" = (
 /obj/structure/fluff/railing/tall/retaining{
 	dir = 1
@@ -884,6 +1249,27 @@
 	},
 /turf/open/floor/snow,
 /area/outdoors/woods/etgard)
+"om" = (
+/obj/structure/fluff/railing/wood{
+	dir = 1;
+	layer = 4.2;
+	pixel_y = 7
+	},
+/obj/structure/fluff/railing/wood{
+	dir = 8;
+	layer = 4.2
+	},
+/turf/open/floor/twig,
+/area/outdoors/woods/lakeside)
+"or" = (
+/obj/structure/fluff/railing/tall/retaining{
+	dir = 1
+	},
+/obj/structure/fluff/railing/tall/retaining,
+/turf/open/water/river{
+	dir = 8
+	},
+/area/outdoors/woods/lakeside)
 "ot" = (
 /obj/effect/decal/cleanable/blood,
 /turf/open/floor/naturalstone,
@@ -973,10 +1359,22 @@
 /obj/structure/fluff/railing/border,
 /turf/open/floor/twig/platform,
 /area/outdoors/beach)
+"pS" = (
+/obj/structure/fluff/railing/tall/retaining/stone{
+	dir = 1
+	},
+/turf/open/water/clean,
+/area/outdoors/woods/lakeside)
 "pV" = (
 /obj/structure/flora/ausbushes/genericbush,
 /turf/open/floor/dirt/road,
 /area/outdoors/woods/etgard)
+"pX" = (
+/obj/structure/fluff/railing/tall/retaining{
+	dir = 9
+	},
+/turf/open/water/clean,
+/area/outdoors/woods/lakeside)
 "qc" = (
 /obj/structure/table/wood{
 	dir = 1;
@@ -993,6 +1391,31 @@
 /obj/effect/landmark/quest_spawner/easy,
 /turf/open/floor/dirt/road,
 /area/outdoors/woods/lakeside)
+"qh" = (
+/obj/effect/decal/cobbleedge{
+	dir = 5;
+	icon_state = "cobbleedge-s"
+	},
+/turf/open/floor/cobblerock,
+/area/outdoors/woods/lakeside)
+"qi" = (
+/obj/structure/fluff/railing/tall/retaining/stone{
+	dir = 8
+	},
+/obj/structure/fluff/railing/tall/retaining/stone{
+	dir = 8
+	},
+/turf/open/water/clean,
+/area/outdoors/woods/lakeside)
+"qj" = (
+/obj/structure/table/wood/counter/end{
+	dir = 1
+	},
+/obj/structure/fluff/millstone{
+	pixel_y = 12
+	},
+/turf/open/floor/ruinedwood/two,
+/area/indoors/shelter)
 "qo" = (
 /turf/open/floor/dirt/road,
 /area/outdoors/woods/lakeside)
@@ -1019,6 +1442,9 @@
 "qX" = (
 /turf/closed/mineral/bedrock,
 /area/indoors)
+"qY" = (
+/turf/open/floor/ruinedwood/turned/darker,
+/area/outdoors/woods/lakeside)
 "rf" = (
 /turf/open/floor/snow,
 /area/outdoors/woods/lakeside)
@@ -1124,6 +1550,9 @@
 "sY" = (
 /turf/open/floor/cobblerock,
 /area/indoors/shelter)
+"te" = (
+/turf/open/floor/ruinedwood/two,
+/area/indoors/shelter)
 "tf" = (
 /obj/structure/fluff/railing/wood{
 	dir = 8;
@@ -1171,6 +1600,12 @@
 /obj/structure/bars/cemetery,
 /turf/open/water/ocean/abyss,
 /area/under/cave)
+"ty" = (
+/obj/structure/fluff/railing/tall{
+	dir = 8
+	},
+/turf/open/floor/snow,
+/area/outdoors/woods/lakeside)
 "tB" = (
 /turf/open/floor/dirt/road,
 /area/outdoors/woods/etgard)
@@ -1178,6 +1613,9 @@
 /obj/structure/flora/grass/water/reeds,
 /turf/open/water/ocean,
 /area/outdoors/beach)
+"tF" = (
+/turf/open/floor/wood,
+/area/outdoors/woods/lakeside)
 "tO" = (
 /obj/structure/fluff/railing/border{
 	dir = 8
@@ -1189,6 +1627,30 @@
 /obj/machinery/light/fueled/campfire/densefire,
 /turf/open/water/ocean/abyss,
 /area/outdoors/beach)
+"tS" = (
+/obj/structure/fluff/railing/wood{
+	dir = 4
+	},
+/turf/open/floor/cobble,
+/area/outdoors/woods/lakeside)
+"ua" = (
+/obj/structure/fluff/railing/tall/retaining/rock{
+	dir = 1
+	},
+/obj/structure/fluff/railing/tall/retaining/rock{
+	dir = 8
+	},
+/obj/structure/fluff/railing/tall/retaining/rock{
+	dir = 4
+	},
+/obj/structure/fluff/railing/tall/retaining/rock{
+	dir = 9
+	},
+/obj/structure/fluff/railing/tall/retaining/rock{
+	dir = 5
+	},
+/turf/open/lava,
+/area/indoors/shelter)
 "ug" = (
 /obj/structure/fluff/statue/small{
 	desc = "A statue of a dryad, a manifestation of an elemental spirit of Earth. This one possesses a featureless face, evoking the anonymity of the goddess Gani.";
@@ -1219,13 +1681,31 @@
 /obj/item/weapon/shovel/small,
 /turf/open/floor/ruinedwood,
 /area/indoors/shelter)
+"uA" = (
+/obj/structure/fluff/railing/tall/retaining/rock{
+	dir = 1
+	},
+/obj/structure/fluff/railing/tall/retaining/rock{
+	dir = 4
+	},
+/turf/open/water/clean,
+/area/outdoors/woods/lakeside)
 "uD" = (
 /obj/structure/flora/grass/water,
 /obj/structure/flora/grass/water,
 /turf/open/water/ocean/abyss,
 /area/outdoors/beach)
 "uF" = (
-/obj/effect/decal/cleanable/blood/old,
+/obj/structure/stairs{
+	dir = 1
+	},
+/obj/structure/fluff/railing/wood{
+	dir = 4
+	},
+/turf/open/floor/twig,
+/area/indoors/shelter)
+"uJ" = (
+/obj/structure/closet/crate/drawer/inn,
 /turf/open/floor/twig,
 /area/indoors/shelter)
 "uM" = (
@@ -1242,6 +1722,10 @@
 /obj/item/ore/tin,
 /turf/open/floor/naturalstone,
 /area/under/cave)
+"uP" = (
+/obj/structure/flora/grass/thorn_bush,
+/turf/open/floor/grass/healthy,
+/area/outdoors/woods/lakeside)
 "uQ" = (
 /obj/structure/flora/grass/water,
 /obj/structure/flora/grass/water,
@@ -1287,6 +1771,18 @@
 	},
 /turf/open/floor/sand,
 /area/outdoors/woods/etgard)
+"vq" = (
+/obj/structure/fluff/railing/wood{
+	dir = 1;
+	layer = 4.2;
+	pixel_y = 7
+	},
+/obj/structure/fluff/railing/wood{
+	dir = 4;
+	layer = 4.2
+	},
+/turf/open/floor/twig,
+/area/outdoors/woods/lakeside)
 "vu" = (
 /obj/effect/decal/remains/human,
 /turf/open/floor/dirt,
@@ -1295,6 +1791,23 @@
 /obj/structure/flora/tree/burnt,
 /turf/open/floor/snow,
 /area/outdoors/wilderness/merccamp)
+"vz" = (
+/obj/effect/decal/cobbleedge{
+	dir = 5;
+	icon_state = "cobbleedgealt-n"
+	},
+/turf/open/floor/cobblerock,
+/area/outdoors/woods/lakeside)
+"vB" = (
+/obj/structure/fluff/railing/tall/retaining/rock,
+/obj/structure/fluff/railing/tall/retaining/rock{
+	dir = 8
+	},
+/obj/structure/fluff/railing/tall/retaining/rock{
+	dir = 10
+	},
+/turf/open/lava,
+/area/indoors/shelter)
 "vD" = (
 /obj/structure/fluff/railing/tall/palisade,
 /turf/open/floor/snow,
@@ -1311,6 +1824,15 @@
 /area/outdoors/woods/etgard)
 "vO" = (
 /turf/open/floor/cobble/mossy,
+/area/indoors/shelter)
+"vT" = (
+/obj/structure/fluff/railing/tall/retaining/rock{
+	dir = 4
+	},
+/obj/structure/fluff/railing/tall/retaining/rock{
+	dir = 9
+	},
+/turf/open/lava,
 /area/indoors/shelter)
 "vW" = (
 /obj/structure/fluff/railing/border{
@@ -1341,6 +1863,17 @@
 /obj/structure/roguetent,
 /turf/open/floor/dirt,
 /area/under/cave)
+"wx" = (
+/obj/effect/decal/cobbleedge{
+	icon_state = "cobbleedge-n"
+	},
+/turf/open/floor/ruinedwood/two,
+/area/indoors/shelter)
+"wK" = (
+/obj/structure/fluff/railing/wood,
+/obj/machinery/light/fueled/torchholder/l,
+/turf/open/floor/twig,
+/area/outdoors/woods/lakeside)
 "wM" = (
 /turf/open/floor/rooftop,
 /area/indoors)
@@ -1360,6 +1893,13 @@
 	},
 /turf/open/floor/snow,
 /area/outdoors/wilderness/merccamp)
+"xw" = (
+/obj/structure/fluff/railing/tall/retaining/stone{
+	dir = 4
+	},
+/obj/structure/fluff/railing/tall/retaining/stone,
+/turf/open/water/clean,
+/area/outdoors/woods/lakeside)
 "xy" = (
 /turf/closed/mineral/bedrock,
 /area/outdoors/woods/etgard)
@@ -1432,6 +1972,13 @@
 	},
 /turf/open/floor/cobble/mossy,
 /area/indoors/shelter)
+"yz" = (
+/obj/effect/decal/cobbleedge{
+	dir = 5;
+	icon_state = "cobbleedge-n"
+	},
+/turf/open/floor/cobblerock,
+/area/outdoors/woods/lakeside)
 "yB" = (
 /obj/structure/flora/grass/water,
 /obj/structure/flora/grass/water/reeds,
@@ -1459,6 +2006,13 @@
 "yV" = (
 /turf/open/openspace,
 /area)
+"zj" = (
+/obj/effect/decal/cobbleedge{
+	dir = 5;
+	icon_state = "cobbleedgealt-n"
+	},
+/turf/open/floor/twig,
+/area/outdoors/woods/lakeside)
 "zm" = (
 /turf/open/floor/grass/cold,
 /area/outdoors/woods/lakeside)
@@ -1497,9 +2051,24 @@
 /turf/open/water/ocean/abyss,
 /area/outdoors/beach)
 "zS" = (
-/obj/structure/bars/bent,
+/obj/structure/fluff/railing/tall/retaining/rock{
+	dir = 8
+	},
 /turf/open/lava,
 /area/indoors/shelter)
+"zV" = (
+/obj/structure/fluff/railing/tall/retaining/stone{
+	dir = 1
+	},
+/obj/structure/fluff/railing/tall/retaining/stone{
+	dir = 4
+	},
+/turf/open/water/clean/dirt,
+/area/outdoors/woods/lakeside)
+"Ad" = (
+/obj/structure/boiler,
+/turf/open/floor/metal/alt,
+/area/outdoors/woods/lakeside)
 "At" = (
 /obj/structure/fluff/railing/wood{
 	dir = 8;
@@ -1514,6 +2083,15 @@
 /obj/structure/table/wood/treestump,
 /turf/open/floor/snow,
 /area/outdoors/wilderness/merccamp)
+"AN" = (
+/obj/structure/fluff/railing/wood,
+/obj/machinery/light/fueled/torchholder/r,
+/obj/structure/rack,
+/obj/item/gun/ballistic/bow,
+/obj/item/gun/ballistic/bow,
+/obj/item/gun/ballistic/bow,
+/turf/open/floor/twig,
+/area/outdoors/woods/lakeside)
 "AR" = (
 /obj/structure/fluff/railing/tall/palisade{
 	dir = 4
@@ -1522,11 +2100,27 @@
 /turf/open/floor/snow,
 /area/outdoors/wilderness/merccamp)
 "AS" = (
-/obj/structure/closet/crate/chest/neu,
-/obj/item/ingot/iron,
-/obj/item/ingot/iron,
+/obj/structure/fluff/railing/tall/retaining{
+	dir = 8
+	},
+/obj/structure/fluff/railing/tall/retaining{
+	dir = 5
+	},
+/obj/structure/fluff/railing/wood{
+	dir = 1;
+	layer = 4.2;
+	pixel_y = 16
+	},
+/turf/open/water/river{
+	dir = 1
+	},
+/area/outdoors/woods/lakeside)
+"AU" = (
+/obj/effect/decal/cobbleedge{
+	dir = 10
+	},
 /turf/open/floor/twig,
-/area/indoors/shelter)
+/area/outdoors/woods/lakeside)
 "AX" = (
 /turf/closed/mineral/coal,
 /area/under/cave)
@@ -1566,8 +2160,22 @@
 /obj/structure/chair/stool,
 /turf/open/floor/twig,
 /area/indoors/wilderness)
+"BA" = (
+/obj/structure/water_pump{
+	dir = 1
+	},
+/obj/structure/fluff/railing/tall/retaining{
+	dir = 4
+	},
+/turf/open/water/river{
+	dir = 1
+	},
+/area/outdoors/woods/lakeside)
 "BB" = (
-/obj/structure/flora/grass/water,
+/obj/structure/fluff/railing/tall/retaining/rock{
+	dir = 1
+	},
+/obj/structure/fluff/railing/tall/retaining,
 /turf/open/water/clean,
 /area/outdoors/woods/lakeside)
 "BP" = (
@@ -1580,6 +2188,15 @@
 /obj/item/natural/rock/copper,
 /turf/open/floor/dirt,
 /area/under/cave)
+"BR" = (
+/obj/structure/window/openclose{
+	dir = 1
+	},
+/obj/structure/curtain/bounty/dir{
+	dir = 1
+	},
+/turf/open/floor/twig,
+/area/indoors/shelter)
 "BS" = (
 /obj/machinery/light/fueled/torchholder/r{
 	dir = 4
@@ -1598,6 +2215,15 @@
 "BY" = (
 /turf/open/floor/naturalstone,
 /area/outdoors/woods/lakeside)
+"Ca" = (
+/obj/structure/window/openclose{
+	dir = 8
+	},
+/obj/structure/curtain/bounty/dir{
+	dir = 8
+	},
+/turf/open/floor/twig,
+/area/indoors/shelter)
 "Cb" = (
 /obj/structure/fluff/walldeco/sparrowflag,
 /turf/closed/wall/mineral/wooddark,
@@ -1626,6 +2252,19 @@
 	dir = 4
 	},
 /area/outdoors/beach)
+"Ck" = (
+/obj/structure/fluff/railing/tall/retaining/rock{
+	dir = 1
+	},
+/turf/open/water/clean,
+/area/outdoors/woods/lakeside)
+"Ct" = (
+/obj/effect/decal/cobbleedge{
+	dir = 5;
+	icon_state = "cobbleedge-n"
+	},
+/turf/open/floor/twig,
+/area/outdoors/woods/lakeside)
 "Cw" = (
 /obj/structure/fluff/railing/border{
 	dir = 1
@@ -1683,6 +2322,15 @@
 /obj/structure/chair/stool,
 /turf/open/floor/cobble,
 /area/under/cave)
+"CI" = (
+/obj/structure/water_pipe,
+/obj/structure/fluff/railing/tall/retaining{
+	dir = 4
+	},
+/turf/open/water/river{
+	dir = 1
+	},
+/area/outdoors/woods/lakeside)
 "CJ" = (
 /obj/item/grown/log,
 /turf/open/floor/dirt,
@@ -1695,6 +2343,14 @@
 /obj/structure/table/wood/treestump,
 /turf/open/floor/dirt/road,
 /area/outdoors/wilderness/merccamp)
+"Da" = (
+/obj/structure/bed/wool,
+/obj/item/bedsheet/cloth,
+/obj/effect/decal/cobbleedge{
+	dir = 10
+	},
+/turf/open/floor/ruinedwood/two,
+/area/indoors/shelter)
 "Db" = (
 /obj/structure/closet/crate/crafted_closet,
 /obj/effect/decal/cleanable/dirt/cobweb/cobweb2,
@@ -1706,6 +2362,13 @@
 "Dk" = (
 /turf/closed/wall/mineral/wood,
 /area/under/cave)
+"Dl" = (
+/obj/structure/fluff/railing/wood{
+	dir = 8
+	},
+/obj/structure/fluff/railing/wood,
+/turf/open/floor/twig,
+/area/outdoors/woods/lakeside)
 "Dm" = (
 /turf/open/water/ocean/abyss,
 /area/under/cave)
@@ -1727,7 +2390,9 @@
 /turf/open/floor/cobblerock,
 /area/indoors/shelter)
 "DA" = (
-/obj/structure/flora/grass/water/reeds,
+/obj/structure/fluff/railing/tall/retaining/stone{
+	dir = 4
+	},
 /turf/open/water/clean,
 /area/outdoors/woods/lakeside)
 "DB" = (
@@ -1763,6 +2428,21 @@
 "DO" = (
 /turf/closed/wall/mineral/tent,
 /area/outdoors/wilderness/merccamp)
+"DP" = (
+/obj/structure/chair/bench{
+	dir = 1
+	},
+/turf/open/floor/ruinedwood/darker,
+/area/outdoors/woods/lakeside)
+"DQ" = (
+/obj/structure/fluff/railing/tall/retaining/stone{
+	dir = 1
+	},
+/obj/structure/fluff/railing/tall/retaining/stone{
+	dir = 4
+	},
+/turf/open/water/clean,
+/area/outdoors/woods/lakeside)
 "DR" = (
 /obj/structure/fluff/railing/tall/retaining{
 	dir = 1
@@ -1789,6 +2469,20 @@
 "DY" = (
 /turf/open/water/clean,
 /area/outdoors/woods/lakeside)
+"Eg" = (
+/obj/structure/fluff/railing/tall/retaining{
+	dir = 1
+	},
+/obj/structure/fluff/railing/tall/retaining{
+	dir = 4
+	},
+/obj/structure/fluff/railing/tall/retaining{
+	dir = 10
+	},
+/turf/open/water/river{
+	dir = 8
+	},
+/area/outdoors/woods/lakeside)
 "Eh" = (
 /obj/structure/fluff/signage{
 	dir = 8;
@@ -1796,6 +2490,24 @@
 	},
 /turf/open/floor/snow,
 /area/outdoors/woods/etgard)
+"Ej" = (
+/obj/structure/fluff/railing/tall/retaining{
+	dir = 8
+	},
+/obj/structure/fluff/railing/tall/retaining{
+	dir = 5
+	},
+/obj/structure/fluff/railing/tall/retaining,
+/turf/open/water/river{
+	dir = 1
+	},
+/area/outdoors/woods/lakeside)
+"Eo" = (
+/obj/structure/fluff/railing/tall/retaining/stone{
+	dir = 1
+	},
+/turf/open/water/clean/dirt,
+/area/outdoors/woods/lakeside)
 "Eq" = (
 /obj/machinery/light/fueled/torchholder/r,
 /turf/open/floor/twig,
@@ -1804,6 +2516,12 @@
 /obj/structure/fluff/railing/wood,
 /turf/open/floor/dirt/road,
 /area/outdoors/woods/etgard)
+"Ev" = (
+/obj/structure/fluff/railing/tall/retaining/stone{
+	dir = 6
+	},
+/turf/open/water/clean,
+/area/outdoors/woods/lakeside)
 "Ey" = (
 /obj/machinery/light/fueled/torchholder/l,
 /obj/item/ore/copper,
@@ -1822,6 +2540,13 @@
 /obj/structure/flora/ausbushes/brflowers,
 /turf/open/floor/dirt/road,
 /area/outdoors/woods/etgard)
+"EZ" = (
+/obj/structure/fluff/railing/tall/retaining/rock{
+	dir = 5
+	},
+/obj/structure/fluff/railing/tall/retaining,
+/turf/open/water/clean,
+/area/outdoors/woods/lakeside)
 "Fb" = (
 /obj/structure/fluff/railing/border{
 	dir = 1
@@ -1838,6 +2563,10 @@
 "Fx" = (
 /turf/open/water/swamp,
 /area/under/cave)
+"FF" = (
+/obj/structure/fluff/railing/tall/retaining,
+/turf/open/water/clean,
+/area/outdoors/woods/lakeside)
 "FG" = (
 /obj/structure/flora/grass/water,
 /turf/open/floor/dirt/road,
@@ -1856,6 +2585,23 @@
 /obj/item/ore/copper,
 /turf/open/floor/naturalstone,
 /area/under/cave)
+"FR" = (
+/obj/structure/fluff/railing/tall/retaining/rock{
+	dir = 6
+	},
+/obj/structure/fluff/railing/tall/retaining/rock{
+	dir = 10
+	},
+/turf/open/lava,
+/area/indoors/shelter)
+"FS" = (
+/obj/structure/fluff/railing/border,
+/turf/open/floor/snow,
+/area/outdoors/woods/lakeside)
+"FT" = (
+/obj/structure/flora/grass/thorn_bush,
+/turf/open/floor/dirt/road,
+/area/outdoors/woods/lakeside)
 "FV" = (
 /obj/item/grown/log/tree/stick,
 /turf/open/floor/twig,
@@ -1868,6 +2614,12 @@
 /obj/effect/landmark/map_load_mark/generic_tile/natural,
 /turf/open/floor/grass/cold,
 /area/outdoors/woods/etgard)
+"Ge" = (
+/obj/structure/door/red/bolt{
+	dir = 1
+	},
+/turf/open/floor/twig,
+/area/indoors/shelter)
 "Gg" = (
 /obj/item/natural/stone,
 /obj/machinery/light/fueled/torchholder/c,
@@ -1884,9 +2636,20 @@
 /obj/machinery/light/fueled/torchholder/l,
 /turf/open/floor/dirt/road,
 /area/outdoors/woods/lakeside)
+"GA" = (
+/obj/structure/rotation_piece/cog/large,
+/turf/open/floor/metal/alt,
+/area/outdoors/woods/lakeside)
 "GH" = (
 /turf/closed/mineral/salt,
 /area/under/cave)
+"GI" = (
+/obj/structure/fluff/railing/wood{
+	dir = 4
+	},
+/obj/structure/fluff/railing/wood,
+/turf/open/openspace,
+/area/indoors/shelter)
 "GP" = (
 /turf/open/openspace,
 /area/under/cavewet)
@@ -1922,6 +2685,15 @@
 /obj/structure/chair/stool,
 /turf/open/floor/cobblerock,
 /area/indoors/shelter)
+"Hp" = (
+/obj/structure/rack,
+/obj/item/weapon/pitchfork,
+/obj/item/weapon/sickle,
+/obj/item/weapon/shovel,
+/obj/item/weapon/thresher,
+/obj/item/weapon/hoe,
+/turf/open/floor/snow,
+/area/outdoors/woods/lakeside)
 "Hw" = (
 /obj/structure/fluff/railing/wood,
 /obj/structure/stairs{
@@ -1963,6 +2735,18 @@
 /obj/item/cooking/pan,
 /turf/open/floor/tile/checkeralt,
 /area/indoors/shelter)
+"HP" = (
+/obj/structure/fluff/railing/tall/retaining/stone{
+	dir = 1
+	},
+/obj/structure/fluff/railing/tall/retaining/stone{
+	dir = 4
+	},
+/obj/structure/fluff/railing/tall/retaining/stone{
+	dir = 8
+	},
+/turf/open/water/clean,
+/area/outdoors/woods/lakeside)
 "HQ" = (
 /turf/open/floor/ruinedwood/turned,
 /area/under/cavewet)
@@ -2008,6 +2792,12 @@
 /obj/effect/landmark/map_load_mark/generic_tile,
 /turf/open/floor/snow,
 /area/outdoors/woods/etgard)
+"Is" = (
+/obj/structure/fluff/railing/tall/retaining{
+	dir = 6
+	},
+/turf/open/water/clean,
+/area/outdoors/woods/lakeside)
 "Ix" = (
 /obj/structure/closet/crate/chest/wicker,
 /turf/open/floor/dirt,
@@ -2057,16 +2847,49 @@
 	},
 /turf/open/floor/cobble,
 /area/outdoors/woods/etgard)
+"IZ" = (
+/obj/structure/window/openclose{
+	dir = 4
+	},
+/obj/structure/curtain/bounty/dir{
+	dir = 4
+	},
+/turf/open/floor/twig,
+/area/indoors/shelter)
 "Ja" = (
 /turf/closed/sea_fog,
 /area/outdoors/beach)
 "Je" = (
-/obj/structure/fluff/railing/tall,
-/turf/open/floor/dirt/road,
+/turf/open/floor/cobble,
+/area/outdoors/woods/lakeside)
+"Jg" = (
+/obj/structure/fluff/railing/tall/retaining{
+	dir = 8
+	},
+/obj/structure/fluff/railing/tall/retaining{
+	dir = 4
+	},
+/turf/open/water/river{
+	dir = 1
+	},
 /area/outdoors/woods/lakeside)
 "Jh" = (
 /turf/closed/wall/mineral/wood,
 /area/indoors/town)
+"Jj" = (
+/obj/structure/fluff/railing/tall/retaining{
+	dir = 1
+	},
+/obj/structure/fluff/railing/tall/retaining{
+	dir = 4
+	},
+/turf/open/water/clean,
+/area/outdoors/woods/lakeside)
+"Jr" = (
+/turf/open/water/river{
+	dir = 8
+	},
+/area/under/cave)
 "Js" = (
 /turf/open/water/marsh,
 /area/outdoors/wilderness/merccamp)
@@ -2089,6 +2912,15 @@
 /obj/machinery/light/fueled/firebowl/stump,
 /turf/open/floor/snow,
 /area/outdoors/woods/etgard)
+"JT" = (
+/obj/structure/fluff/railing/tall/retaining/stone{
+	dir = 1
+	},
+/obj/structure/fluff/railing/tall/retaining/stone{
+	dir = 8
+	},
+/turf/open/water/clean/dirt,
+/area/outdoors/woods/lakeside)
 "Ka" = (
 /turf/closed/basic,
 /area)
@@ -2096,6 +2928,13 @@
 /obj/structure/closet/crate/chest/wicker,
 /turf/open/floor/snow,
 /area/outdoors/woods/etgard)
+"Kh" = (
+/obj/structure/fluff/railing/wood{
+	dir = 4
+	},
+/obj/structure/fluff/railing/wood,
+/turf/open/floor/twig,
+/area/outdoors/woods/lakeside)
 "Ki" = (
 /turf/open/floor/tile/checkeralt,
 /area/indoors/shelter)
@@ -2135,10 +2974,23 @@
 	},
 /turf/open/floor/sand,
 /area/outdoors/beach)
+"KW" = (
+/obj/structure/fluff/railing/tall/retaining/rock,
+/turf/open/lava,
+/area/indoors/shelter)
 "KY" = (
 /obj/item/weapon/mace/woodclub,
 /turf/open/floor/naturalstone,
 /area/under/cavewet)
+"KZ" = (
+/obj/structure/fluff/railing/tall/retaining/stone{
+	dir = 4
+	},
+/obj/structure/fluff/railing/tall/retaining/stone{
+	dir = 9
+	},
+/turf/open/water/clean,
+/area/outdoors/woods/lakeside)
 "Lc" = (
 /turf/closed/mineral/random/cold,
 /area/under/cave)
@@ -2153,6 +3005,12 @@
 /obj/structure/window/openclose,
 /turf/open/floor/ruinedwood,
 /area/indoors/shelter)
+"Lm" = (
+/obj/structure/fluff/railing/tall/retaining/rock{
+	dir = 4
+	},
+/turf/open/lava,
+/area/indoors/shelter)
 "Lo" = (
 /turf/closed/wall/mineral/decowood/vert,
 /area/indoors/shelter)
@@ -2165,6 +3023,13 @@
 /obj/structure/flora/ausbushes/ppflowers,
 /turf/open/floor/grass/cold,
 /area/outdoors/woods/etgard)
+"Lz" = (
+/obj/structure/fluff/railing/tall/retaining/stone{
+	dir = 10
+	},
+/obj/structure/flora/sakura,
+/turf/open/water/clean,
+/area/outdoors/woods/lakeside)
 "LC" = (
 /obj/structure/fluff/railing/border{
 	dir = 4
@@ -2189,8 +3054,16 @@
 /turf/open/floor/cobble,
 /area/under/cave)
 "LT" = (
-/obj/structure/fluff/railing/tall,
-/turf/open/floor/dirt,
+/obj/structure/fluff/railing/tall/retaining/stone{
+	dir = 9
+	},
+/turf/open/water/clean,
+/area/outdoors/woods/lakeside)
+"LU" = (
+/obj/structure/fluff/railing/wood{
+	dir = 4
+	},
+/turf/open/floor/twig,
 /area/outdoors/woods/lakeside)
 "LW" = (
 /obj/item/natural/rock/salt,
@@ -2225,6 +3098,14 @@
 /obj/structure/closet/crate/chest/crate,
 /turf/open/floor/sand,
 /area/outdoors/beach)
+"MF" = (
+/obj/structure/fluff/railing/wood{
+	dir = 1;
+	layer = 4.2;
+	pixel_y = 7
+	},
+/turf/open/floor/twig,
+/area/outdoors/woods/lakeside)
 "MJ" = (
 /obj/structure/window/openclose{
 	dir = 8
@@ -2253,6 +3134,16 @@
 	dir = 4
 	},
 /area/outdoors/beach)
+"MX" = (
+/obj/machinery/light/fueled/hearth,
+/obj/machinery/light/fueled/oven/south,
+/turf/open/floor/cobble,
+/area/indoors/shelter)
+"MY" = (
+/obj/structure/window/openclose,
+/obj/structure/curtain/bounty/dir,
+/turf/open/floor/twig,
+/area/indoors/shelter)
 "Nd" = (
 /obj/structure/door/weak/bolt{
 	name = "Fishers Lodge"
@@ -2331,10 +3222,18 @@
 /obj/machinery/light/fueled/torchholder/r,
 /turf/open/floor/naturalstone,
 /area/under/cavewet)
+"Ov" = (
+/obj/structure/table/wood/plain_alt,
+/turf/open/floor/ruinedwood/two,
+/area/indoors/shelter)
 "OB" = (
 /obj/effect/landmark/quest_spawner/easy,
 /turf/open/floor/naturalstone,
 /area/outdoors/woods/etgard)
+"OE" = (
+/obj/structure/composter/halffull,
+/turf/open/floor/snow,
+/area/outdoors/woods/lakeside)
 "OF" = (
 /obj/machinery/light/fueled/forge,
 /turf/open/floor/volcanic,
@@ -2357,6 +3256,12 @@
 	},
 /turf/open/floor/snow,
 /area/outdoors/woods/etgard)
+"Pc" = (
+/obj/structure/fluff/railing/tall/retaining/rock{
+	dir = 5
+	},
+/turf/open/lava,
+/area/indoors/shelter)
 "Pk" = (
 /obj/structure/bars{
 	icon_state = "barsbent";
@@ -2364,6 +3269,10 @@
 	},
 /turf/open/floor/dirt,
 /area/under/cave)
+"Pn" = (
+/obj/structure/flora/sakura,
+/turf/open/floor/dirt/road,
+/area/outdoors/woods/lakeside)
 "Pv" = (
 /obj/machinery/light/fueled/torchholder/l,
 /turf/open/floor/ruinedwood,
@@ -2432,10 +3341,29 @@
 	},
 /turf/open/floor/twig,
 /area/indoors/shelter)
+"PW" = (
+/obj/structure/fluff/railing/wood{
+	dir = 1;
+	layer = 4.2;
+	pixel_y = 7
+	},
+/obj/structure/rack,
+/obj/item/gun/ballistic/bow,
+/obj/item/gun/ballistic/bow,
+/obj/item/gun/ballistic/bow,
+/obj/machinery/light/fueled/torchholder/r,
+/turf/open/floor/twig,
+/area/outdoors/woods/lakeside)
 "PZ" = (
 /obj/structure/flora/grass/pyroclasticflowers,
 /turf/open/floor/dirt/road,
 /area/outdoors/woods/etgard)
+"Qb" = (
+/obj/effect/decal/cobbleedge{
+	dir = 9
+	},
+/turf/open/floor/cobblerock,
+/area/outdoors/woods/lakeside)
 "Qj" = (
 /turf/open/floor/dirt,
 /area/under/cavewet)
@@ -2457,9 +3385,15 @@
 /obj/structure/flora/grass/water/reeds,
 /turf/open/water/ocean/abyss,
 /area/outdoors/woods/etgard)
+"QN" = (
+/obj/structure/table/wood/plain_alt,
+/obj/structure/fluff/wallclock/l,
+/obj/machinery/light/fueled/torchholder/c,
+/turf/open/floor/ruinedwood/two,
+/area/indoors/shelter)
 "QQ" = (
 /obj/item/reagent_containers/glass/bucket/wooden,
-/turf/open/floor/twig,
+/turf/open/floor/ruinedwood/two,
 /area/indoors/shelter)
 "QZ" = (
 /turf/open/floor/snow/patchy,
@@ -2505,6 +3439,13 @@
 "Re" = (
 /turf/closed/mineral/random/cold,
 /area/under/town/basement)
+"Rh" = (
+/obj/structure/chair/stool,
+/obj/effect/decal/cobbleedge{
+	icon_state = "cobbleedgealt-e"
+	},
+/turf/open/floor/ruinedwood/two,
+/area/indoors/shelter)
 "Rk" = (
 /obj/structure/flora/grass/water/reeds,
 /turf/open/water/clean,
@@ -2614,10 +3555,31 @@
 	},
 /turf/open/floor/cobble/mossy,
 /area/indoors/shelter)
+"Sq" = (
+/obj/machinery/light/fueled/firebowl/stumpg,
+/turf/open/floor/churchmarble/rust,
+/area/indoors/shelter)
+"Ss" = (
+/obj/structure/fluff/railing/tall/retaining/rock,
+/obj/structure/fluff/railing/tall/retaining/rock{
+	dir = 4
+	},
+/obj/structure/fluff/railing/tall/retaining/rock{
+	dir = 6
+	},
+/turf/open/lava,
+/area/indoors/shelter)
 "Su" = (
 /obj/item/reagent_containers/glass/bucket/wooden,
 /turf/open/floor/dirt,
 /area/under/cave)
+"Sv" = (
+/obj/structure/fluff/railing/tall/retaining{
+	dir = 8
+	},
+/obj/structure/fluff/railing/tall/retaining,
+/turf/open/water/clean,
+/area/outdoors/woods/lakeside)
 "Sx" = (
 /obj/structure/closet/crate/chest/wicker,
 /obj/item/reagent_containers/food/snacks/hardtack,
@@ -2636,6 +3598,34 @@
 /obj/item/reagent_containers/glass/bucket/wooden,
 /turf/open/floor/dirt/road,
 /area/outdoors/wilderness/merccamp)
+"Sz" = (
+/obj/structure/bed/wool,
+/obj/item/bedsheet/cloth,
+/turf/open/floor/twig,
+/area/indoors/shelter)
+"SL" = (
+/obj/structure/fluff/railing/tall/retaining/rock{
+	dir = 1
+	},
+/obj/structure/fluff/railing/tall/retaining{
+	dir = 4
+	},
+/obj/structure/fluff/railing/tall/retaining,
+/turf/open/water/clean,
+/area/outdoors/woods/lakeside)
+"SM" = (
+/obj/structure/fluff/railing/tall/retaining{
+	dir = 5
+	},
+/turf/open/water/clean,
+/area/outdoors/woods/lakeside)
+"SP" = (
+/obj/structure/fluff/railing/tall/retaining/stone{
+	dir = 8
+	},
+/obj/structure/fluff/railing/tall/retaining/stone,
+/turf/open/water/clean,
+/area/outdoors/woods/lakeside)
 "SU" = (
 /obj/effect/decal/remains/human,
 /turf/open/floor/cobble/mossy,
@@ -2688,6 +3678,13 @@
 /obj/effect/landmark/quest_spawner/easy,
 /turf/open/floor/snow,
 /area/outdoors/woods/etgard)
+"TY" = (
+/obj/structure/fluff/railing/tall/retaining{
+	dir = 4
+	},
+/obj/structure/fluff/railing/tall/retaining,
+/turf/open/water/clean,
+/area/outdoors/woods/lakeside)
 "Ub" = (
 /obj/structure/fluff/railing/wood{
 	dir = 4
@@ -2724,9 +3721,23 @@
 "UJ" = (
 /turf/open/water/ocean/abyss,
 /area/under/cavewet)
+"UL" = (
+/obj/effect/decal/cobbleedge{
+	dir = 5
+	},
+/turf/open/floor/twig,
+/area/outdoors/woods/lakeside)
+"UN" = (
+/obj/machinery/light/fueled/hearth,
+/turf/open/floor/cobble,
+/area/indoors/shelter)
 "UX" = (
 /turf/open/floor/twig,
 /area/under/cavewet)
+"Vg" = (
+/obj/structure/fluff/fibermat/round,
+/turf/open/floor/ruinedwood/two,
+/area/indoors/shelter)
 "Vl" = (
 /obj/structure/flora/grass,
 /turf/open/floor/sand,
@@ -2789,6 +3800,27 @@
 /obj/structure/bed/sleepingbag,
 /turf/open/floor/dirt/road,
 /area/outdoors/wilderness/merccamp)
+"Wj" = (
+/obj/structure/fluff/railing/tall/retaining/rock,
+/obj/structure/fluff/railing/tall/retaining/rock{
+	dir = 8
+	},
+/obj/structure/fluff/railing/tall/retaining/rock{
+	dir = 4
+	},
+/obj/structure/fluff/railing/tall/retaining/rock{
+	dir = 6
+	},
+/obj/structure/fluff/railing/tall/retaining/rock{
+	dir = 10
+	},
+/turf/open/lava,
+/area/indoors/shelter)
+"Wk" = (
+/obj/structure/fluff/railing/wood,
+/obj/machinery/light/fueled/torchholder/r,
+/turf/open/floor/twig,
+/area/outdoors/woods/lakeside)
 "Wp" = (
 /obj/machinery/light/fueled/torchholder/r,
 /turf/open/floor/naturalstone,
@@ -2815,6 +3847,9 @@
 "WD" = (
 /turf/closed/wall/mineral/decowood,
 /area/indoors/shelter)
+"WH" = (
+/turf/open/floor/ruinedwood/darker,
+/area/outdoors/woods/lakeside)
 "WJ" = (
 /obj/structure/closet/crate/chest/crate,
 /turf/open/floor/naturalstone,
@@ -2865,6 +3900,18 @@
 "WU" = (
 /turf/closed/wall/mineral/stone,
 /area/indoors/shelter)
+"WX" = (
+/obj/structure/fluff/railing/tall/retaining{
+	dir = 1
+	},
+/obj/structure/fluff/railing/tall/retaining{
+	dir = 8
+	},
+/obj/structure/fluff/railing/tall/retaining{
+	dir = 6
+	},
+/turf/open/water/river,
+/area/outdoors/woods/lakeside)
 "WZ" = (
 /turf/open/floor/cobble,
 /area/outdoors/woods/etgard)
@@ -2892,11 +3939,40 @@
 /obj/item/cooking/pan,
 /turf/open/floor/concrete,
 /area/under/cave)
+"XC" = (
+/obj/machinery/light/fueled/oven/west,
+/obj/effect/decal/cobbleedge{
+	dir = 8
+	},
+/turf/open/floor/ruinedwood/two,
+/area/indoors/shelter)
 "XD" = (
 /obj/structure/closet/crate/chest/crate,
 /obj/item/storage/bag,
 /turf/open/floor/sand,
 /area/outdoors/beach)
+"XO" = (
+/obj/structure/rack,
+/obj/item/storage/sack{
+	pixel_x = -6;
+	pixel_y = 8
+	},
+/obj/item/storage/sack{
+	pixel_x = 6;
+	pixel_y = 3
+	},
+/obj/item/storage/sack{
+	pixel_x = -6;
+	pixel_y = -6
+	},
+/turf/open/floor/snow,
+/area/outdoors/woods/lakeside)
+"XQ" = (
+/obj/structure/chair/bench{
+	pixel_y = 16
+	},
+/turf/open/floor/ruinedwood/darker,
+/area/outdoors/woods/lakeside)
 "XR" = (
 /obj/structure/fluff/railing/wood{
 	dir = 8;
@@ -2909,6 +3985,17 @@
 /area/outdoors/beach)
 "XV" = (
 /turf/open/floor/greenstone/runed,
+/area/outdoors/woods/lakeside)
+"XW" = (
+/obj/structure/waterwheel{
+	dir = 8
+	},
+/obj/structure/fluff/railing/tall/retaining{
+	dir = 4
+	},
+/turf/open/water/river{
+	dir = 1
+	},
 /area/outdoors/woods/lakeside)
 "XX" = (
 /obj/structure/flora/grass/water/reeds,
@@ -2998,6 +4085,15 @@
 	},
 /turf/open/floor/cobble/mossy,
 /area/indoors/shelter)
+"Ze" = (
+/obj/structure/fluff/railing/tall/retaining/stone{
+	dir = 1
+	},
+/obj/structure/fluff/railing/tall/retaining/stone{
+	dir = 8
+	},
+/turf/open/water/clean,
+/area/outdoors/woods/lakeside)
 "Zg" = (
 /obj/item/grown/log/tree/stick,
 /turf/open/floor/cobble/mossy,
@@ -3006,6 +4102,12 @@
 /obj/effect/landmark/map_load_mark/generic_tile,
 /turf/open/floor/dirt,
 /area/under/cavewet)
+"ZA" = (
+/obj/structure/fluff/railing/wood{
+	dir = 8
+	},
+/turf/open/floor/cobble,
+/area/outdoors/woods/lakeside)
 "ZB" = (
 /obj/structure/fluff/walldeco/banner{
 	pixel_y = 24
@@ -53873,7 +54975,7 @@ rf
 rf
 rf
 rf
-kc
+DB
 DB
 DB
 jZ
@@ -54554,9 +55656,9 @@ Lc
 Lc
 Om
 Om
-rr
-rr
-rr
+gm
+zS
+vB
 Om
 Om
 Om
@@ -54638,14 +55740,14 @@ rf
 rf
 rf
 rf
-Ms
-Ms
+NL
+NL
 rf
 rf
 rf
 rf
 rf
-Ms
+NL
 rf
 rf
 rf
@@ -54810,11 +55912,11 @@ Lc
 Lc
 Lc
 Om
+ua
+js
 rr
-rr
-rr
-rr
-rr
+FR
+dC
 Om
 Om
 zo
@@ -54896,13 +55998,13 @@ rf
 rf
 rf
 rf
-Ms
-Ms
+NL
+NL
 rf
 rf
-Ms
-Ms
-Ms
+NL
+NL
+NL
 rf
 rf
 rf
@@ -55067,10 +56169,10 @@ Lc
 Lc
 Om
 Om
-Om
+Sq
 iN
-zS
-iN
+Lm
+Ss
 Om
 Om
 rZ
@@ -55153,13 +56255,13 @@ rf
 rf
 rf
 rf
-Ms
-Ms
-Ms
+NL
+NL
+NL
 rf
-Ms
-Ms
-Ms
+NL
+NL
+NL
 rf
 rf
 rf
@@ -55411,12 +56513,12 @@ rf
 rf
 rf
 rf
-Ms
-Ms
-Ms
-Ms
-Ms
-Ms
+NL
+NL
+NL
+NL
+NL
+NL
 rf
 rf
 rf
@@ -55668,10 +56770,10 @@ rf
 rf
 rf
 rf
-Ms
-Ms
-Ms
-Ms
+NL
+NL
+NL
+NL
 rf
 rf
 rf
@@ -55926,9 +57028,9 @@ rf
 rf
 rf
 rf
-Ms
-Ms
-Ms
+NL
+NL
+NL
 rf
 rf
 rf
@@ -55936,15 +57038,15 @@ rf
 xb
 xb
 xb
-DY
-DY
-DY
-DY
-DY
+Ze
+oj
+oj
+oj
+SP
 xb
-DY
-DY
-DY
+Ze
+oj
+SP
 xb
 qo
 rf
@@ -56095,11 +57197,11 @@ wZ
 Lc
 Om
 Om
+Sq
 Om
-Om
-iN
+gm
 zS
-iN
+vB
 Om
 Om
 bf
@@ -56183,26 +57285,26 @@ Ms
 Ms
 rf
 rf
-Ms
-Ms
+NL
+NL
 rf
 rf
 xb
 rf
 qo
 xb
+Ze
+oj
+LT
 DY
 DY
 DY
+dr
+oj
+LT
 DY
-DY
-DY
-DY
-DY
-DY
-DY
-DY
-DY
+dr
+SP
 qo
 qo
 rf
@@ -56354,10 +57456,10 @@ Lc
 Lc
 Om
 Om
+cd
 rr
-rr
-rr
-rr
+FR
+Wj
 Om
 Om
 DM
@@ -56440,27 +57542,27 @@ Lo
 Tm
 rF
 lj
-Ms
-Ms
+NL
+NL
 rf
-DY
-DY
-DY
+Ze
+qi
+SP
 xb
 xb
-DY
-DY
-BB
-BB
-BB
-BB
-BB
-BB
+pS
 DY
 DY
 DY
-DA
 DY
+DY
+DY
+DY
+DY
+DY
+DY
+dr
+SP
 xb
 rf
 rf
@@ -56610,10 +57712,10 @@ Lc
 Lc
 Lc
 Om
-rr
-rr
-rr
-rr
+hq
+vT
+Pc
+KW
 Om
 Om
 Om
@@ -56697,27 +57799,27 @@ FV
 Zg
 tk
 rF
-Ms
+NL
+NL
 rf
-rf
+pS
 DY
-BB
-DY
+kK
 qo
+Ze
+LT
 DY
-DY
-BB
-BB
-DY
-BB
-BB
-BB
-BB
-BB
-DY
+Ev
+DA
+DA
+DA
+dk
 DY
 DY
 DY
+DY
+DY
+kK
 xb
 rf
 rf
@@ -56869,8 +57971,8 @@ Lc
 Om
 Om
 Om
-rr
-rr
+iN
+Ss
 Om
 Om
 VW
@@ -56954,27 +58056,27 @@ vO
 DB
 DB
 WD
-Ms
-rf
+NL
+NL
+HP
+KZ
+dk
+dr
+oj
+LT
+DY
+Ev
+xw
+om
+mx
+Dl
+DQ
+dk
 DY
 DY
-BB
 DY
 DY
-DY
-DY
-BB
-DY
-DY
-DY
-DY
-DY
-BB
-BB
-BB
-DY
-DY
-DY
+kK
 xb
 rf
 rf
@@ -57211,27 +58313,27 @@ DB
 DB
 DB
 Za
-Ms
-rf
+NL
+NL
+NL
+NL
+pS
 DY
 DY
 DY
 DY
+kK
+Nu
+XQ
+WH
+DP
+Nu
+pS
 DY
 DY
 DY
-BB
 DY
-DY
-DY
-DY
-DY
-DY
-BB
-BB
-DY
-DY
-DY
+kK
 qo
 qo
 BY
@@ -57468,27 +58570,27 @@ DB
 DB
 Ku
 Lo
-Ms
-rf
-DY
-DY
-BB
-DY
-DY
+NL
+NL
+NL
+NL
+DQ
 DA
-DY
-DY
-DY
-xb
-rf
-xb
-xb
-DY
-DY
-BB
-BB
-DY
-DY
+DA
+DA
+DA
+xw
+jq
+WH
+WH
+WH
+wK
+DQ
+DA
+DA
+DA
+DA
+xw
 BY
 BY
 BY
@@ -57725,28 +58827,28 @@ jZ
 DB
 IO
 WD
-Ms
-rf
-qo
-DY
-BB
-DY
-DY
-DY
-DY
-DY
-DY
-rf
-rf
-rf
-rf
-DY
-DY
-DY
-BB
-BB
-DY
-DY
+NL
+NL
+NL
+Qb
+ZA
+ZA
+ZA
+ZA
+ZA
+ZA
+AU
+qY
+qY
+qY
+ak
+ZA
+ZA
+ZA
+ZA
+ZA
+ZA
+vz
 BY
 BY
 BY
@@ -57982,29 +59084,29 @@ FV
 DB
 DB
 rF
-rf
-rf
-qo
-qo
-BB
-BB
-DY
-DY
-DY
-DY
-xb
-rf
-rf
-rf
-rf
-xb
-DY
-DY
-BB
-BB
-BB
-DY
-BY
+NL
+NL
+NL
+qh
+Je
+Je
+Je
+Je
+Je
+Je
+zj
+qY
+lB
+qY
+UL
+Je
+Je
+Je
+Je
+Je
+Je
+yz
+NL
 BY
 BY
 BY
@@ -58240,28 +59342,28 @@ Lo
 rF
 lj
 rf
-rf
-xb
-qo
-DY
-BB
-BB
-DY
-DY
-DY
-BY
-rf
-rf
-rf
-rf
-xb
-DY
-DY
-DY
-BB
-BB
-DY
-BY
+NL
+NL
+fJ
+tS
+tS
+tS
+tS
+tS
+tS
+Ct
+qY
+qY
+qY
+nv
+tS
+tS
+tS
+tS
+tS
+tS
+hM
+NL
 BY
 BY
 BY
@@ -58495,31 +59597,31 @@ rf
 rf
 rf
 rf
-Ic
+mo
 rf
-rf
-rf
-xb
-DY
-DY
-DY
-BB
-BB
-DY
-BY
-Ms
-rf
-rf
-rf
-DY
-DY
-DY
-BB
-BB
-DY
-DY
-BY
-BY
+NL
+NL
+qo
+JT
+oj
+oj
+oj
+oj
+SP
+mU
+WH
+WH
+WH
+Wk
+Ze
+oj
+oj
+oj
+oj
+oj
+SP
+NL
+NL
 BY
 rf
 rf
@@ -58753,30 +59855,30 @@ rf
 rf
 rf
 rf
-rf
-rf
-rf
-xb
+ty
+Nu
+NL
+qo
+Eo
 DY
 DY
 DY
 DY
-BB
-BB
-xb
-rf
-rf
-rf
-xb
+kK
+Nu
+XQ
+WH
+DP
+Nu
+pS
 DY
 DY
 DY
-BB
-BB
+Pn
 DY
-DA
-DY
-BY
+dr
+SP
+NL
 rf
 rf
 rf
@@ -59006,34 +60108,34 @@ rf
 rf
 Ic
 rf
-rf
 xb
 xb
 xb
 xb
 xb
-rf
-xb
+Ic
+NL
+qo
+zV
+dk
 DY
 DY
 DY
-DY
-DY
-BB
-DY
-xb
-xb
-DY
-DY
-DY
-DY
-DY
-BB
+dr
+SP
+vq
+LU
+Kh
+Ze
+LT
 DY
 DY
 DY
+nH
+qo
 DY
-xb
+kK
+NL
 rf
 rf
 rf
@@ -59262,35 +60364,35 @@ rf
 rf
 rf
 Ic
-rf
-rf
+XO
 qo
 qo
 qo
 qo
 qo
-rf
+Ic
+NL
 qo
 qo
+DQ
+dk
+DY
+DY
+DY
+Lz
+oj
+oj
+oj
+LT
+DY
+DY
+DY
 qo
+nH
 DY
-DY
-DY
-BB
-DY
-DY
-DY
-DY
-DY
-DY
-DY
-BB
-BB
-DY
-DY
-DY
-DY
-xb
+Ev
+xw
+NL
 rf
 rf
 rf
@@ -59519,35 +60621,35 @@ rf
 rf
 rf
 Ic
-rf
-rf
+kW
 xb
 xb
 xb
 xb
 xb
-rf
-rf
+Ic
+NL
+NL
 BY
 qo
+pS
+DY
+DY
+nH
+FT
 DY
 DY
 DY
-BB
 DY
 DY
 DY
 DY
-DY
-DY
-DY
-BB
-BB
-BB
-DY
-DY
+uP
 qo
-xb
+DY
+kK
+qo
+NL
 rf
 rf
 rf
@@ -59776,35 +60878,35 @@ rf
 rf
 rf
 Ic
+Hp
+qo
+qo
+qo
+qo
+qo
+Ic
 rf
-rf
-qo
-qo
-qo
-qo
-qo
-rf
-rf
+NL
 BY
 qo
-BY
+DQ
+dk
 DY
-DY
-DY
-BB
-BB
-BB
-BB
-DY
-DY
-BB
-BB
-BB
-BB
-DY
-DY
+nH
+nH
 qo
+DY
+DY
+DY
+DY
+DY
+DY
+DY
+DY
+DY
+kK
 qo
+NL
 rf
 rf
 rf
@@ -60033,35 +61135,35 @@ rf
 rf
 rf
 Ic
-rf
-rf
+OE
 xb
 xb
 va
 xb
-LT
+xb
+Ic
 rf
-rf
+NL
 BY
 BY
 BY
-BY
+DQ
+dk
+DY
+nH
+nH
 DY
 DY
 DY
 DY
 DY
-BB
-BB
-BB
-BB
-BB
-BB
 DY
 DY
 DY
+Ev
+xw
 qo
-rf
+NL
 rf
 rf
 rf
@@ -60290,35 +61392,35 @@ rf
 rf
 rf
 Ic
-rf
-rf
+OE
 qo
 qo
 qo
 qo
-Je
+qo
+Ic
 rf
-rf
-rf
+NL
+NL
 BY
 BY
 BY
-DY
-DY
-DY
-DY
-DY
-DY
-BB
-BB
-BB
-BB
-DY
-DY
+pS
 DY
 qo
 qo
-rf
+DY
+DY
+DY
+DY
+DY
+DY
+DY
+Ev
+xw
+qo
+qo
+NL
 rf
 rf
 rf
@@ -60556,26 +61658,26 @@ sx
 Nu
 rf
 rf
-rf
+NL
 BY
 BY
 BY
+DQ
+dk
+qo
 DY
 DY
 DY
+DY
+DY
+DY
+Ev
 DA
-DY
-DY
-DY
-DY
-DY
-DY
-DY
-DY
+xw
 qo
 qo
-rf
-rf
+NL
+NL
 rf
 rf
 rf
@@ -60813,25 +61915,25 @@ rf
 rf
 rf
 rf
-rf
-rf
-rf
+NL
+NL
+NL
 qo
-xb
-DY
-DY
-DY
-DY
-DY
-DY
-DY
-DY
-DY
+qo
+pS
+DA
+DA
+DA
+DA
+DA
+DA
+DA
+xw
 rf
 rf
 rf
 rf
-rf
+NL
 rf
 rf
 rf
@@ -61072,23 +62174,23 @@ rf
 rf
 rf
 rf
-rf
-rf
+NL
+NL
 qo
-xb
-xb
-xb
-xb
+ll
+qo
+qo
+qo
 qo
 rf
 rf
 rf
 rf
 rf
-rf
-rf
-rf
-rf
+NL
+NL
+NL
+NL
 rf
 rf
 rf
@@ -61328,21 +62430,21 @@ rf
 rf
 rf
 rf
-rf
-rf
-rf
-rf
-rf
-rf
-rf
-rf
-rf
 NL
 NL
-rf
-rf
-rf
-rf
+NL
+NL
+bl
+NL
+NL
+NL
+NL
+NL
+NL
+NL
+NL
+NL
+NL
 rf
 rf
 rf
@@ -61585,21 +62687,21 @@ rf
 rf
 rf
 rf
+NL
 rf
 rf
 rf
-rf
-rf
+lC
 rf
 lj
-rF
+IZ
 WD
-rF
+IZ
 lj
 Lo
 Lo
 lj
-xb
+qo
 rf
 rf
 rf
@@ -61842,21 +62944,21 @@ rf
 rf
 lj
 rF
-yu
+dO
 rF
 lj
 rf
+or
 rf
-rf
-rF
-DB
-RM
-DB
+WD
+eD
+Ov
+eD
 rF
 uF
-kI
-WD
-xb
+te
+BR
+qo
 rf
 rf
 rf
@@ -62097,26 +63199,26 @@ rf
 rf
 rf
 rf
+Lo
+QN
+Vg
+ja
+Lo
+rf
+or
+rf
 rF
-DB
-DB
-DB
-rF
-rf
-rf
-rf
-WD
-DB
-DB
-DB
+te
+te
+te
 kc
-DB
-AS
-WD
+te
+te
+BR
 NL
 rf
-xb
-xb
+qo
+qo
 rf
 rf
 rf
@@ -62354,26 +63456,26 @@ rf
 rf
 rf
 rf
-rF
-eD
-DB
-DB
-rF
+aQ
+Rh
+te
+te
+np
 qo
-rf
-xb
-Lo
+or
+qo
+WU
 lK
-DB
-DB
+te
+te
 lj
 Lo
 Lo
 lj
 NL
-xb
-xb
-xb
+qo
+qo
+qo
 rf
 rf
 rf
@@ -62611,27 +63713,27 @@ rf
 rf
 rf
 rf
-rF
-Ok
-ur
-um
-rF
-qo
-rf
-xb
 Lo
-mf
-DB
-DB
+UN
+XC
+Da
+Lo
+qo
+or
+qo
+WU
+MX
+wx
+te
 WD
 bQ
 Dz
 sY
-xb
-xb
-xb
-xb
-xb
+qo
+qo
+qo
+qo
+qo
 rf
 rf
 rf
@@ -62869,23 +63971,23 @@ rf
 rf
 rf
 lj
-rF
-rF
-rF
+WU
+WU
+WU
 lj
 qo
+or
 qo
-xb
-Lo
+WU
 fU
-DB
-DB
+te
+te
 rF
 sY
 sY
-jZ
-xb
-xb
+SX
+qo
+qo
 rf
 rf
 rf
@@ -63128,21 +64230,21 @@ rf
 rf
 rf
 rf
-xb
 qo
 qo
 qo
-xb
-WD
-DB
-DB
-DB
-hA
+or
+qo
+rF
+qj
+te
+te
+dO
 sY
 sY
 sY
 NL
-xb
+qo
 rf
 rf
 rf
@@ -63386,13 +64488,13 @@ rf
 rf
 rf
 rf
-xb
-xb
-xb
-xb
-rF
+qo
+WX
+iG
+qo
+WD
 QQ
-fD
+te
 fA
 rF
 sY
@@ -63644,13 +64746,13 @@ rf
 rf
 rf
 rf
-rf
+or
 rf
 rf
 lj
-rF
+Ca
 WD
-rF
+Ca
 lj
 sY
 sY
@@ -63658,7 +64760,7 @@ lj
 rf
 rf
 rf
-xb
+qo
 rf
 rf
 rf
@@ -63901,19 +65003,19 @@ rf
 rf
 rf
 rf
+or
+qo
 rf
-xb
-rf
-rf
-rf
-xb
-xb
-xb
-xb
-xb
-xb
-xb
-xb
+FS
+Ad
+GA
+nU
+nX
+NL
+qo
+qo
+qo
+qo
 rf
 rf
 rf
@@ -64158,19 +65260,19 @@ rf
 rf
 rf
 rf
-rf
-xb
-rf
-rf
-rf
-rf
-rf
-xb
-xb
-xb
-xb
-rf
-rf
+Eg
+Jg
+fF
+fF
+CI
+BA
+XW
+Ej
+NL
+qo
+qo
+dd
+Sv
 rf
 rf
 rf
@@ -64412,8 +65514,6 @@ Lc
 rf
 rf
 rf
-rf
-rf
 sM
 rf
 rf
@@ -64424,11 +65524,13 @@ rf
 rf
 rf
 rf
-rf
-rf
-rf
-rf
-rf
+lf
+tF
+AS
+lX
+pX
+iK
+Sv
 rf
 rf
 rf
@@ -64681,11 +65783,11 @@ rf
 rf
 rf
 rf
-rf
-rf
-rf
-rf
-rf
+Jj
+SM
+DY
+DY
+FF
 rf
 rf
 rf
@@ -64939,10 +66041,10 @@ Lc
 Lc
 rf
 rf
-rf
-rf
-rf
-rf
+he
+DY
+DY
+FF
 rf
 rf
 rf
@@ -65196,11 +66298,11 @@ Lc
 Lc
 Lc
 rf
-rf
-rf
-rf
-rf
-rf
+he
+DY
+DY
+iK
+Sv
 rf
 rf
 rf
@@ -65452,12 +66554,12 @@ Lc
 Lc
 Lc
 Lc
-rf
-rf
-rf
-rf
-rf
-rf
+mg
+pX
+DY
+DY
+Is
+TY
 rf
 rf
 rf
@@ -65709,11 +66811,11 @@ Lc
 Lc
 Lc
 Lc
-rf
-rf
-rf
-rf
-rf
+uA
+ly
+DY
+Is
+TY
 rf
 rf
 rf
@@ -65967,9 +67069,9 @@ Lc
 Lc
 Lc
 Lc
-rf
-rf
-rf
+Ck
+DY
+FF
 rf
 rf
 rf
@@ -66224,9 +67326,9 @@ Lc
 Lc
 Lc
 Lc
-rf
-rf
-rf
+kI
+Is
+TY
 rf
 rf
 rf
@@ -66481,8 +67583,8 @@ Lc
 Lc
 Lc
 Lc
-rf
-rf
+uA
+EZ
 rf
 rf
 rf
@@ -66739,7 +67841,7 @@ Lc
 Lc
 Lc
 Lc
-rf
+BB
 rf
 rf
 rf
@@ -66996,7 +68098,7 @@ Lc
 Lc
 Lc
 Lc
-rf
+SL
 rf
 rf
 rf
@@ -121970,12 +123072,12 @@ Lc
 cG
 cG
 cG
+lj
 No
 No
 No
 No
-No
-No
+lj
 cG
 cG
 cG
@@ -122501,9 +123603,9 @@ cG
 cG
 cG
 cG
-cG
-cG
-cG
+aq
+mx
+Dl
 cG
 cG
 cG
@@ -122757,11 +123859,11 @@ cG
 cG
 cG
 cG
-cG
-cG
-cG
-cG
-cG
+Nu
+WH
+WH
+WH
+Nu
 cG
 cG
 cG
@@ -123014,11 +124116,11 @@ cG
 cG
 cG
 cG
-cG
-cG
-cG
-cG
-cG
+ng
+WH
+WH
+WH
+mW
 cG
 cG
 cG
@@ -123271,11 +124373,11 @@ cG
 cG
 cG
 cG
-cG
-cG
-cG
-cG
-cG
+MF
+qY
+qY
+qY
+jO
 cG
 cG
 cG
@@ -123528,11 +124630,11 @@ cG
 cG
 cG
 cG
-cG
-cG
-cG
-cG
-cG
+MF
+qY
+lB
+qY
+jO
 cG
 cG
 cG
@@ -123769,12 +124871,12 @@ Lc
 cG
 cG
 cG
+lj
 No
 No
 No
 No
-No
-No
+lj
 cG
 cG
 cG
@@ -123785,11 +124887,11 @@ cG
 cG
 cG
 cG
-cG
-cG
-cG
-cG
-cG
+MF
+qY
+qY
+qY
+jO
 cG
 cG
 cG
@@ -124042,11 +125144,11 @@ cG
 cG
 cG
 cG
-cG
-cG
-cG
-cG
-cG
+PW
+WH
+WH
+WH
+AN
 cG
 cG
 cG
@@ -124299,11 +125401,11 @@ cG
 cG
 cG
 cG
-cG
-cG
-cG
-cG
-cG
+Nu
+WH
+WH
+WH
+Nu
 cG
 cG
 cG
@@ -124557,9 +125659,9 @@ cG
 cG
 cG
 cG
-cG
-cG
-cG
+ie
+LU
+Kh
 cG
 cG
 cG
@@ -127127,14 +128229,14 @@ cG
 cG
 cG
 cG
-No
-No
-No
-No
-No
-No
-No
-No
+lj
+Lo
+Lo
+lj
+WD
+Lo
+WD
+lj
 cG
 cG
 cG
@@ -127384,14 +128486,14 @@ No
 cG
 cG
 cG
-No
-No
-No
-No
-No
-No
-No
-No
+rF
+mL
+ur
+rF
+fD
+GI
+te
+BR
 cG
 cG
 cG
@@ -127641,14 +128743,14 @@ No
 cG
 cG
 cG
-No
-No
-No
-No
-No
-No
-No
-No
+MY
+DB
+DB
+Ge
+te
+te
+te
+BR
 cG
 cG
 cG
@@ -127898,14 +129000,14 @@ No
 cG
 cG
 cG
-No
-No
-No
-No
-No
-No
-No
-No
+MY
+DB
+DB
+lj
+WD
+Lo
+WD
+lj
 cG
 cG
 cG
@@ -128155,10 +129257,10 @@ No
 cG
 cG
 cG
-No
-No
-No
-No
+rF
+uJ
+Sz
+rF
 No
 No
 No
@@ -128412,10 +129514,10 @@ No
 cG
 cG
 cG
-No
-No
-No
-No
+lj
+Lo
+Lo
+lj
 No
 No
 No
@@ -130985,8 +132087,8 @@ Mt
 cG
 Mt
 Mt
-Mt
-Mt
+Di
+Di
 Mt
 cG
 cG
@@ -131242,8 +132344,8 @@ Mt
 Mt
 Mt
 Mt
-Mt
-Mt
+Di
+Di
 Mt
 cG
 cG
@@ -131498,10 +132600,10 @@ Lc
 Lc
 Lc
 Lc
-Lc
-Lc
-Lc
-Lc
+Di
+Di
+Di
+Mt
 Lc
 cG
 cG
@@ -131754,12 +132856,12 @@ Lc
 Lc
 Lc
 Lc
-Lc
-Lc
-Lc
-Lc
-Lc
-Lc
+Di
+Di
+Di
+Di
+cN
+cN
 cG
 cG
 cG
@@ -132012,10 +133114,10 @@ Lc
 Lc
 Lc
 Lc
-Lc
-Lc
-Lc
-Lc
+Di
+Di
+Di
+Jr
 Lc
 cG
 cG
@@ -132268,11 +133370,11 @@ Lc
 Lc
 Lc
 Lc
-Lc
-Lc
-Lc
-Lc
-Lc
+Di
+Di
+Di
+Di
+Di
 Lc
 Lc
 cG
@@ -132525,11 +133627,11 @@ Lc
 Lc
 Lc
 Lc
-Lc
-Lc
-Lc
-Lc
-Lc
+Di
+Di
+Di
+Di
+Di
 Lc
 Lc
 cG
@@ -132784,8 +133886,8 @@ Lc
 Lc
 Lc
 Lc
-Lc
-Lc
+Di
+Di
 Lc
 Lc
 Lc
