@@ -1638,7 +1638,7 @@
 	dir = 8
 	},
 /turf/open/floor/naturalstone,
-/area/under/cave)
+/area/outdoors/woods/lakeside)
 "tO" = (
 /obj/structure/fluff/railing/border{
 	dir = 8
@@ -67063,7 +67063,7 @@ rf
 rf
 rf
 Lc
-aR
+NL
 bI
 BY
 BY
@@ -67320,7 +67320,7 @@ rf
 rf
 rf
 Lc
-aR
+NL
 LS
 BY
 BY
