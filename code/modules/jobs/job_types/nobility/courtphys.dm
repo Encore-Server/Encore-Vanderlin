@@ -1,3 +1,4 @@
+/* --- Commenting this job out for now; it serves little purpose on Domotan because of our lower population, but having the file around to reference is still useful. ---
 /datum/attribute_holder/sheet/job/courtphys
 	raw_attribute_list = list(
 		STAT_STRENGTH = -1,
@@ -105,3 +106,4 @@
 	gloves = /obj/item/clothing/gloves/leather/courtphysician/female
 	head = /obj/item/clothing/head/courtphysician/female
 	armor = /obj/item/clothing/armor/leather/jacket/courtphysician/female
+*/

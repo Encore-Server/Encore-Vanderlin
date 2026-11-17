@@ -210,7 +210,7 @@
 #define JOB_STEWARD "Steward"
 #define JOB_MAJORDOMO "Majordomo"
 #define JOB_ARCHIVIST "Archivist"
-#define JOB_COURT_PHYSICIAN "Court Physician"
+//#define JOB_COURT_PHYSICIAN "Court Physician"
 #define JOB_MINOR_NOBLE "Noble"
 #define JOB_COURT_AGENT "Court Agent"
 
