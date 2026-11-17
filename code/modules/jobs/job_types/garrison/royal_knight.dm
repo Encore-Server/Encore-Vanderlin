@@ -148,7 +148,6 @@
 	belt = /obj/item/storage/belt/leather
 	beltr = /obj/item/weapon/sword/arming
 	backl = /obj/item/storage/backpack/satchel
-	ring = /obj/item/scomstone/bad
 	scabbards = list(/obj/item/weapon/scabbard/sword/noble)
 
 	backpack_contents = list(
