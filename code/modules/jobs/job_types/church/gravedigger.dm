@@ -84,6 +84,7 @@
 	beltr = /obj/item/storage/belt/pouch/coins/poor
 	backr = /obj/item/weapon/shovel/necran
 	wrists = /obj/item/storage/keyring/gravetender
+	ring = /obj/item/scomstone/bad
 	backpack_contents = list(/obj/item/inqarticles/tallowpot, /obj/item/reagent_containers/food/snacks/tallow/red, /obj/item/weapon/chisel/iron)
 
 /datum/outfit/undertaker/pre_equip(mob/living/carbon/human/equipped_human, visuals_only)

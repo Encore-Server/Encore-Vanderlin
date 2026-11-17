@@ -124,6 +124,7 @@
 	neck = /obj/item/clothing/neck/gorget
 	backl = /obj/item/storage/backpack/satchel
 	beltr = /obj/item/weapon/mace/cudgel
+	ring = /obj/item/scomstone/bad
 	backpack_contents = list(
 		/obj/item/rope/chain = 1,
 		/obj/item/book/law/small = 1,

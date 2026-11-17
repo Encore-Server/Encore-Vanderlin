@@ -88,6 +88,7 @@
 	beltr = /obj/item/storage/belt/pouch/coins/mid
 	backr = /obj/item/weapon/polearm/halberd/bardiche/warcutter
 	backl = /obj/item/storage/backpack/satchel
+	ring = /obj/item/scomstone/bad
 	backpack_contents = list(
 		/obj/item/weapon/knife/hunting = 1,
 		/obj/item/rope/chain = 1,

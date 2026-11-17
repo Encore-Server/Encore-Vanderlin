@@ -41,6 +41,7 @@
 	wrists = /obj/item/clothing/wrists/bracers/leather
 	belt = /obj/item/storage/belt/leather/townguard
 	gloves = /obj/item/clothing/gloves/leather
+	ring = /obj/item/scomstone/bad
 
 /datum/outfit/garrisonsoldier/pre_equip(mob/living/carbon/human/equipped_human, visuals_only)
 	. = ..()
