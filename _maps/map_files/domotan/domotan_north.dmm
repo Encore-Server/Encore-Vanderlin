@@ -107,6 +107,10 @@
 	},
 /turf/open/floor/grass/cold,
 /area/outdoors/woods/etgard)
+"be" = (
+/obj/effect/lily_petal,
+/turf/open/floor/dirt/road,
+/area/outdoors/woods/etgard)
 "bf" = (
 /obj/machinery/light/fueled/firebowl/stumpg,
 /turf/open/floor/dirt/road,
@@ -304,8 +308,9 @@
 /turf/open/lava,
 /area/indoors/shelter)
 "dD" = (
-/turf/open/floor/naturalstone,
-/area/indoors/shelter)
+/obj/structure/flora/ausbushes/lavendergrass,
+/turf/open/floor/grass/cold,
+/area/outdoors/woods/etgard)
 "dG" = (
 /turf/closed/wall/mineral/tent{
 	dir = 4
@@ -736,6 +741,10 @@
 	},
 /turf/open/lava,
 /area/indoors/shelter)
+"iT" = (
+/obj/effect/lily_petal/three,
+/turf/open/floor/dirt/road,
+/area/outdoors/woods/etgard)
 "iY" = (
 /obj/structure/flora/grass/water/reeds,
 /obj/structure/flora/grass/water,
@@ -1086,6 +1095,10 @@
 /obj/item/tent_kit,
 /turf/open/floor/twig,
 /area/indoors/wilderness)
+"ml" = (
+/obj/structure/vine,
+/turf/open/floor/dirt/road,
+/area/under/cavewet)
 "mo" = (
 /obj/structure/door/swing,
 /turf/open/floor/snow,
@@ -1110,11 +1123,11 @@
 /turf/open/floor/naturalstone,
 /area/under/cave)
 "mC" = (
-/obj/item/candle/yellow{
-	pixel_y = 10
-	},
 /obj/structure/table/church{
 	dir = 1
+	},
+/obj/item/candle/pomette{
+	pixel_y = 10
 	},
 /turf/open/floor/dirt/road,
 /area/outdoors/woods/etgard)
@@ -1357,6 +1370,10 @@
 /obj/structure/flora/tree/burnt,
 /turf/open/floor/snow,
 /area/outdoors/wilderness/merccamp)
+"pi" = (
+/obj/structure/flora/ausbushes/lavendergrass,
+/turf/open/floor/snow,
+/area/outdoors/woods/etgard)
 "pn" = (
 /obj/structure/door/weak/bolt{
 	dir = 4
@@ -1392,6 +1409,10 @@
 	},
 /turf/open/water/clean,
 /area/outdoors/woods/lakeside)
+"qa" = (
+/obj/structure/tentdoor/greendeco,
+/turf/open/floor/naturalstone,
+/area/under/cave)
 "qc" = (
 /obj/structure/table/wood{
 	dir = 1;
@@ -1674,9 +1695,13 @@
 	},
 /turf/open/lava,
 /area/indoors/shelter)
+"uc" = (
+/obj/item/candle/floorcandle1/lit,
+/turf/open/floor/dirt/road,
+/area/under/cavewet)
 "ug" = (
 /obj/structure/fluff/statue/small{
-	desc = "A statue of a dryad, a manifestation of an elemental spirit of Earth. This one possesses a featureless face, evoking the anonymity of the goddess Gani.";
+	desc = "A statue of a dryad, a manifestation of an elemental spirit of Earth. This one possesses an expression of sweet joy, evoking the playful innocence of Pomette, the Pure.";
 	name = "dryad statue"
 	},
 /turf/open/floor/snow,
@@ -1689,6 +1714,10 @@
 /obj/structure/closet/crate/chest/crate,
 /turf/open/floor/twig,
 /area/indoors/shelter)
+"up" = (
+/obj/structure/vine,
+/turf/open/floor/naturalstone,
+/area/under/cave)
 "ur" = (
 /obj/structure/chair/stool,
 /turf/open/floor/twig,
@@ -1869,6 +1898,10 @@
 	},
 /turf/open/floor/grass/cold,
 /area/outdoors/woods/etgard)
+"wd" = (
+/obj/structure/vine,
+/turf/open/floor/dirt/road,
+/area/under/cave)
 "we" = (
 /obj/structure/fluff/railing/wood{
 	dir = 8
@@ -2026,6 +2059,10 @@
 "yV" = (
 /turf/open/openspace,
 /area)
+"zb" = (
+/mob/living/simple_animal/pet/cat/cabbit,
+/turf/open/floor/dirt/road,
+/area/outdoors/woods/etgard)
 "zj" = (
 /obj/effect/decal/cobbleedge{
 	dir = 5;
@@ -2053,6 +2090,10 @@
 	},
 /turf/closed/mineral/random/cold,
 /area/under/town/basement)
+"zH" = (
+/obj/item/candle/floorcandle1/lit,
+/turf/open/floor/dirt,
+/area/under/cavewet)
 "zI" = (
 /obj/machinery/light/fueled/lanternpost/fixed{
 	dir = 1;
@@ -2096,6 +2137,10 @@
 	},
 /turf/open/floor/ruinedwood/turned,
 /area/outdoors/beach)
+"Av" = (
+/obj/machinery/light/fueled/firebowl/stumpg,
+/turf/open/floor/grass/cold,
+/area/outdoors/woods/etgard)
 "AA" = (
 /obj/structure/fluff/railing/tall/palisade{
 	dir = 8
@@ -3308,8 +3353,10 @@
 /area/outdoors/woods/etgard)
 "PM" = (
 /obj/structure/table/church/m,
-/obj/item/clothing/neck/psycross/silver/divine/golerkanh{
-	pixel_y = 6
+/obj/item/clothing/neck/psycross/silver/divine/golerkanh/steel{
+	pixel_y = 10;
+	anchored = 1;
+	desc = "By His grace do our monuments conquer all sin. This amulet seems to be possessed of an unnatural weight... you cannot lift it from the altar."
 	},
 /turf/open/floor/church/violet,
 /area/indoors/shelter)
@@ -3366,6 +3413,10 @@
 	},
 /turf/open/floor/twig,
 /area/indoors/shelter)
+"PU" = (
+/obj/item/candle/floorcandle0/lit,
+/turf/open/floor/naturalstone,
+/area/under/cave)
 "PW" = (
 /obj/structure/fluff/railing/wood{
 	dir = 1;
@@ -3403,6 +3454,11 @@
 	},
 /turf/open/floor/dirt/road,
 /area/outdoors/beach)
+"Qx" = (
+/mob/living/simple_animal/pet/cat/cabbit,
+/obj/effect/lily_petal/two,
+/turf/open/floor/dirt/road,
+/area/outdoors/woods/etgard)
 "QA" = (
 /turf/open/floor/twig/platform,
 /area/outdoors/beach)
@@ -3420,6 +3476,12 @@
 /obj/item/reagent_containers/glass/bucket/wooden,
 /turf/open/floor/ruinedwood/two,
 /area/indoors/shelter)
+"QX" = (
+/obj/item/candle/floorcandle0/lit{
+	pixel_y = -12
+	},
+/turf/open/floor/dirt,
+/area/under/cavewet)
 "QZ" = (
 /turf/open/floor/snow/patchy,
 /area/outdoors/woods/etgard)
@@ -3811,6 +3873,10 @@
 "VM" = (
 /turf/closed/mineral/random/cold,
 /area/outdoors/woods/etgard)
+"VR" = (
+/obj/structure/vine,
+/turf/open/floor/naturalstone,
+/area/under/cavewet)
 "VW" = (
 /obj/machinery/light/fueled/smelter,
 /turf/open/floor/volcanic,
@@ -3920,6 +3986,9 @@
 /area/outdoors/wilderness/merccamp)
 "WT" = (
 /obj/structure/table/church/m,
+/obj/structure/fluff/psycross/pomette{
+	pixel_y = 18
+	},
 /turf/open/floor/dirt/road,
 /area/outdoors/woods/etgard)
 "WU" = (
@@ -4066,6 +4135,10 @@
 	},
 /turf/open/floor/ruinedwood/turned,
 /area/outdoors/beach)
+"Yk" = (
+/obj/structure/fluff/walldeco/vinez,
+/turf/closed/mineral/random/cold,
+/area/under/cave)
 "Yn" = (
 /obj/structure/fluff/traveltile{
 	aportalgoesto = "z2-townsouth2-in";
@@ -4149,6 +4222,10 @@
 /obj/structure/flora/grass/pyroclasticflowers,
 /turf/open/floor/snow,
 /area/outdoors/woods/etgard)
+"ZW" = (
+/obj/structure/tentdoor/greendeco,
+/turf/open/floor/volcanic,
+/area/indoors/shelter)
 
 (1,1,1) = {"
 Ka
@@ -53128,7 +53205,7 @@ NR
 NR
 Qj
 Qj
-Mj
+Qj
 Lc
 Lc
 Lc
@@ -53385,7 +53462,7 @@ Lc
 Qj
 Qj
 Mj
-Lc
+NR
 Lc
 Lc
 Lc
@@ -53642,8 +53719,8 @@ Lc
 Mj
 Lc
 Xg
-Lc
-Lc
+NR
+NR
 Lc
 Lc
 Lc
@@ -53900,7 +53977,7 @@ Lc
 Lc
 Xg
 Lc
-Lc
+aR
 Lc
 Lc
 Lc
@@ -54157,8 +54234,8 @@ Lc
 Lc
 Lc
 Lc
-Lc
-Lc
+aR
+aR
 Lc
 Lc
 Lc
@@ -54414,7 +54491,7 @@ Lc
 Lc
 Lc
 Lc
-Lc
+aR
 Lc
 Lc
 Lc
@@ -54671,7 +54748,7 @@ Lc
 Lc
 Lc
 Lc
-Lc
+aR
 Lc
 Lc
 Lc
@@ -54927,8 +55004,8 @@ Lc
 Lc
 Xg
 Xg
-Lc
-Lc
+NR
+aR
 Lc
 Lc
 Lc
@@ -55172,20 +55249,20 @@ Mj
 Mj
 Mj
 Mj
+Mj
+Mj
+zH
 Qj
-Qj
-Qj
-Qj
-Qj
-Qj
+QX
+Mj
 Lc
 Lc
 Lc
 Mj
 tn
 tn
-Mj
-Lc
+Qj
+NR
 Lc
 Lc
 Lc
@@ -55431,10 +55508,10 @@ Om
 Mj
 Mj
 Om
-Qj
-zo
-Qj
-Qj
+Om
+ZW
+Om
+Om
 Lc
 Lc
 Lc
@@ -55442,7 +55519,7 @@ Mj
 tn
 Bh
 Qj
-Lc
+NR
 Lc
 Lc
 Lc
@@ -55688,10 +55765,10 @@ Om
 Om
 Om
 Om
-zo
-zo
-Qj
-Qj
+sn
+sn
+SX
+Om
 Lc
 Lc
 Lc
@@ -55944,11 +56021,11 @@ FR
 dC
 Om
 Om
-zo
-zo
-lJ
-Qj
-Qj
+sn
+sn
+SX
+DM
+Om
 Lc
 Lc
 Lc
@@ -56203,8 +56280,8 @@ Om
 rZ
 DM
 DM
-dD
-jZ
+sn
+DM
 Om
 Lc
 Lc
@@ -63382,7 +63459,7 @@ lZ
 Lc
 Lc
 Lc
-aR
+up
 aR
 wZ
 wZ
@@ -63624,6 +63701,8 @@ Lc
 Lc
 Lc
 Lc
+Yk
+Yk
 Lc
 Lc
 Lc
@@ -63635,9 +63714,7 @@ Lc
 Lc
 Lc
 Lc
-Lc
-Lc
-lJ
+ml
 lJ
 Mt
 Mt
@@ -63882,10 +63959,10 @@ Lc
 Lc
 Lc
 Lw
-ov
+dD
 wi
 Gh
-Lc
+Yk
 Lc
 Lc
 Lc
@@ -63895,8 +63972,8 @@ Lc
 Lc
 Mt
 aR
-aR
-aR
+up
+up
 Lc
 Lc
 wZ
@@ -64136,19 +64213,19 @@ wZ
 Lc
 Lc
 Lc
-Lc
+Yk
 ug
 rQ
-rQ
+Av
 wZ
 wZ
 FX
-gW
+dD
+Yk
 Lc
 Lc
 Lc
-Lc
-aR
+up
 Mt
 Mt
 aR
@@ -64394,20 +64471,20 @@ Lc
 Lc
 Lc
 em
-tB
+Qx
 Ci
-tB
-gW
+be
+pi
 tB
 wZ
 wZ
-eB
-Mt
+Lw
+dD
 Lc
-lJ
+uc
 Mt
-PS
-PS
+VR
+VR
 Lc
 Lc
 Lc
@@ -64653,16 +64730,16 @@ Lc
 WT
 tB
 tB
+zb
 tB
-tB
 wZ
 wZ
 wZ
 wZ
 wZ
-Mt
+qa
 aR
-Mt
+wd
 Lc
 Lc
 Lc
@@ -64908,17 +64985,17 @@ Lc
 Lc
 Lc
 mC
-tB
-tB
+zb
+iT
 wZ
 tB
 wi
 rQ
-rQ
-gW
-Mt
-PS
-Lc
+wZ
+pi
+eB
+Mj
+PU
 Lc
 Lc
 Lc
@@ -65164,16 +65241,16 @@ Lc
 Lc
 Lc
 Lc
-Lc
+Yk
 ug
 FX
-gW
+pi
+Av
 rQ
-rQ
-ov
+dD
 Mm
-Lc
-Lc
+Yk
+Yk
 Lc
 Lc
 Lc
@@ -65422,12 +65499,12 @@ Lc
 Lc
 Lc
 Lc
-Lc
-Lc
+Yk
+Yk
 Gh
 Lw
-Lc
-Lc
+Yk
+Yk
 Lc
 Lc
 Lc
@@ -129414,13 +129491,13 @@ Vv
 Vv
 Mt
 Mt
-Mt
 Lc
 Lc
-VM
-VM
-VM
-VM
+Lc
+Vv
+Vv
+Vv
+Vv
 Lc
 Lc
 Lc
@@ -129671,15 +129748,15 @@ Vv
 Vv
 Mt
 Mt
-Mt
 Lc
-VM
-VM
-VM
-VM
-VM
-VM
-VM
+Lc
+Vv
+Vv
+Vv
+Vv
+Vv
+Vv
+Vv
 Lc
 Lc
 Lc
@@ -129927,18 +130004,18 @@ Vv
 Vv
 Vv
 Mt
-Mt
-Mt
-VM
-VM
-VM
-VM
-VM
-VM
-VM
-VM
-VM
 Lc
+Lc
+Vv
+Vv
+Vv
+Vv
+Vv
+Vv
+Vv
+Vv
+Vv
+Vv
 Lc
 Mj
 Lc
@@ -130184,18 +130261,18 @@ Vv
 Vv
 Mt
 Mt
-Mt
-Mt
-VM
-VM
-VM
-VM
-VM
-VM
-VM
-VM
-VM
-VM
+Lc
+Lc
+Vv
+Vv
+Vv
+Vv
+Vv
+Vv
+Vv
+Vv
+Vv
+Vv
 Lc
 Lc
 Mt
@@ -130443,16 +130520,16 @@ Mt
 Mt
 Lc
 Lc
-VM
-VM
-VM
-VM
-VM
-VM
-VM
-VM
-VM
-Lc
+Vv
+Vv
+Vv
+Vv
+Vv
+Vv
+Vv
+Vv
+Vv
+Vv
 Mj
 Lc
 Mt
@@ -130701,13 +130778,13 @@ Mt
 Lc
 Lc
 Lc
-VM
-VM
-VM
-VM
-VM
-VM
-VM
+Vv
+Vv
+Vv
+Vv
+Vv
+Vv
+Vv
 Lc
 Lc
 Lc
@@ -130960,8 +131037,8 @@ Lc
 Lc
 Lc
 Lc
-VM
-VM
+Vv
+Vv
 Lc
 Lc
 Lc
