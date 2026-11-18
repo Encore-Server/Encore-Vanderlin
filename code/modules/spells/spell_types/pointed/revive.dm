@@ -32,6 +32,18 @@
 	if(. & SPELL_CANCEL_CAST)
 		return
 
+	for(var/obj/structure/fluff/psycross/S in view(5, owner))
+		target_cross = S
+		break
+
+	if(!target_cross)
+		to_chat(owner, span_warning("I need a holy cross."))
+		reset_spell_cooldown()
+		return . | SPELL_CANCEL_CAST
+
+	if(cast_on.mob_biotypes & MOB_UNDEAD)
+		return
+
 	if(cast_on.stat != DEAD)
 		to_chat(owner, span_warning("There is no way to revive the living!"))
 		reset_spell_cooldown()
@@ -50,15 +62,6 @@
 
 	if(HAS_TRAIT(cast_on, TRAIT_VALDALA_CURSE))
 		to_chat(owner, span_warning("Valdala holds tight to this one."))
-		reset_spell_cooldown()
-		return . | SPELL_CANCEL_CAST
-
-	for(var/obj/structure/fluff/psycross/S in view(5, owner))
-		target_cross = S
-		break
-
-	if(!target_cross)
-		to_chat(owner, span_warning("I need a holy cross."))
 		reset_spell_cooldown()
 		return . | SPELL_CANCEL_CAST
 
@@ -96,3 +99,4 @@
 	cast_on.adjust_blood_volume(BLOOD_VOLUME_OKAY, maximum = BLOOD_VOLUME_OKAY)
 	cast_on.visible_message(span_notice("[cast_on] is revived by holy light!"), span_green("I awake from the void."))
 	cast_on.apply_status_effect(/datum/status_effect/debuff/revive)
+	REMOVE_TRAITS_IN(cast_on, "sanctified_slumber")

@@ -38,11 +38,7 @@
 /datum/component/rot/corpse/process()
 	if(HAS_TRAIT(parent, TRAIT_STASIS) || HAS_TRAIT(parent, TRAIT_NO_ROT)) // No rot
 		return
-	var/time_elapsed = last_process ? (world.time - last_process)/10 : 1
 	..()
-	if(has_world_trait(/datum/world_trait/erdl_mercy))
-		amount -= (is_ascendant(ERDL) ? 2.5 : 5) * time_elapsed
-
 	var/mob/living/carbon/C = parent
 	var/is_zombie = IS_DEADITE(C)
 	if(C.stat != DEAD && !is_zombie)
@@ -52,26 +48,28 @@
 		qdel(src)
 		return
 
-	if(!is_zombie && amount > 2 MINUTES)
-		if(!has_world_trait(/datum/world_trait/valdala_requiem) && (!is_in_roguetown(C) || has_world_trait(/datum/world_trait/envy_defilement)))
-			if(istype(C.loc, /obj/structure/closet/dirthole) || istype(C.loc, /obj/structure/closet/crate/coffin))
-				if(amount > 3 MINUTES)
-					C.zombie_check()
-			else
+	if(!is_zombie && amount > 30 MINUTES)
+		// delay zombie onset if youre on town areas or 'outside exposed church' areas
+		if(is_in_roguetown(C))
+			if(amount > 60 MINUTES)
 				C.zombie_check()
+		else
+			C.zombie_check()
 
 	var/findonerotten = FALSE
 	var/shouldupdate = FALSE
 	for(var/obj/item/bodypart/B in C.bodyparts)
 		if(!B.skeletonized && B.is_organic_limb())
 			if(!HAS_TRAIT(B, TRAIT_ROTTEN))
-				if(amount > 25 MINUTES)
+				// if been a corpse for 40 minutes and limb is not rotted yet, force the bodyparts rotten
+				if(amount > 40 MINUTES)
 					B.kill_limb()
 					findonerotten = TRUE
 					shouldupdate = TRUE
 					C.change_stat(STAT_CONSTITUTION, -8)
 			else
-				if(amount > 45 MINUTES)
+				// if it's been over 90 minutes for players or 45 minutes for NPCs, any rotten bodyparts decay to bone
+				if(amount > (C.mind ? 90 MINUTES : 45 MINUTES))
 					if(!is_zombie)
 						B.skeletonize()
 						ADD_TRAIT(C, TRAIT_NOBLOOD, TRAIT_GENERIC)
@@ -80,6 +78,7 @@
 				else
 					findonerotten = TRUE
 	if(findonerotten)
+		// for first 16 minutes of a decaying corpse, if there are rotten bodyparts then make tile stinky and play rot sounds
 		var/turf/open/T = C.loc
 		if(istype(T) && amount < 16 MINUTES && !C.has_faction(FACTION_DECEIVERS))
 			T.pollute_turf(/datum/pollutant/rot, 9)
