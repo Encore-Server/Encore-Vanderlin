@@ -1132,7 +1132,7 @@
 	craftdiff = 3
 
 /datum/anvil_recipe/weapons/mace/cane/noble
-	name = "Decorated Cane (+Gold Bar, +Small Log)"
+	name = "Decorated Cane (+Small Log)"
 	required_material = /obj/item/ingot/gold
 	craftdiff = 3
 	additional_items = list(/obj/item/grown/log/tree/small)
