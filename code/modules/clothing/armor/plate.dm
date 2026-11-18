@@ -84,14 +84,16 @@
 
 /obj/item/clothing/armor/plate/full/cudese
 	name = "cudese scaleplate"
-	desc = "A heavy set of armour worn by Cudese mainland warriors. Of slightly-lighter build than equivalents elsewhere in the Goblet, it is favored by elite Yinshi guards of the skyward capital."
+	desc = "A sturdy set of armour worn by Cudese mainland warriors. Of slightly-lighter build than equivalents elsewhere in the Goblet, it is favored by elite Yinshi guards of the skyward capital."
 	icon_state = "kazengunheavy"
 	item_state = "kazengunheavy"
 	detail_tag = "_detail"
 	detail_color = CLOTHING_WHITE
-	max_integrity = ARMOR_INT_CHEST_PLATE_STEEL - 50 //slightly worse
+	max_integrity = INTEGRITY_BLACKSTEEL - 75
+	armor_class = AC_MEDIUM
+	armor_type = /datum/armor/plate/good
 	item_weight = 14 KILOGRAMS
-	melt_amount = 75
+	melt_amount = 100
 	melting_material = /datum/material/blacksteel
 
 /obj/item/clothing/armor/plate/full/cudese/attack_hand_secondary(mob/user, list/modifiers)
@@ -150,9 +152,11 @@
 
 /obj/item/clothing/armor/plate/blkknight
 	name = "blacksteel plate"
-	desc = "A chestplate forged from blacksteel with shoulder guards, combining strength and agility."
+	desc = "A chestplate forged from blacksteel with shoulder guards."
 	body_parts_covered = COVERAGE_ALL_BUT_LEGS
-	armor_class = AC_MEDIUM
+	armor_class = AC_HEAVY
+	armor_type = /datum/armor/plate/good
+	max_integrity = INTEGRITY_BLACKSTEEL
 	icon_state = "bkarmor"
 	icon = 'icons/roguetown/clothing/special/blkknight.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/special/onmob/blkknight.dmi'
@@ -161,7 +165,9 @@
 	smeltresult = /obj/item/ingot/blacksteel
 	item_weight = 20.45 KILOGRAMS
 	sellprice = VALUE_SILVER_ITEM * 6
-	stand_speed_reduction = 1.05
+	stand_speed_reduction = 1.2
+	melt_amount = 200
+	melting_material = /datum/material/blacksteel
 
 //................ Deccorated Half-plate ............... //
 

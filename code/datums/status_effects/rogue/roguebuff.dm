@@ -933,6 +933,7 @@
 
 /datum/status_effect/buff/powered_steam_armor/on_apply()
 	. = ..()
+	ADD_TRAIT(owner, TRAIT_HEAVYARMOR, REF(src)) //ensures armor proficiency while powered
 	var/mob/living/carbon/human/H = owner
 	var/obj/item/organ/eyes/eyes = H.getorgan(/obj/item/organ/eyes)
 	if(!eyes)
@@ -954,6 +955,7 @@
 /datum/status_effect/buff/powered_steam_armor/on_remove()
 	. = ..()
 	REMOVE_TRAIT(owner, TRAIT_BESTIALSENSE, REF(src))
+	REMOVE_TRAIT(owner, TRAIT_HEAVYARMOR, REF(src))
 	owner.update_sight()
 
 /datum/status_effect/buff/lux_drank

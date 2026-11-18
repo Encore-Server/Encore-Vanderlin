@@ -69,10 +69,11 @@
 	sleeved = 'icons/roguetown/clothing/special/onmob/blkknight.dmi'
 	anvilrepair = /datum/attribute/skill/craft/blacksmithing
 	smeltresult = /obj/item/ingot/blacksteel
-	armor_class = AC_MEDIUM
+	armor_class = AC_HEAVY
 	armor_type = /datum/armor/gloves/plate/good
-	item_weight = 1.65 KILOGRAMS
+	item_weight = 2.4 KILOGRAMS
 	sellprice = VALUE_SILVER_ITEM * 2
+	max_integrity = INTEGRITY_BLACKSTEEL
 
 /obj/item/clothing/gloves/plate/silver
 	name = "silver gauntlets"
@@ -143,6 +144,8 @@
 	detail_color = CLOTHING_ASH_GREY
 	melt_amount = 75
 	melting_material = /datum/material/blacksteel
+	armor_class = AC_MEDIUM
+	armor_type = /datum/armor/gloves/plate/good
 
 /obj/item/clothing/gloves/plate/cudese/attack_hand_secondary(mob/user, list/modifiers)
 	. = ..()

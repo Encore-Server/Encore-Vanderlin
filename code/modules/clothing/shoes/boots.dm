@@ -117,17 +117,20 @@
 
 /obj/item/clothing/shoes/boots/armor/blkknight
 	name = "blacksteel boots"
-	desc = "Boots forged from blacksteel, light yet strong, perfect for a fearless stride."
+	desc = "Boots forged from blacksteel, perfect for a fearless stride."
 	icon_state = "bkboots"
 	icon = 'icons/roguetown/clothing/special/blkknight.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/special/onmob/blkknight.dmi'
 	sleeved = 'icons/roguetown/clothing/special/onmob/blkknight.dmi'
 	anvilrepair = /datum/attribute/skill/craft/blacksmithing
 	smeltresult = /obj/item/ingot/blacksteel
-	armor_class = AC_MEDIUM
-	armor_type = /datum/armor/boots/plate
-	item_weight = 2.1 KILOGRAMS
+	armor_class = AC_HEAVY
+	armor_type = /datum/armor/boots/plate/good
+	melt_amount = 100
+	melting_material = /datum/material/blacksteel
+	item_weight = 3.4 KILOGRAMS
 	sellprice = VALUE_SILVER_ITEM * 2
+	max_integrity = INTEGRITY_BLACKSTEEL
 
 /obj/item/clothing/shoes/boots/leather
 	name = "leather boots"
@@ -359,13 +362,17 @@
 
 /obj/item/clothing/shoes/boots/leather/cudese
 	name = "armored sandals"
-	desc = "Leather sandals, with steel ankle-protectors and socks of sturdy cloth."
+	desc = "Leather sandals, with blacksteel ankle-protectors and socks of sturdy cloth."
 	icon_state = "kazengunboots"
 	item_state = "kazengunboots"
 	detail_tag = "_detail"
 	detail_color = CLOTHING_WHITE
 	melt_amount = 75
 	melting_material = /datum/material/blacksteel
+	item_weight = 2 KILOGRAMS
+	armor_class = AC_MEDIUM
+	armor_type = /datum/armor/boots/leather/good
+	max_integrity = INTEGRITY_BLACKSTEEL - 75
 
 /obj/item/clothing/shoes/boots/leather/cudese/attack_hand_secondary(mob/user, list/modifiers)
 	. = ..()

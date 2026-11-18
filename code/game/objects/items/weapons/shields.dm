@@ -211,7 +211,7 @@
 				return list("shrink" = 0.6,"sx" = 1,"sy" = 4,"nx" = 1,"ny" = 2,"wx" = 3,"wy" = 3,"ex" = 0,"ey" = 2,"nturn" = 0,"sturn" = 0,"wturn" = 0,"eturn" = 0,"nflip" = 8,"sflip" = 0,"wflip" = 0,"eflip" = 0,"northabove" = 1,"southabove" = 0,"eastabove" = 0,"westabove" = 0)
 
 /obj/item/weapon/shield/tower/metal
-	name = "kite shield"
+	name = "steel tower shield"
 	desc = "A knightly, kite shaped steel shield, emblazoned with heraldry. \nBoasts superior coverage and durability, owed to its exquisite craftsmanship."
 	icon_state = "ironsh"
 	force = DAMAGE_SHIELD * 2
@@ -226,6 +226,7 @@
 	sellprice = 30
 	smeltresult = /obj/item/ingot/steel_slag
 	melting_material = /datum/material/steel
+	melt_amount = 100
 	design_chosen = FALSE
 	item_weight = 6 KILOGRAMS
 

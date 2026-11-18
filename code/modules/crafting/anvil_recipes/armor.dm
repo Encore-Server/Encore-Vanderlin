@@ -1208,10 +1208,10 @@
 	craftdiff = 5
 */
 
-/datum/anvil_recipe/armor/blacksteel/bucket
-	name = "Blacksteel Great Helm (+Bar)"
+/datum/anvil_recipe/armor/blacksteel/knight
+	name = "Blacksteel Knight Helm (+Bar)"
 	additional_items = list(/obj/item/ingot/blacksteel)
-	created_item = /obj/item/clothing/head/helmet/blacksteel/bucket
+	created_item = /obj/item/clothing/head/helmet/visored/blkknight
 	craftdiff = 5
 
 /datum/anvil_recipe/armor/blacksteel/plategloves

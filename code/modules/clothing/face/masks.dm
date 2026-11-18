@@ -366,7 +366,8 @@
 	armor_type = /datum/armor/mask/metal/steel
 	icon_state = "kazengunmouthguard"
 	item_state = "kazengunmouthguard"
-	max_integrity = 500
+	armor_type = /datum/armor/mask/metal/steel
+	max_integrity = INTEGRITY_BLACKSTEEL - 75
 	smeltresult = /obj/item/ingot/steel_slag
 	melting_material = /datum/material/blacksteel
 	melt_amount = 75
