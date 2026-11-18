@@ -79,7 +79,11 @@
 	detail_color = "#FFFFFF"
 	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_armor.dmi'
 	melting_material = /datum/material/blacksteel
-	melt_amount = 75
+	armor_type = /datum/armor/brigandine/good
+	max_integrity = INTEGRITY_BLACKSTEEL - 75
+	item_weight = 9 KILOGRAMS
+	melt_amount = 100
+	armor_class = AC_MEDIUM
 
 /obj/item/clothing/armor/brigandine/cudese/attack_hand_secondary(mob/user, list/modifiers)
 	. = ..()

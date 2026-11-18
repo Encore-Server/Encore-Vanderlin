@@ -11,9 +11,12 @@
 
 	anvilrepair = /datum/attribute/skill/craft/engineering
 	smeltresult = /obj/item/ingot/bronze
-	item_weight = 7 KILOGRAMS
+	item_weight = 3.5 KILOGRAMS
+	armor_class = AC_HEAVY
+	armor_type = /datum/armor/gloves/plate/good
+	max_integrity = INTEGRITY_STRONGEST
 
-/obj/item/clothing/shoes/boots/armor/steam/dropped(mob/living/carbon/user)
+/obj/item/clothing/gloves/plate/steam/dropped(mob/living/carbon/user)
 	// Locate the boiler in the back slots
 	var/obj/item/clothing/cloak/boiler/B = locate(/obj/item/clothing/cloak/boiler) in list(user.backr, user.backl)
 	if(B)

@@ -24,9 +24,10 @@
 	item_state = "grenzelcuirass"
 	sleeved = 'icons/roguetown/clothing/onmob/helpers/stonekeep_merc.dmi'
 	boobed = TRUE
-
+	armor_class = AC_MEDIUM
 	armor_type = /datum/armor/plate/good
 	item_weight = 10 KILOGRAMS
+	max_integrity = INTEGRITY_BLACKSTEEL - 75
 
 /obj/item/clothing/armor/cuirass/rare
 	abstract_type = /obj/item/clothing/armor/cuirass/rare

@@ -410,6 +410,7 @@
 	appro_skill = /datum/attribute/skill/craft/armorsmithing
 	additional_items = list(/obj/item/grown/log/tree/small)
 	created_item = /obj/item/weapon/shield/tower
+	category = "Shields"
 	craftdiff = 2
 
 /datum/anvil_recipe/weapons/iron/ironbuckler
@@ -809,11 +810,12 @@
 	appro_skill = /datum/attribute/skill/craft/weaponsmithing
 	created_item = /obj/item/weapon/knife/hunting
 
-/datum/anvil_recipe/weapons/steel/kiteshield
-	name = "Kite Shield (+Bar, +Hide)"
+/datum/anvil_recipe/weapons/steel/steel_tower_shield
+	name = "Steel Tower Shield (+Bar, +Cured Leather)"
 	appro_skill = /datum/attribute/skill/craft/armorsmithing
 	additional_items = list(/obj/item/ingot/steel, /obj/item/natural/hide)
 	created_item = /obj/item/weapon/shield/tower/metal
+	category = "Shields"
 	craftdiff = 3
 
 /datum/anvil_recipe/weapons/steel/longsword
@@ -1115,9 +1117,9 @@
 // ------------------ Miscellaneous Weapons ------------------
 
 /datum/anvil_recipe/weapons/atgervi_shield
-	name = "kite shield"
+	name = "Kite Shield (+Small Log)"
 	required_material = /obj/item/ingot/steel
-	additional_items = list(/obj/item/grown/log/tree)
+	additional_items = list(/obj/item/grown/log/tree/small)
 	created_item = /obj/item/weapon/shield/atgervi
 	category = "Shields"
 	craftdiff = 2
@@ -1130,9 +1132,10 @@
 	craftdiff = 3
 
 /datum/anvil_recipe/weapons/mace/cane/noble
-	name = "Decorated Cane (+Gold Bar, +Large Log)"
+	name = "Decorated Cane (+Gold Bar, +Small Log)"
+	required_material = /obj/item/ingot/gold
 	craftdiff = 3
-	additional_items = list(/obj/item/ingot/gold, /obj/item/grown/log/tree)
+	additional_items = list(/obj/item/grown/log/tree/small)
 	created_item = /obj/item/weapon/mace/cane/noble
 
 // ------------------ Blacksteel ------------------

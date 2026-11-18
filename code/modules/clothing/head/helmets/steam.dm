@@ -5,9 +5,12 @@
 	icon = 'icons/roguetown/clothing/steamknight.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/steamknight_onmob.dmi'
 	anvilrepair = /datum/attribute/skill/craft/engineering
-	item_weight = 9 KILOGRAMS
-	block2add = FOV_RIGHT|FOV_LEFT
+	item_weight = 6 KILOGRAMS
+	block2add = FOV_BEHIND
 	smeltresult = /obj/item/ingot/bronze
+	armor_class = AC_HEAVY
+	armor_type = /datum/armor/head/plate/good
+	max_integrity = INTEGRITY_STRONGEST
 
 /obj/item/clothing/head/helmet/heavy/steam/dropped(mob/living/carbon/user)
 	// Locate the boiler in the back slots
@@ -22,5 +25,5 @@
 	user.update_fov_angles()
 
 /obj/item/clothing/head/helmet/heavy/steam/proc/power_off(mob/living/user)
-	block2add = FOV_RIGHT|FOV_LEFT
+	block2add = FOV_BEHIND
 	user.update_fov_angles()

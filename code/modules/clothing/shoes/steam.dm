@@ -9,8 +9,11 @@
 	sleevetype = "steamknight_boots"
 
 	anvilrepair = /datum/attribute/skill/craft/engineering
-	slowdown = 1.5
-	item_weight = 6 KILOGRAMS
+	slowdown = 1.25
+	item_weight = 3 KILOGRAMS
+	max_integrity = INTEGRITY_STRONGEST
+	armor_class = AC_HEAVY
+	armor_type = /datum/armor/boots/plate/good
 
 /obj/item/clothing/shoes/boots/armor/steam/dropped(mob/living/carbon/user)
 	// Locate the boiler in the back slots
@@ -25,5 +28,5 @@
 	user.update_equipment_speed_mods()
 
 /obj/item/clothing/shoes/boots/armor/steam/proc/power_off(mob/living/user)
-	slowdown = 1.5
+	slowdown = 1.25
 	user.update_equipment_speed_mods()

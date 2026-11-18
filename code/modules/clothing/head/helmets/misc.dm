@@ -117,7 +117,7 @@
 
 /obj/item/clothing/head/helmet/kettle/cudese
 	name = "cudese kettle helmet"
-	desc = "A steel-reinforced conical hat with a decorative rim of fabric. It protects the head and ears as much as it shields the eyes from the sun."
+	desc = "A blacksteel-reinforced conical hat with a decorative rim of fabric. It protects the head and ears as much as it shields the eyes from the sun."
 	icon_state = "kazengunmedhelm"
 	item_state = "kazengunmedhelm"
 	detail_tag = "_detail"
@@ -128,6 +128,10 @@
 	worn_y_dimension = 32
 	melt_amount = 75
 	melting_material = /datum/material/blacksteel
+	item_weight = 3 KILOGRAMS
+	armor_class = AC_MEDIUM
+	max_integrity = INTEGRITY_BLACKSTEEL - 75
+	armor_type = /datum/armor/head/plate/good
 
 /obj/item/clothing/head/helmet/kettle/iron
 	name = "iron kettle helmet"
@@ -401,10 +405,11 @@
 	icon_state = "bkhelm_visor"
 	icon = 'icons/roguetown/clothing/special/blkknight.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/special/onmob/blkknight.dmi'
-	armor_class = AC_MEDIUM
+	armor_class = AC_HEAVY
 	armor_type = /datum/armor/head/plate/good
-	item_weight = 6.4 KILOGRAMS
+	item_weight = 4.8 KILOGRAMS
 	sellprice = VALUE_SILVER_ITEM * 2
+	max_integrity = INTEGRITY_BLACKSTEEL
 
 //............... Visored Sallet ............... //
 /obj/item/clothing/head/helmet/visored/sallet
@@ -844,5 +849,5 @@
 	prevent_crits = list(BCLASS_CUT, BCLASS_STAB, BCLASS_CHOP, BCLASS_BLUNT, BCLASS_SMASH, BCLASS_TWIST, BCLASS_PICK)
 	blocksound = PLATEHIT
 	resistance_flags = LAVA_PROOF | EXPLOSION_MOVE_PROOF | ACID_PROOF | FREEZE_PROOF | UNACIDABLE
-	max_integrity = ARMOR_INT_HELMET_BLACKSTEEL
+	max_integrity = INTEGRITY_BLACKSTEEL
 	armor_class = AC_MEDIUM
