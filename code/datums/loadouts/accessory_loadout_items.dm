@@ -25,6 +25,12 @@
 	ui_category = "Accessories"
 	triumph_cost_permanent = 1
 
+/datum/loadout_item/cloth_belt
+	name = "Cloth Belt"
+	item_path = /obj/item/storage/belt/leather/cloth_belt
+	ui_category = "Accessories"
+	triumph_cost_permanent = 5
+
 /datum/loadout_item/double_belt
 	name = "Pair of Belts"
 	item_path = /obj/item/storage/belt/leather/double
