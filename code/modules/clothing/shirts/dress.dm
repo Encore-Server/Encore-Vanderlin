@@ -140,9 +140,7 @@
 	AddComponent(
 		/datum/component/equipment_stress/job_specific, \
 		/datum/stress_event/maiddress, \
-		list(TRAIT_VILLAIN = null, TRAIT_COURTAGENT = null, TRAIT_NOBLE_BLOOD = /datum/stress_event/maiddress/noble, TRAIT_NOBLE_LOCAL = /datum/stress_event/maiddress/noble, TRAIT_NOBLE_FOREIGN = /datum/stress_event/maiddress/noble), \
-		immune_jobs = list(/datum/job/prince, /datum/job/squire, /datum/job/advclass/pilgrim/noble, /datum/job/advclass/pilgrim/rare/qadirid, /datum/job/advclass/pilgrim/rare/aelondan, /datum/job/advclass/pilgrim/rare/merchant), \
-		inverse = TRUE, \
+		list(TRAIT_VILLAIN = null, TRAIT_COURTAGENT = null, TRAIT_NOBLE_BLOOD = /datum/stress_event/maiddress/noble), \
 	)
 
 

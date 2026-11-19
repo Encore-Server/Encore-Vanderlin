@@ -236,7 +236,7 @@
 		add_servant(spawned)
 
 /obj/item/servant_bell/proc/is_bell_proficient(mob/living/user)
-	return HAS_TRAIT(user, TRAIT_NOBLE_BLOOD) || HAS_TRAIT(user, TRAIT_NOBLE_POWER) || HAS_TRAIT(user, TRAIT_NOBLE_LOCAL) || HAS_TRAIT(TRAIT_NOBLE_FOREIGN) || is_type_in_list(user.mind?.assigned_role, noble_exemptions) || is_type_in_list(SSjob.GetJob(user.job), noble_exemptions)
+	return HAS_TRAIT(user, TRAIT_NOBLE_BLOOD) || HAS_TRAIT(user, TRAIT_NOBLE_POWER) || is_type_in_list(user.mind?.assigned_role, noble_exemptions) || is_type_in_list(SSjob.GetJob(user.job), noble_exemptions)
 
 /// Keep Bell
 /obj/item/servant_bell/lord
