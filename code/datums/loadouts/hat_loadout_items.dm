@@ -152,6 +152,13 @@
 
 	triumph_cost_permanent = 0
 
+/datum/loadout_item/maid_band
+	name = "Maid Headband"
+	item_path = /obj/item/clothing/head/maidband
+	ui_category = "Hats"
+
+	triumph_cost_permanent = 2
+
 /datum/loadout_item/nunveil
 	name = "Nun Veil"
 	item_path = /obj/item/clothing/head/nun

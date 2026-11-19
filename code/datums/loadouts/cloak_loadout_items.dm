@@ -90,6 +90,13 @@
 
 	triumph_cost_permanent = 0
 
+/datum/loadout_item/cloth_apron
+	name = "Cloth Apron"
+	item_path = /obj/item/clothing/cloak/apron/maid
+	ui_category = "Cloaks"
+
+	triumph_cost_permanent = 5
+
 /datum/loadout_item/poncho
 	name = "Cloth Poncho"
 	item_path = /obj/item/clothing/cloak/poncho
