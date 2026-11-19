@@ -1,6 +1,6 @@
 /datum/action/cooldown/spell/burial_rites
 	name = "Burial Rites"
-	desc = ""
+	desc = "Put souls and the burried dead to an eternal rest."
 	button_icon_state = "consecrateburial"
 	sound = 'sound/magic/churn.ogg'
 	has_visual_effects = FALSE

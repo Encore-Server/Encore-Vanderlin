@@ -58,6 +58,7 @@
 	cast_on.grab_ghost(force = TRUE, grab_spirit = TRUE)
 	playsound(owner, 'sound/magic/churn.ogg', 80)
 	ADD_TRAIT(owner, TRAIT_VALDALA_CURSE, "mordsol_ritual")
+	REMOVE_TRAITS_IN(cast_on, "sanctified_slumber")
 
 	if(owner.mind)
 		var/datum/objective/personal/ultimate_sacrifice/objective = target

@@ -402,7 +402,7 @@
 	if(GET_MOB_ATTRIBUTE_VALUE(src, STAT_STRENGTH) > 10)
 		cuff_break = FAST_CUFFBREAK
 		breakouttime = I.breakouttime
-	if(GET_MOB_ATTRIBUTE_VALUE(src, STAT_STRENGTH) > 15 || IS_DEADITE(src))
+	if(GET_MOB_ATTRIBUTE_VALUE(src, STAT_STRENGTH) > 15)
 		cuff_break = INSTANT_CUFFBREAK
 
 	if(instant)
