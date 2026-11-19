@@ -48,13 +48,8 @@
 		qdel(src)
 		return
 
-	if(!is_zombie && amount > 30 MINUTES)
-		// delay zombie onset if youre on town areas or 'outside exposed church' areas
-		if(is_in_roguetown(C))
-			if(amount > 60 MINUTES)
-				C.zombie_check()
-		else
-			C.zombie_check()
+	if(!is_zombie && amount > 45 MINUTES && !is_in_roguetown(C))
+		C.zombie_check()
 
 	var/findonerotten = FALSE
 	var/shouldupdate = FALSE
