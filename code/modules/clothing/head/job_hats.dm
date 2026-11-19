@@ -198,7 +198,7 @@
 	AddComponent(
 		/datum/component/equipment_stress/job_specific, \
 		/datum/stress_event/maidband, \
-		list(TRAIT_VILLAIN = null, TRAIT_COURTAGENT = null, TRAIT_NOBLE_BLOOD = /datum/stress_event/maidband/noble),
+		list(TRAIT_VILLAIN = null, TRAIT_COURTAGENT = null, TRAIT_NOBLE_BLOOD = /datum/stress_event/maidband/noble), \
 	)
 
 /obj/item/clothing/head/gnomecap
