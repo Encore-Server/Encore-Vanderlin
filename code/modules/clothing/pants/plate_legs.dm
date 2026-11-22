@@ -80,10 +80,11 @@
 	sleeved = 'icons/roguetown/clothing/special/onmob/blkknight.dmi'
 	anvilrepair = /datum/attribute/skill/craft/blacksmithing
 	smeltresult = /obj/item/ingot/blacksteel
-	armor_class = AC_MEDIUM
+	armor_class = AC_HEAVY
 	armor_type = /datum/armor/pants/plate/good
-	item_weight = 4.95 KILOGRAMS
+	item_weight = 5 KILOGRAMS
 	sellprice = VALUE_SILVER_ITEM * 2
+	max_integrity = INTEGRITY_BLACKSTEEL
 
 //............... Evil Pants ............... //
 

@@ -425,6 +425,10 @@
 	name = "cudese gorget"
 	desc = "A protective neck guard worn by Cudese warriors."
 	icon_state = "kazengunneckguard"
+	armor_class = AC_MEDIUM
+	armor_type = /datum/armor/neck/plate
+	item_weight = 1.5 KILOGRAMS
+	max_integrity = INTEGRITY_BLACKSTEEL - 75
 
 /obj/item/clothing/neck/gorget/explosive
 	name = "collar of servitude"

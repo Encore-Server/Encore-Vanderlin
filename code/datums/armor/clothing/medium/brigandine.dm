@@ -5,3 +5,11 @@
 	piercing = 50
 	fire = 0
 	acid = 0
+
+/datum/armor/brigandine/good
+	blunt = 80
+	slash = 80
+	stab = 80
+	piercing = 60
+	fire = 0
+	acid = 0
