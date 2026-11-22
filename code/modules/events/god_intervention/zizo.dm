@@ -22,8 +22,10 @@
 				continue
 			if(IS_DEADITE(potential_zombie))
 				continue
-			potential_zombie.zombie_check()
+			// DOMO EDIT -- DISABLE SUDDEN ZOMBIFICATION
 
-			bordered_message(potential_zombie, list(
-				span_danger("An overwhelming power of the One Envy commands you! RISE AND RAVAGE!")
-			))
+			// potential_zombie.zombie_check()
+
+			// bordered_message(potential_zombie, list(
+			// 	span_danger("An overwhelming power of the One Envy commands you! RISE AND RAVAGE!")
+			// ))

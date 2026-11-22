@@ -50,8 +50,9 @@
 
 /datum/attribute_holder/sheet/job/acolyte/patron/erdl
 	raw_attribute_list = list(
-		/datum/attribute/skill/misc/medicine = 10,
-		/datum/attribute/skill/craft/alchemy = 10
+		/datum/attribute/skill/misc/medicine = 20,
+		/datum/attribute/skill/craft/alchemy = 10,
+		/datum/attribute/skill/misc/sewing = 10,
 	)
 
 /datum/attribute_holder/sheet/job/acolyte/patron/gani

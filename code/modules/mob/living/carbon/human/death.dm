@@ -58,10 +58,11 @@
 			if(IS_DEADITE(src) || mind.has_antag_datum(/datum/antagonist/skeleton) || mind.has_antag_datum(/datum/antagonist/lich))
 				record_round_statistic(STATS_DEADITES_KILLED)
 
-	if(!gibbed)
-		if(!has_world_trait(/datum/world_trait/valdala_requiem))
-			if(!is_in_roguetown(src) || has_world_trait(/datum/world_trait/envy_defilement))
-				zombie_check()
+	// -- DOMO EDIT -- let us not have sudden zombification on death
+	// if(!gibbed)
+	// 	if(!has_world_trait(/datum/world_trait/valdala_requiem))
+	// 		if(!is_in_roguetown(src) || has_world_trait(/datum/world_trait/envy_defilement))
+	// 			zombie_check()
 
 	stop_sound_channel(CHANNEL_HEARTBEAT)
 	heartbeat_sound = BEAT_NONE
