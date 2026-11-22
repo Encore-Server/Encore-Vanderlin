@@ -213,7 +213,8 @@
 		if(length(H.quirks))
 			body += "<h4>Current Quirks:</h4><ul>"
 			for(var/datum/quirk/Q in H.quirks)
-				body += "<li>[initial(Q.name)] ([Q.point_value] pts) "
+				body += "<li>[initial(Q.name)] ([Q.point_value] QrkPts) "
+				body += "<li>[initial(Q.name)] ([Q.point_value] AttPts) "
 				body += "<a class='skill-btn' href='byond://?_src_=holder;[HrefToken()];remove_quirk=[REF(M)];quirk=[Q.type]'>Remove</a></li>"
 			body += "</ul>"
 		else
@@ -223,7 +224,7 @@
 		body += "<select id='quirk-select'>"
 		body += "<option value=''>-- Select Quirk --</option>"
 
-		for(var/category in list(QUIRK_BOON, QUIRK_VICE, QUIRK_PECULIARITY))
+		for(var/category in list(QUIRK_BOON, QUIRK_VICE, QUIRK_PECULIARITY, QUIRK_ATTRIBUTEADJUSTER))
 			var/category_name = ""
 			switch(category)
 				if(QUIRK_BOON)
@@ -232,6 +233,8 @@
 					category_name = "Vices"
 				if(QUIRK_PECULIARITY)
 					category_name = "Peculiarities"
+				if(QUIRK_ATTRIBUTEADJUSTER)
+					category_name = "Adjusted Attributes"
 
 			body += "<optgroup label='[category_name]'>"
 			for(var/quirk_data in GLOB.quirk_points_by_type[category])

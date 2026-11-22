@@ -1,9 +1,11 @@
 // Quirk Categories
+#define QUIRK_ATTRIBUTEADJUSTER "Attribute Adjuster"
 #define QUIRK_BOON "Boon"          // Positive quirks (cost points)
 #define QUIRK_VICE "Vice"          // Negative quirks (give points)
 #define QUIRK_PECULIARITY "Peculiarity" // Neutral quirks (0 points)
 
 // Quirk value constants
+#define STARTING_ATTRIBUTE_POINTS 0
 #define MAX_BOONS 3
 #define STARTING_QUIRK_POINTS 0
 
