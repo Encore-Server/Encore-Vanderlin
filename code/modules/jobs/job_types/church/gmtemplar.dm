@@ -111,7 +111,7 @@
 	backl = /obj/item/storage/backpack/satchel
 	backpack_contents = list(/obj/item/storage/keyring/priest = 1,  /obj/item/storage/belt/pouch/coins/rich = 1)
 	belt = /obj/item/storage/belt/leather/black
-	ring = /obj/item/clothing/ring/silver/rontz
+	ring = /obj/item/scomstone/bad
 	gloves = /obj/item/clothing/gloves/plate/silver
 	wrists = /obj/item/clothing/neck/psycross/gold
 

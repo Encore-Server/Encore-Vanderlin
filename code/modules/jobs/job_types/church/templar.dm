@@ -35,7 +35,7 @@
 
 /datum/outfit/templar //Base outfit for Templars, before subclasses and loadouts.
 	name = JOB_TEMPLAR
-	ring = /obj/item/clothing/ring/silver
+	ring = /obj/item/scomstone/bad
 	belt = /obj/item/storage/belt/leather/black
 	backl = /obj/item/storage/backpack/satchel/otavan
 	backpack_contents = list(/obj/item/storage/keyring/priest = 1,  /obj/item/storage/belt/pouch/coins/mid = 1)
