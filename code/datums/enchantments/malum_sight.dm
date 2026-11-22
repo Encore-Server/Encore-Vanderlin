@@ -169,3 +169,14 @@
 	randomdir = FALSE
 	duration = 1 SECONDS
 	layer = 18
+
+/obj/effect/temp_visual/bloodore
+	name = "bloody ore"
+	desc = "I feel dark energy pulsating from the rock..."
+	icon = 'icons/effects/effects.dmi'
+	icon_state = "blip"
+	color = COLOR_BLOOD_MAGIC
+	dir = NORTH
+	randomdir = FALSE
+	duration = 1 SECONDS
+	layer = 18

@@ -20,6 +20,8 @@
 /datum/action/cooldown/spell/burial_rites/is_valid_target(atom/cast_on)
 	if(istype(cast_on, /obj/item/weapon/knife/dagger/steel/profane))
 		return TRUE
+	if(istype(cast_on, /obj/item/blood_pearl))
+		return TRUE
 	else if(!istype(cast_on, /obj/structure/closet/dirthole))
 		return FALSE
 	var/obj/structure/closet/dirthole/grave = cast_on

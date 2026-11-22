@@ -135,6 +135,15 @@
 	item_weight = 1.5 KILOGRAMS
 
 
+/obj/item/weapon/flail/bloodsteel/relic
+	name = "\proper heart of Mephistopheles"
+	desc = "The heart of darkness, empowered by the progenitor of Kaine."
+	max_integrity = INTEGRITY_STRONGEST
+
+/obj/item/weapon/flail/bloodsteel/relic/Initialize(mapload)
+	. = ..()
+	enchant(/datum/enchantment/on_hit/vampiric)
+
 //................ Peasant Flail ............... // A little confusing still
 /obj/item/weapon/flail/peasant
 	name = "peasant flail"
