@@ -212,6 +212,7 @@
 
 		// After removing a quirk, validate that the remaining quirks are still affordable
 		var/balance = calculate_quirk_balance()
+		var/attribute_balance = calculate_attribute_balance()
 
 		// If balance is now negative, we need to remove some boons
 		while(balance < 0 && length(quirks))
@@ -220,6 +221,16 @@
 				quirks -= most_expensive
 				quirk_customizations -= most_expensive
 				balance = calculate_quirk_balance()
+			else
+				break
+
+		// ditto for attribute modifiers
+		while(attribute_balance < 0 && length(quirks))
+			var/datum/quirk/most_expensive_attribute = find_most_expensive_attribute()
+			if(most_expensive_attribute)
+				quirks -= most_expensive_attribute
+				quirk_customizations -= most_expensive_attribute
+				balance = calculate_attribute_balance()
 			else
 				break
 

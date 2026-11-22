@@ -224,7 +224,7 @@
 		body += "<select id='quirk-select'>"
 		body += "<option value=''>-- Select Quirk --</option>"
 
-		for(var/category in list(QUIRK_BOON, QUIRK_VICE, QUIRK_PECULIARITY))
+		for(var/category in list(QUIRK_BOON, QUIRK_VICE, QUIRK_PECULIARITY, QUIRK_ATTRIBUTEADJUSTER))
 			var/category_name = ""
 			switch(category)
 				if(QUIRK_BOON)
@@ -233,6 +233,8 @@
 					category_name = "Vices"
 				if(QUIRK_PECULIARITY)
 					category_name = "Peculiarities"
+				if(QUIRK_ATTRIBUTEADJUSTER)
+					category_name = "Adjusted Attributes"
 
 			body += "<optgroup label='[category_name]'>"
 			for(var/quirk_data in GLOB.quirk_points_by_type[category])

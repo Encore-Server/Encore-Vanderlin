@@ -58,7 +58,7 @@ GLOBAL_LIST_INIT(quirk_registry, init_quirk_registry())
 	var/name = "Quirk"
 	/// Description of what this quirk does
 	var/desc = "A quirk."
-	/// Category: QUIRK_BOON, QUIRK_VICE, or QUIRK_PECULIARITY
+	/// Category: QUIRK_BOON, QUIRK_VICE, QUIRK_ATTRIBUTEADJUSTER or QUIRK_PECULIARITY
 	var/quirk_category = QUIRK_PECULIARITY
 	/// Point value (negative = costs points, positive = gives points)
 	var/point_value = 0
