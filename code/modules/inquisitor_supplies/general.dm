@@ -246,6 +246,11 @@
 
 
 //  EQUIPMENT  BELONGS HERE! JUST BELOW!
+/datum/inqports/equipment/powderflask
+	name = "1 Powder Flask"
+	item_type = /obj/item/reagent_containers/glass/bottle/aflask
+	marquescost = 4
+
 /datum/inqports/equipment/puffer
 	name = "1 Puffer, 4 lead bullets and powder flask"
 	item_type = /obj/structure/closet/crate/chest/inqcrate/equipment/puffer

@@ -5,6 +5,7 @@
 	apply_overlay(BITE_LAYER)
 	addtimer(CALLBACK(src, PROC_REF(remove_bite)), 1.5 SECONDS)
 
+
 /mob/living/carbon/human/proc/remove_bite()
 	remove_overlay(BITE_LAYER)
 
@@ -16,6 +17,13 @@
 		return 0
 	if(!force && !COOLDOWN_FINISHED(src, drinkblood_use))
 		return 0
+	if(HAS_TRAIT(victim, TRAIT_SILVER_BLESSED))
+		victim.visible_message(span_danger("[src] erupts in holy fire!"), \
+		span_danger("My silver blessing immolates [src]!"))
+		to_chat(src, span_userdanger("The blessed blood sears me with holy fire!"))
+		src.adjust_divine_fire_stacks(20) //20 is higher than churn_wealthy and churn_undead, saying naughty word in church is 100
+		src.IgniteMob()
+		return 0
 	if(HAS_TRAIT(victim, TRAIT_HUSK) || !CAN_HAVE_BLOOD(victim) || !victim.get_blood_volume())
 		to_chat(src, span_warning("Sigh. No blood."))
 		return 0
@@ -24,6 +32,7 @@
 	if(ingest && reagents.total_volume >= reagents.maximum_volume)
 		to_chat(src, span_warning("Can't drink any more..."))
 		return 0
+
 
 	COOLDOWN_START(src, drinkblood_use, 1 SECONDS)
 	changeNext_move(CLICK_CD_MELEE)

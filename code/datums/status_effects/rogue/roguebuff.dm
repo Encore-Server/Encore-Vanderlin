@@ -594,13 +594,13 @@
 	if (!filter)
 		owner.add_filter(CRANKBOX_FILTER, 2, list("type" = "outline", "color" = outline_colour, "alpha" = 200, "size" = 1))
 	to_chat(owner, span_warning("I feel the wailing box distorting magicks around me!"))
-	ADD_TRAIT(owner, TRAIT_ANTIMAGIC, TRAIT_STATUS_EFFECT(id))
+	ADD_TRAIT(owner, TRAIT_ANTIMAGIC, REF(src))
 
 /datum/status_effect/buff/churnerprotection/on_remove()
 	. = ..()
 	to_chat(owner, span_warning("The wailing box's protection fades..."))
 	owner.remove_filter(CRANKBOX_FILTER)
-	REMOVE_TRAIT(owner, TRAIT_ANTIMAGIC, TRAIT_STATUS_EFFECT(id))
+	REMOVE_TRAIT(owner, TRAIT_ANTIMAGIC, REF(src))
 
 #undef CRANKBOX_FILTER
 
@@ -618,13 +618,15 @@
 
 /datum/status_effect/buff/churnernegative/on_apply()
 	. = ..()
-	ADD_TRAIT(owner, TRAIT_ANTIMAGIC, TRAIT_STATUS_EFFECT(id))
+	ADD_TRAIT(owner, TRAIT_ANTIMAGIC, REF(src))
+	ADD_TRAIT(owner, TRAIT_AKAN_CURSE, REF(src))
 	to_chat(owner, span_warning("I feel as if my connection to the Arcyne disappears entirely. The air feels still..."))
 	owner.visible_message("[owner]'s arcyne aura seems to fade.")
 
 /datum/status_effect/buff/churnernegative/on_remove()
 	. = ..()
-	REMOVE_TRAIT(owner, TRAIT_ANTIMAGIC, TRAIT_STATUS_EFFECT(id))
+	REMOVE_TRAIT(owner, TRAIT_ANTIMAGIC, REF(src))
+	REMOVE_TRAIT(owner, TRAIT_AKAN_CURSE, REF(src))
 	to_chat(owner, span_warning("I feel my connection to the arcyne surround me once more."))
 	owner.visible_message("[owner]'s arcyne aura seems to return once more.")
 
