@@ -127,7 +127,7 @@
 	desc = "A bronze cuirass, its surface etched with swirling wave motifs. Beneath the armor hangs a flowing robe of deep blue cloth, reminiscent of the sea's endless depths. Salt has dulled its shine, but it still carries the dignity of those who serve Mjallidhorn."
 	icon_state = "abyssal_robe"
 	item_state = "abyssal_robe"
-	detail_tag = NULL
+	detail_tag = FALSE
 	smeltresult = /obj/item/ingot/bronze
 	melting_material = /datum/material/bronze
 
@@ -171,7 +171,7 @@
 	desc = "A Qadirid leather coat with steel scales woven with miniscule threads of adamantine, \
 			ensuring the wearer an optimal defence with forgiving breathability and mobility."
 	icon_state = "coat_of_plates"
-	detail_tag = NULL
+	detail_tag = FALSE
 	blocksound = PLATEHIT
 	sellprice = VALUE_SNOWFLAKE_STEEL
 	armor_type = /datum/armor/plate/bad
