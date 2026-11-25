@@ -74,6 +74,11 @@
 	detail_color = COLOR_SHIRLEIGH_BLUE
 	uses_lord_coloring = LORD_PRIMARY
 
+/obj/item/clothing/armor/brigandine/katholikos
+	name = "katholikon brigandine"
+	desc = "A coat with plates concealed inside an exterior fabric. Protects the user from melee impacts and also ranged attacks to an extent. This set comes in the black colours of the Katholikon's Inquisition, and is decorated in mythological iconography of such."
+	detail_color = CLOTHING_ROYAL_BLACK
+
 /obj/item/clothing/armor/brigandine/katholikos/earth
 	name = "earthen brigandine"
 	desc = "A coat with plates concealed inside an exterior fabric. Protects the user from melee impacts and also ranged attacks to an extent. This set comes in the green colours of the Court of Earth, and is decorated in mythological iconography of such."
@@ -190,6 +195,11 @@
 /obj/item/clothing/armor/brigandine/light/garrison
 	detail_color = COLOR_SHIRLEIGH_BLUE
 	uses_lord_coloring = LORD_PRIMARY
+
+/obj/item/clothing/armor/brigandine/light/katholikos
+	name = "katholikon light brigandine"
+	desc = "A light riveted coat with plates concealed inside an exterior fabric. Susceptible to daggers being shoved into your ribs. This set comes in the silver colours of the Katholikon's Inquisition, and is decorated in mythological iconography of such."
+	detail_color = COLOR_SILVER
 
 /obj/item/clothing/armor/brigandine/light/katholikos/earth
 	name = "earthen light brigandine"
