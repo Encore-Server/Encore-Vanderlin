@@ -805,6 +805,13 @@
 /obj/item/reagent_containers/glass/bucket/pot,
 /turf/open/floor/concrete,
 /area/under/cave/oldtown)
+"jf" = (
+/obj/structure/fluff/walldeco/church/line{
+	dir = 1
+	},
+/obj/structure/carpet/purple,
+/turf/open/floor/churchmarble/violet,
+/area/indoors/vampire_manor)
 "jk" = (
 /turf/open/floor/cobble/mossy,
 /area/outdoors/woods/west)
@@ -886,6 +893,10 @@
 "jY" = (
 /turf/open/floor/blocks,
 /area/indoors/lostkeep)
+"ka" = (
+/obj/structure/curtain/redcurtainold,
+/turf/open/floor/churchmarble/violet,
+/area/indoors/vampire_manor)
 "kc" = (
 /obj/item/natural/thorn,
 /obj/structure/fluff/railing/border{
@@ -1642,6 +1653,13 @@
 "sh" = (
 /turf/closed/mineral/bedrock,
 /area/under/cave/lostkeep)
+"so" = (
+/obj/structure/fluff/walldeco/church/line{
+	dir = 1
+	},
+/obj/machinery/light/fueled/wallfire/candle/skull/r,
+/turf/open/floor/churchmarble/violet,
+/area/indoors/vampire_manor)
 "sq" = (
 /turf/open/floor/grass/red,
 /area/outdoors/lostkeep)
@@ -4465,6 +4483,13 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/carpet/lord/center,
 /area/under/cave/oldfort)
+"Xc" = (
+/obj/structure/fluff/walldeco/church/line{
+	dir = 1
+	},
+/obj/machinery/light/fueled/wallfire/candle/skull/l,
+/turf/open/floor/churchmarble/violet,
+/area/indoors/vampire_manor)
 "Xd" = (
 /mob/living/simple_animal/hostile/skeleton/bow,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -9314,7 +9339,7 @@ Qa
 DV
 eB
 eB
-eB
+wb
 wb
 or
 or
@@ -9444,8 +9469,8 @@ Qa
 DV
 eB
 eB
-eB
 wb
+Xc
 or
 or
 or
@@ -9574,8 +9599,8 @@ Qa
 DV
 eB
 eB
-eB
 wb
+jf
 js
 js
 js
@@ -9704,8 +9729,8 @@ Qa
 DV
 eB
 eB
-eB
 wb
+jf
 js
 EB
 or
@@ -9834,9 +9859,9 @@ Qa
 DV
 eB
 eB
-eB
 wb
-js
+so
+ka
 Ka
 tL
 CM
@@ -9964,7 +9989,7 @@ Qa
 DV
 eB
 eB
-eB
+wb
 wb
 Lc
 tm
