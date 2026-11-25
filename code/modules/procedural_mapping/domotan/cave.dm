@@ -1,7 +1,7 @@
 /obj/effect/landmark/mapGenerator/domotan/cave
 	mapGeneratorType = /datum/mapGenerator/domotancaves
-	endTurfX = 255
-	endTurfY = 255
+	endTurfX = 128
+	endTurfY = 128
 	startTurfX = 1
 	startTurfY = 1
 

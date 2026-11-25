@@ -1,8 +1,8 @@
 //genstuff
 /obj/effect/landmark/mapGenerator/decap
 	mapGeneratorType = /datum/mapGenerator/decap
-	endTurfX = 255
-	endTurfY = 255
+	endTurfX = 128
+	endTurfY = 128
 	startTurfX = 1
 	startTurfY = 1
 

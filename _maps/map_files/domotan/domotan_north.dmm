@@ -603,8 +603,8 @@
 /area/indoors/shelter)
 "jN" = (
 /obj/effect/landmark/mapGenerator/domotan/forest{
-	endTurfX = 255;
-	endTurfY = 255
+	endTurfX = 128;
+	endTurfY = 128
 	},
 /obj/effect/landmark/mapGenerator/domotan/cave,
 /turf/closed/mineral/bedrock,

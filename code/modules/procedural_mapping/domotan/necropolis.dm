@@ -1,7 +1,7 @@
 /obj/effect/landmark/mapGenerator/domotan/necropolis_z3
 	mapGeneratorType = /datum/mapGenerator/necropolis_z3
-	endTurfX = 255
-	endTurfY = 255
+	endTurfX = 128
+	endTurfY = 128
 	startTurfX = 1
 	startTurfY = 1
 

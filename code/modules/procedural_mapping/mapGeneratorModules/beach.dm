@@ -1,7 +1,7 @@
 /obj/effect/landmark/mapGenerator/beach
 	mapGeneratorType = /datum/mapGenerator/beach
-	endTurfX = 1
-	endTurfY = 1
+	endTurfX = 128
+	endTurfY = 128
 	startTurfX = 1
 	startTurfY = 1
 

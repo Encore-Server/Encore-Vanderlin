@@ -1,7 +1,7 @@
 /obj/effect/landmark/mapGenerator/domotan/underwater
 	mapGeneratorType = /datum/mapGenerator/underwater
-	endTurfX = 200
-	endTurfY = 200
+	endTurfX = 128
+	endTurfY = 128
 	startTurfX = 1
 	startTurfY = 1
 

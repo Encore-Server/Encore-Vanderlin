@@ -667,8 +667,8 @@
 /area/indoors/hellwatch)
 "hl" = (
 /obj/effect/landmark/mapGenerator/cave{
-	endTurfX = 207;
-	endTurfY = 205
+	endTurfX = 128;
+	endTurfY = 128
 	},
 /turf/closed/sea_fog,
 /area/outdoors/mountains)
@@ -1471,8 +1471,8 @@
 /area/outdoors/mountains)
 "ri" = (
 /obj/effect/landmark/mapGenerator/cave{
-	endTurfX = 207;
-	endTurfY = 205
+	endTurfX = 128;
+	endTurfY = 128
 	},
 /turf/closed/sea_fog,
 /area/outdoors/beach)
@@ -2287,8 +2287,8 @@
 /area/indoors/hellwatch)
 "DY" = (
 /obj/effect/landmark/mapGenerator/decap{
-	endTurfX = 205;
-	endTurfY = 205
+	endTurfX = 128;
+	endTurfY = 128
 	},
 /turf/closed/sea_fog,
 /area/outdoors/mountains)
@@ -3583,8 +3583,8 @@
 /area/outdoors/hellwatch)
 "Tn" = (
 /obj/effect/landmark/mapGenerator/decap{
-	endTurfX = 205;
-	endTurfY = 205
+	endTurfX = 128;
+	endTurfY = 128
 	},
 /turf/closed/sea_fog,
 /area/outdoors/beach)

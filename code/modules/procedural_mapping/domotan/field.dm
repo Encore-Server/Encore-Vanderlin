@@ -1,7 +1,7 @@
 /obj/effect/landmark/mapGenerator/domotan/field
 	mapGeneratorType = /datum/mapGenerator/domotanfields
-	endTurfX = 200
-	endTurfY = 200
+	endTurfX = 128
+	endTurfY = 128
 	startTurfX = 1
 	startTurfY = 1
 

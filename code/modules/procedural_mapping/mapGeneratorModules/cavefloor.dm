@@ -1,8 +1,8 @@
 
 /obj/effect/landmark/mapGenerator/cave
 	mapGeneratorType = /datum/mapGenerator/cave
-	endTurfX = 200
-	endTurfY = 200
+	endTurfX = 128
+	endTurfY = 128
 	startTurfX = 1
 	startTurfY = 1
 
@@ -33,8 +33,8 @@
 
 /obj/effect/landmark/mapGenerator/cave/spider
 	mapGeneratorType = /datum/mapGenerator/cave/spider
-	endTurfX = 64
-	endTurfY = 64
+	endTurfX = 128
+	endTurfY = 128
 	startTurfX = 1
 	startTurfY = 1
 
