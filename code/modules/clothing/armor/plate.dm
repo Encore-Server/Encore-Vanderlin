@@ -69,7 +69,7 @@
 
 /obj/item/clothing/armor/hand
 	slot_flags = ITEM_SLOT_ARMOR
-	name = "coat of armor"
+	name = "general's coat"
 	desc = "A lordly set of armour with accompanying coat. An article worthy of the General of Etgard Keep."
 	body_parts_covered = COVERAGE_ALL_BUT_LEGS
 	icon_state = "shirleighhand"
