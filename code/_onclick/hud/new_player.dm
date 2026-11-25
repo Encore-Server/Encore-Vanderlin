@@ -1,5 +1,5 @@
 #define LOBBY_SCREEN_SLIDE_DURATION 1.25 SECONDS
-#define MOVE_AMOUNT 400
+#define MOVE_AMOUNT 451
 
 /datum/hud/new_player
 	///Whether the menu is currently on the client's screen or not
@@ -57,7 +57,7 @@ INITIALIZE_IMMEDIATE(/atom/movable/screen/lobby)
 	icon_state = "background"
 	plane = LOBBY_MENU_PLANE
 	layer = LOBBY_BACKGROUND_LAYER
-	screen_loc = "WEST:10,TOP:10"
+	screen_loc = "WEST:-158,TOP:0"
 
 /atom/movable/screen/lobby/button
 	mouse_over_pointer = MOUSE_HAND_POINTER
@@ -126,7 +126,7 @@ INITIALIZE_IMMEDIATE(/atom/movable/screen/lobby)
 ///Prefs menu
 /atom/movable/screen/lobby/button/character_setup
 	name = "View Character Setup"
-	screen_loc = "WEST:19,TOP:-10"
+	screen_loc = "WEST:-145,TOP:-120"
 	icon = 'icons/hud/lobby/character_sheet.dmi'
 	icon_state = "character_sheet_disabled"
 	base_icon_state = "character_sheet"
@@ -156,7 +156,7 @@ INITIALIZE_IMMEDIATE(/atom/movable/screen/lobby)
 ///Button that appears before the game has started
 /atom/movable/screen/lobby/button/ready
 	name = "Toggle Readiness"
-	screen_loc = "WEST:20,TOP:-68"
+	screen_loc = "WEST:-145,TOP:-70"
 	icon = 'icons/hud/lobby/ready.dmi'
 	icon_state = "not_ready"
 	base_icon_state = "not_ready"
@@ -204,7 +204,7 @@ INITIALIZE_IMMEDIATE(/atom/movable/screen/lobby)
 ///Shown when the game has started
 /atom/movable/screen/lobby/button/join
 	name = "Join Game"
-	screen_loc = "WEST:20,TOP:-68"
+	screen_loc = "WEST:-145,TOP:-70"
 	icon = 'icons/hud/lobby/join_game.dmi'
 	icon_state = "" //Default to not visible
 	base_icon_state = "join_game"
@@ -267,7 +267,7 @@ INITIALIZE_IMMEDIATE(/atom/movable/screen/lobby)
 
 /atom/movable/screen/lobby/button/lore
 	name = "Lore Primer"
-	screen_loc = "WEST:20,TOP:-101"
+	screen_loc = "WEST:-145,TOP:-195"
 	icon = 'icons/hud/lobby/lore.dmi'
 	icon_state = "lore"
 	base_icon_state = "lore"
@@ -282,7 +282,7 @@ INITIALIZE_IMMEDIATE(/atom/movable/screen/lobby)
 
 /atom/movable/screen/lobby/button/migration
 	name = "Migration"
-	screen_loc = "WEST:20,TOP:-134"
+	screen_loc = "WEST:-145,TOP:-245"
 	icon = 'icons/hud/lobby/migration.dmi'
 	icon_state = "migration"
 	base_icon_state = "migration"
@@ -298,7 +298,7 @@ INITIALIZE_IMMEDIATE(/atom/movable/screen/lobby)
 
 /atom/movable/screen/lobby/button/actors
 	name = "Actors"
-	screen_loc = "WEST:20,TOP:-167"
+	screen_loc = "WEST:-145,TOP:-295"
 	icon = 'icons/hud/lobby/actors.dmi'
 	icon_state = "actors"
 	base_icon_state = "actors"
@@ -312,7 +312,7 @@ INITIALIZE_IMMEDIATE(/atom/movable/screen/lobby)
 
 /atom/movable/screen/lobby/button/observe
 	name = "Observe"
-	screen_loc = "WEST:20,TOP:-200"
+	screen_loc = "WEST:-145,TOP:-355"
 	icon = 'icons/hud/lobby/observe.dmi'
 	icon_state = "observe"
 	base_icon_state = "observe"
@@ -330,8 +330,8 @@ INITIALIZE_IMMEDIATE(/atom/movable/screen/lobby)
 	icon = 'icons/hud/lobby/collapse_expand.dmi'
 	icon_state = "collapse"
 	base_icon_state = "collapse"
-	layer = LOBBY_BELOW_MENU_LAYER
-	screen_loc = "WEST:10,TOP:-390"
+	layer = LOBBY_SHUTTER_LAYER
+	screen_loc = "WEST:-161,TOP:-451"
 	always_shown = TRUE
 
 	var/blip_enabled = TRUE
