@@ -8,7 +8,7 @@
 	map_file_name = "daftmarsh.dmm"
 	// Disabled for Daftmarsh.
 	blacklist = list(
-		/datum/job/courtphys, //Against design idea.
+//		/datum/job/courtphys, //Against design idea.
 		/datum/job/tapster, //Unneeded.
 		/datum/job/shophand, //Unneeded honestly.
 		/datum/job/minor_noble, //Minor nobles will have to approach via pilgrim waves and be guests that way.
