@@ -5439,7 +5439,7 @@
 /area)
 "BY" = (
 /obj/effect/landmark/mapGenerator/forest{
-	endTurfX = 128;;
+	endTurfX = 128;
 	endTurfY = 128
 	},
 /turf/closed/mineral/bedrock,
