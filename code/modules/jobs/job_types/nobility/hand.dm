@@ -85,10 +85,15 @@
 		STAT_PERCEPTION = 3,
 		STAT_INTELLIGENCE = 3,
 		/datum/attribute/skill/combat/axesmaces = 20,
-		/datum/attribute/skill/combat/crossbows = 40,
+		/datum/attribute/skill/combat/polearms = 20,
+		/datum/attribute/skill/combat/whipsflails = 20,
+		/datum/attribute/skill/combat/swords = 20,
+		/datum/attribute/skill/combat/shields = 20,
+		/datum/attribute/skill/combat/crossbows = 20,
+		/datum/attribute/skill/combat/bows = 20,
+		/datum/attribute/skill/combat/firearms = 20,
 		/datum/attribute/skill/combat/wrestling = 30,
 		/datum/attribute/skill/combat/unarmed = 30,
-		/datum/attribute/skill/combat/swords = 40,
 		/datum/attribute/skill/misc/swimming = 30,
 		/datum/attribute/skill/misc/lockpicking = 20,
 		/datum/attribute/skill/misc/climbing = 30,
@@ -96,6 +101,39 @@
 		/datum/attribute/skill/misc/reading = 40,
 		/datum/attribute/skill/misc/riding = 20,
 		/datum/attribute/skill/labor/mathematics = 30
+	)
+
+/datum/attribute_holder/sheet/job/hand/sword
+	raw_attribute_list = list(
+		/datum/attribute/skill/combat/swords = 20,
+	)
+
+/datum/attribute_holder/sheet/job/hand/axesmaces
+	raw_attribute_list = list(
+		/datum/attribute/skill/combat/axesmaces = 20,
+		/datum/attribute/skill/combat/shields = 10,
+	)
+
+/datum/attribute_holder/sheet/job/hand/polearm
+	raw_attribute_list = list(
+		/datum/attribute/skill/combat/polearms = 20,
+	)
+
+/datum/attribute_holder/sheet/job/hand/whipsflails
+	raw_attribute_list = list(
+		/datum/attribute/skill/combat/whipsflails = 20,
+		/datum/attribute/skill/combat/shields = 10,
+	)
+
+/datum/attribute_holder/sheet/job/hand/crossbow
+	raw_attribute_list = list(
+		/datum/attribute/skill/combat/crossbows = 20,
+		/datum/attribute/skill/combat/swords = 10,
+	)
+
+/datum/attribute_holder/sheet/job/hand/firearms
+	raw_attribute_list = list(
+		/datum/attribute/skill/combat/firearms = 20,
 	)
 
 /datum/job/advclass/hand/hand
@@ -115,19 +153,76 @@
 
 /datum/outfit/hand/handclassic
 	name = "Hand (Classic)"
-	shirt = /obj/item/clothing/shirt/undershirt/fancy
-	backr = /obj/item/storage/backpack/satchel/black
+	shirt = /obj/item/clothing/armor/gambeson/hand
+	backr = /obj/item/storage/backpack/satchel
 	backpack_contents = list(
 		/obj/item/weapon/knife/dagger/steel/special = 1,
 		/obj/item/weapon/scabbard/knife/royal = 1,
+		/obj/item/storage/belt/pouch/coins/rich = 1,
 		/obj/item/frumentarii = 1
 	)
 	armor = /obj/item/clothing/armor/hand
-	pants = /obj/item/clothing/pants/trou/formal
+	pants = /obj/item/clothing/pants/chainlegs/splint
 	belt = /obj/item/storage/belt/leather/steel
-	beltl = /obj/item/weapon/sword/rapier/dec
 	scabbards = list(/obj/item/weapon/scabbard/sword/royal)
 	shoes = /obj/item/clothing/shoes/nobleboot/thighboots
+
+/datum/job/advclass/hand/hand/on_roundstart(mob/living/carbon/human/spawned, client/player_client)
+	. = ..()
+	var/static/list/selectable = list(
+		"Decorated Sword" = list(/obj/item/weapon/sword/decorated, /obj/item/weapon/scabbard/sword/royal),
+		"Decorated Rapier" = list(/obj/item/weapon/sword/rapier/dec, /obj/item/weapon/scabbard/sword/royal),
+		"Decorated Sabre" = list(/obj/item/weapon/sword/sabre/dec, /obj/item/weapon/scabbard/sword/royal),
+		"Qadirid Scimitar" = list(/obj/item/weapon/sword/long/rider, /obj/item/weapon/scabbard/sword/royal),
+		"Steppe Sabre" = list(/obj/item/weapon/sword/long/rider/steppe, /obj/item/weapon/scabbard/sword/royal),
+		"Katana" = list(/obj/item/weapon/sword/katana, /obj/item/weapon/scabbard/cudese/gold),
+		"Battle Axe" = list(/obj/item/weapon/axe/battle),
+		"Partizan" = list(/obj/item/weapon/polearm/spear/steel/partizan),
+		"Steel Warhammer" = list(/obj/item/weapon/mace/warhammer/steel, /obj/item/weapon/shield/tower/metal),
+		"Steel Flail" = list(/obj/item/weapon/flail/sflail, /obj/item/weapon/shield/tower/metal),
+		"Crossbow + Shortsword" = list(/obj/item/gun/ballistic/bow/cross, /obj/item/ammo_holder/quiver/bolts, /obj/item/weapon/sword/short, /obj/item/weapon/scabbard/sword/royal),
+		"Musket + Bayonet" = list(/obj/item/gun/ballistic/powder/musket, /obj/item/weapon/knife/dagger/bayonet, /obj/item/storage/belt/pouch/bullets, /obj/item/reagent_containers/glass/bottle/aflask),
+	)
+	var/choice = spawned.select_equippable(player_client, selectable, message = "Choose Your Arms", title = "HAND")
+	if(!choice)
+		return
+	switch(choice)
+		if("Decorated Sword")
+			spawned.attributes?.add_sheet(/datum/attribute_holder/sheet/job/hand/sword)
+		if("Decorated Rapier")
+			spawned.attributes?.add_sheet(/datum/attribute_holder/sheet/job/hand/sword)
+		if("Decorated Sabre")
+			spawned.attributes?.add_sheet(/datum/attribute_holder/sheet/job/hand/sword)
+		if("Qadirid Scimitar")
+			spawned.attributes?.add_sheet(/datum/attribute_holder/sheet/job/hand/sword)
+		if("Steppe Sabre")
+			spawned.attributes?.add_sheet(/datum/attribute_holder/sheet/job/hand/sword)
+		if("Katana")
+			spawned.attributes?.add_sheet(/datum/attribute_holder/sheet/job/hand/sword)
+		if("Battle Axe")
+			spawned.attributes?.add_sheet(/datum/attribute_holder/sheet/job/hand/axesmaces)
+		if("Partizan")
+			spawned.attributes?.add_sheet(/datum/attribute_holder/sheet/job/hand/polearm)
+		if("Steel Warhammer")
+			spawned.attributes?.add_sheet(/datum/attribute_holder/sheet/job/hand/axesmaces)
+		if("Steel Flail")
+			spawned.attributes?.add_sheet(/datum/attribute_holder/sheet/job/hand/whipsflails)
+		if("Crossbow + Shortsword")
+			spawned.attributes?.add_sheet(/datum/attribute_holder/sheet/job/hand/crossbow)
+		if("Musket + Bayonet")
+			spawned.attributes?.add_sheet(/datum/attribute_holder/sheet/job/hand/firearms)
+
+// Helmet Selection (Hand Exclusive. Less expansive than the Royal Knights because you're not the frontline commander. No decorated helms because your armour is already a huge drip advantage.)
+/datum/job/advclass/hand/hand/on_roundstart(mob/living/carbon/human/spawned, client/player_client)
+	. = ..()
+	var/static/list/selectablehelmets = list(
+		"Hounskull" = /obj/item/clothing/head/helmet/visored/hounskull,
+		"Royal Knight Helmet" = /obj/item/clothing/head/helmet/visored/royalknight,
+		"Visored Sallet" = /obj/item/clothing/head/helmet/visored/sallet,
+		"Bellow Sallet" = /obj/item/clothing/head/helmet/visored/bellow,
+	)
+
+	spawned.select_equippable(player_client, selectablehelmets, message = "Choose Your Helmet", title = "HAND")
 
 /datum/attribute_holder/sheet/job/spymaster
 	raw_attribute_list = list(
