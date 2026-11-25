@@ -293,7 +293,7 @@
 
 	var/last_aimhchange = 0
 	var/aimheight = 11
-	var/cmode_music = 'sound/music/cmode/combat.ogg'
+	var/cmode_music = 'sound/blank.ogg'
 
 	/// new title given by an admin.
 	var/admin_title = null
