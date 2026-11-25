@@ -603,7 +603,7 @@
 /datum/anvil_recipe/armor/steel/brigadine_garrison
 	name = "Garrison Brigandine (+Bar x2, +Cloth)"
 	additional_items = list(/obj/item/ingot/steel, /obj/item/ingot/steel, /obj/item/natural/cloth)
-	created_item = /obj/item/clothing/armor/brigandine/katholikos/garrison
+	created_item = /obj/item/clothing/armor/brigandine/garrison
 	craftdiff = 3
 
 /*
