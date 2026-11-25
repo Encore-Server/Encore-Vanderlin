@@ -17,7 +17,7 @@
 		/datum/job/undertaker,
 		/datum/job/captain,
 		/datum/job/consort,
-		/datum/job/courtphys,
+//		/datum/job/courtphys,
 		/datum/job/hand,
 		/datum/job/merchant,
 		/datum/job/forestwarden,

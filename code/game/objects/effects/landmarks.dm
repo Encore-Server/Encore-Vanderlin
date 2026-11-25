@@ -115,10 +115,11 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 /obj/effect/landmark/start/magician
 	name = JOB_COURT_MAGE
 	jobs_to_spawn = list(JOB_COURT_MAGE)
-
+/*
 /obj/effect/landmark/start/courtphys
 	name = JOB_COURT_PHYSICIAN
 	jobs_to_spawn = list(JOB_COURT_PHYSICIAN)
+*/
 /*
 /obj/effect/landmark/start/guardsman
 	name = JOB_CITY_WATCH
