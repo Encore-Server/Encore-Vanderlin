@@ -67,6 +67,26 @@
 	icon_state = "heartfelt_hand"
 	item_state = "heartfelt_hand"
 
+/obj/item/clothing/armor/hand
+	slot_flags = ITEM_SLOT_ARMOR
+	name = "coat of armor"
+	desc = "A lordly set of armour with accompanying coat. An article worthy of the General of Etgard Keep."
+	body_parts_covered = COVERAGE_ALL_BUT_LEGS
+	icon_state = "shirleighhand"
+	item_state = "shirleighhand"
+	detail_tag = "_detail"
+	detail_color = COLOR_SHIRLEIGH_BLUE
+	dyeable = TRUE
+	armor_type = /datum/armor/plate
+	allowed_sex = list(MALE, FEMALE)
+	nodismemsleeves = TRUE
+	blocking_behavior = null
+	max_integrity = ARMOR_INT_CHEST_PLATE_STEEL
+	anvilrepair = /datum/attribute/skill/craft/armor_repair
+	melting_material = /datum/material/steel
+	melt_amount = 375
+	armor_class = AC_HEAVY
+
 //................ Full Plate Armor ............... //
 /obj/item/clothing/armor/plate/full
 	name = "plate armor"

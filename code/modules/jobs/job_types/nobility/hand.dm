@@ -109,7 +109,8 @@
 	honorary = "General"
 
 	traits = list(
-		TRAIT_HEAVYARMOR
+		TRAIT_HEAVYARMOR,
+		TRAIT_MEDIUMARMOR
 	)
 
 /datum/outfit/hand/handclassic
@@ -118,9 +119,10 @@
 	backr = /obj/item/storage/backpack/satchel/black
 	backpack_contents = list(
 		/obj/item/weapon/knife/dagger/steel/special = 1,
+		/obj/item/weapon/scabbard/knife/royal = 1,
 		/obj/item/frumentarii = 1
 	)
-	armor = /obj/item/clothing/armor/leather/jacket/handjacket
+	armor = /obj/item/clothing/armor/hand
 	pants = /obj/item/clothing/pants/trou/formal
 	belt = /obj/item/storage/belt/leather/steel
 	beltl = /obj/item/weapon/sword/rapier/dec

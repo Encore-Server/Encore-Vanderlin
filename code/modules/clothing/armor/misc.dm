@@ -47,6 +47,8 @@
 	name = "brigandine"
 	desc = "A coat with plates concealed inside an exterior fabric. Protects the user from melee impacts and also ranged attacks to an extent."
 	icon_state = "brigandine"
+	detail_tag = "_detail"
+	dyeable = TRUE
 	blocksound = SOFTHIT
 	equip_delay_self = 4 SECONDS
 	unequip_delay_self = 4 SECONDS
@@ -67,6 +69,30 @@
 /obj/item/clothing/armor/brigandine/Initialize()
 	. = ..()
 	AddComponent(/datum/component/item_equipped_movement_rustle, custom_sounds = SFX_PLATE_COAT_STEP)
+
+/obj/item/clothing/armor/brigandine/garrison
+	detail_color = COLOR_SHIRLEIGH_BLUE
+	uses_lord_coloring = LORD_PRIMARY
+
+/obj/item/clothing/armor/brigandine/katholikos/earth
+	name = "earthen brigandine"
+	desc = "A coat with plates concealed inside an exterior fabric. Protects the user from melee impacts and also ranged attacks to an extent. This set comes in the green colours of the Court of Earth, and is decorated in mythological iconography of such."
+	detail_color = COLOR_ASSEMBLY_GREEN
+
+/obj/item/clothing/armor/brigandine/katholikos/frost
+	name = "frost brigandine"
+	desc = "A coat with plates concealed inside an exterior fabric. Protects the user from melee impacts and also ranged attacks to an extent. This set comes in the blue colours of the Court of Frost, and is decorated in mythological iconography of such."
+	detail_color = COLOR_ASSEMBLY_LBLUE
+
+/obj/item/clothing/armor/brigandine/katholikos/air
+	name = "air brigandine"
+	desc = "A coat with plates concealed inside an exterior fabric. Protects the user from melee impacts and also ranged attacks to an extent. This set comes in the purple colours of the Court of Air, and is decorated in mythological iconography of such."
+	detail_color = COLOR_ASSEMBLY_PURPLE
+
+/obj/item/clothing/armor/brigandine/katholikos/fire
+	name = "flame brigandine"
+	desc = "A coat with plates concealed inside an exterior fabric. Protects the user from melee impacts and also ranged attacks to an extent. This set comes in the red colours of the Court of Fire and its solitary patron, and is decorated in mythological iconography of such."
+	detail_color = CLOTHING_MADDER_RED
 
 /obj/item/clothing/armor/brigandine/cudese
 	name = "cudese half-scaleplate"
@@ -110,6 +136,7 @@
 	mob_overlay_icon = 'icons/roguetown/clothing/special/onmob/captain.dmi'
 	sleeved = 'icons/roguetown/clothing/special/onmob/captain.dmi'
 	detail_tag = "_detail"
+	dyeable = TRUE
 	detail_color = CLOTHING_BERRY_BLUE
 	blocksound = SOFTHIT
 	equip_delay_self = 4 SECONDS
@@ -149,6 +176,8 @@
 	name = "lightweight brigandine"
 	desc = "A light riveted coat with plates concealed inside an exterior fabric. Susceptible to daggers being shoved into your ribs."
 	icon_state = "light_brigandine"
+	detail_tag = "_detail"
+	dyeable = TRUE
 	body_parts_covered = COVERAGE_TORSO
 	max_integrity = ARMOR_INT_CHEST_PLATE_BRIGANDINE
 	smeltresult = /obj/item/ingot/iron
@@ -157,6 +186,30 @@
 	w_class = WEIGHT_CLASS_BULKY
 	prevent_crits = ALL_EXCEPT_STAB
 	item_weight = 3.95 KILOGRAMS
+
+/obj/item/clothing/armor/brigandine/light/garrison
+	detail_color = COLOR_SHIRLEIGH_BLUE
+	uses_lord_coloring = LORD_PRIMARY
+
+/obj/item/clothing/armor/brigandine/light/katholikos/earth
+	name = "earthen light brigandine"
+	desc = "A light riveted coat with plates concealed inside an exterior fabric. Susceptible to daggers being shoved into your ribs. This set comes in the green colours of the Court of Earth, and is decorated in mythological iconography of such."
+	detail_color = COLOR_ASSEMBLY_GREEN
+
+/obj/item/clothing/armor/brigandine/light/katholikos/frost
+	name = "frost light brigandine"
+	desc = "A light riveted coat with plates concealed inside an exterior fabric. Susceptible to daggers being shoved into your ribs. This set comes in the blue colours of the Court of Frost, and is decorated in mythological iconography of such."
+	detail_color = COLOR_ASSEMBLY_LBLUE
+
+/obj/item/clothing/armor/brigandine/light/katholikos/air
+	name = "air light brigandine"
+	desc = "A light riveted coat with plates concealed inside an exterior fabric. Susceptible to daggers being shoved into your ribs. This set comes in the purple colours of the Court of Air, and is decorated in mythological iconography of such."
+	detail_color = COLOR_ASSEMBLY_PURPLE
+
+/obj/item/clothing/armor/brigandine/light/katholikos/fire
+	name = "flame light brigandine"
+	desc = "A light riveted coat with plates concealed inside an exterior fabric. Susceptible to daggers being shoved into your ribs. This set comes in the red colours of the Court of Fire and its solitary patron, and is decorated in mythological iconography of such."
+	detail_color = CLOTHING_MADDER_RED
 
 /obj/item/clothing/armor/plate/bronze
 	name = "bronze cuirass"

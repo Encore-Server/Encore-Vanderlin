@@ -193,7 +193,7 @@
 
 /datum/outfit/royalknight/knight
 	name = JOB_ROYAL_KNIGHT
-	armor = /obj/item/clothing/armor/brigandine
+	armor = /obj/item/clothing/armor/brigandine/garrison
 	gloves = /obj/item/clothing/gloves/chain
 	shoes = /obj/item/clothing/shoes/boots/armor/light
 
