@@ -262,7 +262,7 @@
 	name = "Forgotten child (Prince)"
 	pants = /obj/item/clothing/pants/tights
 	shirt = /obj/item/clothing/armor/gambeson/arming
-	armor = /obj/item/clothing/armor/brigandine/light
+	armor = /obj/item/clothing/armor/brigandine/light/garrison
 	gloves = /obj/item/clothing/gloves/fingerless
 	beltl = /obj/item/storage/keyring/heir
 	belt = /obj/item/storage/belt/leather

@@ -496,6 +496,36 @@
 	additional_items = list(/obj/item/natural/cloth)
 	created_item = /obj/item/clothing/armor/brigandine/light
 
+/datum/anvil_recipe/armor/iron/light_brigandine_katholikos
+	name = "Katholikos Lightweight Brigandine (+cloth)"
+	additional_items = list(/obj/item/natural/cloth)
+	created_item = /obj/item/clothing/armor/brigandine/light/katholikos
+
+/datum/anvil_recipe/armor/iron/light_brigandine_earth
+	name = "Earthen Lightweight Brigandine (+cloth)"
+	additional_items = list(/obj/item/natural/cloth)
+	created_item = /obj/item/clothing/armor/brigandine/light/katholikos/earth
+
+/datum/anvil_recipe/armor/iron/light_brigandine_frost
+	name = "Frost Lightweight Brigandine (+cloth)"
+	additional_items = list(/obj/item/natural/cloth)
+	created_item = /obj/item/clothing/armor/brigandine/light/katholikos/frost
+
+/datum/anvil_recipe/armor/iron/light_brigandine_air
+	name = "Air Lightweight Brigandine (+cloth)"
+	additional_items = list(/obj/item/natural/cloth)
+	created_item = /obj/item/clothing/armor/brigandine/light/katholikos/air
+
+/datum/anvil_recipe/armor/iron/light_brigandine_fire
+	name = "Flame Lightweight Brigandine (+cloth)"
+	additional_items = list(/obj/item/natural/cloth)
+	created_item = /obj/item/clothing/armor/brigandine/light/katholikos/fire
+
+/datum/anvil_recipe/armor/iron/light_brigandine_garrison
+	name = "Garrison Lightweight Brigandine (+cloth)"
+	additional_items = list(/obj/item/natural/cloth)
+	created_item = /obj/item/clothing/armor/brigandine/light/garrison
+
 ///////////////////////////////////////////////
 // --------- STEEL -----------
 /datum/anvil_recipe/armor/steel
@@ -550,13 +580,54 @@
 	additional_items = list(/obj/item/ingot/steel, /obj/item/ingot/steel, /obj/item/natural/cloth)
 	created_item = /obj/item/clothing/armor/brigandine
 	craftdiff = 3
-/*
+
+/datum/anvil_recipe/armor/steel/brigadine_katholikos
+	name = "Katholikos Brigandine (+Bar x2, +Cloth)"
+	additional_items = list(/obj/item/ingot/steel, /obj/item/ingot/steel, /obj/item/natural/cloth)
+	created_item = /obj/item/clothing/armor/brigandine/katholikos
+	craftdiff = 3
+
+/datum/anvil_recipe/armor/steel/brigadine_earth
+	name = "Earth Brigandine (+Bar x2, +Cloth)"
+	additional_items = list(/obj/item/ingot/steel, /obj/item/ingot/steel, /obj/item/natural/cloth)
+	created_item = /obj/item/clothing/armor/brigandine/katholikos/earth
+	craftdiff = 3
+
+/datum/anvil_recipe/armor/steel/brigadine_frost
+	name = "Frost Brigandine (+Bar x2, +Cloth)"
+	additional_items = list(/obj/item/ingot/steel, /obj/item/ingot/steel, /obj/item/natural/cloth)
+	created_item = /obj/item/clothing/armor/brigandine/katholikos/frost
+	craftdiff = 3
+
+/datum/anvil_recipe/armor/steel/brigadine_air
+	name = "Air Brigandine (+Bar x2, +Cloth)"
+	additional_items = list(/obj/item/ingot/steel, /obj/item/ingot/steel, /obj/item/natural/cloth)
+	created_item = /obj/item/clothing/armor/brigandine/katholikos/air
+	craftdiff = 3
+
+/datum/anvil_recipe/armor/steel/brigadine_fire
+	name = "Fire Brigandine (+Bar x2, +Cloth)"
+	additional_items = list(/obj/item/ingot/steel, /obj/item/ingot/steel, /obj/item/natural/cloth)
+	created_item = /obj/item/clothing/armor/brigandine/katholikos/fire
+	craftdiff = 3
+
+/datum/anvil_recipe/armor/steel/brigadine_garrison
+	name = "Garrison Brigandine (+Bar x2, +Cloth)"
+	additional_items = list(/obj/item/ingot/steel, /obj/item/ingot/steel, /obj/item/natural/cloth)
+	created_item = /obj/item/clothing/armor/brigandine/garrison
+	craftdiff = 3
+
 /datum/anvil_recipe/armor/steel/brigadine
 	name = "Captain's brigandine (+Bar x2, +Cloth)"
 	additional_items = list(/obj/item/ingot/steel, /obj/item/ingot/steel, /obj/item/natural/cloth)
 	created_item = /obj/item/clothing/armor/brigandine/captain
 	craftdiff = 6
-*/
+
+/datum/anvil_recipe/armor/steel/handcoat
+	name = "General's Coat (+Bar x2, +Cloth, +Cured Leather)"
+	additional_items = list(/obj/item/ingot/steel,/obj/item/ingot/steel, /obj/item/natural/cloth, /obj/item/natural/hide/cured, /obj/item/natural/hide/cured)
+	created_item = /obj/item/clothing/armor/hand
+	craftdiff = 6
 
 /datum/anvil_recipe/armor/steel/helmetbuc
 	name = "Great Helm"

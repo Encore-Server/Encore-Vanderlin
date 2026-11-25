@@ -581,7 +581,6 @@
 	name = JOB_TEMPLAR
 	head = /obj/item/clothing/head/helmet/heavy/necked
 	cloak = /obj/item/clothing/cloak/tabard/crusader/tief
-	armor = /obj/item/clothing/armor/brigandine/light
 	shirt = /obj/item/clothing/armor/gambeson/heavy
 	pants = /obj/item/clothing/pants/chainlegs/splint
 	shoes = /obj/item/clothing/shoes/boots/leather/advanced
@@ -594,29 +593,37 @@
 		if(/datum/patron/divine/visires)
 			wrists = /obj/item/clothing/neck/psycross/silver/divine/visires
 			head = /obj/item/clothing/head/helmet/heavy/necked/visires
+			armor = /obj/item/clothing/armor/brigandine/light/katholikos/fire
 		if(/datum/patron/divine/akan)
 			wrists = /obj/item/clothing/neck/psycross/silver/divine/akan
 			head = /obj/item/clothing/head/helmet/heavy/necked/akan
+			armor = /obj/item/clothing/armor/brigandine/light/katholikos/air
 			backpack_contents += /obj/item/chalk
 		if(/datum/patron/divine/gani)
 			wrists = /obj/item/clothing/neck/psycross/silver/divine/gani
 			head = /obj/item/clothing/head/helmet/heavy/necked/ganihelm
+			armor = /obj/item/clothing/armor/brigandine/light/katholikos/earth
 		if(/datum/patron/divine/valdala)
 			wrists = /obj/item/clothing/neck/psycross/silver/divine/valdala
 			head = /obj/item/clothing/head/helmet/heavy/necked/valdala
+			armor = /obj/item/clothing/armor/brigandine/light/katholikos/frost
 		if(/datum/patron/divine/erdl)
 			wrists = /obj/item/clothing/neck/psycross/silver/divine/erdl
 			head = /obj/item/clothing/head/helmet/heavy/necked/erdlhelm
+			armor = /obj/item/clothing/armor/brigandine/light/katholikos/air
 			backpack_contents += /obj/item/reagent_containers/glass/bottle/poison
 		if(/datum/patron/divine/pomette)
 			head = /obj/item/clothing/head/helmet/sallet/pomettic
 			wrists = /obj/item/clothing/neck/psycross/silver/divine/pomette
+			armor = /obj/item/clothing/armor/brigandine/light/katholikos/earth
 		if(/datum/patron/divine/mordsol)
 			wrists = /obj/item/clothing/neck/psycross/silver/divine/mordsol
 			head = /obj/item/clothing/head/helmet/heavy/necked/mordsol
+			armor = /obj/item/clothing/armor/brigandine/light/katholikos/frost
 		if(/datum/patron/divine/golerkanh)
 			wrists = /obj/item/clothing/neck/psycross/silver/divine/golerkanh
 			head = /obj/item/clothing/head/helmet/heavy/necked/golerkanhhelm
+			armor = /obj/item/clothing/armor/brigandine/light/katholikos/earth
 		if(/datum/patron/divine/mjallidhorn)
 			head = /obj/item/clothing/head/helmet/heavy/necked/mjallidhorn
 			armor = /obj/item/clothing/armor/brigandine/mjallidhorn
@@ -624,3 +631,4 @@
 		if(/datum/patron/divine/iliope)
 			wrists = /obj/item/clothing/neck/psycross/silver/divine/iliope
 			head = /obj/item/clothing/head/helmet/heavy/necked/iliope
+			armor = /obj/item/clothing/armor/brigandine/light/katholikos/air
