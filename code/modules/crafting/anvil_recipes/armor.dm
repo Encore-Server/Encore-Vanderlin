@@ -496,6 +496,13 @@
 	additional_items = list(/obj/item/natural/cloth)
 	created_item = /obj/item/clothing/armor/brigandine/light
 
+/* Dummy check for the linter.
+/datum/anvil_recipe/armor/iron/light_brigandine_katholikos
+	name = "Katholikos Lightweight Brigandine (+cloth)"
+	additional_items = list(/obj/item/natural/cloth)
+	created_item = /obj/item/clothing/armor/brigandine/light/katholikos
+*/
+
 /datum/anvil_recipe/armor/iron/light_brigandine_earth
 	name = "Earthen Lightweight Brigandine (+cloth)"
 	additional_items = list(/obj/item/natural/cloth)
@@ -576,6 +583,14 @@
 	created_item = /obj/item/clothing/armor/brigandine
 	craftdiff = 3
 
+/* This is a dummy entry to shut up the linter.
+/datum/anvil_recipe/armor/steel/brigadine_katholikos
+	name = "Brigandine (+Bar x2, +Cloth)"
+	additional_items = list(/obj/item/ingot/steel, /obj/item/ingot/steel, /obj/item/natural/cloth)
+	created_item = /obj/item/clothing/armor/brigandine/katholikos
+	craftdiff = 3
+*/
+
 /datum/anvil_recipe/armor/steel/brigadine_earth
 	name = "Earth Brigandine (+Bar x2, +Cloth)"
 	additional_items = list(/obj/item/ingot/steel, /obj/item/ingot/steel, /obj/item/natural/cloth)
@@ -611,6 +626,12 @@
 	name = "Captain's brigandine (+Bar x2, +Cloth)"
 	additional_items = list(/obj/item/ingot/steel, /obj/item/ingot/steel, /obj/item/natural/cloth)
 	created_item = /obj/item/clothing/armor/brigandine/captain
+	craftdiff = 6
+
+/datum/anvil_recipe/armor/steel/handcoat
+	name = "General's Coat (+Bar x2)"
+	additional_items = list(/obj/item/ingot/steel,/obj/item/ingot/steel)
+	created_item = /obj/item/clothing/armor/hand
 	craftdiff = 6
 */
 
