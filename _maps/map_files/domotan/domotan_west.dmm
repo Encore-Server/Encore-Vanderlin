@@ -1971,8 +1971,8 @@
 /area/indoors/lostkeep)
 "oi" = (
 /obj/effect/landmark/mapGenerator/domotan/forest{
-	endTurfX = 155;
-	endTurfY = 255
+	endTurfX = 128;
+	endTurfY = 128
 	},
 /turf/closed/mineral/bedrock,
 /area)
@@ -6460,7 +6460,7 @@
 /area/under/cavewet)
 "TF" = (
 /obj/effect/landmark/mapGenerator/domotan/cave{
-	endTurfX = 155
+	endTurfX = 128;
 	},
 /turf/closed/mineral/bedrock,
 /area)

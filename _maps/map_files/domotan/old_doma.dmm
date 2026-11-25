@@ -7006,8 +7006,8 @@
 /area/indoors/town/keep)
 "ePd" = (
 /obj/effect/landmark/mapGenerator/domotan/field{
-	endTurfX = 125;
-	endTurfY = 130
+	endTurfX = 128;
+	endTurfY = 128
 	},
 /turf/closed/mineral/bedrock,
 /area/under/cave)

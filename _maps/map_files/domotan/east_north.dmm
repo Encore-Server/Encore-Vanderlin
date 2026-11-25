@@ -51,8 +51,8 @@
 /area/outdoors/mountains/decap/miracle_caldera)
 "gD" = (
 /obj/effect/landmark/mapGenerator/decap{
-	endTurfX = 127;
-	endTurfY = 127
+	endTurfX = 128;
+	endTurfY = 128
 	},
 /turf/closed/mineral/bedrock,
 /area)
@@ -75,8 +75,8 @@
 /area/under/cavelava)
 "iA" = (
 /obj/effect/landmark/mapGenerator/cave{
-	endTurfX = 127;
-	endTurfY = 127
+	endTurfX = 128;
+	endTurfY = 128
 	},
 /turf/closed/mineral/bedrock,
 /area)
@@ -162,8 +162,8 @@
 /area/outdoors/mountains)
 "qP" = (
 /obj/effect/landmark/mapGenerator/cave{
-	endTurfX = 127;
-	endTurfY = 127
+	endTurfX = 128;
+	endTurfY = 128
 	},
 /turf/closed/mineral/bedrock,
 /area/under/cavelava)
@@ -402,8 +402,8 @@
 /area/outdoors/mountains/decap)
 "YL" = (
 /obj/effect/landmark/mapGenerator/decap{
-	endTurfX = 127;
-	endTurfY = 127
+	endTurfX = 128;
+	endTurfY = 128
 	},
 /turf/closed/mineral/bedrock,
 /area/under/cavelava)

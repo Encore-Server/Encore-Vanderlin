@@ -99,12 +99,12 @@
 /area/under/cavewet)
 "gA" = (
 /obj/effect/landmark/mapGenerator/domotan/forest{
-	endTurfX = 127;
-	endTurfY = 127
+	endTurfX = 128;
+	endTurfY = 128
 	},
 /obj/effect/landmark/mapGenerator/domotan/cave{
-	endTurfX = 127;
-	endTurfY = 127
+	endTurfX = 128;
+	endTurfY = 128
 	},
 /turf/closed/mineral/bedrock,
 /area/under/cave)
@@ -283,12 +283,12 @@
 /area/outdoors/beach)
 "uc" = (
 /obj/effect/landmark/mapGenerator/domotan/forest{
-	endTurfX = 127;
-	endTurfY = 127
+	endTurfX = 128;
+	endTurfY = 128
 	},
 /obj/effect/landmark/mapGenerator/domotan/cave{
-	endTurfX = 127;
-	endTurfY = 127
+	endTurfX = 128;
+	endTurfY = 128
 	},
 /turf/closed/mineral/bedrock,
 /area/outdoors/woods/etgard)

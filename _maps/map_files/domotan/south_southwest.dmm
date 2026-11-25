@@ -396,8 +396,8 @@
 /area/indoors/shelter)
 "fy" = (
 /obj/effect/landmark/mapGenerator/domotan/forest{
-	endTurfX = 127;
-	endTurfY = 127
+	endTurfX = 128;
+	endTurfY = 128
 	},
 /turf/closed/basic,
 /area/indoors)
@@ -783,8 +783,8 @@
 /area/outdoors/bog)
 "mp" = (
 /obj/effect/landmark/mapGenerator/beach{
-	endTurfX = 127;
-	endTurfY = 127
+	endTurfX = 128;
+	endTurfY = 128
 	},
 /turf/closed/basic,
 /area/indoors)
@@ -2285,8 +2285,8 @@
 /area/outdoors/bog)
 "Pq" = (
 /obj/effect/landmark/mapGenerator/cave{
-	endTurfX = 127;
-	endTurfY = 127
+	endTurfX = 128;
+	endTurfY = 128
 	},
 /turf/closed/basic,
 /area/indoors)

@@ -1,8 +1,8 @@
 
 /obj/effect/landmark/mapGenerator/bog
 	mapGeneratorType = /datum/mapGenerator/bog
-	endTurfX = 200
-	endTurfY = 200
+	endTurfX = 128
+	endTurfY = 128
 	startTurfX = 1
 	startTurfY = 1
 

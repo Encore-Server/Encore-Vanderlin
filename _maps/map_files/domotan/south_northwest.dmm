@@ -1426,8 +1426,8 @@
 /area/under/cavewet)
 "wR" = (
 /obj/effect/landmark/mapGenerator/cave{
-	endTurfX = 127;
-	endTurfY = 127
+	endTurfX = 128;
+	endTurfY = 128
 	},
 /turf/closed/basic,
 /area/under/cave)
@@ -2261,8 +2261,8 @@
 /area/outdoors/bog)
 "Kt" = (
 /obj/effect/landmark/mapGenerator/beach{
-	endTurfX = 127;
-	endTurfY = 127
+	endTurfX = 128;
+	endTurfY = 128
 	},
 /turf/closed/basic,
 /area/under/cave)
@@ -3021,8 +3021,8 @@
 /area/outdoors/woods/crossroads)
 "Vg" = (
 /obj/effect/landmark/mapGenerator/domotan/forest{
-	endTurfX = 127;
-	endTurfY = 127
+	endTurfX = 128;
+	endTurfY = 128
 	},
 /turf/closed/basic,
 /area/under/cave)
