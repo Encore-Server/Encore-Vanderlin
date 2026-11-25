@@ -48,6 +48,7 @@
 	desc = "A coat with plates concealed inside an exterior fabric. Protects the user from melee impacts and also ranged attacks to an extent."
 	icon_state = "brigandine"
 	detail_tag = "_detail"
+	detail_color = "#1d4468"
 	dyeable = TRUE
 	blocksound = SOFTHIT
 	equip_delay_self = 4 SECONDS
@@ -126,6 +127,7 @@
 	desc = "A bronze cuirass, its surface etched with swirling wave motifs. Beneath the armor hangs a flowing robe of deep blue cloth, reminiscent of the sea's endless depths. Salt has dulled its shine, but it still carries the dignity of those who serve Mjallidhorn."
 	icon_state = "abyssal_robe"
 	item_state = "abyssal_robe"
+	detail_tag = NULL
 	smeltresult = /obj/item/ingot/bronze
 	melting_material = /datum/material/bronze
 
@@ -169,6 +171,7 @@
 	desc = "A Qadirid leather coat with steel scales woven with miniscule threads of adamantine, \
 			ensuring the wearer an optimal defence with forgiving breathability and mobility."
 	icon_state = "coat_of_plates"
+	detail_tag = NULL
 	blocksound = PLATEHIT
 	sellprice = VALUE_SNOWFLAKE_STEEL
 	armor_type = /datum/armor/plate/bad
@@ -182,6 +185,7 @@
 	desc = "A light riveted coat with plates concealed inside an exterior fabric. Susceptible to daggers being shoved into your ribs."
 	icon_state = "light_brigandine"
 	detail_tag = "_detail"
+	detail_color = "#363b3e"
 	dyeable = TRUE
 	body_parts_covered = COVERAGE_TORSO
 	max_integrity = ARMOR_INT_CHEST_PLATE_BRIGANDINE
