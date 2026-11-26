@@ -30176,7 +30176,6 @@
 /turf/closed/wall/mineral/stonebrick,
 /area/outdoors/town)
 "rbj" = (
-/obj/item/reagent_containers/glass/bottle/healthpot,
 /obj/structure/rack,
 /turf/open/floor/carpet/red,
 /area/indoors/town/keep/garrison)
@@ -32021,14 +32020,15 @@
 /turf/open/floor/tile/diamond/blue,
 /area/indoors/town/keep)
 "sqj" = (
-/obj/structure/closet/crate/chest/neu_iron,
-/obj/item/reagent_containers/glass/bottle/healthpot/labelled,
-/obj/item/reagent_containers/glass/bottle/healthpot/labelled,
-/obj/item/reagent_containers/glass/bottle/healthpot/labelled,
-/obj/item/reagent_containers/glass/bottle/healthpot/labelled,
-/obj/item/reagent_containers/glass/bottle/healthpot/labelled,
-/obj/item/reagent_containers/glass/bottle/healthpot/labelled,
-/obj/item/reagent_containers/glass/bottle/healthpot/labelled,
+/obj/structure/closet/crate/chest/neu_iron{
+	name = "lifeblood chest"
+	},
+/obj/item/reagent_containers/glass/bottle/vial/healthpot,
+/obj/item/reagent_containers/glass/bottle/vial/healthpot,
+/obj/item/reagent_containers/glass/bottle/vial/healthpot,
+/obj/item/reagent_containers/glass/bottle/vial/healthpot,
+/obj/item/reagent_containers/glass/bottle/vial/healthpot,
+/obj/item/reagent_containers/glass/bottle/vial/healthpot,
 /turf/open/floor/cobble,
 /area/indoors/town/keep/garrison)
 "sqy" = (
