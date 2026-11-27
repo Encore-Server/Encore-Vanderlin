@@ -1928,11 +1928,11 @@
 /turf/open/floor/grass/cold,
 /area/outdoors/town/plaza)
 "afI" = (
-/obj/structure/fluff/railing/border{
-	dir = 4
-	},
 /obj/structure/fluff/railing/wood,
 /obj/machinery/light/fueled/torchholder/r,
+/obj/structure/fluff/walldeco/church/line{
+	dir = 4
+	},
 /turf/open/openspace,
 /area/indoors/town/church/chapel)
 "afJ" = (
@@ -1942,11 +1942,11 @@
 /turf/open/floor/metal/alt,
 /area/indoors/town/church/chapel)
 "afK" = (
-/obj/structure/fluff/railing/border{
-	dir = 8
-	},
 /obj/structure/fluff/railing/wood,
 /obj/machinery/light/fueled/torchholder/l,
+/obj/structure/fluff/walldeco/church/line{
+	dir = 8
+	},
 /turf/open/openspace,
 /area/indoors/town/church/chapel)
 "afL" = (
@@ -2015,10 +2015,10 @@
 /turf/open/floor/ruinedwood/chevron,
 /area/indoors/town/clinic_large)
 "afX" = (
-/obj/structure/fluff/railing/border{
+/obj/machinery/light/fueled/torchholder/r,
+/obj/structure/fluff/walldeco/church/line{
 	dir = 4
 	},
-/obj/machinery/light/fueled/torchholder/r,
 /turf/open/openspace,
 /area/indoors/town/church/chapel)
 "afY" = (
@@ -2039,10 +2039,10 @@
 /turf/closed/wall/mineral/pipe,
 /area/outdoors/town/roofs)
 "agb" = (
-/obj/structure/fluff/railing/border{
+/obj/machinery/light/fueled/torchholder/l,
+/obj/structure/fluff/walldeco/church/line{
 	dir = 8
 	},
-/obj/machinery/light/fueled/torchholder/l,
 /turf/open/openspace,
 /area/indoors/town/church/chapel)
 "agc" = (
@@ -2839,6 +2839,13 @@
 "auv" = (
 /turf/open/floor/metal,
 /area/indoors/town/steward)
+"auO" = (
+/obj/structure/window/stained/yellow,
+/obj/structure/curtain/redcurtainold/dir{
+	dir = 4
+	},
+/turf/open/floor/churchmarble,
+/area/indoors/town/church)
 "avj" = (
 /obj/structure/fluff/railing/border{
 	dir = 5
@@ -2929,6 +2936,13 @@
 /obj/structure/door/stone{
 	name = "Tower"
 	},
+/obj/structure/fluff/walldeco/bath/wallrope{
+	dir = 9;
+	alpha = 255;
+	name = "plenary council wallrope";
+	desc = "Braided read thread, hung over the threshold of the doorway to the Katholikos' cathedral. Their presence denotes an event of great imporat taking place this dae. To enter without the express permission of Temple clergy is a grave offense to such proceedings."
+	},
+/obj/effect/mapping_helpers/access/locker,
 /turf/open/floor/church,
 /area/indoors/town/church)
 "awN" = (
@@ -3306,14 +3320,12 @@
 /turf/open/floor/grass/cold,
 /area/outdoors/town/neighborhood/east)
 "aJe" = (
-/obj/structure/chair/wood/alt/chair3{
-	dir = 8
-	},
 /obj/structure/fluff/railing/border{
 	dir = 4
 	},
-/obj/effect/landmark/start/churchling{
-	dir = 8
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/structure/fluff/wallclock{
+	dir = 3
 	},
 /turf/open/floor/ruinedwood,
 /area/indoors/town/church)
@@ -3345,9 +3357,19 @@
 /turf/open/floor/church,
 /area/indoors/town/church/crypt)
 "aJI" = (
-/obj/structure/chair/stool,
-/turf/open/floor/ruinedwood/turned,
-/area/indoors/town/church)
+/obj/structure/door/stone{
+	name = "Church"
+	},
+/obj/effect/mapping_helpers/access/keyset/church/inquisition,
+/obj/effect/mapping_helpers/access/locker,
+/obj/structure/fluff/walldeco/bath/wallrope{
+	dir = 9;
+	alpha = 255;
+	name = "plenary council wallrope";
+	desc = "Braided read thread, hung over the threshold of the doorway to the Katholikos' cathedral. Their presence denotes an event of great imporat taking place this dae. To enter without the express permission of Temple clergy is a grave offense to such proceedings."
+	},
+/turf/open/floor/church/violet,
+/area/indoors/town/church/inquisition)
 "aJL" = (
 /obj/effect/decal/cobbleedge{
 	dir = 10;
@@ -3780,6 +3802,7 @@
 "aWX" = (
 /obj/structure/rack/shelf/biggest,
 /obj/effect/spawner/guaranteed_map_spawner/listed/cutlery/middlehigh,
+/obj/effect/spawner/guaranteed_map_spawner/listed/cutlery/middlehigh,
 /turf/open/floor/blocks/green,
 /area/indoors/town/church)
 "aWZ" = (
@@ -3891,7 +3914,7 @@
 /turf/open/openspace,
 /area/indoors/town/noble_manor/yellow)
 "baA" = (
-/obj/structure/chair/wood/alt{
+/obj/structure/chair/wood/alt/uncomfortable{
 	dir = 8
 	},
 /turf/open/floor/ruinedwood,
@@ -3902,6 +3925,8 @@
 	},
 /obj/machinery/light/fueled/torchholder/r,
 /obj/structure/fake_machine/scomm/r,
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/ruinedwood/darker,
 /area/indoors/town/church/chapel)
@@ -4881,6 +4906,8 @@
 /obj/structure/fluff/railing/wood{
 	dir = 8
 	},
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/ruinedwood/darker,
 /area/indoors/town/church/chapel)
 "bFv" = (
@@ -4930,10 +4957,19 @@
 /turf/open/floor/blocks,
 /area/indoors/town/keep/garrison)
 "bGf" = (
-/obj/structure/table/wood/reinf_long,
-/obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/ruinedwood,
-/area/indoors/town/church)
+/obj/structure/door/stone{
+	name = "Church"
+	},
+/obj/effect/mapping_helpers/access/keyset/church/general,
+/obj/structure/fluff/walldeco/bath/wallrope{
+	dir = 4;
+	alpha = 255;
+	name = "plenary council wallrope";
+	desc = "Braided read thread, hung over the threshold of the doorway to the Katholikos' cathedral. Their presence denotes an event of great imporat taking place this dae. To enter without the express permission of Temple clergy is a grave offense to such proceedings."
+	},
+/obj/effect/mapping_helpers/access/locker,
+/turf/open/floor/churchmarble,
+/area/indoors/town/church/chapel)
 "bGk" = (
 /obj/machinery/light/fueled/firebowl/stump,
 /turf/open/floor/cobble,
@@ -5210,9 +5246,8 @@
 /turf/open/floor/wood,
 /area/indoors/town/keep)
 "bOT" = (
-/obj/machinery/light/fueled/hearth,
-/obj/item/reagent_containers/glass/bucket/pot,
 /obj/machinery/light/fueled/oven/east,
+/obj/structure/well/fountain/sink,
 /turf/open/floor/cobble,
 /area/indoors/town/church)
 "bPf" = (
@@ -5878,6 +5913,10 @@
 	},
 /obj/effect/mapping_helpers/access/keyset/church/general,
 /obj/effect/mapping_helpers/access/locker,
+/obj/structure/fluff/walldeco/bath/wallrope{
+	dir = 9;
+	alpha = 255
+	},
 /turf/open/floor/cobble,
 /area/indoors/town/church)
 "cng" = (
@@ -6047,6 +6086,13 @@
 	},
 /turf/open/floor/twig,
 /area/indoors/soilsons)
+"ctU" = (
+/obj/structure/chair/bench/church/mid,
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/ruinedwood/darker,
+/area/indoors/town/church/chapel)
 "cuc" = (
 /turf/open/floor/grass/cold,
 /area/outdoors/town/neighborhood/west)
@@ -6086,7 +6132,26 @@
 /obj/structure/closet/crate/chest/old_crate{
 	name = "grain crate"
 	},
-/obj/effect/spawner/guaranteed_map_spawner/listed/food/grain,
+/obj/item/reagent_containers/food/snacks/produce/grain/wheat,
+/obj/item/reagent_containers/food/snacks/produce/grain/wheat,
+/obj/item/reagent_containers/food/snacks/produce/grain/wheat,
+/obj/item/reagent_containers/food/snacks/produce/grain/wheat,
+/obj/item/reagent_containers/food/snacks/produce/grain/wheat,
+/obj/item/reagent_containers/food/snacks/produce/grain/wheat,
+/obj/item/reagent_containers/food/snacks/produce/grain/wheat,
+/obj/item/reagent_containers/food/snacks/produce/grain/wheat,
+/obj/item/reagent_containers/food/snacks/produce/grain/wheat,
+/obj/item/reagent_containers/food/snacks/produce/grain/wheat,
+/obj/item/reagent_containers/food/snacks/produce/grain/sunreed,
+/obj/item/reagent_containers/food/snacks/produce/grain/sunreed,
+/obj/item/reagent_containers/food/snacks/produce/grain/sunreed,
+/obj/item/reagent_containers/food/snacks/produce/grain/sunreed,
+/obj/item/reagent_containers/food/snacks/produce/grain/sunreed,
+/obj/item/reagent_containers/food/snacks/produce/grain/sunreed,
+/obj/item/reagent_containers/food/snacks/produce/grain/wheat,
+/obj/item/reagent_containers/food/snacks/produce/grain/wheat,
+/obj/item/reagent_containers/food/snacks/produce/grain/wheat,
+/obj/item/reagent_containers/food/snacks/produce/grain/wheat,
 /turf/open/floor/blocks/green,
 /area/indoors/town/church)
 "cvf" = (
@@ -6172,6 +6237,14 @@
 /obj/structure/fluff/walldeco/painting/flower,
 /turf/closed/wall/mineral/wood,
 /area/indoors/town/keep)
+"cxb" = (
+/obj/structure/chair/bench/church/mid,
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/ruinedwood,
+/area/indoors/town/church/chapel)
 "cxT" = (
 /obj/structure/fluff/railing/wood{
 	dir = 1;
@@ -6726,18 +6799,36 @@
 /turf/open/floor/blocks/stonered,
 /area/indoors/town/waterworks)
 "cMf" = (
-/obj/structure/table/wood{
-	dir = 10;
-	icon_state = "largetable"
-	},
 /obj/effect/decal/cobbleedge{
 	dir = 10;
 	icon_state = "cobbleedge-w"
 	},
-/obj/item/weapon/knife/cleaver{
-	pixel_x = 1;
-	pixel_y = 4
+/obj/structure/closet/crate/chest/old_crate{
+	name = "imported ingredients";
+	desc = "Imported for the conclave. Big letters have been scrawled on the lid: 'DO NOT TOUCH UNTIL CONCLAVE'."
 	},
+/obj/item/reagent_containers/food/snacks/fish/carp,
+/obj/item/reagent_containers/food/snacks/fish/carp,
+/obj/item/reagent_containers/food/snacks/fish/carp,
+/obj/item/reagent_containers/food/snacks/fish/carp,
+/obj/item/reagent_containers/food/snacks/fish/carp,
+/obj/item/reagent_containers/food/snacks/fish/carp,
+/obj/item/reagent_containers/food/snacks/fish/carp,
+/obj/item/reagent_containers/food/snacks/fish/carp,
+/obj/item/reagent_containers/food/snacks/meat/fatty,
+/obj/item/reagent_containers/food/snacks/meat/fatty,
+/obj/item/reagent_containers/food/snacks/meat/fatty,
+/obj/item/reagent_containers/food/snacks/meat/fatty,
+/obj/item/reagent_containers/food/snacks/meat/fatty,
+/obj/item/reagent_containers/food/snacks/meat/fatty,
+/obj/item/reagent_containers/food/snacks/meat/poultry,
+/obj/item/reagent_containers/food/snacks/meat/poultry,
+/obj/item/reagent_containers/food/snacks/meat/poultry,
+/obj/item/reagent_containers/food/snacks/meat/poultry,
+/obj/item/reagent_containers/food/snacks/meat/poultry,
+/obj/item/reagent_containers/food/snacks/meat/poultry,
+/obj/item/reagent_containers/food/snacks/meat/poultry,
+/obj/item/reagent_containers/food/snacks/meat/poultry,
 /turf/open/floor/ruinedwood/turned,
 /area/indoors/town/church)
 "cMy" = (
@@ -7183,6 +7274,13 @@
 /obj/structure/door/stone{
 	name = "Church"
 	},
+/obj/structure/fluff/walldeco/bath/wallrope{
+	dir = 6;
+	name = "plenary council wallrope";
+	desc = "Braided read thread, hung over the threshold of the doorway to the Katholikos' cathedral. Their presence denotes an event of great imporat taking place this dae. To enter without the express permission of Temple clergy is a grave offense to such proceedings.";
+	alpha = 255
+	},
+/obj/effect/mapping_helpers/access/locker,
 /turf/open/floor/ruinedwood/turned,
 /area/indoors/town/church/chapel)
 "dcE" = (
@@ -7423,6 +7521,15 @@
 /obj/structure/carpet/navy,
 /turf/open/floor/church,
 /area/indoors/town/vault)
+"djM" = (
+/obj/structure/fluff/walldeco/church/line{
+	dir = 1
+	},
+/obj/structure/fluff/walldeco/church/line{
+	dir = 8
+	},
+/turf/open/openspace,
+/area/indoors/town/church/chapel)
 "dkz" = (
 /obj/machinery/light/fueledstreet/blue/wall{
 	dir = 8
@@ -7914,19 +8021,26 @@
 /turf/open/floor/grass/cold,
 /area/outdoors/exposed)
 "dCj" = (
-/obj/structure/table/wood{
-	icon_state = "largetable";
-	dir = 6
+/obj/structure/closet/crate/chest/wickertrunk/red{
+	desc = "Imported for the conclave. Big letters have been scrawled on the lid: 'DO NOT TOUCH UNTIL CONCLAVE'.";
+	name = "imported ingredients"
 	},
-/obj/item/reagent_containers/peppermill{
-	pixel_x = -6;
-	pixel_y = 8
-	},
-/obj/item/reagent_containers/food/snacks/meat/salami{
-	pixel_x = 1;
-	pixel_y = 5
-	},
-/obj/item/reagent_containers/food/snacks/produce/grain/wheat,
+/obj/item/reagent_containers/powder/herbs,
+/obj/item/reagent_containers/powder/herbs,
+/obj/item/reagent_containers/powder/herbs,
+/obj/item/reagent_containers/powder/herbs,
+/obj/item/reagent_containers/powder/herbs,
+/obj/item/reagent_containers/powder/herbs,
+/obj/item/reagent_containers/powder/herbs,
+/obj/item/reagent_containers/powder/herbs,
+/obj/item/reagent_containers/food/snacks/sugar,
+/obj/item/reagent_containers/food/snacks/sugar,
+/obj/item/reagent_containers/food/snacks/sugar,
+/obj/item/reagent_containers/food/snacks/sugar,
+/obj/item/reagent_containers/food/snacks/sugar,
+/obj/item/reagent_containers/food/snacks/sugar,
+/obj/item/reagent_containers/food/snacks/sugar,
+/obj/item/reagent_containers/food/snacks/sugar,
 /turf/open/floor/ruinedwood/turned,
 /area/indoors/town/church)
 "dCw" = (
@@ -8276,9 +8390,9 @@
 /turf/open/floor/blocks/stonered,
 /area/under/cavewet)
 "dNQ" = (
-/obj/structure/chair/bench{
-	pixel_y = 16
-	},
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/structure/chair/bench/church/r,
+/obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/ruinedwood/darker,
 /area/indoors/town/church/chapel)
@@ -8541,9 +8655,6 @@
 /turf/open/floor/ruinedwood,
 /area/under/town/basement/smugglers_den)
 "dWF" = (
-/obj/structure/chair/wood/alt/chair3{
-	dir = 4
-	},
 /obj/effect/landmark/start/churchling{
 	dir = 4
 	},
@@ -8632,7 +8743,7 @@
 /area/under/cavewet)
 "eah" = (
 /obj/structure/fluff/hanging_banners/church,
-/obj/structure/fluff/railing/border{
+/obj/structure/fluff/walldeco/church/line{
 	dir = 4
 	},
 /turf/open/openspace,
@@ -9118,6 +9229,13 @@
 /obj/structure/door/stone{
 	name = "Church"
 	},
+/obj/structure/fluff/walldeco/bath/wallrope{
+	dir = 6;
+	name = "plenary council wallrope";
+	desc = "Braided read thread, hung over the threshold of the doorway to the Katholikos' cathedral. Their presence denotes an event of great imporat taking place this dae. To enter without the express permission of Temple clergy is a grave offense to such proceedings.";
+	alpha = 255
+	},
+/obj/effect/mapping_helpers/access/locker,
 /turf/open/floor/ruinedwood,
 /area/indoors/town/church)
 "eso" = (
@@ -9558,6 +9676,13 @@
 	},
 /turf/open/openspace,
 /area/indoors/town)
+"eFZ" = (
+/obj/structure/window/stained/yellow,
+/obj/structure/curtain/redcurtainold/dir{
+	dir = 1
+	},
+/turf/open/floor/churchmarble,
+/area/indoors/town/church)
 "eGe" = (
 /obj/structure/fluff/railing/border{
 	dir = 6
@@ -10139,6 +10264,17 @@
 "eZf" = (
 /turf/open/floor/cobble,
 /area/indoors/town/tavern/saiga)
+"eZl" = (
+/obj/structure/fluff/railing/wood{
+	dir = 4
+	},
+/obj/structure/fluff/railing/wood,
+/obj/structure/chair/bench/church/r,
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/ruinedwood,
+/area/outdoors/town)
 "fac" = (
 /obj/structure/roguetent/preopen,
 /turf/open/floor/ruinedwood/darker,
@@ -10228,6 +10364,16 @@
 /obj/structure/fluff/walldeco/sparrowflag,
 /turf/closed/wall/mineral/wood,
 /area/indoors/town/merc_guild)
+"fcw" = (
+/obj/structure/fluff/railing/wood,
+/obj/structure/chair/bench/church/mid,
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/ruinedwood,
+/area/outdoors/town)
 "fcP" = (
 /obj/structure/fluff/walldeco/banner{
 	pixel_y = 24
@@ -10273,6 +10419,10 @@
 	},
 /turf/open/floor/ruinedwood,
 /area/indoors/town/keep)
+"fdE" = (
+/obj/effect/landmark/start/templar,
+/turf/open/floor/church,
+/area/indoors/town/church/chapel)
 "fdK" = (
 /obj/structure/fluff/railing/border{
 	dir = 6
@@ -10306,6 +10456,12 @@
 	},
 /turf/open/floor/ruinedwood/turned,
 /area/outdoors/town)
+"feJ" = (
+/obj/structure/chair/bench/church,
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/ruinedwood,
+/area/indoors/town/church/chapel)
 "ffc" = (
 /obj/structure/fluff/railing/border{
 	dir = 4
@@ -10484,6 +10640,31 @@
 /obj/structure/flora/ausbushes/ywflowers,
 /turf/open/floor/grass/healthy,
 /area/outdoors/town)
+"fkb" = (
+/obj/structure/closet/crate/chest/old_crate{
+	name = "imported ingredients";
+	desc = "Imported for the conclave. Big letters have been scrawled on the lid: 'DO NOT TOUCH UNTIL CONCLAVE'."
+	},
+/obj/item/natural/chaff/sunreed,
+/obj/item/natural/chaff/sunreed,
+/obj/item/natural/chaff/sunreed,
+/obj/item/natural/chaff/sunreed,
+/obj/item/natural/chaff/sunreed,
+/obj/item/natural/chaff/sunreed,
+/obj/item/reagent_containers/food/snacks/produce/fruit/tamto,
+/obj/item/reagent_containers/food/snacks/produce/fruit/tamto,
+/obj/item/reagent_containers/food/snacks/produce/fruit/tamto,
+/obj/item/reagent_containers/food/snacks/produce/fruit/tamto,
+/obj/item/reagent_containers/food/snacks/produce/fruit/tamto,
+/obj/item/reagent_containers/food/snacks/produce/fruit/tamto,
+/obj/item/reagent_containers/food/snacks/produce/fruit/dragonfruit,
+/obj/item/reagent_containers/food/snacks/produce/fruit/dragonfruit,
+/obj/item/reagent_containers/food/snacks/produce/fruit/dragonfruit,
+/obj/item/reagent_containers/food/snacks/produce/fruit/mango,
+/obj/item/reagent_containers/food/snacks/produce/fruit/mango,
+/obj/item/reagent_containers/food/snacks/produce/fruit/mango,
+/turf/open/floor/ruinedwood/turned,
+/area/indoors/town/church)
 "fkv" = (
 /obj/effect/mapping_helpers/access/keyset/church/vault,
 /obj/effect/mapping_helpers/access/locker,
@@ -10527,6 +10708,12 @@
 	},
 /turf/open/floor/grass/cold,
 /area/outdoors/exposed)
+"flw" = (
+/obj/machinery/light/fueled/torchholder/l,
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/ruinedwood,
+/area/indoors/town/church/chapel)
 "flz" = (
 /obj/structure/fluff/walldeco/church/line{
 	dir = 8
@@ -11179,6 +11366,17 @@
 	},
 /turf/open/floor/ruinedwood/two,
 /area/indoors/town/keep)
+"fCz" = (
+/obj/structure/fluff/walldeco/church/line{
+	dir = 1
+	},
+/turf/open/openspace,
+/area/indoors/town/church/chapel)
+"fCF" = (
+/obj/structure/window/stained/yellow,
+/obj/structure/curtain/redcurtainold/dir,
+/turf/open/floor/churchmarble,
+/area/indoors/town/church)
 "fCI" = (
 /obj/structure/fluff/railing/wood{
 	dir = 4
@@ -11216,6 +11414,23 @@
 /obj/effect/landmark/events/haunts,
 /turf/open/floor/cobble/alt,
 /area/outdoors/town/neighborhood/east)
+"fDC" = (
+/obj/effect/mapping_helpers/access/keyset/church/general,
+/obj/structure/stairs{
+	dir = 4
+	},
+/obj/structure/door/stone{
+	name = "Church"
+	},
+/obj/structure/fluff/walldeco/bath/wallrope{
+	dir = 9;
+	alpha = 255;
+	name = "plenary council wallrope";
+	desc = "Braided read thread, hung over the threshold of the doorway to the Katholikos' cathedral. Their presence denotes an event of great imporat taking place this dae. To enter without the express permission of Temple clergy is a grave offense to such proceedings."
+	},
+/obj/effect/mapping_helpers/access/locker,
+/turf/open/floor/church,
+/area/indoors/town/church/chapel)
 "fDG" = (
 /obj/machinery/light/fueledstreet/blue/wall{
 	dir = 1
@@ -11293,10 +11508,9 @@
 /turf/open/floor/blocks/stonered,
 /area/indoors/town/waterworks)
 "fGx" = (
-/obj/structure/chair/bench/church/r{
-	dir = 1
+/obj/structure/chair/wood/alt{
+	dir = 8
 	},
-/obj/structure/carpet/red,
 /turf/open/floor/church,
 /area/indoors/town/church/chapel)
 "fGy" = (
@@ -11349,6 +11563,18 @@
 "fIa" = (
 /turf/closed/wall/mineral/stonebrick,
 /area/indoors/town/keep/garrison)
+"fIe" = (
+/obj/structure/table/wood/fancy/red,
+/obj/item/reagent_containers/glass/cup/silver{
+	pixel_x = -6;
+	pixel_y = 4
+	},
+/obj/item/reagent_containers/glass/cup/silver{
+	pixel_x = 1;
+	pixel_y = -4
+	},
+/turf/open/floor/church,
+/area/indoors/town/church/chapel)
 "fIp" = (
 /turf/open/water/ocean/abyss,
 /area/under/underwater)
@@ -11359,6 +11585,8 @@
 /obj/structure/fluff/railing/wood{
 	dir = 8
 	},
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/ruinedwood/darker,
 /area/indoors/town/church/chapel)
 "fIP" = (
@@ -11535,6 +11763,11 @@
 "fOH" = (
 /turf/closed/wall/mineral/stone/moss/red,
 /area/indoors/town/keep/kitchen/cellar)
+"fOI" = (
+/obj/machinery/light/fueled/torchholder/l,
+/obj/structure/fluff/walldeco/church/line,
+/turf/open/openspace,
+/area/indoors/town/church/chapel)
 "fOK" = (
 /obj/effect/landmark/house_spot{
 	default_template = /datum/map_template/student_dorm;
@@ -11809,9 +12042,6 @@
 /turf/open/floor/metal/alt,
 /area/indoors/town/dwarfin/shared)
 "fZm" = (
-/obj/structure/chair/wood/alt/chair3{
-	dir = 8
-	},
 /obj/structure/fluff/railing/border{
 	dir = 4
 	},
@@ -11912,6 +12142,15 @@
 /obj/structure/carpet/purple,
 /turf/open/floor/wood,
 /area/indoors/town/tavern/saiga)
+"gcu" = (
+/obj/structure/table/wood/fancy/red,
+/obj/item/reagent_containers/glass/cup/silver{
+	pixel_x = 1;
+	pixel_y = 4
+	},
+/obj/structure/fluff/clutter/books,
+/turf/open/floor/church,
+/area/indoors/town/church/chapel)
 "gcw" = (
 /obj/machinery/light/fueledstreet/blue/wall{
 	dir = 4
@@ -12059,6 +12298,7 @@
 /obj/structure/door/stone{
 	name = "Church"
 	},
+/obj/effect/mapping_helpers/access/locker,
 /turf/open/floor/ruinedwood,
 /area/indoors/town/church/chapel)
 "ghT" = (
@@ -12203,6 +12443,13 @@
 	name = "Church"
 	},
 /obj/effect/mapping_helpers/access/keyset/church/general,
+/obj/structure/fluff/walldeco/bath/wallrope{
+	dir = 9;
+	alpha = 255;
+	name = "plenary council wallrope";
+	desc = "Braided read thread, hung over the threshold of the doorway to the Katholikos' cathedral. Their presence denotes an event of great imporat taking place this dae. To enter without the express permission of Temple clergy is a grave offense to such proceedings."
+	},
+/obj/effect/mapping_helpers/access/locker,
 /turf/open/floor/churchmarble,
 /area/indoors/town/church/chapel)
 "gmO" = (
@@ -12234,9 +12481,13 @@
 /turf/open/floor/sand,
 /area/outdoors/beach)
 "gon" = (
-/obj/structure/chair/bench/church{
-	dir = 1
+/obj/structure/fluff/railing/tall/retaining{
+	dir = 8
 	},
+/obj/structure/fluff/railing/wood{
+	dir = 8
+	},
+/obj/machinery/light/fueled/torchholder/metal_torch/east,
 /turf/open/floor/church,
 /area/indoors/town/church/chapel)
 "goB" = (
@@ -12251,6 +12502,16 @@
 	},
 /turf/open/floor/ruinedwood/two,
 /area/indoors/town/keep)
+"goE" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/structure/chair/bench/church/mid,
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/ruinedwood/darker,
+/area/indoors/town/church/chapel)
 "gpc" = (
 /obj/structure/closet/crate/chest,
 /obj/item/rope/chain,
@@ -12570,6 +12831,11 @@
 /turf/open/floor/churchmarble,
 /area/indoors/town/church/crypt)
 "guX" = (
+/obj/structure/table/wood{
+	dir = 10;
+	icon_state = "largetable"
+	},
+/obj/item/chair/stool,
 /turf/open/floor/cobble,
 /area/indoors/town/church)
 "gvg" = (
@@ -12699,6 +12965,13 @@
 /obj/machinery/light/fueledstreet/blue/wall,
 /turf/open/floor/church/purple,
 /area/indoors/town/keep/archivist)
+"gAH" = (
+/obj/machinery/light/fueled/torchholder/l,
+/obj/structure/fluff/walldeco/church/line{
+	dir = 1
+	},
+/turf/open/openspace,
+/area/indoors/town/church/chapel)
 "gAP" = (
 /obj/structure/lever/hidden/inquisition{
 	redstone_id = "church_cell"
@@ -13037,6 +13310,12 @@
 "gMO" = (
 /turf/open/floor/ruinedwood/chevron,
 /area/indoors/town/keep)
+"gMR" = (
+/obj/structure/table/wood/fancy/red,
+/obj/item/reagent_containers/glass/cup/silver,
+/obj/structure/fluff/clutter/books,
+/turf/open/floor/church,
+/area/indoors/town/church/chapel)
 "gMY" = (
 /obj/machinery/light/fueled/torchholder/r,
 /turf/open/floor/rooftop,
@@ -13235,7 +13514,7 @@
 /area/outdoors/town)
 "gUb" = (
 /obj/machinery/light/fueled/torchholder/r,
-/obj/structure/table/wood,
+/obj/structure/chair/bench/church/r,
 /turf/open/floor/ruinedwood/darker,
 /area/indoors/town/church/chapel)
 "gVl" = (
@@ -13504,6 +13783,11 @@
 /obj/item/needle,
 /turf/open/floor/churchrough/purple,
 /area/indoors/town/church)
+"hbn" = (
+/obj/machinery/light/fueled/torchholder/r,
+/obj/structure/fluff/walldeco/church/line,
+/turf/open/openspace,
+/area/indoors/town/church/chapel)
 "hbw" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/tile/diamond/purple,
@@ -14393,9 +14677,10 @@
 /turf/open/floor/grass/cold,
 /area/outdoors/exposed)
 "hAH" = (
-/obj/structure/fluff/railing/border{
+/obj/structure/fluff/walldeco/church/line{
 	dir = 8
 	},
+/obj/structure/fluff/walldeco/church/line,
 /turf/open/openspace,
 /area/indoors/town/church/chapel)
 "hAV" = (
@@ -14510,7 +14795,7 @@
 /obj/structure/fluff/walldeco/church/line{
 	dir = 4
 	},
-/obj/structure/fermentation_keg/water,
+/obj/structure/fermentation_keg/hagwoodbitter,
 /turf/open/floor/church,
 /area/indoors/town/church)
 "hEe" = (
@@ -14755,6 +15040,18 @@
 /obj/structure/flora/hotspring_rocks,
 /turf/open/floor/grass/cold,
 /area/outdoors/town/neighborhood/west)
+"hLy" = (
+/obj/structure/door/stone{
+	name = "Church"
+	},
+/obj/effect/mapping_helpers/access/keyset/church/general,
+/obj/effect/mapping_helpers/access/locker,
+/obj/structure/fluff/walldeco/bath/wallrope{
+	dir = 4;
+	alpha = 255
+	},
+/turf/open/floor/ruinedwood/turned,
+/area/indoors/town/church)
 "hLK" = (
 /obj/structure/fermentation_keg/random/beer,
 /turf/open/floor/blocks,
@@ -15314,6 +15611,13 @@
 /obj/structure/door/stone{
 	name = "Church"
 	},
+/obj/structure/fluff/walldeco/bath/wallrope{
+	dir = 6;
+	name = "plenary council wallrope";
+	desc = "Braided read thread, hung over the threshold of the doorway to the Katholikos' cathedral. Their presence denotes an event of great imporat taking place this dae. To enter without the express permission of Temple clergy is a grave offense to such proceedings.";
+	alpha = 255
+	},
+/obj/effect/mapping_helpers/access/locker,
 /turf/open/floor/church,
 /area/indoors/town/church/chapel)
 "icp" = (
@@ -15473,6 +15777,13 @@
 /obj/structure/door/stone{
 	name = "Church"
 	},
+/obj/structure/fluff/walldeco/bath/wallrope{
+	dir = 4;
+	alpha = 255;
+	name = "plenary council wallrope";
+	desc = "Braided read thread, hung over the threshold of the doorway to the Katholikos' cathedral. Their presence denotes an event of great imporat taking place this dae. To enter without the express permission of Temple clergy is a grave offense to such proceedings."
+	},
+/obj/effect/mapping_helpers/access/locker,
 /turf/open/floor/church,
 /area/indoors/town/church/chapel)
 "ijY" = (
@@ -15828,6 +16139,17 @@
 	},
 /turf/open/floor/naturalstone,
 /area/indoors/town/keep/magician)
+"isK" = (
+/obj/structure/fluff/walldeco/church/line{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/landmark/start/churchling{
+	dir = 4
+	},
+/turf/open/floor/ruinedwood,
+/area/indoors/town/church)
 "isN" = (
 /obj/machinery/light/fueled/torchholder/r,
 /turf/open/floor/ruinedwood/platform,
@@ -15912,8 +16234,13 @@
 /obj/structure/fluff/walldeco/church/line{
 	dir = 8
 	},
-/obj/structure/fluff/walldeco/churchbanner{
-	pixel_y = 27
+/obj/effect/landmark/start/monk{
+	dir = 4
+	},
+/obj/structure/fluff/walldeco/churchbanner/red{
+	pixel_y = 28;
+	name = "katholikon banner";
+	desc = "A proud banner demarking the territory of the Katholikon's Inquisition. Silver for purity of faith, red for the blood of the faithful."
 	},
 /turf/open/floor/churchmarble,
 /area/indoors/town/church)
@@ -16221,24 +16548,32 @@
 /area/indoors/town/tavern/saiga)
 "iDV" = (
 /obj/structure/table/wood,
-/obj/item/reagent_containers/glass/cup/wooden{
-	pixel_x = 6;
-	pixel_y = -5
-	},
-/obj/item/reagent_containers/glass/cup/wooden{
-	pixel_x = -5;
-	pixel_y = -3
-	},
-/obj/item/reagent_containers/glass/cup/wooden{
-	pixel_x = -8;
-	pixel_y = 9
-	},
-/obj/item/reagent_containers/glass/cup/wooden{
-	pixel_x = 7;
-	pixel_y = 8
-	},
 /obj/structure/fluff/walldeco/church/line{
 	dir = 4
+	},
+/obj/item/reagent_containers/glass/bottle/elfred{
+	pixel_y = 18;
+	pixel_x = -6
+	},
+/obj/item/reagent_containers/glass/bottle/elfred{
+	pixel_y = 18;
+	pixel_x = 6
+	},
+/obj/item/reagent_containers/glass/bottle/elfblue{
+	pixel_x = -6;
+	pixel_y = 14
+	},
+/obj/item/reagent_containers/glass/bottle/elfblue{
+	pixel_x = 6;
+	pixel_y = 14
+	},
+/obj/item/reagent_containers/glass/bottle/elfred{
+	pixel_x = -6;
+	pixel_y = 10
+	},
+/obj/item/reagent_containers/glass/bottle/elfred{
+	pixel_x = 6;
+	pixel_y = 10
 	},
 /turf/open/floor/church,
 /area/indoors/town/church)
@@ -16643,6 +16978,8 @@
 /area/indoors/town/church/inquisition)
 "iSH" = (
 /obj/machinery/light/fueled/torchholder/l,
+/obj/machinery/light/fueled/hearth,
+/obj/item/reagent_containers/glass/bucket/pot,
 /turf/open/floor/cobble,
 /area/indoors/town/church)
 "iSN" = (
@@ -16716,13 +17053,9 @@
 /turf/open/floor/grass/cold,
 /area/outdoors/town/neighborhood/west)
 "iVa" = (
-/obj/structure/fluff/railing/border{
-	dir = 8
-	},
-/obj/structure/fluff/railing/border{
-	dir = 4
-	},
-/turf/open/openspace,
+/obj/structure/fluff/railing/tall/retaining,
+/obj/structure/fluff/railing/wood,
+/turf/open/floor/woodturned,
 /area/indoors/town/church/chapel)
 "iVc" = (
 /obj/structure/door/weak/bolt{
@@ -17018,6 +17351,12 @@
 	},
 /turf/open/floor/cobblerock,
 /area/outdoors/town)
+"jbG" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/ruinedwood/darker,
+/area/indoors/town/church/chapel)
 "jbQ" = (
 /turf/open/floor/metal,
 /area/indoors/town/church/chapel)
@@ -17437,17 +17776,11 @@
 	icon_state = "longtable";
 	dir = 1
 	},
-/obj/item/natural/bundle/stick{
-	amount = 10
+/obj/item/reagent_containers/food/snacks/cheddar/aged{
+	pixel_y = 6
 	},
-/obj/item/natural/bundle/stick{
-	amount = 10
-	},
-/obj/item/natural/bundle/stick{
-	amount = 10
-	},
-/obj/item/natural/bundle/stick{
-	amount = 10
+/obj/item/reagent_containers/food/snacks/cheddar/aged{
+	pixel_y = 14
 	},
 /turf/open/floor/ruinedwood/turned,
 /area/indoors/town/church)
@@ -17851,6 +18184,12 @@
 /obj/structure/bars,
 /turf/open/water/sewer,
 /area/under/town/sewer)
+"jDx" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/ruinedwood,
+/area/outdoors/town)
 "jDA" = (
 /turf/open/floor/ruinedwood,
 /area/indoors/town/church)
@@ -18234,17 +18573,14 @@
 /turf/open/floor/tile/diamond,
 /area/indoors/town/keep)
 "jOL" = (
-/obj/structure/chair/wood/alt/chair3{
-	dir = 4
-	},
-/obj/effect/landmark/start/monk{
-	dir = 4
-	},
 /obj/structure/fluff/walldeco/church/line{
 	dir = 8
 	},
-/obj/structure/fluff/walldeco/churchbanner{
-	pixel_y = 27
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/structure/fluff/walldeco/churchbanner/red{
+	pixel_y = 28;
+	name = "katholikon banner";
+	desc = "A proud banner demarking the territory of the Katholikon's Inquisition. Silver for purity of faith, red for the blood of the faithful."
 	},
 /turf/open/floor/ruinedwood,
 /area/indoors/town/church)
@@ -18601,6 +18937,9 @@
 /area/outdoors/town/neighborhood/east)
 "jZO" = (
 /obj/structure/table/church/m,
+/obj/item/dmusicbox{
+	pixel_y = 10
+	},
 /turf/open/floor/church,
 /area/indoors/town/church/chapel)
 "jZU" = (
@@ -18937,6 +19276,12 @@
 	},
 /turf/open/floor/cobble,
 /area/indoors/town/keep/kitchen)
+"kjB" = (
+/obj/structure/fluff/railing/tall/retaining{
+	dir = 10
+	},
+/turf/open/floor/church,
+/area/indoors/town/church/chapel)
 "kjD" = (
 /obj/structure/hotspring/border/fourteen,
 /obj/structure/fluff/statue/topiary/bunny/flowers{
@@ -19034,10 +19379,27 @@
 /turf/open/floor/cobble,
 /area/indoors/town/keep/garrison)
 "kln" = (
-/obj/structure/closet/crate/chest/wickertrunk{
-	name = "beverage trunk"
+/obj/item/reagent_containers/food/snacks/produce/tealeaves_ground,
+/obj/item/reagent_containers/food/snacks/produce/tealeaves_ground,
+/obj/item/reagent_containers/food/snacks/produce/tealeaves_ground,
+/obj/item/reagent_containers/food/snacks/produce/tealeaves_ground,
+/obj/item/reagent_containers/food/snacks/produce/tealeaves_ground,
+/obj/item/reagent_containers/food/snacks/produce/tealeaves_ground,
+/obj/item/reagent_containers/food/snacks/produce/tealeaves_ground,
+/obj/item/reagent_containers/food/snacks/produce/tealeaves_ground,
+/obj/item/reagent_containers/food/snacks/produce/coffeebeansroasted,
+/obj/item/reagent_containers/food/snacks/produce/coffeebeansroasted,
+/obj/item/reagent_containers/food/snacks/produce/coffeebeansroasted,
+/obj/item/reagent_containers/food/snacks/produce/coffeebeansroasted,
+/obj/item/reagent_containers/food/snacks/produce/coffeebeansroasted,
+/obj/item/reagent_containers/food/snacks/produce/coffeebeansroasted,
+/obj/item/reagent_containers/food/snacks/produce/coffeebeansroasted,
+/obj/item/reagent_containers/food/snacks/produce/coffeebeansroasted,
+/obj/structure/closet/crate/chest/old_crate{
+	name = "beverage crate"
 	},
-/obj/effect/spawner/guaranteed_map_spawner/listed/food/teas,
+/obj/item/reagent_containers/glass/carafe/teapot/silver,
+/obj/item/reagent_containers/glass/carafe/teapot/silver,
 /turf/open/floor/greenstone,
 /area/indoors/town/church)
 "klo" = (
@@ -19138,8 +19500,8 @@
 /turf/open/floor/grass/cold,
 /area/outdoors/town/neighborhood/east)
 "koH" = (
-/obj/structure/fluff/railing/border{
-	dir = 5
+/obj/structure/fluff/walldeco/church/line{
+	dir = 4
 	},
 /turf/open/floor/churchmarble,
 /area/indoors/town/church/chapel)
@@ -19510,6 +19872,13 @@
 	},
 /turf/closed/wall/mineral/stonebrick,
 /area/indoors/town/steward)
+"kAC" = (
+/obj/machinery/light/fueled/torchholder/r,
+/obj/structure/fluff/walldeco/church/line{
+	dir = 1
+	},
+/turf/open/openspace,
+/area/indoors/town/church/chapel)
 "kAI" = (
 /obj/structure/fluff/walldeco/church/line{
 	dir = 4
@@ -20007,9 +20376,10 @@
 /turf/open/water/river,
 /area/outdoors/town/neighborhood/east)
 "kUZ" = (
-/obj/structure/fluff/railing/border{
-	dir = 5
-	},
+/obj/structure/chair/bench/church/r,
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/ruinedwood/darker,
 /area/indoors/town/church/chapel)
 "kVs" = (
@@ -20669,6 +21039,13 @@
 /obj/structure/door/stone{
 	name = "Church"
 	},
+/obj/effect/mapping_helpers/access/locker,
+/obj/structure/fluff/walldeco/bath/wallrope{
+	dir = 6;
+	name = "plenary council wallrope";
+	desc = "Braided read thread, hung over the threshold of the doorway to the Katholikos' cathedral. Their presence denotes an event of great imporat taking place this dae. To enter without the express permission of Temple clergy is a grave offense to such proceedings.";
+	alpha = 255
+	},
 /turf/open/floor/blocks/green,
 /area/indoors/town/church)
 "lwQ" = (
@@ -21114,6 +21491,13 @@
 	name = "Tower"
 	},
 /obj/effect/mapping_helpers/access/keyset/church/general,
+/obj/structure/fluff/walldeco/bath/wallrope{
+	dir = 4;
+	alpha = 255;
+	name = "plenary council wallrope";
+	desc = "Braided read thread, hung over the threshold of the doorway to the Katholikos' cathedral. Their presence denotes an event of great imporat taking place this dae. To enter without the express permission of Temple clergy is a grave offense to such proceedings."
+	},
+/obj/effect/mapping_helpers/access/locker,
 /turf/open/floor/church,
 /area/indoors/town/church)
 "lGQ" = (
@@ -21628,6 +22012,12 @@
 	},
 /obj/effect/mapping_helpers/access/keyset/church/inquisition,
 /obj/effect/mapping_helpers/access/locker,
+/obj/structure/fluff/walldeco/bath/wallrope{
+	dir = 6;
+	name = "plenary council wallrope";
+	desc = "Braided read thread, hung over the threshold of the doorway to the Katholikos' cathedral. Their presence denotes an event of great imporat taking place this dae. To enter without the express permission of Temple clergy is a grave offense to such proceedings.";
+	alpha = 255
+	},
 /turf/open/floor/ruinedwood,
 /area/indoors/town/church/inquisition)
 "lVQ" = (
@@ -21666,9 +22056,8 @@
 /area/indoors/town/tavern)
 "lWR" = (
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/structure/fluff/railing/border{
-	dir = 9
-	},
+/obj/structure/chair/bench/church,
+/obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/ruinedwood/darker,
 /area/indoors/town/church/chapel)
 "lXm" = (
@@ -22149,8 +22538,15 @@
 /obj/effect/decal/borderfall{
 	dir = 1
 	},
-/obj/effect/landmark/start/templar,
 /obj/structure/fluff/walldeco/church/line,
+/obj/structure/fluff/statue/crystal/air{
+	pixel_x = -16;
+	pixel_y = 8
+	},
+/obj/structure/fluff/statue/crystal/fire{
+	pixel_x = 16;
+	pixel_y = 8
+	},
 /turf/open/floor/church/purple,
 /area/indoors/town/church/chapel)
 "miG" = (
@@ -22428,13 +22824,11 @@
 /area/outdoors/town)
 "mqH" = (
 /obj/structure/bed/hay,
-/obj/structure/curtain/bounty/dir{
-	dir = 4
-	},
 /obj/machinery/light/fueled/wallfire/candle{
 	pixel_x = -32;
 	pixel_y = 0
 	},
+/obj/structure/curtain/bounty,
 /turf/open/floor/ruinedwood,
 /area/indoors/town/church)
 "mrc" = (
@@ -23416,6 +23810,12 @@
 /obj/structure/door/stone{
 	name = "Church"
 	},
+/obj/structure/fluff/walldeco/bath/wallrope{
+	dir = 6;
+	name = "plenary council wallrope";
+	desc = "Braided read thread, hung over the threshold of the doorway to the Katholikos' cathedral. Their presence denotes an event of great imporat taking place this dae. To enter without the express permission of Temple clergy is a grave offense to such proceedings.";
+	alpha = 255
+	},
 /turf/open/floor/church,
 /area/indoors/town/church/chapel)
 "mUA" = (
@@ -24184,8 +24584,8 @@
 /turf/open/floor/naturalstone,
 /area/indoors/town)
 "nuu" = (
-/obj/structure/fluff/railing/border{
-	dir = 9
+/obj/structure/fluff/walldeco/church/line{
+	dir = 8
 	},
 /turf/open/floor/churchmarble,
 /area/indoors/town/church/chapel)
@@ -24563,10 +24963,19 @@
 /turf/open/floor/wood,
 /area/indoors/town/keep/throne)
 "nHX" = (
-/obj/structure/chair/stool,
-/obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/ruinedwood/turned,
-/area/indoors/town/church)
+/obj/structure/door/stone{
+	name = "Church"
+	},
+/obj/effect/mapping_helpers/access/keyset/church/general,
+/obj/structure/fluff/walldeco/bath/wallrope{
+	dir = 6;
+	name = "plenary council wallrope";
+	desc = "Braided read thread, hung over the threshold of the doorway to the Katholikos' cathedral. Their presence denotes an event of great imporat taking place this dae. To enter without the express permission of Temple clergy is a grave offense to such proceedings.";
+	alpha = 255
+	},
+/obj/effect/mapping_helpers/access/locker,
+/turf/open/floor/churchmarble,
+/area/indoors/town/church/chapel)
 "nHZ" = (
 /turf/open/floor/churchrough,
 /area/indoors/town/church)
@@ -24751,6 +25160,12 @@
 	pixel_y = -15
 	},
 /turf/open/floor/church,
+/area/indoors/town/church/chapel)
+"nMj" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/ruinedwood,
 /area/indoors/town/church/chapel)
 "nMx" = (
 /obj/effect/decal/cleanable/dirt,
@@ -25319,10 +25734,12 @@
 /turf/open/floor/wood,
 /area/indoors/town/steward)
 "ofs" = (
-/obj/structure/chair/bench/church/mid{
-	dir = 1
-	},
-/turf/open/floor/church,
+/obj/structure/chair/bench/church,
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/ruinedwood/darker,
 /area/indoors/town/church/chapel)
 "ofS" = (
 /obj/structure/fluff/railing/wood{
@@ -25964,14 +26381,30 @@
 	dir = 10;
 	icon_state = "cobbleedge-w"
 	},
-/obj/structure/table/wood{
-	dir = 9;
-	icon_state = "largetable"
+/obj/structure/closet/crate/chest/old_crate{
+	name = "imported ingredients";
+	desc = "Imported for the conclave. Big letters have been scrawled on the lid: 'DO NOT TOUCH UNTIL CONCLAVE'."
 	},
-/obj/item/kitchen/rollingpin{
-	pixel_x = 5;
-	pixel_y = -5
-	},
+/obj/item/reagent_containers/food/snacks/produce/fruit/pear,
+/obj/item/reagent_containers/food/snacks/produce/fruit/pear,
+/obj/item/reagent_containers/food/snacks/produce/fruit/pear,
+/obj/item/reagent_containers/food/snacks/produce/fruit/pear,
+/obj/item/reagent_containers/food/snacks/produce/fruit/plum,
+/obj/item/reagent_containers/food/snacks/produce/fruit/plum,
+/obj/item/reagent_containers/food/snacks/produce/fruit/plum,
+/obj/item/reagent_containers/food/snacks/produce/fruit/plum,
+/obj/item/reagent_containers/food/snacks/produce/fruit/lemon,
+/obj/item/reagent_containers/food/snacks/produce/fruit/lemon,
+/obj/item/reagent_containers/food/snacks/produce/fruit/lemon,
+/obj/item/reagent_containers/food/snacks/produce/fruit/lemon,
+/obj/item/reagent_containers/food/snacks/produce/fruit/tangerine,
+/obj/item/reagent_containers/food/snacks/produce/fruit/tangerine,
+/obj/item/reagent_containers/food/snacks/produce/fruit/tangerine,
+/obj/item/reagent_containers/food/snacks/produce/fruit/tangerine,
+/obj/item/reagent_containers/food/snacks/produce/fruit/lime,
+/obj/item/reagent_containers/food/snacks/produce/fruit/lime,
+/obj/item/reagent_containers/food/snacks/produce/fruit/lime,
+/obj/item/reagent_containers/food/snacks/produce/fruit/lime,
 /turf/open/floor/ruinedwood/turned,
 /area/indoors/town/church)
 "oxC" = (
@@ -26060,6 +26493,8 @@
 /obj/item/reagent_containers/food/snacks/butter,
 /obj/item/reagent_containers/food/snacks/butter,
 /obj/structure/table/wood,
+/obj/item/reagent_containers/food/snacks/butter,
+/obj/item/reagent_containers/food/snacks/butter,
 /obj/item/reagent_containers/food/snacks/butter,
 /turf/open/floor/ruinedwood/turned,
 /area/indoors/town/church)
@@ -26236,6 +26671,10 @@
 	},
 /turf/open/floor/blocks/green,
 /area/indoors/town/keep/kitchen/cellar)
+"oEt" = (
+/obj/structure/chair/bench/church/r,
+/turf/open/floor/ruinedwood,
+/area/indoors/town/church/chapel)
 "oEz" = (
 /obj/structure/fluff/railing/wood{
 	dir = 8
@@ -26509,6 +26948,13 @@
 "oQk" = (
 /turf/open/floor/blocks,
 /area/indoors/town/keep)
+"oQv" = (
+/obj/structure/chair/bench/church,
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/ruinedwood/darker,
+/area/indoors/town/church/chapel)
 "oQC" = (
 /obj/effect/decal/cleanable/generic,
 /turf/open/floor/cobble/alt,
@@ -26714,10 +27160,23 @@
 	},
 /turf/open/floor/ruinedwood,
 /area/outdoors/exposed)
+"oXB" = (
+/obj/structure/stairs/stone,
+/obj/structure/barricade/wooden/crude,
+/obj/item/paper{
+	name = "notice parchment";
+	info = "Staircase currently closed for the duration of the conclave, sorry! You'll have to use the big stone stairs just outside!"
+	},
+/turf/open/floor/churchrough,
+/area/indoors/town/church)
 "oXW" = (
 /obj/machinery/light/fueled/torchholder/c,
 /obj/structure/table/wood{
 	icon_state = "longtable"
+	},
+/obj/item/paper{
+	name = "kitchen notice parchment";
+	info = "We've stocked the kitchens well for this upcoming conclave, it's looking like we'll have more clergy than ever before all in one place! How exciting! Okay, everything in here's free to use, and anything we have left over we'll see redistributed to the almshouses and needy, so nothing goes to waste!"
 	},
 /turf/open/floor/ruinedwood/turned,
 /area/indoors/town/church)
@@ -26741,17 +27200,8 @@
 /turf/open/floor/wood,
 /area/indoors/town/garrison)
 "oYu" = (
-/obj/structure/fluff/railing/border{
-	dir = 9
-	},
-/obj/structure/fluff/railing/border{
-	dir = 5
-	},
-/obj/structure/fluff/walldeco/church/line{
-	dir = 8
-	},
-/obj/structure/fluff/walldeco/church/line{
-	dir = 4
+/obj/structure/stairs{
+	dir = 1
 	},
 /turf/open/floor/church/purple,
 /area/indoors/town/church/chapel)
@@ -26864,6 +27314,10 @@
 	},
 /turf/open/openspace,
 /area/indoors/town/keep/kitchen)
+"pbP" = (
+/obj/structure/fluff/walldeco/church/line,
+/turf/open/floor/ruinedwood/darker,
+/area/indoors/town/church/chapel)
 "pbY" = (
 /obj/structure/table/wood{
 	icon_state = "tablewood1"
@@ -26942,6 +27396,13 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/blocks/stonered,
 /area/indoors/shelter/town)
+"pfp" = (
+/obj/structure/fluff/railing/wood,
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/ruinedwood,
+/area/indoors/town/church/chapel)
 "pfs" = (
 /obj/machinery/light/fueled/smelter,
 /turf/open/floor/metal,
@@ -27114,6 +27575,7 @@
 /obj/structure/closet/crate/chest/old_crate{
 	name = "vegetable crate"
 	},
+/obj/effect/spawner/guaranteed_map_spawner/listed/food/vegetable,
 /obj/effect/spawner/guaranteed_map_spawner/listed/food/vegetable,
 /turf/open/floor/greenstone,
 /area/indoors/town/church)
@@ -28292,10 +28754,9 @@
 /turf/open/floor/ruinedwood/platform,
 /area/indoors/town/tavern/saiga)
 "pPv" = (
-/obj/structure/chair/bench/church{
-	dir = 1
+/obj/structure/chair/wood/alt{
+	dir = 4
 	},
-/obj/structure/carpet/red,
 /turf/open/floor/church,
 /area/indoors/town/church/chapel)
 "pPz" = (
@@ -28542,6 +29003,12 @@
 	},
 /obj/effect/mapping_helpers/access/keyset/church/inquisition,
 /obj/effect/mapping_helpers/access/locker,
+/obj/structure/fluff/walldeco/bath/wallrope{
+	dir = 6;
+	name = "plenary council wallrope";
+	desc = "Braided read thread, hung over the threshold of the doorway to the Katholikos' cathedral. Their presence denotes an event of great imporat taking place this dae. To enter without the express permission of Temple clergy is a grave offense to such proceedings.";
+	alpha = 255
+	},
 /turf/open/floor/metal,
 /area/indoors/town/church/inquisition)
 "pYE" = (
@@ -29051,7 +29518,7 @@
 /obj/structure/fluff/walldeco/church/line{
 	dir = 8
 	},
-/obj/effect/landmark/observer_start,
+/obj/structure/chair/wood/alt,
 /turf/open/floor/church/purple,
 /area/indoors/town/church/chapel)
 "qpv" = (
@@ -29207,7 +29674,7 @@
 /area/indoors/town/keep/knight)
 "qtz" = (
 /obj/structure/fluff/hanging_banners/church,
-/obj/structure/fluff/railing/border{
+/obj/structure/fluff/walldeco/church/line{
 	dir = 8
 	},
 /turf/open/openspace,
@@ -29215,6 +29682,10 @@
 "qtF" = (
 /turf/closed/wall/mineral/stone/moss/blue,
 /area/indoors/town/keep/magician/greenhouse)
+"qtQ" = (
+/obj/structure/chair/wood/alt,
+/turf/open/floor/churchmarble,
+/area/indoors/town/church/chapel)
 "qtS" = (
 /obj/structure/fluff/railing/wood{
 	dir = 4;
@@ -29230,6 +29701,17 @@
 	},
 /turf/open/floor/cobble,
 /area/indoors/town/keep/kitchen)
+"quj" = (
+/obj/structure/table/wood/fancy/red,
+/obj/item/reagent_containers/glass/cup/silver{
+	pixel_x = 7;
+	pixel_y = 4
+	},
+/obj/item/reagent_containers/glass/cup/silver{
+	pixel_y = -4
+	},
+/turf/open/floor/church,
+/area/indoors/town/church/chapel)
 "qum" = (
 /obj/structure/table/wood{
 	dir = 1;
@@ -29718,6 +30200,10 @@
 /area/indoors/town/keep/library)
 "qHR" = (
 /obj/machinery/light/fueled/torchholder/r,
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/ruinedwood,
 /area/indoors/town/church/chapel)
 "qIC" = (
@@ -29757,30 +30243,27 @@
 /area/indoors/town/keep/throne)
 "qJQ" = (
 /obj/structure/table/wood,
-/obj/item/reagent_containers/glass/cup/wooden{
-	pixel_x = 6;
-	pixel_y = -5
-	},
-/obj/item/reagent_containers/glass/cup/wooden{
-	pixel_x = -5;
-	pixel_y = -3
-	},
-/obj/item/reagent_containers/glass/cup/wooden{
-	pixel_x = -8;
-	pixel_y = 9
-	},
-/obj/item/reagent_containers/glass/cup/wooden{
-	pixel_x = 7;
-	pixel_y = 8
-	},
 /obj/structure/fluff/walldeco/church/line{
 	dir = 4
 	},
-/obj/structure/fluff/wallclock{
-	dir = 3
-	},
 /obj/structure/fluff/walldeco/church/line{
 	dir = 1
+	},
+/obj/item/reagent_containers/glass/carafe/silver/redwine{
+	pixel_x = -7;
+	pixel_y = 16
+	},
+/obj/item/reagent_containers/glass/carafe/silver/redwine{
+	pixel_x = 7;
+	pixel_y = 16
+	},
+/obj/item/reagent_containers/glass/carafe/silver/redwine{
+	pixel_x = -7;
+	pixel_y = 6
+	},
+/obj/item/reagent_containers/glass/carafe/silver/redwine{
+	pixel_x = 7;
+	pixel_y = 6
 	},
 /turf/open/floor/church,
 /area/indoors/town/church)
@@ -29816,10 +30299,8 @@
 /area/indoors/town/clinic_large/feldsher)
 "qLj" = (
 /obj/structure/bed/hay,
-/obj/structure/curtain/bounty/dir{
-	dir = 4
-	},
 /obj/effect/decal/cleanable/dirt/dust,
+/obj/structure/curtain/bounty,
 /turf/open/floor/ruinedwood,
 /area/indoors/town/church)
 "qLu" = (
@@ -30377,8 +30858,42 @@
 /obj/machinery/light/fueled/torchholder/l,
 /turf/open/floor/grass/cold,
 /area/outdoors/exposed)
+"riP" = (
+/obj/structure/fluff/walldeco/church/line{
+	dir = 4
+	},
+/turf/open/floor/ruinedwood/darker,
+/area/indoors/town/church/chapel)
 "riQ" = (
 /obj/machinery/light/fueled/torchholder/r,
+/obj/structure/closet/crate/chest/old_crate{
+	name = "imported ingredients";
+	desc = "Imported for the conclave. Big letters have been scrawled on the lid: 'DO NOT TOUCH UNTIL CONCLAVE'."
+	},
+/obj/item/reagent_containers/food/snacks/produce/fruit/apple,
+/obj/item/reagent_containers/food/snacks/produce/fruit/apple,
+/obj/item/reagent_containers/food/snacks/produce/fruit/apple,
+/obj/item/reagent_containers/food/snacks/produce/fruit/apple,
+/obj/item/reagent_containers/food/snacks/produce/fruit/avocado,
+/obj/item/reagent_containers/food/snacks/produce/fruit/avocado,
+/obj/item/reagent_containers/food/snacks/produce/fruit/avocado,
+/obj/item/reagent_containers/food/snacks/produce/fruit/avocado,
+/obj/item/reagent_containers/food/snacks/produce/fruit/blackberry,
+/obj/item/reagent_containers/food/snacks/produce/fruit/blackberry,
+/obj/item/reagent_containers/food/snacks/produce/fruit/blackberry,
+/obj/item/reagent_containers/food/snacks/produce/fruit/blackberry,
+/obj/item/reagent_containers/food/snacks/produce/fruit/raspberry,
+/obj/item/reagent_containers/food/snacks/produce/fruit/raspberry,
+/obj/item/reagent_containers/food/snacks/produce/fruit/raspberry,
+/obj/item/reagent_containers/food/snacks/produce/fruit/raspberry,
+/obj/item/reagent_containers/food/snacks/produce/fruit/strawberry,
+/obj/item/reagent_containers/food/snacks/produce/fruit/strawberry,
+/obj/item/reagent_containers/food/snacks/produce/fruit/strawberry,
+/obj/item/reagent_containers/food/snacks/produce/fruit/strawberry,
+/obj/item/reagent_containers/food/snacks/produce/fruit/pompkaun,
+/obj/item/reagent_containers/food/snacks/produce/fruit/pompkaun,
+/obj/item/reagent_containers/food/snacks/produce/fruit/pompkaun,
+/obj/item/reagent_containers/food/snacks/produce/fruit/pompkaun,
 /turf/open/floor/ruinedwood/turned,
 /area/indoors/town/church)
 "riT" = (
@@ -31157,13 +31672,14 @@
 /obj/structure/door/stone{
 	name = "Church Infirmary"
 	},
+/obj/effect/mapping_helpers/access/keyset/church/general,
 /obj/structure/fluff/walldeco/bath/wallrope{
 	dir = 6;
-	name = "infirmary wallrope";
-	desc = "Braided red thread, hung over the threshold to the Temple Infirmary. Representing the lifeblood that flows within us all; across the Goblet, these braids signify to the masses that healing may be found within to all who seek it, one must merely have faith. The Church will tend the wounds of all for no cost, save the vilest of known heretics that endanger their fellow man.";
+	name = "plenary council wallrope";
+	desc = "Braided read thread, hung over the threshold of the doorway to the Katholikos' cathedral. Their presence denotes an event of great imporat taking place this dae. To enter without the express permission of Temple clergy is a grave offense to such proceedings.";
 	alpha = 255
 	},
-/obj/effect/mapping_helpers/access/keyset/church/general,
+/obj/effect/mapping_helpers/access/locker,
 /turf/open/floor/ruinedwood,
 /area/indoors/town/church)
 "rLm" = (
@@ -31280,7 +31796,7 @@
 /turf/closed/wall/mineral/stone/moss,
 /area/indoors/town/tavern/saiga)
 "rQQ" = (
-/obj/structure/fluff/railing/border{
+/obj/structure/fluff/walldeco/church/line{
 	dir = 1
 	},
 /turf/open/floor/ruinedwood/darker,
@@ -31311,6 +31827,12 @@
 	},
 /obj/effect/mapping_helpers/access/keyset/church/inquisition,
 /obj/effect/mapping_helpers/access/locker,
+/obj/structure/fluff/walldeco/bath/wallrope{
+	dir = 4;
+	alpha = 255;
+	name = "plenary council wallrope";
+	desc = "Braided read thread, hung over the threshold of the doorway to the Katholikos' cathedral. Their presence denotes an event of great imporat taking place this dae. To enter without the express permission of Temple clergy is a grave offense to such proceedings."
+	},
 /turf/open/floor/church/violet,
 /area/indoors/town/church/inquisition)
 "rRX" = (
@@ -31364,6 +31886,15 @@
 	},
 /turf/open/floor/blocks,
 /area/indoors/town/keep/gate)
+"rUu" = (
+/obj/structure/table/wood/fancy/red,
+/obj/item/reagent_containers/glass/cup/silver{
+	pixel_x = 1
+	},
+/obj/item/paper/scroll,
+/obj/item/natural/feather,
+/turf/open/floor/church,
+/area/indoors/town/church/chapel)
 "rUw" = (
 /obj/effect/decal/carpet/kover_purple{
 	pixel_y = -15;
@@ -31695,7 +32226,6 @@
 /obj/effect/decal/borderfall{
 	dir = 1
 	},
-/obj/effect/landmark/start/gmtemplar,
 /turf/open/floor/church/purple,
 /area/indoors/town/church/chapel)
 "sgv" = (
@@ -31888,6 +32418,18 @@
 /obj/machinery/light/fueled/campfire,
 /turf/open/floor/dirt,
 /area/under/town/sewer)
+"smI" = (
+/obj/structure/table/wood{
+	icon_state = "longtable"
+	},
+/obj/structure/bars{
+	icon_state = "barsbent";
+	layer = 2.81
+	},
+/obj/item/chair/stool,
+/obj/item/chair/stool,
+/turf/open/floor/cobble,
+/area/indoors/town/church)
 "smO" = (
 /obj/item/kitchen/spoon/iron,
 /obj/item/kitchen/fork/iron{
@@ -32170,14 +32712,12 @@
 /turf/open/floor/grass/cold,
 /area/outdoors/town/plaza)
 "swA" = (
-/obj/structure/stairs/stone,
-/obj/structure/fluff/railing/border{
-	dir = 8
+/obj/effect/landmark/observer_start,
+/obj/structure/floordoor{
+	name = "testimonial stand";
+	desc = "An elevated stand for delivering speeches, testimonies, or for being sentenced before a council..."
 	},
-/obj/structure/fluff/railing/border{
-	dir = 4
-	},
-/turf/open/floor/churchmarble,
+/turf/open/floor/twig/platform,
 /area/indoors/town/church/chapel)
 "swC" = (
 /obj/structure/flora/grass/water,
@@ -32317,13 +32857,31 @@
 	},
 /turf/open/floor/tile/diamond,
 /area/indoors/town/garrison/lieutenant)
-"szu" = (
-/obj/structure/table/wood{
-	dir = 5;
-	icon_state = "largetable"
+"szd" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/ruinedwood,
+/area/indoors/town/church/chapel)
+"szf" = (
+/obj/structure/fluff/railing/wood{
+	dir = 8
 	},
-/turf/open/floor/ruinedwood/turned,
-/area/indoors/town/church)
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/ruinedwood/darker,
+/area/indoors/town/church/chapel)
+"szu" = (
+/obj/structure/chair/bench/church,
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/ruinedwood,
+/area/outdoors/town)
 "szB" = (
 /obj/structure/fluff/walldeco/church/line{
 	dir = 8
@@ -32396,6 +32954,13 @@
 /obj/structure/door/stone{
 	name = "Tower"
 	},
+/obj/structure/fluff/walldeco/bath/wallrope{
+	dir = 6;
+	name = "plenary council wallrope";
+	desc = "Braided read thread, hung over the threshold of the doorway to the Katholikos' cathedral. Their presence denotes an event of great imporat taking place this dae. To enter without the express permission of Temple clergy is a grave offense to such proceedings.";
+	alpha = 255
+	},
+/obj/effect/mapping_helpers/access/locker,
 /turf/open/floor/ruinedwood,
 /area/indoors/town/church/chapel)
 "sBU" = (
@@ -32810,7 +33375,26 @@
 /turf/open/floor/dirt/road,
 /area/outdoors/exposed)
 "sPT" = (
-/obj/structure/chair/stool,
+/obj/structure/table/wood{
+	dir = 5;
+	icon_state = "largetable"
+	},
+/obj/item/reagent_containers/peppermill{
+	pixel_x = -6;
+	pixel_y = 8
+	},
+/obj/item/natural/bundle/stick{
+	amount = 10
+	},
+/obj/item/natural/bundle/stick{
+	amount = 10
+	},
+/obj/item/natural/bundle/stick{
+	amount = 10
+	},
+/obj/item/natural/bundle/stick{
+	amount = 10
+	},
 /turf/open/floor/cobble,
 /area/indoors/town/church)
 "sQj" = (
@@ -33060,6 +33644,13 @@
 /obj/structure/fluff/walldeco/bath/wallpipes/outie,
 /turf/closed/wall/mineral/pipe,
 /area/indoors/town/dwarfin/shared)
+"sYJ" = (
+/obj/structure/fluff/sunrug,
+/obj/structure/chair/wood/alt{
+	dir = 8
+	},
+/turf/open/floor/church,
+/area/indoors/town/church/chapel)
 "sYP" = (
 /obj/machinery/light/fueled/wallfire/candle/l,
 /obj/effect/decal/cleanable/dirt,
@@ -34294,9 +34885,7 @@
 /area/indoors/town/cell)
 "tNE" = (
 /obj/structure/bed/hay,
-/obj/structure/curtain/bounty/dir{
-	dir = 4
-	},
+/obj/structure/curtain/bounty,
 /turf/open/floor/ruinedwood,
 /area/indoors/town/church)
 "tNN" = (
@@ -34387,6 +34976,12 @@
 "tPK" = (
 /turf/open/floor/ruinedwood/alt,
 /area/outdoors/town/roofs)
+"tQt" = (
+/obj/structure/chair/wood/alt/uncomfortable{
+	dir = 4
+	},
+/turf/open/floor/ruinedwood,
+/area/outdoors/town)
 "tQY" = (
 /obj/structure/fluff/railing/wood{
 	dir = 1;
@@ -34755,10 +35350,12 @@
 /turf/open/floor/church/pale,
 /area/indoors/town/steward)
 "ucK" = (
-/obj/structure/chair/bench/church/mid{
-	dir = 1
+/obj/structure/table/wood/fancy/red,
+/obj/item/reagent_containers/glass/cup/silver{
+	pixel_y = 4
 	},
-/obj/structure/carpet/red,
+/obj/item/paper/scroll,
+/obj/item/natural/feather,
 /turf/open/floor/church,
 /area/indoors/town/church/chapel)
 "udi" = (
@@ -34846,6 +35443,18 @@
 /obj/effect/decal/cobbleedge{
 	dir = 1
 	},
+/obj/structure/table/wood{
+	dir = 9;
+	icon_state = "largetable"
+	},
+/obj/item/weapon/knife/cleaver{
+	pixel_x = 1;
+	pixel_y = 4
+	},
+/obj/item/kitchen/rollingpin{
+	pixel_x = 5;
+	pixel_y = -5
+	},
 /turf/open/floor/ruinedwood/turned,
 /area/indoors/town/church)
 "ugO" = (
@@ -34880,6 +35489,7 @@
 /obj/structure/fluff/railing/wood{
 	dir = 8
 	},
+/obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/ruinedwood/darker,
 /area/indoors/town/church/chapel)
 "uhs" = (
@@ -35052,6 +35662,12 @@
 	},
 /obj/effect/mapping_helpers/access/keyset/church/inquisition,
 /obj/effect/mapping_helpers/access/locker,
+/obj/structure/fluff/walldeco/bath/wallrope{
+	dir = 6;
+	name = "plenary council wallrope";
+	desc = "Braided read thread, hung over the threshold of the doorway to the Katholikos' cathedral. Their presence denotes an event of great imporat taking place this dae. To enter without the express permission of Temple clergy is a grave offense to such proceedings.";
+	alpha = 255
+	},
 /turf/open/floor/metal,
 /area/indoors/town/church/inquisition)
 "uoT" = (
@@ -35273,6 +35889,14 @@
 /obj/structure/flora/ausbushes/fullgrass,
 /turf/open/floor/grass/cold,
 /area/outdoors/town/plaza)
+"uxj" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/structure/fluff/walldeco/church/line{
+	dir = 8
+	},
+/turf/open/floor/ruinedwood/darker,
+/area/indoors/town/church/chapel)
 "uxu" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/blocks/newstone/alt,
@@ -35473,22 +36097,11 @@
 /turf/open/floor/metal/alt,
 /area/indoors/soilsons)
 "uCt" = (
-/obj/structure/fluff/railing/border{
-	dir = 8
+/obj/structure/table/wood/fancy/red,
+/obj/item/reagent_containers/glass/cup/silver{
+	pixel_y = 4
 	},
-/obj/structure/fluff/railing/border{
-	dir = 4
-	},
-/obj/structure/fluff/railing/border{
-	dir = 1
-	},
-/obj/structure/fluff/railing/border{
-	dir = 5
-	},
-/obj/structure/fluff/railing/border{
-	dir = 9
-	},
-/turf/open/openspace,
+/turf/open/floor/woodturned,
 /area/indoors/town/church/chapel)
 "uCA" = (
 /obj/structure/window/solid,
@@ -36492,10 +37105,8 @@
 /turf/open/floor/ruinedwood/darker,
 /area/indoors/town/church/chapel)
 "vhZ" = (
-/obj/structure/table/wood/reinf_long{
-	dir = 1
-	},
 /obj/machinery/light/fueled/wallfire/candle,
+/obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/ruinedwood,
 /area/indoors/town/church)
 "vii" = (
@@ -36692,6 +37303,21 @@
 /obj/structure/fluff/clutter/shrub/tundra,
 /turf/open/floor/tile/diamond,
 /area/indoors/town/vault)
+"vnB" = (
+/obj/effect/decal/borderfall{
+	dir = 1
+	},
+/obj/structure/fluff/walldeco/church/line,
+/obj/structure/fluff/statue/crystal/frost{
+	pixel_x = 16;
+	pixel_y = 8
+	},
+/obj/structure/fluff/statue/crystal{
+	pixel_x = -16;
+	pixel_y = 8
+	},
+/turf/open/floor/church/purple,
+/area/indoors/town/church/chapel)
 "vnE" = (
 /obj/structure/chair/stool,
 /turf/open/floor/cobble,
@@ -36843,6 +37469,12 @@
 	name = "Commons"
 	},
 /obj/effect/mapping_helpers/access/keyset/church/general,
+/obj/structure/fluff/walldeco/bath/wallrope{
+	dir = 6;
+	name = "plenary council wallrope";
+	desc = "Braided read thread, hung over the threshold of the doorway to the Katholikos' cathedral. Their presence denotes an event of great imporat taking place this dae. To enter without the express permission of Temple clergy is a grave offense to such proceedings.";
+	alpha = 255
+	},
 /turf/open/floor/church/purple,
 /area/indoors/town/church/chapel)
 "vrX" = (
@@ -36916,7 +37548,10 @@
 /turf/open/floor/ruinedwood/turned/alt,
 /area/indoors/town/keep/magician)
 "vuv" = (
-/obj/structure/fluff/railing/border{
+/obj/structure/fluff/walldeco/church/line{
+	dir = 1
+	},
+/obj/structure/fluff/walldeco/church/line{
 	dir = 4
 	},
 /turf/open/openspace,
@@ -37071,6 +37706,11 @@
 /obj/structure/flora/ausbushes/ppflowers,
 /turf/open/floor/dirt/road,
 /area/outdoors/town/neighborhood/east)
+"vBg" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/ruinedwood,
+/area/indoors/town/church/chapel)
 "vBA" = (
 /obj/structure/flora/grass/bush/wall/tundra,
 /obj/structure/flora/ausbushes/ywflowers,
@@ -37370,9 +38010,13 @@
 /turf/open/floor/wood,
 /area/indoors/town/garrison)
 "vIO" = (
-/obj/structure/chair/bench/church/r{
-	dir = 1
+/obj/structure/fluff/railing/tall/retaining{
+	dir = 4
 	},
+/obj/structure/fluff/railing/wood{
+	dir = 4
+	},
+/obj/machinery/light/fueled/torchholder/metal_torch/west,
 /turf/open/floor/church,
 /area/indoors/town/church/chapel)
 "vIR" = (
@@ -37747,6 +38391,7 @@
 /obj/structure/closet/crate/chest/old_crate{
 	name = "meat crate"
 	},
+/obj/effect/spawner/guaranteed_map_spawner/listed/food/meat,
 /obj/effect/spawner/guaranteed_map_spawner/listed/food/meat,
 /turf/open/floor/greenstone,
 /area/indoors/town/church)
@@ -38536,6 +39181,11 @@
 	},
 /turf/open/floor/church/purple,
 /area/indoors/town/keep/archivist)
+"wug" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/ruinedwood/darker,
+/area/indoors/town/church/chapel)
 "wvf" = (
 /obj/structure/closet/crate/chest/wicker,
 /turf/open/floor/ruinedwood,
@@ -38792,6 +39442,12 @@
 	},
 /turf/open/floor/churchmarble,
 /area/indoors/town/keep/archivist)
+"wDL" = (
+/obj/structure/fluff/railing/tall/retaining{
+	dir = 6
+	},
+/turf/open/floor/church,
+/area/indoors/town/church/chapel)
 "wEr" = (
 /obj/structure/fluff/railing/border{
 	dir = 1
@@ -39535,6 +40191,10 @@
 	},
 /turf/open/floor/ruinedwood,
 /area/outdoors/town/roofs)
+"xaZ" = (
+/obj/structure/fluff/moonrug,
+/turf/open/floor/churchmarble,
+/area/indoors/town/church/chapel)
 "xbe" = (
 /obj/structure/fluff/railing/border{
 	dir = 10
@@ -39579,6 +40239,9 @@
 	dir = 4
 	},
 /obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/landmark/start/churchling{
+	dir = 8
+	},
 /turf/open/floor/ruinedwood,
 /area/indoors/town/church)
 "xch" = (
@@ -39697,6 +40360,13 @@
 /obj/structure/door/stone{
 	name = "Church"
 	},
+/obj/structure/fluff/walldeco/bath/wallrope{
+	dir = 6;
+	name = "plenary council wallrope";
+	desc = "Braided read thread, hung over the threshold of the doorway to the Katholikos' cathedral. Their presence denotes an event of great imporat taking place this dae. To enter without the express permission of Temple clergy is a grave offense to such proceedings.";
+	alpha = 255
+	},
+/obj/effect/mapping_helpers/access/locker,
 /turf/open/floor/churchmarble,
 /area/indoors/town/church)
 "xhd" = (
@@ -39888,6 +40558,10 @@
 "xnc" = (
 /turf/open/floor/concrete,
 /area/indoors/town/church)
+"xnd" = (
+/obj/structure/fluff/walldeco/church/line,
+/turf/open/openspace,
+/area/indoors/town/church/chapel)
 "xnp" = (
 /obj/machinery/light/fueled/torchholder/r,
 /obj/structure/closet/crate/chest/shippingcrate,
@@ -39940,6 +40614,7 @@
 	icon_state = "barsbent";
 	layer = 2.81
 	},
+/obj/item/chair/stool,
 /turf/open/floor/cobble,
 /area/indoors/town/church)
 "xpg" = (
@@ -40067,9 +40742,11 @@
 /turf/open/floor/cobble/alt,
 /area/outdoors/town/neighborhood/east)
 "xsI" = (
-/obj/structure/fluff/railing/wood{
-	dir = 8
-	},
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/structure/chair/bench/church/mid,
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/ruinedwood/darker,
 /area/indoors/town/church/chapel)
@@ -40104,6 +40781,14 @@
 /obj/structure/fluff/walldeco/vinez/red,
 /turf/closed/mineral,
 /area/under/cavewet)
+"xuC" = (
+/obj/structure/table/wood{
+	icon_state = "largetable";
+	dir = 6
+	},
+/obj/item/chair/stool,
+/turf/open/floor/cobble,
+/area/indoors/town/church)
 "xvb" = (
 /obj/effect/landmark/house_spot{
 	default_template = /datum/map_template/hand_bedroom;
@@ -40565,6 +41250,13 @@
 /obj/structure/flora/grass/water,
 /turf/open/water/ocean/abyss,
 /area/under/cavewet)
+"xLH" = (
+/obj/structure/fluff/walldeco/church/line{
+	dir = 4
+	},
+/obj/structure/fluff/walldeco/church/line,
+/turf/open/openspace,
+/area/indoors/town/church/chapel)
 "xLZ" = (
 /obj/structure/door/iron/bars{
 	name = "Cell Door"
@@ -40761,6 +41453,16 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/ruinedwood/turned,
 /area/outdoors/town/roofs)
+"xSA" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/structure/chair/bench/church/r,
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/ruinedwood/darker,
+/area/indoors/town/church/chapel)
 "xSG" = (
 /obj/effect/decal/shadow_floor{
 	dir = 8
@@ -40863,6 +41565,14 @@
 /obj/effect/spawner/guaranteed_map_spawner/listed/weapons/ranged,
 /turf/open/floor/churchmarble,
 /area/indoors/town/church)
+"xWa" = (
+/obj/structure/chair/bench/church/mid,
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/ruinedwood/darker,
+/area/indoors/town/church/chapel)
 "xWg" = (
 /obj/structure/table/wood{
 	dir = 8;
@@ -41347,7 +42057,7 @@
 /area/indoors/town/tavern/saiga)
 "ykg" = (
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/effect/landmark/start/monk,
+/obj/effect/landmark/start/gmtemplar,
 /turf/open/floor/church/purple,
 /area/indoors/town/church/chapel)
 "ykq" = (
@@ -64028,7 +64738,7 @@ hye
 hye
 hye
 cna
-xoN
+smI
 xoN
 hye
 fpi
@@ -64293,7 +65003,7 @@ cOl
 sFg
 voj
 sPT
-sPT
+xuC
 hye
 wdS
 nPq
@@ -64419,7 +65129,7 @@ sSS
 rWP
 uHO
 nHZ
-krA
+oXB
 hye
 oAW
 cQC
@@ -64556,7 +65266,7 @@ hye
 hye
 kAg
 fCg
-szu
+cQC
 dCj
 hye
 wdS
@@ -64688,10 +65398,10 @@ kWC
 hye
 oXW
 cQC
-nHX
-aJI
-iIg
-iDb
+fCg
+cQC
+hLy
+qlB
 fiy
 hgD
 twU
@@ -64821,9 +65531,9 @@ hye
 jqM
 cQC
 riQ
-cQC
+fkb
 iIg
-uNe
+dpC
 fiy
 hgD
 twU
@@ -76431,9 +77141,9 @@ fXe
 tRZ
 tRZ
 hye
-fXe
+auO
 hye
-fXe
+auO
 tRZ
 lsg
 nXl
@@ -76567,7 +77277,7 @@ qLj
 mqH
 tNE
 gwb
-fXe
+eFZ
 dFQ
 fwm
 xGk
@@ -76831,7 +77541,7 @@ jDA
 jDA
 jDA
 lmp
-fXe
+eFZ
 irT
 xGk
 oTa
@@ -77090,13 +77800,13 @@ lRz
 gNg
 jnk
 aZW
-ezx
+aSR
 lfg
-lfg
+xaZ
 lfg
 ezx
 wAj
-ijK
+fDC
 ijK
 pIt
 tWM
@@ -77217,15 +77927,15 @@ aJX
 bFF
 jgF
 qAs
-fXe
+fCF
 cFC
 sgC
 fwS
 tCM
 lfg
 pPv
-gon
-gon
+pPv
+pPv
 lfg
 bNZ
 fNh
@@ -77351,13 +78061,13 @@ jgF
 mvn
 hye
 sUH
-fNh
+fdE
 lUV
 mkQ
-aSR
+qtQ
+quj
+gMR
 ucK
-ofs
-ofs
 lfg
 vSZ
 lUf
@@ -77485,10 +78195,10 @@ hye
 xMD
 fNh
 hkK
-miE
-lfg
-fGx
-vIO
+vnB
+qtQ
+ucK
+wDL
 vIO
 koH
 lfg
@@ -77626,7 +78336,7 @@ oYu
 szB
 ykg
 vVr
-gmL
+nHX
 dRD
 aJX
 aJX
@@ -77750,15 +78460,15 @@ esE
 fNh
 wPa
 miE
-lfg
-pPv
-gon
+qtQ
+ucK
+kjB
 gon
 nuu
 lfg
 aHc
 cme
-gmL
+bGf
 dRD
 aJX
 aJX
@@ -77879,13 +78589,13 @@ uft
 jlQ
 hye
 wAj
-fNh
+fdE
 lUV
 jDX
-aSR
-ucK
-ofs
-ofs
+qtQ
+fIe
+rUu
+gcu
 vSZ
 lfg
 wAF
@@ -78016,8 +78726,8 @@ koX
 xpU
 lfg
 fGx
-vIO
-vIO
+fGx
+sYJ
 lfg
 mxX
 tNW
@@ -78146,7 +78856,7 @@ wAj
 nMc
 fZU
 duK
-lfg
+aSR
 lfg
 lfg
 lfg
@@ -78281,11 +78991,11 @@ hye
 hye
 jOL
 dWF
-fny
+isK
 fny
 hye
-vzH
-aFv
+tQt
+jDx
 aFv
 iVf
 aJX
@@ -78412,13 +79122,13 @@ aZX
 dgN
 hye
 vhZ
-bGf
 kxu
 kxu
-fXe
+kxu
+eFZ
 bQZ
-jgF
-jgF
+jDx
+szu
 bVk
 aJX
 aJX
@@ -78547,10 +79257,10 @@ aJe
 fZm
 xcb
 lsL
-fXe
+eFZ
 baA
-jgF
-sCT
+aFv
+fcw
 aJX
 aJX
 aJX
@@ -78682,7 +79392,7 @@ dUS
 tRZ
 cCg
 cCg
-kOZ
+eZl
 aJX
 aJX
 aJX
@@ -90166,7 +90876,7 @@ ycg
 ycg
 nsE
 ycg
-nsE
+flw
 wrA
 ghS
 uQd
@@ -90293,12 +91003,12 @@ wrA
 pIt
 vmB
 xYl
-dOG
+riP
 mWJ
 gJn
 gJn
-dOG
-jqf
+jbG
+pfp
 vhP
 ath
 tXb
@@ -90424,12 +91134,12 @@ qgl
 mNi
 afM
 cbQ
-afM
+fOI
 afQ
-afM
+gAH
 cbQ
 abQ
-dOG
+oQv
 jqf
 sSW
 wAj
@@ -90551,18 +91261,18 @@ fNx
 fNx
 fNx
 mbM
-dOG
+ofs
 qgl
 mNi
 sSW
 cbQ
-sSW
+xnd
 jbQ
-sSW
+fCz
 cbQ
 lag
-dOG
-ycg
+xWa
+qgl
 utk
 wAj
 vvT
@@ -90683,19 +91393,19 @@ dvc
 dvc
 dvc
 mbM
-wrA
-ycg
+xsI
+vBg
 eGe
 afX
 eah
-vuv
+xLH
 jbQ
 vuv
 eah
 afI
 kUZ
-qgl
-ycg
+szd
+feJ
 mbM
 fNx
 wlN
@@ -90816,8 +91526,8 @@ vZC
 bBh
 wAj
 dNQ
-ycg
-dOG
+nMj
+pbP
 afZ
 lwk
 cKI
@@ -90826,8 +91536,8 @@ cKI
 lwk
 afJ
 rQQ
-qgl
-ycg
+vBg
+cxb
 pIt
 fNx
 fNx
@@ -90948,18 +91658,18 @@ kUe
 aBx
 dcD
 dOG
-qgl
+vBg
 kBA
 agb
 qtz
 hAH
 jbQ
-hAH
+djM
 qtz
 afK
 lWR
 ycg
-ycg
+oEt
 mbM
 fNx
 fNx
@@ -91079,17 +91789,17 @@ dvc
 oqk
 tLs
 mbM
-dOG
-qgl
+oQv
+vBg
 mNi
 sSW
 cbQ
-sSW
+xnd
 jbQ
-sSW
+fCz
 cbQ
 lag
-wrA
+goE
 ycg
 rPH
 wAj
@@ -91211,17 +91921,17 @@ dvc
 dvc
 dvc
 wAj
-nXD
-qgl
+ctU
+nMj
 mNi
 afU
 cbQ
-afU
+hbn
 afT
-afU
+kAC
 cbQ
 afL
-wrA
+xSA
 jqf
 sSW
 wAj
@@ -91344,17 +92054,17 @@ dvc
 dvc
 pIt
 gUb
-qgl
-wrA
-xsI
+nMj
+jbG
+fIM
 baN
 bEt
-dOG
+uxj
 uhp
+szf
 fIM
-fIM
-wrA
-jqf
+jbG
+pfp
 gIb
 ath
 fNx
@@ -91487,7 +92197,7 @@ cBp
 iDY
 ycg
 qHR
-dOG
+wug
 pIt
 fNx
 fNx
@@ -103620,7 +104330,7 @@ fNx
 fNx
 fNx
 etp
-rRM
+aJI
 rRM
 icE
 icE
