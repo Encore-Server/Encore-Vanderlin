@@ -1326,7 +1326,14 @@
 
 	playsound(src, 'sound/items/blackmirror_needle.ogg', 95, FALSE, 3)
 	attacked.flash_fullscreen("redflash3")
-	attacked.adjustBruteLoss(40, damage_type = BCLASS_PIERCE, can_crit = FALSE)
+	if(iscarbon(attacked))
+		var/mob/living/carbon/humanoid_victim = attacked
+		var/obj/item/bodypart/limb = humanoid_victim.get_bodypart_complex(ARM_ZONES)
+		if(!limb)
+			limb = humanoid_victim.get_bodypart(BODY_ZONE_CHEST)
+		limb.create_injury(WOUND_PUNCTURE, 15)
+	else
+		attacked.adjustBruteLoss(20, damage_type = BCLASS_PIERCE, can_crit = FALSE)
 	attacked.adjust_bloodpool(-240)
 	feeder = WEAKREF(attacked)
 	openstate = "bloody"
