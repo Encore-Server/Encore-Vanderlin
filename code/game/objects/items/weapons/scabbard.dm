@@ -107,6 +107,7 @@
 	icon_state = "nscabbard"
 	sellprice = 50
 	item_weight = 350 GRAMS
+	slot_flags = ITEM_SLOT_HIP|ITEM_SLOT_BACK
 
 /obj/item/weapon/scabbard/sword/royal
 	name = "gold decorated scabbard"
@@ -144,6 +145,19 @@
 	name = "merchant's cane"
 	desc = "An expensive cane, decorated with gold and inlaid with a gem. A symbol of great wealth for the owner. This one contains a concealed blade!"
 	icon_state = "merchcanesheath"
+
+/obj/item/weapon/scabbard/cane/angros
+	name = "Katholikon Cane"
+	desc = "A wooden cane featuring a decorative red ribbon. It is capable of sheathing a hidden blade within it and its silver reinforcement makes it strong enough to parry blows."
+	icon = 'icons/roguetown/weapons/32/inqcanesword.dmi'
+	icon_state = "inqcanesheath"
+	force = DAMAGE_MACE - 4
+	force_wielded = DAMAGE_MACE - 4
+	wdefense = GREAT_PARRY
+	slot_flags = ITEM_SLOT_HIP|ITEM_SLOT_BACK
+	anvilrepair = /datum/attribute/skill/craft/carpentry
+	associated_skill = /datum/attribute/skill/combat/shields
+	max_integrity = INTEGRITY_STANDARD
 
 
 /obj/item/weapon/scabbard/cane/apply_components()
