@@ -694,6 +694,28 @@
 	icon_state = "merchcaneblade"
 	wdefense = AVERAGE_PARRY
 
+/obj/item/weapon/sword/rapier/caneblade/angros
+	name = "Katholikon Cane Blade"
+	desc = "A thin silver dueling blade that can easily tuck away within a cane sheath for discretion and sophistication."
+	icon = 'icons/roguetown/weapons/32/inqcanesword.dmi'
+	icon_state = "inqcaneblade"
+	max_integrity = INTEGRITY_STRONG
+	max_blade_int = 300
+	smeltresult = /obj/item/ingot/silverblessed
+
+/obj/item/weapon/sword/rapier/caneblade/angros/Initialize(mapload)
+	. = ..()
+	AddComponent(/datum/component/psyblessed, FALSE, 3, 0, 50, TRUE)
+
+/obj/item/weapon/sword/rapier/caneblade/angros/relic
+	name = "Temperance"
+	desc = "A thin silver dueling blade with a collapsible handguard, wielded by those who prefer a subtle approach to dispatching the Katholikon's foes. When sheathed it appears to the ignorant as nothing more than a simple cane, a useful tool for travelling and catching heretics unaware."
+
+/obj/item/weapon/sword/rapier/caneblade/angros/relic/Initialize(mapload)
+	. = ..()
+	//Pre-blessed, +5 force, +100 Blade int, +100 int, make it silver
+	AddComponent(/datum/component/psyblessed, TRUE, 5, 100, 100, TRUE)
+
 //................ Lord's Rapier ............... //
 /obj/item/weapon/sword/rapier/dec/lord
 	name = "\proper lord's rapier"

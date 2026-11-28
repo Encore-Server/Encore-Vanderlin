@@ -32,10 +32,6 @@
 		/datum/attribute/skill/combat/polearms = list(40, 40)
 	)
 
-/datum/attribute_holder/sheet/job/retribution
-	clamped_adjustment = list(
-		/datum/attribute/skill/combat/swords = list(40, 40)
-	)
 /datum/job/advclass/puritan/inspector
 	title = "Inquisitor"
 	tutorial = "One of the heads of the Inquisition's Shadow Chapter upon Domotan Island, your lessons are of a subtle touch and a light step. A silver dagger in the right place at the right time is all that is needed. Preparation is key, and this is something you impart on your students. Be always ready, be always waiting, and always be vigilant."
@@ -70,6 +66,7 @@
 
 	var/static/list/gear = list(
 		"Retribution (Rapier)",
+		"Temperance (Cane Blade)",
 		"Daybreak (Whip)",
 		"Sanctum (Halberd)",
 		"Remembrance (Long Sword)",
@@ -79,7 +76,12 @@
 	switch(weapon_choice)
 		if("Retribution (Rapier)")
 			spawned.put_in_hands(new /obj/item/weapon/sword/rapier/psy/relic(spawned), TRUE)
-			spawned.equip_to_slot_or_del(new /obj/item/weapon/scabbard/sword, ITEM_SLOT_BELT_L, TRUE)
+			spawned.equip_to_appropriate_slot(new /obj/item/weapon/scabbard/sword/noble, TRUE, TRUE)
+			spawned.attributes?.add_sheet(/datum/attribute_holder/sheet/job/retribution)
+
+		if("Temperance (Cane Blade)")
+			spawned.put_in_hands(new /obj/item/weapon/sword/rapier/caneblade/angros/relic(spawned), TRUE)
+			spawned.equip_to_appropriate_slot(new /obj/item/weapon/scabbard/cane/angros, TRUE, TRUE)
 			spawned.attributes?.add_sheet(/datum/attribute_holder/sheet/job/retribution)
 
 		if("Daybreak (Whip)")
